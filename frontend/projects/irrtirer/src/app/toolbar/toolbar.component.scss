@@ -1,0 +1,21 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar {
+    padding: 0 48px;
+    height: 55px;
+}
+
+.toolbar-item {
+    &.first {
+        span {
+            font-size: 18px !important;
+        }
+    }
+    letter-spacing: normal;
+    font-size: 14px;
+    mat-icon {
+        transform: scale(1);
+    }
+}

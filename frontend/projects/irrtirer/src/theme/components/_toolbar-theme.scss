@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+    mat-toolbar {
+        &.mat-toolbar {
+            * {
+                color: mat.get-theme-color($theme, primary, A200);
+            }
+            span {
+                font-size: 16px;
+            }
+            
+            height: 60px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+    mat-button, a {
+        &.mdc-button {
+            border-radius: 20px;
+            padding: 0 12px !important;
+        }
+    }
+}
