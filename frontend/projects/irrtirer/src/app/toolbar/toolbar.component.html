@@ -1,30 +1,26 @@
 <mat-toolbar class="toolbar" color="primary">
-    <a class="toolbar-item first" mat-button href="https://www.google.com/" target="_blank">
+    <a mat-button class="toolbar-item first" routerLink="/tool" routerLinkActive="activebutton">
         <span>Irrtirer</span>
     </a>
 
-    <a class="toolbar-item" mat-button href="https://www.google.com/" target="_blank">
-        <span>O projekcie</span>
+    <a class="toolbar-item" mat-button routerLink="/project" routerLinkActive="activebutton">
+        <span>About project</span>
     </a>
 
-    <a class="toolbar-item" mat-button href="https://www.google.com/" target="_blank">
-        <span>O mnie</span>
+    <a class="toolbar-item" mat-button routerLink="/author" routerLinkActive="activebutton">
+        <span>About me</span>
     </a>
 
     <span class="example-spacer"></span>
 
-    <button class="toolbar-item" mat-icon-button aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-
     <a class="toolbar-item" mat-button href="https://www.google.com/" target="_blank">
-        <mat-icon>code</mat-icon>
-        <span>Język</span>
+        <mat-icon>language</mat-icon>
+        <span>Pl</span>
     </a>
 
-    <a class="toolbar-item" mat-button href="https://www.google.com/" target="_blank">
-        <mat-icon>code</mat-icon>
+    <a class="toolbar-item" mat-button href="https://github.com/TukanHan/irrtirer" target="_blank">
+        <mat-icon svgIcon="github"></mat-icon>
         <span>GitHub</span>
     </a>
-    
+
 </mat-toolbar>

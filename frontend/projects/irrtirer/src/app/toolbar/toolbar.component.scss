@@ -13,9 +13,8 @@
             font-size: 18px !important;
         }
     }
-    letter-spacing: normal;
-    font-size: 14px;
-    mat-icon {
-        transform: scale(1);
+
+    &.activebutton {
+        background: #00dddd1a
     }
 }
