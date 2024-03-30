@@ -1,20 +1,50 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .toolbar {
-    padding: 0 48px;
-    height: 55px;
+  padding: 0 48px;
+  height: 55px;
 }
 
 .toolbar-item {
-    &.first {
-        span {
-            font-size: 18px !important;
-        }
+  &.first {
+    span {
+      font-size: 18px !important;
     }
+  }
 
-    &.activebutton {
-        background: #00dddd1a
+  &.activebutton {
+    background: #00dddd1a;
+  }
+}
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 170px;
+
+  .example-radio-button {
+    width: -webkit-fill-available;
+    margin: 2px 16px 2px 8px;
+    ::ng-deep {
+      .mdc-form-field {
+        width: 100%;
+        .mdc-label {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          .mat-icon {
+            margin-left: auto;
+          }
+        }
+      }
     }
+  }
+}
+
+.language-label {
+    min-width: 20px;
+    display: block;
 }

@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 const iconDictionary: { [key: string]: string } = {
   github: 'github-mark.svg',
+  pl: 'pl.svg',
+  gb: 'gb.svg',
 };
 
 @NgModule({

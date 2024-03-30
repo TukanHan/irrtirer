@@ -10,6 +10,12 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "pl",
+        "locales": {
+          "en": "projects/irrtirer/src/locale/messages.en.xlf"
+        }
+      },
       "root": "projects/irrtirer",
       "sourceRoot": "projects/irrtirer/src",
       "prefix": "app",
@@ -17,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": ["pl"],
             "outputPath": "dist/irrtirer",
             "index": "projects/irrtirer/src/index.html",
             "browser": "projects/irrtirer/src/main.ts",
