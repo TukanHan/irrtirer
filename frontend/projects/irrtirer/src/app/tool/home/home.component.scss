@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    padding: 0 60px;
+    max-width: 1200px;
+}
+
+.examples-projects-panel {
+    display: flex;
+    gap: 10px;
+}
+
+.section {
+    padding-bottom: 30px;
+}

@@ -3,6 +3,10 @@
 
 @mixin theme($theme) {
     mat-toolbar {
+        &.mat-toolbar {
+            background: #333333;
+        }
+        
         .toolbar-item {
             * {
                 color: mat.get-theme-color($theme, primary, A200);
@@ -20,10 +24,6 @@
             span {
                 letter-spacing: normal;
                 font-size: 14px;
-            }
-        
-            &.activebutton {
-                background: #00dddd1a
             }
         }
     }

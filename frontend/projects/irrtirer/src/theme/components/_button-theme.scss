@@ -4,6 +4,7 @@
 @mixin theme($theme) {
     button, a {
         &.mdc-button {
+            letter-spacing: normal;
             border-radius: 20px;
             padding: 0 12px !important;
         }

@@ -1,1 +1,28 @@
-<p>tool works!</p>
+<mat-sidenav-container class="tool-sidenav-container">
+    <mat-sidenav mode="side" opened>
+        <mat-nav-list>
+            <a mat-list-item routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                matTooltipPosition="right" matTooltip="Ustawienia projektu">
+                <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
+            </a>
+            <a mat-list-item routerLinkActive routerLink="tray" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" matTooltipPosition="right" matTooltip="Zasobnik kafelków">
+                <mat-icon matListIcon class="material-symbols-outlined">dashboard_customize</mat-icon>
+            </a>
+            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Wyznaczenie sekcji">
+                <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
+            </a>
+            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Konfiguracja sekcji">
+                <mat-icon matListIcon class="material-symbols-outlined">settings_input_composite</mat-icon>
+            </a>
+            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Układanie moizaiki">
+                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
