@@ -99,7 +99,8 @@
             "styles": [
               "projects/irrtirer/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "karmaConfig": "projects/irrtirer/karma.conf.js"
           }
         }
       }

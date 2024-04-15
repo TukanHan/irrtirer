@@ -11,5 +11,13 @@ export const mosaicProjectReducer = createReducer<MosaicProject | null>(
     on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({
         ...state,
         config: { ...state!.config, mosaicWidth: width },
+    })),
+    on(MosaicProjectActions.tilesSetAdded, (state, { tilesSet }) => ({
+        ...state,
+        tilesSets: [...state.tilesSets, tilesSet],
+    })),
+    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({
+        ...state,
+        tilesSets: state.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),
     }))
 );

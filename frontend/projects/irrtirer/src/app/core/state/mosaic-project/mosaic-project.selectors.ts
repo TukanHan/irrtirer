@@ -15,3 +15,13 @@ export const selectMosaicImage = createSelector(
   selectMosaicProject,
   (state: MosaicProject) => state.config.base64Image
 );
+
+export const selectIsProjectCreated = createSelector(
+  selectMosaicProject,
+  (state: MosaicProject) => !!state
+);
+
+export const selectTilesSets = createSelector(
+  selectMosaicProject,
+  (state: MosaicProject) => state.tilesSets
+);

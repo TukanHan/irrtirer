@@ -1,20 +1,22 @@
-<div class="conf-panel">
-    <div class="image-display">
-        <img [src]="project.config.base64Image" />
-    </div>
-    <div class="data-display">
-        <mat-form-field appearance="outline" class="density-3">
-            <mat-label i18n>Szerokość mozaiki</mat-label>
-            <input matInput type="number" [value]="project.config.mosaicWidth">
-            <span matTextSuffix>cm</span>
-        </mat-form-field>
-        <mat-chip-set>
-            <mat-chip color="accent" >kafelki: 32023</mat-chip>
-            <mat-chip color="accent" >sektory: 3</mat-chip>
-          </mat-chip-set>
-        <div class="actions">
-            <button mat-button i18n color="primary" disabled>Zapisz projekt</button>
-            <button mat-button i18n color="warn" (click)="deleteProject()">Porzuć projekt</button>
+<mat-card>
+    <mat-card-content>
+        <div class="image-display">
+            <img [src]="project.config.base64Image" />
         </div>
-    </div>
-</div>
+        <div class="data-display">
+            <mat-form-field appearance="outline" class="density-3">
+                <mat-label i18n>Szerokość mozaiki</mat-label>
+                <input matInput type="number" [value]="project.config.mosaicWidth" (change)="widthChange($event)">
+                <span matTextSuffix>cm</span>
+            </mat-form-field>
+            <mat-chip-set>
+                <mat-chip color="accent">kafelki: 32023</mat-chip>
+                <mat-chip color="accent">sektory: 3</mat-chip>
+            </mat-chip-set>
+            <div class="actions">
+                <button mat-button i18n color="primary" disabled>Zapisz projekt</button>
+                <button mat-button i18n color="warn" (click)="deleteProject()">Porzuć projekt</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

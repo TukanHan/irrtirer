@@ -4,6 +4,8 @@ import { AuthorComponent } from './author/author.component';
 import { ProjectComponent } from './project/project.component';
 import { HomeComponent } from './tool/home/home.component';
 import { TrayComponent } from './tool/tray/tray.component';
+import { SectorsComponent } from './tool/sectors/sectors.component';
+import { projectExistGuard } from './core/guards/project-exist.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'project', pathMatch: 'full' },
@@ -13,7 +15,8 @@ export const routes: Routes = [
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'tray', component: TrayComponent },
+            { path: 'tray', component: TrayComponent, canActivate: [projectExistGuard] },
+            { path: 'sectors', component: SectorsComponent, canActivate: [projectExistGuard] },
         ],
     },
     { path: 'project', component: ProjectComponent },

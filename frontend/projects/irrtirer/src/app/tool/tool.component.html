@@ -5,17 +5,20 @@
                 matTooltipPosition="right" matTooltip="Ustawienia projektu">
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
-            <a mat-list-item routerLinkActive routerLink="tray" routerLinkActive="active"
-                [routerLinkActiveOptions]="{ exact: true }" matTooltipPosition="right" matTooltip="Zasobnik kafelków">
-                <mat-icon matListIcon class="material-symbols-outlined">dashboard_customize</mat-icon>
+            <a mat-list-item routerLink="tray" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                [disabled]="sectorsLinkDisabled$ | async"
+                matTooltipPosition="right" matTooltip="Zasobnik kafelków">
+                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
             </a>
-            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Wyznaczenie sekcji">
+            <a mat-list-item routerLink="sectors" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                [disabled]="tilesLinkDisabled$ | async"
+                matTooltipPosition="right" matTooltip="Wyznaczenie sektorów">
                 <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
             </a>
-            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Konfiguracja sekcji">
+            <a mat-list-item disabled matTooltipPosition="right" matTooltip="Konfiguracja sektorów">
                 <mat-icon matListIcon class="material-symbols-outlined">settings_input_composite</mat-icon>
             </a>
-            <a mat-list-item routerLinkActive matTooltipPosition="right" matTooltip="Układanie moizaiki">
+            <a mat-list-item disabled matTooltipPosition="right" matTooltip="Układanie moizaiki">
                 <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
             </a>
         </mat-nav-list>
