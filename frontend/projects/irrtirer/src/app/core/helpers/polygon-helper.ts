@@ -60,7 +60,7 @@ export class PolygonHelper {
 
     public static calculateOuterRadius(vertices: Vector[]): number {
         let maxDistance = 0;
-        for (let vertex of vertices) {
+        for (const vertex of vertices) {
             const distance = Vector.distance(Vector.zero, vertex);
             if (distance > maxDistance) {
                 maxDistance = distance;

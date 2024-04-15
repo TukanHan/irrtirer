@@ -70,7 +70,7 @@ export class GenerateTilesComponent {
 
     getErrorLabel(control: AbstractControl): string {
         if (control.errors) {
-            for (let key of Object.keys(control.errors)) {
+            for (const key of Object.keys(control.errors)) {
                 if (control.errors[key] && key in this.errorLabels) {
                     return this.errorLabels[key];
                 }
@@ -83,13 +83,13 @@ export class GenerateTilesComponent {
     public async getTileSet(): Promise<void> {
         this.tileSetGenerationForm.markAllAsTouched();
         if (this.tileSetGenerationForm.valid) {
-            var x: { minRadius: number; maxRadius: number; count: number; name: string } =
+            const formData: { minRadius: number; maxRadius: number; count: number; name: string } =
                 this.tileSetGenerationForm.getRawValue();
 
             const tileGenerator: TileGenerator = new TileGenerator(await this.getImagePixelArray());
             const tileSet: TilesSet = {
-                name: x.name,
-                tiles: tileGenerator.generateTileSet({ min: x.minRadius, max: x.maxRadius }, x.count),
+                name: formData.name,
+                tiles: tileGenerator.generateTileSet({ min: formData.minRadius, max: formData.maxRadius }, formData.count),
             };
 
             this.snackBar.open($localize`Seria kafelków wygenerowana`, 'Ok', { duration: 3000 });

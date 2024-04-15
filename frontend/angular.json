@@ -23,7 +23,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "localize": ["pl"],
+            "localize": [
+              "pl"
+            ],
             "outputPath": "dist/irrtirer",
             "index": "projects/irrtirer/src/index.html",
             "browser": "projects/irrtirer/src/main.ts",
@@ -102,8 +104,22 @@
             "scripts": [],
             "karmaConfig": "projects/irrtirer/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/irrtirer/**/*.ts",
+              "projects/irrtirer/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

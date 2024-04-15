@@ -6,7 +6,7 @@ import { TilesSet } from '../../../core/models/mosaic-project.model';
 describe('TileSetComponent', () => {
   let component: TileSetComponent;
   let fixture: ComponentFixture<TileSetComponent>;
-  let tilesSet: TilesSet = {
+  const tilesSet: TilesSet = {
     name: "Test set",
     tiles: []
   }

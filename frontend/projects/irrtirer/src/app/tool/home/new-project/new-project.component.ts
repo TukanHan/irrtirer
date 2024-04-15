@@ -33,7 +33,7 @@ export class NewProjectComponent {
         const file = target.files?.item(0);
 
         if (file) {
-            var reader = new FileReader();
+            const reader = new FileReader();
 
             reader.readAsDataURL(file);
             reader.onload = (readingEvent: ProgressEvent<FileReader>) => {

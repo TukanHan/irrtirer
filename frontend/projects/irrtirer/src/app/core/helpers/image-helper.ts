@@ -1,6 +1,6 @@
 export class ImageHelper {
     static async getImageSrcPixelArray(imgSrc: string): Promise<Uint8ClampedArray> {
-        var img = new Image();
+        const img = new Image();
         img.src = imgSrc;
 
         return this.getImagePixelArray(img);
