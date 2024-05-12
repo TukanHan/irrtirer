@@ -1,8 +1,8 @@
 export class Vector {
-    x: number = 0;
-    y: number = 0;
+    readonly x: number = 0;
+    readonly y: number = 0;
 
-    static zero: Vector = {
+    static readonly zero: Vector = {
         x: 0,
         y: 0,
     };

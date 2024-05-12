@@ -16,6 +16,12 @@ export const selectMosaicImage = createSelector(
   (state: MosaicProject) => state.config.base64Image
 );
 
+export const selectMosaicConfig = createSelector(
+  selectMosaicProject,
+  (state: MosaicProject) => state.config
+);
+
+
 export const selectIsProjectCreated = createSelector(
   selectMosaicProject,
   (state: MosaicProject) => !!state

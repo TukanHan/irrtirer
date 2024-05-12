@@ -1,12 +1,51 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { ActiveCanvasComponent } from '../../shared/active-canvas/active-canvas.component';
+import { Store } from '@ngrx/store';
+import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
+import { Vector } from '../../core/models/point.model';
+import { MosaicConfig } from '../../core/models/mosaic-project.model';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { ImageObject } from '../../shared/active-canvas/models/image-object';
 
 @Component({
-  selector: 'app-sectors',
-  standalone: true,
-  imports: [],
-  templateUrl: './sectors.component.html',
-  styleUrl: './sectors.component.scss'
+    selector: 'app-sectors',
+    standalone: true,
+    imports: [ActiveCanvasComponent, MatButtonToggleModule, MatIconModule],
+    templateUrl: './sectors.component.html',
+    styleUrl: './sectors.component.scss',
 })
-export class SectorsComponent {
+export class SectorsComponent implements AfterViewInit {
+    @ViewChild('activeCanvas')
+    activeCanvas: ActiveCanvasComponent;
 
+    constructor(private store: Store) {}
+
+    async ngAfterViewInit(): Promise<void> {
+        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
+        const image = new Image();
+        image.src = mosaicConfig.base64Image;
+        await image.decode();
+
+        this.activeCanvas.addCanvasObject(
+            new ImageObject(image, Vector.zero, {
+                height: (image.height / image.width) * mosaicConfig.mosaicWidth,
+                width: mosaicConfig.mosaicWidth,
+            })
+        );
+
+        this.activeCanvas.addCanvasObject(
+            new ImageObject(
+                image,
+                {
+                    y: (image.height / image.width) * mosaicConfig.mosaicWidth,
+                    x: mosaicConfig.mosaicWidth,
+                },
+                {
+                    height: (image.height / image.width) * mosaicConfig.mosaicWidth,
+                    width: mosaicConfig.mosaicWidth,
+                }
+            )
+        );
+    }
 }
