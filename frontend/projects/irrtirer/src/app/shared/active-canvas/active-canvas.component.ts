@@ -52,9 +52,9 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
             this.isDraging = false;
         };
 
-        this.canvas.nativeElement.onmouseout = () => {
+        this.canvas.nativeElement.addEventListener('mouseout', () => {
             this.isDraging = false;
-        };
+        });
 
         this.canvas.nativeElement.addEventListener('mousemove', (evt: MouseEvent) => {
             if (this.isDraging) {
@@ -97,38 +97,9 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
 
     rewrite(): void {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
-        this.drawGrid();
 
         for (const object of this.elems) {
             object.drawObject(this.ctx, this.viewport);
         }
-    }
-
-    drawGrid(): void {
-        const start = this.viewport.startWorldPos;
-        const end = this.viewport.endWorldPos;
-        const size: number = this.viewport.zoom <= 0.2 ? 1 : 10;
-
-        for (let i = Math.floor(start.y / size) * size; end.y > i; i += size) {
-            const horizontal = this.viewport.getViewportYPosition(i);
-            const startX = { x: 0, y: horizontal };
-            const endX = { x: this.viewport.pxSize.width, y: horizontal };
-            this.drawLine(startX, endX, '#292929');
-        }
-
-        for (let i = Math.floor(start.x / size) * size; end.x > i; i += size) {
-            const vertical = this.viewport.getViewportXPosition(i);
-            const startY = { x: vertical, y: 0 };
-            const endY = { x: vertical, y: this.viewport.pxSize.height };
-            this.drawLine(startY, endY, '#292929');
-        }
-    }
-
-    drawLine(start: Vector, end: Vector, color: string): void {
-        this.ctx.strokeStyle = color;
-        this.ctx.beginPath();
-        this.ctx.moveTo(start.x, start.y);
-        this.ctx.lineTo(end.x, end.y);
-        this.ctx.stroke();
-    }
+    }    
 }

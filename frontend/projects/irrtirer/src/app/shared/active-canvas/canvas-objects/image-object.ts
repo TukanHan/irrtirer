@@ -1,8 +1,8 @@
 import { UnitConverter } from '../../../core/helpers/unit-converter';
 import { Vector } from '../../../core/models/point.model';
 import { Size } from '../../../core/models/size.interface';
-import { CanvasObject } from './canvas-object.interface';
-import { Viewport } from './viewport.class';
+import { CanvasObject } from '../models/canvas-object.interface';
+import { Viewport } from '../models/viewport.class';
 
 export class ImageObject implements CanvasObject {
     image: HTMLImageElement;
