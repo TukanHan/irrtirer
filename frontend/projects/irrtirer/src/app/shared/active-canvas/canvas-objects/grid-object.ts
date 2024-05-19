@@ -15,6 +15,10 @@ export class GridObject implements CanvasObject {
     public maxDefaultGridColor: string = '#292931';
     public backgroundColor: string = '#191c1c';
 
+    getOrder(): number {
+        return -1;
+    }
+
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {
         const start = viewport.startWorldPos;
         const end = viewport.endWorldPos;

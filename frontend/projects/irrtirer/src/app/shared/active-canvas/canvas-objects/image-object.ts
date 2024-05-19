@@ -11,10 +11,17 @@ export class ImageObject implements CanvasObject {
 
     size: Size;
 
-    constructor(image: HTMLImageElement, position: Vector, size: Size) {
+    order: number;
+
+    constructor(image: HTMLImageElement, position: Vector, size: Size, order: number = 0) {
         this.image = image;
         this.position = position;
         this.size = size;
+        this.order = order;
+    }
+
+    getOrder(): number {
+        return this.order;
     }
 
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {

@@ -1,9 +1,25 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    EventEmitter,
+    HostBinding,
+    Input,
+    OnDestroy,
+    Output,
+    ViewChild,
+} from '@angular/core';
 import { Size } from '../../core/models/size.interface';
 import { Vector } from '../../core/models/point.model';
 import { UnitConverter } from '../../core/helpers/unit-converter';
 import { Viewport } from './models/viewport.class';
 import { CanvasObject } from './models/canvas-object.interface';
+import { CanvasOptions } from './models/canvas-options.interface';
+
+const MIN_ZOOM: number = 0.00_000_000_1;
+const MAX_ZOOM: number = 1_000_000_000;
 
 @Component({
     selector: 'app-active-canvas',
@@ -11,18 +27,31 @@ import { CanvasObject } from './models/canvas-object.interface';
     imports: [],
     templateUrl: './active-canvas.component.html',
     styleUrl: './active-canvas.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
+    @Output()
+    canvasRedrawn: EventEmitter<void> = new EventEmitter();
+
+    @Output()
+    clicked: EventEmitter<Vector> = new EventEmitter<Vector>();
+
+    @Input()
+    options?: CanvasOptions;
+
     @ViewChild('canvas')
     canvas: ElementRef<HTMLCanvasElement>;
+
+    @HostBinding('class.dragged')
+    isDraging = false;
 
     ctx: CanvasRenderingContext2D;
 
     viewport: Viewport;
 
-    isDraging = false;
-
     elems: CanvasObject[] = [];
+
+    constructor(private cd: ChangeDetectorRef) {}
 
     ngAfterViewInit(): void {
         this.ctx = this.canvas.nativeElement.getContext('2d');
@@ -30,9 +59,13 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         window.addEventListener('resize', this.resizeFunc, false);
 
         this.canvas.nativeElement.addEventListener('wheel', (event: WheelEvent) => {
+            if (this.options?.isMovable === false) {
+                return;
+            }
+
             const cursorWorldPos: Vector = this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY });
             const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-            const zoomMultiplier = (this.viewport.zoom + zoomDelta) / this.viewport.zoom;
+            const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
 
             const newPosition: Vector = {
                 x: cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
@@ -44,19 +77,39 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
             event.preventDefault();
         });
 
-        this.canvas.nativeElement.onmousedown = () => {
+        this.canvas.nativeElement.onmousedown = (event: MouseEvent) => {
+            if (this.options?.isMovable === false) {
+                this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
+                return;
+            }
+
             this.isDraging = true;
+            this.cd.markForCheck();
         };
 
         this.canvas.nativeElement.onmouseup = () => {
+            if (this.options?.isMovable === false) {
+                return;
+            }
+
             this.isDraging = false;
+            this.cd.markForCheck();
         };
 
         this.canvas.nativeElement.addEventListener('mouseout', () => {
+            if (this.options?.isMovable === false) {
+                return;
+            }
+
             this.isDraging = false;
+            this.cd.markForCheck();
         });
 
         this.canvas.nativeElement.addEventListener('mousemove', (evt: MouseEvent) => {
+            if (this.options?.isMovable === false) {
+                return;
+            }
+
             if (this.isDraging) {
                 const newPosition: Vector = {
                     x: this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
@@ -69,7 +122,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         });
 
         this.viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
-        this.resizeFunc();
+        setTimeout(() => this.resizeFunc(), 1);
     }
 
     ngOnDestroy(): void {
@@ -79,7 +132,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     resizeFunc = () => {
         const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
-            height: canvasRect.width / 2,
+            height: canvasRect.height,
             width: canvasRect.width,
         };
 
@@ -92,6 +145,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
 
     addCanvasObject(object: CanvasObject): void {
         this.elems.push(object);
+        this.elems.sort((a, b) => a.getOrder() - b.getOrder());
         this.rewrite();
     }
 
@@ -101,5 +155,8 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         for (const object of this.elems) {
             object.drawObject(this.ctx, this.viewport);
         }
-    }    
+
+        this.cd.markForCheck();
+        this.canvasRedrawn.next();
+    }
 }

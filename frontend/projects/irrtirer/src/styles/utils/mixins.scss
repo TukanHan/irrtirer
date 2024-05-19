@@ -1,0 +1,7 @@
+@mixin page-content() {
+    max-width: 1200px;
+    min-width: 600px;
+    width: -webkit-fill-available;
+    margin: 0px auto;
+    padding: 20px 60px;
+}

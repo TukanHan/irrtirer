@@ -1,17 +1,15 @@
 <div class="ribbon">
-    <mat-button-toggle-group #group="matButtonToggleGroup">
-        <mat-button-toggle value="left" aria-label="Text align left">
-          <mat-icon>format_align_left</mat-icon>
+    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="canvasMode" (change)="canvasOptionChanged()" appearance="legacy" class="ribbon__actions">
+        <mat-button-toggle value="movement" aria-label="Text align left">
+          <mat-icon class="material-symbols-outlined">open_with</mat-icon>
         </mat-button-toggle>
-        <mat-button-toggle value="center" aria-label="Text align center">
-          <mat-icon>format_align_center</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="right" aria-label="Text align right">
-          <mat-icon>format_align_right</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="justify" disabled aria-label="Text align justify">
-          <mat-icon>format_align_justify</mat-icon>
+        <mat-button-toggle value="selection" aria-label="Text align center">
+          <mat-icon class="material-symbols-outlined">timeline</mat-icon>
         </mat-button-toggle>
     </mat-button-toggle-group>
+    <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
 </div>
-<app-active-canvas #activeCanvas></app-active-canvas>
+<div class="section-tool">
+  <app-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></app-active-canvas>
+  <div class="section-tool__panel"></div>
+</div>

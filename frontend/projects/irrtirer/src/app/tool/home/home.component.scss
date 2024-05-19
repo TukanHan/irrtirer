@@ -1,8 +1,14 @@
-.examples-projects-panel {
-    display: flex;
-    gap: 10px;
-}
+@import "./../../../styles/utils/mixins";
 
-.section {
-    padding-bottom: 30px;
+:host {
+    @include page-content();
+
+    .examples-projects-panel {
+        display: flex;
+        gap: 10px;
+    }
+
+    .section {
+        padding-bottom: 30px;
+    }
 }

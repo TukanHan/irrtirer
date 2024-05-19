@@ -8,15 +8,19 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { ImageObject } from '../../shared/active-canvas/canvas-objects/image-object';
 import { GridObject } from '../../shared/active-canvas/canvas-objects/grid-object';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-sectors',
     standalone: true,
-    imports: [ActiveCanvasComponent, MatButtonToggleModule, MatIconModule],
+    imports: [ActiveCanvasComponent, MatButtonToggleModule, MatIconModule, FormsModule, CommonModule],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss',
 })
 export class SectorsComponent implements AfterViewInit {
+    canvasMode: 'movement' | 'selection' = 'movement';
+
     @ViewChild('activeCanvas')
     activeCanvas: ActiveCanvasComponent;
 
@@ -50,5 +54,15 @@ export class SectorsComponent implements AfterViewInit {
                 }
             )
         );
+    }
+
+    canvasOptionChanged(): void {
+        this.activeCanvas.options = {
+            isMovable: this.canvasMode === 'movement',
+        };
+    }
+
+    onCanvasClicked(point: Vector): void {
+        console.log(point);
     }
 }

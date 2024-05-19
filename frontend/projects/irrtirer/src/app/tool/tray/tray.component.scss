@@ -1,7 +1,13 @@
-::ng-deep {
-    .mat-expansion-panel-header-description {
-        mat-icon, .mdc-icon-button {
-            margin-left: auto;
-        }
-    }  
+@import './../../../styles/utils/mixins';
+
+:host {
+    @include page-content();
+
+    ::ng-deep {
+        .mat-expansion-panel-header-description {
+            mat-icon, .mdc-icon-button {
+                margin-left: auto;
+            }
+        }  
+    }
 }
