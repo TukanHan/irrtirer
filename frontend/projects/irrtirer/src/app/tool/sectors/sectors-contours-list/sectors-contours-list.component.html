@@ -1,0 +1,29 @@
+<button mat-flat-button color="accent" class="add-sector" (click)="addNewSector()" i18n>Dodaj sektor</button>
+
+<ng-container *ngIf="sectors$ | async as sectors; else noVertices">
+  <div *ngIf="sectors.length > 0; else noVertices" cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
+    @for (sector of sectors; track sector) {
+    <div class="sector-box" [class.selected]="sector === selectedSector" cdkDrag (mousedown)="onSectorSelected(sector)">
+      {{sector.name}}
+      <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
+        <mat-icon matListIcon>more_vert</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="emitSectorToEdit(sector)">
+          <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+          <span i18n>Edytuj</span>
+        </button>
+        <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
+          <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+          <span i18n>Usuń</span>
+        </button>
+      </mat-menu>
+    </div>
+    }
+  </div>
+</ng-container>
+
+<ng-template #noVertices>
+  <div class="no-sectors" i18n>Dodaj sektory</div>
+</ng-template>

@@ -1,0 +1,83 @@
+@use "@angular/material" as mat;
+@import "./../../../../theme/gray-palette.scss";
+
+:host {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+
+    .add-sector {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .no-sectors {
+        display: flex;
+        justify-content: center;
+        color: mat.get-color-from-palette($grey-palette, 300);
+        height: -webkit-fill-available;
+        align-items: center;
+    }
+}
+
+@mixin sector-box() {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid mat.get-color-from-palette($grey-palette, 600);
+    background: mat.get-color-from-palette($grey-palette, 500);
+    color: mat.get-color-from-palette($grey-palette, 100);
+    font-size: 14px;
+
+    &.selected {
+        background: mat.get-color-from-palette($grey-palette, 400);
+        border: 1px solid mat.get-color-from-palette($grey-palette, 500);
+    }
+}
+
+.sectors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: auto;
+    max-width: 100%;
+    height: -webkit-fill-available;
+
+    .sector-box {
+        @include sector-box();
+        cursor: move;
+
+        .sector-actions {
+            margin: -6px;
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            color: mat.get-color-from-palette($grey-palette, 200);
+        }
+
+        &.cdk-drag-placeholder {
+            opacity: 0;
+        }
+    }
+
+    &.cdk-drop-list-dragging .cdk-drag {
+        transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+.cdk-drag-preview {
+    @include sector-box();
+    cursor: grab;
+
+    .sector-actions {
+        display: none;
+    }
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

@@ -31,3 +31,8 @@ export const selectTilesSets = createSelector(
   selectMosaicProject,
   (state: MosaicProject) => state.tilesSets
 );
+
+export const selectSectors = createSelector(
+  selectMosaicProject,
+  (state: MosaicProject) => state.sectors
+);

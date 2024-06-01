@@ -1,0 +1,35 @@
+@use '@angular/material' as mat;
+@import './../../../theme/gray-palette.scss';
+
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid mat.get-color-from-palette($grey-palette, 700);
+    border-radius: 4px;
+    padding: 10px 15px;
+    background-color: mat.get-color-from-palette($grey-palette, 500);
+
+    .color-preview {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-left: auto;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .color-label {
+        display: flex;
+        flex-direction: column;
+
+        &__header {
+            color: mat.get-color-from-palette($grey-palette, 100);
+        }
+
+        &__code {
+            color: mat.get-color-from-palette($grey-palette, 200);
+            font-size: 15px;
+        }
+    }
+}

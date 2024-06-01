@@ -43,7 +43,8 @@ export class NewProjectComponent {
                         base64Image: image,
                         mosaicWidth: 100,
                     },
-                    tilesSets: []
+                    tilesSets: [],
+                    sectors: []
                 };
 
                 this.pushSelectedProject(project);

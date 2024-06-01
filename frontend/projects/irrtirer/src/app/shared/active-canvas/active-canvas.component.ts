@@ -49,7 +49,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
 
     viewport: Viewport;
 
-    elems: CanvasObject[] = [];
+    canvasObjects: CanvasObject[] = [];
 
     constructor(private cd: ChangeDetectorRef) {}
 
@@ -78,8 +78,8 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         });
 
         this.canvas.nativeElement.onmousedown = (event: MouseEvent) => {
+            this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
             if (this.options?.isMovable === false) {
-                this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
                 return;
             }
 
@@ -143,16 +143,28 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.rewrite();
     };
 
-    addCanvasObject(object: CanvasObject): void {
-        this.elems.push(object);
-        this.elems.sort((a, b) => a.getOrder() - b.getOrder());
-        this.rewrite();
+    addCanvasObject(addedObj: CanvasObject, redraw: boolean = true): void {
+        this.canvasObjects.push(addedObj);
+        this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
+
+        if (redraw) {
+            this.rewrite();
+        }
+    }
+
+    removeCanvasObject(removedObj: CanvasObject, redraw: boolean = true): void {
+        this.canvasObjects = this.canvasObjects.filter((canvasObj) => canvasObj !== removedObj);
+        this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
+
+        if (redraw) {
+            this.rewrite();
+        }
     }
 
     rewrite(): void {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
-        for (const object of this.elems) {
+        for (const object of this.canvasObjects) {
             object.drawObject(this.ctx, this.viewport);
         }
 

@@ -1,5 +1,5 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
-import { MosaicProject, TilesSet } from '../../models/mosaic-project.model';
+import { MosaicProject, Sector, TilesSet } from '../../models/mosaic-project.model';
 
 export const MosaicProjectActions = createActionGroup({
     source: 'Mosaic Project',
@@ -7,6 +7,11 @@ export const MosaicProjectActions = createActionGroup({
         'Project Created': props<{ project: MosaicProject }>(),
         'Project Canceled': emptyProps(),
         'Mosaic Width Changed': props<{ width: number }>(),
+
+        'Sector Modified': props<{ modifiedSector: Sector }>(),
+        'Sector Removed': props<{ sector: Sector }>(),
+        'Sector Shifted': props<{ prevIndex: number, newIndex: number }>(),
+
         'Tiles Set Added': props<{ tilesSet: TilesSet }>(),
         'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),
     },

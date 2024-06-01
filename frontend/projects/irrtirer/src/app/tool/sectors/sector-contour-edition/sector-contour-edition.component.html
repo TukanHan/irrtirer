@@ -1,0 +1,30 @@
+<div class="actions">
+    <button mat-flat-button (click)="cancel()" i18n>Anuluj</button>
+    <button mat-flat-button color="accent" (click)="save()" i18n>Potwierdź</button>
+</div>
+<div class="data">
+    <mat-form-field appearance="outline" class="density-3">
+        <mat-label i18n>Nazwa sektora</mat-label>
+        <input matInput [(ngModel)]="sector.name" required>
+    </mat-form-field>
+</div>
+
+<app-color-picker [(color)]="sector.color" label="Kolor sektora"></app-color-picker>
+
+<ng-container *ngIf="sector.vertices?.length; then vertices; else noVertices"></ng-container>
+
+<ng-template #vertices>
+    <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
+        @for (vertex of sector.vertices; track vertex) {
+            <div class="vertex-box" [class.selected]="vertex === selectedVertex" cdkDrag (mousedown)="onBoxSelected(vertex)">{{getVertexLabel(vertex)}}
+                <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
+                    <mat-icon matListIcon>close</mat-icon>
+                </button>
+            </div>
+        }
+    </div>
+</ng-template>
+
+<ng-template #noVertices>
+    <div class="no-vertices" i18n>Dodaj wierzchołki sektora</div>
+</ng-template>

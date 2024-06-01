@@ -1,15 +1,23 @@
 <div class="ribbon">
-    <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="canvasMode" (change)="canvasOptionChanged()" appearance="legacy" class="ribbon__actions">
-        <mat-button-toggle value="movement" aria-label="Text align left">
-          <mat-icon class="material-symbols-outlined">open_with</mat-icon>
-        </mat-button-toggle>
-        <mat-button-toggle value="selection" aria-label="Text align center">
-          <mat-icon class="material-symbols-outlined">timeline</mat-icon>
-        </mat-button-toggle>
-    </mat-button-toggle-group>
-    <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
+  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="canvasMode" (change)="canvasOptionChanged()" appearance="legacy" class="ribbon__actions">
+      <mat-button-toggle value="movement" aria-label="Text align left">
+        <mat-icon class="material-symbols-outlined">open_with</mat-icon>
+      </mat-button-toggle>
+      <mat-button-toggle value="selection" aria-label="Text align center">
+        <mat-icon class="material-symbols-outlined">timeline</mat-icon>
+      </mat-button-toggle>
+  </mat-button-toggle-group>
+  <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
 </div>
+
 <div class="section-tool">
   <app-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></app-active-canvas>
-  <div class="section-tool__panel"></div>
+
+  <app-sector-contour-edition #sectorContourEditionPanel class="section-tool__panel"
+    *ngIf="editedSector$ | async as editedSector; else sectorsContourPanel"
+    [sectorContour]="editedSector">
+  </app-sector-contour-edition>
+  <ng-template #sectorsContourPanel>
+    <app-sectors-contours-list class="section-tool__panel"></app-sectors-contours-list>
+  </ng-template>
 </div>
