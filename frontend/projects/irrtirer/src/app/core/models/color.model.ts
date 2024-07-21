@@ -3,3 +3,9 @@ export interface Color {
     g: number;
     b: number;
 }
+
+export interface ColorHsv {
+    h: number;
+    s: number;
+    v: number;
+}

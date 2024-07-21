@@ -1,43 +1,78 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { MatSliderModule } from '@angular/material/slider';
-import { Color } from '../../../core/models/color.model';
-import { Size } from '../../../core/models/size.interface';
+import { AfterViewInit, ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
+import { Color, ColorHsv } from '../../../core/models/color.model';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { ColorHelper } from '../../../core/helpers/color-helper';
+import { ColorSliderComponent } from './color-slider/color-slider.component';
+import { ColorCanvasComponent } from './color-canvas/color-canvas.component';
+
+const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 
 @Component({
     selector: 'app-color-selection-panel',
     standalone: true,
-    imports: [MatSliderModule],
+    imports: [
+        MatInputModule,
+        FormsModule,
+        CommonModule,
+        ColorSliderComponent,
+        ColorCanvasComponent,
+    ],
     templateUrl: './color-selection-panel.component.html',
     styleUrl: './color-selection-panel.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ColorSelectionPanelComponent implements AfterViewInit {
+export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
     @Input()
-    color: Color;
+    set color(value: Color) {
+        const hsvColor = ColorHelper.rgbToHsv(value);
+        this.hValue = hsvColor.h;
+        this.sValue = hsvColor.s;
+        this.vValue = hsvColor.v;
+    }
 
-    @ViewChild('canvas')
-    canvas: ElementRef<HTMLCanvasElement>;
+    @Output()
+    colorChange: EventEmitter<Color> = new EventEmitter<Color>();
+
+    hexColor: string = 'blue';
+
+    hValue: number = 0;
+    sValue: number = 0;
+    vValue: number = 0;
 
     ngAfterViewInit(): void {
-        const ctx = this.canvas.nativeElement.getContext('2d');
+        this.updateColorCode();
+    }
 
-        const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
-        const pixelSize: Size = {
-            height: canvasRect.height,
-            width: canvasRect.width,
-        };
+    ngOnDestroy(): void {
+        const color: Color = ColorHelper.hsvToRgb({ h: this.hValue, s: this.sValue, v: this.vValue });
+        this.colorChange.next(color);
+    }
 
-        const whiteToColorGrad = ctx.createLinearGradient(0, 0, pixelSize.width, 0);
-        whiteToColorGrad.addColorStop(0, '#FFFFFF');
-        whiteToColorGrad.addColorStop(1, '#FF0000');
+    private updateColorCode(): void {
+        this.hexColor = ColorHelper.hsvToHex({ h: this.hValue, s: this.sValue, v: this.vValue });
+    }
 
-        const transparentToBlackGrad = ctx.createLinearGradient(0, 0, 0, 200);
-        transparentToBlackGrad.addColorStop(0, '#00000000');
-        transparentToBlackGrad.addColorStop(1, '#000000');
+    protected onHueChanged(): void {
+        this.updateColorCode();
+    }
 
-        ctx.fillStyle = whiteToColorGrad;
-        ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
+    protected onHexCodeChange(evt: Event): void {
+        const input = evt.currentTarget as HTMLInputElement;
+        if (HexColorRegex.test(input.value)) {
+            const color = ColorHelper.hexToHsv(input.value);
+            this.hValue = color.h;
+            this.sValue = color.s;
+            this.vValue = color.v;
 
-        ctx.fillStyle = transparentToBlackGrad;
-        ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
+            this.updateColorCode();
+        }
+    }
+
+    protected onColorCanvasChanged(color: ColorHsv): void {
+        this.sValue = color.s;
+        this.vValue = color.v;
+        this.updateColorCode();
     }
 }

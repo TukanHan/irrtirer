@@ -2,7 +2,7 @@ import { Action, ActionReducer } from '@ngrx/store';
 
 const stateLocalStorageKey = 'state';
 
-function setSavedState(state: any, localStorageKey: string) {
+function setSavedState<T>(state: T, localStorageKey: string): void {
     localStorage.setItem(localStorageKey, JSON.stringify(state));
 }
 
@@ -17,10 +17,10 @@ function getSavedState(localStorageKey: string): object {
 
 export function storageMetaReducer<S, A extends Action = Action>(
     reducer: ActionReducer<S, A>
-): any {
+) {
     let onInit = true;
     return function (state: S, action: A): S {
-        const nextState = reducer(state, action);
+        const nextState: S = reducer(state, action);
 
         if (onInit) {
             onInit = false;

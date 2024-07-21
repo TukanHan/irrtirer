@@ -30,11 +30,11 @@ export class ClosedContourObject implements CanvasObject {
         }
 
         ctx.lineWidth = this.lineThicnses;
-        ctx.strokeStyle = ColorHelper.toHex(this.color);
+        ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
         ctx.closePath();
 
         ctx.globalAlpha = 0.25;
-        ctx.fillStyle = ColorHelper.toHex(this.color);
+        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
         ctx.fill();
         ctx.globalAlpha = 1;
 

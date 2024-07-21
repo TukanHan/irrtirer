@@ -67,15 +67,15 @@ export class GridObject implements CanvasObject {
     }
 
     calculateGridColorsForZoom(gridLength: number, zoom: number): ViewportZoomGridColors {
-        const maxDecimalGridColor: Color = ColorHelper.toColor(this.maxDecimalGridColor);
-        const maxDefaultGridColor: Color = ColorHelper.toColor(this.maxDefaultGridColor);
-        const minDefaultGridColor: Color = ColorHelper.toColor(this.backgroundColor);
+        const maxDecimalGridColor: Color = ColorHelper.hexToRgb(this.maxDecimalGridColor);
+        const maxDefaultGridColor: Color = ColorHelper.hexToRgb(this.maxDefaultGridColor);
+        const minDefaultGridColor: Color = ColorHelper.hexToRgb(this.backgroundColor);
 
         const interpolationValue = (zoom - gridLength) / (gridLength * 10 - gridLength);
 
         return {
-            decimalGridColor: ColorHelper.toHex(ColorHelper.lerp(maxDecimalGridColor, maxDefaultGridColor, interpolationValue)),
-            defaultGridColor: ColorHelper.toHex(ColorHelper.lerp(maxDefaultGridColor, minDefaultGridColor, interpolationValue)),
+            decimalGridColor: ColorHelper.rgbToHex(ColorHelper.lerp(maxDecimalGridColor, maxDefaultGridColor, interpolationValue)),
+            defaultGridColor: ColorHelper.rgbToHex(ColorHelper.lerp(maxDefaultGridColor, minDefaultGridColor, interpolationValue)),
         };
     }
 }

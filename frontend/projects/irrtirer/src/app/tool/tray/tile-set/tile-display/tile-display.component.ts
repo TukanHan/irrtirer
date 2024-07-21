@@ -34,7 +34,7 @@ export class TileDisplayComponent implements AfterViewInit {
     drawTileOnCanvas(mappedVertices: Vector[]): void {
       const ctx = this.canvas.nativeElement.getContext('2d');
 
-      ctx.fillStyle = ColorHelper.toHex(this.tile.color);
+      ctx.fillStyle = ColorHelper.rgbToHex(this.tile.color);
       ctx.beginPath();
 
       for (let i = 0; i < this.tile.vertices.length; ++i) {

@@ -30,7 +30,7 @@ export class OpenedContourObject implements CanvasObject {
             }
 
             ctx.lineWidth = 10;
-            ctx.strokeStyle = ColorHelper.toHex(this.color);
+            ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
 
             ctx.stroke();            
             ctx.lineWidth = 1;
@@ -48,7 +48,7 @@ export class OpenedContourObject implements CanvasObject {
         ctx.beginPath();
         ctx.arc(viewportPosition.x, viewportPosition.y, 10, 0, 2 * Math.PI);
 
-        ctx.fillStyle = ColorHelper.toHex(this.color);
+        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
         ctx.fill();
     }
 

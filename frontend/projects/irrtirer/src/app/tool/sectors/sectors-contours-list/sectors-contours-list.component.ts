@@ -37,7 +37,11 @@ export class SectorsContoursListComponent {
         const sector: Sector = {
             id: crypto.randomUUID(),
             name: '',
-            color: ColorHelper.HSVtoRGB(RandomHelper.nextFloat(0, 1), 0.75, 0.95),
+            color: ColorHelper.hsvToRgb({
+                h: RandomHelper.nextFloat(0, 1),
+                s: 0.75,
+                v: 0.95,
+            }),
             vertices: [],
         };
 

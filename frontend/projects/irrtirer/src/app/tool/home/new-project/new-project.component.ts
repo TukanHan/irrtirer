@@ -52,8 +52,6 @@ export class NewProjectComponent {
         }
     }
 
-    selectProjectFile($event: Event): void {}
-
     pushSelectedProject(project: MosaicProject): void {
         this.projectSelected.next(project);
     }

@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import { selectIsProjectCreated } from '../state/mosaic-project/mosaic-project.selectors';
 import { TOOL_PATH } from '../constants/paths';
 
-export const projectExistGuard: CanActivateFn = (route, state) => {
+export const projectExistGuard: CanActivateFn = () => {
     const store = inject(Store);
 
     if (store.selectSignal(selectIsProjectCreated)()) {
