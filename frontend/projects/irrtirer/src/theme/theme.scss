@@ -5,6 +5,7 @@
 @use './components/overlay-theme' as overlay;
 @use './components/tabs-theme' as tabs;
 @use './components/input-theme' as input;
+@use './components/menu-theme' as menu;
 @use './primaty-palette.scss' as pp;
 
 @include mat.core();
@@ -38,3 +39,4 @@ $irrtirer-theme: map.set($irrtirer-theme, "color", $color);
 @include overlay.theme($irrtirer-theme);
 @include tabs.theme($irrtirer-theme);
 @include input.theme($irrtirer-theme);
+@include menu.theme($irrtirer-theme);

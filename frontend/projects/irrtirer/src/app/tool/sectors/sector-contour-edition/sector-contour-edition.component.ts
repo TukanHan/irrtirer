@@ -80,6 +80,10 @@ export class SectorContourEditionComponent {
         this.emitContourChanged();
     }
 
+    onColorChanged(): void {
+        this.emitContourChanged();
+    }
+
     dropVertexBox(event: CdkDragDrop<string[]>): void {
         moveItemInArray(this.sector.vertices, event.previousIndex, event.currentIndex);
         this.emitContourChanged();

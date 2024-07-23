@@ -9,7 +9,7 @@
     </mat-form-field>
 </div>
 
-<app-color-picker [(color)]="sector.color" label="Kolor sektora"></app-color-picker>
+<app-color-picker [(color)]="sector.color" (colorChange)="onColorChanged()" label="Kolor sektora"></app-color-picker>
 
 <ng-container *ngIf="sector.vertices?.length; then vertices; else noVertices"></ng-container>
 
