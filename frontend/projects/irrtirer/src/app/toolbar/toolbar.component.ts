@@ -4,7 +4,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
-import { HttpClientModule } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
@@ -20,7 +19,6 @@ import { CommonModule } from '@angular/common';
     RouterLink,
     RouterLinkActive,
     IconSvgModuleModule,
-    HttpClientModule,
     MatMenuModule,
     MatRadioModule,
     CommonModule,
