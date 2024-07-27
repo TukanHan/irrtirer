@@ -18,24 +18,33 @@ export class OpenedContourObject implements CanvasObject {
     }
 
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        ctx.globalAlpha = 0.7;
-
         if(this.vertices.length >= 2) {
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
+            ctx.setLineDash([10]);
+
             ctx.beginPath();
-            let point: Vector = viewport.getViewportPosition(this.vertices[0]);
+            ctx.globalAlpha = 0.25;
+            let point: Vector = viewport.getViewportPosition(this.vertices.at(-1));
+            ctx.moveTo(point.x, point.y);
+            point = viewport.getViewportPosition(this.vertices[0]);
+            ctx.lineTo(point.x, point.y);   
+            ctx.stroke();
+            
+            ctx.globalAlpha = 0.7;
+            ctx.setLineDash([]);
+
+            ctx.beginPath();
             ctx.moveTo(point.x, point.y);
             for (let i = 1; i < this.vertices.length; ++i) {
                 point = viewport.getViewportPosition(this.vertices[i]);
                 ctx.lineTo(point.x, point.y);
             }
 
-            ctx.lineWidth = 10;
-            ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
-
             ctx.stroke();            
-            ctx.lineWidth = 1;
         }
 
+        ctx.lineWidth = 1;
         ctx.globalAlpha = 1;
         if(this.selectedIndex !== -1) {
             this.drawPoint(ctx, viewport, this.vertices[this.selectedIndex]);

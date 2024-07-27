@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Vector } from '../../../core/models/point.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -13,6 +13,10 @@ import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.
 import { SectorsContoursService } from '../sectors-contours.service';
 import { EditedSectorContour } from '../sectors-contours.interfaces';
 import { Sector } from '../../../core/models/mosaic-project.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Line } from '../../../core/models/line.model';
+import { PresenceInPoligonHelper } from '../../../core/helpers/presence-in-polygon-helper';
+import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 
 @Component({
     selector: 'app-sector-contour-edition',
@@ -31,7 +35,7 @@ import { Sector } from '../../../core/models/mosaic-project.model';
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
 })
-export class SectorContourEditionComponent {
+export class SectorContourEditionComponent implements OnInit {
     @Input()
     set sectorContour(value: EditedSectorContour) {
         this.sector = value.sector;
@@ -41,7 +45,19 @@ export class SectorContourEditionComponent {
     sector!: Sector;
     selectedVertex!: Vector;
 
-    constructor(private store: Store, private sectorsContoursSevice: SectorsContoursService) {}
+    usedSectorNames: string[];
+
+    constructor(
+        private store: Store,
+        private snackbarService: MatSnackBar,
+        private sectorsContoursSevice: SectorsContoursService
+    ) {}
+
+    ngOnInit(): void {
+        this.usedSectorNames = this.store.selectSignal(selectSectors)()
+            .filter(s => s.id !== this.sector.id)
+            .map(s => s.name);
+    }
 
     public addVertex(vertex: Vector): void {
         const indexOfSelectedVertex: number = this.sector.vertices.indexOf(this.selectedVertex);
@@ -71,8 +87,53 @@ export class SectorContourEditionComponent {
     }
 
     private isSectorValid(): boolean {
-        //TODO Snackbar
-        return !!this.sector.name && this.sector.vertices.length >= 3;
+        if (!this.sector.name) {
+            this.showWarning($localize`Sektor musi mieć nazwę.`);
+            return false;
+        }
+
+        if(this.usedSectorNames.includes(this.sector.name)) {
+            this.showWarning($localize`Sektor o tej nazwie istnieje, wybierz inną.`);
+            return false;
+        }
+
+        if (this.sector.vertices.length < 3) {
+            this.showWarning($localize`Sektor musi mieć co najmniej 3 wierzchołki.`);
+            return false;
+        }
+
+        if (this.areSectorLineIntersecting(this.sector.vertices)) {
+            this.showWarning($localize`Linie sektora nie mogą się przecinać`);
+            return false;
+        }
+
+        return true;
+    }
+
+    private areSectorLineIntersecting(vertices: Vector[]): boolean {
+        const lines: Line[] = [];
+
+        for (let i = 0; i < vertices.length; ++i) {
+            lines.push(new Line(vertices.at(i), vertices.at(i - 1)));
+        }
+
+        for (let i = 0; i < vertices.length; ++i) {
+            for (let j = 0; j < vertices.length; ++j) {
+                if (i === j || (i + 1) % vertices.length === j || (j + 1) % vertices.length === i) {
+                    continue;
+                }
+
+                if (PresenceInPoligonHelper.areLineIntersecting(lines[i], lines[j])) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private showWarning(message: string): void {
+        this.snackbarService.open(message, 'Ok', { duration: 3000 });
     }
 
     onBoxSelected(vertex: Vector): void {

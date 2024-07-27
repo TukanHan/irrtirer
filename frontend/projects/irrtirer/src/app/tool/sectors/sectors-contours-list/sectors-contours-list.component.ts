@@ -29,7 +29,11 @@ export class SectorsContoursListComponent {
 
     selectedSector: Sector;
 
-    constructor(public dialog: MatDialog, private store: Store, private sectorsContoursSevice: SectorsContoursService) {
+    constructor(
+        public dialog: MatDialog,
+        private store: Store,
+        private sectorsContoursSevice: SectorsContoursService
+    ) {
         this.sectors$ = store.select(selectSectors);
     }
 
@@ -45,7 +49,7 @@ export class SectorsContoursListComponent {
             vertices: [],
         };
 
-        this.emitSectorToEdit(sector);
+        this.emitSectorToEditContour(sector);
     }
 
     openRemoveSectorDialog(sector: Sector): void {
@@ -66,7 +70,7 @@ export class SectorsContoursListComponent {
         });
     }
 
-    emitSectorToEdit(sector: Sector): void {
+    emitSectorToEditContour(sector: Sector): void {
         this.sectorsContoursSevice.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),

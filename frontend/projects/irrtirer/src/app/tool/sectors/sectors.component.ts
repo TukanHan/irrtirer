@@ -19,6 +19,7 @@ import { SectorContourEditionComponent } from './sector-contour-edition/sector-c
 import { EditedSectorContour } from './sectors-contours.interfaces';
 import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
+import { Size } from '../../core/models/size.interface';
 
 @Component({
     selector: 'app-sectors',
@@ -60,16 +61,17 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
 
         this.activeCanvas.addCanvasObject(new GridObject());
 
-        this.activeCanvas.addCanvasObject(
-            new ImageObject(image, Vector.zero, {
-                height: (image.height / image.width) * mosaicConfig.mosaicWidth,
-                width: mosaicConfig.mosaicWidth,
-            })
-        );
+        const imageSize: Size = {
+            height: (image.height / image.width) * mosaicConfig.mosaicWidth,
+            width: mosaicConfig.mosaicWidth,
+        };
+
+        this.activeCanvas.addCanvasObject(new ImageObject(image, Vector.zero, imageSize));
 
         this.subscribeOnEditedSectorChanged();
         this.subscribeOnSectorListChanged();
-        this.redrawSectors();
+        this.setInitZoomForImage(imageSize);
+        this.activeCanvas.rewrite();
     }
 
     private subscribeOnEditedSectorChanged(): void {
@@ -80,14 +82,18 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
         this.subscription.add(this.sectorsContoursSevice.sectorListChange$.subscribe(() => this.redrawSectors()));
     }
 
-    ngOnDestroy(): void {
-        this.subscription.unsubscribe();
+    private setInitZoomForImage(imageSize: Size): void {
+        const imageZoom: Size = {
+            height: (imageSize.height * 1.1) / this.activeCanvas.viewport.cmSize.height,
+            width: (imageSize.width * 1.1) / this.activeCanvas.viewport.cmSize.width
+        };
+
+        const zoom: number = Math.max(imageZoom.height, imageZoom.width);
+        this.activeCanvas.setZoom(zoom);
     }
 
-    canvasOptionChanged(): void {
-        this.activeCanvas.options = {
-            isMovable: this.canvasMode === 'movement',
-        };
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
     }
 
     onCanvasClicked(point: Vector): void {
@@ -111,13 +117,13 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
 
     private redrawSectors(): void {
         for (const object of this.visualElems) {
-            this.activeCanvas.removeCanvasObject(object, false);
+            this.activeCanvas.removeCanvasObject(object);
         }
 
         this.visualElems = this.prepareSectorsContours();
 
         for (const object of this.visualElems) {
-            this.activeCanvas.addCanvasObject(object, false);
+            this.activeCanvas.addCanvasObject(object);
         }
 
         this.activeCanvas.rewrite();

@@ -9,10 +9,10 @@
         <mat-icon matListIcon>more_vert</mat-icon>
       </button>
 
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item (click)="emitSectorToEdit(sector)">
+      <mat-menu #menu="matMenu" classList="paddingless">
+        <button mat-menu-item (click)="emitSectorToEditContour(sector)">
           <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
-          <span i18n>Edytuj</span>
+          <span i18n>Edytuj kontur</span>
         </button>
         <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
           <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>

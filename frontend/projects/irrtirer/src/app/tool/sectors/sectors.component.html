@@ -1,12 +1,4 @@
 <div class="ribbon">
-  <mat-button-toggle-group #group="matButtonToggleGroup" [(ngModel)]="canvasMode" (change)="canvasOptionChanged()" appearance="legacy" class="ribbon__actions">
-      <mat-button-toggle value="movement" aria-label="Text align left">
-        <mat-icon class="material-symbols-outlined">open_with</mat-icon>
-      </mat-button-toggle>
-      <mat-button-toggle value="selection" aria-label="Text align center">
-        <mat-icon class="material-symbols-outlined">timeline</mat-icon>
-      </mat-button-toggle>
-  </mat-button-toggle-group>
   <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
 </div>
 

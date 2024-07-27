@@ -2,5 +2,11 @@
 @use '@angular/material' as mat;
 
 @mixin theme($theme) {
-
+    .mat-mdc-menu-panel {
+        &.paddingless {
+            .mat-mdc-menu-content {
+                padding: 0;
+            }
+        }
+    }
 }

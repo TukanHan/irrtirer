@@ -5,7 +5,6 @@ import {
     Component,
     ElementRef,
     EventEmitter,
-    HostBinding,
     Input,
     OnDestroy,
     Output,
@@ -42,94 +41,91 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     @ViewChild('canvas')
     canvas: ElementRef<HTMLCanvasElement>;
 
-    @HostBinding('class.dragged')
-    isDraging = false;
-
-    ctx: CanvasRenderingContext2D;
-
     viewport: Viewport;
 
-    canvasObjects: CanvasObject[] = [];
+    private isDraging = false;
+
+    private ctx: CanvasRenderingContext2D;
+
+    private canvasObjects: CanvasObject[] = [];
 
     constructor(private cd: ChangeDetectorRef) {}
 
-    ngAfterViewInit(): void {
+    public ngAfterViewInit(): void {
         this.ctx = this.canvas.nativeElement.getContext('2d');
 
         window.addEventListener('resize', this.resizeFunc, false);
 
-        this.canvas.nativeElement.addEventListener('wheel', (event: WheelEvent) => {
-            if (this.options?.isMovable === false) {
-                return;
-            }
-
-            const cursorWorldPos: Vector = this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY });
-            const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-            const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
-
-            const newPosition: Vector = {
-                x: cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
-                y: cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier,
-            };
-
-            this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
-            this.rewrite();
-            event.preventDefault();
-        });
-
-        this.canvas.nativeElement.onmousedown = (event: MouseEvent) => {
-            this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
-            if (this.options?.isMovable === false) {
-                return;
-            }
-
-            this.isDraging = true;
-            this.cd.markForCheck();
-        };
-
-        this.canvas.nativeElement.onmouseup = () => {
-            if (this.options?.isMovable === false) {
-                return;
-            }
-
-            this.isDraging = false;
-            this.cd.markForCheck();
-        };
-
-        this.canvas.nativeElement.addEventListener('mouseout', () => {
-            if (this.options?.isMovable === false) {
-                return;
-            }
-
-            this.isDraging = false;
-            this.cd.markForCheck();
-        });
-
-        this.canvas.nativeElement.addEventListener('mousemove', (evt: MouseEvent) => {
-            if (this.options?.isMovable === false) {
-                return;
-            }
-
-            if (this.isDraging) {
-                const newPosition: Vector = {
-                    x: this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
-                    y: this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom,
-                };
-
-                this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
-                this.rewrite();
-            }
-        });
+        this.canvas.nativeElement.addEventListener('wheel', this.onWheelMove);
+        this.canvas.nativeElement.addEventListener('mousedown', this.onMouseDown); 
+        window.addEventListener('mousemove', this.onMouseMove);
+        window.addEventListener('mouseup', this.onMouseUp);
 
         this.viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
         setTimeout(() => this.resizeFunc(), 1);
     }
 
-    ngOnDestroy(): void {
+    public ngOnDestroy(): void {
+        this.canvas.nativeElement.removeEventListener('wheel', this.onWheelMove);
+        this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown); 
         window.removeEventListener('resize', this.resizeFunc, false);
+        window.removeEventListener('mousemove', this.onMouseMove);
+        window.removeEventListener('mouseup', this.onMouseUp);
     }
 
-    resizeFunc = () => {
+    private onWheelMove = (event: WheelEvent) => {
+        const cursorWorldPos: Vector = this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY });
+        const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
+        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
+
+        const newPosition: Vector = {
+            x: cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
+            y: cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier,
+        };
+
+        this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
+        this.rewrite();
+        event.preventDefault();
+    };
+
+     private onMouseDown = (event: MouseEvent) => {
+        this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
+        if (this.options?.isMovable === false) {
+            return;
+        }
+
+        document.body.style.cursor = 'grab';
+        this.isDraging = true;
+        this.cd.markForCheck();
+    };
+
+    private onMouseMove = (evt: MouseEvent) => {
+        if (this.options?.isMovable === false) {
+            return;
+        }
+
+        if (this.isDraging) {
+            const newPosition: Vector = {
+                x: this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
+                y: this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom,
+            };
+
+            this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
+            this.rewrite();
+        }
+    };
+
+    private onMouseUp = () => {
+        if (this.options?.isMovable === false) {
+            return;
+        }
+
+        document.body.style.cursor = '';
+        this.isDraging = false;
+        this.cd.markForCheck();
+    }
+
+    private resizeFunc = () => {
         const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
             height: canvasRect.height,
@@ -143,25 +139,21 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.rewrite();
     };
 
-    addCanvasObject(addedObj: CanvasObject, redraw: boolean = true): void {
+    public setZoom(zoom: number): void {
+        this.viewport = new Viewport(this.viewport.position, zoom, this.viewport.pxSize);
+    }
+
+    public addCanvasObject(addedObj: CanvasObject): void {
         this.canvasObjects.push(addedObj);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
-
-        if (redraw) {
-            this.rewrite();
-        }
     }
 
-    removeCanvasObject(removedObj: CanvasObject, redraw: boolean = true): void {
+    public removeCanvasObject(removedObj: CanvasObject): void {
         this.canvasObjects = this.canvasObjects.filter((canvasObj) => canvasObj !== removedObj);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
-
-        if (redraw) {
-            this.rewrite();
-        }
     }
 
-    rewrite(): void {
+    public rewrite(): void {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
