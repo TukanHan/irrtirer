@@ -1,0 +1,38 @@
+:host {
+    .label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .label-content {
+            margin-left: 15px;
+            font-weight: 500;
+        }
+
+        .toggle-button {
+            margin-left: auto;
+            margin-right: 6px;
+            padding: 4px;
+            --mdc-icon-button-state-layer-size: 32px;
+
+            .chevron {
+                transition: all 0.25s ease;
+    
+                &--closed {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .panel {
+        transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+        overflow: hidden;
+        max-height: 0;
+
+        &--open {
+            max-height: 1000px;
+            transition: max-height 1s ease-in-out;
+        }
+    }
+}

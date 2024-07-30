@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActiveCanvasComponent } from '../../shared/active-canvas/active-canvas.component';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
@@ -20,23 +20,25 @@ import { EditedSectorContour } from './sectors-contours.interfaces';
 import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
 import { Size } from '../../core/models/size.interface';
+import { SectorPropertyEditorComponent } from "./sector-property-editor/sector-property-editor.component";
 
 @Component({
     selector: 'app-sectors',
     standalone: true,
     imports: [
-        ActiveCanvasComponent,
-        MatButtonToggleModule,
-        MatIconModule,
-        FormsModule,
-        CommonModule,
-        SectorsContoursListComponent,
-        SectorContourEditionComponent,
-    ],
+    ActiveCanvasComponent,
+    MatButtonToggleModule,
+    MatIconModule,
+    FormsModule,
+    CommonModule,
+    SectorsContoursListComponent,
+    SectorContourEditionComponent,
+    SectorPropertyEditorComponent
+],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss',
 })
-export class SectorsComponent implements AfterViewInit, OnDestroy {
+export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     canvasMode: 'movement' | 'selection' = 'movement';
 
     @ViewChild('activeCanvas')
@@ -47,11 +49,18 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
 
     visualElems: CanvasObject[] = [];
 
-    editedSector$: Observable<EditedSectorContour | null> = this.sectorsContoursSevice.editedSectorContour$;
+    sectorForContourEdition$: Observable<EditedSectorContour | null> = this.sectorsContoursSevice.sectorForContourEdition$;
+
+    sectorForPropertyEdition$: Observable<Sector | null> = this.sectorsContoursSevice.sectorForPropertyEdition$;
 
     subscription: Subscription = new Subscription();
 
     constructor(private store: Store, private sectorsContoursSevice: SectorsContoursService) {}
+    
+    ngOnInit(): void {
+        this.sectorsContoursSevice.emitEditedSectorContour(null);
+        this.sectorsContoursSevice.emitEditedSectorProperty(null);
+    }
 
     async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
@@ -75,7 +84,7 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
     }
 
     private subscribeOnEditedSectorChanged(): void {
-        this.subscription.add(this.editedSector$.subscribe((s) => this.onEditedSectorChanged(s)));
+        this.subscription.add(this.sectorForContourEdition$.subscribe((s) => this.onEditedSectorChanged(s)));
     }
 
     private subscribeOnSectorListChanged(): void {
@@ -98,7 +107,7 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
 
     onCanvasClicked(point: Vector): void {
         let selectedSector: EditedSectorContour | null;
-        this.editedSector$.pipe(take(1)).subscribe((s) => {
+        this.sectorForContourEdition$.pipe(take(1)).subscribe((s) => {
             selectedSector = s;
         });
 
@@ -133,7 +142,7 @@ export class SectorsComponent implements AfterViewInit, OnDestroy {
         let editedSectorContour: EditedSectorContour;
         let selectedSectorOnList: Sector;
 
-        this.editedSector$.pipe(take(1)).subscribe((s) => {
+        this.sectorForContourEdition$.pipe(take(1)).subscribe((s) => {
             editedSectorContour = s;
         });
 

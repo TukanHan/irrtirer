@@ -5,10 +5,17 @@
 <div class="section-tool">
   <app-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></app-active-canvas>
 
-  <app-sector-contour-edition #sectorContourEditionPanel class="section-tool__panel"
-    *ngIf="editedSector$ | async as editedSector; else sectorsContourPanel"
-    [sectorContour]="editedSector">
-  </app-sector-contour-edition>
+  <ng-container *ngIf="sectorForContourEdition$ | async as editedSector; else sectorPropertyEditionPanel">
+    <app-sector-contour-edition #sectorContourEditionPanel class="section-tool__panel" [sectorContour]="editedSector">
+    </app-sector-contour-edition>
+  </ng-container>
+  
+  <ng-template #sectorPropertyEditionPanel>
+    <ng-container *ngIf="sectorForPropertyEdition$ | async as editedSector; else sectorsContourPanel">
+      <app-sector-property-editor class="section-tool__panel" [sector]="editedSector"></app-sector-property-editor>
+    </ng-container>
+  </ng-template>
+  
   <ng-template #sectorsContourPanel>
     <app-sectors-contours-list class="section-tool__panel"></app-sectors-contours-list>
   </ng-template>

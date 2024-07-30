@@ -6,6 +6,7 @@
 @use './components/tabs-theme' as tabs;
 @use './components/input-theme' as input;
 @use './components/menu-theme' as menu;
+@use './components//tooltip-theme' as tooltip;
 @use './primaty-palette.scss' as pp;
 
 @include mat.core();
@@ -40,3 +41,4 @@ $irrtirer-theme: map.set($irrtirer-theme, "color", $color);
 @include tabs.theme($irrtirer-theme);
 @include input.theme($irrtirer-theme);
 @include menu.theme($irrtirer-theme);
+@include tooltip.theme($irrtirer-theme);

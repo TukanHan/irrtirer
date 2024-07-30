@@ -31,9 +31,9 @@ export class SectorsContoursListComponent {
 
     constructor(
         public dialog: MatDialog,
-        private store: Store,
-        private sectorsContoursSevice: SectorsContoursService
-    ) {
+         private store: Store,
+          private sectorsContoursSevice: SectorsContoursService
+        ) {
         this.sectors$ = store.select(selectSectors);
     }
 
@@ -47,6 +47,28 @@ export class SectorsContoursListComponent {
                 v: 0.95,
             }),
             vertices: [],
+            properties: {
+                sectionMaxArea: 1,
+                sectionMinAngle: 35,
+                maxTileRadius: null,
+                minTileRadius: null,
+                tilesMargin: 0.1,
+                evaluationParams: {
+                    singleSectionPopulation: 2,
+                    overlappingAreaOutsideSector: -2,
+                    additionalPopulationOfNeighboringSectors: 4,
+                    overlappingNotPopulatedSections: -1,
+                    tileColorMismatch: -2,
+                },
+                populationParams: {
+                    initialPopulationSize: 100,
+                    countOfTriesToInsertTile: 30,
+                    countOfRandomingTrianglePosition: 30,
+                    countOfColorMatchingAttempts: 40,
+                    iterationsCount: 100,
+                    populationSize: 10,
+                },
+            },
         };
 
         this.emitSectorToEditContour(sector);
@@ -75,6 +97,10 @@ export class SectorsContoursListComponent {
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),
         });
+    }
+
+    emitSectorToEditProperty(sector: Sector): void {
+        this.sectorsContoursSevice.emitEditedSectorProperty(sector);
     }
 
     onSectorSelected(sector: Sector): void {

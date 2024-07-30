@@ -1,0 +1,122 @@
+<div class="actions">
+    <button mat-flat-button (click)="cancel()" i18n>Anuluj</button>
+    <button mat-flat-button color="accent" (click)="save()" i18n>Potwierdź</button>
+</div>
+
+<form [formGroup]="sectorPropertyForm" class="sector-property-form">
+    <app-extended-panel label="Rozmiary sekcji">
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Maksymalna powierzchnia kwadratowa poszczególnych trójkątów będących sekcjami budującymi sektory."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Maks. powierzchia</mat-label>
+                <input matInput formControlName="sectionMaxArea" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Minimalny wymagany kąt wyrażpny w stopniach do utworzenia trójkąta sekcji."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Min. kąt sektora</mat-label>
+                <input matInput formControlName="sectionMinAngle" type="number">
+            </mat-form-field>
+        </div>
+    </app-extended-panel>
+
+    <app-extended-panel label="Ograniczenia kafelków">
+        <div class="form-group">
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Wymagany minimalny promień kafelka, do uwzględnienia przy wyborze do tego sektora."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Min. promień</mat-label>
+                <input matInput formControlName="minTileRadius" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Wymagany maksymalny promień kafelka, do uwzględnienia przy wyborze do tego sektora."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Maks. promień</mat-label>
+                <input matInput formControlName="maxTileRadius" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Wymagany minimalny odstęp między dwoma wygenerowanymi kafelkami." matTooltipPosition="left"
+                matTooltipClass="hint">
+                <mat-label i18n>Minimalny odstęp</mat-label>
+                <input matInput formControlName="tileMargin" type="number" min="0">
+            </mat-form-field>
+        </div>
+    </app-extended-panel>
+
+    <app-extended-panel label="Parametry algorytmu" [isOpen]="false">
+        <div class="form-group" formGroupName="populationParams">
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Początkowa liczba osobników do selekcji, spośród których zostaną wyłonieni najlepsi, już do zwykłego działania algorytmu. Wyższa wartość daje lepsze rezultaty."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Początkowa wielkość populacji</mat-label>
+                <input matInput formControlName="initialPopulationSize" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Liczba osobników do selekcji, podczas zwykłego przebiegu algorytmu. Wyższa wartość daje lepsze efekty, ale znacznie spowalnia algorytm."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Wielkość populacji</mat-label>
+                <input matInput formControlName="populationSize" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Liczba iteracji działania algorytmu. Czym większa liczba tym lepsze wyniki, ale na pewnym poziomie bez wpływu."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Iteracje algorytmu</mat-label>
+                <input matInput formControlName="iterationsCount" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Liczba prób umieszczenia dodatkowego kafelka w sekcji. Przy większych sekcjach zalecane wyższe wartości."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Próby dodania kafelka do sekcji</mat-label>
+                <input matInput formControlName="countOfRandomingTrianglePosition" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Liczba prób zmiany kafelka przy jednej operacji." matTooltipPosition="left"
+                matTooltipClass="hint">
+                <mat-label i18n>Próby modyfikacji kafelka</mat-label>
+                <input matInput formControlName="countOfTriesToInsertTile" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Liczba pobranych próbek kolorów kafelków przy wyborze najlepiej pasującego kolorystycznie kafelka do określonego miejsca."
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Próby wybrania naj. koloru</mat-label>
+                <input matInput formControlName="countOfColorMatchingAttempts" type="number">
+            </mat-form-field>
+        </div>
+    </app-extended-panel>
+
+    <app-extended-panel label="Parametry ewaluacji" [isOpen]="false">
+        <div class="form-group" formGroupName="evaluationParams">
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Ocena za zapełnienie przestrzeni sekcji kafelkami. Służy do priorytetyzowania gęstrzych sekcji. [Sugerowana dodatnia]"
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Nagroda zapełnienia sekcji</mat-label>
+                <input matInput formControlName="singleSectionPopulation" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Ocena za wystawanie kafelków poza sektor. Służy do wymuszenia trzymania się granic sektora. [Sugerowana ujemna]"
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Kara wystawania za sektor</mat-label>
+                <input matInput formControlName="overlappingAreaOutsideSector" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Ocena za wypełnienie niewykorzystanej (zmarnowanej) przestrzeni sekcji, które były już wygenerowane. Służy do zagęszczenia przestrzeni sektora. [Sugerowana dodatnia]"
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Nagroda korzystnego wypełnienia</mat-label>
+                <input matInput formControlName="additionalPopulationOfNeighboringSectors" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Ocena za uzurpowanie przestrzeni jeszcze niewygenerowanych sektorów. Służy do ograniczenia źłemu gospodarowaniu przestrzenią. [Sugerowana ujemna]"
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Kara negatywnego wypełnienia</mat-label>
+                <input matInput formControlName="overlappingNotPopulatedSections" type="number">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="density-3 no-hint"
+                matTooltip="Ocena za rozbierzność między kolorem kafelka, a obrazkiem. Służy do utrzymania prawidłowego koloru mozaiki. [Sugerowana ujemna]"
+                matTooltipPosition="left" matTooltipClass="hint">
+                <mat-label i18n>Kara za niepasujący kolor</mat-label>
+                <input matInput formControlName="tileColorMismatch" type="number">
+            </mat-form-field>
+        </div>
+    </app-extended-panel>
+</form>
