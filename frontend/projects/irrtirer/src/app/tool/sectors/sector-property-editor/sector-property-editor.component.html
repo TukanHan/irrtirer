@@ -6,17 +6,17 @@
 <form [formGroup]="sectorPropertyForm" class="sector-property-form">
     <app-extended-panel label="Rozmiary sekcji">
         <div class="form-group">
-            <mat-form-field appearance="outline" class="density-3 no-hint"
+            <mat-form-field appearance="outline" class="density-3 no-hint" 
                 matTooltip="Maksymalna powierzchnia kwadratowa poszczególnych trójkątów będących sekcjami budującymi sektory."
                 matTooltipPosition="left" matTooltipClass="hint">
                 <mat-label i18n>Maks. powierzchia</mat-label>
-                <input matInput formControlName="sectionMaxArea" type="number">
+                <input matInput formControlName="sectionMaxArea" type="number" (change)="getTriangulationMesh()">
             </mat-form-field>
             <mat-form-field appearance="outline" class="density-3 no-hint"
                 matTooltip="Minimalny wymagany kąt wyrażpny w stopniach do utworzenia trójkąta sekcji."
                 matTooltipPosition="left" matTooltipClass="hint">
                 <mat-label i18n>Min. kąt sektora</mat-label>
-                <input matInput formControlName="sectionMinAngle" type="number">
+                <input matInput formControlName="sectionMinAngle" type="number" (change)="getTriangulationMesh()">
             </mat-form-field>
         </div>
     </app-extended-panel>

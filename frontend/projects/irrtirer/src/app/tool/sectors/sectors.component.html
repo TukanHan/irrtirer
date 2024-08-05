@@ -12,7 +12,7 @@
   
   <ng-template #sectorPropertyEditionPanel>
     <ng-container *ngIf="sectorForPropertyEdition$ | async as editedSector; else sectorsContourPanel">
-      <app-sector-property-editor class="section-tool__panel" [sector]="editedSector"></app-sector-property-editor>
+      <app-sector-property-editor class="section-tool__panel" [sector]="editedSector.sector"></app-sector-property-editor>
     </ng-container>
   </ng-template>
   

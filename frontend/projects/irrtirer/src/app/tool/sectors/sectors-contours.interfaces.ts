@@ -6,6 +6,11 @@ export interface EditedSectorContour {
     selectedVertex: Vector;
 }
 
+export interface EditedSectorWithTriangulationMesh {
+    sector: Sector;
+    mesh: Vector[][];
+}
+
 export interface SectorListChangeEvent {
     selectedSector: Sector;
 }

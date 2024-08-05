@@ -1,0 +1,6 @@
+@Irrtirer_HostAddress = http://localhost:5291
+
+GET {{Irrtirer_HostAddress}}/mosaic/
+Accept: application/json
+
+###

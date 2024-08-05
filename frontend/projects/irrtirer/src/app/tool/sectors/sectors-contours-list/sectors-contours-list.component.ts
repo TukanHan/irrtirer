@@ -100,7 +100,10 @@ export class SectorsContoursListComponent {
     }
 
     emitSectorToEditProperty(sector: Sector): void {
-        this.sectorsContoursSevice.emitEditedSectorProperty(sector);
+        this.sectorsContoursSevice.emitEditedSectorProperty({
+            sector: sector,
+            mesh: null
+        });
     }
 
     onSectorSelected(sector: Sector): void {

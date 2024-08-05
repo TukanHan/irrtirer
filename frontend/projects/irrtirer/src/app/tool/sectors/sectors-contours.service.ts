@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
-import { EditedSectorContour, SectorListChangeEvent } from './sectors-contours.interfaces';
-import { Sector } from '../../core/models/mosaic-project.model';
+import { EditedSectorContour, EditedSectorWithTriangulationMesh, SectorListChangeEvent } from './sectors-contours.interfaces';
 
 @Injectable({
     providedIn: 'root',
@@ -17,17 +16,18 @@ export class SectorsContoursService {
 
     public readonly sectorListChange$: Observable<SectorListChangeEvent> = this.sectorListChanged.asObservable();
 
-    private readonly sectorForPropertyEditionChanged: Subject<Sector | null> = new BehaviorSubject<Sector | null>(null);
+    private readonly sectorForPropertyEditionChanged: Subject<EditedSectorWithTriangulationMesh | null> = new BehaviorSubject(null);
 
-    public readonly sectorForPropertyEdition$: Observable<Sector | null> = this.sectorForPropertyEditionChanged.asObservable();
+    public readonly sectorForPropertyEdition$: Observable<EditedSectorWithTriangulationMesh | null> =
+        this.sectorForPropertyEditionChanged.asObservable();
 
     constructor() {}
 
-    public emitEditedSectorContour(sectorContour: EditedSectorContour | null): void {
+    public emitEditedSectorContour(sectorContour: EditedSectorContour): void {
         this.sectorForContourEditionChanged.next(sectorContour);
     }
 
-    public emitEditedSectorProperty(sector: Sector): void {
+    public emitEditedSectorProperty(sector: EditedSectorWithTriangulationMesh): void {
         this.sectorForPropertyEditionChanged.next(sector);
     }
 
