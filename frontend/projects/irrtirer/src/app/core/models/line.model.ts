@@ -1,4 +1,5 @@
 import { Vector } from './point.model';
+import hash from 'hash-it';
 
 export class Line {
     start: Vector;
@@ -7,5 +8,9 @@ export class Line {
     constructor(start: Vector, end: Vector) {
         this.start = start;
         this.end = end;
+    }
+
+    hash(): number {
+        return hash(this);
     }
 }

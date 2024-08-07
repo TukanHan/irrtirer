@@ -1,5 +1,6 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
+import { Line } from '../../../core/models/line.model';
 import { Vector } from '../../../core/models/point.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
@@ -55,23 +56,36 @@ export class TriangulatedContourObject implements CanvasObject {
     drawTriangulationMesh(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         ctx.lineWidth = this.innerThicnes;
         ctx.globalAlpha = 0.3;
-        for(const triangle of this.triangulationMesh) {
+
+        for(const line of this.selectLines()) {
             ctx.beginPath();
-            let point: Vector = viewport.getViewportPosition(triangle[0]);
-            ctx.moveTo(point.x, point.y);
-            for (let j = 1; j < 3; ++j) {
-                point = viewport.getViewportPosition(triangle[j]);
-                ctx.lineTo(point.x, point.y);
-            }
-    
-            ctx.closePath();
+            
+            const startWorldPos: Vector = viewport.getViewportPosition(line.start);
+            ctx.moveTo(startWorldPos.x, startWorldPos.y);
+            const endWorldPos: Vector = viewport.getViewportPosition(line.end);
+            ctx.lineTo(endWorldPos.x, endWorldPos.y);
+            
             ctx.stroke();
         }
+
         ctx.globalAlpha = 1;
     }
 
-    selectLines(): void {
-        //TODO
+    selectLines(): IterableIterator<Line> {
+        const lines: Map<number, Line> = new Map();
+
+        for(const triangle of this.triangulationMesh) {
+            let previousVertex: Vector = triangle[2];
+            for(let i=0; i < 3; ++i) {
+                const currentVertex = triangle[i];
+                const vertices = previousVertex.hash() < currentVertex.hash() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
+                const line = new Line(vertices[0], vertices[1]);
+                lines.set(line.hash(), line);
+                previousVertex = currentVertex;
+            }
+        }
+
+        return lines.values();
     }
 
     getOrder(): number {

@@ -1,11 +1,10 @@
+import hash from 'hash-it';
+
 export class Vector {
     readonly x: number = 0;
     readonly y: number = 0;
 
-    static readonly zero: Vector = {
-        x: 0,
-        y: 0,
-    };
+    static readonly zero: Vector = new Vector(0, 0);
 
     constructor(x: number, y: number) {
         this.x = x;
@@ -22,5 +21,9 @@ export class Vector {
 
     public static substract(a: Vector, b: Vector): Vector {
         return new Vector(a.x - b.x, a.y - b.y);
+    }
+
+    hash(): number {
+        return hash(this);
     }
 }

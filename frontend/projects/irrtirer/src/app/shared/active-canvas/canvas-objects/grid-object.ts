@@ -28,15 +28,15 @@ export class GridObject implements CanvasObject {
 
         for (let i = Math.floor(start.y / gridLength) * gridLength; end.y > i; i += gridLength) {
             const horizontal = viewport.getViewportYPosition(i);
-            const startX = { x: 0, y: horizontal };
-            const endX = { x: viewport.pxSize.width, y: horizontal };
+            const startX: Vector = new Vector(0, horizontal);
+            const endX: Vector = new Vector(viewport.pxSize.width, horizontal);
             this.drawLine(ctx, startX, endX, this.calculateGridColor(i, gridLength, currentZoomGridColors));
         }
 
         for (let i = Math.floor(start.x / gridLength) * gridLength; end.x > i; i += gridLength) {
             const vertical = viewport.getViewportXPosition(i);
-            const startY = { x: vertical, y: 0 };
-            const endY = { x: vertical, y: viewport.pxSize.height };
+            const startY: Vector = new Vector(vertical, 0);
+            const endY: Vector = new Vector(vertical, viewport.pxSize.height);
             this.drawLine(ctx, startY, endY, this.calculateGridColor(i, gridLength, currentZoomGridColors));
         }
     }

@@ -74,14 +74,14 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     }
 
     private onWheelMove = (event: WheelEvent) => {
-        const cursorWorldPos: Vector = this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY });
+        const cursorWorldPos: Vector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
         const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
 
-        const newPosition: Vector = {
-            x: cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
-            y: cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier,
-        };
+        const newPosition: Vector = new Vector(
+            cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
+            cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier,
+        );
 
         this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
         this.rewrite();
@@ -89,7 +89,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     };
 
      private onMouseDown = (event: MouseEvent) => {
-        this.clicked.emit(this.viewport.getWorldPosition({ x: event.offsetX, y: event.offsetY }));
+        this.clicked.emit(this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
         if (this.options?.isMovable === false) {
             return;
         }
@@ -105,10 +105,10 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         }
 
         if (this.isDraging) {
-            const newPosition: Vector = {
-                x: this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
-                y: this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom,
-            };
+            const newPosition: Vector = new Vector(
+                this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
+                this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom,
+            );
 
             this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
             this.rewrite();

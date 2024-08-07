@@ -56,10 +56,10 @@ export class TileDisplayComponent implements AfterViewInit {
 
         const mappedVertices: Vector[] = [];
         for (let i = 0; i < vertices.length; ++i) {
-            mappedVertices.push({
-                x: halfWidth + (vertices[i].x / tileOuterRadius) * halfWidth,
-                y: halfHeight + (vertices[i].y / tileOuterRadius) * halfHeight,
-            });
+            mappedVertices.push(new Vector(
+                halfWidth + (vertices[i].x / tileOuterRadius) * halfWidth,
+                halfHeight + (vertices[i].y / tileOuterRadius) * halfHeight,
+            ));
         }
 
         return mappedVertices;

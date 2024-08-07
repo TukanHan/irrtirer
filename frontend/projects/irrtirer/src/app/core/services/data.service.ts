@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Vector } from '../models/point.model';
 import { getPolygonTriangulationMeshApiAddres } from '../constants/api';
 
@@ -25,6 +25,12 @@ export class DataService {
             }),
         };
 
-        return this.http.post<Vector[][]>(getPolygonTriangulationMeshApiAddres(), polygonVertices, options);
+        return this.http
+            .post<{ x: number; y: number }[][]>(getPolygonTriangulationMeshApiAddres(), polygonVertices, options)
+            .pipe(
+                map((response: { x: number; y: number }[][]) =>
+                    response.map((triangle) => triangle.map((vertex) => new Vector(vertex.x, vertex.y)))
+                )
+            );
     }
 }

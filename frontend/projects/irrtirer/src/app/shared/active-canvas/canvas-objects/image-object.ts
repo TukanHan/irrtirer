@@ -34,10 +34,10 @@ export class ImageObject implements CanvasObject {
         };
 
         const position = viewport.getViewportPosition(this.position);
-        const centeredPosition: Vector = {
-            x: position.x - imageCanvasSize.width / 2,
-            y: position.y - imageCanvasSize.height / 2,
-        };
+        const centeredPosition: Vector = new Vector(
+            position.x - imageCanvasSize.width / 2,
+            position.y - imageCanvasSize.height / 2,
+        );
 
         ctx.drawImage(this.image, centeredPosition.x, centeredPosition.y, imageCanvasSize.width, imageCanvasSize.height);
     }

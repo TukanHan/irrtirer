@@ -71,9 +71,9 @@ export class TileGenerator {
     }
 
     roundVertexCoords(vertex: Vector): Vector {
-        return {
-            x: Math.round((vertex.x + Number.EPSILON) * 100) / 100,
-            y: Math.round((vertex.y + Number.EPSILON) * 100) / 100,
-        };
+        return new Vector(
+            Math.round((vertex.x + Number.EPSILON) * 100) / 100,
+            Math.round((vertex.y + Number.EPSILON) * 100) / 100,
+        );
     }
 }

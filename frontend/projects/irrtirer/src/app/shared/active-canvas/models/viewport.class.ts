@@ -51,24 +51,24 @@ export class Viewport {
     }
 
     private calculateStartWorldPos(): Vector {
-        return {
-            x: this.position.x - this.cmSize.width / 2,
-            y: this.position.y - this.cmSize.height / 2,
-        };
+        return new Vector(
+            this.position.x - this.cmSize.width / 2,
+            this.position.y - this.cmSize.height / 2,
+        );
     }
 
     private calculateEndWorldPos(): Vector {
-        return {
-            x: this.position.x + this.cmSize.width / 2,
-            y: this.position.y + this.cmSize.height / 2,
-        };
+        return new Vector(
+            this.position.x + this.cmSize.width / 2,
+            this.position.y + this.cmSize.height / 2,
+        );
     }
 
     public getViewportPosition(worldPos: Vector): Vector {
-        return {
-            x: this.getViewportXPosition(worldPos.x),
-            y: this.getViewportYPosition(worldPos.y),
-        };
+        return new Vector(
+            this.getViewportXPosition(worldPos.x),
+            this.getViewportYPosition(worldPos.y),
+        );
     }
 
     public getViewportXPosition(worldXPos: number): number {
@@ -80,10 +80,10 @@ export class Viewport {
     }
 
     public getWorldPosition(viewportPos: Vector): Vector {
-        return {
-            x: this.getWorldXPosition(viewportPos.x),
-            y: this.getWorldYPosition(viewportPos.y),
-        };
+        return new Vector(
+            this.getWorldXPosition(viewportPos.x),
+            this.getWorldYPosition(viewportPos.y),
+        );
     }
 
     public getWorldXPosition(viewportXPos: number): number {
