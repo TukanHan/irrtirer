@@ -1,21 +1,30 @@
-﻿using Irrtirer.Library.Models;
-using System.Numerics;
+﻿using System.Numerics;
 using TriangleNet.Geometry;
 
 namespace Irrtirer.Library.Extensions
 {
-    internal static class TriangleNetExtension
+    public static class TriangleNetExtension
     {
-        public static TriangleModel ToTriangleModel(this ITriangle triangle)
+        public static Vector2 CalculateCentroid(this ITriangle triangle)
         {
-            return new TriangleModel(
-                triangle.GetVertex(0).ToVertexModel(),
-                triangle.GetVertex(1).ToVertexModel(),
-                triangle.GetVertex(2).ToVertexModel()
-            );
+            var a = triangle.GetVertex(0);
+            var b = triangle.GetVertex(1);
+            var c = triangle.GetVertex(2);
+
+            return new Vector2((float)(a.X + b.X + c.X) / 3, (float)(a.Y + b.Y + c.Y) / 3);
         }
 
-        public static Vector2 ToVertexModel(this Vertex vertex)
+        public static Vector2[] ToVector2Array(this ITriangle triangle)
+        {
+            return new[]
+            {
+                triangle.GetVertex(0).ToVector2(),
+                triangle.GetVertex(1).ToVector2(),
+                triangle.GetVertex(2).ToVector2(),
+            };
+        }
+
+        public static Vector2 ToVector2(this Vertex vertex)
         {
             return new Vector2((float)vertex.X, (float)vertex.Y);
         }

@@ -2,7 +2,7 @@
 using Irrtirer.Library.Models;
 using Irrtirer.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Numerics;
+using Irrtirer.Library.Extensions;
 
 namespace Irrtirer.Controllers
 {
@@ -18,12 +18,51 @@ namespace Irrtirer.Controllers
         }
 
         [HttpPost]
-        public IEnumerable<VertexModel[]> PolygonTriangulationMesh([FromBody] VertexModel[] polygon, float sectionMaxArea, float sectionMinAngle)
+        public IActionResult PolygonTriangulationMesh([FromBody] SectorTriangulationModel sectorTriangulationData)
         {
-            TriangulationTool tool = new TriangulationTool();
-            Vector2[] polygonVertices = polygon.Select(vertex => new Vector2(vertex.X, vertex.Y)).ToArray();
-            return tool.GetPolygonTriangulationMesh(polygonVertices, sectionMaxArea, sectionMinAngle)
-                    .Select(triangle => new[] { new VertexModel(triangle.A), new VertexModel(triangle.B), new VertexModel(triangle.C) });
+            SectorTriangulationTool triangulationTool = new SectorTriangulationTool();
+
+            try
+            {
+                var result = triangulationTool
+                    .GetPolygonTriangulationMesh(sectorTriangulationData)
+                    .Select(triangle => triangle.ToVector2Array());
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult MosaicTriangulationMesh([FromBody] SectorTriangulationModel[] sectorsTriangulationRequestData)
+        {
+            SectorTriangulationTool triangulationTool = new SectorTriangulationTool();
+            TriangleGroupingTool groupingTool = new TriangleGroupingTool();
+
+            try
+            {
+                var result = triangulationTool
+                    .GetMosaicTriangulationMesh(sectorsTriangulationRequestData)
+                    .Select(sectorMesh => new SectorTriangulationMeshPartsModel()
+                        {
+                            Parts = groupingTool.GroupMeshParts(sectorMesh).Select(sectorPart => new SectorTriangulationMeshModel()
+                            {
+                                Triangles = sectorPart.Select(trinagle => trinagle.ToVector2Array())
+                            })
+                        }
+                    );
+                
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.ToString());
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }

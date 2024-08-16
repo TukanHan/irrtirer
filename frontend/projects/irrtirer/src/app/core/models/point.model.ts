@@ -23,6 +23,10 @@ export class Vector {
         return new Vector(a.x - b.x, a.y - b.y);
     }
 
+    equal(other: Vector): boolean {
+        return this.x === other.x && this.y === other.y;
+    }
+
     hash(): number {
         return hash(this);
     }

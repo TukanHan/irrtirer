@@ -6,16 +6,18 @@
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
             <a mat-list-item routerLink="tray" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                [disabled]="sectorsLinkDisabled$ | async"
+                [disabled]="tilesLinkDisabled$ | async"
                 matTooltipPosition="right" matTooltip="Zasobnik kafelków">
                 <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
             </a>
             <a mat-list-item routerLink="sectors" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                [disabled]="tilesLinkDisabled$ | async"
+                [disabled]="sectorsLinkDisabled$ | async"
                 matTooltipPosition="right" matTooltip="Wyznaczenie sektorów">
                 <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
             </a>
-            <a mat-list-item disabled matTooltipPosition="right" matTooltip="Układanie moizaiki">
+            <a mat-list-item routerLink="generating" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                [disabled]="mosaicGeneratingLinkDisabled$ | async"
+                matTooltipPosition="right" matTooltip="Układanie moizaiki">
                 <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
             </a>
         </mat-nav-list>

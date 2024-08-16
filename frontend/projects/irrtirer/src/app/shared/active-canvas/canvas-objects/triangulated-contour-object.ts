@@ -6,41 +6,42 @@ import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
 export class TriangulatedContourObject implements CanvasObject {
-    vertices: Vector[];
-    triangulationMesh: Vector[][];
+    outerContour: Vector[];
+    innerLines: Line[];
+
     color: Color;
     order: number;
 
     borderThicnses: number = 6;
     innerThicnes: number = 3;
 
-    constructor(vertices: Vector[], triangulationMesh: Vector[][], color: Color, order: number = 100) {
-        this.vertices = vertices;
+    constructor(triangulationMesh: Vector[][], color: Color, order: number = 100) {
         this.color = color;
         this.order = order;
-        this.triangulationMesh = triangulationMesh;
+
+        this.selectLines(triangulationMesh);
     }
 
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        if (this.vertices.length < 3) {
+        if (this.outerContour.length < 3) {
             return;
         }
 
         ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
 
-        this.drawTriangulationMesh(ctx, viewport);        
+        this.drawTriangulationMesh(ctx, viewport);
         this.drawBorder(ctx, viewport);
         ctx.lineWidth = 1;
     }
 
     drawBorder(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         ctx.lineWidth = this.borderThicnses;
-        let point: Vector = viewport.getViewportPosition(this.vertices[0]);
+        let point: Vector = viewport.getViewportPosition(this.outerContour[0]);
 
         ctx.beginPath();
         ctx.moveTo(point.x, point.y);
-        for (let i = 1; i < this.vertices.length; ++i) {
-            point = viewport.getViewportPosition(this.vertices[i]);
+        for (let i = 1; i < this.outerContour.length; ++i) {
+            point = viewport.getViewportPosition(this.outerContour[i]);
             ctx.lineTo(point.x, point.y);
         }
 
@@ -57,35 +58,84 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.lineWidth = this.innerThicnes;
         ctx.globalAlpha = 0.3;
 
-        for(const line of this.selectLines()) {
+        for (const line of this.innerLines) {
             ctx.beginPath();
-            
+
             const startWorldPos: Vector = viewport.getViewportPosition(line.start);
             ctx.moveTo(startWorldPos.x, startWorldPos.y);
             const endWorldPos: Vector = viewport.getViewportPosition(line.end);
             ctx.lineTo(endWorldPos.x, endWorldPos.y);
-            
+
             ctx.stroke();
         }
 
         ctx.globalAlpha = 1;
     }
 
-    selectLines(): IterableIterator<Line> {
-        const lines: Map<number, Line> = new Map();
+    selectLines(triangulationMesh: Vector[][]): void {
+        const lines: Map<number, { line: Line; count: number }> = this.collectMeshLines(triangulationMesh);
 
-        for(const triangle of this.triangulationMesh) {
-            let previousVertex: Vector = triangle[2];
-            for(let i=0; i < 3; ++i) {
+        const outerLines: Line[] = [];
+        const innerLines: Line[] = [];
+
+        for (const line of lines.values()) {
+            if (line.count == 2) {
+                innerLines.push(line.line);
+            } else {
+                outerLines.push(line.line);
+            }
+        }
+
+        this.outerContour = this.reconstructContour(outerLines);
+        this.innerLines = innerLines;
+    }
+
+    private collectMeshLines(triangulationMesh: Vector[][]): Map<number, { line: Line; count: number }> {
+        const lines: Map<number, { line: Line; count: number }> = new Map();
+
+        for (const triangle of triangulationMesh) {
+            let previousVertex: Vector = triangle.at(-1);
+            for (let i = 0; i < 3; ++i) {
                 const currentVertex = triangle[i];
-                const vertices = previousVertex.hash() < currentVertex.hash() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
+                const vertices =
+                    previousVertex.hash() < currentVertex.hash()
+                        ? [previousVertex, currentVertex]
+                        : [currentVertex, previousVertex];
+
                 const line = new Line(vertices[0], vertices[1]);
-                lines.set(line.hash(), line);
+                const lineHash: number = line.hash();
+
+                const dictionaryValue = lines.get(lineHash);
+                if (dictionaryValue) {
+                    dictionaryValue.count++;
+                } else {
+                    lines.set(lineHash, { line, count: 1 });
+                }
+
                 previousVertex = currentVertex;
             }
         }
 
-        return lines.values();
+        return lines;
+    }
+
+    private reconstructContour(outerLines: Line[]): Vector[] {
+        const contour: Vector[] = [];
+
+        let currentLine: Line = outerLines[0];
+        let currentPoint: Vector = currentLine.start;
+        for (let i = 0; i < outerLines.length; ++i) {
+            if (!contour.find(vertex => vertex.equal(currentPoint))) {
+                contour.push(currentPoint);
+            }
+
+            currentLine = outerLines.find(
+                (line) => currentLine !== line && (currentPoint.equal(line.start) || currentPoint.equal(line.end))
+            );
+            currentPoint = currentLine.start.equal(currentPoint) ? currentLine.end : currentLine.start;
+        }
+
+        return contour;
     }
 
     getOrder(): number {

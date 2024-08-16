@@ -180,7 +180,6 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                 );
             } else if(sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
                 return new TriangulatedContourObject(
-                    [...sectorWithTriangulationMesh.sector.vertices],
                     sectorWithTriangulationMesh.mesh,
                     sectorWithTriangulationMesh.sector.color,
                 );

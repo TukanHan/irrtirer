@@ -17,6 +17,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
 import { DataService } from '../../../core/services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SectorTriangulationRequestModel } from '../../../core/models/api.models';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -139,10 +140,13 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     protected getTriangulationMesh(): void {
-        const sectionMaxArea: number = this.sectorPropertyForm.get('sectionMaxArea').value;
-        const sectionMinAngle: number = this.sectorPropertyForm.get('sectionMinAngle').value;
+        const sectorTriangulationRequestData: SectorTriangulationRequestModel = {
+            polygonVertices: this.sector.vertices,
+            sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
+            sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value
+        }
 
-        this.dataService.getPolygonTriangulationMesh(this.sector.vertices, sectionMaxArea, sectionMinAngle)
+        this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData)
             .subscribe({
                 next: (mesh) =>
                     this.service.emitEditedSectorProperty({

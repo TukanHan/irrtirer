@@ -1,3 +1,5 @@
+using Irrtirer.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 string irrtirerFrontend = "IrrtirerFrontend";
@@ -13,7 +15,13 @@ builder.Services.AddCors(options =>
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services
+    .AddControllers()
+    .AddJsonOptions(c => 
+    {
+        c.JsonSerializerOptions.Converters.Add(new Vector2JsonConverter());
+    });
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
