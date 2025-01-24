@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MosaicProject } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -24,7 +24,7 @@ import { Observable } from 'rxjs';
 })
 export class NewProjectComponent {
     @Output()
-    projectSelected = new EventEmitter<MosaicProject>();
+    projectSelected = new EventEmitter<MosaicProjectModel>();
 
     constructor(private store: Store, private dialog: MatDialog) {}
 
@@ -38,7 +38,7 @@ export class NewProjectComponent {
             reader.readAsDataURL(file);
             reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
                 const image: string = readingEvent?.target?.result as string;
-                const project: MosaicProject = {
+                const project: MosaicProjectModel = {
                     config: {
                         base64Image: image,
                         mosaicWidth: 100,
@@ -52,7 +52,7 @@ export class NewProjectComponent {
         }
     }
 
-    pushSelectedProject(project: MosaicProject): void {
+    pushSelectedProject(project: MosaicProjectModel): void {
         this.projectSelected.next(project);
     }
 

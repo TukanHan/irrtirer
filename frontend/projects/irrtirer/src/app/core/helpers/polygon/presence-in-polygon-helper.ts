@@ -1,9 +1,39 @@
 //Based on https://www.tutorialspoint.com/Check-if-a-given-point-lies-inside-a-Polygon
 
-import { Line } from '../models/line.model';
-import { Vector } from '../models/point.model';
+import { Line } from '../../models/line.model';
+import { Vector } from '../../models/vector.model';
 
 export class PresenceInPoligonHelper {
+    public static isPointInsidePolygon(vertices: Vector[], point: Vector): boolean {
+        // When polygon has less than 3 edge, it is not polygon
+        if (vertices.length < 3) {
+            return false;
+        }
+
+        // Create a point at infinity, y is same as point p
+        const pt: Vector = new Vector(Number.MAX_VALUE, point.y);
+        const exline: Line = new Line(point, pt);
+        let count: number = 0;
+        let i: number = 0;
+        do {
+            // Forming a line from two consecutive points of poly
+            const side: Line = new Line(vertices[i], vertices[(i + 1) % vertices.length]);
+            if (this.areLineIntersecting(side, exline)) {
+                // If side is intersects exline
+                if (this.getDirection(side.start, point, side.end) == 0) {
+                    return this.isPointOnLine(side, point);
+                }
+
+                count++;
+            }
+
+            i = (i + 1) % vertices.length;
+        } while (i != 0);
+
+        // When count is odd
+        return (count & 1) == 1;
+    }
+
     public static areLineIntersecting(lineA: Line, lineB: Line): boolean {
         // Four direction for two lines and points of other line
         const dir1: number = this.getDirection(lineA.start, lineA.end, lineB.start);

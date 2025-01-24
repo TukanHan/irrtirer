@@ -1,6 +1,6 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/vector.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 

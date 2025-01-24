@@ -1,16 +1,16 @@
-import { Sector } from "../../core/models/mosaic-project.model";
-import { Vector } from "../../core/models/point.model";
+import { SectorSchema } from "../../core/models/mosaic-project.model";
+import { Vector } from "../../core/models/vector.model";
 
 export interface EditedSectorContour {
-    sector: Sector;
+    sector: SectorSchema;
     selectedVertex: Vector;
 }
 
 export interface EditedSectorWithTriangulationMesh {
-    sector: Sector;
+    sector: SectorSchema;
     mesh: Vector[][];
 }
 
 export interface SectorListChangeEvent {
-    selectedSector: Sector;
+    selectedSector: SectorSchema;
 }

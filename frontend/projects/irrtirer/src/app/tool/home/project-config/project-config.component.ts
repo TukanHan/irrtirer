@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
-import { MosaicProject } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { MatDialog } from '@angular/material/dialog';
@@ -20,7 +20,7 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 })
 export class ProjectConfigComponent {
     @Input()
-    project!: MosaicProject;
+    project!: MosaicProjectModel;
 
     constructor(private store: Store, private dialog: MatDialog) {}
 

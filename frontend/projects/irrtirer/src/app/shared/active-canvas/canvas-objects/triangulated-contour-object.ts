@@ -1,7 +1,9 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
+import { TriangulationMeshHelper } from '../../../core/helpers/polygon/triangulation-mesh-helper';
 import { Color } from '../../../core/models/color.model';
 import { Line } from '../../../core/models/line.model';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/vector.model';
+import { Triangle } from '../../mosaic-generator/models/triangle.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -15,7 +17,7 @@ export class TriangulatedContourObject implements CanvasObject {
     borderThicnses: number = 6;
     innerThicnes: number = 3;
 
-    constructor(triangulationMesh: Vector[][], color: Color, order: number = 100) {
+    constructor(triangulationMesh: Triangle[], color: Color, order: number = 100) {
         this.color = color;
         this.order = order;
 
@@ -72,8 +74,9 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.globalAlpha = 1;
     }
 
-    selectLines(triangulationMesh: Vector[][]): void {
-        const lines: Map<number, { line: Line; count: number }> = this.collectMeshLines(triangulationMesh);
+    selectLines(triangulationMesh: Triangle[]): void {
+        
+        const lines: Map<number, { line: Line; count: number }> = TriangulationMeshHelper.collectMeshLines(triangulationMesh);
 
         const outerLines: Line[] = [];
         const innerLines: Line[] = [];
@@ -90,49 +93,20 @@ export class TriangulatedContourObject implements CanvasObject {
         this.innerLines = innerLines;
     }
 
-    private collectMeshLines(triangulationMesh: Vector[][]): Map<number, { line: Line; count: number }> {
-        const lines: Map<number, { line: Line; count: number }> = new Map();
-
-        for (const triangle of triangulationMesh) {
-            let previousVertex: Vector = triangle.at(-1);
-            for (let i = 0; i < 3; ++i) {
-                const currentVertex = triangle[i];
-                const vertices =
-                    previousVertex.hash() < currentVertex.hash()
-                        ? [previousVertex, currentVertex]
-                        : [currentVertex, previousVertex];
-
-                const line = new Line(vertices[0], vertices[1]);
-                const lineHash: number = line.hash();
-
-                const dictionaryValue = lines.get(lineHash);
-                if (dictionaryValue) {
-                    dictionaryValue.count++;
-                } else {
-                    lines.set(lineHash, { line, count: 1 });
-                }
-
-                previousVertex = currentVertex;
-            }
-        }
-
-        return lines;
-    }
-
     private reconstructContour(outerLines: Line[]): Vector[] {
         const contour: Vector[] = [];
 
         let currentLine: Line = outerLines[0];
         let currentPoint: Vector = currentLine.start;
         for (let i = 0; i < outerLines.length; ++i) {
-            if (!contour.find(vertex => vertex.equal(currentPoint))) {
+            if (!contour.find(vertex => Vector.areEqual(vertex, currentPoint))) {
                 contour.push(currentPoint);
             }
 
             currentLine = outerLines.find(
-                (line) => currentLine !== line && (currentPoint.equal(line.start) || currentPoint.equal(line.end))
+                (line) => currentLine !== line && (Vector.areEqual(currentPoint, line.start) || Vector.areEqual(currentPoint, line.end))
             );
-            currentPoint = currentLine.start.equal(currentPoint) ? currentLine.end : currentLine.start;
+            currentPoint = Vector.areEqual(currentLine.start, currentPoint) ? currentLine.end : currentLine.start;
         }
 
         return contour;

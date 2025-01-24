@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "localize": "ng extract-i18n --output-path projects/irrtirer/src/locale",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "api": "cd ../backend/Irrtirer/Irrtirer && dotnet run --urls=https://localhost:7113"
   },
   "private": true,
   "dependencies": {

@@ -2,8 +2,8 @@ import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular
 import { ActiveCanvasComponent } from '../../shared/active-canvas/active-canvas.component';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { Vector } from '../../core/models/point.model';
-import { MosaicConfig, Sector } from '../../core/models/mosaic-project.model';
+import { Vector } from '../../core/models/vector.model';
+import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
 import { ImageObject } from '../../shared/active-canvas/canvas-objects/image-object';
@@ -20,23 +20,24 @@ import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sector
 import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
 import { Size } from '../../core/models/size.interface';
-import { SectorPropertyEditorComponent } from "./sector-property-editor/sector-property-editor.component";
+import { SectorPropertyEditorComponent } from './sector-property-editor/sector-property-editor.component';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-objects/triangulated-contour-object';
+import { Triangle } from '../../shared/mosaic-generator/models/triangle.model';
 
 @Component({
     selector: 'app-sectors',
     standalone: true,
     imports: [
-    ActiveCanvasComponent,
-    MatButtonToggleModule,
-    MatIconModule,
-    FormsModule,
-    CommonModule,
-    SectorsContoursListComponent,
-    SectorContourEditionComponent,
-    SectorPropertyEditorComponent
-],
+        ActiveCanvasComponent,
+        MatButtonToggleModule,
+        MatIconModule,
+        FormsModule,
+        CommonModule,
+        SectorsContoursListComponent,
+        SectorContourEditionComponent,
+        SectorPropertyEditorComponent,
+    ],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss',
 })
@@ -65,7 +66,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
         this.getSectorForContourEdition = toSignal(this.sectorForContourEdition$);
         this.getSectorForPropertyEdition = toSignal(this.sectorForPropertyEdition$);
     }
-    
+
     ngOnInit(): void {
         this.service.emitEditedSectorContour(null);
         this.service.emitEditedSectorProperty(null);
@@ -108,7 +109,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     private setInitZoomForImage(imageSize: Size): void {
         const imageZoom: Size = {
             height: (imageSize.height * 1.1) / this.activeCanvas.viewport.cmSize.height,
-            width: (imageSize.width * 1.1) / this.activeCanvas.viewport.cmSize.width
+            width: (imageSize.width * 1.1) / this.activeCanvas.viewport.cmSize.width,
         };
 
         const zoom: number = Math.max(imageZoom.height, imageZoom.width);
@@ -151,11 +152,15 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     private prepareSectorsContours(): CanvasObject[] {
         const editedSectorContour: EditedSectorContour = this.getSectorForContourEdition();
         const sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh = this.getSectorForPropertyEdition();
-        let selectedSectorOnList: Sector;
+        let selectedSectorOnList: SectorSchema;
 
-        let sectors: Sector[] = this.store.selectSignal(selectSectors)();
-        if(editedSectorContour) {
-            sectors = ArrayHelpers.addOrUpdate([...sectors], editedSectorContour.sector, (x) => x.id === editedSectorContour.sector.id);
+        let sectors: SectorSchema[] = this.store.selectSignal(selectSectors)();
+        if (editedSectorContour) {
+            sectors = ArrayHelpers.addOrUpdate(
+                [...sectors],
+                editedSectorContour.sector,
+                (x) => x.id === editedSectorContour.sector.id
+            );
         } else {
             this.service.sectorListChange$.pipe(take(1)).subscribe((event) => {
                 selectedSectorOnList = event?.selectedSector;
@@ -166,10 +171,10 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     private mapSectorsToContours(
-        sectors: Sector[],
+        sectors: SectorSchema[],
         editedSector: EditedSectorContour,
         sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh,
-        selectedSectorOnList: Sector
+        selectedSectorOnList: SectorSchema
     ): CanvasObject[] {
         return sectors.map((sector, index) => {
             if (sector.id === editedSector?.sector.id) {
@@ -178,14 +183,12 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                     editedSector.sector.vertices.indexOf(editedSector.selectedVertex),
                     editedSector.sector.color
                 );
-            } else if(sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
-                return new TriangulatedContourObject(
-                    sectorWithTriangulationMesh.mesh,
-                    sectorWithTriangulationMesh.sector.color,
-                );
+            } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
+                const triangles = sectorWithTriangulationMesh.mesh.map((t) => new Triangle(t[0], t[1], t[2]));
+                return new TriangulatedContourObject(triangles, sectorWithTriangulationMesh.sector.color);
             } else {
                 const contour = new ClosedContourObject([...sector.vertices], sector.color, 10 + index);
-                if(sector.id === selectedSectorOnList?.id) {
+                if (sector.id === selectedSectorOnList?.id) {
                     contour.lineThicnses = 10;
                 }
                 return contour;

@@ -1,15 +1,15 @@
-import { PolygonHelper } from '../../../core/helpers/polygon-helper';
+import { PolygonHelper } from '../../../core/helpers/polygon/polygon-helper';
 import { RandomHelper } from '../../../core/helpers/random-helper';
-import { Tile } from '../../../core/models/mosaic-project.model';
+import { TileModel } from '../../../core/models/mosaic-project.model';
 import { Range } from '../../../core/models/range.model';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/vector.model';
 import { Color } from '../../../core/models/color.model';
 
 export class TileGenerator {
     constructor(private imagePixelArray: Uint8ClampedArray) {}
 
-    public generateTileSet(range: Range, count: number): Tile[] {
-        const tiles: Tile[] = [];
+    public generateTileSet(range: Range, count: number): TileModel[] {
+        const tiles: TileModel[] = [];
 
         for (let i = 0; i < count; ++i) {
             tiles.push(this.generateTile(range));
@@ -18,7 +18,7 @@ export class TileGenerator {
         return tiles;
     }
 
-    generateTile(range: Range): Tile {
+    generateTile(range: Range): TileModel {
         let vertices: Vector[];
 
         do {
@@ -52,12 +52,12 @@ export class TileGenerator {
         const radians: number = (angle * Math.PI) / 180;
         const directionVector = new Vector(Math.sin(radians), Math.cos(radians));
 
-        return Vector.multiply(directionVector, radius);
+        return directionVector.multiply(radius);
     }
 
     randomColor(): Color {
         const pixelCount = this.imagePixelArray.length / 4;
-        const pixelIndex = RandomHelper.nextInt(0, pixelCount);
+        const pixelIndex = RandomHelper.nextInt(0, pixelCount-1);
 
         return {
             r: this.imagePixelArray[pixelIndex * 4],
@@ -67,7 +67,7 @@ export class TileGenerator {
     }
 
     normalizeVertices(vertices: Vector[], centroid: Vector): Vector[] {
-        return vertices.map((vertex) => this.roundVertexCoords(Vector.substract(vertex, centroid)));
+        return vertices.map((vertex) => this.roundVertexCoords(vertex.sub(centroid)));
     }
 
     roundVertexCoords(vertex: Vector): Vector {

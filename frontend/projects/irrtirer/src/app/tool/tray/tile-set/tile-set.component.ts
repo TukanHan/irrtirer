@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatPaginatorIntl, MatPaginatorModule, PageEvent } from '@angular/material/paginator';
-import { Tile, TilesSet } from '../../../core/models/mosaic-project.model';
+import { TileModel, TilesSet } from '../../../core/models/mosaic-project.model';
 import { CommonModule } from '@angular/common';
 import { TileDisplayComponent } from './tile-display/tile-display.component';
 import { PaginatorIntl } from '../../../shared/paginator/paginator-intl';
@@ -20,7 +20,7 @@ export class TileSetComponent {
     pageIndex: number = 0;
     pageSize: number = 50;
 
-    getData(): Tile[] {
+    getData(): TileModel[] {
         return this.tilesSet.tiles.slice(this.pageIndex * this.pageSize, this.pageIndex * this.pageSize + this.pageSize);
     }
 

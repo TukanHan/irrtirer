@@ -1,5 +1,5 @@
 import { UnitConverter } from '../../../core/helpers/unit-converter';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/vector.model';
 import { Size } from '../../../core/models/size.interface';
 
 export class Viewport {
