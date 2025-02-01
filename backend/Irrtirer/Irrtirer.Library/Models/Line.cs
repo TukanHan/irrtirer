@@ -1,12 +1,11 @@
-﻿using System;
-using System.Numerics;
+﻿using System.Numerics;
 
 namespace Irrtirer.Library.Models
 {
-    internal struct Line
+    public struct Line
     {
-        public Vector2 Start { get; set; }
-        public Vector2 End { get; set; }
+        public Vector2 Start { get; }
+        public Vector2 End { get; }
 
         public Line(Vector2 start, Vector2 end)
         {
@@ -18,8 +17,7 @@ namespace Irrtirer.Library.Models
         {
             if (obj is Line l)
             {
-                if ((l.Start == Start && l.End == End) || (l.Start == End && l.End == Start))
-                    return true;
+                return (l.Start == Start && l.End == End) || (l.Start == End && l.End == Start);
             }
 
             return false;
@@ -27,7 +25,7 @@ namespace Irrtirer.Library.Models
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Start, End);
+            return Start.GetHashCode() ^ End.GetHashCode();
         }
     }
 }

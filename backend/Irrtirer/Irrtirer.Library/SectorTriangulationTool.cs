@@ -5,8 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using TriangleNet.Geometry;
 using TriangleNet.Meshing;
-using TriangleNet.Topology;
 using System.Numerics;
+using Triangle = TriangleNet.Topology.Triangle;
 
 namespace Irrtirer.Library
 {

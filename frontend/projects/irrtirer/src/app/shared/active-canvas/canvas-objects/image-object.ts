@@ -13,6 +13,8 @@ export class ImageObject implements CanvasObject {
 
     order: number;
 
+    public isVisible: boolean = true;
+
     constructor(image: HTMLImageElement, position: Vector, size: Size, order: number = 0) {
         this.image = image;
         this.position = position;
@@ -34,10 +36,7 @@ export class ImageObject implements CanvasObject {
         };
 
         const position = viewport.getViewportPosition(this.position);
-        const centeredPosition: Vector = new Vector(
-            position.x - imageCanvasSize.width / 2,
-            position.y - imageCanvasSize.height / 2,
-        );
+        const centeredPosition: Vector = new Vector(position.x - imageCanvasSize.width / 2, position.y - imageCanvasSize.height / 2);
 
         ctx.drawImage(this.image, centeredPosition.x, centeredPosition.y, imageCanvasSize.width, imageCanvasSize.height);
     }

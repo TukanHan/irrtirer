@@ -184,8 +184,9 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                     editedSector.sector.color
                 );
             } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
-                const triangles = sectorWithTriangulationMesh.mesh.map((t) => new Triangle(t[0], t[1], t[2]));
-                return new TriangulatedContourObject(triangles, sectorWithTriangulationMesh.sector.color);
+                const triangles = sectorWithTriangulationMesh.mesh.map((t) => new Triangle(t.a, t.b, t.c));
+                const countour = sectorWithTriangulationMesh.contout;
+                return new TriangulatedContourObject(triangles, countour, sectorWithTriangulationMesh.sector.color);
             } else {
                 const contour = new ClosedContourObject([...sector.vertices], sector.color, 10 + index);
                 if (sector.id === selectedSectorOnList?.id) {

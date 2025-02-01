@@ -6,7 +6,6 @@ import { calculatePointToPolygonDistance } from '../helpers/polygon-helpers/poin
 import { GeometryObject } from '../models/geometry-object.model';
 import { TileTransform } from '../models/tile-transform.model';
 import { Triangle } from '../models/triangle.model';
-import { Intersections } from './intersections/intersections';
 import { SectorModel } from './sector.model';
 
 export class SectionModel extends GeometryObject implements Hashable {
@@ -21,8 +20,6 @@ export class SectionModel extends GeometryObject implements Hashable {
     public neighboursIds: number[];
 
     public directTiles: TileTransform[];
-
-    public intersections: Intersections = new Intersections();
 
     public get wasGenerated(): boolean {
         return !!this.directTiles;
@@ -60,7 +57,6 @@ export class SectionModel extends GeometryObject implements Hashable {
         Object.setPrototypeOf(obj, SectionModel.prototype);
         Triangle.restore(obj.triangle);
         Vector.restore(obj.centroid);
-        Intersections.restore(obj.intersections);
         obj.parent = parent;
     }
 }

@@ -10,6 +10,8 @@ export class OpenedContourObject implements CanvasObject {
     color: Color;
     order: number;
 
+    public isVisible: boolean = true;
+
     constructor(vertices: Vector[], selectedIndex: number, color: Color, order: number = 100) {
         this.vertices = vertices;
         this.selectedIndex = selectedIndex;
@@ -18,7 +20,7 @@ export class OpenedContourObject implements CanvasObject {
     }
 
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        if(this.vertices.length >= 2) {
+        if (this.vertices.length >= 2) {
             ctx.lineWidth = 10;
             ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
             ctx.setLineDash([10]);
@@ -28,9 +30,9 @@ export class OpenedContourObject implements CanvasObject {
             let point: Vector = viewport.getViewportPosition(this.vertices.at(-1));
             ctx.moveTo(point.x, point.y);
             point = viewport.getViewportPosition(this.vertices[0]);
-            ctx.lineTo(point.x, point.y);   
+            ctx.lineTo(point.x, point.y);
             ctx.stroke();
-            
+
             ctx.globalAlpha = 0.7;
             ctx.setLineDash([]);
 
@@ -41,12 +43,12 @@ export class OpenedContourObject implements CanvasObject {
                 ctx.lineTo(point.x, point.y);
             }
 
-            ctx.stroke();            
+            ctx.stroke();
         }
 
         ctx.lineWidth = 1;
         ctx.globalAlpha = 1;
-        if(this.selectedIndex !== -1) {
+        if (this.selectedIndex !== -1) {
             this.drawPoint(ctx, viewport, this.vertices[this.selectedIndex]);
         }
     }

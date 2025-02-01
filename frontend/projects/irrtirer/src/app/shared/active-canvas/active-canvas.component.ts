@@ -157,7 +157,9 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
-            object.drawObject(this.ctx, this.viewport);
+            if(object.isVisible) {
+                object.drawObject(this.ctx, this.viewport);
+            }
         }
 
         this.cd.markForCheck();

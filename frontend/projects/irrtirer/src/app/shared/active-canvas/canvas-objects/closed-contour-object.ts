@@ -10,6 +10,8 @@ export class ClosedContourObject implements CanvasObject {
     order: number;
     lineThicnses: number = 8;
 
+    public isVisible: boolean = true;
+
     constructor(vertices: Vector[], color: Color, order: number = 10) {
         this.vertices = vertices;
         this.color = color;

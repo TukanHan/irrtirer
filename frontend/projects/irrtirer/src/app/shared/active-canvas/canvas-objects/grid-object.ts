@@ -15,6 +15,8 @@ export class GridObject implements CanvasObject {
     public maxDefaultGridColor: string = '#292931';
     public backgroundColor: string = '#191c1c';
 
+    public isVisible: boolean = true;
+
     getOrder(): number {
         return -1;
     }
@@ -52,7 +54,7 @@ export class GridObject implements CanvasObject {
                 return this.maxDecimalGridColor;
             }
 
-            return colors.decimalGridColor
+            return colors.decimalGridColor;
         }
 
         return colors.defaultGridColor;

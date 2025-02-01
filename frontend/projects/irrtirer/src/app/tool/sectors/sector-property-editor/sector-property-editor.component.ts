@@ -151,7 +151,8 @@ export class SectorPropertyEditorComponent implements OnInit {
                 next: (mesh) =>
                     this.service.emitEditedSectorProperty({
                         sector: this.sector,
-                        mesh: mesh,
+                        mesh: mesh.triangles,
+                        contout: mesh.contour
                     }),
                 error: () => this.showPolygonTriangulationError(),
             });

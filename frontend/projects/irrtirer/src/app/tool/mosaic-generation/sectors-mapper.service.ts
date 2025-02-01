@@ -3,7 +3,6 @@ import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel } from 
 import { SectorModel } from '../../shared/mosaic-generator/sectors/sector.model';
 import { SectionModel } from '../../shared/mosaic-generator/sectors/section.model';
 import { Triangle } from '../../shared/mosaic-generator/models/triangle.model';
-import { TriangulationMeshHelper } from '../../core/helpers/polygon/triangulation-mesh-helper';
 import { MosaicSetModel } from '../../shared/mosaic-generator/sectors/mosaic-set.model';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { SeparatingAxisTheorem } from '../../shared/mosaic-generator/helpers/polygon-helpers/separating-axis-theorem';
@@ -34,7 +33,7 @@ export class SectorsMapperService {
     }
 
     private static mapSector(sectorPart: SectorTriangulationMeshModel, sectorSchema: SectorSchema): SectorModel {
-        const meshTriangles: Triangle[] = sectorPart.triangles.map((t) => new Triangle(t[0], t[1], t[2]));
+        const meshTriangles: Triangle[] = sectorPart.triangles.map((t) => new Triangle(t.a, t.b, t.c));
 
         const sector = new SectorModel(sectorSchema.id);
         sector.evaluationParams = sectorSchema.properties.evaluationParams;
@@ -42,7 +41,7 @@ export class SectorsMapperService {
         sector.tileMaxRadius = sectorSchema.properties.maxTileRadius;
         sector.tileMinRadius = sectorSchema.properties.minTileRadius;
         sector.tileMargin = sectorSchema.properties.tilesMargin;
-        sector.contour = TriangulationMeshHelper.getMeshOuterContour(meshTriangles);
+        sector.contour = sectorPart.contour;
 
         for (const meshTriangle of meshTriangles) {
             const section = new SectionModel(meshTriangle, sector);

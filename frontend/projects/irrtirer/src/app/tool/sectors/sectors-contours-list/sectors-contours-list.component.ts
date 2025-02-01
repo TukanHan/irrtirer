@@ -102,7 +102,8 @@ export class SectorsContoursListComponent {
     emitSectorToEditProperty(sector: SectorSchema): void {
         this.sectorsContoursSevice.emitEditedSectorProperty({
             sector: sector,
-            mesh: null
+            mesh: null,
+            contout: null
         });
     }
 

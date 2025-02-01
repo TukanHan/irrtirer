@@ -1,7 +1,13 @@
 <div class="ribbon">
-    <button mat-button i18n (click)="onMeshVisibilityChange()">Ukryj siatkę</button>
+    <ng-container *ngIf="{ value: isMeshVisibleSignal() } as isMeshVisible">
+        <button mat-button (click)="onMeshVisibilityChange(!isMeshVisible.value)">
+            <ng-template *ngIf="isMeshVisible.value; then hideMesh else showMesh"></ng-template>
+            <ng-template i18n #hideMesh>Ukryj siatkę</ng-template>
+            <ng-template i18n #showMesh>Pokaż siatkę</ng-template>
+        </button>
+    </ng-container>
 
-    <ng-container *ngIf="{ value: isImageCanvasObjectVisible$ | async } as isImageVisible">
+    <ng-container *ngIf="{ value: isImageVisibleSignal() } as isImageVisible">
         <button mat-button (click)="onImageVisibilityChange(!isImageVisible.value)">
             <ng-template *ngIf="isImageVisible.value; then hideImage else showImage"></ng-template>
             <ng-template i18n #hideImage>Ukryj obraz</ng-template>
@@ -13,6 +19,6 @@
 </div>
 
 <app-active-canvas #activeCanvas class="canvas"></app-active-canvas>
-<div class="spinner-wrapper" [ngClass]="{'open': isLoading$ | async}">
+<div class="spinner-wrapper" [ngClass]="{'open': isLoadingSignal() }">
     <mat-spinner></mat-spinner>
 </div>

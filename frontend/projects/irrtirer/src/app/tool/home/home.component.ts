@@ -21,7 +21,7 @@ import { ExampleProjectComponent } from './example-project/example-project.compo
         MatButtonModule,
         ProjectConfigComponent,
         NewProjectComponent,
-        ExampleProjectComponent,
+        ExampleProjectComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
