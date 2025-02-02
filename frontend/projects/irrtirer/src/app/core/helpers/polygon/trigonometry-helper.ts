@@ -1,4 +1,4 @@
-import { Vector } from "../../../core/models/vector.model";
+import { Vector } from "../../models/math/vector.model";
 
 const deg2Rad: number = Math.PI / 180;
 

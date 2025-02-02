@@ -1,4 +1,4 @@
-import { Vector } from '../models/vector.model';
+import { Vector } from '../models/math/vector.model';
 
 export class RandomHelper {
     /**

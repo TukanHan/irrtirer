@@ -10,8 +10,8 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { Size } from '../../core/models/size.interface';
-import { Vector } from '../../core/models/vector.model';
+import { Size } from '../../core/models/math/size.interface';
+import { Vector } from '../../core/models/math/vector.model';
 import { UnitConverter } from '../../core/helpers/unit-converter';
 import { Viewport } from './models/viewport.class';
 import { CanvasObject } from './models/canvas-object.interface';

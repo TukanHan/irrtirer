@@ -10,7 +10,7 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { Size } from '../../../../core/models/size.interface';
+import { Size } from '../../../../core/models/math/size.interface';
 import { ColorHelper } from '../../../../core/helpers/color-helper';
 import { ColorHsv } from '../../../../core/models/color.model';
 import { Subject } from 'rxjs';

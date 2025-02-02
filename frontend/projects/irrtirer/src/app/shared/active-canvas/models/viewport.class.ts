@@ -1,6 +1,6 @@
 import { UnitConverter } from '../../../core/helpers/unit-converter';
-import { Vector } from '../../../core/models/vector.model';
-import { Size } from '../../../core/models/size.interface';
+import { Vector } from '../../../core/models/math/vector.model';
+import { Size } from '../../../core/models/math/size.interface';
 
 export class Viewport {
     /**

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TileDisplayComponent } from './tile-display.component';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
-import { Vector } from '../../../../core/models/vector.model';
+import { Vector } from '../../../../core/models/math/vector.model';
 
 describe('TileDisplayComponent', () => {
     let component: TileDisplayComponent;

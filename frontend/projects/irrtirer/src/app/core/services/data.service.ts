@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { getPolygonTriangulationMeshApiAddres } from '../constants/api';
-import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '../models/api.models';
+import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '../models/api/api.models';
 
 @Injectable({
     providedIn: 'root',

@@ -1,6 +1,6 @@
 import { Action, ActionReducer } from '@ngrx/store';
 import { MosaicProjectModel, TilesSet } from '../models/mosaic-project.model';
-import { Vector } from '../models/vector.model';
+import { Vector } from '../models/math/vector.model';
 
 const stateLocalStorageKey = 'state';
 

@@ -41,8 +41,7 @@
             "styles": [
               "projects/irrtirer/src/styles.scss"
             ],
-            "scripts": [],
-            "webWorkerTsConfig": "projects/irrtirer/tsconfig.worker.json"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -103,8 +102,7 @@
               "projects/irrtirer/src/styles.scss"
             ],
             "scripts": [],
-            "karmaConfig": "projects/irrtirer/karma.conf.js",
-            "webWorkerTsConfig": "projects/irrtirer/tsconfig.worker.json"
+            "karmaConfig": "projects/irrtirer/karma.conf.js"
           }
         },
         "lint": {

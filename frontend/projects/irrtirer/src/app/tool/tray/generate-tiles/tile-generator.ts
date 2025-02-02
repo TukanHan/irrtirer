@@ -1,8 +1,8 @@
 import { PolygonHelper } from '../../../core/helpers/polygon/polygon-helper';
 import { RandomHelper } from '../../../core/helpers/random-helper';
 import { TileModel } from '../../../core/models/mosaic-project.model';
-import { Range } from '../../../core/models/range.model';
-import { Vector } from '../../../core/models/vector.model';
+import { Range } from '../../../core/models/math/range.interface';
+import { Vector } from '../../../core/models/math/vector.model';
 import { Color } from '../../../core/models/color.model';
 
 export class TileGenerator {

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { Vector } from '../../../core/models/vector.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -14,7 +14,7 @@ import { SectorsContoursService } from '../sectors-contours.service';
 import { EditedSectorContour } from '../sectors-contours.interfaces';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Line } from '../../../core/models/line.model';
+import { Line } from '../../../core/models/math/line.model';
 import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 

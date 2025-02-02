@@ -1,5 +1,5 @@
 import hash from 'hash-it';
-import { Hashable } from './hash-map';
+import { Hashable } from '../hash-map';
 
 export class Vector implements Hashable {
     readonly x: number = 0;

@@ -1,8 +1,8 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
-import { Line } from '../../../core/models/line.model';
-import { Vector } from '../../../core/models/vector.model';
-import { Triangle } from '../../mosaic-generator/models/triangle.model';
+import { Line } from '../../../core/models/math/line.model';
+import { Triangle } from '../../../core/models/math/triangle.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -98,9 +98,10 @@ export class TriangulatedContourObject implements CanvasObject {
         const lines: Map<number, { line: Line; count: number }> = new Map();
 
         for (const triangle of triangulationMesh) {
-            let previousVertex: Vector = triangle.c;
+            const triangleVertices = triangle.getVertices();
+            let previousVertex: Vector = triangleVertices.at(-1);
             for (let i = 0; i < 3; ++i) {
-                const currentVertex = triangle.vertices[i];
+                const currentVertex = triangleVertices[i];
                 const vertices =
                     previousVertex.getHash() < currentVertex.getHash() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
 

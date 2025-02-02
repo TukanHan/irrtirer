@@ -7,7 +7,7 @@ import {
     SectorTriangulationMeshPartsModel,
     TileRequestModel,
     TileTransformResult,
-} from '../../core/models/api.models';
+} from '../../core/models/api/api.models';
 
 @Injectable({
     providedIn: 'root',
@@ -49,32 +49,25 @@ export class MosaicSignalRService {
     }
 
     private subscribeOnSectionsMeshReceived(): void {
-        this.hubConnection.on('ReceiveMosaicSectorsMesh', (sectionsMesh: SectorTriangulationMeshPartsModel[]) =>
-            this.sectionsMeshReceivedSub.next(sectionsMesh)
-        );
+        this.hubConnection.on('ReceiveMosaicSectorsMesh', (sectionsMesh: SectorTriangulationMeshPartsModel[]) => {
+            sectionsMesh.forEach((sectionMesh) => SectorTriangulationMeshPartsModel.restore(sectionMesh));
+            this.sectionsMeshReceivedSub.next(sectionsMesh);
+        });
     }
 
     public startLongRunningTask(tiles: TileRequestModel[]): Promise<void> {
-        return this.hubConnection
-            .invoke('StartMosaicGeneration', tiles)
-            .catch((err) => console.error('Error while starting task: ' + err));
+        return this.hubConnection.invoke('StartMosaicGeneration', tiles);
     }
 
     public initMosaicTriangulation(initMosaicGenerationRequest: InitMosaicGenerationRequestModel): Promise<void> {
-        return this.hubConnection
-            .invoke('InitMosaicTriangulation', initMosaicGenerationRequest);
+        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest);
     }
 
     public startConnection(): Promise<void> {
-        return this.hubConnection
-            .start()
-            .catch((err) => console.error('Error while starting connection: ' + err));
+        return this.hubConnection.start();
     }
 
-    public stopConnection(): void {
-        this.hubConnection
-            .stop()
-            .then(() => console.log('Connection stopped'))
-            .catch((err) => console.error('Error while stopping connection: ' + err));
+    public stopConnection(): Promise<void> {
+        return this.hubConnection.stop();
     }
 }

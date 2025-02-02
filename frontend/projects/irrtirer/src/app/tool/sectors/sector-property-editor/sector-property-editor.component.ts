@@ -17,7 +17,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
 import { DataService } from '../../../core/services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SectorTriangulationRequestModel } from '../../../core/models/api.models';
+import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
 
 @Component({
     selector: 'app-sector-property-editor',

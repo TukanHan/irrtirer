@@ -14,6 +14,10 @@ describe('ColorCanvasComponent', () => {
     
     fixture = TestBed.createComponent(ColorCanvasComponent);
     component = fixture.componentInstance;
+    component.hValue = 0.5;
+    component.sValue = 0.87;
+    component.vValue = 0.72;
+    
     fixture.detectChanges();
   });
 

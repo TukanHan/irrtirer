@@ -1,7 +1,7 @@
 //Based on https://www.tutorialspoint.com/Check-if-a-given-point-lies-inside-a-Polygon
 
-import { Line } from '../../models/line.model';
-import { Vector } from '../../models/vector.model';
+import { Line } from '../../models/math/line.model';
+import { Vector } from '../../models/math/vector.model';
 
 export class PresenceInPoligonHelper {
     public static isPointInsidePolygon(vertices: Vector[], point: Vector): boolean {

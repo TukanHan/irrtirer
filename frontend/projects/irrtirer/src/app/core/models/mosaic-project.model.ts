@@ -1,5 +1,5 @@
 import { Color } from './color.model';
-import { Vector } from './vector.model';
+import { Vector } from './math/vector.model';
 
 export interface MosaicProjectModel {
     config: MosaicConfig;

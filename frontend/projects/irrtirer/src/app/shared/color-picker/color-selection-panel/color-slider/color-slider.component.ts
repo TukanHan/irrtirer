@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { Color } from '../../../../core/models/color.model';
 import { ColorHelper } from '../../../../core/helpers/color-helper';
-import { Size } from '../../../../core/models/size.interface';
+import { Size } from '../../../../core/models/math/size.interface';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular
 import { ActiveCanvasComponent } from '../../shared/active-canvas/active-canvas.component';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { Vector } from '../../core/models/vector.model';
+import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,11 +19,10 @@ import { SectorContourEditionComponent } from './sector-contour-edition/sector-c
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
 import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
-import { Size } from '../../core/models/size.interface';
+import { Size } from '../../core/models/math/size.interface';
 import { SectorPropertyEditorComponent } from './sector-property-editor/sector-property-editor.component';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-objects/triangulated-contour-object';
-import { Triangle } from '../../shared/mosaic-generator/models/triangle.model';
 
 @Component({
     selector: 'app-sectors',
@@ -184,7 +183,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                     editedSector.sector.color
                 );
             } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
-                const triangles = sectorWithTriangulationMesh.mesh.map((t) => new Triangle(t.a, t.b, t.c));
+                const triangles = sectorWithTriangulationMesh.mesh;
                 const countour = sectorWithTriangulationMesh.contout;
                 return new TriangulatedContourObject(triangles, countour, sectorWithTriangulationMesh.sector.color);
             } else {

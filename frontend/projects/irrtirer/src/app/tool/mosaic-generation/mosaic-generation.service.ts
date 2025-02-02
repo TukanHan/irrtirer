@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { InitMosaicGenerationRequestModel } from '../../core/models/api.models';
+import { InitMosaicGenerationRequestModel } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { Size } from '../../core/models/size.interface';
+import { Size } from '../../core/models/math/size.interface';
 
 @Injectable({
     providedIn: 'root',

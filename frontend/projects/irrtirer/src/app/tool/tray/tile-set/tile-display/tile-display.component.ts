@@ -1,7 +1,7 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { ColorHelper } from '../../../../core/helpers/color-helper';
-import { Vector } from '../../../../core/models/vector.model';
+import { Vector } from '../../../../core/models/math/vector.model';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { PolygonHelper } from '../../../../core/helpers/polygon/polygon-helper';
