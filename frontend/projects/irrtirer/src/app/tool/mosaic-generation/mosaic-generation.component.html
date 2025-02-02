@@ -1,20 +1,16 @@
 <div class="ribbon">
-    <ng-container *ngIf="{ value: isMeshVisibleSignal() } as isMeshVisible">
-        <button mat-button (click)="onMeshVisibilityChange(!isMeshVisible.value)">
-            <ng-template *ngIf="isMeshVisible.value; then hideMesh else showMesh"></ng-template>
-            <ng-template i18n #hideMesh>Ukryj siatkę</ng-template>
-            <ng-template i18n #showMesh>Pokaż siatkę</ng-template>
-        </button>
-    </ng-container>
+    <button mat-icon-button class="action"
+        [class.active]="isMeshVisibleSignal()"
+        (click)="toogleMeshVisibility()">
+        <mat-icon class="material-symbols-outlined">graph_3</mat-icon>
+    </button>
 
-    <ng-container *ngIf="{ value: isImageVisibleSignal() } as isImageVisible">
-        <button mat-button (click)="onImageVisibilityChange(!isImageVisible.value)">
-            <ng-template *ngIf="isImageVisible.value; then hideImage else showImage"></ng-template>
-            <ng-template i18n #hideImage>Ukryj obraz</ng-template>
-            <ng-template i18n #showImage>Pokaż obraz</ng-template>
-        </button>
-    </ng-container>
-    
+    <button mat-icon-button class="action"
+        [class.active]="isImageVisibleSignal()"
+        (click)="toogleImageVisibility()">
+        <mat-icon class="material-symbols-outlined">image</mat-icon>
+    </button>
+
     <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
 </div>
 

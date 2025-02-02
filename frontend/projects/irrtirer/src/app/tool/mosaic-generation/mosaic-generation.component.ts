@@ -21,11 +21,12 @@ import { MosaicSignalRService } from './mosaic-signal-r.service';
 import { ColorHelper } from '../../core/helpers/color-helper';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-mosaic-generation',
     standalone: true,
-    imports: [ActiveCanvasComponent, MatProgressSpinnerModule, CommonModule, MatButtonModule],
+    imports: [ActiveCanvasComponent, MatProgressSpinnerModule, CommonModule, MatButtonModule, MatIconModule],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -152,12 +153,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
             for (const sectorPart of sectorsTriangulations[i].parts) {
-                const canvasObject = new TriangulatedContourObject(
-                    sectorPart.triangles,
-                    sectorPart.contour,
-                    sectorSchema.color,
-                    10 + i
-                );
+                const canvasObject = new TriangulatedContourObject(sectorPart.triangles, sectorPart.contour, sectorSchema.color, 10 + i);
 
                 this.canvasObjects.push(canvasObject);
             }
@@ -182,12 +178,14 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         return tilesSets.flatMap((x) => x.tiles);
     }
 
-    protected onMeshVisibilityChange(isVisible: boolean): void {
+    protected toogleMeshVisibility(): void {
+        const isVisible = !this.isMeshVisibleSignal();
         this.showMesh$.next(isVisible);
         this.isMeshVisibleSignal.set(isVisible);
     }
 
-    protected onImageVisibilityChange(isVisible: boolean): void {
+    protected toogleImageVisibility(): void {
+        const isVisible = !this.isImageVisibleSignal();
         this.imageCanvasObject.isVisible = isVisible;
         this.activeCanvas.rewrite();
         this.isImageVisibleSignal.set(isVisible);

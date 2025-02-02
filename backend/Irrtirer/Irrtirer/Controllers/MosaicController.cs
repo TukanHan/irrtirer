@@ -30,7 +30,7 @@ namespace Irrtirer.Controllers
                     .Select(trinagle => new Triangle(trinagle.ToVector2Array()))
                     .ToArray();
 
-                Vector2[] contour = ContourFinder.FindContour(mesh);
+                Vector2[] contour = MeshContourFinder.FindContour(mesh);
 
                 return Ok(new SectorMeshModel()
                 {

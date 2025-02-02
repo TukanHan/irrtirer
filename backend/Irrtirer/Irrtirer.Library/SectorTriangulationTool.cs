@@ -22,9 +22,7 @@ namespace Irrtirer.Library
             };
 
             IMesh mesh = polygon.Triangulate(quality);
-            ICollection<Triangle> triangles = mesh.Triangles;
-
-            return OrderAndMapTriangles(triangles);
+            return mesh.Triangles;
         }
 
         public IEnumerable<IEnumerable<ITriangle>> GetMosaicTriangulationMesh(IEnumerable<SectorTriangulationModel> sectorsTriangulationData)
@@ -58,7 +56,7 @@ namespace Irrtirer.Library
                 }
             }
 
-            return OrderAndMapTriangles(selectedTriangles);
+            return selectedTriangles;
         }
 
         private bool TestIfPointLayOnlyInMainPolygon(Vector2 point, List<Vector2[]> polygonsVertices)
@@ -90,36 +88,6 @@ namespace Irrtirer.Library
             }
 
             return sectorPolygon;
-        }
-
-        private static IEnumerable<ITriangle> OrderAndMapTriangles(IEnumerable<Triangle> initialCollection)
-        {
-            List<ITriangle> orderedMappedTriangles = new List<ITriangle>();
-
-            HashSet<ITriangle> seenTriangles = new HashSet<ITriangle>();
-            TriangleNeighborhoodCollection collection = new TriangleNeighborhoodCollection();
-            foreach (Triangle triangle in initialCollection)
-            {
-                collection.Add(new TriangleNeighborhoodEntity(triangle));
-            }
-
-            while (collection.Count > 0)
-            {
-                ITriangle triangle = collection.DequeueNextTriangle();
-                orderedMappedTriangles.Add(triangle);
-                seenTriangles.Add(triangle);
-
-                for (int i = 0; i < 3; i++)
-                {
-                    ITriangle neighbour = triangle.GetNeighbor(i);
-                    if (neighbour != null && !seenTriangles.Contains(neighbour))
-                    {
-                        collection.RegisterSelectedNeighbour(neighbour);
-                    }
-                }
-            }
-
-            return orderedMappedTriangles;
         }
     }
 }

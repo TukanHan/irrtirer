@@ -25,8 +25,12 @@ namespace Irrtirer.GeneratorPort
 
         private SectorMeshModel getSectorMeshData(IEnumerable<ITriangle> sectorPart)
         {
-            Triangle[] triangles = sectorPart.Select(trinagle => new Triangle(trinagle.ToVector2Array())).ToArray();
-            Vector2[] contour = ContourFinder.FindContour(triangles);
+            Triangle[] triangles = MeshTileOrderer
+                .OrderAndMapTriangles(sectorPart)
+                .Select(trinagle => new Triangle(trinagle.ToVector2Array()))
+                .ToArray();
+
+            Vector2[] contour = MeshContourFinder.FindContour(triangles);
 
             return new SectorMeshModel()
             {

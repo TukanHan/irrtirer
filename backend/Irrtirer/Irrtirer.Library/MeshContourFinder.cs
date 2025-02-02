@@ -5,7 +5,7 @@ using System.Numerics;
 
 namespace Irrtirer.Library
 {
-    public class ContourFinder
+    public class MeshContourFinder
     {
         public static Vector2[] FindContour(IEnumerable<Triangle> mesh)
         {
