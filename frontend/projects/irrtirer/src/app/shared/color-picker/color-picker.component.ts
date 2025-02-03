@@ -17,11 +17,10 @@ import { BehaviorSubject, Subject } from 'rxjs';
 
 @Component({
     selector: 'app-color-picker',
-    standalone: true,
     imports: [CommonModule, OverlayModule, ColorSelectionPanelComponent],
     templateUrl: './color-picker.component.html',
     styleUrl: './color-picker.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorPickerComponent implements OnChanges {
     @Input({required: true})

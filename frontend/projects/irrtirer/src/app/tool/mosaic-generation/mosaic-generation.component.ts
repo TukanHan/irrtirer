@@ -25,11 +25,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 @Component({
     selector: 'app-mosaic-generation',
-    standalone: true,
     imports: [ActiveCanvasComponent, MatProgressSpinnerModule, CommonModule, MatButtonModule, MatIconModule],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     @ViewChild('activeCanvas')

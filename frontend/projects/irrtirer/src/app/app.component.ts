@@ -4,10 +4,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @Component({
     selector: 'app-root',
-    standalone: true,
     imports: [RouterOutlet, ToolbarComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
     title = 'irrtirer';

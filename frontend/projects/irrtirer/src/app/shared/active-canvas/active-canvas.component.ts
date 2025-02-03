@@ -22,11 +22,10 @@ const MAX_ZOOM: number = 1_000_000_000;
 
 @Component({
     selector: 'app-active-canvas',
-    standalone: true,
     imports: [],
     templateUrl: './active-canvas.component.html',
     styleUrl: './active-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     @Output()

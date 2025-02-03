@@ -12,11 +12,10 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 
 @Component({
     selector: 'app-project-config',
-    standalone: true,
     imports: [MatCardModule, MatButtonModule, MatInputModule, MatChipsModule],
     templateUrl: './project-config.component.html',
     styleUrl: './project-config.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectConfigComponent {
     @Input()

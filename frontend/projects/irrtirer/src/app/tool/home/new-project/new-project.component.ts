@@ -16,11 +16,10 @@ import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-new-project',
-    standalone: true,
     imports: [MatCardModule, MatButtonModule],
     templateUrl: './new-project.component.html',
     styleUrl: './new-project.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NewProjectComponent {
     @Output()

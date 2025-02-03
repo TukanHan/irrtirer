@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@import './../../../theme/gray-palette.scss';
+@use './../../../theme/gray-palette.scss' as palette;
 
 :host {
     width: 100%;
@@ -26,10 +26,10 @@
             width: 38px;
             height: 38px;
             padding: 4px;
-            color: mat.m2-get-color-from-palette($grey-palette, 200);
+            color: mat.m2-get-color-from-palette(palette.$grey-palette, 200);
 
             &.active {
-                color: mat.m2-get-color-from-palette($grey-palette, 100);
+                color: mat.m2-get-color-from-palette(palette.$grey-palette, 100);
             }
 
             mat-icon {
@@ -82,7 +82,7 @@
         border-color: transparent;
         background: #00838f;
         opacity: 0.75;
-        color: mat.m2-get-color-from-palette($grey-palette, 800);
+        color: mat.m2-get-color-from-palette(palette.$grey-palette, 800);
         box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
                     0px 6px 10px 0px rgba(0, 0, 0, 0.14),
                     0px 1px 18px 0px rgba(0, 0, 0, 0.12);

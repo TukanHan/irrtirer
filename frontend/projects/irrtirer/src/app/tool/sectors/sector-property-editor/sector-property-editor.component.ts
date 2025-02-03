@@ -21,7 +21,6 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api/api.mo
 
 @Component({
     selector: 'app-sector-property-editor',
-    standalone: true,
     imports: [
         MatButtonModule,
         CommonModule,
@@ -32,7 +31,7 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api/api.mo
         ExtendedPanelComponent,
     ],
     templateUrl: './sector-property-editor.component.html',
-    styleUrl: './sector-property-editor.component.scss',
+    styleUrl: './sector-property-editor.component.scss'
 })
 export class SectorPropertyEditorComponent implements OnInit {
     @Input()

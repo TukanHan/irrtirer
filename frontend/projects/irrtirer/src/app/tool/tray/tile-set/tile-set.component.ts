@@ -7,11 +7,10 @@ import { PaginatorIntl } from '../../../shared/paginator/paginator-intl';
 
 @Component({
     selector: 'app-tile-set',
-    standalone: true,
     imports: [MatPaginatorModule, CommonModule, TileDisplayComponent],
-    providers: [{provide: MatPaginatorIntl, useClass: PaginatorIntl }],
+    providers: [{ provide: MatPaginatorIntl, useClass: PaginatorIntl }],
     templateUrl: './tile-set.component.html',
-    styleUrl: './tile-set.component.scss',
+    styleUrl: './tile-set.component.scss'
 })
 export class TileSetComponent {
     @Input()

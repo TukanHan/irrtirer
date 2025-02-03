@@ -5,10 +5,9 @@ import { DialogData } from './dialog-data.interface';
 
 @Component({
     selector: 'app-dialog',
-    standalone: true,
     imports: [MatDialogModule, MatButtonModule],
     templateUrl: './dialog.component.html',
-    styleUrl: './dialog.component.scss',
+    styleUrl: './dialog.component.scss'
 })
 export class DialogComponent {
   noLabel: string = this.data.noCustomLabel ?? $localize `Nie`;

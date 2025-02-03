@@ -9,7 +9,6 @@ import { UnitConverter } from '../../../../core/helpers/unit-converter';
 
 @Component({
     selector: 'app-tile-display',
-    standalone: true,
     imports: [MatTooltipModule, MatIconModule],
     templateUrl: './tile-display.component.html',
     styleUrl: './tile-display.component.scss',

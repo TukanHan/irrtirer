@@ -20,7 +20,6 @@ import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project
 
 @Component({
     selector: 'app-sector-contour-edition',
-    standalone: true,
     imports: [
         MatButtonModule,
         CommonModule,
@@ -33,7 +32,7 @@ import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project
         ColorPickerComponent,
     ],
     templateUrl: './sector-contour-edition.component.html',
-    styleUrl: './sector-contour-edition.component.scss',
+    styleUrl: './sector-contour-edition.component.scss'
 })
 export class SectorContourEditionComponent implements OnInit {
     @Input()

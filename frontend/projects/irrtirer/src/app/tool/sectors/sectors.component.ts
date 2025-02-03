@@ -26,7 +26,6 @@ import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-obj
 
 @Component({
     selector: 'app-sectors',
-    standalone: true,
     imports: [
         ActiveCanvasComponent,
         MatButtonToggleModule,
@@ -38,7 +37,7 @@ import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-obj
         SectorPropertyEditorComponent,
     ],
     templateUrl: './sectors.component.html',
-    styleUrl: './sectors.component.scss',
+    styleUrl: './sectors.component.scss'
 })
 export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     canvasMode: 'movement' | 'selection' = 'movement';

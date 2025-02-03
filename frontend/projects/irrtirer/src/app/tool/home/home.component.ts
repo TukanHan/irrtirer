@@ -14,7 +14,6 @@ import { ExampleProjectComponent } from './example-project/example-project.compo
 
 @Component({
     selector: 'app-home',
-    standalone: true,
     imports: [
         CommonModule,
         MatCardModule,
@@ -25,7 +24,7 @@ import { ExampleProjectComponent } from './example-project/example-project.compo
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
     currentProject$: Observable<MosaicProjectModel> =

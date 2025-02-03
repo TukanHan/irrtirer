@@ -16,11 +16,10 @@ import { DialogComponent } from '../../shared/dialog/dialog.component';
 
 @Component({
     selector: 'app-tray',
-    standalone: true,
     imports: [MatExpansionModule, MatIconModule, GenerateTilesComponent, MatButtonModule, CommonModule, TileSetComponent],
     templateUrl: './tray.component.html',
     styleUrl: './tray.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TrayComponent {
     tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);

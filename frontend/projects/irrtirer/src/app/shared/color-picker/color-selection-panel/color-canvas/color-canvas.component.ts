@@ -24,11 +24,10 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-canvas',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './color-canvas.component.html',
     styleUrl: './color-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy {
     @Input()

@@ -18,11 +18,10 @@ import { ColorHelper } from '../../../core/helpers/color-helper';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    standalone: true,
     imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorsContoursListComponent {
     sectors$: Observable<SectorSchema[]>;

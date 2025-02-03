@@ -23,11 +23,10 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-slider',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './color-slider.component.html',
     styleUrl: './color-slider.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges {
     @ViewChild('canvas')

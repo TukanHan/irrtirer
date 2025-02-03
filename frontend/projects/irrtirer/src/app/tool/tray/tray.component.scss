@@ -1,7 +1,7 @@
-@import './../../../styles/utils/mixins';
+@use './../../../styles/utils/mixins';
 
 :host {
-    @include page-content();
+    @include mixins.page-content();
 
     ::ng-deep {
         .mat-expansion-panel-header-description {
