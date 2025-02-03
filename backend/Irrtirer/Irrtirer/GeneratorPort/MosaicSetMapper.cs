@@ -1,7 +1,6 @@
 ﻿using Irrtirer.Generator.Helpers.PolygonHelpers;
 using Irrtirer.Generator.MosaicStructure;
 using Irrtirer.Models;
-using System.Linq;
 
 namespace Irrtirer.GeneratorPort
 {
@@ -26,6 +25,7 @@ namespace Irrtirer.GeneratorPort
 
                     SectorModel sector = new SectorModel()
                     {
+                        Id = sectorParams.Id,
                         TileMinRadius = sectorParams.TileMinRadius,
                         TileMaxRadius = sectorParams.TileMaxRadius,
                         TileMargin = sectorParams.TileMargin,

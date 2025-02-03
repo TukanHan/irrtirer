@@ -12,7 +12,7 @@ namespace Irrtirer.Hubs
     public interface IProcessHub
     {
         Task ReceiveMosaicSectorsMesh(IEnumerable<SectorMeshPartsModel> mesh);
-        Task ReceiveMosaicSectionTiles(IEnumerable<TileTransformModel> tilesTransforms);
+        Task ReceiveMosaicSectionTiles(SectionMeshResult sectionMesh);
         Task ReceiveFinishNotification();
     }
 
@@ -67,8 +67,13 @@ namespace Irrtirer.Hubs
 
                 irrtirer.SectionOrderingProgress += async (sender, evt) =>
                 {
-                    IEnumerable<TileTransformModel> sectionTiles = evt.Tiles.Select(tileTransform => new TileTransformModel(tileTransform));
-                    await Clients.Caller.ReceiveMosaicSectionTiles(sectionTiles);
+                    SectionMeshResult sectionMesh = new SectionMeshResult()
+                    {
+                        SectorId = evt.SectorId,
+                        TilesTransforms = evt.Tiles.Select(tileTransform => new TileTransformModel(tileTransform))
+                    };
+
+                    await Clients.Caller.ReceiveMosaicSectionTiles(sectionMesh);
                 };
 
                 irrtirer.MosaicSetOrderingProgress += async (sender, evt) =>

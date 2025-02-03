@@ -14,6 +14,10 @@ export class MosaicGenerationService {
             base64Image: base64Image,
             mosaicWidth: mosaicSize.width,
             sectorsGenerationParams: sectorsSchemas.map((sector) => ({
+                id: sector.id,
+                tileMargin: sector.properties.tilesMargin,
+                tileMinRadius: sector.properties.minTileRadius,
+                tileMaxRadius: sector.properties.maxTileRadius,
                 triangulationData: {
                     polygonVertices: sector.vertices,
                     sectionMaxArea: sector.properties.sectionMaxArea,
@@ -21,9 +25,6 @@ export class MosaicGenerationService {
                 },
                 evaluationParams: sector.properties.evaluationParams,
                 populationParams: sector.properties.populationParams,
-                tileMargin: sector.properties.tilesMargin,
-                tileMinRadius: sector.properties.minTileRadius,
-                tileMaxRadius: sector.properties.maxTileRadius,
             })),
         };
     }

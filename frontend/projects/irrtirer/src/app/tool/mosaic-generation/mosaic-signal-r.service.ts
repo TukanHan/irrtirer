@@ -4,9 +4,9 @@ import { BackendAddress } from '../../core/constants/api';
 import { Observable, Subject } from 'rxjs';
 import {
     InitMosaicGenerationRequestModel,
+    SectionGenerationResult,
     SectorTriangulationMeshPartsModel,
     TileRequestModel,
-    TileTransformResult,
 } from '../../core/models/api/api.models';
 
 @Injectable({
@@ -19,9 +19,9 @@ export class MosaicSignalRService {
 
     public readonly sectionsMeshReceived$: Observable<SectorTriangulationMeshPartsModel[]> = this.sectionsMeshReceivedSub.asObservable();
 
-    private readonly sectionGeneratedSub: Subject<TileTransformResult[]> = new Subject();
+    private readonly sectionGeneratedSub: Subject<SectionGenerationResult> = new Subject();
 
-    public readonly sectionGenerated$: Observable<TileTransformResult[]> = this.sectionGeneratedSub.asObservable();
+    public readonly sectionGenerated$: Observable<SectionGenerationResult> = this.sectionGeneratedSub.asObservable();
 
     private readonly generationFinishedSub: Subject<void> = new Subject();
 
@@ -41,7 +41,7 @@ export class MosaicSignalRService {
     }
 
     private subscribeOnSectionGenerated(): void {
-        this.hubConnection.on('ReceiveMosaicSectionTiles', (sectorTiles: TileTransformResult[]) => this.sectionGeneratedSub.next(sectorTiles));
+        this.hubConnection.on('ReceiveMosaicSectionTiles', (sectorTiles: SectionGenerationResult) => this.sectionGeneratedSub.next(sectorTiles));
     }
 
     private subscribeOnFinishGeneration(): void {

@@ -102,8 +102,8 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
     private subscribeOnGenerationProgress(): void {
         this.subscription.add(
-            this.signalRService.sectionGenerated$.subscribe((sectorTiles) => {
-                for (const responseTileTransform of sectorTiles) {
+            this.signalRService.sectionGenerated$.subscribe((sectionGenerationResult) => {
+                for (const responseTileTransform of sectionGenerationResult.tilesTransforms) {
                     const tile: TileModel = this.avalibleTiles.find((t) => t.id === responseTileTransform.tileId);
                     const tileTransform = new TileTransform(tile, responseTileTransform.position, responseTileTransform.angle);
                     this.activeCanvas.addCanvasObject(new TileObject(tileTransform.getWorldVertices(), tile.color));

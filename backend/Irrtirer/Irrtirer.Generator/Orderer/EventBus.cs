@@ -23,6 +23,7 @@ namespace Irrtirer.Generator.Orderer
         {
             SectorOrderingProgress?.Invoke(this, new SectorOrderedArgs()
             {
+                SectorId = sectorModel.Id,
                 Tiles = sectorModel.SectorTiles.Select(x => x.ToResult())
             });
         }
@@ -31,6 +32,7 @@ namespace Irrtirer.Generator.Orderer
         {
             SectionOrderingProgress?.Invoke(this, new SectionOrderedArgs()
             {
+                SectorId = sectionModel.Parent.Id,
                 Tiles = sectionModel.DirectTiles.Select(x => x.ToResult())
             });
         }

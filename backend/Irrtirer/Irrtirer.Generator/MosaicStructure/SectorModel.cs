@@ -1,4 +1,5 @@
 ﻿using Irrtirer.Generator.Models.GenerationParams;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -7,6 +8,7 @@ namespace Irrtirer.Generator.MosaicStructure
 {
     public class SectorModel
     {
+        public Guid Id { get; set; }
         public float TileMinRadius { get; set; }
         public float TileMaxRadius { get; set; }
         public float TileMargin { get; set; }

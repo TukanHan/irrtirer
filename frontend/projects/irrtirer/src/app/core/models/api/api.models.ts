@@ -28,13 +28,13 @@ export interface InitMosaicGenerationRequestModel {
 }
 
 export interface SectorGenerationParams {
-    triangulationData: SectorTriangulationRequestModel;
-    evaluationParams: EvaluationParams;
-    populationParams: PopulationParams;
-
+    id: string;
     tileMinRadius: number;
     tileMaxRadius: number;
     tileMargin: number;
+    triangulationData: SectorTriangulationRequestModel;
+    evaluationParams: EvaluationParams;
+    populationParams: PopulationParams;
 }
 
 export interface SectorTriangulationRequestModel {
@@ -49,8 +49,23 @@ export interface TileRequestModel {
     vertices: Vector[]
 }
 
-export interface TileTransformResult {
+export class SectionGenerationResult {
+    sectorId: string;
+    tilesTransforms: TileTransformResult[]
+
+    public static restore(obj: SectionGenerationResult): void {
+        Object.setPrototypeOf(obj, SectionGenerationResult);
+        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+    }
+}
+
+export class TileTransformResult {
     tileId: string;
     position: Vector;
     angle: number;
+
+    public static restore(obj: TileTransformResult): void {
+        Object.setPrototypeOf(obj, TileTransformResult);
+        Vector.restore(obj.position);
+    }
 }

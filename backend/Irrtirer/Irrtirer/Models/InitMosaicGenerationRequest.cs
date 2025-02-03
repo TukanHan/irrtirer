@@ -19,5 +19,7 @@ namespace Irrtirer.Models
         public required float TileMinRadius { get; set; }
         public required float TileMaxRadius { get; set; }
         public required float TileMargin { get; set; }
+
+        public required Guid Id { get; set; }
     }
 }
