@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { Sector } from '../../../core/models/mosaic-project.model';
+import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { Observable, take } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
@@ -18,16 +18,15 @@ import { ColorHelper } from '../../../core/helpers/color-helper';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    standalone: true,
     imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorsContoursListComponent {
-    sectors$: Observable<Sector[]>;
+    sectors$: Observable<SectorSchema[]>;
 
-    selectedSector: Sector;
+    selectedSector: SectorSchema;
 
     constructor(
         public dialog: MatDialog,
@@ -38,7 +37,7 @@ export class SectorsContoursListComponent {
     }
 
     addNewSector(): void {
-        const sector: Sector = {
+        const sector: SectorSchema = {
             id: crypto.randomUUID(),
             name: '',
             color: ColorHelper.hsvToRgb({
@@ -50,8 +49,8 @@ export class SectorsContoursListComponent {
             properties: {
                 sectionMaxArea: 1,
                 sectionMinAngle: 35,
-                maxTileRadius: null,
-                minTileRadius: null,
+                maxTileRadius: 4,
+                minTileRadius: 0,
                 tilesMargin: 0.1,
                 evaluationParams: {
                     singleSectionPopulation: 2,
@@ -74,7 +73,7 @@ export class SectorsContoursListComponent {
         this.emitSectorToEditContour(sector);
     }
 
-    openRemoveSectorDialog(sector: Sector): void {
+    openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: 'Usuń sektor',
             message: 'Czy na pewno chcesz usunąć sektor?',
@@ -92,21 +91,22 @@ export class SectorsContoursListComponent {
         });
     }
 
-    emitSectorToEditContour(sector: Sector): void {
+    emitSectorToEditContour(sector: SectorSchema): void {
         this.sectorsContoursSevice.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),
         });
     }
 
-    emitSectorToEditProperty(sector: Sector): void {
+    emitSectorToEditProperty(sector: SectorSchema): void {
         this.sectorsContoursSevice.emitEditedSectorProperty({
             sector: sector,
-            mesh: null
+            mesh: null,
+            contout: null
         });
     }
 
-    onSectorSelected(sector: Sector): void {
+    onSectorSelected(sector: SectorSchema): void {
         this.selectedSector = sector;
         this.sectorsContoursSevice.emitSectorListChanged({ selectedSector: sector });
     }
@@ -119,7 +119,7 @@ export class SectorsContoursListComponent {
     }
 
     resetSelectedSector(): void {
-        let sectors: Sector[] = null;
+        let sectors: SectorSchema[] = null;
         this.sectors$.pipe(take(1)).subscribe((x) => {
             sectors = x;
         });

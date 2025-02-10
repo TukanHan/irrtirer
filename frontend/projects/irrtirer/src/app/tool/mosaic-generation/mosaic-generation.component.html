@@ -1,1 +1,33 @@
-<app-active-canvas #activeCanvas></app-active-canvas>
+<div class="ribbon">
+    <button mat-icon-button class="action"
+        [class.active]="isMeshVisibleSignal()"
+        (click)="toogleMeshVisibility()">
+        <mat-icon class="material-symbols-outlined">graph_3</mat-icon>
+    </button>
+
+    <button mat-icon-button class="action"
+        [class.active]="isImageVisibleSignal()"
+        (click)="toogleImageVisibility()">
+        <mat-icon class="material-symbols-outlined">image</mat-icon>
+    </button>
+
+    <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
+</div>
+
+<div class="main">
+    <app-active-canvas #activeCanvas class="main__canvas">
+        @if(progressStateSignal()) {
+            <app-progress-info [infoState]="progressStateSignal()"></app-progress-info>  
+        }
+    </app-active-canvas>
+
+    <app-mosaic-hierarchy class="main__panel"></app-mosaic-hierarchy>
+</div>
+
+<!--
+TODO Decide
+<div class="spinner-wrapper" 
+    [ngClass]="{'open': isLoadingSignal() }">
+    <mat-spinner></mat-spinner>
+</div>
+-->

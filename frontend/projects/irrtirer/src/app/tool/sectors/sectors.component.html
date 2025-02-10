@@ -1,5 +1,5 @@
 <div class="ribbon">
-  <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
+  <span class="ribbon__zoom">{{(1 / (activeCanvas?.viewport?.zoom ?? 1)) | percent }}</span>
 </div>
 
 <div class="section-tool">

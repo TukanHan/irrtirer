@@ -1,15 +1,14 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { Tile } from '../../../../core/models/mosaic-project.model';
+import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { ColorHelper } from '../../../../core/helpers/color-helper';
-import { Vector } from '../../../../core/models/point.model';
+import { Vector } from '../../../../core/models/math/vector.model';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
-import { PolygonHelper } from '../../../../core/helpers/polygon-helper';
+import { PolygonHelper } from '../../../../core/helpers/polygon/polygon-helper';
 import { UnitConverter } from '../../../../core/helpers/unit-converter';
 
 @Component({
     selector: 'app-tile-display',
-    standalone: true,
     imports: [MatTooltipModule, MatIconModule],
     templateUrl: './tile-display.component.html',
     styleUrl: './tile-display.component.scss',
@@ -17,7 +16,7 @@ import { UnitConverter } from '../../../../core/helpers/unit-converter';
 })
 export class TileDisplayComponent implements AfterViewInit {
     @Input()
-    tile: Tile;
+    tile: TileModel;
 
     @ViewChild('canvas')
     canvas: ElementRef<HTMLCanvasElement>;

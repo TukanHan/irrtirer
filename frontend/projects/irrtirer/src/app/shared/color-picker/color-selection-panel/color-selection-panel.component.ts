@@ -11,7 +11,6 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 
 @Component({
     selector: 'app-color-selection-panel',
-    standalone: true,
     imports: [
         MatInputModule,
         FormsModule,
@@ -21,7 +20,7 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
     ],
     templateUrl: './color-selection-panel.component.html',
     styleUrl: './color-selection-panel.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
     @Input()

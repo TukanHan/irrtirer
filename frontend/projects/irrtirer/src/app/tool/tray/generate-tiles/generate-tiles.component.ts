@@ -21,10 +21,9 @@ import { TileGenerator } from './tile-generator';
 
 @Component({
     selector: 'app-generate-tiles',
-    standalone: true,
     imports: [MatFormFieldModule, MatInputModule, MatIconModule, FormsModule, ReactiveFormsModule],
     templateUrl: './generate-tiles.component.html',
-    styleUrl: './generate-tiles.component.scss',
+    styleUrl: './generate-tiles.component.scss'
 })
 export class GenerateTilesComponent {
     @Output()

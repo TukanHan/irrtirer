@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-tool',
-    standalone: true,
     imports: [
         MatIconModule,
         MatSidenavModule,

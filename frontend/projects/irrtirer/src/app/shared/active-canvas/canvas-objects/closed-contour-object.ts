@@ -1,6 +1,6 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -9,6 +9,8 @@ export class ClosedContourObject implements CanvasObject {
     color: Color;
     order: number;
     lineThicnses: number = 8;
+
+    public isVisible: boolean = true;
 
     constructor(vertices: Vector[], color: Color, order: number = 10) {
         this.vertices = vertices;

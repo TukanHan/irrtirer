@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { NewProjectComponent } from './new-project/new-project.component';
-import { MosaicProject } from '../../core/models/mosaic-project.model';
+import { MosaicProjectModel } from '../../core/models/mosaic-project.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../core/state/mosaic-project/mosaic-project.actions';
@@ -14,21 +14,20 @@ import { ExampleProjectComponent } from './example-project/example-project.compo
 
 @Component({
     selector: 'app-home',
-    standalone: true,
     imports: [
         CommonModule,
         MatCardModule,
         MatButtonModule,
         ProjectConfigComponent,
         NewProjectComponent,
-        ExampleProjectComponent,
+        ExampleProjectComponent
     ],
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-    currentProject$: Observable<MosaicProject> =
+    currentProject$: Observable<MosaicProjectModel> =
         this.store.select(selectMosaicProject);
 
     exampleProjects: ExampleProject[] = [
@@ -39,7 +38,7 @@ export class HomeComponent {
 
     constructor(private store: Store) {}
 
-    createNewProject(project: MosaicProject): void {
+    createNewProject(project: MosaicProjectModel): void {
         this.store.dispatch(MosaicProjectActions.projectCreated({ project }));
     }
 }

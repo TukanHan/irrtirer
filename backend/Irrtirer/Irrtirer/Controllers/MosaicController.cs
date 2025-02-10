@@ -3,6 +3,7 @@ using Irrtirer.Library.Models;
 using Irrtirer.Models;
 using Microsoft.AspNetCore.Mvc;
 using Irrtirer.Library.Extensions;
+using System.Numerics;
 
 namespace Irrtirer.Controllers
 {
@@ -24,39 +25,18 @@ namespace Irrtirer.Controllers
 
             try
             {
-                var result = triangulationTool
+                Triangle[] mesh = triangulationTool
                     .GetPolygonTriangulationMesh(sectorTriangulationData)
-                    .Select(triangle => triangle.ToVector2Array());
+                    .Select(trinagle => new Triangle(trinagle.ToVector2Array()))
+                    .ToArray();
 
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex.ToString());
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
+                Vector2[] contour = MeshContourFinder.FindContour(mesh);
 
-        [HttpPost]
-        public IActionResult MosaicTriangulationMesh([FromBody] SectorTriangulationModel[] sectorsTriangulationRequestData)
-        {
-            SectorTriangulationTool triangulationTool = new SectorTriangulationTool();
-            TriangleGroupingTool groupingTool = new TriangleGroupingTool();
-
-            try
-            {
-                var result = triangulationTool
-                    .GetMosaicTriangulationMesh(sectorsTriangulationRequestData)
-                    .Select(sectorMesh => new SectorTriangulationMeshPartsModel()
-                        {
-                            Parts = groupingTool.GroupMeshParts(sectorMesh).Select(sectorPart => new SectorTriangulationMeshModel()
-                            {
-                                Triangles = sectorPart.Select(trinagle => trinagle.ToVector2Array())
-                            })
-                        }
-                    );
-                
-                return Ok(result);
+                return Ok(new SectorMeshModel()
+                {
+                    Triangles = mesh,
+                    Contour = contour
+                });
             }
             catch (Exception ex)
             {

@@ -1,6 +1,6 @@
 import { UnitConverter } from '../../../core/helpers/unit-converter';
-import { Vector } from '../../../core/models/point.model';
-import { Size } from '../../../core/models/size.interface';
+import { Vector } from '../../../core/models/math/vector.model';
+import { Size } from '../../../core/models/math/size.interface';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -12,6 +12,8 @@ export class ImageObject implements CanvasObject {
     size: Size;
 
     order: number;
+
+    public isVisible: boolean = true;
 
     constructor(image: HTMLImageElement, position: Vector, size: Size, order: number = 0) {
         this.image = image;
@@ -34,10 +36,7 @@ export class ImageObject implements CanvasObject {
         };
 
         const position = viewport.getViewportPosition(this.position);
-        const centeredPosition: Vector = new Vector(
-            position.x - imageCanvasSize.width / 2,
-            position.y - imageCanvasSize.height / 2,
-        );
+        const centeredPosition: Vector = new Vector(position.x - imageCanvasSize.width / 2, position.y - imageCanvasSize.height / 2);
 
         ctx.drawImage(this.image, centeredPosition.x, centeredPosition.y, imageCanvasSize.width, imageCanvasSize.height);
     }

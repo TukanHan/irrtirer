@@ -1,4 +1,4 @@
-import { Vector } from './point.model';
+import { Vector } from './vector.model';
 import hash from 'hash-it';
 
 export class Line {

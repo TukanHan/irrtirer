@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@import './../../../../../theme/gray-palette.scss';
+@use './../../../../../theme/gray-palette.scss' as palette;
 
 :host {
     position: relative;
@@ -17,7 +17,7 @@
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        border: 2px solid mat.m2-get-color-from-palette($grey-palette, 50);
+        border: 2px solid mat.m2-get-color-from-palette(palette.$grey-palette, 50);
         box-sizing: border-box;
         pointer-events: none;
     }

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -12,15 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { EditedSectorContour } from '../sectors-contours.interfaces';
-import { Sector } from '../../../core/models/mosaic-project.model';
+import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Line } from '../../../core/models/line.model';
-import { PresenceInPoligonHelper } from '../../../core/helpers/presence-in-polygon-helper';
+import { Line } from '../../../core/models/math/line.model';
+import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    standalone: true,
     imports: [
         MatButtonModule,
         CommonModule,
@@ -33,7 +32,7 @@ import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project
         ColorPickerComponent,
     ],
     templateUrl: './sector-contour-edition.component.html',
-    styleUrl: './sector-contour-edition.component.scss',
+    styleUrl: './sector-contour-edition.component.scss'
 })
 export class SectorContourEditionComponent implements OnInit {
     @Input()
@@ -42,7 +41,7 @@ export class SectorContourEditionComponent implements OnInit {
         this.selectedVertex = value.selectedVertex;
     }
 
-    sector!: Sector;
+    sector!: SectorSchema;
     selectedVertex!: Vector;
 
     usedSectorNames: string[];

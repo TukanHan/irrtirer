@@ -1,4 +1,4 @@
-import { Vector } from '../models/point.model';
+import { Vector } from '../../models/math/vector.model';
 
 export class PolygonHelper {
     public static calculateConvexityFactor(vertices: Vector[]): number {

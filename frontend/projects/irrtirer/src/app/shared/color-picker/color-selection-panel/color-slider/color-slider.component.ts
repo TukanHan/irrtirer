@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { Color } from '../../../../core/models/color.model';
 import { ColorHelper } from '../../../../core/helpers/color-helper';
-import { Size } from '../../../../core/models/size.interface';
+import { Size } from '../../../../core/models/math/size.interface';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 
@@ -23,11 +23,10 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-slider',
-    standalone: true,
     imports: [CommonModule],
     templateUrl: './color-slider.component.html',
     styleUrl: './color-slider.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges {
     @ViewChild('canvas')

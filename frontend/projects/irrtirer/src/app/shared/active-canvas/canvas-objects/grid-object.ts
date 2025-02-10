@@ -1,6 +1,6 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
-import { Vector } from '../../../core/models/point.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -14,6 +14,8 @@ export class GridObject implements CanvasObject {
     public maxDecimalGridColor: string = '#363636';
     public maxDefaultGridColor: string = '#292931';
     public backgroundColor: string = '#191c1c';
+
+    public isVisible: boolean = true;
 
     getOrder(): number {
         return -1;
@@ -52,7 +54,7 @@ export class GridObject implements CanvasObject {
                 return this.maxDecimalGridColor;
             }
 
-            return colors.decimalGridColor
+            return colors.decimalGridColor;
         }
 
         return colors.defaultGridColor;

@@ -1,4 +1,5 @@
 using Irrtirer.Helpers;
+using Irrtirer.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,14 +18,18 @@ builder.Services.AddCors(options =>
 
 builder.Services
     .AddControllers()
-    .AddJsonOptions(c => 
-    {
-        c.JsonSerializerOptions.Converters.Add(new Vector2JsonConverter());
-    });
+    .AddJsonOptions(options => options.JsonSerializerOptions.Converters.Add(new Vector2JsonConverter()));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services
+    .AddSignalR(hubOptions => hubOptions.MaximumReceiveMessageSize = 5 * 1024 * 1024)
+    .AddJsonProtocol(options => options.PayloadSerializerOptions.Converters.Add(new Vector2JsonConverter()));
+
+builder.Services
+    .AddLogging(loggingBuilder => loggingBuilder.AddConsole());
 
 var app = builder.Build();
 
@@ -42,5 +47,7 @@ app.UseCors(irrtirerFrontend);
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapHub<ProcessHub>("process-hub");
 
 app.Run();

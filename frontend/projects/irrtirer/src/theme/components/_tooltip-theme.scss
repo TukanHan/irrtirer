@@ -1,12 +1,12 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
-@import './../../theme/gray-palette.scss';
+@use './../../theme/gray-palette.scss' as palette;
 
 @mixin theme($theme) {
     mat-tooltip-component {
         .mat-mdc-tooltip {
             &.hint {
-                --mdc-plain-tooltip-container-color: #{mat.m2-get-color-from-palette($grey-palette, 400)};
+                --mdc-plain-tooltip-container-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 400)};
                 
                 .mat-mdc-tooltip-surface {
                     padding: 10px;

@@ -1,12 +1,12 @@
 @use '@angular/material' as mat;
-@import './../../../../theme/gray-palette.scss';
+@use './../../../../theme/gray-palette.scss' as palette;
 
 :host {
     display: flex;
     flex-direction: column;
     
-    background-color: mat.m2-get-color-from-palette($grey-palette, 400);
-    color: mat.m2-get-color-from-palette($grey-palette, 100);
+    background-color: mat.m2-get-color-from-palette(palette.$grey-palette, 400);
+    color: mat.m2-get-color-from-palette(palette.$grey-palette, 100);
     border-radius: 5px;
     overflow: hidden;
 
@@ -26,7 +26,7 @@
             min-width: 40px;
             height: 40px;
             border-radius: 50%;
-            border: 1px solid mat.m2-get-color-from-palette($grey-palette, 200);
+            border: 1px solid mat.m2-get-color-from-palette(palette.$grey-palette, 200);
         }
 
         .code-input {

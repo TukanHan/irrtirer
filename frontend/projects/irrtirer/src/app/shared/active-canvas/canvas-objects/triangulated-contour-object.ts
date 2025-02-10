@@ -1,7 +1,8 @@
 import { ColorHelper } from '../../../core/helpers/color-helper';
 import { Color } from '../../../core/models/color.model';
-import { Line } from '../../../core/models/line.model';
-import { Vector } from '../../../core/models/point.model';
+import { Line } from '../../../core/models/math/line.model';
+import { Triangle } from '../../../core/models/math/triangle.model';
+import { Vector } from '../../../core/models/math/vector.model';
 import { CanvasObject } from '../models/canvas-object.interface';
 import { Viewport } from '../models/viewport.class';
 
@@ -15,11 +16,14 @@ export class TriangulatedContourObject implements CanvasObject {
     borderThicnses: number = 6;
     innerThicnes: number = 3;
 
-    constructor(triangulationMesh: Vector[][], color: Color, order: number = 100) {
+    public isVisible: boolean = true;
+
+    constructor(mesh: Triangle[], contour: Vector[], color: Color, order: number = 100) {
         this.color = color;
         this.order = order;
 
-        this.selectLines(triangulationMesh);
+        this.outerContour = contour;
+        this.selectLines(mesh);
     }
 
     drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
@@ -72,35 +76,34 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.globalAlpha = 1;
     }
 
-    selectLines(triangulationMesh: Vector[][]): void {
-        const lines: Map<number, { line: Line; count: number }> = this.collectMeshLines(triangulationMesh);
+    selectLines(mesh: Triangle[]): void {
+        const lines: Map<number, { line: Line; count: number }> = TriangulatedContourObject.collectMeshLines(mesh);
 
-        const outerLines: Line[] = [];
         const innerLines: Line[] = [];
 
         for (const line of lines.values()) {
             if (line.count == 2) {
                 innerLines.push(line.line);
-            } else {
-                outerLines.push(line.line);
             }
         }
 
-        this.outerContour = this.reconstructContour(outerLines);
         this.innerLines = innerLines;
     }
 
-    private collectMeshLines(triangulationMesh: Vector[][]): Map<number, { line: Line; count: number }> {
+    getOrder(): number {
+        return this.order;
+    }
+
+    static collectMeshLines(triangulationMesh: Triangle[]): Map<number, { line: Line; count: number }> {
         const lines: Map<number, { line: Line; count: number }> = new Map();
 
         for (const triangle of triangulationMesh) {
-            let previousVertex: Vector = triangle.at(-1);
+            const triangleVertices = triangle.getVertices();
+            let previousVertex: Vector = triangleVertices.at(-1);
             for (let i = 0; i < 3; ++i) {
-                const currentVertex = triangle[i];
+                const currentVertex = triangleVertices[i];
                 const vertices =
-                    previousVertex.hash() < currentVertex.hash()
-                        ? [previousVertex, currentVertex]
-                        : [currentVertex, previousVertex];
+                    previousVertex.getHash() < currentVertex.getHash() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
 
                 const line = new Line(vertices[0], vertices[1]);
                 const lineHash: number = line.hash();
@@ -117,28 +120,5 @@ export class TriangulatedContourObject implements CanvasObject {
         }
 
         return lines;
-    }
-
-    private reconstructContour(outerLines: Line[]): Vector[] {
-        const contour: Vector[] = [];
-
-        let currentLine: Line = outerLines[0];
-        let currentPoint: Vector = currentLine.start;
-        for (let i = 0; i < outerLines.length; ++i) {
-            if (!contour.find(vertex => vertex.equal(currentPoint))) {
-                contour.push(currentPoint);
-            }
-
-            currentLine = outerLines.find(
-                (line) => currentLine !== line && (currentPoint.equal(line.start) || currentPoint.equal(line.end))
-            );
-            currentPoint = currentLine.start.equal(currentPoint) ? currentLine.end : currentLine.start;
-        }
-
-        return contour;
-    }
-
-    getOrder(): number {
-        return this.order;
     }
 }

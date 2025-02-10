@@ -7,21 +7,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
-    Sector,
-    SectorEvaluationParams,
-    SectorPopulationParams,
-    SectorProperties,
+    SectorSchema,
+    SectorSchemaEvaluationParams,
+    SectorSchemaPopulationParams,
+    SectorSchemaProperties,
 } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
 import { DataService } from '../../../core/services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { SectorTriangulationRequestModel } from '../../../core/models/api.models';
+import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
 
 @Component({
     selector: 'app-sector-property-editor',
-    standalone: true,
     imports: [
         MatButtonModule,
         CommonModule,
@@ -32,11 +31,11 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api.models
         ExtendedPanelComponent,
     ],
     templateUrl: './sector-property-editor.component.html',
-    styleUrl: './sector-property-editor.component.scss',
+    styleUrl: './sector-property-editor.component.scss'
 })
 export class SectorPropertyEditorComponent implements OnInit {
     @Input()
-    sector!: Sector;
+    sector!: SectorSchema;
 
     sectorPropertyForm: FormGroup;
 
@@ -53,7 +52,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         this.getTriangulationMesh();
     }
 
-    private generateForm(properties: SectorProperties): FormGroup {
+    private generateForm(properties: SectorSchemaProperties): FormGroup {
         return this.formBuilder.group({
             sectionMaxArea: [properties.sectionMaxArea, [Validators.required, Validators.min(0.1)]],
             sectionMinAngle: [properties.sectionMinAngle, [Validators.required, Validators.min(10), Validators.max(90)]],
@@ -65,7 +64,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         });
     }
 
-    private generatePopulationParamsForm(properties: SectorPopulationParams): FormGroup {
+    private generatePopulationParamsForm(properties: SectorSchemaPopulationParams): FormGroup {
         return this.formBuilder.group({
             initialPopulationSize: [properties.initialPopulationSize, [Validators.required]],
             countOfTriesToInsertTile: [properties.countOfTriesToInsertTile, [Validators.required]],
@@ -76,7 +75,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         });
     }
 
-    private generateEvaluationParamsForm(properties: SectorEvaluationParams): FormGroup {
+    private generateEvaluationParamsForm(properties: SectorSchemaEvaluationParams): FormGroup {
         return this.formBuilder.group({
             singleSectionPopulation: [properties.singleSectionPopulation, [Validators.required]],
             overlappingAreaOutsideSector: [properties.overlappingAreaOutsideSector, [Validators.required]],
@@ -95,14 +94,14 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     save(): void {
         if (this.sectorPropertyForm.valid) {
-            const properties: SectorProperties = this.getFormData();
+            const properties: SectorSchemaProperties = this.getFormData();
 
             this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: { ...this.sector, properties } }));
             this.service.emitEditedSectorProperty(null);
         }
     }
 
-    private getFormData(): SectorProperties {
+    private getFormData(): SectorSchemaProperties {
         return {
             sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
             sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value,
@@ -114,7 +113,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         };
     }
 
-    private getFormPopulationParams(): SectorPopulationParams {
+    private getFormPopulationParams(): SectorSchemaPopulationParams {
         return {
             initialPopulationSize: this.sectorPropertyForm.get('populationParams.initialPopulationSize').value,
             countOfTriesToInsertTile: this.sectorPropertyForm.get('populationParams.countOfTriesToInsertTile').value,
@@ -126,7 +125,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         };
     }
 
-    private getFormEvaluationParams(): SectorEvaluationParams {
+    private getFormEvaluationParams(): SectorSchemaEvaluationParams {
         return {
             singleSectionPopulation: this.sectorPropertyForm.get('evaluationParams.singleSectionPopulation').value,
             overlappingAreaOutsideSector: this.sectorPropertyForm.get('evaluationParams.overlappingAreaOutsideSector').value,
@@ -151,7 +150,8 @@ export class SectorPropertyEditorComponent implements OnInit {
                 next: (mesh) =>
                     this.service.emitEditedSectorProperty({
                         sector: this.sector,
-                        mesh: mesh,
+                        mesh: mesh.triangles,
+                        contout: mesh.contour
                     }),
                 error: () => this.showPolygonTriangulationError(),
             });

@@ -1,0 +1,8 @@
+@let info = infoState();
+
+@if (isProgressInfo(info)) {
+    <span class="loading">{{info.sector}}</span>
+    <span class="right">{{info.percent}}%</span>
+} @else if(isInitInfo(info)){
+    <span class="loading">{{info.message}}</span>
+}

@@ -1,4 +1,84 @@
+@use '@angular/material' as mat;
+@use './../../../theme/gray-palette.scss' as palette;
+
 :host {
     width: 100%;
     height: 100%;
+
+    .ribbon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        position: sticky;
+        box-shadow: 0px -1px 10px 2px rgb(17 17 17);
+        padding: 0 20px;
+        gap: 6px;
+
+        &__zoom {
+            width: 150px;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .action {
+            width: 38px;
+            height: 38px;
+            padding: 4px;
+            color: mat.m2-get-color-from-palette(palette.$grey-palette, 200);
+
+            &.active {
+                color: mat.m2-get-color-from-palette(palette.$grey-palette, 100);
+            }
+
+            mat-icon {
+                width: 30px;
+                height: 30px;
+                font-size: 30px;
+            }
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        height: calc(100% - 40px);
+
+        &__canvas {
+            display: flex;
+            width: calc(100% - 250px);
+        }
+
+        &__panel {
+            width: 250px;
+            box-sizing: border-box;
+            border-left: 1px solid #363636;
+        }
+    }
+
+    .spinner-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: #ffffff00;
+        transition: background-color 0.5s ease-in-out;
+
+        &.open {
+            background: #ffffff5f;
+
+            mat-spinner {
+                display: block;
+            }
+        }
+
+        mat-spinner {
+            display: none;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+        }
+    }
 }

@@ -10,22 +10,21 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-toolbar',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatToolbarModule,
-    MatButtonModule,
-    RouterLink,
-    RouterLinkActive,
-    IconSvgModuleModule,
-    MatMenuModule,
-    MatRadioModule,
-    CommonModule,
-  ],
-  templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-toolbar',
+    imports: [
+        MatIconModule,
+        MatToolbarModule,
+        MatButtonModule,
+        RouterLink,
+        RouterLinkActive,
+        IconSvgModuleModule,
+        MatMenuModule,
+        MatRadioModule,
+        CommonModule,
+    ],
+    templateUrl: './toolbar.component.html',
+    styleUrl: './toolbar.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ToolbarComponent {
   selectedLanguage$ = new BehaviorSubject('pl');

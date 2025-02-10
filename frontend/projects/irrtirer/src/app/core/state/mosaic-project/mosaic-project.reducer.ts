@@ -1,9 +1,9 @@
 import { createReducer, on } from '@ngrx/store';
 import { MosaicProjectActions } from './mosaic-project.actions';
-import { MosaicProject } from '../../models/mosaic-project.model';
+import { MosaicProjectModel } from '../../models/mosaic-project.model';
 import { ArrayHelpers } from '../../helpers/array-helpers';
 
-export const mosaicProjectReducer = createReducer<MosaicProject | null>(
+export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
     null,
     on(MosaicProjectActions.projectCreated, (state, { project }) => ({
         ...project,

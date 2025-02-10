@@ -1,10 +1,10 @@
 import { Color } from './color.model';
-import { Vector } from './point.model';
+import { Vector } from './math/vector.model';
 
-export interface MosaicProject {
+export interface MosaicProjectModel {
     config: MosaicConfig;
     tilesSets: TilesSet[];
-    sectors: Sector[];
+    sectors: SectorSchema[];
 }
 
 export interface MosaicConfig {
@@ -14,34 +14,34 @@ export interface MosaicConfig {
 
 export interface TilesSet {
     name: string;
-    tiles: Tile[];
+    tiles: TileModel[];
 }
 
-export interface Tile {
+export interface TileModel {
     id: string;
     vertices: Vector[];
     color: Color;
 }
 
-export interface Sector {
+export interface SectorSchema {
     id: string;
     name: string;
     color: Color;
     vertices: Vector[];
-    properties: SectorProperties;
+    properties: SectorSchemaProperties;
 }
 
-export interface SectorProperties {
+export interface SectorSchemaProperties {
     sectionMaxArea: number;
     sectionMinAngle: number
-    minTileRadius?: number;
-    maxTileRadius?: number;
+    minTileRadius: number;
+    maxTileRadius: number;
     tilesMargin: number;
-    evaluationParams: SectorEvaluationParams;
-    populationParams: SectorPopulationParams;
+    evaluationParams: SectorSchemaEvaluationParams;
+    populationParams: SectorSchemaPopulationParams;
 }
 
-export interface SectorEvaluationParams {
+export interface SectorSchemaEvaluationParams {
     singleSectionPopulation: number,
     overlappingAreaOutsideSector: number,
     additionalPopulationOfNeighboringSectors: number,
@@ -49,7 +49,7 @@ export interface SectorEvaluationParams {
     tileColorMismatch: number,
 }
 
-export interface SectorPopulationParams {
+export interface SectorSchemaPopulationParams {
     initialPopulationSize: number,
     countOfTriesToInsertTile: number,
     countOfRandomingTrianglePosition: number,

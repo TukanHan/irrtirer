@@ -10,8 +10,8 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { Size } from '../../core/models/size.interface';
-import { Vector } from '../../core/models/point.model';
+import { Size } from '../../core/models/math/size.interface';
+import { Vector } from '../../core/models/math/vector.model';
 import { UnitConverter } from '../../core/helpers/unit-converter';
 import { Viewport } from './models/viewport.class';
 import { CanvasObject } from './models/canvas-object.interface';
@@ -22,11 +22,10 @@ const MAX_ZOOM: number = 1_000_000_000;
 
 @Component({
     selector: 'app-active-canvas',
-    standalone: true,
     imports: [],
     templateUrl: './active-canvas.component.html',
     styleUrl: './active-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     @Output()
@@ -157,7 +156,9 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
-            object.drawObject(this.ctx, this.viewport);
+            if(object.isVisible) {
+                object.drawObject(this.ctx, this.viewport);
+            }
         }
 
         this.cd.markForCheck();
