@@ -13,6 +13,7 @@ namespace Irrtirer.Hubs
     {
         Task ReceiveMosaicSectorsMesh(IEnumerable<SectorMeshPartsModel> mesh);
         Task ReceiveMosaicSectionTiles(SectionMeshResult sectionMesh);
+        Task AbortGenerationInErrorCase();
         Task ReceiveFinishNotification();
     }
 
@@ -86,6 +87,7 @@ namespace Irrtirer.Hubs
             catch (Exception ex)
             {
                 logger.LogError(ex.ToString());
+                await Clients.Caller.AbortGenerationInErrorCase();
             }
         }
 

@@ -1,0 +1,50 @@
+@use '@angular/material' as mat;
+@use "./../../../../../styles/utils/list-item-box.scss" as *;
+@use './../../../../../theme/gray-palette.scss' as *;
+
+:host {
+    .parent-elem {
+        @include list-item-box();
+
+        .toggle-button {
+            margin: -6px;
+            width: 32px;
+            height: 32px;
+            padding: 4px;
+            color: mat.m2-get-color-from-palette($grey-palette, 200);
+    
+            .chevron {
+                transition: all 0.25s ease;
+    
+                &--closed {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
+    .panel {
+        display: none;
+
+        &--open {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 6px;
+        }
+
+        .tile {
+            @include list-item-box();
+            white-space: nowrap;
+            font-size: 10px;
+        }
+
+        .empty {
+            display: flex;
+            justify-content: center;
+            color: mat.m2-get-color-from-palette($grey-palette, 300);
+            height: 100%;
+            align-items: center;
+        }
+    }
+}

@@ -15,20 +15,33 @@ import { BehaviorSubject, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { TileObject } from '../../shared/active-canvas/canvas-objects/tile-object';
 import { ImageHelper } from '../../core/helpers/image-helper';
-import { TileTransform } from '../../shared/mosaic-generator/models/tile-transform.model';
 import { MatButtonModule } from '@angular/material/button';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
 import { ColorHelper } from '../../core/helpers/color-helper';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MosaicHierarchyComponent } from './mosaic-hierarchy/mosaic-hierarchy.component';
+import { ProgressInfoComponent } from './progress-info/progress-info.component';
+import { InfoState } from './progress-info/progress-info.interface';
+import { GeneratedTileModel } from './mosaic-generation.interface';
+import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
 
 @Component({
     selector: 'app-mosaic-generation',
-    imports: [ActiveCanvasComponent, MatProgressSpinnerModule, CommonModule, MatButtonModule, MatIconModule],
+    imports: [
+        ActiveCanvasComponent,
+        MatProgressSpinnerModule,
+        CommonModule,
+        MatButtonModule,
+        MatIconModule,
+        MosaicHierarchyComponent,
+        ProgressInfoComponent,
+    ],
+    providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     @ViewChild('activeCanvas')
@@ -43,6 +56,8 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     protected isMeshVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
 
     private showMesh$: BehaviorSubject<boolean> = new BehaviorSubject(true);
+
+    protected progressStateSignal: WritableSignal<InfoState> = signal(null);
 
     private imageCanvasObject: ImageObject;
 
@@ -76,6 +91,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
         this.subscribeOnGenerationProgress();
         this.subscribeOnSectorsMeshRecived();
+        this.subscribeOnMeshGenerationFinished();
 
         this.initGeneration(mosaicConfig.base64Image, mosaicSize);
 
@@ -92,21 +108,36 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
                 this.avalibleTiles = this.getAvalibleTiles();
 
+                this.progressStateSignal.set({ type: 'init', message: $localize`Generowanie siatki sektorów` });
+
                 this.signalRService
                     .initMosaicTriangulation(initMosaicGenerationRequest)
-                    .catch(() => this.showWarning($localize`Wystąpił błąd na etapie generowania siatki sektorów.`));
+                    .catch(() => this.setError($localize`Wystąpił błąd na etapie generowania siatki sektorów.`));
             })
-            .catch(() => this.showWarning($localize`Wystąpił błąd na etapie połączenia z serwerem.`));
+            .catch(() => this.setError($localize`Wystąpił błąd na etapie połączenia z serwerem.`));
     }
 
     private subscribeOnGenerationProgress(): void {
         this.subscription.add(
             this.signalRService.sectionGenerated$.subscribe((sectionGenerationResult) => {
-                for (const responseTileTransform of sectionGenerationResult.tilesTransforms) {
-                    const tile: TileModel = this.avalibleTiles.find((t) => t.id === responseTileTransform.tileId);
-                    const tileTransform = new TileTransform(tile, responseTileTransform.position, responseTileTransform.angle);
-                    this.activeCanvas.addCanvasObject(new TileObject(tileTransform.getWorldVertices(), tile.color));
+                const sectionTileObjects: GeneratedTileModel[] = [];
+
+                for (const tileTransform of sectionGenerationResult.tilesTransforms) {
+                    const tile: TileModel = this.avalibleTiles.find((t) => t.id === tileTransform.tileId);
+                    const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
+                    const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
+                    this.activeCanvas.addCanvasObject(tileObject);
+                    sectionTileObjects.push({ tileObject, tileTransform });
                 }
+
+                const sectorInfo = this.service.sectorsGenerationInfo.get(sectionGenerationResult.sectorId);
+                this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
+
+                this.progressStateSignal.set({
+                    type: 'progress',
+                    sector: sectorInfo.schema.name,
+                    percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
+                });
 
                 this.activeCanvas.rewrite();
             })
@@ -118,6 +149,8 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             this.signalRService.sectionsMeshReceived$.subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
+                this.service.fillSectorsGenerationInfo(sectorsSchemas, sectorsTriangulations);
+
                 this.isLoadingSignal.set(false);
 
                 const tiles: TileRequestModel[] = this.avalibleTiles.map((x) => ({
@@ -128,7 +161,16 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
                 this.signalRService
                     .startLongRunningTask(tiles)
-                    .catch(() => this.showWarning($localize`Wystąpił błąd na etapie rozpoczęcia generowania.`));
+                    .catch(() => this.showMessage($localize`Wystąpił błąd na etapie rozpoczęcia generowania.`));
+            })
+        );
+    }
+
+    private subscribeOnMeshGenerationFinished(): void {
+        this.subscription.add(
+            this.signalRService.generationFinished$.subscribe(() => {
+                this.progressStateSignal.set(null);
+                this.showMessage($localize`Ukończono generowanie mozaiki`);
             })
         );
     }
@@ -190,7 +232,12 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         this.isImageVisibleSignal.set(isVisible);
     }
 
-    private showWarning(message: string): void {
+    private setError(message: string): void {
+        this.progressStateSignal.set(null);
+        this.showMessage(message);
+    }
+
+    private showMessage(message: string): void {
         this.snackbarService.open(message, 'Ok', { duration: 3000 });
     }
 }

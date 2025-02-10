@@ -7,7 +7,8 @@ import { MatIconModule } from '@angular/material/icon';
     selector: 'app-extended-panel',
     imports: [CommonModule, MatIconModule, MatButtonModule],
     templateUrl: './extended-panel.component.html',
-    styleUrl: './extended-panel.component.scss'
+    styleUrl: './extended-panel.component.scss',
+    //TODO ChangeDetection + signals
 })
 export class ExtendedPanelComponent {
   @Input()

@@ -1,5 +1,6 @@
 @use "@angular/material" as mat;
 @use "./../../../../theme/gray-palette.scss" as palette;
+@use "./../../../../styles/utils/list-item-box.scss" as *;
 
 :host {
     padding: 20px 10px;
@@ -20,25 +21,6 @@
     }
 }
 
-@mixin sector-box() {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid mat.m2-get-color-from-palette(palette.$grey-palette, 600);
-    background: mat.m2-get-color-from-palette(palette.$grey-palette, 500);
-    color: mat.m2-get-color-from-palette(palette.$grey-palette, 100);
-    font-size: 14px;
-
-    &.selected {
-        background: mat.m2-get-color-from-palette(palette.$grey-palette, 400);
-        border: 1px solid mat.m2-get-color-from-palette(palette.$grey-palette, 500);
-    }
-}
-
 .sectors-list {
     display: flex;
     flex-direction: column;
@@ -48,7 +30,7 @@
     height: -webkit-fill-available;
 
     .sector-box {
-        @include sector-box();
+        @include list-item-box();
         cursor: move;
 
         .sector-actions {
@@ -70,7 +52,7 @@
 }
 
 .cdk-drag-preview {
-    @include sector-box();
+    @include list-item-box();
     cursor: grab;
 
     .sector-actions {

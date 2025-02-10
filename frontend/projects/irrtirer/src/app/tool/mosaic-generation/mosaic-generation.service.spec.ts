@@ -6,7 +6,9 @@ describe('MosaicGenerationService', () => {
   let service: MosaicGenerationService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers: [MosaicGenerationService]
+    });
     service = TestBed.inject(MosaicGenerationService);
   });
 

@@ -1,0 +1,29 @@
+@use "@angular/material" as mat;
+@use "./../../../../theme/gray-palette.scss" as *;
+@use "./../../../../styles/utils/loading.scss" as *;
+
+:host {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    display: flex;
+    width: 200px;
+    height: auto;
+
+    font-size: 14px;
+    border: 1px solid;
+    padding: 12px;
+    border-radius: 4px;
+    border-color: transparent;
+    background: #cccccc;
+    opacity: 0.75;
+    color: mat.m2-get-color-from-palette($grey-palette, 800);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+
+    .right {
+        margin-left: auto;
+    }
+}

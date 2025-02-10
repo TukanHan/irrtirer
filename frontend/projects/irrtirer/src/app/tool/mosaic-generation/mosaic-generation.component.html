@@ -14,8 +14,20 @@
     <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
 </div>
 
-<app-active-canvas #activeCanvas class="canvas"></app-active-canvas>
-<div class="progress-info">Info</div>
-<div class="spinner-wrapper" [ngClass]="{'open': isLoadingSignal() }">
+<div class="main">
+    <app-active-canvas #activeCanvas class="main__canvas">
+        @if(progressStateSignal()) {
+            <app-progress-info [infoState]="progressStateSignal()"></app-progress-info>  
+        }
+    </app-active-canvas>
+
+    <app-mosaic-hierarchy class="main__panel"></app-mosaic-hierarchy>
+</div>
+
+<!--
+TODO Decide
+<div class="spinner-wrapper" 
+    [ngClass]="{'open': isLoadingSignal() }">
     <mat-spinner></mat-spinner>
 </div>
+-->
