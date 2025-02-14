@@ -7,11 +7,11 @@ import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class MosaicGenerationService {
-    public sectorsGenerationInfo: Map<string, GeneratedSectorModel> = new Map();
+    private sectorsInfo: Map<string, GeneratedSectorModel> = new Map();
 
-    private readonly sectionGeneratedSub: Subject<GeneratedSectorModel[]> = new Subject();
+    private readonly sectorsSub: Subject<GeneratedSectorModel[]> = new Subject();
     
-    public readonly sectionGenerated$: Observable<GeneratedSectorModel[]> = this.sectionGeneratedSub.asObservable();
+    public readonly sectors$: Observable<GeneratedSectorModel[]> = this.sectorsSub.asObservable();
 
     public buildInitMosaicRequest(base64Image: string, mosaicSize: Size, sectorsSchemas: SectorSchema[]): InitMosaicGenerationRequestModel {
         return {
@@ -33,23 +33,29 @@ export class MosaicGenerationService {
         };
     }
 
-    public fillSectorsGenerationInfo(sectorsSchemas: SectorSchema[], sectorsTriangulations: SectorTriangulationMeshPartsModel[]): void {
-        for (let i = 0; i < sectorsSchemas.length; ++i) {
-            const sector: SectorSchema = sectorsSchemas[i];
-
-            const value: GeneratedSectorModel = { 
-                schema: sector,
-                countOfSections: sectorsTriangulations[i].parts.flatMap(x => x.triangles).length,
-                sections: []
-            };
-
-            this.sectorsGenerationInfo.set(sector.id, value);
+    public initGeneratedSectorsData(sectorsSchemas: SectorSchema[]): void {
+        for(const sectorSchema of sectorsSchemas) {
+            this.sectorsInfo.set(sectorSchema.id, new GeneratedSectorModel(sectorSchema));
         }
+
+        this.sectorsSub.next(Array.from(this.sectorsInfo.values()));
+    }
+
+    public fillSectorsGenerationInfo(sectorsTriangulations: SectorTriangulationMeshPartsModel[]): void {
+        for(const sectorTriangulation of sectorsTriangulations) {
+            const generatedSector: GeneratedSectorModel = this.sectorsInfo.get(sectorTriangulation.sectorId);
+            generatedSector.countOfSections = sectorTriangulation.parts.flatMap(x => x.triangles).length;
+        }
+
+        this.sectorsSub.next(Array.from(this.sectorsInfo.values()));
     }
 
     public addSectionTilesObjects(sectorId: string, sectionTiles: GeneratedTileModel[]): void {
-        const sector = this.sectorsGenerationInfo.get(sectorId);
-        sector.sections.push({ tiles: sectionTiles });
-        this.sectionGeneratedSub.next(Array.from(this.sectorsGenerationInfo.values()));
+        const sector = this.sectorsInfo.get(sectorId);
+        sector.addSection({ tiles: sectionTiles });
+    }
+
+    public getSectorById(sectorId: string): GeneratedSectorModel {
+        return this.sectorsInfo.get(sectorId);
     }
 }

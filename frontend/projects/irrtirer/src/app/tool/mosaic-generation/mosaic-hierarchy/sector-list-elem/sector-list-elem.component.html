@@ -1,17 +1,15 @@
 <div class="parent-elem">
-    <span>{{sectorSignal().schema.name}}</span>
+    <span>{{sector.schema.name}}</span>
     <button class="toggle-button" mat-icon-button (click)="toggle()">
-        <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpen()}">
+        <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
             keyboard_arrow_up
         </mat-icon>
     </button>
 </div>
-<div class="panel" [ngClass]="{'panel--open': isOpen()}">
-    @for(section of sectorSignal().sections; track $index;) {
-        @for(tile of section.tiles; track $index) {
-            <div class="tile">{{tile.tileTransform.tileId}}</div>
-        }
+<app-expandable-panel class="panel" [isOpen]="isOpenSignal()">
+    @for(tile of items$ | async; track $index;) {
+        <div class="tile">{{tile.tileTransform.tileId}}</div>
     } @empty {
-        <span i18n class="empty">Nie ma kafelków</span>
+        <span class="empty" i18n>Nie ma kafelków</span>
     }
-</div>
+</app-expandable-panel>

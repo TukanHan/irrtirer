@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SectorListElemComponent } from './sector-list-elem.component';
-import { ComponentRef } from '@angular/core';
+import { GeneratedSectorModel } from '../../mosaic-generation.interface';
+import { faceSector } from '../../../../../test-data/sector.data';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('SectorListElemComponent', () => {
     let component: SectorListElemComponent;
-    let componentRef: ComponentRef<SectorListElemComponent>;
     let fixture: ComponentFixture<SectorListElemComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorListElemComponent],
+            imports: [SectorListElemComponent, BrowserAnimationsModule],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorListElemComponent);
         component = fixture.componentInstance;
-        componentRef = fixture.componentRef;
-        componentRef.setInput('sectorSignal', { schema: { name: 'STH' } });
+        component.sector = new GeneratedSectorModel(faceSector);
         fixture.detectChanges();
     });
 

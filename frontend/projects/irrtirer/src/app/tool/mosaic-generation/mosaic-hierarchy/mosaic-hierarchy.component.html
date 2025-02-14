@@ -1,7 +1,5 @@
-<div class="label" i18n>Sektory</div>
-
 <div class="sectors">
-    @for (sector of this.service.sectionGenerated$ | async; track $index) {
-        <app-sector-list-elem [sectorSignal]='sector'></app-sector-list-elem>
+    @for (sector of this.service.sectors$ | async; track $index) {
+        <app-sector-list-elem [sector]='sector'></app-sector-list-elem>
     }
 </div>

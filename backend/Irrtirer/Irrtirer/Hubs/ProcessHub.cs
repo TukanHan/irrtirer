@@ -36,8 +36,7 @@ namespace Irrtirer.Hubs
 
             try
             {
-                var sectorsTriangulationParams = requestData.SectorsGenerationParams.Select(x => x.TriangulationData).ToArray();
-                SectorMeshPartsModel[] mesh = triangulationPort.TriangulateOneMeshBasedOnSectors(sectorsTriangulationParams);
+                SectorMeshPartsModel[] mesh = triangulationPort.TriangulateOneMeshBasedOnSectors(requestData.SectorsGenerationParams);
 
                 IImageSource imageObject = imageSourceConverter.ToImageSource(requestData.Base64Image, requestData.MosaicWidth);
                 var mosaicSetModel = mosaicSetMapper.Map(requestData.SectorsGenerationParams, mesh);

@@ -47,8 +47,6 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     @ViewChild('activeCanvas')
     activeCanvas: ActiveCanvasComponent;
 
-    canvasObjects: CanvasObject[] = [];
-
     protected isLoadingSignal: WritableSignal<boolean> = signal<boolean>(false);
 
     protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
@@ -103,6 +101,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             .startConnection()
             .then(() => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
+                this.service.initGeneratedSectorsData(sectorsSchemas);
 
                 const initMosaicGenerationRequest = this.service.buildInitMosaicRequest(base64Image, imageSize, sectorsSchemas);
 
@@ -130,7 +129,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                     sectionTileObjects.push({ tileObject, tileTransform });
                 }
 
-                const sectorInfo = this.service.sectorsGenerationInfo.get(sectionGenerationResult.sectorId);
+                const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
                 this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
 
                 this.progressStateSignal.set({
@@ -149,7 +148,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             this.signalRService.sectionsMeshReceived$.subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
-                this.service.fillSectorsGenerationInfo(sectorsSchemas, sectorsTriangulations);
+                this.service.fillSectorsGenerationInfo(sectorsTriangulations);
 
                 this.isLoadingSignal.set(false);
 
@@ -191,23 +190,25 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     }
 
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
+        const canvasObjects: CanvasObject[] = [];
+
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
             for (const sectorPart of sectorsTriangulations[i].parts) {
                 const canvasObject = new TriangulatedContourObject(sectorPart.triangles, sectorPart.contour, sectorSchema.color, 10 + i);
 
-                this.canvasObjects.push(canvasObject);
+                canvasObjects.push(canvasObject);
             }
         }
 
         this.subscription.add(
             this.showMesh$.subscribe((value) => {
-                this.canvasObjects.forEach((x) => (x.isVisible = value));
+                canvasObjects.forEach((x) => (x.isVisible = value));
                 this.activeCanvas.rewrite();
             })
         );
 
-        for (const elem of this.canvasObjects) {
+        for (const elem of canvasObjects) {
             this.activeCanvas.addCanvasObject(elem);
         }
 

@@ -7,6 +7,7 @@ import { TrayComponent } from './tool/tray/tray.component';
 import { SectorsComponent } from './tool/sectors/sectors.component';
 import { projectExistGuard } from './core/guards/project-exist.guard';
 import { MosaicGenerationComponent } from './tool/mosaic-generation/mosaic-generation.component';
+import { sectorsSelectedGuard } from './core/guards/sectors-selected.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'project', pathMatch: 'full' },
@@ -18,7 +19,7 @@ export const routes: Routes = [
             { path: 'home', component: HomeComponent },
             { path: 'tray', component: TrayComponent, canActivate: [projectExistGuard] },
             { path: 'sectors', component: SectorsComponent, canActivate: [projectExistGuard] },
-            { path: 'generating', component: MosaicGenerationComponent, canActivate: [projectExistGuard] }
+            { path: 'generating', component: MosaicGenerationComponent, canActivate: [projectExistGuard, sectorsSelectedGuard] }
         ],
     },
     { path: 'project', component: ProjectComponent },

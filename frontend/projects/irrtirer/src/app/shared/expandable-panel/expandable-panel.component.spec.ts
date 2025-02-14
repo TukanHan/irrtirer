@@ -1,24 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExtendedPanelComponent } from './extended-panel.component';
+import { ExpandablePanelComponent } from './expandable-panel.component';
 import { ComponentRef } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('ExtendedPanelComponent', () => {
-  let component: ExtendedPanelComponent;
-  let componentRef: ComponentRef<ExtendedPanelComponent>;
-  let fixture: ComponentFixture<ExtendedPanelComponent>;
+describe('ExpandablePanelComponent', () => {
+  let component: ExpandablePanelComponent;
+  let componentRef: ComponentRef<ExpandablePanelComponent>;
+  let fixture: ComponentFixture<ExpandablePanelComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExtendedPanelComponent, BrowserAnimationsModule]
+      imports: [ExpandablePanelComponent, BrowserAnimationsModule]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExtendedPanelComponent);
+    fixture = TestBed.createComponent(ExpandablePanelComponent);
     component = fixture.componentInstance;
     componentRef = fixture.componentRef;
-    componentRef.setInput('label', "section");
+    componentRef.setInput('isOpen', true);
     fixture.detectChanges();
   });
 

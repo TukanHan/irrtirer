@@ -4,6 +4,7 @@ import { Vector } from "../math/vector.model";
 import { Triangle } from "../math/triangle.model";
 
 export class SectorTriangulationMeshPartsModel {
+    sectorId: string;
     parts: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {

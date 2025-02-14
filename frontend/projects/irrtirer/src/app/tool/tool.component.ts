@@ -28,15 +28,15 @@ import { CommonModule } from '@angular/common';
 export class ToolComponent {
     tilesLinkDisabled$ = this.store
         .select(selectMosaicProject)
-        .pipe(map((x) => !x));
+        .pipe(map((mosaicProject) => !mosaicProject));
 
     sectorsLinkDisabled$ = this.store
         .select(selectMosaicProject)
-        .pipe(map((x) => !x));
+        .pipe(map((mosaicProject) => !mosaicProject));
 
     mosaicGeneratingLinkDisabled$ = this.store
         .select(selectSectors)
-        .pipe(map((x) => !x.length));
+        .pipe(map((sectors) => !sectors?.length));
 
     constructor(private store: Store) {}
 }

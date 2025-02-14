@@ -1,11 +1,11 @@
 <div class="label">
-    <span class="label-content">{{label}}</span>
+    <span class="label-content">{{labelSignal()}}</span>
     <button class="toggle-button" mat-icon-button (click)="toggle()">
-        <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpen}">
+        <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
             keyboard_arrow_up
         </mat-icon>
     </button>
 </div>
-<div class="panel" [ngClass]="{'panel--open': isOpen }">
+<app-expandable-panel class="panel" [isOpen]="isOpenSignal()">
     <ng-content></ng-content>
-</div>
+</app-expandable-panel>

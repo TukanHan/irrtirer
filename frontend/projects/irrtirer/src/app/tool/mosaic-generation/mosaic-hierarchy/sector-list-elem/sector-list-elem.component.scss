@@ -24,13 +24,13 @@
     }
 
     .panel {
-        display: none;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
 
-        &--open {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding-top: 6px;
+        :first-child {
+            margin-top: 6px;
         }
 
         .tile {
@@ -40,11 +40,8 @@
         }
 
         .empty {
-            display: flex;
-            justify-content: center;
+            align-self: center;
             color: mat.m2-get-color-from-palette($grey-palette, 300);
-            height: 100%;
-            align-items: center;
         }
     }
 }

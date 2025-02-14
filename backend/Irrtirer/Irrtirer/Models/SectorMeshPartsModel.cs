@@ -5,6 +5,7 @@ namespace Irrtirer.Models
 {
     public class SectorMeshPartsModel
     {
+        public Guid SectorId { get; set; }
         public required IEnumerable<SectorMeshModel> Parts { get; set; }
     }
 

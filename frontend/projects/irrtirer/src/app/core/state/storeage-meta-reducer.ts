@@ -24,8 +24,10 @@ export function storageMetaReducer<S, A extends Action = Action>(reducer: Action
 
         if (onInit) {
             onInit = false;
+
             const savedState = getSavedState(stateLocalStorageKey);
-            restoreStateModelClasses(savedState as { mosaicProject: MosaicProjectModel});
+            restoreStateModelObjects(savedState as { mosaicProject: MosaicProjectModel});
+            
             return { ...nextState, ...savedState };
         }
 
@@ -35,10 +37,12 @@ export function storageMetaReducer<S, A extends Action = Action>(reducer: Action
     };
 }
 
-function restoreStateModelClasses(state: { mosaicProject: MosaicProjectModel}): void {
-    state.mosaicProject.tilesSets.forEach((tilesSet: TilesSet) => {
-        tilesSet.tiles.forEach((tile) => {
-            tile.vertices.forEach((vector) => Vector.restore(vector));
-        })
-    });
+function restoreStateModelObjects(state: { mosaicProject: MosaicProjectModel}): void {
+    if(state?.mosaicProject) {
+        state.mosaicProject.tilesSets.forEach((tilesSet: TilesSet) => {
+            tilesSet.tiles.forEach((tile) => {
+                tile.vertices.forEach((vector) => Vector.restore(vector));
+            })
+        });
+    }
 }

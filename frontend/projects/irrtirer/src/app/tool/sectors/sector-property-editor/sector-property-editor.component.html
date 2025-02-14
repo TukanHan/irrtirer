@@ -44,7 +44,7 @@
         </div>
     </app-extended-panel>
 
-    <app-extended-panel label="Parametry algorytmu" [isOpen]="false">
+    <app-extended-panel label="Parametry algorytmu" [shouldBeOpen]="false">
         <div class="form-group" formGroupName="populationParams">
             <mat-form-field appearance="outline" class="density-3 no-hint"
                 matTooltip="Początkowa liczba osobników do selekcji, spośród których zostaną wyłonieni najlepsi, już do zwykłego działania algorytmu. Wyższa wartość daje lepsze rezultaty."
@@ -85,7 +85,7 @@
         </div>
     </app-extended-panel>
 
-    <app-extended-panel label="Parametry ewaluacji" [isOpen]="false">
+    <app-extended-panel label="Parametry ewaluacji" [shouldBeOpen]="false">
         <div class="form-group" formGroupName="evaluationParams">
             <mat-form-field appearance="outline" class="density-3 no-hint"
                 matTooltip="Ocena za zapełnienie przestrzeni sekcji kafelkami. Służy do priorytetyzowania gęstrzych sekcji. [Sugerowana dodatnia]"
