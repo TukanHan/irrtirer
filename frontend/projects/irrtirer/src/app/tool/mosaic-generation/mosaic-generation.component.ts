@@ -8,8 +8,7 @@ import { Size } from '../../core/models/math/size.interface';
 import { ImageObject } from '../../shared/active-canvas/canvas-objects/image-object';
 import { Vector } from '../../core/models/math/vector.model';
 import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-objects/triangulated-contour-object';
-import { SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
-import { CanvasObject } from '../../shared/active-canvas/models/canvas-object.interface';
+import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
@@ -26,6 +25,8 @@ import { ProgressInfoComponent } from './progress-info/progress-info.component';
 import { InfoState } from './progress-info/progress-info.interface';
 import { GeneratedTileModel } from './mosaic-generation.interface';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
+import { ClosedContourObject } from '../../shared/active-canvas/canvas-objects/closed-contour-object';
+import { CanvasObject } from '../../shared/active-canvas/models/canvas-object.interface';
 
 @Component({
     selector: 'app-mosaic-generation',
@@ -46,8 +47,6 @@ import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper
 export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     @ViewChild('activeCanvas')
     activeCanvas: ActiveCanvasComponent;
-
-    protected isLoadingSignal: WritableSignal<boolean> = signal<boolean>(false);
 
     protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
 
@@ -90,10 +89,9 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         this.subscribeOnGenerationProgress();
         this.subscribeOnSectorsMeshRecived();
         this.subscribeOnMeshGenerationFinished();
+        this.subscribeOnMeshVisibilityChange();
 
         this.initGeneration(mosaicConfig.base64Image, mosaicSize);
-
-        this.isLoadingSignal.set(true);
     }
 
     private initGeneration(base64Image: string, imageSize: Size): void {
@@ -102,6 +100,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             .then(() => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
                 this.service.initGeneratedSectorsData(sectorsSchemas);
+                this.initSectors(sectorsSchemas);
 
                 const initMosaicGenerationRequest = this.service.buildInitMosaicRequest(base64Image, imageSize, sectorsSchemas);
 
@@ -150,8 +149,6 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
                 this.service.fillSectorsGenerationInfo(sectorsTriangulations);
 
-                this.isLoadingSignal.set(false);
-
                 const tiles: TileRequestModel[] = this.avalibleTiles.map((x) => ({
                     color: ColorHelper.rgbToHex(x.color),
                     id: x.id,
@@ -174,6 +171,18 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         );
     }
 
+    private subscribeOnMeshVisibilityChange(): void {
+        this.subscription.add(
+            this.showMesh$.subscribe((shouldShowMesh) => {
+                for (const sector of this.service.getSectors()) {
+                    sector.setSectorMeshVisability(shouldShowMesh);
+                }
+
+                this.activeCanvas.rewrite();
+            })
+        );
+    }
+
     ngOnDestroy(): void {
         this.signalRService.stopConnection();
         this.subscription.unsubscribe();
@@ -190,29 +199,41 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     }
 
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
-        const canvasObjects: CanvasObject[] = [];
-
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
+            const sectorInfo = this.service.getSectorById(sectorSchema.id);
+            sectorInfo.visualObjects.forEach((x) => this.activeCanvas.removeCanvasObject(x));
+            const sectorPartsCanvasObjects: CanvasObject[] = [];
+
             for (const sectorPart of sectorsTriangulations[i].parts) {
-                const canvasObject = new TriangulatedContourObject(sectorPart.triangles, sectorPart.contour, sectorSchema.color, 10 + i);
-
-                canvasObjects.push(canvasObject);
+                const canvasObject = this.createSectorMeshObject(sectorSchema, sectorPart, i);
+                sectorPartsCanvasObjects.push(canvasObject);
+                this.activeCanvas.addCanvasObject(canvasObject);
             }
-        }
 
-        this.subscription.add(
-            this.showMesh$.subscribe((value) => {
-                canvasObjects.forEach((x) => (x.isVisible = value));
-                this.activeCanvas.rewrite();
-            })
-        );
-
-        for (const elem of canvasObjects) {
-            this.activeCanvas.addCanvasObject(elem);
+            sectorInfo.setSectorVisualObjects(sectorPartsCanvasObjects);
         }
 
         this.activeCanvas.rewrite();
+    }
+
+    private initSectors(sectorsSchemas: SectorSchema[]): void {
+        for (let i = 0; i < sectorsSchemas.length; ++i) {
+            const sectorInfo = this.service.getSectorById(sectorsSchemas[i].id);
+            const canvasObject = this.createSectorContourObject(sectorsSchemas[i], i);
+            sectorInfo.visualObjects.push(canvasObject);
+            this.activeCanvas.addCanvasObject(canvasObject);
+        }
+
+        this.activeCanvas.rewrite();
+    }
+
+    private createSectorMeshObject(sectorSchema: SectorSchema, sectorPart: SectorTriangulationMeshModel, index: number): TriangulatedContourObject {
+        return new TriangulatedContourObject(sectorPart.triangles, sectorPart.contour, sectorSchema.color, 10 + index);
+    }
+
+    private createSectorContourObject(sectorSchema: SectorSchema, index: number): ClosedContourObject {
+        return new ClosedContourObject([...sectorSchema.vertices], sectorSchema.color, 10 + index);
     }
 
     private getAvalibleTiles(): TileModel[] {

@@ -1,10 +1,17 @@
 <div class="parent-elem">
     <span>{{sector.schema.name}}</span>
-    <button class="toggle-button" mat-icon-button (click)="toggle()">
-        <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
-            keyboard_arrow_up
-        </mat-icon>
-    </button>
+    <div class="sector-actions">
+        <button class="sector-action" mat-icon-button>
+            <mat-icon class="material-symbols-outlined">
+                visibility
+            </mat-icon>
+        </button>
+        <button class="sector-action toggle-action" mat-icon-button (click)="toggle()">
+            <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
+                keyboard_arrow_up
+            </mat-icon>
+        </button>
+    </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpenSignal()">
     @for(tile of items$ | async; track $index;) {

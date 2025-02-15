@@ -58,4 +58,8 @@ export class MosaicGenerationService {
     public getSectorById(sectorId: string): GeneratedSectorModel {
         return this.sectorsInfo.get(sectorId);
     }
+
+    public getSectors(): GeneratedSectorModel[] {
+        return Array.from(this.sectorsInfo.values());
+    }
 }
