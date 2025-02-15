@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:math';
 @use '@angular/material' as mat;
 
 @mixin theme($theme) {
@@ -8,5 +9,24 @@
             border-radius: 20px;
             padding: 0 12px !important;
         }
+    }
+}
+
+@mixin icon-button-icon($icon-size: 24px) {
+    .mat-icon {
+        width: $icon-size;
+        height: $icon-size;
+        font-size: $icon-size;
+    }
+}
+
+@mixin icon-button($button-size: 48px, $icon-size: 24px) {
+    @include icon-button-icon($icon-size);
+    --mdc-icon-button-state-layer-size: #{$button-size};
+    padding: math.div($button-size - $icon-size, 2);
+
+    .mat-mdc-button-touch-target {
+        width: var(--mdc-icon-button-state-layer-size);
+        height: var(--mdc-icon-button-state-layer-size);
     }
 }

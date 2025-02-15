@@ -1,16 +1,18 @@
 @use '@angular/material' as mat;
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
 @use './../../../../../theme/gray-palette.scss' as *;
+@use './../../../../../theme/components/button-theme' as *;
 
 :host {
     .parent-elem {
         @include list-item-box();
 
         .toggle-button {
+            ::ng-deep {
+                @include icon-button(32px);
+            }
+
             margin: -6px;
-            width: 32px;
-            height: 32px;
-            padding: 4px;
             color: mat.m2-get-color-from-palette($grey-palette, 200);
     
             .chevron {

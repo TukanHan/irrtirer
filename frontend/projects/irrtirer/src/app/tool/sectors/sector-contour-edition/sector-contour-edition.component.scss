@@ -1,6 +1,7 @@
 @use '@angular/material' as mat;
 @use './../../../../theme/gray-palette.scss' as palette;
 @use "./../../../../styles/utils/list-item-box.scss" as *;
+@use "./../../../../theme/components/button-theme" as *;
 
 :host {
     padding: 20px 10px;
@@ -51,10 +52,10 @@
         cursor: move;
 
         .vertex-remove {
+            ::ng-deep {
+                @include icon-button(32px);
+            }
             margin: -6px;
-            width: 32px;
-            height: 32px;
-            padding: 4px;
             color: mat.m2-get-color-from-palette(palette.$grey-palette, 200);
         }
 
