@@ -1,8 +1,6 @@
-import hash from 'hash-it';
-import { Hashable } from '../hash-map';
-import { IVector } from '../../../../../../active-canvas/src/public-api';
+import { IVector } from "./vector.interface";
 
-export class Vector implements Hashable, IVector {
+export class Vector implements IVector {
     readonly x: number = 0;
     readonly y: number = 0;
 
@@ -38,10 +36,6 @@ export class Vector implements Hashable, IVector {
         return new Vector(this.x / magnitude, this.y / magnitude);
     }
 
-    public getHash(): number {
-        return hash({ x: this.x, y: this.y });
-    }
-
     public static distance(a: Vector, b: Vector): number {
         return Math.hypot(b.x - a.x, b.y - a.y);
     }
@@ -52,9 +46,5 @@ export class Vector implements Hashable, IVector {
 
     public static areEqual(a: Vector, b: Vector): boolean {
         return a.x === b.x && a.y === b.y;
-    }
-
-    public static restore(obj: Vector): void {
-        Object.setPrototypeOf(obj, Vector.prototype);
     }
 }

@@ -1,8 +1,8 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TileTransformResult } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { TileObject } from '../../shared/active-canvas/canvas-objects/tile-object';
-import { CanvasObject } from '../../shared/active-canvas/models/canvas-object.interface';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { TileObject } from '../../shared/canvas-objects/tile-object';
 
 export class GeneratedSectorModel {
     schema: SectorSchema;
@@ -29,6 +29,7 @@ export class GeneratedSectorModel {
     }
 
     public setSectorVisualObjects(visualObjects: CanvasObject[]): void {
+        this.visualObjects.forEach(visualObject => visualObject.removeObject());
         this.visualObjects = visualObjects;
     }
 }

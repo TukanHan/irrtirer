@@ -112,24 +112,4 @@ export class ColorHelper {
 
         return { h, s, v };
     }
-
-    public static compareColors(a: Color, b: Color): number {
-        const rChanel: number = a.r - b.r;
-        const gChanel: number = a.g - b.g;
-        const bChanel: number = a.b - b.b;
-
-        return rChanel * rChanel + gChanel * gChanel + bChanel * bChanel;
-    }
-
-    public static comarsionWithWeight(a: Color, b: Color): number {
-        const rChanel: number = (a.r - b.r) * 0.3;
-        const gChanel: number = (a.g - b.g) * 0.59;
-        const bChanel: number = (a.b - b.b) * 0.11;
-
-        return rChanel * rChanel + gChanel * gChanel + bChanel * bChanel;
-    }
-
-    public static compareColorsSqrt(a: Color, b: Color): number {
-        return Math.sqrt(this.compareColors(a, b));
-    }
 }

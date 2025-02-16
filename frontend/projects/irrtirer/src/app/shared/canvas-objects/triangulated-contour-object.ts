@@ -1,24 +1,23 @@
-import { ColorHelper } from '../../../core/helpers/color-helper';
-import { Color } from '../../../core/models/color.model';
-import { Line } from '../../../core/models/math/line.model';
-import { Triangle } from '../../../core/models/math/triangle.model';
-import { Vector } from '../../../core/models/math/vector.model';
-import { CanvasObject } from '../models/canvas-object.interface';
-import { Viewport } from '../models/viewport.class';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
+import { ColorHelper } from "../../core/helpers/color-helper";
+import { Color } from "../../core/models/color.model";
+import { Line } from "../../core/models/math/line.model";
+import { Triangle } from "../../core/models/math/triangle.model";
+import { Vector } from "../../core/models/math/vector.model";
 
-export class TriangulatedContourObject implements CanvasObject {
-    outerContour: Vector[];
-    innerLines: Line[];
 
-    color: Color;
-    order: number;
+export class TriangulatedContourObject extends BaseCanvasObject implements CanvasObject {
+    private outerContour: Vector[];
+    private innerLines: Line[];
 
-    borderThicnses: number = 6;
-    innerThicnes: number = 3;
+    private color: Color;
+    private order: number;
 
-    public isVisible: boolean = true;
+    private borderThicnses: number = 6;
+    private innerThicnes: number = 3;
 
     constructor(mesh: Triangle[], contour: Vector[], color: Color, order: number = 100) {
+        super();
         this.color = color;
         this.order = order;
 
@@ -26,7 +25,7 @@ export class TriangulatedContourObject implements CanvasObject {
         this.selectLines(mesh);
     }
 
-    drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         if (this.outerContour.length < 3) {
             return;
         }
@@ -38,9 +37,9 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.lineWidth = 1;
     }
 
-    drawBorder(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
+    private drawBorder(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         ctx.lineWidth = this.borderThicnses;
-        let point: Vector = viewport.getViewportPosition(this.outerContour[0]);
+        let point: IVector = viewport.getViewportPosition(this.outerContour[0]);
 
         ctx.beginPath();
         ctx.moveTo(point.x, point.y);
@@ -58,16 +57,16 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.globalAlpha = 1;
     }
 
-    drawTriangulationMesh(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
+    private drawTriangulationMesh(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         ctx.lineWidth = this.innerThicnes;
         ctx.globalAlpha = 0.3;
 
         for (const line of this.innerLines) {
             ctx.beginPath();
 
-            const startWorldPos: Vector = viewport.getViewportPosition(line.start);
+            const startWorldPos: IVector = viewport.getViewportPosition(line.start);
             ctx.moveTo(startWorldPos.x, startWorldPos.y);
-            const endWorldPos: Vector = viewport.getViewportPosition(line.end);
+            const endWorldPos: IVector = viewport.getViewportPosition(line.end);
             ctx.lineTo(endWorldPos.x, endWorldPos.y);
 
             ctx.stroke();
@@ -76,7 +75,7 @@ export class TriangulatedContourObject implements CanvasObject {
         ctx.globalAlpha = 1;
     }
 
-    selectLines(mesh: Triangle[]): void {
+    private selectLines(mesh: Triangle[]): void {
         const lines: Map<number, { line: Line; count: number }> = TriangulatedContourObject.collectMeshLines(mesh);
 
         const innerLines: Line[] = [];
@@ -90,11 +89,11 @@ export class TriangulatedContourObject implements CanvasObject {
         this.innerLines = innerLines;
     }
 
-    getOrder(): number {
+    public getOrder(): number {
         return this.order;
     }
 
-    static collectMeshLines(triangulationMesh: Triangle[]): Map<number, { line: Line; count: number }> {
+    private static collectMeshLines(triangulationMesh: Triangle[]): Map<number, { line: Line; count: number }> {
         const lines: Map<number, { line: Line; count: number }> = new Map();
 
         for (const triangle of triangulationMesh) {

@@ -116,6 +116,48 @@
           }
         }
       }
+    },
+    "active-canvas": {
+      "projectType": "library",
+      "root": "projects/active-canvas",
+      "sourceRoot": "projects/active-canvas/src",
+      "prefix": "ac",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/active-canvas/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/active-canvas/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/active-canvas/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/active-canvas/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/active-canvas/**/*.ts",
+              "projects/active-canvas/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {

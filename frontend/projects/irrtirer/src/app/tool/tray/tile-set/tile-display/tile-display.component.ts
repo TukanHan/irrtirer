@@ -5,7 +5,7 @@ import { Vector } from '../../../../core/models/math/vector.model';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
 import { PolygonHelper } from '../../../../core/helpers/polygon/polygon-helper';
-import { UnitConverter } from '../../../../core/helpers/unit-converter';
+import { UnitConverter } from '../../../../../../../active-canvas/src/public-api';
 
 @Component({
     selector: 'app-tile-display',

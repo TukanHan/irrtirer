@@ -15,11 +15,11 @@
 </div>
 
 <div class="main">
-    <app-active-canvas #activeCanvas class="main__canvas">
+    <ac-active-canvas #activeCanvas class="main__canvas">
         @if(progressStateSignal()) {
             <app-progress-info [infoState]="progressStateSignal()"></app-progress-info>  
         }
-    </app-active-canvas>
+    </ac-active-canvas>
 
     <app-mosaic-hierarchy class="main__panel"></app-mosaic-hierarchy>
 </div>

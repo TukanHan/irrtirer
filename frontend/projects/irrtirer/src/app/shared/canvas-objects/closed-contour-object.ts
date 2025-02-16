@@ -1,18 +1,16 @@
-import { ColorHelper } from '../../../core/helpers/color-helper';
-import { Color } from '../../../core/models/color.model';
-import { Vector } from '../../../core/models/math/vector.model';
-import { CanvasObject } from '../models/canvas-object.interface';
-import { Viewport } from '../models/viewport.class';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+import { ColorHelper } from '../../core/helpers/color-helper';
+import { Color } from '../../core/models/color.model';
 
-export class ClosedContourObject implements CanvasObject {
-    vertices: Vector[];
+export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {
+    vertices: IVector[];
     color: Color;
     order: number;
     lineThicnses: number = 8;
 
-    public isVisible: boolean = true;
+    constructor(vertices: IVector[], color: Color, order: number = 10) {
+        super();
 
-    constructor(vertices: Vector[], color: Color, order: number = 10) {
         this.vertices = vertices;
         this.color = color;
         this.order = order;
@@ -24,7 +22,7 @@ export class ClosedContourObject implements CanvasObject {
         }
 
         ctx.beginPath();
-        let point: Vector = viewport.getViewportPosition(this.vertices[0]);
+        let point: IVector = viewport.getViewportPosition(this.vertices[0]);
         ctx.moveTo(point.x, point.y);
         for (let i = 1; i < this.vertices.length; ++i) {
             point = viewport.getViewportPosition(this.vertices[i]);

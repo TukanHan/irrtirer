@@ -1,12 +1,13 @@
-import { UnitConverter } from '../../../core/helpers/unit-converter';
-import { Vector } from '../../../core/models/math/vector.model';
-import { Size } from '../../../core/models/math/size.interface';
+import { Size } from '../models/math/size.interface';
+import { IVector } from '../models/math/vector.interface';
+import { Vector } from '../models/math/vector.model';
+import { UnitConverter } from '../utils/unit-converter';
 
 export class Viewport {
     /**
      * Position of canvas center in unit
      */
-    readonly position: Vector;
+    readonly position: IVector;
 
     /**
      * Zoom of viewport
@@ -26,14 +27,14 @@ export class Viewport {
     /**
      * Position of canvas point (0,0) in unit system
      */
-    readonly startWorldPos: Vector;
+    readonly startWorldPos: IVector;
 
     /**
      * Position of canvas point (w,h) in unit system
      */
-    readonly endWorldPos: Vector;
+    readonly endWorldPos: IVector;
 
-    constructor(position: Vector, zoom: number, pxSize: Size) {
+    constructor(position: IVector, zoom: number, pxSize: Size) {
         this.position = position;
         this.zoom = zoom;
         this.pxSize = pxSize;
@@ -50,21 +51,21 @@ export class Viewport {
         };
     }
 
-    private calculateStartWorldPos(): Vector {
+    private calculateStartWorldPos(): IVector {
         return new Vector(
             this.position.x - this.cmSize.width / 2,
             this.position.y - this.cmSize.height / 2,
         );
     }
 
-    private calculateEndWorldPos(): Vector {
+    private calculateEndWorldPos(): IVector {
         return new Vector(
             this.position.x + this.cmSize.width / 2,
             this.position.y + this.cmSize.height / 2,
         );
     }
 
-    public getViewportPosition(worldPos: Vector): Vector {
+    public getViewportPosition(worldPos: IVector): IVector {
         return new Vector(
             this.getViewportXPosition(worldPos.x),
             this.getViewportYPosition(worldPos.y),
@@ -79,7 +80,7 @@ export class Viewport {
         return ((worldYPos - this.startWorldPos.y) / this.cmSize.height) * this.pxSize.height;
     }
 
-    public getWorldPosition(viewportPos: Vector): Vector {
+    public getWorldPosition(viewportPos: IVector): IVector {
         return new Vector(
             this.getWorldXPosition(viewportPos.x),
             this.getWorldYPosition(viewportPos.y),
