@@ -1,10 +1,8 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
-import { ColorHelper } from "../../core/helpers/color-helper";
-import { Color } from "../../core/models/color.model";
 
 
 export class TileObject extends BaseCanvasObject implements CanvasObject {
-    constructor(private vertices: IVector[], private color: Color) {
+    constructor(private vertices: IVector[], private hexColor: string) {
         super();
     }
 
@@ -19,7 +17,7 @@ export class TileObject extends BaseCanvasObject implements CanvasObject {
 
         ctx.closePath();
 
-        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
+        ctx.fillStyle = this.hexColor;
         ctx.fill();
     }
 

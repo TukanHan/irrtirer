@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 import { ImageHelper } from '../../core/helpers/image-helper';
 import { MatButtonModule } from '@angular/material/button';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
-import { ColorHelper } from '../../core/helpers/color-helper';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -145,10 +144,10 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
                 this.service.fillSectorsGenerationInfo(sectorsTriangulations);
 
-                const tiles: TileRequestModel[] = this.avalibleTiles.map((x) => ({
-                    color: ColorHelper.rgbToHex(x.color),
-                    id: x.id,
-                    vertices: x.vertices,
+                const tiles: TileRequestModel[] = this.avalibleTiles.map((tile) => ({
+                    color: tile.color,
+                    id: tile.id,
+                    vertices: tile.vertices,
                 }));
 
                 this.signalRService

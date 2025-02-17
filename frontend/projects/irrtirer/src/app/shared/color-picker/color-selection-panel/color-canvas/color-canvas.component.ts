@@ -11,10 +11,9 @@ import {
     ViewChild,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
-import { ColorHelper } from '../../../../core/helpers/color-helper';
-import { ColorHsv } from '../../../../core/models/color.model';
 import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import Color, { ColorInstance } from 'color';
 
 export interface CursorDataModel {
     horizontalOffset: string;
@@ -27,7 +26,7 @@ export interface CursorDataModel {
     imports: [CommonModule],
     templateUrl: './color-canvas.component.html',
     styleUrl: './color-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy {
     @Input()
@@ -40,7 +39,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
     vValue: number;
 
     @Output()
-    colorChange: EventEmitter<ColorHsv> = new EventEmitter<ColorHsv>();
+    colorChange: EventEmitter<ColorInstance> = new EventEmitter<ColorInstance>();
 
     cursorData$: Subject<CursorDataModel> = new Subject();
 
@@ -85,7 +84,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         this.sValue = Math.min(1, Math.max(0, horizontalRawValue));
         this.vValue = Math.min(1, Math.max(0, 1 - verticalRawValue));
 
-        this.colorChange.next({ h: this.hValue, s: this.sValue, v: this.vValue });
+        this.colorChange.next(Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }));
 
         this.updateColorCanvas();
     }
@@ -125,7 +124,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         const whiteToColorGrad: CanvasGradient = this.ctx.createLinearGradient(0, 0, pixelSize.width, 0);
         whiteToColorGrad.addColorStop(0, '#FFFFFF');
 
-        const hueHexColor: string = ColorHelper.hsvToHex({ h: this.hValue, s: 1, v: 1 });
+        const hueHexColor: string = Color({ h: this.hValue * 360, s: 100, v: 100 }).hex();
         whiteToColorGrad.addColorStop(1, hueHexColor);
 
         const transparentToBlackGrad: CanvasGradient = this.ctx.createLinearGradient(0, 0, 0, pixelSize.height);
@@ -147,7 +146,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         this.cursorData$.next({
             horizontalOffset: `${horizontalPosition}px`,
             verticalOffset: `${verticalPosition}px`,
-            color: ColorHelper.hsvToHex({ h: this.hValue, s: this.sValue, v: this.vValue }),
+            color: Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }).hex(),
         });
     }
 }

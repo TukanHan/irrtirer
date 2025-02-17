@@ -31,22 +31,22 @@ const MAX_ZOOM: number = 1_000_000_000;
 })
 export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDestroy {
     @Output()
-    canvasRedrawn: EventEmitter<void> = new EventEmitter();
+    public canvasRedrawn: EventEmitter<void> = new EventEmitter();
 
     @Output()
-    clicked: EventEmitter<IVector> = new EventEmitter<IVector>();
+    public clicked: EventEmitter<IVector> = new EventEmitter<IVector>();
 
     private _options: CanvasOptions = DEFAULT_CANVAS_OPTIONS;
 
     @Input()
-    set options(value: CanvasOptions) {
+    public set options(value: CanvasOptions) {
         this._options = Object.assign(DEFAULT_CANVAS_OPTIONS, value);
     }
 
     @ViewChild('canvas')
-    canvas: ElementRef<HTMLCanvasElement>;
+    private canvas: ElementRef<HTMLCanvasElement>;
 
-    viewport: Viewport;
+    public viewport: Viewport;
 
     private isDraging = false;
 

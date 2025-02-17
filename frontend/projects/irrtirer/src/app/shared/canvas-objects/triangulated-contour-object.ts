@@ -1,6 +1,4 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
-import { ColorHelper } from "../../core/helpers/color-helper";
-import { Color } from "../../core/models/color.model";
 import { Line } from "../../core/models/math/line.model";
 import { Triangle } from "../../core/models/math/triangle.model";
 import { Vector } from "../../core/models/math/vector.model";
@@ -10,15 +8,15 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     private outerContour: Vector[];
     private innerLines: Line[];
 
-    private color: Color;
+    private hexColor: string;
     private order: number;
 
     private borderThicnses: number = 6;
     private innerThicnes: number = 3;
 
-    constructor(mesh: Triangle[], contour: Vector[], color: Color, order: number = 100) {
+    constructor(mesh: Triangle[], contour: Vector[], hexColor: string, order: number = 100) {
         super();
-        this.color = color;
+        this.hexColor = hexColor;
         this.order = order;
 
         this.outerContour = contour;
@@ -30,7 +28,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
             return;
         }
 
-        ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
+        ctx.strokeStyle = this.hexColor;
 
         this.drawTriangulationMesh(ctx, viewport);
         this.drawBorder(ctx, viewport);
@@ -52,7 +50,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
         ctx.stroke();
 
         ctx.globalAlpha = 0.25;
-        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
+        ctx.fillStyle = this.hexColor;
         ctx.fill();
         ctx.globalAlpha = 1;
     }

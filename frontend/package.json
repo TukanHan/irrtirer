@@ -25,6 +25,7 @@
     "@angular/router": "^19.1.4",
     "@microsoft/signalr": "^8.0.7",
     "@ngrx/store": "^19.0.1",
+    "color": "^5.0.0",
     "hash-it": "^6.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

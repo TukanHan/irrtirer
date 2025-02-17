@@ -10,11 +10,10 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { Color } from '../../../../core/models/color.model';
-import { ColorHelper } from '../../../../core/helpers/color-helper';
 import { Size } from '../../../../core/models/math/size.interface';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
+import Color from 'color';
 
 export interface CursorDataModel {
     horizontalOffset: string;
@@ -110,8 +109,7 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
         const theresholdCount: number = 20;
         for (let i = 0; i <= theresholdCount; ++i) {
             const h = i * (1 / theresholdCount);
-            const color: Color = ColorHelper.hsvToRgb({ h: h, s: 1, v: 1 });
-            gradient.addColorStop(h, ColorHelper.rgbToHex(color));
+            gradient.addColorStop(h, Color({ h: h * 360, s: 100, v: 100 }).hex());
         }
 
         ctx.fillStyle = gradient;
@@ -121,7 +119,7 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
     private updateCursor(value: number): void {
         const sliderWidth: number = this.canvas.nativeElement.getBoundingClientRect().width;
         const horizontalPosition: number = sliderWidth * value - 8;
-        const hexCodeColor: string = ColorHelper.hsvToHex({ h: value, s: 1, v: 1 });
+        const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
 
         this.cursorData$.next({
             horizontalOffset: `${horizontalPosition}px`,

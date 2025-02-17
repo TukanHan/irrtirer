@@ -1,10 +1,9 @@
-import { ColorHelper } from '../../../../irrtirer/src/app/core/helpers/color-helper';
-import { Color } from '../../../../irrtirer/src/app/core/models/color.model';
 import { CanvasObject } from '../models/canvas/canvas-object.interface';
 import { IVector } from '../models/math/vector.interface';
 import { Vector } from '../models/math/vector.model';
 import { Viewport } from '../viewport/viewport.model';
 import { BaseCanvasObject } from './base-canvas-object.model';
+import Color, { ColorInstance } from 'color';
 
 interface ViewportZoomGridColors {
     decimalGridColor: string;
@@ -69,15 +68,15 @@ export class GridObject extends BaseCanvasObject implements CanvasObject {
     }
 
     private calculateGridColorsForZoom(gridLength: number, zoom: number): ViewportZoomGridColors {
-        const maxDecimalGridColor: Color = ColorHelper.hexToRgb(this.maxDecimalGridColor);
-        const maxDefaultGridColor: Color = ColorHelper.hexToRgb(this.maxDefaultGridColor);
-        const minDefaultGridColor: Color = ColorHelper.hexToRgb(this.backgroundColor);
+        const maxDecimalGridColor: ColorInstance = Color(this.maxDecimalGridColor);
+        const maxDefaultGridColor: ColorInstance = Color(this.maxDefaultGridColor);
+        const minDefaultGridColor: ColorInstance = Color(this.backgroundColor);
 
         const interpolationValue = (zoom - gridLength) / (gridLength * 10 - gridLength);
 
         return {
-            decimalGridColor: ColorHelper.rgbToHex(ColorHelper.lerp(maxDecimalGridColor, maxDefaultGridColor, interpolationValue)),
-            defaultGridColor: ColorHelper.rgbToHex(ColorHelper.lerp(maxDefaultGridColor, minDefaultGridColor, interpolationValue)),
+            decimalGridColor: maxDecimalGridColor.mix(maxDefaultGridColor, interpolationValue).string(),
+            defaultGridColor: maxDefaultGridColor.mix(minDefaultGridColor, interpolationValue).string(),
         };
     }
 }

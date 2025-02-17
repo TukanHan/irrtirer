@@ -1,26 +1,24 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
-import { ColorHelper } from "../../core/helpers/color-helper";
-import { Color } from "../../core/models/color.model";
 
 
 export class OpenedContourObject extends BaseCanvasObject implements CanvasObject {
     vertices: IVector[];
     selectedIndex: number;
-    color: Color;
+    hexColor: string;
     order: number;
 
-    constructor(vertices: IVector[], selectedIndex: number, color: Color, order: number = 100) {
+    constructor(vertices: IVector[], selectedIndex: number, hexColor: string, order: number = 100) {
         super();
         this.vertices = vertices;
         this.selectedIndex = selectedIndex;
-        this.color = color;
+        this.hexColor = hexColor;
         this.order = order;
     }
 
     public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         if (this.vertices.length >= 2) {
             ctx.lineWidth = 10;
-            ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
+            ctx.strokeStyle = this.hexColor;
             ctx.setLineDash([10]);
 
             ctx.beginPath();
@@ -57,7 +55,7 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
         ctx.beginPath();
         ctx.arc(viewportPosition.x, viewportPosition.y, 10, 0, 2 * Math.PI);
 
-        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
+        ctx.fillStyle = this.hexColor;
         ctx.fill();
     }
 

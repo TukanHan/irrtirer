@@ -1,4 +1,3 @@
-import { Color } from './color.model';
 import { Vector } from './math/vector.model';
 
 export interface MosaicProjectModel {
@@ -20,13 +19,13 @@ export interface TilesSet {
 export interface TileModel {
     id: string;
     vertices: Vector[];
-    color: Color;
+    color: string;
 }
 
 export interface SectorSchema {
     id: string;
     name: string;
-    color: Color;
+    color: string;
     vertices: Vector[];
     properties: SectorSchemaProperties;
 }

@@ -1,6 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
-import { ColorHelper } from '../../../../core/helpers/color-helper';
 import { Vector } from '../../../../core/models/math/vector.model';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatIconModule } from '@angular/material/icon';
@@ -33,7 +32,7 @@ export class TileDisplayComponent implements AfterViewInit {
     drawTileOnCanvas(mappedVertices: Vector[]): void {
       const ctx = this.canvas.nativeElement.getContext('2d');
 
-      ctx.fillStyle = ColorHelper.rgbToHex(this.tile.color);
+      ctx.fillStyle = this.tile.color;
       ctx.beginPath();
 
       for (let i = 0; i < this.tile.vertices.length; ++i) {

@@ -1,22 +1,20 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
-import { ColorHelper } from '../../core/helpers/color-helper';
-import { Color } from '../../core/models/color.model';
 
 export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {
     vertices: IVector[];
-    color: Color;
+    hexColor: string;
     order: number;
     lineThicnses: number = 8;
 
-    constructor(vertices: IVector[], color: Color, order: number = 10) {
+    constructor(vertices: IVector[], hexColor: string, order: number = 10) {
         super();
 
         this.vertices = vertices;
-        this.color = color;
+        this.hexColor = hexColor;
         this.order = order;
     }
 
-    drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         if (this.vertices.length < 3) {
             return;
         }
@@ -30,11 +28,11 @@ export class ClosedContourObject extends BaseCanvasObject implements CanvasObjec
         }
 
         ctx.lineWidth = this.lineThicnses;
-        ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
+        ctx.strokeStyle = this.hexColor;
         ctx.closePath();
 
         ctx.globalAlpha = 0.25;
-        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
+        ctx.fillStyle = this.hexColor;
         ctx.fill();
         ctx.globalAlpha = 1;
 
@@ -42,7 +40,7 @@ export class ClosedContourObject extends BaseCanvasObject implements CanvasObjec
         ctx.lineWidth = 1;
     }
 
-    getOrder(): number {
+    public getOrder(): number {
         return this.order;
     }
 }

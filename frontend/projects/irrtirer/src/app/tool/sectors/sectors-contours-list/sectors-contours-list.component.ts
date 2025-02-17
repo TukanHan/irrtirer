@@ -14,25 +14,21 @@ import { RandomHelper } from '../../../core/helpers/random-helper';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { ColorHelper } from '../../../core/helpers/color-helper';
+import Color from 'color';
 
 @Component({
     selector: 'app-sectors-contours-list',
     imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorsContoursListComponent {
     sectors$: Observable<SectorSchema[]>;
 
     selectedSector: SectorSchema;
 
-    constructor(
-        public dialog: MatDialog,
-         private store: Store,
-          private sectorsContoursSevice: SectorsContoursService
-        ) {
+    constructor(public dialog: MatDialog, private store: Store, private sectorsContoursSevice: SectorsContoursService) {
         this.sectors$ = store.select(selectSectors);
     }
 
@@ -40,11 +36,7 @@ export class SectorsContoursListComponent {
         const sector: SectorSchema = {
             id: crypto.randomUUID(),
             name: '',
-            color: ColorHelper.hsvToRgb({
-                h: RandomHelper.nextFloat(0, 1),
-                s: 0.75,
-                v: 0.95,
-            }),
+            color: Color({ h: RandomHelper.nextFloat(0, 360), s: 75, v: 95 }).hex(),
             vertices: [],
             properties: {
                 sectionMaxArea: 1,
@@ -102,7 +94,7 @@ export class SectorsContoursListComponent {
         this.sectorsContoursSevice.emitEditedSectorProperty({
             sector: sector,
             mesh: null,
-            contout: null
+            contout: null,
         });
     }
 
@@ -112,9 +104,7 @@ export class SectorsContoursListComponent {
     }
 
     dropSectorBox(event: CdkDragDrop<string[]>): void {
-        this.store.dispatch(
-            MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex })
-        );
+        this.store.dispatch(MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex }));
         this.sectorsContoursSevice.emitSectorListChanged({ selectedSector: this.selectedSector });
     }
 
