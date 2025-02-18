@@ -1,7 +1,7 @@
-import { Size } from '../models/math/size.interface';
-import { IVector } from '../models/math/vector.interface';
-import { Vector } from '../models/math/vector.model';
-import { UnitConverter } from '../utils/unit-converter';
+import { Size } from '../math/size.interface';
+import { IVector } from '../math/vector.interface';
+import { Vector } from '../math/vector.model';
+import { UnitConverter } from '../../utils/unit-converter';
 
 export class Viewport {
     /**

@@ -1,8 +1,4 @@
-import hash from 'hash-it';
-import { Hashable } from '../hash-map';
-import { IVector } from '../../../../../../active-canvas/src/public-api';
-
-export class Vector implements Hashable, IVector {
+export class Vector {
     readonly x: number = 0;
     readonly y: number = 0;
 
@@ -24,11 +20,7 @@ export class Vector implements Hashable, IVector {
     public sub(b: Vector): Vector {
         return new Vector(this.x - b.x, this.y - b.y);
     }
-
-    public negation(): Vector {
-        return new Vector(-this.x, -this.y);
-    }
-
+    
     public magnitude(): number {
         return Math.hypot(this.x, this.y);
     }
@@ -38,8 +30,8 @@ export class Vector implements Hashable, IVector {
         return new Vector(this.x / magnitude, this.y / magnitude);
     }
 
-    public getHash(): number {
-        return hash({ x: this.x, y: this.y });
+    public sqrMagnitude(): number {
+        return this.x * this.x + this.y * this.y;
     }
 
     public static distance(a: Vector, b: Vector): number {
@@ -49,7 +41,7 @@ export class Vector implements Hashable, IVector {
     public static dot(a: Vector, b: Vector): number {
         return a.x * b.x + a.y * b.y;
     }
-
+    
     public static areEqual(a: Vector, b: Vector): boolean {
         return a.x === b.x && a.y === b.y;
     }

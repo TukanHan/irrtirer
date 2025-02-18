@@ -10,18 +10,16 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { CanvasObject } from './models/canvas/canvas-object.interface';
-import { Viewport } from './viewport/viewport.model';
+import { CanvasObject } from './canvas-objects/canvas-object.interface';
+import { Viewport } from './models/canvas/viewport.model';
 import { Size } from './models/math/size.interface';
 import { UnitConverter } from './utils/unit-converter';
 import { Vector } from './models/math/vector.model';
 import { IVector } from './models/math/vector.interface';
-import { CanvasOptions, DEFAULT_CANVAS_OPTIONS } from './models/canvas/canvas-options.interface';
+import { CanvasOptions } from './models/canvas/canvas-options.interface';
 import { IActiveCanvas } from './models/canvas/active-canvas.interface';
-import { GridObject } from './canvas-objects/grid-object';
-
-const MIN_ZOOM: number = 0.00_000_000_1;
-const MAX_ZOOM: number = 1_000_000_000;
+import { GridObject } from './canvas-objects/grid-object.model';
+import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
 
 @Component({
     selector: 'ac-active-canvas',
@@ -89,7 +87,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     private onWheelMove = (event: WheelEvent) => {
         const cursorWorldPos: IVector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
+        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, this._options.maxZoom), this.options.minZoom) / this.viewport.zoom;
 
         const newPosition: Vector = new Vector(
             cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,

@@ -1,5 +1,5 @@
-import { Viewport } from '../../viewport/viewport.model';
-import { IActiveCanvas } from './active-canvas.interface';
+import { Viewport } from '../models/canvas/viewport.model';
+import { IActiveCanvas } from '../models/canvas/active-canvas.interface';
 
 export interface CanvasObject {
     /**

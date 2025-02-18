@@ -1,6 +1,6 @@
 import { IActiveCanvas } from '../models/canvas/active-canvas.interface';
-import { CanvasObject } from '../models/canvas/canvas-object.interface';
-import { Viewport } from '../viewport/viewport.model';
+import { CanvasObject } from './canvas-object.interface';
+import { Viewport } from '../models/canvas/viewport.model';
 
 export abstract class BaseCanvasObject implements CanvasObject {
     protected parent: IActiveCanvas;

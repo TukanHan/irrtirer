@@ -1,4 +1,4 @@
-import { CanvasObject } from "./canvas-object.interface";
+import { CanvasObject } from "../../canvas-objects/canvas-object.interface";
 
 export interface IActiveCanvas {
     addCanvasObject(addedObject: CanvasObject): void;

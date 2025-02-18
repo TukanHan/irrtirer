@@ -15,7 +15,7 @@ describe('TileDisplayComponent', () => {
             new Vector(-1.39, -0.8),
             new Vector(-1.3, 0.99),
         ],
-        color: { r: 255, g: 255, b: 255 },
+        color: "#ffffff",
     };
 
     beforeEach(async () => {

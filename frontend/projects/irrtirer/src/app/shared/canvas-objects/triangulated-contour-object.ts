@@ -1,8 +1,7 @@
-import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
-import { Line } from "../../core/models/math/line.model";
-import { Triangle } from "../../core/models/math/triangle.model";
-import { Vector } from "../../core/models/math/vector.model";
-
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+import { Line } from '../../core/models/math/line.model';
+import { Triangle } from '../../core/models/math/triangle.model';
+import { Vector } from '../../core/models/math/vector.model';
 
 export class TriangulatedContourObject extends BaseCanvasObject implements CanvasObject {
     private outerContour: Vector[];
@@ -100,7 +99,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
             for (let i = 0; i < 3; ++i) {
                 const currentVertex = triangleVertices[i];
                 const vertices =
-                    previousVertex.getHash() < currentVertex.getHash() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
+                    previousVertex.sqrMagnitude() < currentVertex.sqrMagnitude() ? [previousVertex, currentVertex] : [currentVertex, previousVertex];
 
                 const line = new Line(vertices[0], vertices[1]);
                 const lineHash: number = line.hash();

@@ -1,7 +1,7 @@
-import { CanvasObject } from '../models/canvas/canvas-object.interface';
+import { CanvasObject } from './canvas-object.interface';
 import { IVector } from '../models/math/vector.interface';
 import { Vector } from '../models/math/vector.model';
-import { Viewport } from '../viewport/viewport.model';
+import { Viewport } from '../models/canvas/viewport.model';
 import { BaseCanvasObject } from './base-canvas-object.model';
 import Color, { ColorInstance } from 'color';
 
