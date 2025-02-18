@@ -3,7 +3,7 @@
 </div>
 
 <div class="section-tool">
-  <app-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></app-active-canvas>
+  <ac-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></ac-active-canvas>
 
   <ng-container *ngIf="sectorForContourEdition$ | async as editedSector; else sectorPropertyEditionPanel">
     <app-sector-contour-edition #sectorContourEditionPanel class="section-tool__panel" [sectorContour]="editedSector">

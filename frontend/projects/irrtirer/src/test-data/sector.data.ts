@@ -4,11 +4,7 @@ import { SectorSchema } from '../app/core/models/mosaic-project.model';
 export const faceSector: SectorSchema = {
     id: '28de0a80-5b2d-4dba-83cc-052686428fce',
     name: 'Twarz',
-    color: {
-        r: 242,
-        g: 175,
-        b: 61,
-    },
+    color: "#f2af3d",
     vertices: [
         new Vector(-12.575004609623136, -52.52902802526164),
         new Vector(-6.445132247241247, -54.592549414578315),

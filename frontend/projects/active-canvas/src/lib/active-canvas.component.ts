@@ -10,37 +10,41 @@ import {
     Output,
     ViewChild,
 } from '@angular/core';
-import { Size } from '../../core/models/math/size.interface';
-import { Vector } from '../../core/models/math/vector.model';
-import { UnitConverter } from '../../core/helpers/unit-converter';
-import { Viewport } from './models/viewport.class';
-import { CanvasObject } from './models/canvas-object.interface';
-import { CanvasOptions } from './models/canvas-options.interface';
-
-const MIN_ZOOM: number = 0.00_000_000_1;
-const MAX_ZOOM: number = 1_000_000_000;
+import { CanvasObject } from './canvas-objects/canvas-object.interface';
+import { Viewport } from './models/canvas/viewport.model';
+import { Size } from './models/math/size.interface';
+import { UnitConverter } from './utils/unit-converter';
+import { Vector } from './models/math/vector.model';
+import { IVector } from './models/math/vector.interface';
+import { CanvasOptions } from './models/canvas/canvas-options.interface';
+import { IActiveCanvas } from './models/canvas/active-canvas.interface';
+import { GridObject } from './canvas-objects/grid-object.model';
+import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
 
 @Component({
-    selector: 'app-active-canvas',
-    imports: [],
-    templateUrl: './active-canvas.component.html',
-    styleUrl: './active-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'ac-active-canvas',
+    templateUrl: 'active-canvas.component.html',
+    styleUrl: 'active-canvas.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
+export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDestroy {
     @Output()
-    canvasRedrawn: EventEmitter<void> = new EventEmitter();
+    public canvasRedrawn: EventEmitter<void> = new EventEmitter();
 
     @Output()
-    clicked: EventEmitter<Vector> = new EventEmitter<Vector>();
+    public clicked: EventEmitter<IVector> = new EventEmitter<IVector>();
+
+    private _options: CanvasOptions = DEFAULT_CANVAS_OPTIONS;
 
     @Input()
-    options?: CanvasOptions;
+    public set options(value: CanvasOptions) {
+        this._options = Object.assign(DEFAULT_CANVAS_OPTIONS, value);
+    }
 
     @ViewChild('canvas')
-    canvas: ElementRef<HTMLCanvasElement>;
+    private canvas: ElementRef<HTMLCanvasElement>;
 
-    viewport: Viewport;
+    public viewport: Viewport;
 
     private isDraging = false;
 
@@ -56,30 +60,38 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         window.addEventListener('resize', this.resizeFunc, false);
 
         this.canvas.nativeElement.addEventListener('wheel', this.onWheelMove);
-        this.canvas.nativeElement.addEventListener('mousedown', this.onMouseDown); 
+        this.canvas.nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mousemove', this.onMouseMove);
         window.addEventListener('mouseup', this.onMouseUp);
+
+        this.configureGrid();
 
         this.viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
         setTimeout(() => this.resizeFunc(), 1);
     }
 
+    private configureGrid(): void {
+        if(this._options.showGrid) {
+            this.addCanvasObject(new GridObject());
+        }
+    }
+
     public ngOnDestroy(): void {
         this.canvas.nativeElement.removeEventListener('wheel', this.onWheelMove);
-        this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown); 
+        this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown);
         window.removeEventListener('resize', this.resizeFunc, false);
         window.removeEventListener('mousemove', this.onMouseMove);
         window.removeEventListener('mouseup', this.onMouseUp);
     }
 
     private onWheelMove = (event: WheelEvent) => {
-        const cursorWorldPos: Vector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
+        const cursorWorldPos: IVector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, MAX_ZOOM), MIN_ZOOM) / this.viewport.zoom;
+        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, this._options.maxZoom), this.options.minZoom) / this.viewport.zoom;
 
         const newPosition: Vector = new Vector(
             cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
-            cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier,
+            cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier
         );
 
         this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
@@ -87,9 +99,9 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         event.preventDefault();
     };
 
-     private onMouseDown = (event: MouseEvent) => {
+    private onMouseDown = (event: MouseEvent) => {
         this.clicked.emit(this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
-        if (this.options?.isMovable === false) {
+        if (this._options?.isMovable === false) {
             return;
         }
 
@@ -99,14 +111,14 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     };
 
     private onMouseMove = (evt: MouseEvent) => {
-        if (this.options?.isMovable === false) {
+        if (this._options?.isMovable === false) {
             return;
         }
 
         if (this.isDraging) {
             const newPosition: Vector = new Vector(
                 this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
-                this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom,
+                this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom
             );
 
             this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
@@ -115,14 +127,14 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
     };
 
     private onMouseUp = () => {
-        if (this.options?.isMovable === false) {
+        if (this._options?.isMovable === false) {
             return;
         }
 
         document.body.style.cursor = '';
         this.isDraging = false;
         this.cd.markForCheck();
-    }
+    };
 
     private resizeFunc = () => {
         const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
@@ -142,13 +154,14 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.viewport = new Viewport(this.viewport.position, zoom, this.viewport.pxSize);
     }
 
-    public addCanvasObject(addedObj: CanvasObject): void {
-        this.canvasObjects.push(addedObj);
+    public addCanvasObject(addedObject: CanvasObject): void {
+        this.canvasObjects.push(addedObject);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
+        addedObject.setParent(this);
     }
 
-    public removeCanvasObject(removedObj: CanvasObject): void {
-        this.canvasObjects = this.canvasObjects.filter((canvasObj) => canvasObj !== removedObj);
+    public removeCanvasObject(removedObject: CanvasObject): void {
+        this.canvasObjects = this.canvasObjects.filter((canvasObj) => canvasObj !== removedObject);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
     }
 
@@ -156,7 +169,7 @@ export class ActiveCanvasComponent implements AfterViewInit, OnDestroy {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
-            if(object.isVisible) {
+            if (object.isVisible) {
                 object.drawObject(this.ctx, this.viewport);
             }
         }

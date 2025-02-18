@@ -3,7 +3,7 @@ import { RandomHelper } from '../../../core/helpers/random-helper';
 import { TileModel } from '../../../core/models/mosaic-project.model';
 import { Range } from '../../../core/models/math/range.interface';
 import { Vector } from '../../../core/models/math/vector.model';
-import { Color } from '../../../core/models/color.model';
+import Color, { ColorInstance } from 'color';
 
 export class TileGenerator {
     constructor(private imagePixelArray: Uint8ClampedArray) {}
@@ -31,7 +31,7 @@ export class TileGenerator {
         return {
             id: crypto.randomUUID(),
             vertices: normalizedVertices,
-            color: this.randomColor(),
+            color: this.randomColor().hex(),
         };
     }
 
@@ -55,15 +55,15 @@ export class TileGenerator {
         return directionVector.multiply(radius);
     }
 
-    randomColor(): Color {
+    randomColor(): ColorInstance {
         const pixelCount = this.imagePixelArray.length / 4;
         const pixelIndex = RandomHelper.nextInt(0, pixelCount-1);
 
-        return {
+        return Color({
             r: this.imagePixelArray[pixelIndex * 4],
             g: this.imagePixelArray[pixelIndex * 4 + 1],
             b: this.imagePixelArray[pixelIndex * 4 + 2],
-        };
+        });
     }
 
     normalizeVertices(vertices: Vector[], centroid: Vector): Vector[] {

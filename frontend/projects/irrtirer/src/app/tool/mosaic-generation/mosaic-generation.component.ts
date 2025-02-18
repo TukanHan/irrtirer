@@ -1,22 +1,16 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
-import { ActiveCanvasComponent } from '../../shared/active-canvas/active-canvas.component';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { GridObject } from '../../shared/active-canvas/canvas-objects/grid-object';
 import { Size } from '../../core/models/math/size.interface';
-import { ImageObject } from '../../shared/active-canvas/canvas-objects/image-object';
 import { Vector } from '../../core/models/math/vector.model';
-import { TriangulatedContourObject } from '../../shared/active-canvas/canvas-objects/triangulated-contour-object';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { TileObject } from '../../shared/active-canvas/canvas-objects/tile-object';
 import { ImageHelper } from '../../core/helpers/image-helper';
 import { MatButtonModule } from '@angular/material/button';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
-import { ColorHelper } from '../../core/helpers/color-helper';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
 import { MatIconModule } from '@angular/material/icon';
@@ -25,8 +19,11 @@ import { ProgressInfoComponent } from './progress-info/progress-info.component';
 import { InfoState } from './progress-info/progress-info.interface';
 import { GeneratedTileModel } from './mosaic-generation.interface';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
-import { ClosedContourObject } from '../../shared/active-canvas/canvas-objects/closed-contour-object';
-import { CanvasObject } from '../../shared/active-canvas/models/canvas-object.interface';
+import { ActiveCanvasComponent, CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { ImageObject } from '../../shared/canvas-objects/image-object';
+import { TileObject } from '../../shared/canvas-objects/tile-object';
+import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
+import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 
 @Component({
     selector: 'app-mosaic-generation',
@@ -72,8 +69,6 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
         const image = await ImageHelper.getImageObjectBySrc(mosaicConfig.base64Image);
-
-        this.activeCanvas.addCanvasObject(new GridObject());
 
         const mosaicSize: Size = {
             height: (image.height / image.width) * mosaicConfig.mosaicWidth,
@@ -149,10 +144,10 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
                 this.service.fillSectorsGenerationInfo(sectorsTriangulations);
 
-                const tiles: TileRequestModel[] = this.avalibleTiles.map((x) => ({
-                    color: ColorHelper.rgbToHex(x.color),
-                    id: x.id,
-                    vertices: x.vertices,
+                const tiles: TileRequestModel[] = this.avalibleTiles.map((tile) => ({
+                    color: tile.color,
+                    id: tile.id,
+                    vertices: tile.vertices,
                 }));
 
                 this.signalRService
@@ -202,13 +197,12 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
             const sectorInfo = this.service.getSectorById(sectorSchema.id);
-            sectorInfo.visualObjects.forEach((x) => this.activeCanvas.removeCanvasObject(x));
             const sectorPartsCanvasObjects: CanvasObject[] = [];
 
             for (const sectorPart of sectorsTriangulations[i].parts) {
                 const canvasObject = this.createSectorMeshObject(sectorSchema, sectorPart, i);
-                sectorPartsCanvasObjects.push(canvasObject);
                 this.activeCanvas.addCanvasObject(canvasObject);
+                sectorPartsCanvasObjects.push(canvasObject);
             }
 
             sectorInfo.setSectorVisualObjects(sectorPartsCanvasObjects);
@@ -221,8 +215,8 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         for (let i = 0; i < sectorsSchemas.length; ++i) {
             const sectorInfo = this.service.getSectorById(sectorsSchemas[i].id);
             const canvasObject = this.createSectorContourObject(sectorsSchemas[i], i);
-            sectorInfo.visualObjects.push(canvasObject);
             this.activeCanvas.addCanvasObject(canvasObject);
+            sectorInfo.visualObjects.push(canvasObject);
         }
 
         this.activeCanvas.rewrite();

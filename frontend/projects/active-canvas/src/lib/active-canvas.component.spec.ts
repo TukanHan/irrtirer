@@ -11,7 +11,7 @@ describe('ActiveCanvasComponent', () => {
       imports: [ActiveCanvasComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(ActiveCanvasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -1,33 +1,29 @@
-import { ColorHelper } from '../../../core/helpers/color-helper';
-import { Color } from '../../../core/models/color.model';
-import { Vector } from '../../../core/models/math/vector.model';
-import { CanvasObject } from '../models/canvas-object.interface';
-import { Viewport } from '../models/viewport.class';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
 
-export class OpenedContourObject implements CanvasObject {
-    vertices: Vector[];
+
+export class OpenedContourObject extends BaseCanvasObject implements CanvasObject {
+    vertices: IVector[];
     selectedIndex: number;
-    color: Color;
+    hexColor: string;
     order: number;
 
-    public isVisible: boolean = true;
-
-    constructor(vertices: Vector[], selectedIndex: number, color: Color, order: number = 100) {
+    constructor(vertices: IVector[], selectedIndex: number, hexColor: string, order: number = 100) {
+        super();
         this.vertices = vertices;
         this.selectedIndex = selectedIndex;
-        this.color = color;
+        this.hexColor = hexColor;
         this.order = order;
     }
 
-    drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         if (this.vertices.length >= 2) {
             ctx.lineWidth = 10;
-            ctx.strokeStyle = ColorHelper.rgbToHex(this.color);
+            ctx.strokeStyle = this.hexColor;
             ctx.setLineDash([10]);
 
             ctx.beginPath();
             ctx.globalAlpha = 0.25;
-            let point: Vector = viewport.getViewportPosition(this.vertices.at(-1));
+            let point: IVector = viewport.getViewportPosition(this.vertices.at(-1));
             ctx.moveTo(point.x, point.y);
             point = viewport.getViewportPosition(this.vertices[0]);
             ctx.lineTo(point.x, point.y);
@@ -53,17 +49,17 @@ export class OpenedContourObject implements CanvasObject {
         }
     }
 
-    drawPoint(ctx: CanvasRenderingContext2D, viewport: Viewport, position: Vector): void {
+    private drawPoint(ctx: CanvasRenderingContext2D, viewport: Viewport, position: IVector): void {
         const viewportPosition = viewport.getViewportPosition(position);
 
         ctx.beginPath();
         ctx.arc(viewportPosition.x, viewportPosition.y, 10, 0, 2 * Math.PI);
 
-        ctx.fillStyle = ColorHelper.rgbToHex(this.color);
+        ctx.fillStyle = this.hexColor;
         ctx.fill();
     }
 
-    getOrder(): number {
+    public getOrder(): number {
         return this.order;
     }
 }

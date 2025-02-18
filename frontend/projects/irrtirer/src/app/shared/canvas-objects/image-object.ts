@@ -1,32 +1,29 @@
-import { UnitConverter } from '../../../core/helpers/unit-converter';
-import { Vector } from '../../../core/models/math/vector.model';
-import { Size } from '../../../core/models/math/size.interface';
-import { CanvasObject } from '../models/canvas-object.interface';
-import { Viewport } from '../models/viewport.class';
+import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from "../../../../../active-canvas/src/public-api";
+import { Vector } from "../../core/models/math/vector.model";
 
-export class ImageObject implements CanvasObject {
+
+export class ImageObject extends BaseCanvasObject implements CanvasObject {
     image: HTMLImageElement;
 
-    position: Vector;
+    position: IVector;
 
     size: Size;
 
     order: number;
 
-    public isVisible: boolean = true;
-
-    constructor(image: HTMLImageElement, position: Vector, size: Size, order: number = 0) {
+    constructor(image: HTMLImageElement, position: IVector, size: Size, order: number = 0) {
+        super();
         this.image = image;
         this.position = position;
         this.size = size;
         this.order = order;
     }
 
-    getOrder(): number {
+    public getOrder(): number {
         return this.order;
     }
 
-    drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {
         const viewCmWidth = UnitConverter.pxToCm(viewport.pxSize.width) * viewport.zoom;
         const viewCmHeight = UnitConverter.pxToCm(viewport.pxSize.height) * viewport.zoom;
 
@@ -36,7 +33,7 @@ export class ImageObject implements CanvasObject {
         };
 
         const position = viewport.getViewportPosition(this.position);
-        const centeredPosition: Vector = new Vector(position.x - imageCanvasSize.width / 2, position.y - imageCanvasSize.height / 2);
+        const centeredPosition: IVector = new Vector(position.x - imageCanvasSize.width / 2, position.y - imageCanvasSize.height / 2);
 
         ctx.drawImage(this.image, centeredPosition.x, centeredPosition.y, imageCanvasSize.width, imageCanvasSize.height);
     }

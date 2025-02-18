@@ -1,19 +1,19 @@
 <div class="color-label">
     <span class="color-label__header">{{label}}</span>
-    <span class="color-label__code">{{colorHexCode$ | async}}</span>
+    <span class="color-label__code">{{colorHexCodeSignal()}}</span>
 </div>
 
 <div role="presentation" class="color-preview" 
-    [ngStyle]="{'background-color': (colorHexCode$ | async)}" 
+    [ngStyle]="{'background-color': (colorHexCodeSignal())}" 
     (click)="toggleColorPanel()"    
     cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
 </div>
 
 <ng-template cdkConnectedOverlay 
     [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isOpen" 
-    [cdkConnectedOverlayHasBackdrop]="isOpen"
+    [cdkConnectedOverlayOpen]="isOpenSignal()" 
+    [cdkConnectedOverlayHasBackdrop]="isOpenSignal()"
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
-    (backdropClick)="isOpen = !isOpen">
+    (backdropClick)="toggleColorPanel()">
     <app-color-selection-panel [(color)]="color" (colorChange)="onColorChanged($event)"></app-color-selection-panel>
 </ng-template>
