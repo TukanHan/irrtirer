@@ -4,7 +4,7 @@ export class ClosedContourObject extends BaseCanvasObject implements CanvasObjec
     vertices: IVector[];
     hexColor: string;
     order: number;
-    lineThicnses: number = 8;
+    lineThickness: number = 8;
 
     constructor(vertices: IVector[], hexColor: string, order: number = 10) {
         super();
@@ -27,7 +27,7 @@ export class ClosedContourObject extends BaseCanvasObject implements CanvasObjec
             ctx.lineTo(point.x, point.y);
         }
 
-        ctx.lineWidth = this.lineThicnses;
+        ctx.lineWidth = this.lineThickness;
         ctx.strokeStyle = this.hexColor;
         ctx.closePath();
 

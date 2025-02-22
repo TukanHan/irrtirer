@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
@@ -6,7 +6,7 @@ import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { BehaviorSubject, Subscription } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { ImageHelper } from '../../core/helpers/image-helper';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +24,7 @@ import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-mosaic-generation',
@@ -55,15 +56,14 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
     private imageCanvasObject: ImageObject;
 
-    private avalibleTiles: TileModel[];
-
-    private subscription: Subscription = new Subscription();
+    private availableTiles: TileModel[];
 
     constructor(
         private store: Store,
         private service: MosaicGenerationService,
         private signalRService: MosaicSignalRService,
-        private snackbarService: MatSnackBar
+        private snackbarService: MatSnackBar,
+        private destroyRef: DestroyRef
     ) {}
 
     async ngAfterViewInit(): Promise<void> {
@@ -79,13 +79,14 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         this.activeCanvas.addCanvasObject(this.imageCanvasObject);
 
         this.setInitZoomForImage(mosaicSize);
-        this.activeCanvas.rewrite();
+        this.activeCanvas.redraw();
 
         this.subscribeOnGenerationProgress();
-        this.subscribeOnSectorsMeshRecived();
+        this.subscribeOnSectorsMeshReceived();
         this.subscribeOnMeshGenerationFinished();
         this.subscribeOnMeshVisibilityChange();
 
+        this.initSectors();
         this.initGeneration(mosaicConfig.base64Image, mosaicSize);
     }
 
@@ -94,12 +95,10 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             .startConnection()
             .then(() => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
-                this.service.initGeneratedSectorsData(sectorsSchemas);
-                this.initSectors(sectorsSchemas);
 
                 const initMosaicGenerationRequest = this.service.buildInitMosaicRequest(base64Image, imageSize, sectorsSchemas);
 
-                this.avalibleTiles = this.getAvalibleTiles();
+                this.availableTiles = this.getAvailableTiles();
 
                 this.progressStateSignal.set({ type: 'init', message: $localize`Generowanie siatki sektorów` });
 
@@ -111,12 +110,13 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     }
 
     private subscribeOnGenerationProgress(): void {
-        this.subscription.add(
-            this.signalRService.sectionGenerated$.subscribe((sectionGenerationResult) => {
+        this.signalRService.sectionGenerated$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((sectionGenerationResult) => {
                 const sectionTileObjects: GeneratedTileModel[] = [];
 
                 for (const tileTransform of sectionGenerationResult.tilesTransforms) {
-                    const tile: TileModel = this.avalibleTiles.find((t) => t.id === tileTransform.tileId);
+                    const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId);
                     const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
                     const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
                     this.activeCanvas.addCanvasObject(tileObject);
@@ -132,19 +132,19 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                     percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
                 });
 
-                this.activeCanvas.rewrite();
-            })
-        );
+                this.activeCanvas.redraw();
+            });
     }
 
-    private subscribeOnSectorsMeshRecived(): void {
-        this.subscription.add(
-            this.signalRService.sectionsMeshReceived$.subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
+    private subscribeOnSectorsMeshReceived(): void {
+       this.signalRService.sectionsMeshReceived$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
                 this.service.fillSectorsGenerationInfo(sectorsTriangulations);
 
-                const tiles: TileRequestModel[] = this.avalibleTiles.map((tile) => ({
+                const tiles: TileRequestModel[] = this.availableTiles.map((tile) => ({
                     color: tile.color,
                     id: tile.id,
                     vertices: tile.vertices,
@@ -153,34 +153,32 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
                 this.signalRService
                     .startLongRunningTask(tiles)
                     .catch(() => this.showMessage($localize`Wystąpił błąd na etapie rozpoczęcia generowania.`));
-            })
-        );
+            });
     }
 
     private subscribeOnMeshGenerationFinished(): void {
-        this.subscription.add(
-            this.signalRService.generationFinished$.subscribe(() => {
+        this.signalRService.generationFinished$
+            .pipe(takeUntilDestroyed(this.destroyRef))    
+            .subscribe(() => {
                 this.progressStateSignal.set(null);
                 this.showMessage($localize`Ukończono generowanie mozaiki`);
-            })
-        );
+            });
     }
 
     private subscribeOnMeshVisibilityChange(): void {
-        this.subscription.add(
-            this.showMesh$.subscribe((shouldShowMesh) => {
+        this.showMesh$
+            .pipe(takeUntilDestroyed(this.destroyRef))    
+            .subscribe((shouldShowMesh) => {
                 for (const sector of this.service.getSectors()) {
-                    sector.setSectorMeshVisability(shouldShowMesh);
+                    sector.setSectorMeshVisibility(shouldShowMesh);
                 }
 
-                this.activeCanvas.rewrite();
-            })
-        );
+                this.activeCanvas.redraw();
+            });
     }
 
     ngOnDestroy(): void {
         this.signalRService.stopConnection();
-        this.subscription.unsubscribe();
     }
 
     private setInitZoomForImage(imageSize: Size): void {
@@ -208,10 +206,16 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             sectorInfo.setSectorVisualObjects(sectorPartsCanvasObjects);
         }
 
-        this.activeCanvas.rewrite();
+        this.activeCanvas.redraw();
     }
 
-    private initSectors(sectorsSchemas: SectorSchema[]): void {
+    private initSectors(): void {
+        const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
+        this.service.initGeneratedSectorsData(sectorsSchemas);
+        this.initSectorsMeshes(sectorsSchemas);
+    }
+
+    private initSectorsMeshes(sectorsSchemas: SectorSchema[]): void {
         for (let i = 0; i < sectorsSchemas.length; ++i) {
             const sectorInfo = this.service.getSectorById(sectorsSchemas[i].id);
             const canvasObject = this.createSectorContourObject(sectorsSchemas[i], i);
@@ -219,7 +223,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             sectorInfo.visualObjects.push(canvasObject);
         }
 
-        this.activeCanvas.rewrite();
+        this.activeCanvas.redraw();
     }
 
     private createSectorMeshObject(sectorSchema: SectorSchema, sectorPart: SectorTriangulationMeshModel, index: number): TriangulatedContourObject {
@@ -230,21 +234,21 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         return new ClosedContourObject([...sectorSchema.vertices], sectorSchema.color, 10 + index);
     }
 
-    private getAvalibleTiles(): TileModel[] {
+    private getAvailableTiles(): TileModel[] {
         const tilesSets = this.store.selectSignal(selectTilesSets)();
         return tilesSets.flatMap((x) => x.tiles);
     }
 
-    protected toogleMeshVisibility(): void {
+    protected toggleMeshVisibility(): void {
         const isVisible = !this.isMeshVisibleSignal();
         this.showMesh$.next(isVisible);
         this.isMeshVisibleSignal.set(isVisible);
     }
 
-    protected toogleImageVisibility(): void {
+    protected toggleImageVisibility(): void {
         const isVisible = !this.isImageVisibleSignal();
-        this.imageCanvasObject.isVisible = isVisible;
-        this.activeCanvas.rewrite();
+        this.imageCanvasObject.setVisibility(isVisible);
+        this.activeCanvas.redraw();
         this.isImageVisibleSignal.set(isVisible);
     }
 

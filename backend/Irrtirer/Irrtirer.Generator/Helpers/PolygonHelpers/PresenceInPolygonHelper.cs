@@ -6,7 +6,7 @@ using System.Numerics;
 
 namespace Irrtirer.Generator.Helpers.PolygonHelpers
 {
-    internal class PresenceInPoligonHelper
+    internal class PresenceInPolygonHelper
     {
         public static bool IsPointInsidePolygon(Vector2[] vertices, Vector2 point)
         {
@@ -105,10 +105,10 @@ namespace Irrtirer.Generator.Helpers.PolygonHelpers
             float dir2 = sign(point, vertices[1], vertices[2]);
             float dir3 = sign(point, vertices[2], vertices[0]);
 
-            bool hasNegtiveDir = (dir1 < 0) || (dir2 < 0) || (dir3 < 0);
+            bool hasNegativeDir = (dir1 < 0) || (dir2 < 0) || (dir3 < 0);
             bool hasPositiveDir = (dir1 > 0) || (dir2 > 0) || (dir3 > 0);
 
-            return !(hasNegtiveDir && hasPositiveDir);
+            return !(hasNegativeDir && hasPositiveDir);
         }
 
         private static float sign(Vector2 a, Vector2 b, Vector2 c)

@@ -27,6 +27,12 @@ export class MosaicSignalRService {
 
     public readonly generationFinished$: Observable<void> = this.generationFinishedSub.asObservable();
 
+    private readonly generationAbortedWithErrorSub: Subject<void> = new Subject();
+
+    public readonly generationAbortedWithError$: Observable<void> = this.generationAbortedWithErrorSub.asObservable();
+
+    private isClosed: boolean = false;
+
     constructor() {
         this.hubConnection = new signalR.HubConnectionBuilder()
             .withUrl(`${BackendAddress}/process-hub`, {
@@ -38,6 +44,7 @@ export class MosaicSignalRService {
         this.subscribeOnSectionGenerated();
         this.subscribeOnFinishGeneration();
         this.subscribeOnSectionsMeshReceived();
+        this.subscribeOnAbortGenerationInErrorCase();
     }
 
     private subscribeOnSectionGenerated(): void {
@@ -48,6 +55,10 @@ export class MosaicSignalRService {
         this.hubConnection.on('ReceiveFinishNotification', () => this.generationFinishedSub.next());
     }
 
+    private subscribeOnAbortGenerationInErrorCase(): void {
+        this.hubConnection.on('AbortGenerationInErrorCase', () => this.generationAbortedWithErrorSub.next());
+    }
+
     private subscribeOnSectionsMeshReceived(): void {
         this.hubConnection.on('ReceiveMosaicSectorsMesh', (sectionsMesh: SectorTriangulationMeshPartsModel[]) => {
             sectionsMesh.forEach((sectionMesh) => SectorTriangulationMeshPartsModel.restore(sectionMesh));
@@ -56,11 +67,21 @@ export class MosaicSignalRService {
     }
 
     public startLongRunningTask(tiles: TileRequestModel[]): Promise<void> {
-        return this.hubConnection.invoke('StartMosaicGeneration', tiles);
+        return this.hubConnection.invoke('StartMosaicGeneration', tiles)
+            .catch((error) => {
+                if(!this.isClosed) {
+                    throw error;
+                }
+            });
     }
 
     public initMosaicTriangulation(initMosaicGenerationRequest: InitMosaicGenerationRequestModel): Promise<void> {
-        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest);
+        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest)
+            .catch((error) => {
+                if(!this.isClosed) {
+                    throw error;
+                }
+            });
     }
 
     public startConnection(): Promise<void> {
@@ -68,6 +89,7 @@ export class MosaicSignalRService {
     }
 
     public stopConnection(): Promise<void> {
+        this.isClosed = true;
         return this.hubConnection.stop();
     }
 }

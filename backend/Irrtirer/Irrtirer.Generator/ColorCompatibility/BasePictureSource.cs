@@ -25,18 +25,18 @@ namespace Irrtirer.Generator.ColorCompatibility
 
         private int WorldUnitToPixels(float worldDistance)
         {
-            float pixePerUnit = pixelArraySize.Height / imageRect.Height;
-            return (int)(pixePerUnit * worldDistance);
+            float pixelPerUnit = pixelArraySize.Height / imageRect.Height;
+            return (int)(pixelPerUnit * worldDistance);
         }
 
-        public virtual BluredImageObject GetBluredImage(float worldRadial, Vector2[] polygon)
+        public virtual BlurredImageObject GetBlurredImage(float worldRadial, Vector2[] polygon)
         {
             bool[] pixelMask = rasterizationTool.RasterizePolygonInRange(polygon);
 
             int radial = WorldUnitToPixels(worldRadial);
-            var blured = gaussianBlurTool.Blur(pixelMask, radial, 1);
+            var blurred = gaussianBlurTool.Blur(pixelMask, radial, 1);
 
-            return new BluredImageObject(blured, pixelArraySize, imageRect);
+            return new BlurredImageObject(blurred, pixelArraySize, imageRect);
         }
     }
 }

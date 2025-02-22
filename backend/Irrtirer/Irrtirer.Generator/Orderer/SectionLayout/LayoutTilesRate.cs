@@ -9,7 +9,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
     {
         public float GetSectionOccupance(SectionModel section)
         {
-            return this.Values.Sum(x => x.SectionsOcupance.TryGetValue(section, out float ocupance) ? ocupance : 0);
+            return this.Values.Sum(x => x.SectionsOccupancy.TryGetValue(section, out float occupance) ? occupance : 0);
         }
 
         public object Clone()

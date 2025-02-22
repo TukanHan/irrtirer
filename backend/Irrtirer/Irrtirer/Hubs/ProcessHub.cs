@@ -49,7 +49,7 @@ namespace Irrtirer.Hubs
             }
             catch (Exception ex)
             {
-                logger.LogError(ex.ToString());
+                logger.LogError(message: ex.Message);
             }
         }
 
@@ -59,7 +59,7 @@ namespace Irrtirer.Hubs
             {
                 if (!Resources.TryRemove(Context.ConnectionId, out var irrtirer))
                 {
-                    logger.LogError("Nie znaleziono obiektu");
+                    logger.LogError("Nie znaleziono generatora");
                     return;
                 }
 

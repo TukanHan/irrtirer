@@ -26,10 +26,10 @@ namespace Irrtirer.Library
 
                 for (int i = 0; i < 3; i++)
                 {
-                    ITriangle neighbour = triangle.GetNeighbor(i);
-                    if (neighbour != null && !seenTriangles.Contains(neighbour))
+                    ITriangle neighbor = triangle.GetNeighbor(i);
+                    if (neighbor != null && !seenTriangles.Contains(neighbor))
                     {
-                        collection.RegisterSelectedNeighbour(neighbour);
+                        collection.RegisterSelectedNeighbor(neighbor);
                     }
                 }
             }

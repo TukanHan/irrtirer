@@ -4,26 +4,26 @@ namespace Irrtirer.Generator.Tiles
 {
     public class TileTray
     {
-        private readonly HashSet<Tile> avalibleTiles;
-        private readonly HashSet<Tile> unavalibleTiles;
+        private readonly HashSet<Tile> availableTiles;
+        private readonly HashSet<Tile> unavailableTiles;
 
         public TileTray(IEnumerable<Tile> tiles)
         {
-            this.avalibleTiles = new HashSet<Tile>(tiles);
-            this.unavalibleTiles = new HashSet<Tile>();
+            this.availableTiles = new HashSet<Tile>(tiles);
+            this.unavailableTiles = new HashSet<Tile>();
         }
 
-        public IEnumerable<Tile> GetAvalibleTilesForMosaicSet()
+        public IEnumerable<Tile> GetAvailableTilesForMosaicSet()
         {
-            return avalibleTiles;
+            return availableTiles;
         }
 
         public void RemoveTiles(IEnumerable<Tile> tiles)
         {
             foreach (Tile tile in tiles)
             {
-                avalibleTiles.Remove(tile);
-                unavalibleTiles.Add(tile);
+                availableTiles.Remove(tile);
+                unavailableTiles.Add(tile);
             }
         }
     }

@@ -32,7 +32,7 @@ export interface SectorSchema {
 
 export interface SectorSchemaProperties {
     sectionMaxArea: number;
-    sectionMinAngle: number
+    sectionMinAngle: number;
     minTileRadius: number;
     maxTileRadius: number;
     tilesMargin: number;
@@ -41,18 +41,18 @@ export interface SectorSchemaProperties {
 }
 
 export interface SectorSchemaEvaluationParams {
-    singleSectionPopulation: number,
-    overlappingAreaOutsideSector: number,
-    additionalPopulationOfNeighboringSectors: number,
-    overlappingNotPopulatedSections: number,
-    tileColorMismatch: number,
+    singleSectionPopulation: number;
+    overlappingAreaOutsideSector: number;
+    additionalPopulationOfNeighboringSectors: number;
+    overlappingNotPopulatedSections: number;
+    tileColorMismatch: number;
 }
 
 export interface SectorSchemaPopulationParams {
-    initialPopulationSize: number,
-    countOfTriesToInsertTile: number,
-    countOfRandomingTrianglePosition: number,
-    countOfColorMatchingAttempts: number,
-    iterationsCount: number,
-    populationSize: number,
+    initialPopulationSize: number;
+    countOfTriesToInsertTile: number;
+    countOfTrianglePositionDraws: number;
+    countOfColorMatchingAttempts: number;
+    iterationsCount: number;
+    populationSize: number;
 }

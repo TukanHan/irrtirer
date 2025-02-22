@@ -8,30 +8,30 @@ namespace Irrtirer.Library.Helpers
     {
         public ITriangle Triangle { get; }
         public double FarthestLeft { get; }
-        public int SelectedNeighbours { get; set; }
+        public int SelectedNeighbors { get; set; }
 
         public TriangleNeighborhoodEntity(ITriangle triangle)
         {
             Triangle = triangle;
             FarthestLeft = Enumerable.Range(0, 3).Min(vertexIndex => triangle.GetVertex(vertexIndex).X);
-            SelectedNeighbours = 0;
+            SelectedNeighbors = 0;
         }
     }
 
     internal class TriangleNeighborhoodCollection : List<TriangleNeighborhoodEntity>
     {
-        public void RegisterSelectedNeighbour(ITriangle triangle)
+        public void RegisterSelectedNeighbor(ITriangle triangle)
         {
             var triangleEntity = this.Find(x => x.Triangle.Equals(triangle));
             if (triangleEntity != null)
             {
-                triangleEntity.SelectedNeighbours++;
+                triangleEntity.SelectedNeighbors++;
             }
         }
 
         public ITriangle DequeueNextTriangle()
         {
-            var selectedTriangle = this.OrderByDescending(x => x.SelectedNeighbours)
+            var selectedTriangle = this.OrderByDescending(x => x.SelectedNeighbors)
                 .ThenBy(x => x.FarthestLeft)
                 .FirstOrDefault();
 

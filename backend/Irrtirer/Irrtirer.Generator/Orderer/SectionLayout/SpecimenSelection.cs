@@ -12,28 +12,28 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
             this.random = random;
         }
 
-        public PossibleLayout TurnamentSelection(PossibleLayout[] population, int k)
+        public PossibleLayout TournamentSelection(PossibleLayout[] population, int k)
         {
             k = Math.Min(k, population.Length);
 
-            HashSet<int> randomedIndexes = new HashSet<int>();
+            HashSet<int> drawnIndexes = new HashSet<int>();
 
-            int randomedIndex = random.Next(0, population.Length);
-            PossibleLayout bestSpecimen = population[randomedIndex];
-            randomedIndexes.Add(randomedIndex);
+            int drawnIndex = random.Next(0, population.Length);
+            PossibleLayout bestSpecimen = population[drawnIndex];
+            drawnIndexes.Add(drawnIndex);
 
             while (k > 1)
             {
-                randomedIndex = random.Next(0, population.Length);
-                if (!randomedIndexes.Contains(randomedIndex))
+                drawnIndex = random.Next(0, population.Length);
+                if (!drawnIndexes.Contains(drawnIndex))
                 {
                     --k;
-                    PossibleLayout selctedSpecimen = population[randomedIndex];
-                    randomedIndexes.Add(randomedIndex);
+                    PossibleLayout selectedSpecimen = population[drawnIndex];
+                    drawnIndexes.Add(drawnIndex);
 
-                    if (selctedSpecimen.Rate > bestSpecimen.Rate)
+                    if (selectedSpecimen.Rate > bestSpecimen.Rate)
                     {
-                        bestSpecimen = selctedSpecimen;
+                        bestSpecimen = selectedSpecimen;
                     }
                 }
             }

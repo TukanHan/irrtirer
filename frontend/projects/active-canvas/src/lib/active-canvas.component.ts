@@ -46,7 +46,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     public viewport: Viewport;
 
-    private isDraging = false;
+    private isDragging = false;
 
     private ctx: CanvasRenderingContext2D;
 
@@ -87,7 +87,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     private onWheelMove = (event: WheelEvent) => {
         const cursorWorldPos: IVector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, this._options.maxZoom), this.options.minZoom) / this.viewport.zoom;
+        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, this._options.maxZoom), this._options.minZoom) / this.viewport.zoom;
 
         const newPosition: Vector = new Vector(
             cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
@@ -95,7 +95,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         );
 
         this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
-        this.rewrite();
+        this.redraw();
         event.preventDefault();
     };
 
@@ -106,7 +106,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         }
 
         document.body.style.cursor = 'grab';
-        this.isDraging = true;
+        this.isDragging = true;
         this.cd.markForCheck();
     };
 
@@ -115,14 +115,14 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
             return;
         }
 
-        if (this.isDraging) {
+        if (this.isDragging) {
             const newPosition: Vector = new Vector(
                 this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
                 this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom
             );
 
             this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
-            this.rewrite();
+            this.redraw();
         }
     };
 
@@ -132,7 +132,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         }
 
         document.body.style.cursor = '';
-        this.isDraging = false;
+        this.isDragging = false;
         this.cd.markForCheck();
     };
 
@@ -147,7 +147,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvas.nativeElement.height = newCanvasSize.height;
 
         this.viewport = new Viewport(this.viewport.position, this.viewport.zoom, newCanvasSize);
-        this.rewrite();
+        this.redraw();
     };
 
     public setZoom(zoom: number): void {
@@ -165,11 +165,11 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
     }
 
-    public rewrite(): void {
+    public redraw(): void {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
-            if (object.isVisible) {
+            if (object.getVisibility()) {
                 object.drawObject(this.ctx, this.viewport);
             }
         }

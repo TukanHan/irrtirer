@@ -26,7 +26,7 @@ namespace Irrtirer.Generator.Orderer
         public SectionPopulator(
             ILogger logger,
             RandomFactory randomFactory,
-            BluredImageObject pixelSource,
+            BlurredImageObject pixelSource,
             ParallelOptions parallelOptions,
             SectionModel section)
         {
@@ -35,12 +35,12 @@ namespace Irrtirer.Generator.Orderer
             this.populationParams = section.Parent.PopulationParams;
             K = (int)MathF.Max(2, populationParams.PopulationSize / 4f);
             this.specimenSelection = new SpecimenSelection(randomFactory.GetRandomObject());
-            this.sectionLayoutPreparer = new SectionLayoutPreparer(randomFactory, pixelSource, section, GetSectionNeighbourTiles(section));
+            this.sectionLayoutPreparer = new SectionLayoutPreparer(randomFactory, pixelSource, section, GetSectionNeighborsTiles(section));
         }
 
-        public PossibleLayout SearchForBestSectionLayout(Tile[] avalibleTiles)
+        public PossibleLayout SearchForBestSectionLayout(Tile[] availableTiles)
         {
-            PossibleLayout[] initialPopulation = PrepareRandomPopulation(avalibleTiles);
+            PossibleLayout[] initialPopulation = PrepareRandomPopulation(availableTiles);
             PossibleLayout[] population = new PossibleLayout[populationParams.PopulationSize];
             PossibleLayout[] tempArray = new PossibleLayout[populationParams.PopulationSize];
 
@@ -70,14 +70,14 @@ namespace Irrtirer.Generator.Orderer
             });
         }
 
-        private PossibleLayout[] PrepareRandomPopulation(Tile[] avalibleTiles)
+        private PossibleLayout[] PrepareRandomPopulation(Tile[] availableTiles)
         {
             PossibleLayout[] initialPopulation = new PossibleLayout[populationParams.InitialPopulationSize];
             Parallel.For(0, populationParams.InitialPopulationSize, parallelOptions, (index) =>
             {
                 try
                 {
-                    initialPopulation[index] = sectionLayoutPreparer.CreateInitialLayout(avalibleTiles);
+                    initialPopulation[index] = sectionLayoutPreparer.CreateInitialLayout(availableTiles);
                 }
                 catch (Exception ex)
                 {
@@ -93,13 +93,13 @@ namespace Irrtirer.Generator.Orderer
             newPopulation[0] = specimenSelection.SelectBestInPopulation(oldPopulation);
             for (int i = 1; i < newPopulation.Length; i++)
             {
-                newPopulation[i] = specimenSelection.TurnamentSelection(oldPopulation, k);
+                newPopulation[i] = specimenSelection.TournamentSelection(oldPopulation, k);
             }
         }
 
-        private TileTransform[] GetSectionNeighbourTiles(SectionModel section)
+        private TileTransform[] GetSectionNeighborsTiles(SectionModel section)
         {
-            return section.Neighbours
+            return section.Neighbors
                 .Where(s => s.WasGenerated)
                 .SelectMany(s => s.DirectTiles)
                 .Where(t => SeparatingAxisTheorem.GetMinDistance(t.GetWorldVertices(), section.GetWorldVertices()) <= section.Parent.TileMaxRadius + section.Parent.TileMargin)

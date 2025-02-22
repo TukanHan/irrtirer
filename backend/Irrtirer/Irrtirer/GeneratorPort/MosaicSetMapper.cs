@@ -37,13 +37,13 @@ namespace Irrtirer.GeneratorPort
                     sector.Sections = GetSectorSections(sector, sectorMesh);
                     sectors.Add(sector);
 
-                    allSections.AddRange(sectors[i].Sections);
+                    allSections.AddRange(sector.Sections);
                 }
             }
 
             foreach (SectionModel section in allSections)
             {
-                section.Neighbours = allSections.Where(s => s != section && AreNeighborlyTriangles(s, section)).ToArray();
+                section.Neighbors = allSections.Where(s => s != section && AreNeighborlyTriangles(s, section)).ToArray();
             }
 
             return new MosaicSetModel()

@@ -37,7 +37,7 @@ export const faceSector: SectorSchema = {
         populationParams: {
             initialPopulationSize: 100,
             countOfTriesToInsertTile: 30,
-            countOfRandomingTrianglePosition: 30,
+            countOfTrianglePositionDraws: 30,
             countOfColorMatchingAttempts: 40,
             iterationsCount: 100,
             populationSize: 10,

@@ -6,13 +6,14 @@
 @use './components/tabs-theme' as tabs;
 @use './components/input-theme' as input;
 @use './components/menu-theme' as menu;
-@use './components//tooltip-theme' as tooltip;
-@use './primaty-palette.scss' as pp;
+@use './components/tooltip-theme' as tooltip;
+@use './components/icon-theme' as icon;
+@use './primary-palette.scss' as *;
 
 @include mat.elevation-classes();
 @include mat.app-background();
 
-$irrtirer-primary: mat.m2-define-palette(pp.$cyan-palette, A200);
+$irrtirer-primary: mat.m2-define-palette($cyan-palette, A200);
 $irrtirer-accent: mat.m2-define-palette(mat.$m2-amber-palette, A200, A100, A400);
 $irrtirer-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
@@ -43,3 +44,4 @@ $irrtirer-theme: map.set($irrtirer-theme, "color", $color);
 @include input.theme($irrtirer-theme);
 @include menu.theme($irrtirer-theme);
 @include tooltip.theme($irrtirer-theme);
+@include icon.theme($irrtirer-theme);

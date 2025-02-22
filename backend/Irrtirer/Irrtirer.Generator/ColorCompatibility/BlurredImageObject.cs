@@ -3,16 +3,16 @@ using System.Numerics;
 
 namespace Irrtirer.Generator.ColorCompatibility
 {
-    public class BluredImageObject
+    public class BlurredImageObject
     {
-        public Color[] BluredImage { get; }
+        public Color[] BlurredImage { get; }
         public Size TextureSize { get; }
 
         private readonly RectangleF imageObjectPosition;
 
-        public BluredImageObject(Color[] bluredImage, Size textureSize, RectangleF imageObjectPosition)
+        public BlurredImageObject(Color[] blurredImage, Size textureSize, RectangleF imageObjectPosition)
         {
-            this.BluredImage = bluredImage;
+            this.BlurredImage = blurredImage;
             this.TextureSize = textureSize;
             this.imageObjectPosition = imageObjectPosition;
         }
@@ -30,7 +30,7 @@ namespace Irrtirer.Generator.ColorCompatibility
         protected Color GetColorFromWorldPoint(Vector2 worldPos)
         {
             Point pixelPos = GetPixelPositionFromWorldPosition(worldPos);
-            return BluredImage[pixelPos.Y * TextureSize.Width + pixelPos.X];
+            return BlurredImage[pixelPos.Y * TextureSize.Width + pixelPos.X];
         }
 
         protected Point GetPixelPositionFromWorldPosition(Vector2 worldPos)

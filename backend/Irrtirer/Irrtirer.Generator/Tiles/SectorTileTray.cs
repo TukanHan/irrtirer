@@ -19,26 +19,26 @@ namespace Irrtirer.Generator.Tiles
             }
         }
 
-        private readonly List<Tile> avalibleTiles;
+        private readonly List<Tile> availableTiles;
 
         public SectorTileTray(IEnumerable<Tile> inputTileSet, SectionTrayFilter filter)
         {
-            avalibleTiles = inputTileSet
+            availableTiles = inputTileSet
                 .Where(tile => IsTileMatching(tile, filter))
                 .OrderBy((tile) => tile, TileInnerRadiusComparer.Instance)
                 .ToList();
         }
 
-        public Tile[] GetAvalibleTilesForSector()
+        public Tile[] GetAvailableTilesForSector()
         {
-            return avalibleTiles.ToArray();
+            return availableTiles.ToArray();
         }
 
         public void RemoveTiles(IEnumerable<Tile> tiles)
         {
             foreach (var tile in tiles)
             {
-                avalibleTiles.RemoveAt(avalibleTiles.BinarySearch(tile, TileInnerRadiusComparer.Instance));
+                availableTiles.RemoveAt(availableTiles.BinarySearch(tile, TileInnerRadiusComparer.Instance));
             }
         }
 

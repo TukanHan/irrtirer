@@ -46,7 +46,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     @ViewChild('sectorContourEditionPanel')
     sectorContourEditionPanel: SectorContourEditionComponent;
 
-    visualElems: CanvasObject[] = [];
+    visualElements: CanvasObject[] = [];
 
     sectorForContourEdition$: Observable<EditedSectorContour> = this.service.sectorForContourEdition$;
 
@@ -85,7 +85,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
         this.subscribeOnEditedSectorPropertiesChange();
         this.subscribeOnSectorListChange();
         this.setInitZoomForImage(imageSize);
-        this.activeCanvas.rewrite();
+        this.activeCanvas.redraw();
     }
 
     private subscribeOnEditedSectorChange(): void {
@@ -130,14 +130,14 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     private redrawSectors(): void {
-        this.visualElems.forEach(visualElem => visualElem.removeObject());
-        this.visualElems = this.prepareSectorsContours();
+        this.visualElements.forEach(visualElem => visualElem.removeObject());
+        this.visualElements = this.prepareSectorsContours();
 
-        for (const object of this.visualElems) {
+        for (const object of this.visualElements) {
             this.activeCanvas.addCanvasObject(object);
         }
 
-        this.activeCanvas.rewrite();
+        this.activeCanvas.redraw();
     }
 
     private prepareSectorsContours(): CanvasObject[] {
@@ -176,12 +176,12 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                 );
             } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
                 const triangles = sectorWithTriangulationMesh.mesh;
-                const countour = sectorWithTriangulationMesh.contout;
-                return new TriangulatedContourObject(triangles, countour, sectorWithTriangulationMesh.sector.color);
+                const contour = sectorWithTriangulationMesh.contour;
+                return new TriangulatedContourObject(triangles, contour, sectorWithTriangulationMesh.sector.color);
             } else {
                 const contour = new ClosedContourObject([...sector.vertices], sector.color, 10 + index);
                 if (sector.id === selectedSectorOnList?.id) {
-                    contour.lineThicnses = 10;
+                    contour.lineThickness = 10;
                 }
                 return contour;
             }

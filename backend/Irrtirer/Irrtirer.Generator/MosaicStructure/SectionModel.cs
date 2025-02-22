@@ -9,7 +9,7 @@ namespace Irrtirer.Generator.MosaicStructure
     {
         public SectorModel Parent { get; set; }
         public Triangle Triangle { get; }
-        public SectionModel[] Neighbours { get; set; }
+        public SectionModel[] Neighbors { get; set; }
 
         internal List<TileTransform> DirectTiles { get; set; }
         internal Intersections Intersections { get; } = new Intersections();
@@ -30,9 +30,9 @@ namespace Irrtirer.Generator.MosaicStructure
             OuterRadius = Triangle.Vertices.Max(v => (v - centroid).Length());
         }
 
-        public IEnumerable<SectionModel> GetNeighboursAndSelf()
+        public IEnumerable<SectionModel> GetNeighborsAndSelf()
         {
-            return Neighbours.Union(new[] { this });
+            return Neighbors.Union(new[] { this });
         }
 
         public override Vector2 GetCentroid()

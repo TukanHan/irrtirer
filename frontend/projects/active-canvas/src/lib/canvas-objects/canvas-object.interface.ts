@@ -20,9 +20,11 @@ export interface CanvasObject {
     setParent(activeCanvas: IActiveCanvas): void;
     
     /**
-     * Methd for removing object from canvas
+     * Method for removing object from canvas
      */
     removeObject(): void;
 
-    isVisible: boolean;
+    getVisibility(): boolean;
+
+    setVisibility(visibility: boolean, redraw?: boolean): void;
 }

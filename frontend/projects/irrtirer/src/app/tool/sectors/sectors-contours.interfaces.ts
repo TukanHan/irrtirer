@@ -10,7 +10,7 @@ export interface EditedSectorContour {
 export interface EditedSectorWithTriangulationMesh {
     sector: SectorSchema;
     mesh: Triangle[];
-    contout: Vector[];
+    contour: Vector[];
 }
 
 export interface SectorListChangeEvent {

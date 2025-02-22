@@ -36,10 +36,10 @@ namespace Irrtirer.Generator
             SubscribeEventBusEvents();
         }
 
-        public Task StartGenerating(TileTray avalibleTiles, int randomSeed = 0)
+        public Task StartGenerating(TileTray availableTiles, int randomSeed = 0)
         {
             RandomFactory randomFactory = new RandomFactory(randomSeed);
-            return Task.Factory.StartNew(() => PopulateMosaicSet(avalibleTiles, randomFactory), cancellationTokenSource.Token);
+            return Task.Factory.StartNew(() => PopulateMosaicSet(availableTiles, randomFactory), cancellationTokenSource.Token);
         }
 
         private List<TileTransform> PopulateMosaicSet(TileTray tileTray, RandomFactory randomFactory)
@@ -47,7 +47,7 @@ namespace Irrtirer.Generator
             List<TileTransform> mosaicSetTiles = new List<TileTransform>();
             foreach (SectorModel sector in mosaicSetModel.Sectors)
             {
-                IEnumerable<TileTransform> sectorTiles = PopulateSector(sector, tileTray.GetAvalibleTilesForMosaicSet(), randomFactory);
+                IEnumerable<TileTransform> sectorTiles = PopulateSector(sector, tileTray.GetAvailableTilesForMosaicSet(), randomFactory);
 
                 mosaicSetTiles.AddRange(sectorTiles);
                 tileTray.RemoveTiles(mosaicSetTiles.Select(tileTransform => tileTransform.Tile));
@@ -57,9 +57,9 @@ namespace Irrtirer.Generator
             return mosaicSetTiles;
         }
 
-        private IEnumerable<TileTransform> PopulateSector(SectorModel sector, IEnumerable<Tile> avalibleTiles, RandomFactory randomFactory)
+        private IEnumerable<TileTransform> PopulateSector(SectorModel sector, IEnumerable<Tile> availableTiles, RandomFactory randomFactory)
         {
-            SectorTileTray sectionFilteredTray = new SectorTileTray(avalibleTiles, new SectionTrayFilter()
+            SectorTileTray sectionFilteredTray = new SectorTileTray(availableTiles, new SectionTrayFilter()
             {
                 MaxRadius = sector.TileMaxRadius,
                 MinRadius = sector.TileMinRadius

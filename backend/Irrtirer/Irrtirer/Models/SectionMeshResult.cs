@@ -2,7 +2,7 @@
 {
     public class SectionMeshResult
     {
-        public Guid SectorId { get; set; }
-        public IEnumerable<TileTransformModel> TilesTransforms { get; set; }
+        public required Guid SectorId { get; set; }
+        public required IEnumerable<TileTransformModel> TilesTransforms { get; set; }
     }
 }

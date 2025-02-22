@@ -17,7 +17,7 @@ namespace Irrtirer.Generator.Helpers
             return (rChanel * rChanel) + (gChanel * gChanel) + (bChanel * bChanel);
         }
 
-        public static float ComarsionWithWeight(Color a, Color b)
+        public static float ComparisonWithWeight(Color a, Color b)
         {
             float rChanel = (a.R - b.R) * 0.3f;
             float gChanel = (a.G - b.G) * 0.59f;

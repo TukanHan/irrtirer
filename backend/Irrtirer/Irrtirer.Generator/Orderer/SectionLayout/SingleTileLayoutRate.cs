@@ -6,7 +6,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
 {
     internal class SingleTileLayoutRate : ICloneable
     {
-        public Dictionary<SectionModel, float> SectionsOcupance { get; private set; } = new Dictionary<SectionModel, float>();
+        public Dictionary<SectionModel, float> SectionsOccupancy { get; private set; } = new Dictionary<SectionModel, float>();
 
         public float SectorOccupance { get; set; }
 
@@ -17,7 +17,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         {
             return new SingleTileLayoutRate()
             {
-                SectionsOcupance = SectionsOcupance,
+                SectionsOccupancy = SectionsOccupancy,
                 SectorOccupance = SectorOccupance,
                 DifferenceForTile = DifferenceForTile,
                 CountForTile = CountForTile

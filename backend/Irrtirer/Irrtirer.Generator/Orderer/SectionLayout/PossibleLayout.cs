@@ -16,7 +16,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         public List<TileTransform> TilesLayout { get { return LayoutTilesRates.Keys.ToList(); } }
 
         public HashSet<int> UsedTilesIndexes { get; set; }
-        public Tile[] TilesAvalibleForLayout { get; set; }
+        public Tile[] TilesAvailableForLayout { get; set; }
 
         private PossibleLayout() { }
 
@@ -33,7 +33,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
                 Rate = Rate,
                 LayoutTilesRates = (LayoutTilesRate)LayoutTilesRates.Clone(),
                 UsedTilesIndexes = UsedTilesIndexes.ToHashSet(),
-                TilesAvalibleForLayout = TilesAvalibleForLayout
+                TilesAvailableForLayout = TilesAvailableForLayout
             };
         }
     }

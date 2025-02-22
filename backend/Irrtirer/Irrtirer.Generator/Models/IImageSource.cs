@@ -5,6 +5,6 @@ namespace Irrtirer.Generator.Models
 {
     public interface IImageSource
     {
-        BluredImageObject GetBluredImage(float worldRadial, Vector2[] polygon);
+        BlurredImageObject GetBlurredImage(float worldRadial, Vector2[] polygon);
     }
 }

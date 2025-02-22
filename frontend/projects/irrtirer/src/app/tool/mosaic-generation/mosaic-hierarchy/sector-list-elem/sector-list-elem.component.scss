@@ -12,16 +12,22 @@
             flex-direction: row;
             gap: 12px;
 
+            .visibility-icon {
+                font-weight: 300;
+                color: mat.m2-get-color-from-palette($grey-palette, 300);
+            }
+
             .sector-action {
                 ::ng-deep {
                     @include icon-button(32px);
                 }
     
                 margin: -6px;
-                color: mat.m2-get-color-from-palette($grey-palette, 200);
             }
     
             .toggle-action {
+                color: mat.m2-get-color-from-palette($grey-palette, 200);
+
                 .chevron {
                     transition: all 0.25s ease;
         

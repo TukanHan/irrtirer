@@ -1,12 +1,12 @@
 <div class="parent-elem">
     <span>{{sector.schema.name}}</span>
     <div class="sector-actions">
-        <button class="sector-action" mat-icon-button>
-            <mat-icon class="material-symbols-outlined">
-                visibility
+        <button class="sector-action" mat-icon-button (click)="toggleTilesVisibility()">
+            <mat-icon class="visibility-icon material-symbols-outlined">
+                {{areTilesVisibleSignal() ? 'visibility' : 'visibility_off'}}
             </mat-icon>
         </button>
-        <button class="sector-action toggle-action" mat-icon-button (click)="toggle()">
+        <button class="sector-action toggle-action" mat-icon-button (click)="toggleTilesList()">
             <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
                 keyboard_arrow_up
             </mat-icon>

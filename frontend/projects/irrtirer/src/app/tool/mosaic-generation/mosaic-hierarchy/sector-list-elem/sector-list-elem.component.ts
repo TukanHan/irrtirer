@@ -21,11 +21,18 @@ export class SectorListElemComponent implements OnInit {
 
     protected items$: Observable<GeneratedTileModel[]>;
 
+    protected areTilesVisibleSignal: WritableSignal<boolean> = signal(true);
+
     public ngOnInit(): void {
         this.items$ = this.sector.tiles$;
     } 
 
-    protected toggle(): void {
+    protected toggleTilesList(): void {
         this.isOpenSignal.update((value) => !value);
+    }
+
+    protected toggleTilesVisibility(): void {
+        this.areTilesVisibleSignal.update(value => !value);
+        this.sector.setTilesVisibility(this.areTilesVisibleSignal());
     }
 }

@@ -28,7 +28,7 @@ export class SectorsContoursListComponent {
 
     selectedSector: SectorSchema;
 
-    constructor(public dialog: MatDialog, private store: Store, private sectorsContoursSevice: SectorsContoursService) {
+    constructor(public dialog: MatDialog, private store: Store, private sectorsContoursService: SectorsContoursService) {
         this.sectors$ = store.select(selectSectors);
     }
 
@@ -39,7 +39,7 @@ export class SectorsContoursListComponent {
             color: Color({ h: RandomHelper.nextFloat(0, 360), s: 75, v: 95 }).hex(),
             vertices: [],
             properties: {
-                sectionMaxArea: 1,
+                sectionMaxArea: 5,
                 sectionMinAngle: 35,
                 maxTileRadius: 4,
                 minTileRadius: 0,
@@ -54,7 +54,7 @@ export class SectorsContoursListComponent {
                 populationParams: {
                     initialPopulationSize: 100,
                     countOfTriesToInsertTile: 30,
-                    countOfRandomingTrianglePosition: 30,
+                    countOfTrianglePositionDraws: 30,
                     countOfColorMatchingAttempts: 40,
                     iterationsCount: 100,
                     populationSize: 10,
@@ -78,34 +78,34 @@ export class SectorsContoursListComponent {
                 if (this.selectedSector === sector) {
                     this.resetSelectedSector();
                 }
-                this.sectorsContoursSevice.emitSectorListChanged({ selectedSector: this.selectedSector });
+                this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector });
             }
         });
     }
 
     emitSectorToEditContour(sector: SectorSchema): void {
-        this.sectorsContoursSevice.emitEditedSectorContour({
+        this.sectorsContoursService.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),
         });
     }
 
     emitSectorToEditProperty(sector: SectorSchema): void {
-        this.sectorsContoursSevice.emitEditedSectorProperty({
+        this.sectorsContoursService.emitEditedSectorProperty({
             sector: sector,
             mesh: null,
-            contout: null,
+            contour: null,
         });
     }
 
     onSectorSelected(sector: SectorSchema): void {
         this.selectedSector = sector;
-        this.sectorsContoursSevice.emitSectorListChanged({ selectedSector: sector });
+        this.sectorsContoursService.emitSectorListChanged({ selectedSector: sector });
     }
 
     dropSectorBox(event: CdkDragDrop<string[]>): void {
         this.store.dispatch(MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex }));
-        this.sectorsContoursSevice.emitSectorListChanged({ selectedSector: this.selectedSector });
+        this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector });
     }
 
     resetSelectedSector(): void {

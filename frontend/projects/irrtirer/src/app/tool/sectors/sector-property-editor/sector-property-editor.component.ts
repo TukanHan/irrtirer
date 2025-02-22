@@ -68,7 +68,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         return this.formBuilder.group({
             initialPopulationSize: [properties.initialPopulationSize, [Validators.required]],
             countOfTriesToInsertTile: [properties.countOfTriesToInsertTile, [Validators.required]],
-            countOfRandomingTrianglePosition: [properties.countOfRandomingTrianglePosition, [Validators.required]],
+            countOfTrianglePositionDraws: [properties.countOfTrianglePositionDraws, [Validators.required]],
             countOfColorMatchingAttempts: [properties.countOfColorMatchingAttempts, [Validators.required]],
             iterationsCount: [properties.iterationsCount, [Validators.required]],
             populationSize: [properties.populationSize, [Validators.required]],
@@ -117,7 +117,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         return {
             initialPopulationSize: this.sectorPropertyForm.get('populationParams.initialPopulationSize').value,
             countOfTriesToInsertTile: this.sectorPropertyForm.get('populationParams.countOfTriesToInsertTile').value,
-            countOfRandomingTrianglePosition: this.sectorPropertyForm.get('populationParams.countOfRandomingTrianglePosition')
+            countOfTrianglePositionDraws: this.sectorPropertyForm.get('populationParams.countOfTrianglePositionDraws')
                 .value,
             countOfColorMatchingAttempts: this.sectorPropertyForm.get('populationParams.countOfColorMatchingAttempts').value,
             iterationsCount: this.sectorPropertyForm.get('populationParams.iterationsCount').value,
@@ -151,7 +151,7 @@ export class SectorPropertyEditorComponent implements OnInit {
                     this.service.emitEditedSectorProperty({
                         sector: this.sector,
                         mesh: mesh.triangles,
-                        contout: mesh.contour
+                        contour: mesh.contour
                     }),
                 error: () => this.showPolygonTriangulationError(),
             });

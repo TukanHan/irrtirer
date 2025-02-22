@@ -17,33 +17,33 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
     {
         private readonly SectionModel section;
         private readonly RandomFactory randomFactory;
-        private readonly BluredImageObject pixelSource;
-        private readonly TileTransform[] neighbourTiles;
+        private readonly BlurredImageObject pixelSource;
+        private readonly TileTransform[] neighborTiles;
         private readonly PopulationParams populationParams;
         private readonly PossibleLayoutEvaluator evaluator;
 
-        public SectionLayoutPreparer(RandomFactory rnd, BluredImageObject pixelSource, SectionModel section, TileTransform[] neighbourTiles)
+        public SectionLayoutPreparer(RandomFactory rnd, BlurredImageObject pixelSource, SectionModel section, TileTransform[] neighborTiles)
         {
             this.randomFactory = rnd;
             this.pixelSource = pixelSource;
             this.section = section;
-            this.neighbourTiles = neighbourTiles;
+            this.neighborTiles = neighborTiles;
             this.populationParams = section.Parent.PopulationParams;
             this.evaluator = new PossibleLayoutEvaluator(section.Parent.EvaluationParams, pixelSource, section);
         }
 
-        public PossibleLayout CreateInitialLayout(Tile[] avalibleTiles)
+        public PossibleLayout CreateInitialLayout(Tile[] availableTiles)
         {
             PossibleLayout layout = new PossibleLayout(section)
             {
                 UsedTilesIndexes = new HashSet<int>(),
-                TilesAvalibleForLayout = avalibleTiles
+                TilesAvailableForLayout = availableTiles
             };
 
             Random random = randomFactory.GetRandomObject();
-            SectionPointFilteredTray pointFilteredTray = new SectionPointFilteredTray(random, avalibleTiles, layout.UsedTilesIndexes);
+            SectionPointFilteredTray pointFilteredTray = new SectionPointFilteredTray(random, availableTiles, layout.UsedTilesIndexes);
 
-            for (int i = 0; i < populationParams.CountOfRandomingTrianglePosition && pointFilteredTray.HasAnyAvailableTiles(); ++i)
+            for (int i = 0; i < populationParams.CountOfTrianglePositionDraws && pointFilteredTray.HasAnyAvailableTiles(); ++i)
             {
                 TryAddTile(layout, pointFilteredTray, random);
             }
@@ -55,7 +55,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         public PossibleLayout ModifyLayout(PossibleLayout layout, int count)
         {
             Random random = randomFactory.GetRandomObject();
-            SectionPointFilteredTray pointFilteredTray = new SectionPointFilteredTray(random, layout.TilesAvalibleForLayout, layout.UsedTilesIndexes);
+            SectionPointFilteredTray pointFilteredTray = new SectionPointFilteredTray(random, layout.TilesAvailableForLayout, layout.UsedTilesIndexes);
 
             for (int i = 0; i < count; ++i)
             {
@@ -96,11 +96,11 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         private bool TryAddTile(PossibleLayout layout, SectionPointFilteredTray pointFilteredTray, Random random)
         {
             Vector2 randomPoint = random.RandomPointInTriangle(section.Triangle.Vertices);
-            if (!TestIfPointIsInsideTile(neighbourTiles.Union(layout.TilesLayout), randomPoint))
+            if (!TestIfPointIsInsideTile(neighborTiles.Union(layout.TilesLayout), randomPoint))
             {
                 pointFilteredTray.SetFilterForPoint(new SectionPointTrayFilter()
                 {
-                    MaxInnerRadius = GetMinDistanceToNeighbourTiles(neighbourTiles.Union(layout.TilesLayout), randomPoint) ?? float.MaxValue,
+                    MaxInnerRadius = GetMinDistanceToNeighborTiles(neighborTiles.Union(layout.TilesLayout), randomPoint) ?? float.MaxValue,
                     PreferredColor = pixelSource.GetPictureColorAtPosition(randomPoint) ?? Color.Transparent,
                     CountOfColorMatchingAttempts = populationParams.CountOfColorMatchingAttempts
                 });
@@ -129,11 +129,11 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
                 {
                     newPosition = tile.Position + random.NextPointInsideCircle() * section.Parent.TileMinRadius / 100;
                 }
-                while (!PresenceInPoligonHelper.IsPointInsideTriangle(newPosition, section.Triangle.Vertices));
+                while (!PresenceInPolygonHelper.IsPointInsideTriangle(newPosition, section.Triangle.Vertices));
 
                 TileTransform rotatedTile = tile.Transform(newPosition, newAngle);
 
-                if (TestIfTileMaintaininMarginDistance(rotatedTile, neighbourTiles.Union(layout.TilesLayout).Except(new[] { tile }), section.Parent.TileMargin))
+                if (TestIfTileMaintainsMarginDistance(rotatedTile, neighborTiles.Union(layout.TilesLayout).Except(new[] { tile }), section.Parent.TileMargin))
                 {
                     RemoveTile(layout, pointFilteredTray, tile);
                     AddTile(layout, pointFilteredTray, rotatedTile);
@@ -152,7 +152,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
             {
                 TileTransform rotatedTile = tile.Transform(tile.Position, random.Next(0, 360));
 
-                if (TestIfTileMaintaininMarginDistance(rotatedTile, neighbourTiles.Union(layout.TilesLayout).Except(new[] { tile }), section.Parent.TileMargin))
+                if (TestIfTileMaintainsMarginDistance(rotatedTile, neighborTiles.Union(layout.TilesLayout).Except(new[] { tile }), section.Parent.TileMargin))
                 {
                     RemoveTile(layout, pointFilteredTray, tile);
                     AddTile(layout, pointFilteredTray, rotatedTile);
@@ -170,7 +170,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
 
             pointFilteredTray.SetFilterForPoint(new SectionPointTrayFilter()
             {
-                MaxInnerRadius = GetMinDistanceToNeighbourTiles(neighbourTiles.Union(tilesInLayoutWithoutReplaced), tile.Position) ?? float.MaxValue,
+                MaxInnerRadius = GetMinDistanceToNeighborTiles(neighborTiles.Union(tilesInLayoutWithoutReplaced), tile.Position) ?? float.MaxValue,
                 PreferredColor = pixelSource.GetPictureColorAtPosition(tile.Position) ?? Color.Transparent,
                 CountOfColorMatchingAttempts = populationParams.CountOfColorMatchingAttempts
             });
@@ -190,14 +190,14 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         {
             for (int i = 0; i < populationParams.CountOfTriesToInsertTile; ++i)
             {
-                Tile randomedTile = pointFilteredTray.RandomTile();
-                if (randomedTile == null)
+                Tile drawnTile = pointFilteredTray.RandomTile();
+                if (drawnTile == null)
                 {
                     break;
                 }
 
-                TileTransform tileTransform = new TileTransform(randomedTile, randomPoint, randomFactory.Next(0, 360));
-                if (TestIfTileMaintaininMarginDistance(tileTransform, neighbourTiles.Union(tilesInLayout), section.Parent.TileMargin))
+                TileTransform tileTransform = new TileTransform(drawnTile, randomPoint, randomFactory.Next(0, 360));
+                if (TestIfTileMaintainsMarginDistance(tileTransform, neighborTiles.Union(tilesInLayout), section.Parent.TileMargin))
                 {
                     return tileTransform;
                 }
@@ -206,7 +206,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
             return null;
         }
 
-        private bool TestIfTileMaintaininMarginDistance(GeometryObject pretenderTile, IEnumerable<GeometryObject> tilesToTest, float margin)
+        private bool TestIfTileMaintainsMarginDistance(GeometryObject pretenderTile, IEnumerable<GeometryObject> tilesToTest, float margin)
         {
             foreach (GeometryObject tile in tilesToTest)
             {
@@ -221,14 +221,14 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
         {
             foreach (GeometryObject tile in tilesToTest)
             {
-                if (PresenceInPoligonHelper.IsPointInsidePolygon(tile.GetWorldVertices(), point))
+                if (PresenceInPolygonHelper.IsPointInsidePolygon(tile.GetWorldVertices(), point))
                     return true;
             }
 
             return false;
         }
 
-        private float? GetMinDistanceToNeighbourTiles(IEnumerable<GeometryObject> tilesToTest, Vector2 point)
+        private float? GetMinDistanceToNeighborTiles(IEnumerable<GeometryObject> tilesToTest, Vector2 point)
         {
             float? minDistance = null;
             foreach (GeometryObject tile in tilesToTest)
@@ -250,7 +250,7 @@ namespace Irrtirer.Generator.Orderer.SectionLayout
 
         private void RemoveTile(PossibleLayout layout, SectionPointFilteredTray pointFilteredTray, TileTransform tileTransform)
         {
-            pointFilteredTray?.ReleseTile(tileTransform.Tile);
+            pointFilteredTray?.ReleaseTile(tileTransform.Tile);
             layout.LayoutTilesRates.Remove(tileTransform);
         }
     }

@@ -18,7 +18,7 @@ namespace Irrtirer.Generator.Orderer
         private readonly EventBus eventBus;
         private readonly RandomFactory randomFactory;
         private readonly SectorTileTray sectorFilteredTileSource;
-        private readonly BluredImageObject pixelSourceForSector;
+        private readonly BlurredImageObject pixelSourceForSector;
         private readonly ParallelOptions parallelOptions;
         private readonly ILogger logger;
 
@@ -48,8 +48,8 @@ namespace Irrtirer.Generator.Orderer
         {
             SectionPopulator sectionPopulator = new SectionPopulator(logger, randomFactory, pixelSourceForSector, parallelOptions, section);
 
-            Tile[] avalibleTiles = sectorFilteredTileSource.GetAvalibleTilesForSector();
-            PossibleLayout bestLayout = sectionPopulator.SearchForBestSectionLayout(avalibleTiles);
+            Tile[] availableTiles = sectorFilteredTileSource.GetAvailableTilesForSector();
+            PossibleLayout bestLayout = sectionPopulator.SearchForBestSectionLayout(availableTiles);
 
             MarkBestSectionLayout(bestLayout);
 
@@ -65,7 +65,7 @@ namespace Irrtirer.Generator.Orderer
 
             foreach (var singleTileRate in layout.LayoutTilesRates)
             {
-                foreach (var sectionOccupance in singleTileRate.Value.SectionsOcupance)
+                foreach (var sectionOccupance in singleTileRate.Value.SectionsOccupancy)
                 {
                     SectionModel section = sectionOccupance.Key;
                     section.Intersections.AddIntersection(new IntersectionRecord()
@@ -77,10 +77,10 @@ namespace Irrtirer.Generator.Orderer
             }
         }
 
-        private BluredImageObject GetPixelSourceForSector(SectorModel sector, IImageSource imageObject)
+        private BlurredImageObject GetPixelSourceForSector(SectorModel sector, IImageSource imageObject)
         {
             float worldRadial = MathF.Max(sector.TileMaxRadius / 2, sector.TileMinRadius) / 2;
-            return imageObject.GetBluredImage(worldRadial, sector.Contour);
+            return imageObject.GetBlurredImage(worldRadial, sector.Contour);
         }
     }
 }

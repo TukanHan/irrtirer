@@ -41,14 +41,16 @@ namespace Irrtirer.Generator.Tiles
         public void SetFilterForPoint(SectionPointTrayFilter filter)
         {
             this.filter = filter;
-            indexOfMaxMatchingInnerRadius = SearchIndexOfMaxMathingInnerRadius(0, tilesForSection.Length - 1, filter.MaxInnerRadius);
+            indexOfMaxMatchingInnerRadius = SearchIndexOfMaxMatchingInnerRadius(0, tilesForSection.Length - 1, filter.MaxInnerRadius);
             countOfMatchingInnerRadiusTiles = indexOfMaxMatchingInnerRadius + 1;
         }
 
         public Tile RandomTile()
         {
             if (indexOfMaxMatchingInnerRadius == -1)
+            {
                 return null;
+            }
 
             Tile mostSuitableColorTile = null;
             float mostSuitableTileColorDifference = float.PositiveInfinity;
@@ -66,7 +68,7 @@ namespace Irrtirer.Generator.Tiles
                 if (!usedTilesIndexes.Contains(index))
                 {
                     Tile tile = tilesForSection[index];
-                    float colorDifference = ColorHelper.ComarsionWithWeight(this.filter.PreferredColor, tile.Color);
+                    float colorDifference = ColorHelper.ComparisonWithWeight(this.filter.PreferredColor, tile.Color);
 
                     if (colorDifference < mostSuitableTileColorDifference)
                     {
@@ -90,7 +92,7 @@ namespace Irrtirer.Generator.Tiles
             usedTilesIndexes.Add(index);
         }
 
-        public void ReleseTile(Tile releasedTile)
+        public void ReleaseTile(Tile releasedTile)
         {
             int index = Array.BinarySearch(tilesForSection, releasedTile, TileInnerRadiusComparer.Instance);
             usedTilesIndexes.Remove(index);
@@ -101,17 +103,21 @@ namespace Irrtirer.Generator.Tiles
             return usedTilesIndexes.Count < tilesForSection.Length;
         }
 
-        private int SearchIndexOfMaxMathingInnerRadius(int startIndex, int endIndex, float searchedMaxValue)
+        private int SearchIndexOfMaxMatchingInnerRadius(int startIndex, int endIndex, float searchedMaxValue)
         {
             if (startIndex == endIndex)
+            {
                 return tilesForSection[startIndex].InnerRadius <= searchedMaxValue ? startIndex : -1;
+            }
 
             int mid_idx = startIndex + (endIndex - startIndex) / 2;
 
             if (searchedMaxValue < tilesForSection[mid_idx].InnerRadius)
-                return SearchIndexOfMaxMathingInnerRadius(startIndex, mid_idx, searchedMaxValue);
-
-            int ret = SearchIndexOfMaxMathingInnerRadius(mid_idx + 1, endIndex, searchedMaxValue);
+            {
+                return SearchIndexOfMaxMatchingInnerRadius(startIndex, mid_idx, searchedMaxValue);
+            }
+                
+            int ret = SearchIndexOfMaxMatchingInnerRadius(mid_idx + 1, endIndex, searchedMaxValue);
             return ret == -1 ? mid_idx : ret;
         }
     }
