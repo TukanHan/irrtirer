@@ -1,0 +1,102 @@
+{
+    "title": "Irrtirer",
+    "common": {
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "no": "No",
+      "yes": "Yes"
+    },
+    "toolbar": {
+      "languages": {
+        "polish": "Polish",
+        "english": "English"
+      },
+      "github": "GitHub"
+    },
+    "aboutProject": {
+      "header": "About project",
+      "content": "Coming soon"
+    },
+    "aboutAuthor": {
+      "header": "About author",
+      "itWas": "It was",
+      "me": "Me"
+    },
+    "tool": {
+      "nav": {
+            "projectSettings": "Project settings",
+            "tileTrey": "Tile tray",
+            "sectors": "Sector selection",
+            "generation": "Mosaic ordering"
+        },
+      "sectors": {
+        "contourList": {
+          "addSector": "Add sector",
+          "noSectors": "Add sectors",
+          "removeSector": "Remove sector",
+          "editProperties": "Edit properties",
+          "editContour": "Edit contour"
+        },
+        "sectorProperty": {
+          "sectorsSize": "Section size",
+          "maxArea": "Max section area",
+          "maxAreaHint": "Maximum square surface of individual triangles that are sectors building sections.",
+          "minAngle": "Min section angle",
+          "minAngleHint": "The minimum required angle expressed in degrees to create a section triangle.",
+          "tilesLimitations": "Tile restrictions",
+          "minRadius": "Min tile radius",
+          "minRadiusHint": "The minimum ray of the tile required to be included in the sector.",
+          "maxRadius": "Max tile radius",
+          "maxRadiusHint": "The maximum ray of the tile required to be included in the sector.",
+          "minMargin": "Min tiles margin",
+          "minMarginHint": "The minimum distance between two generated tiles required.",
+          "populationParams": "Population parameters",
+          "initialPopulationSize": "Initial population size",
+          "initialPopulationSizeHint": "The initial size of the population",
+          "populationSize": "Population size",
+          "populationSizeHint": "Number of individuals for selection, during the usual algorithm. ",
+          "iterationsCount": "Iterations count",
+          "iterationsCountHint": "The number of iterations of the algorithm. ",
+          "countOfTrianglePositionDraws": "Count of triangle position draws",
+          "countOfTrianglePositionDrawsHint": "Number of attempts to place an additional tile in the section. ",
+          "countOfTriesToInsertTile": "Count of tries to insert tile",
+          "countOfTriesToInsertTileHint": "Number of attempts to change the tile with one operation.",
+          "countOfColorMatchingAttempts": "Count of color matching attempts",
+          "countOfColorMatchingAttemptsHint": "The number of tile color samples taken when choosing the best -matching tile to a specific place.",
+          "evaluationParams": "Evaluation parameters",
+          "singleSectionPopulation": "Incentive for section populating",
+          "singleSectionPopulationHint": "Assessment for filling the space of the section with tiles. ",
+          "overlappingAreaOutsideSector": "Penalty for overlapping area outside sector",
+          "overlappingAreaOutsideSectorHint": "Assessment for protruding tiles outside the sector. ",
+          "additionalPopulationOfNeighboringSectors": "Incentive for additional populating neighboring sectors",
+          "additionalPopulationOfNeighboringSectorsHint": "Assessment for completing the unused (wasted) space space that was already generated. ",
+          "overlappingNotPopulatedSections": "Penalty for overlapping not populated sections",
+          "overlappingNotPopulatedSectionsHint": "Assessment for usurping the space of still unferamed sectors. ",
+          "tileColorMismatch": "Penalty for color mismatch",
+          "tileColorMismatchHint": "Assessment for the discrepancy between the color of the tile and the picture. ",
+          "errorOnSectorMeshRequesting": "There was a problem with downloading the triangulation network"
+        },
+        "sectorContour": {
+          "sectorName": "Sector name",
+          "addSectorVertices": "Add sector vertices",
+          "sectorColor": "Sector color",
+          "nameRequired": "Sector must have a name.",
+          "nameAlreadyInUse": "Sector with this name exists, choose another.",
+          "tooFewVertices": "Sector must have at least 3 vertices.",
+          "linesCannotIntersecting": "Sector lines cannot intersect"
+        }
+      },
+      "generation": {
+        "sectorList": {
+          "noTiles": "There are no tiles"
+        },
+        "message": {
+          "sectorsMeshGeneration": "Generating sector mesh",
+          "errorOnSectorsMeshGeneration": "There was an error on generating sector mesh.",
+          "errorOnServerConnection": "There was an error on connecting to server.",
+          "errorOnStartingMosaicGeneration": "There was an error on starting generating mosaic.",
+          "generationCompleted": "Mosaic generation has been completed"
+        }
+      }
+    }
+  }

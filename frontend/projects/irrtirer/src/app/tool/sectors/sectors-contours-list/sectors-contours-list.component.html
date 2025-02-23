@@ -1,4 +1,6 @@
-<button mat-flat-button color="accent" class="add-sector" (click)="addNewSector()" i18n>Dodaj sektor</button>
+<button mat-flat-button color="accent" class="add-sector" (click)="addNewSector()">
+  {{ 'tool.sectors.contourList.addSector' | translate }}
+</button>
 
 <ng-container *ngIf="sectors$ | async as sectors; else noVertices">
   <div *ngIf="sectors.length > 0; else noVertices" cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
@@ -12,15 +14,15 @@
       <mat-menu #menu="matMenu" classList="paddingless">
         <button mat-menu-item (click)="emitSectorToEditContour(sector)">
           <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
-          <span i18n>Edytuj kontur</span>
+          {{ 'tool.sectors.contourList.editContour' | translate }}
         </button>
         <button mat-menu-item (click)="emitSectorToEditProperty(sector)">
           <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
-          <span i18n>Edytuj właściwości</span>
+          {{ 'tool.sectors.contourList.editProperties' | translate }}
         </button>
         <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
           <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
-          <span i18n>Usuń</span>
+          {{ 'tool.sectors.contourList.removeSector' | translate }}
         </button>
       </mat-menu>
     </div>
@@ -29,5 +31,5 @@
 </ng-container>
 
 <ng-template #noVertices>
-  <div class="no-sectors" i18n>Dodaj sektory</div>
+  <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
 </ng-template>

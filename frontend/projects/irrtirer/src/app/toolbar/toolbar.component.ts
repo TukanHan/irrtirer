@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, OnInit, signal, WritableSignal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -6,8 +6,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
-import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-toolbar',
@@ -21,15 +22,24 @@ import { CommonModule } from '@angular/common';
         MatMenuModule,
         MatRadioModule,
         CommonModule,
+        TranslateModule,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ToolbarComponent {
-  selectedLanguage$ = new BehaviorSubject('pl');
+export class ToolbarComponent implements OnInit {
+    protected selectedLanguageSignal: WritableSignal<string> = signal(this.translate.currentLang);
 
-  public languageChanged(selected: MatRadioChange): void {
-    this.selectedLanguage$.next(selected.value);
-  }
+    constructor(private translate: TranslateService, private destroyRef: DestroyRef) {}
+
+    public ngOnInit(): void {
+        this.translate.onLangChange
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((languageChange) => this.selectedLanguageSignal.set(languageChange.lang));
+    }
+
+    public languageChanged(selected: MatRadioChange): void {
+        this.translate.use(selected.value);
+    }
 }

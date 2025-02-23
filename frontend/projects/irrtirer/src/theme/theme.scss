@@ -2,13 +2,13 @@
 @use '@angular/material' as mat;
 @use './components/toolbar-theme' as toolbar;
 @use './components/button-theme' as button;
-@use './components/overlay-theme' as overlay;
 @use './components/tabs-theme' as tabs;
 @use './components/input-theme' as input;
 @use './components/menu-theme' as menu;
 @use './components/tooltip-theme' as tooltip;
 @use './components/icon-theme' as icon;
 @use './primary-palette.scss' as *;
+@use './variables.scss' as variables;
 
 @include mat.elevation-classes();
 @include mat.app-background();
@@ -39,9 +39,9 @@ $irrtirer-theme: map.set($irrtirer-theme, "color", $color);
 @include mat.all-component-themes($irrtirer-theme);
 @include toolbar.theme($irrtirer-theme);
 @include button.theme($irrtirer-theme);
-@include overlay.theme($irrtirer-theme);
 @include tabs.theme($irrtirer-theme);
 @include input.theme($irrtirer-theme);
 @include menu.theme($irrtirer-theme);
 @include tooltip.theme($irrtirer-theme);
 @include icon.theme($irrtirer-theme);
+@include variables.theme($irrtirer-theme);

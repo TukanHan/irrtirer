@@ -1,0 +1,102 @@
+{
+    "title": "Irrtirer",
+    "common": {
+        "cancel": "Anuluj",
+        "confirm": "Potwierdź",
+        "no": "Nie",
+        "yes": "Tak"
+    },
+    "toolbar": {
+        "languages": {
+            "polish": "Polski",
+            "english": "Angielski"
+        },
+        "github": "GitHub"
+    },
+    "aboutProject": {
+        "header": "O projekcie",
+        "content": "Wkrótce"
+    },
+    "aboutAuthor": {
+        "header": "O autorze",
+        "itWas": "To byłem",
+        "me": "Ja"
+    },
+    "tool": {
+        "nav": {
+            "projectSettings": "Ustawienia projektu",
+            "tileTrey": "Zasobnik kafelków",
+            "sectors": "Wyznaczenie sektorów",
+            "generation": "Układanie mozaiki"
+        },
+        "sectors": {
+            "contourList": {
+                "addSector": "Dodaj sektor",
+                "noSectors": "Dodaj sektory",
+                "removeSector": "Usuń sektor",
+                "editProperties": "Edytuj właściwości",
+                "editContour": "Edytuj kontur"
+            },
+            "sectorProperty" : {
+                "sectorsSize": "Rozmiary sekcji",
+                "maxArea": "Maks. powierzchnia",
+                "maxAreaHint": "Maksymalna powierzchnia kwadratowa poszczególnych trójkątów będących sekcjami budującymi sektory.",
+                "minAngle": "Min. kąt sekcji",
+                "minAngleHint": "Minimalny wymagany kąt wyrażony w stopniach do utworzenia trójkąta sekcji.",
+                "tilesLimitations": "Ograniczenia kafelków",
+                "minRadius": "Min. promień",
+                "minRadiusHint": "Wymagany minimalny promień kafelka, do uwzględnienia przy wyborze do tego sektora.",
+                "maxRadius": "Maks. promień",
+                "maxRadiusHint": "Wymagany maksymalny promień kafelka, do uwzględnienia przy wyborze do tego sektora.",
+                "minMargin": "Minimalny odstęp",
+                "minMarginHint": "Wymagany minimalny odstęp między dwoma wygenerowanymi kafelkami.",
+                "populationParams": "Parametry algorytmu",
+                "initialPopulationSize": "Początkowa wielkość populacji",
+                "initialPopulationSizeHint": "Początkowa wielkość populacji",
+                "populationSize": "Wielkość populacji",
+                "populationSizeHint": "Liczba osobników do selekcji, podczas zwykłego przebiegu algorytmu. Wyższa wartość daje lepsze efekty, ale znacznie spowalnia algorytm.",
+                "iterationsCount": "Iteracje algorytmu",
+                "iterationsCountHint": "Liczba iteracji działania algorytmu. Czym większa liczba tym lepsze wyniki, ale na pewnym poziomie bez wpływu.",
+                "countOfTrianglePositionDraws": "Próby dodania kafelka do sekcji",
+                "countOfTrianglePositionDrawsHint": "Liczba prób umieszczenia dodatkowego kafelka w sekcji. Przy większych sekcjach zalecane wyższe wartości.",
+                "countOfTriesToInsertTile": "Próby modyfikacji kafelka",
+                "countOfTriesToInsertTileHint": "Liczba prób zmiany kafelka przy jednej operacji.",
+                "countOfColorMatchingAttempts": "Próby wybrania naj. koloru",
+                "countOfColorMatchingAttemptsHint": "Liczba pobranych próbek kolorów kafelków przy wyborze najlepiej pasującego kolorystycznie kafelka do określonego miejsca.",
+                "evaluationParams": "Parametry ewaluacji",
+                "singleSectionPopulation": "Nagroda zapełnienia sekcji",
+                "singleSectionPopulationHint": "Ocena za zapełnienie przestrzeni sekcji kafelkami. Służy do priorytyzowania gęstszych sekcji. [Sugerowana dodatnia]",
+                "overlappingAreaOutsideSector": "Kara wystawania za sektor",
+                "overlappingAreaOutsideSectorHint": "Ocena za wystawanie kafelków poza sektor. Służy do wymuszenia trzymania się granic sektora. [Sugerowana ujemna]",
+                "additionalPopulationOfNeighboringSectors": "Nagroda korzystnego wypełnienia",
+                "additionalPopulationOfNeighboringSectorsHint": "Ocena za wypełnienie niewykorzystanej (zmarnowanej) przestrzeni sekcji, które były już wygenerowane. Służy do zagęszczenia przestrzeni sektora. [Sugerowana dodatnia]",
+                "overlappingNotPopulatedSections": "Kara negatywnego wypełnienia",
+                "overlappingNotPopulatedSectionsHint": "Ocena za uzurpowanie przestrzeni jeszcze niewygenerowanych sektorów. Służy do ograniczenia złego gospodarowania przestrzenią. [Sugerowana ujemna]",
+                "tileColorMismatch": "Kara za niepasujący kolor",
+                "tileColorMismatchHint": "Ocena za rozbieżność między kolorem kafelka, a obrazkiem. Służy do utrzymania prawidłowego koloru mozaiki. [Sugerowana ujemna]",
+                "errorOnSectorMeshRequesting": "Wystąpił problem z pobraniem siatki triangulacji"
+            },
+            "sectorContour": {
+                "sectorName": "Nazwa sektora",
+                "addSectorVertices": "Dodaj wierzchołki sektora",
+                "sectorColor": "Kolor sektora",
+                "nameRequired": "Sektor musi mieć nazwę.",
+                "nameAlreadyInUse": "Sektor o tej nazwie istnieje, wybierz inną.",
+                "tooFewVertices": "Sektor musi mieć co najmniej 3 wierzchołki.",
+                "linesCannotIntersecting": "Linie sektora nie mogą się przecinać"
+            }
+        },
+        "generation": {
+            "sectorList": {
+                "noTiles": "Nie ma kafelków"
+            },
+            "message": {
+                "sectorsMeshGeneration": "Generowanie siatki sektorów",
+                "errorOnSectorsMeshGeneration": "Wystąpił błąd na etapie generowania siatki sektorów.",
+                "errorOnServerConnection": "Wystąpił błąd na etapie połączenia z serwerem.",
+                "errorOnStartingMosaicGeneration": "Wystąpił błąd na etapie rozpoczęcia generowania.",
+                "generationCompleted": "Ukończono generowanie mozaiki"
+            }
+        }
+    }
+}

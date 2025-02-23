@@ -4,6 +4,7 @@ import { SectorContourEditionComponent } from './sector-contour-edition.componen
 import { provideMockStore } from '@ngrx/store/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { faceSector } from '../../../../test-data/sector.data';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('SectorContourEditionComponent', () => {
     let component: SectorContourEditionComponent;
@@ -15,7 +16,11 @@ describe('SectorContourEditionComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorContourEditionComponent, BrowserAnimationsModule],
+            imports: [
+                SectorContourEditionComponent,
+                BrowserAnimationsModule,
+                TranslateModule.forRoot({})
+            ],
             providers: [provideMockStore({ initialState })],
         }).compileComponents();
 

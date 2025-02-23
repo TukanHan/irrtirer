@@ -18,6 +18,7 @@ import { ExtendedPanelComponent } from './extended-panel/extended-panel.componen
 import { DataService } from '../../../core/services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -29,6 +30,7 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api/api.mo
         MatTooltipModule,
         ReactiveFormsModule,
         ExtendedPanelComponent,
+        TranslateModule
     ],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss'
@@ -44,10 +46,11 @@ export class SectorPropertyEditorComponent implements OnInit {
         private formBuilder: FormBuilder,
         private dataService: DataService,
         private snackBar: MatSnackBar,
-        private service: SectorsContoursService
+        private service: SectorsContoursService,
+        protected translate: TranslateService
     ) {}
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.sectorPropertyForm = this.generateForm(this.sector.properties);
         this.getTriangulationMesh();
     }
@@ -158,6 +161,6 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     private showPolygonTriangulationError(): void {
-        this.snackBar.open($localize`Wystąpił problem z pobraniem siatki triangulacji`, 'Ok', { duration: 2000 });
+        this.snackBar.open(this.translate.instant('tool.sectors.sectorProperty.errorOnSectorMeshRequesting'), 'Ok', { duration: 2000 });
     }
 }

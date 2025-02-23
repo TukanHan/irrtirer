@@ -25,6 +25,7 @@ import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-mosaic-generation',
@@ -63,6 +64,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         private service: MosaicGenerationService,
         private signalRService: MosaicSignalRService,
         private snackbarService: MatSnackBar,
+        private translate: TranslateService,
         private destroyRef: DestroyRef
     ) {}
 
@@ -100,13 +102,13 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
                 this.availableTiles = this.getAvailableTiles();
 
-                this.progressStateSignal.set({ type: 'init', message: $localize`Generowanie siatki sektorów` });
+                this.progressStateSignal.set({ type: 'init', message: this.translate.instant('tool.generation.message.sectorsMeshGeneration') });
 
                 this.signalRService
                     .initMosaicTriangulation(initMosaicGenerationRequest)
-                    .catch(() => this.setError($localize`Wystąpił błąd na etapie generowania siatki sektorów.`));
+                    .catch(() => this.setError(this.translate.instant('tool.generation.message.errorOnSectorsMeshGeneration')));
             })
-            .catch(() => this.setError($localize`Wystąpił błąd na etapie połączenia z serwerem.`));
+            .catch(() => this.setError(this.translate.instant('tool.generation.message.errorOnServerConnection')));
     }
 
     private subscribeOnGenerationProgress(): void {
@@ -152,7 +154,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
 
                 this.signalRService
                     .startLongRunningTask(tiles)
-                    .catch(() => this.showMessage($localize`Wystąpił błąd na etapie rozpoczęcia generowania.`));
+                    .catch(() => this.showMessage(this.translate.instant('tool.generation.message.errorOnStartingMosaicGeneration')));
             });
     }
 
@@ -161,7 +163,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             .pipe(takeUntilDestroyed(this.destroyRef))    
             .subscribe(() => {
                 this.progressStateSignal.set(null);
-                this.showMessage($localize`Ukończono generowanie mozaiki`);
+                this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
             });
     }
 
@@ -177,7 +179,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
             });
     }
 
-    ngOnDestroy(): void {
+    public ngOnDestroy(): void {
         this.signalRService.stopConnection();
     }
 

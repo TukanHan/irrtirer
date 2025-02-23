@@ -8,6 +8,7 @@ import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
 import { map } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-tool',
@@ -38,5 +39,5 @@ export class ToolComponent {
         .select(selectSectors)
         .pipe(map((sectors) => !sectors?.length));
 
-    constructor(private store: Store) {}
+    constructor(private store: Store, protected translate: TranslateService) {}
 }

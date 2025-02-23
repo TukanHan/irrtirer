@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ToolbarComponent } from './toolbar.component';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
@@ -9,7 +10,11 @@ describe('ToolbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ToolbarComponent, RouterModule.forRoot([])]
+      imports: [
+        ToolbarComponent,
+        RouterModule.forRoot([]),
+        TranslateModule.forRoot({})
+      ]
     })
     .compileComponents();
     

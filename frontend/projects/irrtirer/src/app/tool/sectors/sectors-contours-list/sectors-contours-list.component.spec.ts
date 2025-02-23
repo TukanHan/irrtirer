@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SectorsContoursListComponent } from './sectors-contours-list.component';
 import { provideMockStore } from '@ngrx/store/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('SectorsContoursListComponent', () => {
     let component: SectorsContoursListComponent;
@@ -9,7 +10,7 @@ describe('SectorsContoursListComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorsContoursListComponent],
+            imports: [SectorsContoursListComponent, TranslateModule.forRoot({})],
             providers: [provideMockStore()]
         }).compileComponents();
 

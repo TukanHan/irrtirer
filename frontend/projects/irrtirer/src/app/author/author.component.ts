@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-author',
-    imports: [],
+    imports: [TranslateModule],
     templateUrl: './author.component.html',
-    styleUrl: './author.component.scss'
+    styleUrl: './author.component.scss',
 })
-export class AuthorComponent {
-
-}
+export class AuthorComponent {}

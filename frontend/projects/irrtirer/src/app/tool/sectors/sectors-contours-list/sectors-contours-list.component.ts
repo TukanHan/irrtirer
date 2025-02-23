@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
-import { Observable, take } from 'rxjs';
+import { first, Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -15,10 +15,11 @@ import { SectorsContoursService } from '../sectors-contours.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import Color from 'color';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag],
+    imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag, TranslateModule],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -28,7 +29,12 @@ export class SectorsContoursListComponent {
 
     selectedSector: SectorSchema;
 
-    constructor(public dialog: MatDialog, private store: Store, private sectorsContoursService: SectorsContoursService) {
+    constructor(
+        public dialog: MatDialog,
+        private store: Store,
+        private sectorsContoursService: SectorsContoursService,
+        private translate: TranslateService
+    ) {
         this.sectors$ = store.select(selectSectors);
     }
 
@@ -67,7 +73,7 @@ export class SectorsContoursListComponent {
 
     openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
-            title: 'Usuń sektor',
+            title: this.translate.instant('tool.sectors.contourList.removeSector'),
             message: 'Czy na pewno chcesz usunąć sektor?',
         };
 
@@ -110,7 +116,7 @@ export class SectorsContoursListComponent {
 
     resetSelectedSector(): void {
         let sectors: SectorSchema[] = null;
-        this.sectors$.pipe(take(1)).subscribe((x) => {
+        this.sectors$.pipe(first()).subscribe((x) => {
             sectors = x;
         });
         this.selectedSector = sectors.length ? sectors.at(0) : null;

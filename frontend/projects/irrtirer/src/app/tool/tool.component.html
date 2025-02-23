@@ -2,22 +2,26 @@
     <mat-sidenav mode="side" opened>
         <mat-nav-list>
             <a mat-list-item routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                matTooltipPosition="right" matTooltip="Ustawienia projektu">
+                matTooltipPosition="right"
+                [matTooltip]="translate.instant('tool.nav.projectSettings')">
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
             <a mat-list-item routerLink="tray" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                 [disabled]="tilesLinkDisabled$ | async"
-                matTooltipPosition="right" matTooltip="Zasobnik kafelków">
+                matTooltipPosition="right" 
+                [matTooltip]="translate.instant('tool.nav.tileTrey')">
                 <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
             </a>
             <a mat-list-item routerLink="sectors" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                 [disabled]="sectorsLinkDisabled$ | async"
-                matTooltipPosition="right" matTooltip="Wyznaczenie sektorów">
+                matTooltipPosition="right" 
+                [matTooltip]="translate.instant('tool.nav.sectors')">
                 <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
             </a>
             <a mat-list-item routerLink="generating" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                 [disabled]="mosaicGeneratingLinkDisabled$ | async"
-                matTooltipPosition="right" matTooltip="Układanie moizaiki">
+                matTooltipPosition="right"
+                [matTooltip]="translate.instant('tool.nav.generation')">
                 <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
             </a>
         </mat-nav-list>

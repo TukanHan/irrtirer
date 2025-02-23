@@ -17,6 +17,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Line } from '../../../core/models/math/line.model';
 import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-sector-contour-edition',
@@ -30,6 +31,7 @@ import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project
         FormsModule,
         MatIconModule,
         ColorPickerComponent,
+        TranslateModule
     ],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss'
@@ -49,10 +51,11 @@ export class SectorContourEditionComponent implements OnInit {
     constructor(
         private store: Store,
         private snackbarService: MatSnackBar,
-        private sectorsContoursSevice: SectorsContoursService
+        private sectorsContoursService: SectorsContoursService,
+        protected translate: TranslateService
     ) {}
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.usedSectorNames = this.store.selectSignal(selectSectors)()
             .filter(s => s.id !== this.sector.id)
             .map(s => s.name);
@@ -75,34 +78,34 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     cancel(): void {
-        this.sectorsContoursSevice.emitEditedSectorContour(null);
+        this.sectorsContoursService.emitEditedSectorContour(null);
     }
 
     save(): void {
         if (this.isSectorValid()) {
             this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: this.sector }));
-            this.sectorsContoursSevice.emitEditedSectorContour(null);
+            this.sectorsContoursService.emitEditedSectorContour(null);
         }
     }
 
     private isSectorValid(): boolean {
         if (!this.sector.name) {
-            this.showWarning($localize`Sektor musi mieć nazwę.`);
+            this.showWarning(this.translate.instant('tool.sectors.sectorContour.nameRequired'));
             return false;
         }
 
         if(this.usedSectorNames.includes(this.sector.name)) {
-            this.showWarning($localize`Sektor o tej nazwie istnieje, wybierz inną.`);
+            this.showWarning(this.translate.instant('tool.sectors.sectorContour.nameAlreadyInUse'));
             return false;
         }
 
         if (this.sector.vertices.length < 3) {
-            this.showWarning($localize`Sektor musi mieć co najmniej 3 wierzchołki.`);
+            this.showWarning(this.translate.instant('tool.sectors.sectorContour.tooFewVertices'));
             return false;
         }
 
         if (this.areSectorLineIntersecting(this.sector.vertices)) {
-            this.showWarning($localize`Linie sektora nie mogą się przecinać`);
+            this.showWarning(this.translate.instant('tool.sectors.sectorContour.linesCannotIntersecting'));
             return false;
         }
 
@@ -149,8 +152,8 @@ export class SectorContourEditionComponent implements OnInit {
         this.emitContourChanged();
     }
 
-    getVertexLabel(vetex: Vector): string {
-        return `(${vetex.x.toFixed(2)}, ${vetex.y.toFixed(2)})`;
+    getVertexLabel(vertex: Vector): string {
+        return `(${vertex.x.toFixed(2)}, ${vertex.y.toFixed(2)})`;
     }
 
     resetSelectedVertex(): void {
@@ -158,7 +161,7 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private emitContourChanged(): void {
-        this.sectorsContoursSevice.emitEditedSectorContour({
+        this.sectorsContoursService.emitEditedSectorContour({
             sector: this.sector,
             selectedVertex: this.selectedVertex,
         });

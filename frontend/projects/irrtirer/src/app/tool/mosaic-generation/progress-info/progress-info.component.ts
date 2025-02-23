@@ -3,7 +3,6 @@ import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.int
 
 @Component({
     selector: 'app-progress-info',
-    imports: [],
     templateUrl: './progress-info.component.html',
     styleUrl: './progress-info.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

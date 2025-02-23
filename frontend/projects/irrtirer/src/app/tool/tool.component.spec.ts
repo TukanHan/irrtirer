@@ -3,6 +3,7 @@ import { BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import { ToolComponent } from './tool.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('ToolComponent', () => {
     let component: ToolComponent;
@@ -11,7 +12,12 @@ describe('ToolComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ToolComponent, BrowserAnimationsModule, RouterModule.forRoot([])],
+            imports: [
+                ToolComponent,
+                BrowserAnimationsModule,
+                RouterModule.forRoot([]), 
+                TranslateModule.forRoot({})
+            ],
             providers: [provideMockStore({ initialState })],
         }).compileComponents();
 

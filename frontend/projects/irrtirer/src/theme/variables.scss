@@ -1,0 +1,8 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+    html {
+        --irr-accent-color: #{mat.get-theme-color($theme, accent, A200)};
+    }
+}

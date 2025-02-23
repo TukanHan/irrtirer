@@ -5,10 +5,17 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [MatIconModule, MatButtonModule, CommonModule, ExpandablePanelComponent],
+    imports: [
+        MatIconModule,
+        MatButtonModule,
+        CommonModule,
+        ExpandablePanelComponent,
+        TranslateModule
+    ],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -23,16 +30,18 @@ export class SectorListElemComponent implements OnInit {
 
     protected areTilesVisibleSignal: WritableSignal<boolean> = signal(true);
 
+    constructor(protected translate: TranslateService) {}
+
     public ngOnInit(): void {
         this.items$ = this.sector.tiles$;
-    } 
+    }
 
     protected toggleTilesList(): void {
         this.isOpenSignal.update((value) => !value);
     }
 
     protected toggleTilesVisibility(): void {
-        this.areTilesVisibleSignal.update(value => !value);
+        this.areTilesVisibleSignal.update((value) => !value);
         this.sector.setTilesVisibility(this.areTilesVisibleSignal());
     }
 }

@@ -17,6 +17,6 @@
     @for(tile of items$ | async; track $index;) {
         <div class="tile">{{tile.tileTransform.tileId}}</div>
     } @empty {
-        <span class="empty" i18n>Nie ma kafelków</span>
+        <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }
 </app-expandable-panel>

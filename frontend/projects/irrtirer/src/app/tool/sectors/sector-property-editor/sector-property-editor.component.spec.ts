@@ -6,6 +6,7 @@ import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { faceSector } from '../../../../test-data/sector.data';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('SectorPropertyEditorComponent', () => {
     let component: SectorPropertyEditorComponent;
@@ -13,7 +14,11 @@ describe('SectorPropertyEditorComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorPropertyEditorComponent, BrowserAnimationsModule],
+            imports: [
+                SectorPropertyEditorComponent,
+                BrowserAnimationsModule,
+                TranslateModule.forRoot({})
+            ],
             providers: [provideMockStore(), provideHttpClient(), provideHttpClientTesting()],
         }).compileComponents();
 
