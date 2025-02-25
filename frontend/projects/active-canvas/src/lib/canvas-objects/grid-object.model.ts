@@ -10,6 +10,12 @@ interface ViewportZoomGridColors {
     defaultGridColor: string;
 }
 
+interface GridLine {
+    start: IVector;
+    end: IVector;
+    priorityLevel: number;
+}
+
 export class GridObject extends BaseCanvasObject implements CanvasObject {
     public zeroAxisGridColor: string = '#424242';
     public maxDecimalGridColor: string = '#363636';
@@ -20,43 +26,60 @@ export class GridObject extends BaseCanvasObject implements CanvasObject {
         return -1;
     }
 
-    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         const start = viewport.startWorldPos;
         const end = viewport.endWorldPos;
 
         const gridLength: number = Math.pow(10, Math.ceil(Math.log(viewport.zoom) / Math.log(10))) / 10;
         const currentZoomGridColors: ViewportZoomGridColors = this.calculateGridColorsForZoom(gridLength, viewport.zoom);
+        const lines: GridLine[] = [];
 
         for (let i = Math.floor(start.y / gridLength) * gridLength; end.y > i; i += gridLength) {
             const horizontal = viewport.getViewportYPosition(i);
             const startX: IVector = new Vector(0, horizontal);
             const endX: IVector = new Vector(viewport.pxSize.width, horizontal);
-            this.drawLine(ctx, startX, endX, this.calculateGridColor(i, gridLength, currentZoomGridColors));
+            lines.push({ start: startX, end: endX, priorityLevel: this.getLinePriority(i, gridLength) });
         }
 
         for (let i = Math.floor(start.x / gridLength) * gridLength; end.x > i; i += gridLength) {
             const vertical = viewport.getViewportXPosition(i);
             const startY: IVector = new Vector(vertical, 0);
             const endY: IVector = new Vector(vertical, viewport.pxSize.height);
-            this.drawLine(ctx, startY, endY, this.calculateGridColor(i, gridLength, currentZoomGridColors));
+            lines.push({ start: startY, end: endY, priorityLevel: this.getLinePriority(i, gridLength) });
         }
+
+        lines.sort((a,b) => b.priorityLevel - a.priorityLevel).forEach(line => {
+            this.drawLine(ctx, line.start, line.end, this.getLineColorOnPriority(line.priorityLevel, currentZoomGridColors));
+        });
     }
 
-    private calculateGridColor(coordinate: number, gridLength: number, colors: ViewportZoomGridColors): string {
-        if (coordinate === 0) {
-            return this.zeroAxisGridColor;
+    private getLineColorOnPriority(priorityLevel: number, colors: ViewportZoomGridColors): string {
+        switch(priorityLevel) {
+            case 0:
+                return this.zeroAxisGridColor;
+            case 1:
+                return this.maxDecimalGridColor;
+            case 2:
+                return colors.decimalGridColor;
+            case 3:
+            default:
+                return colors.defaultGridColor;
+        }
+    }
+    
+    private getLinePriority(coordinate: number, gridLength: number): number {
+        if(coordinate === 0) {
+            return 0;
         }
 
         const decimalSeparatorTestValue = Math.round(coordinate / gridLength);
-        if (decimalSeparatorTestValue % 10 === 0) {
-            if (decimalSeparatorTestValue % 100 === 0) {
-                return this.maxDecimalGridColor;
-            }
-
-            return colors.decimalGridColor;
+        if (decimalSeparatorTestValue % 100 === 0) {
+            return 1;
+        } else if (decimalSeparatorTestValue % 10 === 0) {
+            return 2;
+        } else {
+            return 3;
         }
-
-        return colors.defaultGridColor;
     }
 
     private drawLine(ctx: CanvasRenderingContext2D, start: IVector, end: IVector, color: string): void {

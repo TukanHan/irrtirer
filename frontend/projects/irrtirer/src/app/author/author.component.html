@@ -1,4 +1,11 @@
 <div class="label">
-    <span class="it-was-label">{{ 'aboutAuthor.itWas' | translate }}</span>
-    <span class="me-label">{{ 'aboutAuthor.me' | translate }}</span>
+    @let words = this.translate.instant('aboutAuthor.itWas') | sentenceToWord;
+    @for(word of words; track $index) {
+        <span class="word normal" [class.normal]="true" [style.animationDelay]="$index * 0.75 + 's'">
+            {{ word }}
+        </span>
+    }
+    <span class="word highlighted" [style.animationDelay]="(words.length * 0.75 + 1)+ 's'">
+        {{ 'aboutAuthor.me' | translate }}
+    </span>
 </div>

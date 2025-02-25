@@ -47,7 +47,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     @ViewChild('activeCanvas')
     activeCanvas: ActiveCanvasComponent;
 
-    protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
+    protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(false);
 
     protected isMeshVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
 
@@ -78,6 +78,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         };
 
         this.imageCanvasObject = new ImageObject(image, Vector.zero, mosaicSize);
+        this.imageCanvasObject.setVisibility(this.isImageVisibleSignal());
         this.activeCanvas.addCanvasObject(this.imageCanvasObject);
 
         this.setInitZoomForImage(mosaicSize);

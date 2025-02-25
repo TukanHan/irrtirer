@@ -10,35 +10,26 @@
 
     .label {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         align-items: baseline;
         font-family: "Monomakh";
         font-weight: 500;
         letter-spacing: 2px;
 
-        .it-was-label {
-            font-size: 24px;
-            color: mat.m2-get-color-from-palette($grey-palette, 300);
+        .word {
             opacity: 0;
             animation: fadeIn 5s forwards;
         }
 
-        .me-label {
-            font-size: 42px;
-            opacity: 0;
-            animation: colorChange 4s forwards;
-            animation-delay: 1s;
+        .normal {
+            font-size: 24px;
+            color: mat.m2-get-color-from-palette($grey-palette, 300);
         }
-    }
-}
 
-@keyframes colorChange {
-    from {
-        color: var(--mat-app-background-color);
-    }
-    to {
-        color: var(--irr-accent-color);
-        opacity: 1;
+        .highlighted {
+            font-size: 42px;
+            color: var(--irr-accent-color);
+        }
     }
 }
 
