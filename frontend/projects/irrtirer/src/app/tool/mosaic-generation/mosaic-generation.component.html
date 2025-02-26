@@ -1,18 +1,7 @@
-<div class="ribbon">
-    <button mat-icon-button class="action"
-        [class.active]="isMeshVisibleSignal()"
-        (click)="toggleMeshVisibility()">
-        <mat-icon class="material-symbols-outlined">graph_3</mat-icon>
-    </button>
-
-    <button mat-icon-button class="action"
-        [class.active]="isImageVisibleSignal()"
-        (click)="toggleImageVisibility()">
-        <mat-icon class="material-symbols-outlined">image</mat-icon>
-    </button>
-
-    <span class="ribbon__zoom">{{(1 / activeCanvas?.viewport?.zoom) | percent }}</span>
-</div>
+<app-ribbon
+    [actions]="ribbonActions"
+    [zoom]="activeCanvas?.viewport?.zoom ?? 1">
+</app-ribbon>
 
 <div class="main">
     <ac-active-canvas #activeCanvas class="main__canvas">

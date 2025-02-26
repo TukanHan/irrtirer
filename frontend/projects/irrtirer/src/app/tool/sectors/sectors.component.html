@@ -1,6 +1,7 @@
-<div class="ribbon">
-  <span class="ribbon__zoom">{{(1 / (activeCanvas?.viewport?.zoom ?? 1)) | percent }}</span>
-</div>
+<app-ribbon
+  [actions]="[]"
+  [zoom]="activeCanvas?.viewport?.zoom ?? 1">
+</app-ribbon>
 
 <div class="section-tool">
   <ac-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></ac-active-canvas>

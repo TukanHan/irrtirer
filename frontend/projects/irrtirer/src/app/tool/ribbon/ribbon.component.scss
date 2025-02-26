@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@use './../../../theme/components/button-theme' as *;
+@use './../../../theme/gray-palette.scss' as *;
+
+:host {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    position: sticky;
+    box-shadow: 0px -1px 10px 2px rgb(17 17 17);
+    padding: 0 20px;
+    gap: 6px;
+
+    .zoom {
+        width: 150px;
+        text-align: right;
+        margin-left: auto;
+    }
+
+    .action {
+        ::ng-deep {
+            @include icon-button(38px, 30px);
+        }
+
+        color: mat.m2-get-color-from-palette($grey-palette, 200);
+
+        &.active {
+            color: mat.m2-get-color-from-palette($grey-palette, 100);
+        }
+    }
+}

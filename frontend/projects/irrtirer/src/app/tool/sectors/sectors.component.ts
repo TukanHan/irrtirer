@@ -21,19 +21,21 @@ import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { OpenedContourObject } from '../../shared/canvas-objects/opened-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
+import { RibbonComponent } from "../ribbon/ribbon.component";
 
 @Component({
     selector: 'app-sectors',
     imports: [
-        ActiveCanvasComponent,
-        MatButtonToggleModule,
-        MatIconModule,
-        FormsModule,
-        CommonModule,
-        SectorsContoursListComponent,
-        SectorContourEditionComponent,
-        SectorPropertyEditorComponent,
-    ],
+    ActiveCanvasComponent,
+    MatButtonToggleModule,
+    MatIconModule,
+    FormsModule,
+    CommonModule,
+    SectorsContoursListComponent,
+    SectorContourEditionComponent,
+    SectorPropertyEditorComponent,
+    RibbonComponent
+],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss'
 })

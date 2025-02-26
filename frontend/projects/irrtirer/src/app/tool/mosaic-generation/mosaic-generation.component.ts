@@ -26,18 +26,21 @@ import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
+import { RibbonAction } from '../ribbon/ribbon-action.interface';
+import { RibbonComponent } from "../ribbon/ribbon.component";
 
 @Component({
     selector: 'app-mosaic-generation',
     imports: [
-        ActiveCanvasComponent,
-        MatProgressSpinnerModule,
-        CommonModule,
-        MatButtonModule,
-        MatIconModule,
-        MosaicHierarchyComponent,
-        ProgressInfoComponent,
-    ],
+    ActiveCanvasComponent,
+    MatProgressSpinnerModule,
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MosaicHierarchyComponent,
+    ProgressInfoComponent,
+    RibbonComponent
+],
     providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
@@ -58,6 +61,19 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     private imageCanvasObject: ImageObject;
 
     private availableTiles: TileModel[];
+
+    protected ribbonActions: RibbonAction[] = [
+        {
+            iconName: 'graph_3',
+            onClick: () => this.toggleMeshVisibility(),
+            isActive: this.isMeshVisibleSignal
+        },
+        {
+            iconName: 'image',
+            onClick: () => this.toggleImageVisibility(),
+            isActive: this.isImageVisibleSignal
+        }
+    ];
 
     constructor(
         private store: Store,

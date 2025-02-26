@@ -1,0 +1,9 @@
+@for(action of actions(); track action.iconName) {
+    <button mat-icon-button class="action"
+        [class.active]="action.isActive()"
+        (click)="action.onClick()">
+        <mat-icon class="material-symbols-outlined">{{action.iconName}}</mat-icon>
+    </button>
+}
+
+<span class="zoom">{{(1 / zoom()) | percent }}</span>
