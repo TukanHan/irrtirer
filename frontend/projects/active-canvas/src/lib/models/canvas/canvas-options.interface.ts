@@ -3,5 +3,6 @@ export interface CanvasOptions {
     showGrid?: boolean;
     minZoom?: number;
     maxZoom?: number;
+    backgroundColor?: string;
+    canvasGridColor?: string;
 }
-

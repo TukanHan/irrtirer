@@ -5,22 +5,14 @@ import { Viewport } from '../models/canvas/viewport.model';
 import { BaseCanvasObject } from './base-canvas-object.model';
 import Color, { ColorInstance } from 'color';
 
-interface ViewportZoomGridColors {
-    decimalGridColor: string;
-    defaultGridColor: string;
-}
-
 interface GridLine {
     start: IVector;
     end: IVector;
-    priorityLevel: number;
+    depthLevel: number;
 }
 
 export class GridObject extends BaseCanvasObject implements CanvasObject {
-    public zeroAxisGridColor: string = '#424242';
-    public maxDecimalGridColor: string = '#363636';
-    public maxDefaultGridColor: string = '#292931';
-    public backgroundColor: string = '#191c1c';
+    public gridBaseColor: string = '#424242';
 
     public getOrder(): number {
         return -1;
@@ -31,44 +23,36 @@ export class GridObject extends BaseCanvasObject implements CanvasObject {
         const end = viewport.endWorldPos;
 
         const gridLength: number = Math.pow(10, Math.ceil(Math.log(viewport.zoom) / Math.log(10))) / 10;
-        const currentZoomGridColors: ViewportZoomGridColors = this.calculateGridColorsForZoom(gridLength, viewport.zoom);
+        const currentZoomGridColors: string[] = this.calculateGridColorsForZoom(gridLength, viewport.zoom);
         const lines: GridLine[] = [];
 
         for (let i = Math.floor(start.y / gridLength) * gridLength; end.y > i; i += gridLength) {
             const horizontal = viewport.getViewportYPosition(i);
             const startX: IVector = new Vector(0, horizontal);
             const endX: IVector = new Vector(viewport.pxSize.width, horizontal);
-            lines.push({ start: startX, end: endX, priorityLevel: this.getLinePriority(i, gridLength) });
+            lines.push({ start: startX, end: endX, depthLevel: GridObject.getLineDepthLevel(i, gridLength) });
         }
 
         for (let i = Math.floor(start.x / gridLength) * gridLength; end.x > i; i += gridLength) {
             const vertical = viewport.getViewportXPosition(i);
             const startY: IVector = new Vector(vertical, 0);
             const endY: IVector = new Vector(vertical, viewport.pxSize.height);
-            lines.push({ start: startY, end: endY, priorityLevel: this.getLinePriority(i, gridLength) });
+            lines.push({ start: startY, end: endY, depthLevel: GridObject.getLineDepthLevel(i, gridLength) });
         }
 
-        lines.sort((a,b) => b.priorityLevel - a.priorityLevel).forEach(line => {
-            this.drawLine(ctx, line.start, line.end, this.getLineColorOnPriority(line.priorityLevel, currentZoomGridColors));
-        });
+        lines
+            .sort((a, b) => b.depthLevel - a.depthLevel)
+            .forEach((line) => {
+                this.drawLine(ctx, line.start, line.end, GridObject.getLineColorForDepth(line.depthLevel, currentZoomGridColors));
+            });
     }
 
-    private getLineColorOnPriority(priorityLevel: number, colors: ViewportZoomGridColors): string {
-        switch(priorityLevel) {
-            case 0:
-                return this.zeroAxisGridColor;
-            case 1:
-                return this.maxDecimalGridColor;
-            case 2:
-                return colors.decimalGridColor;
-            case 3:
-            default:
-                return colors.defaultGridColor;
-        }
+    private static getLineColorForDepth(depthLevel: number, colors: string[]): string {
+        return colors[Math.min(depthLevel, colors.length - 1)];
     }
-    
-    private getLinePriority(coordinate: number, gridLength: number): number {
-        if(coordinate === 0) {
+
+    private static getLineDepthLevel(coordinate: number, gridLength: number): number {
+        if (coordinate === 0) {
             return 0;
         }
 
@@ -90,16 +74,19 @@ export class GridObject extends BaseCanvasObject implements CanvasObject {
         ctx.stroke();
     }
 
-    private calculateGridColorsForZoom(gridLength: number, zoom: number): ViewportZoomGridColors {
-        const maxDecimalGridColor: ColorInstance = Color(this.maxDecimalGridColor);
-        const maxDefaultGridColor: ColorInstance = Color(this.maxDefaultGridColor);
-        const minDefaultGridColor: ColorInstance = Color(this.backgroundColor);
-
+    private calculateGridColorsForZoom(gridLength: number, zoom: number): string[] {
         const interpolationValue = (zoom - gridLength) / (gridLength * 10 - gridLength);
+        const baseColor: ColorInstance = Color(this.gridBaseColor);
 
-        return {
-            decimalGridColor: maxDecimalGridColor.mix(maxDefaultGridColor, interpolationValue).string(),
-            defaultGridColor: maxDefaultGridColor.mix(minDefaultGridColor, interpolationValue).string(),
-        };
+        return [
+            this.gridBaseColor,
+            baseColor.alpha(GridObject.linearInterpolation(0.66, 0.8, 1 - interpolationValue)).string(),
+            baseColor.alpha(GridObject.linearInterpolation(0.33, 0.66, 1 - interpolationValue)).string(),
+            baseColor.alpha(GridObject.linearInterpolation(0, 0.33, 1 - interpolationValue)).string(),
+        ];
+    }
+
+    private static linearInterpolation(min: number, max: number, value: number): number {
+        return min + (max - min) * value;
     }
 }

@@ -39,6 +39,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     @Input()
     public set options(value: CanvasOptions) {
         this._options = Object.assign(DEFAULT_CANVAS_OPTIONS, value);
+        this.configureCanvas();
     }
 
     @ViewChild('canvas')
@@ -64,15 +65,26 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         window.addEventListener('mousemove', this.onMouseMove);
         window.addEventListener('mouseup', this.onMouseUp);
 
-        this.configureGrid();
+        this.configureCanvas();
 
         this.viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
         setTimeout(() => this.resizeFunc(), 1);
     }
 
+    private configureCanvas(): void {
+        this.configureGrid();
+    }
+
     private configureGrid(): void {
+        this.canvasObjects = this.canvasObjects.filter(object => !(object instanceof GridObject));
+
         if(this._options.showGrid) {
-            this.addCanvasObject(new GridObject());
+            const gridObject: GridObject = new GridObject();
+            if(this._options.canvasGridColor) {
+                gridObject.gridBaseColor = this._options.canvasGridColor;
+            }
+           
+            this.addCanvasObject(gridObject);
         }
     }
 
@@ -167,6 +179,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     public redraw(): void {
         this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
+        this.ctx.fillStyle = this._options.backgroundColor;
+        this.ctx.fillRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
             if (object.getVisibility()) {
