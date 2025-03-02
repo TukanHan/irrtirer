@@ -4,14 +4,17 @@
 @use "./../../../../theme/components/button-theme" as *;
 
 :host {
-    padding: 20px 10px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px 10px;
 
     .actions {
         display: flex;
         flex-direction: row;
         gap: 10px;
+        
         button {
             flex: 1 1 0;
         }

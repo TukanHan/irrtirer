@@ -1,14 +1,6 @@
-<app-ribbon
-    [actions]="ribbonActions"
-    [zoom]="activeCanvas?.viewport?.zoom ?? 1">
-</app-ribbon>
+<app-mosaic-hierarchy></app-mosaic-hierarchy>
 
-<div class="main">
-    <ac-active-canvas #activeCanvas class="main__canvas">
-        @if(progressStateSignal()) {
-            <app-progress-info [infoState]="progressStateSignal()"></app-progress-info>  
-        }
-    </ac-active-canvas>
-
-    <app-mosaic-hierarchy class="main__panel"></app-mosaic-hierarchy>
-</div>
+@if(progressStateSignal()) {
+    <app-progress-info class="info" [infoState]="progressStateSignal()">
+    </app-progress-info>  
+}

@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MosaicGenerationComponent } from './mosaic-generation.component';
+import { ConfigurationComponent } from './configuration.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 
-describe('MosaicGenerationComponent', () => {
-    let component: MosaicGenerationComponent;
-    let fixture: ComponentFixture<MosaicGenerationComponent>;
+describe('ConfigurationComponent', () => {
+    let component: ConfigurationComponent;
+    let fixture: ComponentFixture<ConfigurationComponent>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [MosaicGenerationComponent, TranslateModule.forRoot({})],
+            imports: [ConfigurationComponent, TranslateModule.forRoot({})],
             providers: [provideMockStore()],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(MosaicGenerationComponent);
+        fixture = TestBed.createComponent(ConfigurationComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

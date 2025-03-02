@@ -29,12 +29,7 @@ import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
 })
 export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDestroy {
     @Output()
-    public canvasRedrawn: EventEmitter<void> = new EventEmitter();
-
-    @Output()
     public clicked: EventEmitter<IVector> = new EventEmitter<IVector>();
-
-    private _options: CanvasOptions = DEFAULT_CANVAS_OPTIONS;
 
     @Input()
     public set options(value: CanvasOptions) {
@@ -42,14 +37,22 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.configureCanvas();
     }
 
+    public get viewport(): Viewport {
+        return this._viewport;
+    }
+
     @ViewChild('canvas')
     private canvas: ElementRef<HTMLCanvasElement>;
 
-    public viewport: Viewport;
+    private _options: CanvasOptions = DEFAULT_CANVAS_OPTIONS;
+
+    private _viewport: Viewport;
 
     private isDragging = false;
 
     private ctx: CanvasRenderingContext2D;
+
+    private gridObject: GridObject;
 
     private canvasObjects: CanvasObject[] = [];
 
@@ -67,7 +70,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
         this.configureCanvas();
 
-        this.viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
+        this._viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
         setTimeout(() => this.resizeFunc(), 1);
     }
 
@@ -76,15 +79,15 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     private configureGrid(): void {
-        this.canvasObjects = this.canvasObjects.filter(object => !(object instanceof GridObject));
+        this.canvasObjects = this.canvasObjects.filter(object => object !== this.gridObject);
 
         if(this._options.showGrid) {
-            const gridObject: GridObject = new GridObject();
+            this.gridObject = new GridObject();
             if(this._options.canvasGridColor) {
-                gridObject.gridBaseColor = this._options.canvasGridColor;
+                this.gridObject.gridBaseColor = this._options.canvasGridColor;
             }
            
-            this.addCanvasObject(gridObject);
+            this.addCanvasObject(this.gridObject);
         }
     }
 
@@ -97,22 +100,22 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     private onWheelMove = (event: WheelEvent) => {
-        const cursorWorldPos: IVector = this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
-        const zoomDelta: number = this.viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(this.viewport.zoom + zoomDelta, this._options.maxZoom), this._options.minZoom) / this.viewport.zoom;
+        const cursorWorldPos: IVector = this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
+        const zoomDelta: number = this._viewport.zoom * (event.deltaY / 1000);
+        const zoomMultiplier = Math.max(Math.min(this._viewport.zoom + zoomDelta, this._options.maxZoom), this._options.minZoom) / this._viewport.zoom;
 
         const newPosition: Vector = new Vector(
-            cursorWorldPos.x - (cursorWorldPos.x - this.viewport.position.x) * zoomMultiplier,
-            cursorWorldPos.y - (cursorWorldPos.y - this.viewport.position.y) * zoomMultiplier
+            cursorWorldPos.x - (cursorWorldPos.x - this._viewport.position.x) * zoomMultiplier,
+            cursorWorldPos.y - (cursorWorldPos.y - this._viewport.position.y) * zoomMultiplier
         );
 
-        this.viewport = new Viewport(newPosition, this.viewport.zoom * zoomMultiplier, this.viewport.pxSize);
+        this._viewport = new Viewport(newPosition, this._viewport.zoom * zoomMultiplier, this._viewport.pxSize);
         this.redraw();
         event.preventDefault();
     };
 
     private onMouseDown = (event: MouseEvent) => {
-        this.clicked.emit(this.viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
+        this.clicked.emit(this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
         if (this._options?.isMovable === false) {
             return;
         }
@@ -129,11 +132,11 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
         if (this.isDragging) {
             const newPosition: Vector = new Vector(
-                this.viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this.viewport.zoom,
-                this.viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this.viewport.zoom
+                this._viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this._viewport.zoom,
+                this._viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this._viewport.zoom
             );
 
-            this.viewport = new Viewport(newPosition, this.viewport.zoom, this.viewport.pxSize);
+            this._viewport = new Viewport(newPosition, this._viewport.zoom, this._viewport.pxSize);
             this.redraw();
         }
     };
@@ -158,37 +161,55 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvas.nativeElement.width = newCanvasSize.width;
         this.canvas.nativeElement.height = newCanvasSize.height;
 
-        this.viewport = new Viewport(this.viewport.position, this.viewport.zoom, newCanvasSize);
+        this._viewport = new Viewport(this._viewport.position, this._viewport.zoom, newCanvasSize);
         this.redraw();
     };
 
-    public setZoom(zoom: number): void {
-        this.viewport = new Viewport(this.viewport.position, zoom, this.viewport.pxSize);
+    public setViewport(zoom: number = null, position: IVector = null, redraw: boolean = false): void {
+        this._viewport = new Viewport(
+            position ?? this._viewport.position,
+            zoom ?? this._viewport.zoom,
+            this._viewport.pxSize
+        );
+        
+        if(redraw) {
+            this.redraw();
+        }
     }
 
-    public addCanvasObject(addedObject: CanvasObject): void {
+    public addCanvasObject(addedObject: CanvasObject, redraw: boolean = false): void {
         this.canvasObjects.push(addedObject);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
         addedObject.setParent(this);
+
+        if(redraw) {
+            this.redraw();
+        }
     }
 
-    public removeCanvasObject(removedObject: CanvasObject): void {
+    public removeObject(removedObject: CanvasObject): void {
         this.canvasObjects = this.canvasObjects.filter((canvasObj) => canvasObj !== removedObject);
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
     }
 
+    public removeObjects(redraw: boolean = false): void {
+        this.canvasObjects = this.canvasObjects.filter(object => object === this.gridObject);
+        if(redraw) {
+            this.redraw();
+        }
+    }
+
     public redraw(): void {
-        this.ctx.clearRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
+        this.ctx.clearRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
         this.ctx.fillStyle = this._options.backgroundColor;
-        this.ctx.fillRect(0, 0, this.viewport.pxSize.width, this.viewport.pxSize.height);
+        this.ctx.fillRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
             if (object.getVisibility()) {
-                object.drawObject(this.ctx, this.viewport);
+                object.drawObject(this.ctx, this._viewport);
             }
         }
 
         this.cd.markForCheck();
-        this.canvasRedrawn.next();
     }
 }

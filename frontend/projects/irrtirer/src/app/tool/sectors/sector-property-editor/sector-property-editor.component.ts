@@ -161,6 +161,6 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     private showPolygonTriangulationError(): void {
-        this.snackBar.open(this.translate.instant('tool.sectors.sectorProperty.errorOnSectorMeshRequesting'), 'Ok', { duration: 2000 });
+        this.snackBar.open(this.translate.instant('tool.sectors.sectorProperty.errorOnSectorMeshRequesting'), this.translate.instant('common.ok'), { duration: 2000 });
     }
 }

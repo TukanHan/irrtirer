@@ -13,6 +13,8 @@ import { TileSetComponent } from './tile-set/tile-set.component';
 import { DialogData } from '../../shared/dialog/dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../shared/dialog/dialog.component';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 
 @Component({
     selector: 'app-tray',
@@ -21,7 +23,7 @@ import { DialogComponent } from '../../shared/dialog/dialog.component';
     styleUrl: './tray.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TrayComponent {
+export class TrayComponent implements ToolView {
     tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
 
     constructor(private store: Store, private dialog: MatDialog) {}
@@ -38,12 +40,17 @@ export class TrayComponent {
         });
     }
 
-    showRemoveTilesSetWarning(tilesSet: TilesSet): Observable<boolean> {
+    private showRemoveTilesSetWarning(tilesSet: TilesSet): Observable<boolean> {
         const dialogData: DialogData = {
             title: 'Usuń zestaw kafelków',
             message: `Jesteś pewien że chcesz usunąć zestaw kafelków '${tilesSet.name}'?`,
         };
 
         return this.dialog.open(DialogComponent, { data: dialogData }).afterClosed();
+    }
+
+    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+        activeCanvas.redraw();
+        return { ribbon: [] };
     }
 }

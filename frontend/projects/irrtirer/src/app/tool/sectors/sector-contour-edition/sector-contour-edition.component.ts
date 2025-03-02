@@ -135,7 +135,7 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private showWarning(message: string): void {
-        this.snackbarService.open(message, 'Ok', { duration: 3000 });
+        this.snackbarService.open(message, this.translate.instant('common.ok'), { duration: 3000 });
     }
 
     onBoxSelected(vertex: Vector): void {

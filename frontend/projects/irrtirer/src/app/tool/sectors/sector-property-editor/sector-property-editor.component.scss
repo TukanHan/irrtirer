@@ -1,9 +1,11 @@
 @use '@angular/material' as mat;
 
 :host {
-    padding: 20px 10px;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
 
     .actions {
         display: flex;

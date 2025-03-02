@@ -5,6 +5,8 @@
     display: flex;
     flex-direction: column;
     overflow: auto;
+    height: 100%;
+    box-sizing: border-box;
 
     .sectors {
         display: flex;
