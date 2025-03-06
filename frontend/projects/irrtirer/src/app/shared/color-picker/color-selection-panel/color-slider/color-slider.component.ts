@@ -8,11 +8,12 @@ import {
     OnDestroy,
     output,
     OutputEmitterRef,
+    signal,
     ViewChild,
+    WritableSignal,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import { CommonModule } from '@angular/common';
-import { Subject } from 'rxjs';
 import Color from 'color';
 
 export interface CursorDataModel {
@@ -29,14 +30,14 @@ export interface CursorDataModel {
 })
 export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges {
     @ViewChild('canvas')
-    canvas: ElementRef<HTMLCanvasElement>;
+    protected canvas: ElementRef<HTMLCanvasElement>;
 
     @Input()
-    value: number;
+    public value: number;
 
     public valueChange: OutputEmitterRef<number> = output<number>();
 
-    cursorData$: Subject<CursorDataModel> = new Subject();
+    protected cursorDataSignal: WritableSignal<CursorDataModel> = signal(null);
 
     private isDragging: boolean = false;
 
@@ -120,7 +121,7 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
         const horizontalPosition: number = sliderWidth * value - 8;
         const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
 
-        this.cursorData$.next({
+        this.cursorDataSignal.set({
             horizontalOffset: `${horizontalPosition}px`,
             color: hexCodeColor,
         });

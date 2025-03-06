@@ -8,10 +8,11 @@ import {
     OnDestroy,
     output,
     OutputEmitterRef,
+    signal,
     ViewChild,
+    WritableSignal,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
-import { Subject } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import Color, { ColorInstance } from 'color';
 
@@ -30,20 +31,20 @@ export interface CursorDataModel {
 })
 export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy {
     @Input()
-    hValue: number;
+    public hValue: number;
 
     @Input()
-    sValue: number;
+    public sValue: number;
 
     @Input()
-    vValue: number;
+    public vValue: number;
 
     public colorChange: OutputEmitterRef<ColorInstance> = output<ColorInstance>();
 
-    cursorData$: Subject<CursorDataModel> = new Subject();
+    protected cursorDataSignal: WritableSignal<CursorDataModel> = signal(null);
 
     @ViewChild('canvas')
-    canvas: ElementRef<HTMLCanvasElement>;
+    protected canvas: ElementRef<HTMLCanvasElement>;
 
     private ctx: CanvasRenderingContext2D;
 
@@ -88,13 +89,13 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         this.updateColorCanvas();
     }
 
-    ngOnDestroy(): void {
+    public ngOnDestroy(): void {
         this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown);
         window.removeEventListener('mouseup', this.onMouseUp);
         window.removeEventListener('mousemove', this.onMouseMove);
     }
 
-    ngAfterViewInit(): void {
+    public ngAfterViewInit(): void {
         this.ctx = this.canvas.nativeElement.getContext('2d');
         this.updateColorCanvas();
 
@@ -103,7 +104,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         window.addEventListener('mousemove', this.onMouseMove);
     }
 
-    ngOnChanges() {
+    public ngOnChanges() {
         if (this.canvas) {
             this.updateColorCanvas();
         }
@@ -142,7 +143,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         const horizontalPosition: number = canvasSize.width * this.sValue - 8;
         const verticalPosition: number = canvasSize.height * (1 - this.vValue) - 8;
 
-        this.cursorData$.next({
+        this.cursorDataSignal.set({
             horizontalOffset: `${horizontalPosition}px`,
             verticalOffset: `${verticalPosition}px`,
             color: Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }).hex(),

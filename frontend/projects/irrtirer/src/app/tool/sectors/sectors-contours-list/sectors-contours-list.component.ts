@@ -1,11 +1,10 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
-import { first, Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -25,9 +24,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorsContoursListComponent {
-    sectors$: Observable<SectorSchema[]>;
+    protected sectorsSignal: Signal<SectorSchema[]>;
 
-    selectedSector: SectorSchema;
+    protected selectedSector: SectorSchema;
 
     constructor(
         public dialog: MatDialog,
@@ -35,10 +34,10 @@ export class SectorsContoursListComponent {
         private sectorsContoursService: SectorsContoursService,
         private translate: TranslateService
     ) {
-        this.sectors$ = store.select(selectSectors);
+        this.sectorsSignal = store.selectSignal(selectSectors);
     }
 
-    addNewSector(): void {
+    protected addNewSector(): void {
         const sector: SectorSchema = {
             id: crypto.randomUUID(),
             name: '',
@@ -71,7 +70,7 @@ export class SectorsContoursListComponent {
         this.emitSectorToEditContour(sector);
     }
 
-    openRemoveSectorDialog(sector: SectorSchema): void {
+    protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: this.translate.instant('tool.sectors.contourList.removeSector'),
             message: 'Czy na pewno chcesz usunąć sektor?',
@@ -89,14 +88,14 @@ export class SectorsContoursListComponent {
         });
     }
 
-    emitSectorToEditContour(sector: SectorSchema): void {
+    protected emitSectorToEditContour(sector: SectorSchema): void {
         this.sectorsContoursService.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),
         });
     }
 
-    emitSectorToEditProperty(sector: SectorSchema): void {
+    protected emitSectorToEditProperty(sector: SectorSchema): void {
         this.sectorsContoursService.emitEditedSectorProperty({
             sector: sector,
             mesh: null,
@@ -104,21 +103,18 @@ export class SectorsContoursListComponent {
         });
     }
 
-    onSectorSelected(sector: SectorSchema): void {
+    protected onSectorSelected(sector: SectorSchema): void {
         this.selectedSector = sector;
         this.sectorsContoursService.emitSectorListChanged({ selectedSector: sector });
     }
 
-    dropSectorBox(event: CdkDragDrop<string[]>): void {
+    protected dropSectorBox(event: CdkDragDrop<string[]>): void {
         this.store.dispatch(MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex }));
         this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector });
     }
 
-    resetSelectedSector(): void {
-        let sectors: SectorSchema[] = null;
-        this.sectors$.pipe(first()).subscribe((x) => {
-            sectors = x;
-        });
+    private resetSelectedSector(): void {
+        const sectors: SectorSchema[] = this.sectorsSignal();
         this.selectedSector = sectors.length ? sectors.at(0) : null;
     }
 }
