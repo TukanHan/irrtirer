@@ -1,0 +1,11 @@
+@mixin theme($theme) {
+    .cdk-overlay-pane {
+        .mat-mdc-autocomplete-panel {
+            padding: 0;
+
+            .mat-pseudo-checkbox {
+                display: none;
+            }
+        }
+    }
+}

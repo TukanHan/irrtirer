@@ -2,9 +2,12 @@
     "title": "Irrtirer",
     "common": {
         "cancel": "Anuluj",
+        "return": "Wróć",
         "confirm": "Potwierdź",
         "no": "Nie",
-        "yes": "Tak"
+        "yes": "Tak",
+        "ok": "Ok",
+        "cm": "cm"
     },
     "toolbar": {
         "languages": {
@@ -29,6 +32,48 @@
             "sectors": "Wyznaczenie sektorów",
             "generation": "Układanie mozaiki"
         },
+        "config": {
+            "menu": {
+                "projectSettings": "Ustawienia projektu",
+                "saveProject": "Zapisz projekt",
+                "loadProject": "Wczytaj projekt",
+                "newProject": "Nowy projekt",
+                "exampleProjects": "Wybierz przykładowy projekt",
+                "rejectProject": "Odrzuć projekt",
+                "rejectProjectWarning": "Czy na pewno chcesz porzucić projekt? Jeśli nie masz zapisanego pliku, nie będzie można do niego wrócić."
+            },
+            "project": {
+                "changeImage": "Zmień obraz",
+                "chooseImage": "Wybierz obraz",
+                "mosaicWidth": "Szerokość mozaiki",
+                "projectCreated": "Projekt utworzony",
+                "selectImageErrorMessage": "Konieczne jest wybranie obrazka",
+                "mosaicMaxWithErrorMessage": "Szerokość nie może być większa niż {{width}} cm",
+                "mosaicMinWithErrorMessage": "Szerokość nie może być mniejsza niż {{width}} cm"
+            }
+        },
+        "tiles": {
+            "menu": {
+                "removeTilesSet": "Usuń zestaw kafelków",
+                "removeTilesSetQuery": "Czy na pewno chcesz usunąć zestaw kafelków {{name}}?",
+                "noTiles": "Brak kafelków",
+                "loadFromFile": "Wczytaj z pliku",
+                "createTile": "Kreator kafelków",
+                "randomTiles": "Generuj losowe"
+            },
+            "random": {
+                "randomTiles": "Losuj",
+                "seriesName": "Nazwa serii",
+                "maxRadius": "Maksymalny promień",
+                "minRadius": "Minimalny promień",
+                "count": "Ilość",
+                "radiusTooSmall": "Promień zbyt mały",
+                "radiusTooLarge": "Promień zbyt duży",
+                "fieldRequired": "Pole wymagane",
+                "maxRadiusLargerThanMin": "Minimalny promień jest większy niż maksymalny",
+                "tilesSeriesGenerated": "Seria kafelków wygenerowana"
+            }
+        },
         "sectors": {
             "contourList": {
                 "addSector": "Dodaj sektor",
@@ -37,7 +82,7 @@
                 "editProperties": "Edytuj właściwości",
                 "editContour": "Edytuj kontur"
             },
-            "sectorProperty" : {
+            "sectorProperty": {
                 "sectorsSize": "Rozmiary sekcji",
                 "maxArea": "Maks. powierzchnia",
                 "maxAreaHint": "Maksymalna powierzchnia kwadratowa poszczególnych trójkątów będących sekcjami budującymi sektory.",

@@ -2,7 +2,14 @@
     class="panel" 
     width="250" height="150">
 </canvas>
-<div *ngIf="cursorData$ | async as cursorData" 
-    class="cursor" 
-    [ngStyle]="{'left': cursorData.horizontalOffset, 'top': cursorData.verticalOffset, 'background-color': cursorData.color}">
-</div>
+
+@let cursorData = cursorDataSignal();
+@if(cursorData) {
+    <div class="cursor" 
+        [ngStyle]="{
+            'left': cursorData.horizontalOffset,
+            'top': cursorData.verticalOffset,
+            'background-color': cursorData.color
+        }">
+    </div>
+}

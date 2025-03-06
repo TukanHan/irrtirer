@@ -1,21 +1,3 @@
 :host {
-    width: 100%;
-    height: 100%;
-
-    .section-tool {
-        display: flex;
-        flex-direction: row;
-        height: calc(100% - 40px);
-
-        &__canvas {
-            display: flex;
-            width: calc(100% - 250px);
-        }
-
-        &__panel {
-            width: 250px;
-            box-sizing: border-box;
-            border-left: 1px solid #363636;
-        }
-    }
+    display: contents;
 }

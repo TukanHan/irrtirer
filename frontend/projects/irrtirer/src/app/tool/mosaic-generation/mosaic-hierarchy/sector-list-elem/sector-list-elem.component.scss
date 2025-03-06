@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
+@use "./../../../../../styles/utils/mixins.scss" as *;
 @use './../../../../../theme/gray-palette.scss' as *;
 @use './../../../../../theme/components/button-theme' as *;
 
@@ -45,19 +46,22 @@
         flex-direction: column;
         gap: 6px;
 
-        :first-child {
-            margin-top: 6px;
-        }
-
         .tile {
             @include list-item-box();
-            white-space: nowrap;
-            font-size: 10px;
+
+            .label {
+                @include text-ellipsis();
+                font-size: 12px;
+            }
         }
 
         .empty {
             align-self: center;
             color: mat.m2-get-color-from-palette($grey-palette, 300);
         }
+    }
+
+    .panel > *:first-child {
+        margin-top: 6px;
     }
 }

@@ -1,23 +1,13 @@
-<app-ribbon
-  [actions]="[]"
-  [zoom]="activeCanvas?.viewport?.zoom ?? 1">
-</app-ribbon>
-
-<div class="section-tool">
-  <ac-active-canvas #activeCanvas (clicked)="onCanvasClicked($event)" class="section-tool__canvas"></ac-active-canvas>
-
-  <ng-container *ngIf="sectorForContourEdition$ | async as editedSector; else sectorPropertyEditionPanel">
-    <app-sector-contour-edition #sectorContourEditionPanel class="section-tool__panel" [sectorContour]="editedSector">
+@if(sectorForContourEditionSignal()) {
+    <app-sector-contour-edition 
+        #sectorContourEditionPanel 
+        [sectorContour]="sectorForContourEditionSignal()">
     </app-sector-contour-edition>
-  </ng-container>
-  
-  <ng-template #sectorPropertyEditionPanel>
-    <ng-container *ngIf="sectorForPropertyEdition$ | async as editedSector; else sectorsContourPanel">
-      <app-sector-property-editor class="section-tool__panel" [sector]="editedSector.sector"></app-sector-property-editor>
-    </ng-container>
-  </ng-template>
-  
-  <ng-template #sectorsContourPanel>
-    <app-sectors-contours-list class="section-tool__panel"></app-sectors-contours-list>
-  </ng-template>
-</div>
+} @else if(sectorForPropertyEditionSignal()) {
+    <app-sector-property-editor 
+        [sector]="sectorForPropertyEditionSignal().sector">
+    </app-sector-property-editor>
+} @else {
+    <app-sectors-contours-list>
+    </app-sectors-contours-list>
+}

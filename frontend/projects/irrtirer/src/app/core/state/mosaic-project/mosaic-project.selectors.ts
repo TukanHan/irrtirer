@@ -18,9 +18,8 @@ export const selectMosaicImage = createSelector(
 
 export const selectMosaicConfig = createSelector(
   selectMosaicProject,
-  (state: MosaicProjectModel) => state.config
+  (state: MosaicProjectModel) => state?.config
 );
-
 
 export const selectIsProjectCreated = createSelector(
   selectMosaicProject,

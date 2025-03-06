@@ -15,9 +15,7 @@
     [label]="this.translate.instant('tool.sectors.sectorContour.sectorColor')">
 </app-color-picker>
 
-<ng-container *ngIf="sector.vertices?.length; then vertices; else noVertices"></ng-container>
-
-<ng-template #vertices>
+@if(sector.vertices?.length) {
     <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
         @for (vertex of sector.vertices; track vertex) {
             <div class="vertex-box" [class.selected]="vertex === selectedVertex" cdkDrag (mousedown)="onBoxSelected(vertex)">{{getVertexLabel(vertex)}}
@@ -27,8 +25,6 @@
             </div>
         }
     </div>
-</ng-template>
-
-<ng-template #noVertices>
+} @else { 
     <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
-</ng-template>
+}

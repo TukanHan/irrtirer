@@ -1,25 +1,20 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, OnDestroy, signal, ViewChild, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, OnDestroy, signal, WritableSignal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { BehaviorSubject } from 'rxjs';
-import { CommonModule } from '@angular/common';
-import { ImageHelper } from '../../core/helpers/image-helper';
-import { MatButtonModule } from '@angular/material/button';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
-import { MatIconModule } from '@angular/material/icon';
 import { MosaicHierarchyComponent } from './mosaic-hierarchy/mosaic-hierarchy.component';
 import { ProgressInfoComponent } from './progress-info/progress-info.component';
 import { InfoState } from './progress-info/progress-info.interface';
 import { GeneratedTileModel } from './mosaic-generation.interface';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
-import { ActiveCanvasComponent, CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
@@ -27,29 +22,22 @@ import { TriangulatedContourObject } from '../../shared/canvas-objects/triangula
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
-import { RibbonComponent } from "../ribbon/ribbon.component";
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { ToolService } from '../tool.service';
 
 @Component({
     selector: 'app-mosaic-generation',
     imports: [
-    ActiveCanvasComponent,
-    MatProgressSpinnerModule,
-    CommonModule,
-    MatButtonModule,
-    MatIconModule,
-    MosaicHierarchyComponent,
-    ProgressInfoComponent,
-    RibbonComponent
-],
+        MosaicHierarchyComponent,
+        ProgressInfoComponent
+    ],
     providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
-    @ViewChild('activeCanvas')
-    activeCanvas: ActiveCanvasComponent;
-
+export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, ToolView {
     protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(false);
 
     protected isMeshVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
@@ -75,6 +63,8 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         }
     ];
 
+    private activeCanvas: IActiveCanvas;
+
     constructor(
         private store: Store,
         private service: MosaicGenerationService,
@@ -84,20 +74,13 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         private destroyRef: DestroyRef
     ) {}
 
-    async ngAfterViewInit(): Promise<void> {
+    public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
-        const image = await ImageHelper.getImageObjectBySrc(mosaicConfig.base64Image);
 
-        const mosaicSize: Size = {
-            height: (image.height / image.width) * mosaicConfig.mosaicWidth,
-            width: mosaicConfig.mosaicWidth,
-        };
-
-        this.imageCanvasObject = new ImageObject(image, Vector.zero, mosaicSize);
+        this.imageCanvasObject = await ToolService.createImageObject(mosaicConfig);
         this.imageCanvasObject.setVisibility(this.isImageVisibleSignal());
         this.activeCanvas.addCanvasObject(this.imageCanvasObject);
 
-        this.setInitZoomForImage(mosaicSize);
         this.activeCanvas.redraw();
 
         this.subscribeOnGenerationProgress();
@@ -106,7 +89,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         this.subscribeOnMeshVisibilityChange();
 
         this.initSectors();
-        this.initGeneration(mosaicConfig.base64Image, mosaicSize);
+        this.initGeneration(mosaicConfig.base64Image, this.imageCanvasObject.size);
     }
 
     private initGeneration(base64Image: string, imageSize: Size): void {
@@ -200,16 +183,6 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
         this.signalRService.stopConnection();
     }
 
-    private setInitZoomForImage(imageSize: Size): void {
-        const imageZoom: Size = {
-            height: (imageSize.height * 1.1) / this.activeCanvas.viewport.cmSize.height,
-            width: (imageSize.width * 1.1) / this.activeCanvas.viewport.cmSize.width,
-        };
-
-        const zoom: number = Math.max(imageZoom.height, imageZoom.width);
-        this.activeCanvas.setZoom(zoom);
-    }
-
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
@@ -277,6 +250,11 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy {
     }
 
     private showMessage(message: string): void {
-        this.snackbarService.open(message, 'Ok', { duration: 3000 });
+        this.snackbarService.open(message, this.translate.instant('common.ok'), { duration: 3000 });
+    }
+
+    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+        this.activeCanvas = activeCanvas;
+        return { ribbon: this.ribbonActions };
     }
 }

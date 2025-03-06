@@ -16,7 +16,7 @@ export abstract class BaseCanvasObject implements CanvasObject {
     }
 
     public removeObject(): void {
-        this.parentCanvas.removeCanvasObject(this);
+        this.parentCanvas?.removeObject(this);
         this.parentCanvas = null;
     }
 

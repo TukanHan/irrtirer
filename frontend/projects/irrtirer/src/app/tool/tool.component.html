@@ -1,7 +1,7 @@
 <mat-sidenav-container class="tool-sidenav-container">
     <mat-sidenav mode="side" opened>
         <mat-nav-list>
-            <a mat-list-item routerLink="home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+            <a mat-list-item routerLink="config" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                 matTooltipPosition="right"
                 [matTooltip]="translate.instant('tool.nav.projectSettings')">
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
@@ -28,7 +28,15 @@
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
-            <router-outlet></router-outlet>
+            <app-ribbon 
+                [actions]="ribbonActionsSignal()" 
+                [zoom]="activeCanvas?.viewport?.zoom ?? 1"/>
+            <div class="main">
+                <ac-active-canvas #activeCanvas class="canvas"/>
+                <div class="panel">
+                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()"/>
+                </div>
+            </div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

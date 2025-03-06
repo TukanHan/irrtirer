@@ -1,4 +1,14 @@
-<canvas #canvas width="250" height="8" class="slider"></canvas>
-<div *ngIf="cursorData$ | async as cursorData" class="cursor" 
-    [ngStyle]="{'left': cursorData.horizontalOffset , 'background-color': cursorData.color}">
-</div>
+<canvas #canvas 
+    width="250" height="8" 
+    class="slider">
+</canvas>
+
+@let cursorData = cursorDataSignal();
+@if(cursorData) {
+    <div class="cursor" 
+        [ngStyle]="{
+            'left': cursorData.horizontalOffset,
+            'background-color': cursorData.color
+        }">
+    </div>
+}

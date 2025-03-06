@@ -2,34 +2,33 @@
   {{ 'tool.sectors.contourList.addSector' | translate }}
 </button>
 
-<ng-container *ngIf="sectors$ | async as sectors; else noVertices">
-  <div *ngIf="sectors.length > 0; else noVertices" cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
+@let sectors = sectorsSignal();
+@if(sectors.length) {
+  <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
     @for (sector of sectors; track sector) {
-    <div class="sector-box" [class.selected]="sector === selectedSector" cdkDrag (mousedown)="onSectorSelected(sector)">
-      {{sector.name}}
-      <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
-        <mat-icon matListIcon>more_vert</mat-icon>
-      </button>
+      <div class="sector-box" [class.selected]="sector === selectedSector" cdkDrag (mousedown)="onSectorSelected(sector)">
+        {{sector.name}}
+        <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
+          <mat-icon matListIcon>more_vert</mat-icon>
+        </button>
 
-      <mat-menu #menu="matMenu" classList="paddingless">
-        <button mat-menu-item (click)="emitSectorToEditContour(sector)">
-          <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
-          {{ 'tool.sectors.contourList.editContour' | translate }}
-        </button>
-        <button mat-menu-item (click)="emitSectorToEditProperty(sector)">
-          <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
-          {{ 'tool.sectors.contourList.editProperties' | translate }}
-        </button>
-        <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
-          <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
-          {{ 'tool.sectors.contourList.removeSector' | translate }}
-        </button>
-      </mat-menu>
-    </div>
+        <mat-menu #menu="matMenu" classList="paddingless">
+          <button mat-menu-item (click)="emitSectorToEditContour(sector)">
+            <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+            {{ 'tool.sectors.contourList.editContour' | translate }}
+          </button>
+          <button mat-menu-item (click)="emitSectorToEditProperty(sector)">
+            <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
+            {{ 'tool.sectors.contourList.editProperties' | translate }}
+          </button>
+          <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
+            <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+            {{ 'tool.sectors.contourList.removeSector' | translate }}
+          </button>
+        </mat-menu>
+      </div>
     }
   </div>
-</ng-container>
-
-<ng-template #noVertices>
+} @else {
   <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
-</ng-template>
+}

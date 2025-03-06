@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+@use './../../../../theme/gray-palette.scss' as *;
+
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tiles-sets {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .no-sets {
+            color: mat.m2-get-color-from-palette($grey-palette, 300);
+            margin: auto;
+        }
+    }
+}

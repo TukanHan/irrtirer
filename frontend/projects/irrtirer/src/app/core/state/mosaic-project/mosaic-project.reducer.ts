@@ -1,6 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
 import { MosaicProjectActions } from './mosaic-project.actions';
-import { MosaicProjectModel } from '../../models/mosaic-project.model';
+import { MosaicProjectModel, TilesSet } from '../../models/mosaic-project.model';
 import { ArrayHelpers } from '../../helpers/array-helpers';
 
 export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
@@ -25,10 +25,21 @@ export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
         ...state,
         sectors: ArrayHelpers.moveElemInArray([...state.sectors], prevIndex, newIndex),
     })),
-    on(MosaicProjectActions.tilesSetAdded, (state, { tilesSet }) => ({
-        ...state,
-        tilesSets: [...state.tilesSets, tilesSet],
-    })),
+    on(MosaicProjectActions.tilesSetAdded, (state, { tilesSet }) => {
+        const existingTileSet = state.tilesSets.find((x) => x.name === tilesSet.name);
+        const newTileSet: TilesSet = { 
+            name: tilesSet.name,
+            tiles: [...tilesSet.tiles, ...(existingTileSet?.tiles ?? [])] 
+        };
+
+        return {
+            ...state,
+            tilesSets: [
+                ...state.tilesSets.filter(x => x.name !== tilesSet.name),
+                newTileSet  
+            ],
+        };
+    }),
     on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({
         ...state,
         tilesSets: state.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),

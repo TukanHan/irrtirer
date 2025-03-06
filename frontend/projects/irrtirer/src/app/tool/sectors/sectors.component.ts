@@ -1,123 +1,98 @@
-import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, OnInit, Signal, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatIconModule } from '@angular/material/icon';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { Observable, Subscription, take } from 'rxjs';
+import { first } from 'rxjs';
 import { SectorsContoursService } from './sectors-contours.service';
 import { SectorContourEditionComponent } from './sector-contour-edition/sector-contour-edition.component';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
 import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
-import { Size } from '../../core/models/math/size.interface';
 import { SectorPropertyEditorComponent } from './sector-property-editor/sector-property-editor.component';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { ActiveCanvasComponent, CanvasObject, IVector } from '../../../../../active-canvas/src/public-api';
-import { ImageObject } from '../../shared/canvas-objects/image-object';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { CanvasObject, IVector } from '../../../../../active-canvas/src/public-api';
 import { OpenedContourObject } from '../../shared/canvas-objects/opened-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
-import { RibbonComponent } from "../ribbon/ribbon.component";
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { ToolService } from '../tool.service';
 
 @Component({
     selector: 'app-sectors',
     imports: [
-    ActiveCanvasComponent,
-    MatButtonToggleModule,
-    MatIconModule,
-    FormsModule,
-    CommonModule,
-    SectorsContoursListComponent,
-    SectorContourEditionComponent,
-    SectorPropertyEditorComponent,
-    RibbonComponent
-],
+        SectorsContoursListComponent,
+        SectorContourEditionComponent,
+        SectorPropertyEditorComponent,
+    ],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss'
 })
-export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
+export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     canvasMode: 'movement' | 'selection' = 'movement';
 
-    @ViewChild('activeCanvas')
-    activeCanvas: ActiveCanvasComponent;
+    activeCanvas: IActiveCanvas;
 
     @ViewChild('sectorContourEditionPanel')
     sectorContourEditionPanel: SectorContourEditionComponent;
 
     visualElements: CanvasObject[] = [];
 
-    sectorForContourEdition$: Observable<EditedSectorContour> = this.service.sectorForContourEdition$;
+    sectorForContourEditionSignal: Signal<EditedSectorContour>;
 
-    sectorForPropertyEdition$: Observable<EditedSectorWithTriangulationMesh> = this.service.sectorForPropertyEdition$;
+    sectorForPropertyEditionSignal: Signal<EditedSectorWithTriangulationMesh>;
 
-    subscription: Subscription = new Subscription();
-
-    getSectorForContourEdition: () => EditedSectorContour;
-
-    getSectorForPropertyEdition: () => EditedSectorWithTriangulationMesh;
-
-    constructor(private store: Store, private service: SectorsContoursService) {
-        this.getSectorForContourEdition = toSignal(this.sectorForContourEdition$);
-        this.getSectorForPropertyEdition = toSignal(this.sectorForPropertyEdition$);
+    constructor(
+        private store: Store,
+        private service: SectorsContoursService,
+        private destroyRef: DestroyRef
+    ) {
+        this.sectorForContourEditionSignal = toSignal(this.service.sectorForContourEdition$);
+        this.sectorForPropertyEditionSignal = toSignal(this.service.sectorForPropertyEdition$);
     }
 
-    ngOnInit(): void {
+    public ngOnInit(): void {
         this.service.emitEditedSectorContour(null);
         this.service.emitEditedSectorProperty(null);
     }
 
-    async ngAfterViewInit(): Promise<void> {
+    public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
-        const image = new Image();
-        image.src = mosaicConfig.base64Image;
-        await image.decode();
 
-        const imageSize: Size = {
-            height: (image.height / image.width) * mosaicConfig.mosaicWidth,
-            width: mosaicConfig.mosaicWidth,
-        };
-
-        this.activeCanvas.addCanvasObject(new ImageObject(image, Vector.zero, imageSize));
+        const imageObject = await ToolService.createImageObject(mosaicConfig);
+        this.activeCanvas.addCanvasObject(imageObject);
 
         this.subscribeOnEditedSectorChange();
         this.subscribeOnEditedSectorPropertiesChange();
         this.subscribeOnSectorListChange();
-        this.setInitZoomForImage(imageSize);
         this.activeCanvas.redraw();
+
+        this.activeCanvas.clicked
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((click) => this.onCanvasClicked(click));
     }
 
     private subscribeOnEditedSectorChange(): void {
-        this.subscription.add(this.sectorForContourEdition$.subscribe((s) => this.onEditedSectorChanged(s)));
+        this.service.sectorForContourEdition$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((s) => this.onEditedSectorChanged(s))
     }
 
     private subscribeOnEditedSectorPropertiesChange(): void {
-        this.subscription.add(this.sectorForPropertyEdition$.subscribe(() => this.redrawSectors()));
+        this.service.sectorForPropertyEdition$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(() => this.redrawSectors());
     }
 
     private subscribeOnSectorListChange(): void {
-        this.subscription.add(this.service.sectorListChange$.subscribe(() => this.redrawSectors()));
-    }
-
-    private setInitZoomForImage(imageSize: Size): void {
-        const imageZoom: Size = {
-            height: (imageSize.height * 1.1) / this.activeCanvas.viewport.cmSize.height,
-            width: (imageSize.width * 1.1) / this.activeCanvas.viewport.cmSize.width,
-        };
-
-        const zoom: number = Math.max(imageZoom.height, imageZoom.width);
-        this.activeCanvas.setZoom(zoom);
-    }
-
-    ngOnDestroy(): void {
-        this.subscription.unsubscribe();
+        this.service.sectorListChange$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe(() => this.redrawSectors())
     }
 
     onCanvasClicked(point: IVector): void {
-        const selectedSector: EditedSectorContour = this.getSectorForContourEdition();
+        const selectedSector: EditedSectorContour = this.sectorForContourEditionSignal();
         if (selectedSector) {
             this.sectorContourEditionPanel.addVertex(new Vector(point.x, point.y));
         }
@@ -137,14 +112,14 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
         for (const object of this.visualElements) {
             this.activeCanvas.addCanvasObject(object);
-        }
+        } 
 
         this.activeCanvas.redraw();
     }
 
     private prepareSectorsContours(): CanvasObject[] {
-        const editedSectorContour: EditedSectorContour = this.getSectorForContourEdition();
-        const sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh = this.getSectorForPropertyEdition();
+        const editedSectorContour: EditedSectorContour = this.sectorForContourEditionSignal();
+        const sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh = this.sectorForPropertyEditionSignal();
         let selectedSectorOnList: SectorSchema;
 
         let sectors: SectorSchema[] = this.store.selectSignal(selectSectors)();
@@ -155,9 +130,11 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                 (x) => x.id === editedSectorContour.sector.id
             );
         } else {
-            this.service.sectorListChange$.pipe(take(1)).subscribe((event) => {
-                selectedSectorOnList = event?.selectedSector;
-            });
+            this.service.sectorListChange$
+                .pipe(first())
+                .subscribe((event) => {
+                    selectedSectorOnList = event?.selectedSector;
+                });
         }
 
         return this.mapSectorsToContours(sectors, editedSectorContour, sectorWithTriangulationMesh, selectedSectorOnList);
@@ -188,5 +165,10 @@ export class SectorsComponent implements OnInit, AfterViewInit, OnDestroy {
                 return contour;
             }
         });
+    }
+
+    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+        this.activeCanvas = activeCanvas;
+        return { ribbon: [] };
     }
 }

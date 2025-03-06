@@ -1,49 +1,87 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatIconModule } from '@angular/material/icon';
-import { GenerateTilesComponent } from './generate-tiles/generate-tiles.component';
-import { MatButtonModule } from '@angular/material/button';
-import { TilesSet } from '../../core/models/mosaic-project.model';
+import { ChangeDetectionStrategy, Component, DestroyRef } from '@angular/core';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { MosaicProjectActions } from '../../core/state/mosaic-project/mosaic-project.actions';
 import { selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
-import { TileSetComponent } from './tile-set/tile-set.component';
-import { DialogData } from '../../shared/dialog/dialog-data.interface';
-import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../../shared/dialog/dialog.component';
+import { TileModel, TilesSet } from '../../core/models/mosaic-project.model';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { TileObject } from '../../shared/canvas-objects/tile-object';
+import { PolygonHelper } from '../../core/helpers/polygon/polygon-helper';
+import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
+import { Vector } from '../../core/models/math/vector.model';
+
+interface TileWithRadius {
+    tile: TileModel;
+    radius: number;
+}
 
 @Component({
     selector: 'app-tray',
-    imports: [MatExpansionModule, MatIconModule, GenerateTilesComponent, MatButtonModule, CommonModule, TileSetComponent],
+    imports: [RouterOutlet],
     templateUrl: './tray.component.html',
     styleUrl: './tray.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TrayComponent {
-    tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
+export class TrayComponent implements ToolView {
+    private tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
 
-    constructor(private store: Store, private dialog: MatDialog) {}
+    private activeCanvas: IActiveCanvas;
 
-    public onTileSetLoaded(tilesSet: TilesSet): void {
-        this.store.dispatch(MosaicProjectActions.tilesSetAdded({ tilesSet }));
+    constructor(private store: Store, private destroyRef: DestroyRef) {}
+
+    private subscribeOnTilesSetsChange(): void {
+        this.tilesSets$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((tilesSets) => this.draw(tilesSets.flatMap((tileSet) => tileSet.tiles)));
     }
 
-    public removeTilesSet(removedTilesSet: TilesSet): void {
-        this.showRemoveTilesSetWarning(removedTilesSet).subscribe((result) => {
-            if (result) {
-                this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet }));
+    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+        this.activeCanvas = activeCanvas;
+
+        this.subscribeOnTilesSetsChange();
+
+        return { ribbon: [] };
+    }
+
+    private draw(tiles: TileModel[]): void {
+        this.activeCanvas.removeObjects();
+
+        let x: number = 0;
+        const tilesWithRadius: TileWithRadius[] = tiles.map((tile) => ({ tile, radius: PolygonHelper.calculateOuterRadius(tile.vertices) }));
+        tilesWithRadius.sort((a, b) => b.radius - a.radius);
+
+        //const y = this.splitTileArrayInHalf(tilesWithRadius);
+
+        for (const tileWithRadius of tilesWithRadius) {
+            const worldTileVertices: Vector[] = transformPolygon(tileWithRadius.tile.vertices, new Vector(x, 0), 0);
+            const tileObject: TileObject = new TileObject(worldTileVertices, tileWithRadius.tile.color);
+            this.activeCanvas.addCanvasObject(tileObject);
+            x += tileWithRadius.radius * 2;
+        }
+
+        this.activeCanvas.redraw();
+    }
+
+    //TODO
+    /*
+    private splitTileArrayInHalf(tileWithRadiusArr: TileWithRadius[]): TileWithRadius[][] {
+        const sum = tileWithRadiusArr.reduce((acc, curr) => acc + curr.radius, 0);
+        const sumMid = sum / 2;
+
+        let currentSum: number = 0;
+        const firstArr: TileWithRadius[] = [];
+        const secondArr: TileWithRadius[] = [];
+
+        for (const element of tileWithRadiusArr) {
+            if (currentSum + element.radius <= sumMid) {
+                firstArr.push(element);
+                currentSum += element.radius;
+            } else {
+                secondArr.push(element);
             }
-        });
-    }
+        }
 
-    showRemoveTilesSetWarning(tilesSet: TilesSet): Observable<boolean> {
-        const dialogData: DialogData = {
-            title: 'Usuń zestaw kafelków',
-            message: `Jesteś pewien że chcesz usunąć zestaw kafelków '${tilesSet.name}'?`,
-        };
-
-        return this.dialog.open(DialogComponent, { data: dialogData }).afterClosed();
+        return [firstArr, secondArr];
     }
+    */
 }

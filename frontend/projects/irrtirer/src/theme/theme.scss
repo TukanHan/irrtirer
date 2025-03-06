@@ -8,6 +8,7 @@
 @use './components/tooltip-theme' as tooltip;
 @use './components/icon-theme' as icon;
 @use './components/dialog-theme' as dialog;
+@use './components/autocomplete-theme' as autocomplete;
 @use './primary-palette.scss' as *;
 @use './variables.scss' as variables;
 
@@ -47,3 +48,4 @@ $irrtirer-theme: map.set($irrtirer-theme, "color", $color);
 @include icon.theme($irrtirer-theme);
 @include variables.theme($irrtirer-theme);
 @include dialog.theme($irrtirer-theme);
+@include autocomplete.theme($irrtirer-theme);

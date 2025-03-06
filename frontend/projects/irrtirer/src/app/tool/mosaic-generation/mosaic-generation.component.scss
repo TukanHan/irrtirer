@@ -1,21 +1,11 @@
 :host {
+    display: block;
     width: 100%;
     height: 100%;
 
-    .main {
-        display: flex;
-        flex-direction: row;
-        height: calc(100% - 40px);
-
-        &__canvas {
-            display: flex;
-            width: calc(100% - 250px);
-        }
-
-        &__panel {
-            width: 250px;
-            box-sizing: border-box;
-            border-left: 1px solid #363636;
-        }
+    .info {
+        position: absolute;
+        left: -250px;
+        bottom: 30px;
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, InputSignal, OnInit } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
@@ -30,16 +30,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         MatTooltipModule,
         ReactiveFormsModule,
         ExtendedPanelComponent,
-        TranslateModule
+        TranslateModule,
     ],
     templateUrl: './sector-property-editor.component.html',
-    styleUrl: './sector-property-editor.component.scss'
+    styleUrl: './sector-property-editor.component.scss',
 })
 export class SectorPropertyEditorComponent implements OnInit {
-    @Input()
-    sector!: SectorSchema;
+    public sector: InputSignal<SectorSchema> = input.required();
 
-    sectorPropertyForm: FormGroup;
+    protected sectorPropertyForm: FormGroup;
 
     constructor(
         private store: Store,
@@ -51,7 +50,7 @@ export class SectorPropertyEditorComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
-        this.sectorPropertyForm = this.generateForm(this.sector.properties);
+        this.sectorPropertyForm = this.generateForm(this.sector().properties);
         this.getTriangulationMesh();
     }
 
@@ -82,24 +81,21 @@ export class SectorPropertyEditorComponent implements OnInit {
         return this.formBuilder.group({
             singleSectionPopulation: [properties.singleSectionPopulation, [Validators.required]],
             overlappingAreaOutsideSector: [properties.overlappingAreaOutsideSector, [Validators.required]],
-            additionalPopulationOfNeighboringSectors: [
-                properties.additionalPopulationOfNeighboringSectors,
-                [Validators.required],
-            ],
+            additionalPopulationOfNeighboringSectors: [properties.additionalPopulationOfNeighboringSectors, [Validators.required]],
             overlappingNotPopulatedSections: [properties.overlappingNotPopulatedSections, [Validators.required]],
             tileColorMismatch: [properties.tileColorMismatch, [Validators.required]],
         });
     }
 
-    cancel(): void {
+    protected cancel(): void {
         this.service.emitEditedSectorProperty(null);
     }
 
-    save(): void {
+    protected save(): void {
         if (this.sectorPropertyForm.valid) {
             const properties: SectorSchemaProperties = this.getFormData();
 
-            this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: { ...this.sector, properties } }));
+            this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: { ...this.sector(), properties } }));
             this.service.emitEditedSectorProperty(null);
         }
     }
@@ -120,8 +116,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         return {
             initialPopulationSize: this.sectorPropertyForm.get('populationParams.initialPopulationSize').value,
             countOfTriesToInsertTile: this.sectorPropertyForm.get('populationParams.countOfTriesToInsertTile').value,
-            countOfTrianglePositionDraws: this.sectorPropertyForm.get('populationParams.countOfTrianglePositionDraws')
-                .value,
+            countOfTrianglePositionDraws: this.sectorPropertyForm.get('populationParams.countOfTrianglePositionDraws').value,
             countOfColorMatchingAttempts: this.sectorPropertyForm.get('populationParams.countOfColorMatchingAttempts').value,
             iterationsCount: this.sectorPropertyForm.get('populationParams.iterationsCount').value,
             populationSize: this.sectorPropertyForm.get('populationParams.populationSize').value,
@@ -132,35 +127,35 @@ export class SectorPropertyEditorComponent implements OnInit {
         return {
             singleSectionPopulation: this.sectorPropertyForm.get('evaluationParams.singleSectionPopulation').value,
             overlappingAreaOutsideSector: this.sectorPropertyForm.get('evaluationParams.overlappingAreaOutsideSector').value,
-            additionalPopulationOfNeighboringSectors: this.sectorPropertyForm.get(
-                'evaluationParams.additionalPopulationOfNeighboringSectors'
-            ).value,
-            overlappingNotPopulatedSections: this.sectorPropertyForm.get('evaluationParams.overlappingNotPopulatedSections')
-                .value,
+            additionalPopulationOfNeighboringSectors: this.sectorPropertyForm.get('evaluationParams.additionalPopulationOfNeighboringSectors').value,
+            overlappingNotPopulatedSections: this.sectorPropertyForm.get('evaluationParams.overlappingNotPopulatedSections').value,
             tileColorMismatch: this.sectorPropertyForm.get('evaluationParams.tileColorMismatch').value,
         };
     }
 
     protected getTriangulationMesh(): void {
         const sectorTriangulationRequestData: SectorTriangulationRequestModel = {
-            polygonVertices: this.sector.vertices,
+            polygonVertices: this.sector().vertices,
             sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
-            sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value
-        }
+            sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value,
+        };
 
-        this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData)
-            .subscribe({
-                next: (mesh) =>
-                    this.service.emitEditedSectorProperty({
-                        sector: this.sector,
-                        mesh: mesh.triangles,
-                        contour: mesh.contour
-                    }),
-                error: () => this.showPolygonTriangulationError(),
-            });
+        this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData).subscribe({
+            next: (mesh) =>
+                this.service.emitEditedSectorProperty({
+                    sector: this.sector(),
+                    mesh: mesh.triangles,
+                    contour: mesh.contour,
+                }),
+            error: () => this.showPolygonTriangulationError(),
+        });
     }
 
     private showPolygonTriangulationError(): void {
-        this.snackBar.open(this.translate.instant('tool.sectors.sectorProperty.errorOnSectorMeshRequesting'), 'Ok', { duration: 2000 });
+        this.snackBar.open(
+            this.translate.instant('tool.sectors.sectorProperty.errorOnSectorMeshRequesting'),
+            this.translate.instant('common.ok'), 
+            { duration: 2000 }
+        );
     }
 }
