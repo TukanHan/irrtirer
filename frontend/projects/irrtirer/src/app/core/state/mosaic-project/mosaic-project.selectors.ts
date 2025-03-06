@@ -21,7 +21,6 @@ export const selectMosaicConfig = createSelector(
   (state: MosaicProjectModel) => state?.config
 );
 
-
 export const selectIsProjectCreated = createSelector(
   selectMosaicProject,
   (state: MosaicProjectModel) => !!state

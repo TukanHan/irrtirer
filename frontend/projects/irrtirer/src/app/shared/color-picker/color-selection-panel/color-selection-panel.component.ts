@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, Input, OnDestroy, output, OutputEmitterRef } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -24,8 +24,7 @@ export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
         this.vValue = hsvColor.value() / 100;
     }
 
-    @Output()
-    colorChange: EventEmitter<ColorInstance> = new EventEmitter<ColorInstance>();
+    public colorChange: OutputEmitterRef<ColorInstance> = output<ColorInstance>();
 
     hexColor: string = 'blue';
 
@@ -33,13 +32,13 @@ export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
     sValue: number = 0;
     vValue: number = 0;
 
-    ngAfterViewInit(): void {
+    public ngAfterViewInit(): void {
         this.updateColorCode();
     }
 
-    ngOnDestroy(): void {
+    public ngOnDestroy(): void {
         const color: ColorInstance = Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 });
-        this.colorChange.next(color);
+        this.colorChange.emit(color);
     }
 
     private updateColorCode(): void {

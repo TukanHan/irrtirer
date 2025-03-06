@@ -3,11 +3,11 @@ import {
     ChangeDetectionStrategy,
     Component,
     ElementRef,
-    EventEmitter,
     Input,
     OnChanges,
     OnDestroy,
-    Output,
+    output,
+    OutputEmitterRef,
     ViewChild,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
@@ -38,8 +38,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
     @Input()
     vValue: number;
 
-    @Output()
-    colorChange: EventEmitter<ColorInstance> = new EventEmitter<ColorInstance>();
+    public colorChange: OutputEmitterRef<ColorInstance> = output<ColorInstance>();
 
     cursorData$: Subject<CursorDataModel> = new Subject();
 
@@ -84,7 +83,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         this.sValue = Math.min(1, Math.max(0, horizontalRawValue));
         this.vValue = Math.min(1, Math.max(0, 1 - verticalRawValue));
 
-        this.colorChange.next(Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }));
+        this.colorChange.emit(Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }));
 
         this.updateColorCanvas();
     }

@@ -37,7 +37,7 @@
         display: flex;
         justify-content: center;
         color: mat.m2-get-color-from-palette(palette.$grey-palette, 300);
-        height: -webkit-fill-available;
+        height: 100%;
         align-items: center;
     }
 }
@@ -48,7 +48,7 @@
     gap: 6px;
     overflow: auto;
     max-width: 100%;
-    height: -webkit-fill-available;
+    height: 100%;
 
     .vertex-box {
         @include list-item-box();

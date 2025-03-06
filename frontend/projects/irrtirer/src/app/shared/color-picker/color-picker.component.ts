@@ -2,10 +2,10 @@ import {
     ChangeDetectionStrategy,
     Component,
     ElementRef,
-    EventEmitter,
     Input,
     OnChanges,
-    Output,
+    output,
+    OutputEmitterRef,
     signal,
     ViewChild,
     WritableSignal,
@@ -26,8 +26,7 @@ export class ColorPickerComponent implements OnChanges {
     @Input({required: true})
     color: string = "#000000";
 
-    @Output()
-    colorChange: EventEmitter<string> = new EventEmitter<string>();
+    public colorChange: OutputEmitterRef<string> = output<string>();
 
     @Input()
     label: string = $localize`Kolor`;
@@ -39,7 +38,7 @@ export class ColorPickerComponent implements OnChanges {
     @ViewChild('canvas')
     canvas: ElementRef<HTMLCanvasElement>;
 
-    ngOnChanges(): void {
+    public ngOnChanges(): void {
         this.colorHexCodeSignal.set(this.color);
     }
 
@@ -50,7 +49,7 @@ export class ColorPickerComponent implements OnChanges {
     onColorChanged(color: ColorInstance): void {
         setTimeout(() => {
             this.colorHexCodeSignal.set(color.hex());
-            this.colorChange.next(color.hex());
+            this.colorChange.emit(color.hex());
         }, 0);
     }
 }

@@ -1,0 +1,41 @@
+<div class="actions">
+    <button mat-flat-button (click)="navigateToMenu()">
+        {{ 'common.return' | translate }}
+    </button>
+    <button mat-flat-button color="accent" (click)="getTileSet()">
+        {{ 'tool.tiles.random.randomTiles' | translate }}
+    </button>
+</div>
+
+<form [formGroup]="formGroup" class="form">
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+        <mat-label>{{ 'tool.tiles.random.seriesName' | translate }}</mat-label>
+        <input matInput type="text" formControlName="name" [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            @for (option of seriesNamesSignal(); track option) {
+                <mat-option [value]="option">{{option}}</mat-option>
+            }
+        </mat-autocomplete>
+        <mat-error>{{ getErrorLabel(formGroup.get('name')) }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+        <mat-label>{{ 'tool.tiles.random.minRadius' | translate }}</mat-label>
+        <input matInput type="number" formControlName="minRadius">
+        <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+        <mat-error>{{ getErrorLabel(formGroup.get('minRadius')) }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+        <mat-label>{{ 'tool.tiles.random.maxRadius' | translate }}</mat-label>
+        <input matInput type="number" formControlName="maxRadius">
+        <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+        <mat-error>{{ getErrorLabel(formGroup.get('maxRadius')) }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+        <mat-label>{{ 'tool.tiles.random.count' | translate }}</mat-label>
+        <input matInput type="number" formControlName="count">
+        <mat-error>{{ getErrorLabel(formGroup.get('count')) }}</mat-error>
+    </mat-form-field>
+</form>

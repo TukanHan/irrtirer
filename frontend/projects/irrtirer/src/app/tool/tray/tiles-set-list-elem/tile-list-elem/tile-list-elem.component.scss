@@ -1,0 +1,11 @@
+@use "./../../../../../styles/utils/list-item-box.scss" as *;
+@use "./../../../../../styles/utils/mixins.scss" as *;
+
+:host {
+    @include list-item-box();
+
+    .label {
+        font-size: 12px;
+        @include text-ellipsis();
+    }
+}

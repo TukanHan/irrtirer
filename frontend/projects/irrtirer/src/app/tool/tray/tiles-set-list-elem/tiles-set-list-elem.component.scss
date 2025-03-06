@@ -1,11 +1,10 @@
 @use '@angular/material' as mat;
-@use "./../../../../../styles/utils/list-item-box.scss" as *;
-@use "./../../../../../styles/utils/mixins.scss" as *;
-@use './../../../../../theme/gray-palette.scss' as *;
-@use './../../../../../theme/components/button-theme' as *;
+@use "./../../../../styles/utils/list-item-box.scss" as *;
+@use './../../../../theme/gray-palette.scss' as *;
+@use './../../../../theme/components/button-theme' as *;
 
 :host {
-    .parent-elem {
+    .list-elem {
         @include list-item-box();
 
         .sector-actions {
@@ -13,16 +12,12 @@
             flex-direction: row;
             gap: 12px;
 
-            .visibility-icon {
-                font-weight: 300;
-                color: mat.m2-get-color-from-palette($grey-palette, 300);
-            }
-
             .sector-action {
                 ::ng-deep {
                     @include icon-button(32px);
                 }
     
+                color: mat.m2-get-color-from-palette($grey-palette, 200);
                 margin: -6px;
             }
     
@@ -46,22 +41,13 @@
         flex-direction: column;
         gap: 6px;
 
-        .tile {
-            @include list-item-box();
-
-            .label {
-                @include text-ellipsis();
-                font-size: 12px;
-            }
+        :first-child {
+            margin-top: 6px;
         }
 
         .empty {
             align-self: center;
             color: mat.m2-get-color-from-palette($grey-palette, 300);
         }
-    }
-
-    .panel > *:first-child {
-        margin-top: 6px;
     }
 }

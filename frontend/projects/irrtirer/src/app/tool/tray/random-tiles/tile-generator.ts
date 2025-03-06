@@ -18,7 +18,7 @@ export class TileGenerator {
         return tiles;
     }
 
-    generateTile(range: Range): TileModel {
+    private generateTile(range: Range): TileModel {
         let vertices: Vector[];
 
         do {
@@ -35,7 +35,7 @@ export class TileGenerator {
         };
     }
 
-    generateVertices(radiusRange: Range): Vector[] {
+    private generateVertices(radiusRange: Range): Vector[] {
         const corners: number = RandomHelper.nextInt(4, 6);
         const tileCornerPoints: Vector[] = [];
 
@@ -47,7 +47,7 @@ export class TileGenerator {
         return tileCornerPoints;
     }
 
-    generateVertex(vertexIndex: number, verticesCount: number, radius: number): Vector {
+    private generateVertex(vertexIndex: number, verticesCount: number, radius: number): Vector {
         const angle: number = ((360 / verticesCount) * vertexIndex + RandomHelper.nextFloat(0, 30)) % 360;
         const radians: number = (angle * Math.PI) / 180;
         const directionVector = new Vector(Math.sin(radians), Math.cos(radians));
@@ -55,7 +55,7 @@ export class TileGenerator {
         return directionVector.multiply(radius);
     }
 
-    randomColor(): ColorInstance {
+    private randomColor(): ColorInstance {
         const pixelCount = this.imagePixelArray.length / 4;
         const pixelIndex = RandomHelper.nextInt(0, pixelCount-1);
 
@@ -66,11 +66,11 @@ export class TileGenerator {
         });
     }
 
-    normalizeVertices(vertices: Vector[], centroid: Vector): Vector[] {
+    private normalizeVertices(vertices: Vector[], centroid: Vector): Vector[] {
         return vertices.map((vertex) => this.roundVertexCoords(vertex.sub(centroid)));
     }
 
-    roundVertexCoords(vertex: Vector): Vector {
+    private roundVertexCoords(vertex: Vector): Vector {
         return new Vector(
             Math.round((vertex.x + Number.EPSILON) * 100) / 100,
             Math.round((vertex.y + Number.EPSILON) * 100) / 100,

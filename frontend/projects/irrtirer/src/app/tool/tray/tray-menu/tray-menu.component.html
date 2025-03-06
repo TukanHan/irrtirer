@@ -1,0 +1,21 @@
+<div class="actions">
+    <button mat-flat-button color="accent" disabled>
+        {{ 'tool.tiles.menu.loadFromFile' | translate }}
+    </button>
+    <button mat-flat-button color="accent" disabled>
+        {{ 'tool.tiles.menu.createTile' | translate }}
+    </button>
+    <button mat-flat-button color="accent" (click)="navigateToRandomTiles()">
+        {{ 'tool.tiles.menu.randomTiles' | translate }}
+    </button>
+</div>
+
+<div class="tiles-sets">
+    @for(tilesSet of tilesSetsSignal(); track $index) {
+        <app-tiles-set-list-elem [tilesSet]="tilesSet"/>
+    } @empty {
+        <span class="no-sets">
+            {{ 'tool.tiles.menu.noTiles' | translate }}
+        </span>
+    }
+</div>

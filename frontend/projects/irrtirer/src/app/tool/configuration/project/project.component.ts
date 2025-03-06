@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, EventEmitter, input, InputSignal, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, input, InputSignal, OnInit, output, OutputEmitterRef } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -27,11 +27,9 @@ const MAX_WIDTH: number = 1000;
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectComponent implements OnInit {
-    @Output()
-    public closed: EventEmitter<void> = new EventEmitter<void>();
+    public closed: OutputEmitterRef<void> = output();
 
-    @Output()
-    public imagePreviewChanged: EventEmitter<MosaicConfig> = new EventEmitter<MosaicConfig>();
+    public imagePreviewChanged: OutputEmitterRef<MosaicConfig> = output<MosaicConfig>();
 
     public mosaicConfigSignal: InputSignal<MosaicConfig> = input.required({ alias: 'mosaicConfig' });
 
@@ -71,13 +69,13 @@ export class ProjectComponent implements OnInit {
                 const reader = new FileReader();
                 reader.readAsDataURL(valueChange.mosaicImage);
                 reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
-                    this.imagePreviewChanged.next({
+                    this.imagePreviewChanged.emit({
                         base64Image: readingEvent?.target?.result as string,
                         mosaicWidth: valueChange.mosaicWidth,
                     });
                 };
             } else {
-                this.imagePreviewChanged.next(null);
+                this.imagePreviewChanged.emit(null);
             }
         });
     }
@@ -113,7 +111,7 @@ export class ProjectComponent implements OnInit {
 
             this.createNewProject(project);
             this.snackBar.open(this.translate.instant('tool.config.project.projectCreated'), this.translate.instant('common.ok'), { duration: 2000 });
-            this.closed.next();
+            this.closed.emit();
         };
     }
 

@@ -52,6 +52,28 @@
                 "mosaicMinWithErrorMessage": "Szerokość nie może być mniejsza niż {{width}} cm"
             }
         },
+        "tiles": {
+            "menu": {
+                "removeTilesSet": "Usuń zestaw kafelków",
+                "removeTilesSetQuery": "Czy na pewno chcesz usunąć zestaw kafelków {{name}}?",
+                "noTiles": "Brak kafelków",
+                "loadFromFile": "Wczytaj z pliku",
+                "createTile": "Kreator kafelków",
+                "randomTiles": "Generuj losowe"
+            },
+            "random": {
+                "randomTiles": "Losuj",
+                "seriesName": "Nazwa serii",
+                "maxRadius": "Maksymalny promień",
+                "minRadius": "Minimalny promień",
+                "count": "Ilość",
+                "radiusTooSmall": "Promień zbyt mały",
+                "radiusTooLarge": "Promień zbyt duży",
+                "fieldRequired": "Pole wymagane",
+                "maxRadiusLargerThanMin": "Minimalny promień jest większy niż maksymalny",
+                "tilesSeriesGenerated": "Seria kafelków wygenerowana"
+            }
+        },
         "sectors": {
             "contourList": {
                 "addSector": "Dodaj sektor",

@@ -15,7 +15,11 @@
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpenSignal()">
     @for(tile of items$ | async; track $index;) {
-        <div class="tile">{{tile.tileTransform.tileId}}</div>
+        <div class="tile">
+            <span class="label">
+                {{tile.tileTransform.tileId}}
+            </span>
+        </div>
     } @empty {
         <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }

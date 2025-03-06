@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SectorPropertyEditorComponent } from './sector-property-editor.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
@@ -24,7 +23,7 @@ describe('SectorPropertyEditorComponent', () => {
 
         fixture = TestBed.createComponent(SectorPropertyEditorComponent);
         component = fixture.componentInstance;
-        component.sector = faceSector;
+        fixture.componentRef.setInput('sector', faceSector);
 
         fixture.detectChanges();
     });
