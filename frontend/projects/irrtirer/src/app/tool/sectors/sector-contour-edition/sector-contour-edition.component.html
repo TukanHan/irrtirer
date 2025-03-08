@@ -10,8 +10,8 @@
 </div>
 
 <app-color-picker 
-    [(color)]="sector.color"
-    (colorChange)="onColorChanged()"
+    [(ngModel)]="sector.color"
+    (ngModel)="onColorChanged()"
     [label]="this.translate.instant('tool.sectors.sectorContour.sectorColor')">
 </app-color-picker>
 

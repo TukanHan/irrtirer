@@ -74,6 +74,11 @@
         "fieldRequired": "Field required",
         "maxRadiusLargerThanMin": "Minimum radius is larger than maximum radius",
         "tilesSeriesGenerated": "Tile series generated"
+      },
+      "details": {
+        "tileId": "Tile Id",
+        "tileColor": "Tile color",
+        "tileNoExist": "Tile does not exist"
       }
     },
     "sectors": {

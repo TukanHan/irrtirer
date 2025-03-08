@@ -16,11 +16,8 @@
     }
 
     .no-sectors {
-        display: flex;
-        justify-content: center;
         color: mat.m2-get-color-from-palette(palette.$grey-palette, 300);
-        height: -webkit-fill-available;
-        align-items: center;
+        margin: auto;
     }
 }
 

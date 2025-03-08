@@ -14,6 +14,7 @@ describe('ColorPickerComponent', () => {
     
     fixture = TestBed.createComponent(ColorPickerComponent);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('label', "Color");
     fixture.detectChanges();
   });
 

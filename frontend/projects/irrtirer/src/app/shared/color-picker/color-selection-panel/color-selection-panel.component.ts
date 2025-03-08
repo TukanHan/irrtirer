@@ -26,11 +26,11 @@ export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
 
     public colorChange: OutputEmitterRef<ColorInstance> = output<ColorInstance>();
 
-    hexColor: string = 'blue';
+    protected hexColor: string = 'blue';
 
-    hValue: number = 0;
-    sValue: number = 0;
-    vValue: number = 0;
+    protected hValue: number = 0;
+    protected sValue: number = 0;
+    protected vValue: number = 0;
 
     public ngAfterViewInit(): void {
         this.updateColorCode();

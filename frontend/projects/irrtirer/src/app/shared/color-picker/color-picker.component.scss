@@ -16,7 +16,10 @@
         height: 40px;
         margin-left: auto;
         border-radius: 50%;
-        cursor: pointer;
+
+        &:not(.disabled) {
+            cursor: pointer;
+        }
     }
 
     .color-label {

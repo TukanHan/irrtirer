@@ -10,9 +10,16 @@
 <div class="details">
     @let tile = tileSignal();
     @if(tile) {
-        <div class="id">{{tile.id}}</div>
-        <div class="color">{{tile.color}}</div>
+        <div class="id">
+            <div class="label">{{ 'tool.tiles.details.tileId' | translate }}:</div>
+            <div class="value">{{tile.id}}</div>
+        </div>
+
+        <app-color-picker 
+            disabled="true"
+            [ngModel]="tile.color"
+            [label]="translate.instant('tool.tiles.details.tileColor')"/>
     } @else { 
-        <div>Kafelek nie istnieje</div>
+        <div class="no-exist">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
     }
 </div>

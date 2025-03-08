@@ -41,30 +41,22 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
 
     private isDragging: boolean = false;
 
-    private onMouseDown: (evt: MouseEvent) => void;
+    private onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+        this.isDragging = true;
+        document.body.style.cursor = 'pointer';
+        this.onSliderMouseInteraction(evt);
+    };
 
-    private onMouseUp: (evt: MouseEvent) => void;
+    private onMouseUp: (evt: MouseEvent) => void = () => {
+        this.isDragging = false;
+        document.body.style.cursor = '';
+    };
 
-    private onMouseMove: (evt: MouseEvent) => void;
-
-    constructor() {
-        this.onMouseDown = (evt: MouseEvent) => {
-            this.isDragging = true;
-            document.body.style.cursor = 'pointer';
+    private onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+        if (this.isDragging) {
             this.onSliderMouseInteraction(evt);
-        };
-
-        this.onMouseUp = () => {
-            this.isDragging = false;
-            document.body.style.cursor = '';
-        };
-
-        this.onMouseMove = (evt: MouseEvent) => {
-            if (this.isDragging) {
-                this.onSliderMouseInteraction(evt);
-            }
-        };
-    }
+        }
+    };
 
     private onSliderMouseInteraction(evt: MouseEvent): void {
         const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();

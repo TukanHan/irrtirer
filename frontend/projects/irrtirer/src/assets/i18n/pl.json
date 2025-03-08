@@ -74,6 +74,11 @@
                 "fieldRequired": "Pole wymagane",
                 "maxRadiusLargerThanMin": "Minimalny promień jest większy niż maksymalny",
                 "tilesSeriesGenerated": "Seria kafelków wygenerowana"
+            },
+            "details": {
+                "tileId": "Id kafelka",
+                "tileColor": "Kolor kafelka",
+                "tileNoExist": "Kafelek nie istnieje"
             }
         },
         "sectors": {

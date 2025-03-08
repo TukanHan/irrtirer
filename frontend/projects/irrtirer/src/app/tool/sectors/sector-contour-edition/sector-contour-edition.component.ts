@@ -77,11 +77,11 @@ export class SectorContourEditionComponent implements OnInit {
         this.emitContourChanged();
     }
 
-    cancel(): void {
+    protected cancel(): void {
         this.sectorsContoursService.emitEditedSectorContour(null);
     }
 
-    save(): void {
+    protected save(): void {
         if (this.isSectorValid()) {
             this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: this.sector }));
             this.sectorsContoursService.emitEditedSectorContour(null);
@@ -138,25 +138,25 @@ export class SectorContourEditionComponent implements OnInit {
         this.snackbarService.open(message, this.translate.instant('common.ok'), { duration: 3000 });
     }
 
-    onBoxSelected(vertex: Vector): void {
+    protected onBoxSelected(vertex: Vector): void {
         this.selectedVertex = vertex;
         this.emitContourChanged();
     }
 
-    onColorChanged(): void {
+    protected onColorChanged(): void {
         this.emitContourChanged();
     }
 
-    dropVertexBox(event: CdkDragDrop<string[]>): void {
+    protected dropVertexBox(event: CdkDragDrop<string[]>): void {
         moveItemInArray(this.sector.vertices, event.previousIndex, event.currentIndex);
         this.emitContourChanged();
     }
 
-    getVertexLabel(vertex: Vector): string {
+    protected getVertexLabel(vertex: Vector): string {
         return `(${vertex.x.toFixed(2)}, ${vertex.y.toFixed(2)})`;
     }
 
-    resetSelectedVertex(): void {
+    private resetSelectedVertex(): void {
         this.selectedVertex = this.sector.vertices.length ? this.sector.vertices.at(-1) : null;
     }
 

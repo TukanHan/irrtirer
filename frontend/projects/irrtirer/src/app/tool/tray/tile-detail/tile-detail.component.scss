@@ -1,9 +1,12 @@
+@use '@angular/material' as mat;
 @use './../../../../styles/utils/mixins.scss' as *;
+@use './../../../../theme/gray-palette.scss' as *;
 
 :host {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    height: 100%;
 
     .actions {
         display: flex;
@@ -16,9 +19,28 @@
     }
 
     .details {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+
         .id {
-            font-size: 12px;
-            @include text-ellipsis();
+            padding: 2px;
+            color: mat.m2-get-color-from-palette($grey-palette, 100);
+
+            .label {
+                font-weight: 500;
+            }
+
+            .value {
+                font-size: 12px;
+                @include text-ellipsis();
+            }
+        }
+
+        .no-exist {
+            color: mat.m2-get-color-from-palette($grey-palette, 200);
+            margin: auto;
         }
     }
 }

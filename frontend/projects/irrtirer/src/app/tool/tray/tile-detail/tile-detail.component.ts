@@ -3,12 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TileModel } from '../../../core/models/mosaic-project.model';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { MatButtonModule } from '@angular/material/button';
+import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-tile-detail',
-    imports: [TranslateModule, MatButtonModule],
+    imports: [TranslateModule, MatButtonModule, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
     styleUrl: './tile-detail.component.scss',
 })
@@ -18,7 +20,8 @@ export class TileDetailComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private store: Store,
-        private router: Router
+        private router: Router,
+        protected translate: TranslateService
     ) {}
 
     public ngOnInit(): void {

@@ -1,12 +1,15 @@
 <div class="color-label">
-    <span class="color-label__header">{{label}}</span>
-    <span class="color-label__code">{{colorHexCodeSignal()}}</span>
+    <span class="color-label__header">{{labelSignal()}}</span>
+    <span class="color-label__code">{{hexColorSignal()}}</span>
 </div>
 
-<div role="presentation" class="color-preview" 
-    [ngStyle]="{'background-color': (colorHexCodeSignal())}" 
-    (click)="toggleColorPanel()"    
-    cdkOverlayOrigin #trigger="cdkOverlayOrigin" >
+<div role="presentation" 
+    class="color-preview"
+    [class.disabled]="isDisabledSignal()"
+    [ngStyle]="{'background-color': (hexColorSignal())}" 
+    (click)="toggleColorPanel()"
+    cdkOverlayOrigin 
+    #trigger="cdkOverlayOrigin">
 </div>
 
 <ng-template cdkConnectedOverlay 
@@ -15,5 +18,5 @@
     [cdkConnectedOverlayHasBackdrop]="isOpenSignal()"
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
     (backdropClick)="toggleColorPanel()">
-    <app-color-selection-panel [(color)]="color" (colorChange)="onColorChanged($event)"></app-color-selection-panel>
+    <app-color-selection-panel [color]="hexColorSignal()" (colorChange)="onColorChanged($event)"/>
 </ng-template>
