@@ -11,4 +11,10 @@
             display: none;
         }
     }
+
+    .mat-form-field-disabled {
+        .mat-mdc-form-field-text-suffix {
+            color: var(--mdc-outlined-text-field-disabled-input-text-color);
+        }
+    }
 }

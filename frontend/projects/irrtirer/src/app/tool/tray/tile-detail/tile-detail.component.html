@@ -1,0 +1,18 @@
+<div class="actions">
+    <button mat-flat-button (click)="navigateToMenu()">
+        {{ 'common.return' | translate }}
+    </button>
+    <button mat-flat-button color="accent" disabled>
+        {{ 'common.edit' | translate }}
+    </button>
+</div>
+
+<div class="details">
+    @let tile = tileSignal();
+    @if(tile) {
+        <div class="id">{{tile.id}}</div>
+        <div class="color">{{tile.color}}</div>
+    } @else { 
+        <div>Kafelek nie istnieje</div>
+    }
+</div>

@@ -1,5 +1,8 @@
+@use '@angular/material' as mat;
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
 @use "./../../../../../styles/utils/mixins.scss" as *;
+@use './../../../../../theme/components/button-theme' as *;
+@use './../../../../../theme/gray-palette.scss' as *;
 
 :host {
     @include list-item-box();
@@ -7,5 +10,21 @@
     .label {
         font-size: 12px;
         @include text-ellipsis();
+    }
+
+    .elem-actions {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        margin-left: 4px;
+
+        .elem-action {
+            ::ng-deep {
+                @include icon-button(32px);
+            }
+
+            color: mat.m2-get-color-from-palette($grey-palette, 200);
+            margin: -6px;
+        }
     }
 }

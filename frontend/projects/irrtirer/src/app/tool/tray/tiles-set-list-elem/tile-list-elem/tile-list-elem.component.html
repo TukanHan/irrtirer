@@ -1,3 +1,19 @@
 <span class="label">
     {{ tileSignal().id }}
 </span>
+<div class="elem-actions">
+    <button class="elem-action" mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon matListIcon>
+            more_vert
+        </mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" classList="paddingless">
+        <button mat-menu-item (click)="navigateToTileDetails()">
+            <mat-icon class="material-symbols-outlined" matListIcon>
+                details
+            </mat-icon>
+            {{ 'common.details' | translate }}
+        </button>
+    </mat-menu>
+</div>

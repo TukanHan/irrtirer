@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TileListElemComponent } from './tile-list-elem.component';
 import { tileMock } from '../../../../../test-data/tiles-set.data';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('TileListElemComponent', () => {
     let component: TileListElemComponent;
@@ -8,7 +9,7 @@ describe('TileListElemComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TileListElemComponent],
+            imports: [TileListElemComponent, TranslateModule.forRoot({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TileListElemComponent);

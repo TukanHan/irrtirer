@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, input, InputSignal, OnInit, output, OutputEmitterRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, OnInit, Signal } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -9,12 +9,15 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { Router } from '@angular/router';
+import { ConfigurationService } from '../configuration.service';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
 
 @Component({
-    selector: 'app-project',
+    selector: 'app-config-project',
     imports: [
         TranslateModule,
         MatButtonModule,
@@ -22,16 +25,12 @@ const MAX_WIDTH: number = 1000;
         MatInputModule,
         ReactiveFormsModule
     ],
-    templateUrl: './project.component.html',
-    styleUrl: './project.component.scss',
+    templateUrl: './config-project.component.html',
+    styleUrl: './config-project.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectComponent implements OnInit {
-    public closed: OutputEmitterRef<void> = output();
-
-    public imagePreviewChanged: OutputEmitterRef<MosaicConfig> = output<MosaicConfig>();
-
-    public mosaicConfigSignal: InputSignal<MosaicConfig> = input.required({ alias: 'mosaicConfig' });
+export class ConfigProjectComponent implements OnInit {
+    protected mosaicConfigSignal: Signal<MosaicConfig> = this.store.selectSignal(selectMosaicConfig);
 
     protected projectForm: FormGroup;
 
@@ -40,7 +39,9 @@ export class ProjectComponent implements OnInit {
         private translate: TranslateService,
         private store: Store,
         private destroyRef: DestroyRef,
-        private snackBar: MatSnackBar
+        private snackBar: MatSnackBar,
+        private router: Router,
+        private configService: ConfigurationService
     ) {}
 
     public ngOnInit(): void {
@@ -69,19 +70,19 @@ export class ProjectComponent implements OnInit {
                 const reader = new FileReader();
                 reader.readAsDataURL(valueChange.mosaicImage);
                 reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
-                    this.imagePreviewChanged.emit({
+                    this.configService.emitImageChange({
                         base64Image: readingEvent?.target?.result as string,
                         mosaicWidth: valueChange.mosaicWidth,
-                    });
+                    }, true);
                 };
             } else {
-                this.imagePreviewChanged.emit(null);
+                this.configService.emitImageChange(null, false);
             }
         });
     }
 
-    protected cancel(): void {
-        this.closed.emit();
+    protected navigateToConfiguration(): void {
+        this.router.navigate(['/tool/config']);
     }
 
     protected trySave(): void {
@@ -111,7 +112,7 @@ export class ProjectComponent implements OnInit {
 
             this.createNewProject(project);
             this.snackBar.open(this.translate.instant('tool.config.project.projectCreated'), this.translate.instant('common.ok'), { duration: 2000 });
-            this.closed.emit();
+            this.navigateToConfiguration();
         };
     }
 

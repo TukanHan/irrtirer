@@ -1,12 +1,12 @@
 <div class="list-elem">
     <span>{{tilesSet().name}}</span>
-    <div class="sector-actions">
-        <button class="sector-action" mat-icon-button [matMenuTriggerFor]="menu">
+    <div class="elem-actions">
+        <button class="elem-action" mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon matListIcon>
                 more_vert
             </mat-icon>
         </button>
-        <button class="sector-action toggle-action" mat-icon-button (click)="toggleTilesList()">
+        <button class="elem-action toggle-action" mat-icon-button (click)="toggleTilesList()">
             <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpenSignal()}">
                 keyboard_arrow_up
             </mat-icon>

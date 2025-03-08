@@ -7,12 +7,12 @@
     .list-elem {
         @include list-item-box();
 
-        .sector-actions {
+        .elem-actions {
             display: flex;
             flex-direction: row;
             gap: 12px;
 
-            .sector-action {
+            .elem-action {
                 ::ng-deep {
                     @include icon-button(32px);
                 }

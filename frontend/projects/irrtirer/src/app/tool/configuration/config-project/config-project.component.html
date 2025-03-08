@@ -1,5 +1,5 @@
 <div class="actions">
-    <button mat-flat-button (click)="cancel()">
+    <button mat-flat-button (click)="navigateToConfiguration()">
         {{ 'common.return' | translate }}
     </button>
     <button mat-flat-button color="accent" (click)="trySave()" [hidden]="isReadOnlyMode()">

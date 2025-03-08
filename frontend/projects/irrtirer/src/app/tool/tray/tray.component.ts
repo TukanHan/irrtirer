@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef } from '@angular/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { RouterOutlet } from '@angular/router';
@@ -24,22 +24,25 @@ interface TileWithRadius {
     styleUrl: './tray.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TrayComponent implements ToolView {
+export class TrayComponent implements ToolView, AfterViewInit {
     private tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
 
     private activeCanvas: IActiveCanvas;
 
     constructor(private store: Store, private destroyRef: DestroyRef) {}
 
+    public ngAfterViewInit(): void {
+        queueMicrotask(() => this.subscribeOnTilesSetsChange());
+    }
+
     private subscribeOnTilesSetsChange(): void {
-        this.tilesSets$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((tilesSets) => this.draw(tilesSets.flatMap((tileSet) => tileSet.tiles)));
+        this.tilesSets$
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((tilesSets) => this.draw(tilesSets.flatMap((tileSet) => tileSet.tiles)));
     }
 
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-
-        this.subscribeOnTilesSetsChange();
-
         return { ribbon: [] };
     }
 

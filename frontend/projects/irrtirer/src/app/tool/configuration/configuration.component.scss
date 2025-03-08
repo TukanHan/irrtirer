@@ -1,8 +1,6 @@
 :host {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: block;
     box-sizing: border-box;
-    height: inherit;
+    height: 100%;
     padding: 20px 10px;
 }

@@ -10,6 +10,9 @@ import { sectorsSelectedGuard } from './core/guards/sectors-selected.guard';
 import { ConfigurationComponent } from './tool/configuration/configuration.component';
 import { TrayMenuComponent } from './tool/tray/tray-menu/tray-menu.component';
 import { RandomTilesComponent } from './tool/tray/random-tiles/random-tiles.component';
+import { ConfigMenuComponent } from './tool/configuration/config-menu/config-menu.component';
+import { ConfigProjectComponent } from './tool/configuration/config-project/config-project.component';
+import { TileDetailComponent } from './tool/tray/tile-detail/tile-detail.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'project', pathMatch: 'full' },
@@ -18,7 +21,14 @@ export const routes: Routes = [
         component: ToolComponent,
         children: [
             { path: '', redirectTo: 'config', pathMatch: 'full' },
-            { path: 'config', component: ConfigurationComponent },
+            {
+                path: 'config',
+                component: ConfigurationComponent,
+                children: [
+                    { path: '', component: ConfigMenuComponent },
+                    { path: 'project', component: ConfigProjectComponent },
+                ],
+            },
             {
                 path: 'tray',
                 component: TrayComponent,
@@ -26,6 +36,7 @@ export const routes: Routes = [
                 children: [
                     { path: '', component: TrayMenuComponent },
                     { path: 'random', component: RandomTilesComponent },
+                    { path: 'tile/:id', component: TileDetailComponent },
                 ],
             },
             { path: 'sectors', component: SectorsComponent, canActivate: [projectExistGuard] },
