@@ -9,6 +9,8 @@ import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Store } from '@ngrx/store';
+import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
 
 @Component({
     selector: 'app-toolbar',
@@ -31,7 +33,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class ToolbarComponent implements OnInit {
     protected selectedLanguageSignal: WritableSignal<string> = signal(this.translate.currentLang);
 
-    constructor(private translate: TranslateService, private destroyRef: DestroyRef) {}
+    constructor(private translate: TranslateService, private destroyRef: DestroyRef, private store: Store) {}
 
     public ngOnInit(): void {
         this.translate.onLangChange
@@ -41,5 +43,6 @@ export class ToolbarComponent implements OnInit {
 
     public languageChanged(selected: MatRadioChange): void {
         this.translate.use(selected.value);
+        this.store.dispatch(UserPreferencesActions.languageChanged({ lang: selected.value }));
     }
 }

@@ -8,6 +8,7 @@ import { mosaicProjectReducer } from './core/state/mosaic-project/mosaic-project
 import { storageMetaReducer } from './core/state/storage-meta-reducer';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { userPreferencesReducer } from './core/state/user-preferences/user-preferences.reducer';
 
 function httpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -21,6 +22,7 @@ export const appConfig: ApplicationConfig = {
         provideStore(
             {
                 mosaicProject: mosaicProjectReducer,
+                userPreferences: userPreferencesReducer
             },
             {
                 metaReducers: [storageMetaReducer],
