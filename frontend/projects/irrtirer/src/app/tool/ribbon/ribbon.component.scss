@@ -21,7 +21,7 @@
 
     .action {
         ::ng-deep {
-            @include icon-button(38px, 30px);
+            @include icon-button(32px, 24px);
         }
 
         color: mat.m2-get-color-from-palette($grey-palette, 200);

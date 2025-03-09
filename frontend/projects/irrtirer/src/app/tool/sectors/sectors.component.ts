@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, DestroyRef, OnInit, Signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, OnInit, signal, Signal, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
@@ -18,6 +18,8 @@ import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
+import { ImageObject } from '../../shared/canvas-objects/image-object';
+import { RibbonAction } from '../ribbon/ribbon-action.interface';
 
 @Component({
     selector: 'app-sectors',
@@ -43,6 +45,19 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     sectorForPropertyEditionSignal: Signal<EditedSectorWithTriangulationMesh>;
 
+    private imageObject: ImageObject;
+
+    protected ribbonActions: RibbonAction[] = [
+        {
+            iconName: 'recenter',
+            visibility: signal('on'),
+            onClick: () => {
+                this.focusOnImage();
+                this.activeCanvas.redraw();
+            } 
+        }
+    ]
+
     constructor(
         private store: Store,
         private service: SectorsContoursService,
@@ -60,8 +75,8 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
 
-        const imageObject = await ToolService.createImageObject(mosaicConfig);
-        this.activeCanvas.addCanvasObject(imageObject);
+        this.imageObject = await ToolService.createImageObject(mosaicConfig);
+        this.activeCanvas.addCanvasObject(this.imageObject);
 
         this.subscribeOnEditedSectorChange();
         this.subscribeOnEditedSectorPropertiesChange();
@@ -169,6 +184,11 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-        return { ribbon: [] };
+        return { ribbon: this.ribbonActions };
+    }
+
+    private focusOnImage(): void {
+        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport);
+        this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }

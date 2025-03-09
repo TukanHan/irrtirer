@@ -1,7 +1,9 @@
-import { WritableSignal } from "@angular/core";
+import { Signal } from "@angular/core";
+
+export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden'
 
 export class RibbonAction {
-    isActive: WritableSignal<boolean>;
+    visibility: Signal<ActionVisibility>;
     onClick: () => void;
     iconName: string;
 }

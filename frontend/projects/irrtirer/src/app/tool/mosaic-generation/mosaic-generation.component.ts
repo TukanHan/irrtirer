@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, OnDestroy, signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, OnDestroy, signal, WritableSignal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
@@ -46,20 +46,28 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
     protected progressStateSignal: WritableSignal<InfoState> = signal(null);
 
-    private imageCanvasObject: ImageObject;
+    private imageObject: ImageObject;
 
     private availableTiles: TileModel[];
 
     protected ribbonActions: RibbonAction[] = [
         {
+            iconName: 'recenter',
+            visibility: signal('on'),
+            onClick: () => {
+                this.focusOnImage();
+                this.activeCanvas.redraw();
+            } 
+        },
+        {
             iconName: 'graph_3',
             onClick: () => this.toggleMeshVisibility(),
-            isActive: this.isMeshVisibleSignal
+            visibility: computed(() =>  this.isMeshVisibleSignal() ? 'on' : 'off'),
         },
         {
             iconName: 'image',
             onClick: () => this.toggleImageVisibility(),
-            isActive: this.isImageVisibleSignal
+            visibility: computed(() => this.isImageVisibleSignal() ? 'on' : 'off'), 
         }
     ];
 
@@ -77,9 +85,9 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
     public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
 
-        this.imageCanvasObject = await ToolService.createImageObject(mosaicConfig);
-        this.imageCanvasObject.setVisibility(this.isImageVisibleSignal());
-        this.activeCanvas.addCanvasObject(this.imageCanvasObject);
+        this.imageObject = await ToolService.createImageObject(mosaicConfig);
+        this.imageObject.setVisibility(this.isImageVisibleSignal());
+        this.activeCanvas.addCanvasObject(this.imageObject);
 
         this.activeCanvas.redraw();
 
@@ -89,7 +97,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
         this.subscribeOnMeshVisibilityChange();
 
         this.initSectors();
-        this.initGeneration(mosaicConfig.base64Image, this.imageCanvasObject.size);
+        this.initGeneration(mosaicConfig.base64Image, this.imageObject.size);
     }
 
     private initGeneration(base64Image: string, imageSize: Size): void {
@@ -239,7 +247,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
     protected toggleImageVisibility(): void {
         const isVisible = !this.isImageVisibleSignal();
-        this.imageCanvasObject.setVisibility(isVisible);
+        this.imageObject.setVisibility(isVisible);
         this.activeCanvas.redraw();
         this.isImageVisibleSignal.set(isVisible);
     }
@@ -256,5 +264,10 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
         return { ribbon: this.ribbonActions };
+    }
+
+    private focusOnImage(): void {
+        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport);
+        this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }
