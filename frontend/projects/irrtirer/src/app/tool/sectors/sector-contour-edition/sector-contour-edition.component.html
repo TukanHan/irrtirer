@@ -2,29 +2,29 @@
     <button mat-flat-button (click)="cancel()">{{ 'common.cancel' | translate }}</button>
     <button mat-flat-button color="accent" (click)="save()">{{ 'common.confirm' | translate }}</button>
 </div>
-<div class="data">
-    <mat-form-field appearance="outline" class="density-3">
+
+<div class="info">
+    <mat-form-field appearance="outline" class="density-3" subscriptSizing="dynamic">
         <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
         <input matInput [(ngModel)]="sector.name" required>
     </mat-form-field>
+
+    <app-color-picker 
+        [(ngModel)]="sector.color"
+        (ngModel)="onColorChanged()"
+        [label]="this.translate.instant('tool.sectors.sectorContour.sectorColor')"/>
+
+    @if(sector.vertices?.length) {
+        <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
+            @for (vertex of sector.vertices; track vertex) {
+                <div class="vertex-box" [class.selected]="vertex === selectedVertex" cdkDrag (mousedown)="onBoxSelected(vertex)">{{getVertexLabel(vertex)}}
+                    <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
+                        <mat-icon matListIcon>close</mat-icon>
+                    </button>
+                </div>
+            }
+        </div>
+    } @else { 
+        <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
+    }
 </div>
-
-<app-color-picker 
-    [(ngModel)]="sector.color"
-    (ngModel)="onColorChanged()"
-    [label]="this.translate.instant('tool.sectors.sectorContour.sectorColor')">
-</app-color-picker>
-
-@if(sector.vertices?.length) {
-    <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
-        @for (vertex of sector.vertices; track vertex) {
-            <div class="vertex-box" [class.selected]="vertex === selectedVertex" cdkDrag (mousedown)="onBoxSelected(vertex)">{{getVertexLabel(vertex)}}
-                <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
-                    <mat-icon matListIcon>close</mat-icon>
-                </button>
-            </div>
-        }
-    </div>
-} @else { 
-    <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
-}

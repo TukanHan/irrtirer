@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TileDetailComponent } from './tile-detail.component';
+import { RouterModule } from '@angular/router';
+import { provideMockStore } from '@ngrx/store/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('TileDetailComponent', () => {
     let component: TileDetailComponent;
@@ -7,7 +10,8 @@ describe('TileDetailComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TileDetailComponent],
+            imports: [TileDetailComponent, RouterModule.forRoot([]), TranslateModule.forRoot({})],
+            providers: [provideMockStore()]
         }).compileComponents();
 
         fixture = TestBed.createComponent(TileDetailComponent);

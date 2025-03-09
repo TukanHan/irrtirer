@@ -1,7 +1,7 @@
+@use './../../../styles/utils/mixins.scss' as *;
+
 :host {
-    display: block;
-    width: 100%;
-    height: 100%;
+    @include tool-panel();
 
     .info {
         position: absolute;

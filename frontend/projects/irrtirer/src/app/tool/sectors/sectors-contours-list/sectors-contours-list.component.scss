@@ -4,15 +4,14 @@
 @use "./../../../../theme/components/button-theme" as *;
 
 :host {
-    padding: 20px 10px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     height: 100%;
-    box-sizing: border-box;
 
-    .add-sector {
-        width: 100%;
-        margin-bottom: 20px;
+    .actions {
+        display: flex;
+        flex-direction: column;
     }
 
     .no-sectors {
@@ -25,9 +24,6 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    overflow: auto;
-    max-width: 100%;
-    height: -webkit-fill-available;
 
     .sector-box {
         @include list-item-box();

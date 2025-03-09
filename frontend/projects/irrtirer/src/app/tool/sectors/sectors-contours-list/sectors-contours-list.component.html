@@ -1,6 +1,8 @@
-<button mat-flat-button color="accent" class="add-sector" (click)="addNewSector()">
-  {{ 'tool.sectors.contourList.addSector' | translate }}
-</button>
+<div class="actions">
+  <button mat-flat-button color="accent" (click)="addNewSector()">
+    {{ 'tool.sectors.contourList.addSector' | translate }}
+  </button>
+</div>
 
 @let sectors = sectorsSignal();
 @if(sectors.length) {

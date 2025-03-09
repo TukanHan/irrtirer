@@ -2,15 +2,19 @@ import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { provideMockStore } from '@ngrx/store/testing';
+
+const initialState = {
+    userPreferences: {
+        lang: 'pl',
+    },
+};
 
 describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                AppComponent,
-                RouterModule.forRoot([]),
-                TranslateModule.forRoot({})
-            ],
+            imports: [AppComponent, RouterModule.forRoot([]), TranslateModule.forRoot({})],
+            providers: [provideMockStore({ initialState })],
         }).compileComponents();
     });
 
