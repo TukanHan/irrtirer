@@ -50,8 +50,9 @@
                 "mosaicWidth": "Szerokość mozaiki",
                 "projectCreated": "Projekt utworzony",
                 "selectImageErrorMessage": "Konieczne jest wybranie obrazka",
-                "mosaicMaxWithErrorMessage": "Szerokość nie może być większa niż {{width}} cm",
-                "mosaicMinWithErrorMessage": "Szerokość nie może być mniejsza niż {{width}} cm"
+                "mosaicMaxWidthErrorMessage": "Szerokość nie może być większa niż {{width}} cm",
+                "mosaicMinWidthErrorMessage": "Szerokość nie może być mniejsza niż {{width}} cm",
+                "mosaicWidthRequiredErrorMessage": "Szerokość mozaiki jest wymagana"
             }
         },
         "tiles": {

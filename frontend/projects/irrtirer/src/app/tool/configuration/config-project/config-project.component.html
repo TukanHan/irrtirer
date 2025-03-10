@@ -24,5 +24,6 @@
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
         <input matInput type="number" formControlName="mosaicWidth">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+        <mat-error>{{ getErrorLabel(projectForm.get('mosaicWidth')) }}</mat-error>
     </mat-form-field>
 </form>

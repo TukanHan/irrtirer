@@ -13,6 +13,7 @@ import { ImageHelper } from '../../../core/helpers/image-helper';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { FormHelper } from '../../../core/helpers/form-helper';
 
 @Component({
     selector: 'app-random-tiles',
@@ -77,15 +78,7 @@ export class RandomTilesComponent implements OnInit {
     }
 
     protected getErrorLabel(control: AbstractControl): string {
-        if (control.errors) {
-            for (const key of Object.keys(control.errors)) {
-                if (control.errors[key] && key in this.errorLabels) {
-                    return this.errorLabels[key]();
-                }
-            }
-        }
-
-        return null;
+        return FormHelper.getErrorLabel(control, this.errorLabels);
     }
 
     public async getTileSet(): Promise<void> {

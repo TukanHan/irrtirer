@@ -50,8 +50,9 @@
         "mosaicWidth": "Mosaic width",
         "projectCreated": "Project created",
         "selectImageErrorMessage": "An image must be selected",
-        "mosaicMaxWithErrorMessage": "The width cannot be greater than {{width}} cm",
-        "mosaicMinWithErrorMessage": "The width cannot be less than {{width}} cm"
+        "mosaicMaxWidthErrorMessage": "The width cannot be greater than {{width}} cm",
+        "mosaicMinWidthErrorMessage": "The width cannot be less than {{width}} cm",
+        "mosaicWidthRequiredErrorMessage": "Mosaic width is required"
       }
     },
     "tiles": {

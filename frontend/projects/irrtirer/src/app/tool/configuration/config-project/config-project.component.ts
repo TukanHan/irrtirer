@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, OnInit, Signal } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -12,6 +12,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
+import { FormHelper } from '../../../core/helpers/form-helper';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
@@ -33,6 +34,12 @@ export class ConfigProjectComponent implements OnInit {
     protected mosaicConfigSignal: Signal<MosaicConfig> = this.store.selectSignal(selectMosaicConfig);
 
     protected projectForm: FormGroup;
+
+    private errorLabels: { [key: string]: () => string } = {
+        min: () => this.translate.instant('tool.config.project.mosaicMinWidthErrorMessage', { width: MIN_WIDTH }),
+        max: () => this.translate.instant('tool.config.project.mosaicMaxWidthErrorMessage', { width: MAX_WIDTH }),
+        required: () => this.translate.instant('tool.config.project.mosaicWidthRequiredErrorMessage')
+    };
 
     constructor(
         private formBuilder: FormBuilder,
@@ -123,13 +130,15 @@ export class ConfigProjectComponent implements OnInit {
     private getErrorMessage(): string {
         if (!this.projectForm.get('mosaicImage').valid) {
             return this.translate.instant('tool.config.project.selectImageErrorMessage');
-        } else if (this.projectForm.get('mosaicWidth').errors['max']) {
-            return this.translate.instant('tool.config.project.mosaicMaxWithErrorMessage', { width: MAX_WIDTH });
-        } else if (this.projectForm.get('mosaicWidth').errors['min']) {
-            return this.translate.instant('tool.config.project.mosaicMinWithErrorMessage', { width: MIN_WIDTH });
+        } else if (this.projectForm.get('mosaicWidth')) {
+            return this.getErrorLabel(this.projectForm.get('mosaicWidth'));
         }
 
         return null;
+    }
+    
+    protected getErrorLabel(control: AbstractControl): string {
+        return FormHelper.getErrorLabel(control, this.errorLabels);
     }
 
     protected onImageSelected(event: Event): void {
