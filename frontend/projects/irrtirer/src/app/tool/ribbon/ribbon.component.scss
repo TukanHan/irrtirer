@@ -13,8 +13,8 @@
     padding: 0 20px;
     gap: 6px;
 
-    .zoom {
-        width: 150px;
+    .size-display {
+        color: mat.m2-get-color-from-palette($grey-palette, 200);
         text-align: right;
         margin-left: auto;
     }

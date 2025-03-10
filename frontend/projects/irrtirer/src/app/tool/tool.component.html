@@ -30,7 +30,7 @@
         <div class="content">
             <app-ribbon 
                 [actions]="ribbonActionsSignal()" 
-                [zoom]="activeCanvas?.viewport?.zoom ?? 1"/>
+                [viewportSize]="activeCanvas?.viewport?.cmSize"/>
             <div class="main">
                 <ac-active-canvas #activeCanvas class="canvas"/>
                 <div class="panel">

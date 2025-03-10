@@ -13,7 +13,7 @@ describe('RibbonComponent', () => {
 
         fixture = TestBed.createComponent(RibbonComponent);
         component = fixture.componentInstance;
-        fixture.componentRef.setInput('zoom', 1);
+        fixture.componentRef.setInput('viewportSize', { with: 2.32, height: 1.23 });
         fixture.componentRef.setInput('actions', []);
         fixture.detectChanges();
     });
