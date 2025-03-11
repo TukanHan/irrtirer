@@ -21,8 +21,6 @@ export class SectorsContoursService {
     public readonly sectorForPropertyEdition$: Observable<EditedSectorWithTriangulationMesh | null> =
         this.sectorForPropertyEditionChanged.asObservable();
 
-    constructor() {}
-
     public emitEditedSectorContour(sectorContour: EditedSectorContour): void {
         this.sectorForContourEditionChanged.next(sectorContour);
     }

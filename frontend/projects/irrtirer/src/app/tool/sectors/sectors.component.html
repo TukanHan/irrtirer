@@ -1,13 +1,10 @@
 @if(sectorForContourEditionSignal()) {
     <app-sector-contour-edition 
-        #sectorContourEditionPanel 
-        [sectorContour]="sectorForContourEditionSignal()">
-    </app-sector-contour-edition>
+        #sectorContourEditionPanel
+        [sectorContour]="sectorForContourEditionSignal()"/>
 } @else if(sectorForPropertyEditionSignal()) {
     <app-sector-property-editor 
-        [sector]="sectorForPropertyEditionSignal().sector">
-    </app-sector-property-editor>
+        [sector]="sectorForPropertyEditionSignal().sector"/>
 } @else {
-    <app-sectors-contours-list>
-    </app-sectors-contours-list>
+    <app-sectors-contours-list/>
 }
