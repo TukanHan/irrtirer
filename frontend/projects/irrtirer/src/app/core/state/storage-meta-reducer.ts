@@ -42,7 +42,7 @@ function restoreStateModelObjects(state: { mosaicProject: MosaicProjectModel}): 
         state.mosaicProject.tilesSets.forEach((tilesSet: TilesSet) => {
             tilesSet.tiles.forEach((tile) => {
                 tile.vertices.forEach((vector) => Vector.restore(vector));
-            })
+            });
         });
     }
 }

@@ -2,10 +2,10 @@ import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../.
 
 
 export class OpenedContourObject extends BaseCanvasObject implements CanvasObject {
-    vertices: IVector[];
-    selectedIndex: number;
-    hexColor: string;
-    order: number;
+    private vertices: IVector[];
+    private selectedIndex: number;
+    private hexColor: string;
+    private order: number;
 
     constructor(vertices: IVector[], selectedIndex: number, hexColor: string, order: number = 100) {
         super();

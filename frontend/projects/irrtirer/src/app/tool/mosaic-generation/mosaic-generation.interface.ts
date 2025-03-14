@@ -10,8 +10,8 @@ export class GeneratedSectorModel {
     countOfSections?: number;
     sections: GeneratedSectionModel[] = [];
 
-    tilesSub: BehaviorSubject<GeneratedTileModel[]> = new BehaviorSubject([]);
-    tiles$: Observable<GeneratedTileModel[]> = this.tilesSub.asObservable();
+    private readonly tilesSub: BehaviorSubject<GeneratedTileModel[]> = new BehaviorSubject([]);
+    public readonly tiles$: Observable<GeneratedTileModel[]> = this.tilesSub.asObservable();
 
     private areTilesVisible: boolean = true;
 

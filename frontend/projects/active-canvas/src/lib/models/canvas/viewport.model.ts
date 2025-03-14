@@ -7,32 +7,32 @@ export class Viewport {
     /**
      * Position of canvas center in unit
      */
-    readonly position: IVector;
+    public readonly position: IVector;
 
     /**
      * Zoom of viewport
      */
-    readonly zoom: number;
+    public readonly zoom: number;
 
     /**
      * Size of canvas in px
      */
-    readonly pxSize: Size;
+    public readonly pxSize: Size;
 
     /**
      * Size of canvas in unit
      */
-    readonly cmSize: Size;
+    public readonly cmSize: Size;
 
     /**
      * Position of canvas point (0,0) in unit system
      */
-    readonly startWorldPos: IVector;
+    public readonly startWorldPos: IVector;
 
     /**
      * Position of canvas point (w,h) in unit system
      */
-    readonly endWorldPos: IVector;
+    public readonly endWorldPos: IVector;
 
     constructor(position: IVector, zoom: number, pxSize: Size) {
         this.position = position;

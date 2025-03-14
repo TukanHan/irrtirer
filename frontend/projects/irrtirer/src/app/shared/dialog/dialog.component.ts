@@ -12,8 +12,8 @@ import { TranslateService } from '@ngx-translate/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DialogComponent {
-    noLabel: string = this.data.noCustomLabel ?? this.translate.instant('common.no');
-    yesLabel: string = this.data.yesCustomLabel ?? this.translate.instant('common.yes');
+    protected noLabel: string = this.data.noCustomLabel ?? this.translate.instant('common.no');
+    protected yesLabel: string = this.data.yesCustomLabel ?? this.translate.instant('common.yes');
 
     constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData, private translate: TranslateService) {}
 }

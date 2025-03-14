@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
-import { getPolygonTriangulationMeshApiAddres } from '../constants/api';
+import { getPolygonTriangulationMeshApiAddress } from '../constants/api';
 import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '../models/api/api.models';
 
 @Injectable({
@@ -10,7 +10,7 @@ import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '.
 export class DataService {
     constructor(private http: HttpClient) {}
 
-    getPolygonTriangulationMesh(sectorTriangulationData: SectorTriangulationRequestModel): Observable<SectorTriangulationMeshModel> {
+    public getPolygonTriangulationMesh(sectorTriangulationData: SectorTriangulationRequestModel): Observable<SectorTriangulationMeshModel> {
         const options = {
             headers: new HttpHeaders({
                 'Content-Type': 'application/json',
@@ -19,7 +19,7 @@ export class DataService {
         };
 
         return this.http
-            .post<SectorTriangulationMeshModel>(getPolygonTriangulationMeshApiAddres(), sectorTriangulationData, options)
+            .post<SectorTriangulationMeshModel>(getPolygonTriangulationMeshApiAddress(), sectorTriangulationData, options)
             .pipe(tap((response: SectorTriangulationMeshModel) => SectorTriangulationMeshModel.restore(response)));
     }
 }

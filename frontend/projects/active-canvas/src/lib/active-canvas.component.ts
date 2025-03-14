@@ -79,14 +79,14 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     private configureGrid(): void {
-        this.canvasObjects = this.canvasObjects.filter(object => object !== this.gridObject);
+        this.canvasObjects = this.canvasObjects.filter((object) => object !== this.gridObject);
 
-        if(this._options.showGrid) {
+        if (this._options.showGrid) {
             this.gridObject = new GridObject();
-            if(this._options.canvasGridColor) {
+            if (this._options.canvasGridColor) {
                 this.gridObject.gridBaseColor = this._options.canvasGridColor;
             }
-           
+
             this.addCanvasObject(this.gridObject);
         }
     }
@@ -125,15 +125,15 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.cd.markForCheck();
     };
 
-    private onMouseMove = (evt: MouseEvent) => {
+    private onMouseMove = (event: MouseEvent) => {
         if (this._options?.isMovable === false) {
             return;
         }
 
         if (this.isDragging) {
             const newPosition: Vector = new Vector(
-                this._viewport.position.x - UnitConverter.pxToCm(evt.movementX) * this._viewport.zoom,
-                this._viewport.position.y - UnitConverter.pxToCm(evt.movementY) * this._viewport.zoom
+                this._viewport.position.x - UnitConverter.pxToCm(event.movementX) * this._viewport.zoom,
+                this._viewport.position.y - UnitConverter.pxToCm(event.movementY) * this._viewport.zoom
             );
 
             this._viewport = new Viewport(newPosition, this._viewport.zoom, this._viewport.pxSize);
@@ -171,8 +171,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
             zoom ?? this._viewport.zoom,
             this._viewport.pxSize
         );
-        
-        if(redraw) {
+
+        if (redraw) {
             this.redraw();
         }
     }
@@ -182,7 +182,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvasObjects.sort((a, b) => a.getOrder() - b.getOrder());
         addedObject.setParent(this);
 
-        if(redraw) {
+        if (redraw) {
             this.redraw();
         }
     }
@@ -193,8 +193,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     public removeObjects(redraw: boolean = false): void {
-        this.canvasObjects = this.canvasObjects.filter(object => object === this.gridObject);
-        if(redraw) {
+        this.canvasObjects = this.canvasObjects.filter((object) => object === this.gridObject);
+        if (redraw) {
             this.redraw();
         }
     }

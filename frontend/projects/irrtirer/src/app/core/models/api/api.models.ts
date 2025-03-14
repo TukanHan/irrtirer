@@ -52,7 +52,7 @@ export interface TileRequestModel {
 
 export class SectionGenerationResult {
     sectorId: string;
-    tilesTransforms: TileTransformResult[]
+    tilesTransforms: TileTransformResult[];
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);

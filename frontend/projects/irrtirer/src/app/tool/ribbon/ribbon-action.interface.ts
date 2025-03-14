@@ -2,7 +2,7 @@ import { Signal } from "@angular/core";
 
 export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden'
 
-export class RibbonAction {
+export interface RibbonAction {
     visibility: Signal<ActionVisibility>;
     onClick: () => void;
     iconName: string;

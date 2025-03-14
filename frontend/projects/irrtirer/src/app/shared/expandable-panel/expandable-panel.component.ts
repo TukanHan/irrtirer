@@ -17,16 +17,16 @@ import { ChangeDetectionStrategy, Component, HostBinding, input, InputSignal, Vi
     ],
 })
 export class ExpandablePanelComponent {
-    public isOpenSignal: InputSignal<boolean> = input.required({alias: 'isOpen'});
+    public isOpen: InputSignal<boolean> = input.required();
 
     @HostBinding('@expand')
     protected get getExpandAnimationState(): unknown {
-        const isOpen: boolean = this.isOpenSignal();
+        const isOpen: boolean = this.isOpen();
 
         return { 
             value: isOpen ? 'open' : 'closed',
             params: { timing: this.calcExpandingTime(this.hostNativeElement.scrollHeight, isOpen) }
-        }
+        };
     }
 
     private hostNativeElement: HTMLElement;

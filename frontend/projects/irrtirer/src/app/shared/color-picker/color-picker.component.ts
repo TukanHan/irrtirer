@@ -20,7 +20,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorPickerComponent implements ControlValueAccessor {
-    public labelSignal: InputSignal<string> = input.required({ alias: 'label' });
+    public label: InputSignal<string> = input.required();
 
     protected hexColorSignal: WritableSignal<string> = signal('#000000');
 

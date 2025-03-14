@@ -30,7 +30,28 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "warn",
+          {
+            "overrides": {
+              "constructors": "no-public"
+            }
+          }
+        ],
+        "@typescript-eslint/explicit-function-return-type": [
+          "warn",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "curly": "error",
+        "semi": "warn",
+        "no-unused-vars": ["error", { "args": "none" }],
+        "prefer-const": "warn",
+        "no-var": "error",
+        "no-duplicate-imports": "error",
+        "consistent-return": "error"
       }
     },
     {

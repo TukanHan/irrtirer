@@ -32,18 +32,16 @@ import { RibbonAction } from '../ribbon/ribbon-action.interface';
     styleUrl: './sectors.component.scss'
 })
 export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
-    canvasMode: 'movement' | 'selection' = 'movement';
-
-    activeCanvas: IActiveCanvas;
+    private activeCanvas: IActiveCanvas;
 
     @ViewChild('sectorContourEditionPanel')
-    sectorContourEditionPanel: SectorContourEditionComponent;
+    protected sectorContourEditionPanel: SectorContourEditionComponent;
 
-    visualElements: CanvasObject[] = [];
+    private visualElements: CanvasObject[] = [];
 
-    sectorForContourEditionSignal: Signal<EditedSectorContour>;
+    protected sectorForContourEditionSignal: Signal<EditedSectorContour>;
 
-    sectorForPropertyEditionSignal: Signal<EditedSectorWithTriangulationMesh>;
+    protected sectorForPropertyEditionSignal: Signal<EditedSectorWithTriangulationMesh>;
 
     private imageObject: ImageObject;
 
@@ -56,7 +54,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
                 this.activeCanvas.redraw();
             } 
         }
-    ]
+    ];
 
     constructor(
         private store: Store,
@@ -91,7 +89,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private subscribeOnEditedSectorChange(): void {
         this.service.sectorForContourEdition$
             .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((s) => this.onEditedSectorChanged(s))
+            .subscribe((s) => this.onEditedSectorChanged(s));
     }
 
     private subscribeOnEditedSectorPropertiesChange(): void {
@@ -103,17 +101,17 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private subscribeOnSectorListChange(): void {
         this.service.sectorListChange$
             .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.redrawSectors())
+            .subscribe(() => this.redrawSectors());
     }
 
-    onCanvasClicked(point: IVector): void {
+    private onCanvasClicked(point: IVector): void {
         const selectedSector: EditedSectorContour = this.sectorForContourEditionSignal();
         if (selectedSector) {
             this.sectorContourEditionPanel.addVertex(new Vector(point.x, point.y));
         }
     }
 
-    onEditedSectorChanged(sector: EditedSectorContour): void {
+    private onEditedSectorChanged(sector: EditedSectorContour): void {
         this.activeCanvas.options = {
             isMovable: !sector,
         };

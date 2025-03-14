@@ -104,7 +104,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         window.addEventListener('mousemove', this.onMouseMove);
     }
 
-    public ngOnChanges() {
+    public ngOnChanges(): void {
         if (this.canvas) {
             this.updateColorCanvas();
         }

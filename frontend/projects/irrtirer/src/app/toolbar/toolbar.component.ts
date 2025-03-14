@@ -41,7 +41,7 @@ export class ToolbarComponent implements OnInit {
             .subscribe((languageChange) => this.selectedLanguageSignal.set(languageChange.lang));
     }
 
-    public languageChanged(selected: MatRadioChange): void {
+    protected languageChanged(selected: MatRadioChange): void {
         this.translate.use(selected.value);
         this.store.dispatch(UserPreferencesActions.languageChanged({ lang: selected.value }));
     }

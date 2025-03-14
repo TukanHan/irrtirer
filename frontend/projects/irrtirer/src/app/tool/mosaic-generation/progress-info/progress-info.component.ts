@@ -8,13 +8,13 @@ import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.int
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressInfoComponent {
-    infoState: InputSignal<InfoState> = input.required<InfoState>();
+    public infoState: InputSignal<InfoState> = input.required<InfoState>();
 
-    isProgressInfo(state: InfoState): state is ProgressInfoState {
+    protected isProgressInfo(state: InfoState): state is ProgressInfoState {
         return state.type === 'progress';
     }
 
-    isInitInfo(state: InfoState): state is InitInfoState {
+    protected isInitInfo(state: InfoState): state is InitInfoState {
         return state.type === 'init';
     }
 }

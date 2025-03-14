@@ -29,7 +29,7 @@ describe('SectorContourEditionComponent', () => {
         component.sectorContour = {
             sector: faceSector,
             selectedVertex: null
-        }
+        };
 
         fixture.detectChanges();
     });

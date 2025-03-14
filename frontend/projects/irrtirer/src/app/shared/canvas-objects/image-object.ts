@@ -1,15 +1,14 @@
 import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from "../../../../../active-canvas/src/public-api";
 import { Vector } from "../../core/models/math/vector.model";
 
-
 export class ImageObject extends BaseCanvasObject implements CanvasObject {
-    image: HTMLImageElement;
+    private image: HTMLImageElement;
 
-    position: IVector;
+    private position: IVector;
 
     size: Size;
 
-    order: number;
+    private order: number;
 
     constructor(image: HTMLImageElement, position: IVector, size: Size, order: number = 0) {
         super();
@@ -23,7 +22,7 @@ export class ImageObject extends BaseCanvasObject implements CanvasObject {
         return this.order;
     }
 
-    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport) {
+    public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         const viewCmWidth = UnitConverter.pxToCm(viewport.pxSize.width) * viewport.zoom;
         const viewCmHeight = UnitConverter.pxToCm(viewport.pxSize.height) * viewport.zoom;
 

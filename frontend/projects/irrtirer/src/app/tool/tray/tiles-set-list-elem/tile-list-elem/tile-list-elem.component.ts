@@ -13,11 +13,11 @@ import { TranslateModule } from '@ngx-translate/core';
     styleUrl: './tile-list-elem.component.scss',
 })
 export class TileListElemComponent {
-    public tileSignal: InputSignal<TileModel> = input.required({ alias: 'tile' });
+    public tile: InputSignal<TileModel> = input.required();
 
     constructor(private router: Router) {}
 
     protected navigateToTileDetails(): void {
-        this.router.navigate([`/tool/tray/tile/${this.tileSignal().id}`]);
+        this.router.navigate([`/tool/tray/tile/${this.tile().id}`]);
     }
 }

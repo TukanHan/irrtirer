@@ -12,7 +12,7 @@ import { selectUserLang } from './core/state/user-preferences/user-preferences.s
     styleUrl: './app.component.scss',
 })
 export class AppComponent {
-    title = 'irrtirer';
+    public title: string = 'Irrtirer';
 
     constructor(private translate: TranslateService, private store: Store) {
         this.translate.addLangs(['pl', 'en']);

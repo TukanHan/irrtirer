@@ -39,7 +39,7 @@ export class ConfigurationComponent implements ToolView, AfterViewInit {
                 this.activeCanvas.redraw();
             } 
         }
-    ]
+    ];
 
     constructor(
         private store: Store,

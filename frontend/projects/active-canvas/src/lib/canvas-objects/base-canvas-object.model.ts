@@ -7,9 +7,9 @@ export abstract class BaseCanvasObject implements CanvasObject {
 
     protected isVisible: boolean = true;
 
-    abstract drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void;
+    public abstract drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void;
 
-    abstract getOrder(): number;
+    public abstract getOrder(): number;
 
     public setParent(activeCanvas: IActiveCanvas): void {
         this.parentCanvas = activeCanvas;

@@ -12,17 +12,17 @@ import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/ex
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExtendedPanelComponent implements OnInit {
-    labelSignal: InputSignal<string> = input.required({ alias: 'label' });
+    public label: InputSignal<string> = input.required();
 
-    shouldBeOpenSignal: InputSignal<boolean> = input(true, { alias: 'shouldBeOpen' });
+    public shouldBeOpen: InputSignal<boolean> = input(true);
 
-    isOpenSignal: WritableSignal<boolean> = signal(true);
+    protected isOpenSignal: WritableSignal<boolean> = signal(true);
 
-    ngOnInit(): void {
-        this.isOpenSignal.set(this.shouldBeOpenSignal());
+    public ngOnInit(): void {
+        this.isOpenSignal.set(this.shouldBeOpen());
     }
 
-    toggle(): void {
+    protected toggle(): void {
         this.isOpenSignal.update((value) => !value);
     }
 }

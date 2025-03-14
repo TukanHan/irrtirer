@@ -2,10 +2,10 @@
 export const BackendAddress: string = 'https://localhost:7113';
 export const address: string = 'https://localhost:7113/api';
 
-export function getPolygonTriangulationMeshApiAddres(): string {
+export function getPolygonTriangulationMeshApiAddress(): string {
     return `${address}/Mosaic/PolygonTriangulationMesh`;
 }
 
-export function getMosaicTriangulationMeshApiAddres(): string {
+export function getMosaicTriangulationMeshApiAddress(): string {
     return `${address}/Mosaic/MosaicTriangulationMesh`;
 }

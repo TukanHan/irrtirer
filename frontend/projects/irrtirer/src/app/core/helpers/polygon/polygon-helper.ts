@@ -13,7 +13,7 @@ export class PolygonHelper {
      */
     public static calculatePolygonArea(vertices: Vector[]): number {
         if (vertices.length < 3) {
-            throw new Error('pogygon should have at least 3 vertices');
+            throw new Error('polygon should have at least 3 vertices');
         }
 
         let up: number = vertices.at(-1).x * vertices[0].y;

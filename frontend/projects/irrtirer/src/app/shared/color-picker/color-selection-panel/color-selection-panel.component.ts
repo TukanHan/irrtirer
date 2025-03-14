@@ -17,7 +17,7 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 })
 export class ColorSelectionPanelComponent implements AfterViewInit, OnDestroy {
     @Input()
-    set color(value: string) {
+    public set color(value: string) {
         const hsvColor = Color(value);
         this.hValue = hsvColor.hue() / 360;
         this.sValue = hsvColor.saturationv() / 100;
