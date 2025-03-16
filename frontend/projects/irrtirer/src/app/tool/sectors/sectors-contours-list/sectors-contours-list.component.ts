@@ -9,12 +9,11 @@ import { Store } from '@ngrx/store';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
-import { RandomHelper } from '../../../core/helpers/random-helper';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import Color from 'color';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-sectors-contours-list',
@@ -32,47 +31,16 @@ export class SectorsContoursListComponent {
         public dialog: MatDialog,
         private store: Store,
         private sectorsContoursService: SectorsContoursService,
-        private translate: TranslateService
+        private translate: TranslateService,
+        private router: Router
     ) {
         this.sectorsSignal = store.selectSignal(selectSectors);
-    }
-
-    protected addNewSector(): void {
-        const sector: SectorSchema = {
-            id: crypto.randomUUID(),
-            name: '',
-            color: Color({ h: RandomHelper.nextFloat(0, 360), s: 75, v: 95 }).hex(),
-            vertices: [],
-            properties: {
-                sectionMaxArea: 5,
-                sectionMinAngle: 35,
-                maxTileRadius: 4,
-                minTileRadius: 0,
-                tilesMargin: 0.1,
-                evaluationParams: {
-                    singleSectionPopulation: 2,
-                    overlappingAreaOutsideSector: -2,
-                    additionalPopulationOfNeighboringSectors: 4,
-                    overlappingNotPopulatedSections: -1,
-                    tileColorMismatch: -2,
-                },
-                populationParams: {
-                    initialPopulationSize: 100,
-                    countOfTriesToInsertTile: 30,
-                    countOfTrianglePositionDraws: 30,
-                    countOfColorMatchingAttempts: 40,
-                    iterationsCount: 100,
-                    populationSize: 10,
-                },
-            },
-        };
-
-        this.emitSectorToEditContour(sector);
     }
 
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: this.translate.instant('tool.sectors.contourList.removeSector'),
+            //TODO dodać do tłumaczenia
             message: 'Czy na pewno chcesz usunąć sektor?',
         };
 
@@ -93,6 +61,18 @@ export class SectorsContoursListComponent {
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1),
         });
+    }
+
+    protected navigateToNewSectorPanel(): void {
+        this.router.navigate([`/tool/sectors/contour`]);
+    }
+
+    protected navigateToContourPanel(sector: SectorSchema): void {
+        this.router.navigate([`/tool/sectors/${sector.id}/contour`]);
+    }
+
+    protected navigateToPropertyPanel(sector: SectorSchema): void {
+        this.router.navigate([`/tool/sectors/${sector.id}/property`]);
     }
 
     protected emitSectorToEditProperty(sector: SectorSchema): void {

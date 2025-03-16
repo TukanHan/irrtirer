@@ -10,6 +10,9 @@ import { TileDetailComponent } from './tray/tile-detail/tile-detail.component';
 import { SectorsComponent } from './sectors/sectors.component';
 import { MosaicGenerationComponent } from './mosaic-generation/mosaic-generation.component';
 import { sectorsSelectedGuard } from '../core/guards/sectors-selected.guard';
+import { SectorsContoursListComponent } from './sectors/sectors-contours-list/sectors-contours-list.component';
+import { SectorPropertyEditorComponent } from './sectors/sector-property-editor/sector-property-editor.component';
+import { SectorContourEditionComponent } from './sectors/sector-contour-edition/sector-contour-edition.component';
 
 export const toolRoutes: Routes = [
     { path: '', redirectTo: 'config', pathMatch: 'full' },
@@ -35,6 +38,12 @@ export const toolRoutes: Routes = [
         path: 'sectors',
         component: SectorsComponent,
         canActivate: [projectExistGuard],
+        children: [
+            { path: '', component: SectorsContoursListComponent },
+            { path: ':id/property', component: SectorPropertyEditorComponent },
+            { path: ':id/contour', component: SectorContourEditionComponent },
+            { path: 'contour', component: SectorContourEditionComponent },
+        ]
     },
     {
         path: 'generating',

@@ -1,4 +1,4 @@
-import { Component, input, InputSignal, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
@@ -19,6 +19,8 @@ import { DataService } from '../../../core/services/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -34,9 +36,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     ],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorPropertyEditorComponent implements OnInit {
-    public sector: InputSignal<SectorSchema> = input.required();
+    private sector: SectorSchema = null;
 
     protected sectorPropertyForm: FormGroup;
 
@@ -46,12 +49,22 @@ export class SectorPropertyEditorComponent implements OnInit {
         private dataService: DataService,
         private snackBar: MatSnackBar,
         private service: SectorsContoursService,
-        protected translate: TranslateService
+        protected translate: TranslateService,
+        private route: ActivatedRoute,
+        private router: Router
     ) {}
 
     public ngOnInit(): void {
-        this.sectorPropertyForm = this.generateForm(this.sector().properties);
+        this.prepareSector();
+        this.sectorPropertyForm = this.generateForm(this.sector.properties);
         this.getTriangulationMesh();
+    }
+
+    private prepareSector(): void {
+        const sectorId: string = this.route.snapshot.paramMap.get('id');
+        if (sectorId) {
+            this.sector = this.store.selectSignal(selectSectors)().find(s => s.id === sectorId);
+        }
     }
 
     private generateForm(properties: SectorSchemaProperties): FormGroup {
@@ -87,16 +100,22 @@ export class SectorPropertyEditorComponent implements OnInit {
         });
     }
 
+    private navigateToSectorList(): void {
+        this.router.navigate([`/tool/sectors`]);
+    }
+
     protected cancel(): void {
         this.service.emitEditedSectorProperty(null);
+        this.navigateToSectorList();
     }
 
     protected save(): void {
         if (this.sectorPropertyForm.valid) {
             const properties: SectorSchemaProperties = this.getFormData();
 
-            this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: { ...this.sector(), properties } }));
+            this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: { ...this.sector, properties } }));
             this.service.emitEditedSectorProperty(null);
+            this.navigateToSectorList();
         }
     }
 
@@ -135,7 +154,7 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     protected getTriangulationMesh(): void {
         const sectorTriangulationRequestData: SectorTriangulationRequestModel = {
-            polygonVertices: this.sector().vertices,
+            polygonVertices: this.sector.vertices,
             sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
             sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value,
         };
@@ -143,7 +162,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData).subscribe({
             next: (mesh) =>
                 this.service.emitEditedSectorProperty({
-                    sector: this.sector(),
+                    sector: this.sector,
                     mesh: mesh.triangles,
                     contour: mesh.contour,
                 }),

@@ -17,7 +17,8 @@
     @if(sectorForm.get('vertices').value.length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
             @for (vertex of sectorForm.get('vertices').value; track vertex) {
-                <div class="vertex-box" [class.selected]="vertex === selectedVertex" cdkDrag (mousedown)="onBoxSelected(vertex)">{{getVertexLabel(vertex)}}
+                <div class="vertex-box" [class.selected]="vertex === selectedVertexSignal()" cdkDrag (mousedown)="onBoxSelected(vertex)">
+                    {{getVertexLabel(vertex)}}
                     <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
                         <mat-icon matListIcon>close</mat-icon>
                     </button>

@@ -1,17 +1,14 @@
-import { AfterViewInit, Component, DestroyRef, OnInit, signal, Signal, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, OnInit, signal, Signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
 import { first } from 'rxjs';
 import { SectorsContoursService } from './sectors-contours.service';
-import { SectorContourEditionComponent } from './sector-contour-edition/sector-contour-edition.component';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
-import { SectorsContoursListComponent } from './sectors-contours-list/sectors-contours-list.component';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
-import { SectorPropertyEditorComponent } from './sector-property-editor/sector-property-editor.component';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { CanvasObject, IVector } from '../../../../../active-canvas/src/public-api';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
 import { OpenedContourObject } from '../../shared/canvas-objects/opened-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
@@ -20,22 +17,17 @@ import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-sectors',
-    imports: [
-        SectorsContoursListComponent,
-        SectorContourEditionComponent,
-        SectorPropertyEditorComponent,
-    ],
+    imports: [ RouterOutlet],
     templateUrl: './sectors.component.html',
-    styleUrl: './sectors.component.scss'
+    styleUrl: './sectors.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private activeCanvas: IActiveCanvas;
-
-    @ViewChild('sectorContourEditionPanel')
-    protected sectorContourEditionPanel: SectorContourEditionComponent;
 
     private visualElements: CanvasObject[] = [];
 
@@ -83,7 +75,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
         this.activeCanvas.clicked
             .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((click) => this.onCanvasClicked(click));
+            .subscribe((click) => this.service.emitCanvasClicked(click));
     }
 
     private subscribeOnEditedSectorChange(): void {
@@ -102,13 +94,6 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         this.service.sectorListChange$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe(() => this.redrawSectors());
-    }
-
-    private onCanvasClicked(point: IVector): void {
-        const selectedSector: EditedSectorContour = this.sectorForContourEditionSignal();
-        if (selectedSector) {
-            this.sectorContourEditionPanel.addVertex(new Vector(point.x, point.y));
-        }
     }
 
     private onEditedSectorChanged(sector: EditedSectorContour): void {

@@ -26,7 +26,7 @@ export class TileDetailComponent implements OnInit {
     ) {}
 
     public ngOnInit(): void {
-        const tileId: string = this.route.snapshot.paramMap.get('id') || '';
+        const tileId: string = this.route.snapshot.paramMap.get('id');
         if (tileId) {
             const tileModel: TileModel = this.getTileModel(tileId);
             this.tileSignal.set(tileModel);

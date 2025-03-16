@@ -1,5 +1,5 @@
 <div class="actions">
-  <button mat-flat-button color="accent" (click)="addNewSector()">
+  <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
     {{ 'tool.sectors.contourList.addSector' | translate }}
   </button>
 </div>
@@ -15,11 +15,11 @@
         </button>
 
         <mat-menu #menu="matMenu" classList="paddingless">
-          <button mat-menu-item (click)="emitSectorToEditContour(sector)">
+          <button mat-menu-item (click)="navigateToContourPanel(sector)">
             <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
             {{ 'tool.sectors.contourList.editContour' | translate }}
           </button>
-          <button mat-menu-item (click)="emitSectorToEditProperty(sector)">
+          <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
             <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
             {{ 'tool.sectors.contourList.editProperties' | translate }}
           </button>
