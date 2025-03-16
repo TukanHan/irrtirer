@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, signal, WritableSignal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
     imports: [TranslateModule, MatButtonModule, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
     styleUrl: './tile-detail.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TileDetailComponent implements OnInit {
     protected tileSignal: WritableSignal<TileModel> = signal(null);

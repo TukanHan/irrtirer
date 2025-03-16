@@ -17,27 +17,4 @@ export class ArrayHelpers {
 
         return arr;
     }
-
-    /**
-   * @returns Return -1 if target is not found
-   */
-    public static binarySearch<T>(arr: T[], target: T, comparsionFn: (a: T, b: T) => number): number {
-        let left = 0;
-        let right = arr.length - 1;
-    
-        while (left <= right) {
-            const mid = Math.floor((left + right) / 2);
-    
-            if (comparsionFn(arr[mid], target) === 0) {
-                return mid;
-            }
-            if (comparsionFn(arr[mid], target) < 0) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
-    
-        return -1;
-    }
 }

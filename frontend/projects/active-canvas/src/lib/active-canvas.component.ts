@@ -56,22 +56,32 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     private canvasObjects: CanvasObject[] = [];
 
+    private handleMouseUp: () => void = this.onMouseUp.bind(this);
+
+    private handleMouseMove: (event: MouseEvent) => void = this.onMouseMove.bind(this);
+
+    private handleMouseDown: (event: MouseEvent) => void = this.onMouseDown.bind(this);
+
+    private handleWheelMove: (event: WheelEvent) => void = this.onWheelMove.bind(this);
+
+    private handleResize: () => void = this.onResize.bind(this);
+
     constructor(private cd: ChangeDetectorRef) {}
 
     public ngAfterViewInit(): void {
         this.ctx = this.canvas.nativeElement.getContext('2d');
 
-        window.addEventListener('resize', this.resizeFunc, false);
+        window.addEventListener('resize', this.handleResize, false);
 
-        this.canvas.nativeElement.addEventListener('wheel', this.onWheelMove);
-        this.canvas.nativeElement.addEventListener('mousedown', this.onMouseDown);
-        window.addEventListener('mousemove', this.onMouseMove);
-        window.addEventListener('mouseup', this.onMouseUp);
+        this.canvas.nativeElement.addEventListener('wheel', this.handleWheelMove);
+        this.canvas.nativeElement.addEventListener('mousedown', this.handleMouseDown);
+        window.addEventListener('mousemove', this.handleMouseMove);
+        window.addEventListener('mouseup', this.handleMouseUp);
 
         this.configureCanvas();
 
         this._viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
-        setTimeout(() => this.resizeFunc(), 1);
+        setTimeout(() => this.onResize(), 1);
     }
 
     private configureCanvas(): void {
@@ -92,14 +102,14 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     public ngOnDestroy(): void {
-        this.canvas.nativeElement.removeEventListener('wheel', this.onWheelMove);
-        this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown);
-        window.removeEventListener('resize', this.resizeFunc, false);
-        window.removeEventListener('mousemove', this.onMouseMove);
-        window.removeEventListener('mouseup', this.onMouseUp);
+        this.canvas.nativeElement.removeEventListener('wheel', this.handleWheelMove);
+        this.canvas.nativeElement.removeEventListener('mousedown', this.handleMouseDown);
+        window.removeEventListener('resize', this.handleResize, false);
+        window.removeEventListener('mousemove', this.handleMouseMove);
+        window.removeEventListener('mouseup', this.handleMouseUp);
     }
 
-    private onWheelMove = (event: WheelEvent) => {
+    private onWheelMove(event: WheelEvent): void {
         const cursorWorldPos: IVector = this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = this._viewport.zoom * (event.deltaY / 1000);
         const zoomMultiplier = Math.max(Math.min(this._viewport.zoom + zoomDelta, this._options.maxZoom), this._options.minZoom) / this._viewport.zoom;
@@ -114,7 +124,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         event.preventDefault();
     };
 
-    private onMouseDown = (event: MouseEvent) => {
+    private onMouseDown(event: MouseEvent): void {
         this.clicked.emit(this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
         if (this._options?.isMovable === false) {
             return;
@@ -125,7 +135,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.cd.markForCheck();
     };
 
-    private onMouseMove = (event: MouseEvent) => {
+    private onMouseMove(event: MouseEvent): void {
         if (this._options?.isMovable === false) {
             return;
         }
@@ -141,7 +151,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         }
     };
 
-    private onMouseUp = () => {
+    private onMouseUp(): void {
         if (this._options?.isMovable === false) {
             return;
         }
@@ -151,7 +161,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.cd.markForCheck();
     };
 
-    private resizeFunc = () => {
+    private onResize(): void {
         const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
             height: canvasRect.height,

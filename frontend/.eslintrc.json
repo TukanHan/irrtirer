@@ -51,7 +51,8 @@
         "prefer-const": "warn",
         "no-var": "error",
         "no-duplicate-imports": "error",
-        "consistent-return": "error"
+        "consistent-return": "error",
+        "@angular-eslint/prefer-on-push-component-change-detection": "warn"
       }
     },
     {
