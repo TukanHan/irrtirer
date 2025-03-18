@@ -40,8 +40,7 @@ export class SectorsContoursListComponent {
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: this.translate.instant('tool.sectors.contourList.removeSector'),
-            //TODO dodać do tłumaczenia
-            message: 'Czy na pewno chcesz usunąć sektor?',
+            message:  this.translate.instant('tool.sectors.contourList.removeSectorMessage'),
         };
 
         const dialogRef = this.dialog.open(DialogComponent, { data: dialogData });

@@ -87,6 +87,7 @@
                 "addSector": "Dodaj sektor",
                 "noSectors": "Dodaj sektory",
                 "removeSector": "Usuń sektor",
+                "removeSectorMessage": "Czy na pewno chcesz usunąć sektor?",
                 "editProperties": "Edytuj właściwości",
                 "editContour": "Edytuj kontur"
             },

@@ -87,6 +87,7 @@
         "addSector": "Add sector",
         "noSectors": "Add sectors",
         "removeSector": "Remove sector",
+        "removeSectorMessage": "Are you sure you want to remove the sector?",
         "editProperties": "Edit properties",
         "editContour": "Edit contour"
       },
