@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input, InputSignal, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
@@ -12,17 +12,17 @@ import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/ex
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExtendedPanelComponent implements OnInit {
-    public label: InputSignal<string> = input.required();
+    public readonly label = input.required<string>();
 
-    public shouldBeOpen: InputSignal<boolean> = input(true);
+    public readonly shouldBeOpen = input<boolean>(true);
 
-    protected isOpenSignal: WritableSignal<boolean> = signal(true);
+    protected readonly isOpen = signal<boolean>(true);
 
     public ngOnInit(): void {
-        this.isOpenSignal.set(this.shouldBeOpen());
+        this.isOpen.set(this.shouldBeOpen());
     }
 
     protected toggle(): void {
-        this.isOpenSignal.update((value) => !value);
+        this.isOpen.update((value) => !value);
     }
 }

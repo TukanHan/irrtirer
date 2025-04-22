@@ -1,5 +1,5 @@
 import { trigger, state, style, AUTO_STYLE, transition, animate } from '@angular/animations';
-import { ChangeDetectionStrategy, Component, HostBinding, input, InputSignal, ViewContainerRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, inject, input, ViewContainerRef } from '@angular/core';
 
 @Component({
     selector: 'app-expandable-panel',
@@ -17,7 +17,7 @@ import { ChangeDetectionStrategy, Component, HostBinding, input, InputSignal, Vi
     ],
 })
 export class ExpandablePanelComponent {
-    public isOpen: InputSignal<boolean> = input.required();
+    public readonly isOpen = input.required<boolean>();
 
     @HostBinding('@expand')
     protected get getExpandAnimationState(): unknown {
@@ -29,11 +29,9 @@ export class ExpandablePanelComponent {
         };
     }
 
-    private hostNativeElement: HTMLElement;
+    private readonly viewRef = inject<ViewContainerRef>(ViewContainerRef);
 
-    constructor(private readonly viewRef: ViewContainerRef) {
-        this.hostNativeElement = this.viewRef.element.nativeElement;
-    }
+    private readonly hostNativeElement: HTMLElement = this.viewRef.element.nativeElement;
 
     protected calcExpandingTime(height: number, isExpanding: boolean): number {
         const time = 150 + Math.sqrt(height) * 5;

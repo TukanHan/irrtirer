@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -31,14 +31,18 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToolbarComponent implements OnInit {
-    protected selectedLanguageSignal: WritableSignal<string> = signal(this.translate.currentLang);
+    private readonly translate = inject(TranslateService);
 
-    constructor(private translate: TranslateService, private destroyRef: DestroyRef, private store: Store) {}
+    private readonly destroyRef = inject(DestroyRef);
+
+    private readonly store = inject(Store);
+
+    protected readonly selectedLanguage = signal<string>(this.translate.currentLang);
 
     public ngOnInit(): void {
         this.translate.onLangChange
             .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((languageChange) => this.selectedLanguageSignal.set(languageChange.lang));
+            .subscribe((languageChange) => this.selectedLanguage.set(languageChange.lang));
     }
 
     protected languageChanged(selected: MatRadioChange): void {

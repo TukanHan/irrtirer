@@ -1,5 +1,5 @@
 <app-mosaic-hierarchy/>
 
-@if(progressStateSignal()) {
-    <app-progress-info class="info" [infoState]="progressStateSignal()"/>
+@if(progressState()) {
+    <app-progress-info class="info" [infoState]="progressState()"/>
 }

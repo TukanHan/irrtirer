@@ -11,7 +11,7 @@
 </div>
 
 <div class="tiles-sets">
-    @for(tilesSet of tilesSetsSignal(); track $index) {
+    @for(tilesSet of tilesSets(); track $index) {
         <app-tiles-set-list-elem [tilesSet]="tilesSet"/>
     } @empty {
         <span class="no-sets">

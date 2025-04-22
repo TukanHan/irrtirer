@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { CommonModule } from '@angular/common';
 import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
@@ -17,23 +17,23 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
     selector: 'app-tiles-set-list-elem',
     imports: [CommonModule, ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule],
-    changeDetection: ChangeDetectionStrategy.OnPush,
     templateUrl: './tiles-set-list-elem.component.html',
     styleUrl: './tiles-set-list-elem.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TilesSetListElemComponent {
-    public tilesSet: InputSignal<TilesSet> = input.required();
+    public readonly tilesSet = input.required<TilesSet>();
 
-    protected isOpenSignal: WritableSignal<boolean> = signal(false);
+    protected readonly isOpen = signal<boolean>(false);
 
-    constructor(
-        private store: Store,
-        private dialog: MatDialog, 
-        private translate: TranslateService
-    ) {}
+    private readonly store = inject(Store);
+
+    private readonly dialog = inject(MatDialog);
+
+    private readonly translate = inject(TranslateService);
 
     protected toggleTilesList(): void {
-        this.isOpenSignal.update((value) => !value);
+        this.isOpen.update((value) => !value);
     }
 
     protected removeTilesSet(): void {

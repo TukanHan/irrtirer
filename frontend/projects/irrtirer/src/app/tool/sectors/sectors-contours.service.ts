@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh, SectorListChangeEvent } from './sectors-contours.interfaces';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { RandomHelper } from '../../core/helpers/random-helper';
@@ -10,30 +10,27 @@ import { IVector } from '../../../../../active-canvas/src/public-api';
     providedIn: 'root',
 })
 export class SectorsContoursService {
-    private readonly sectorForContourEditionChanged: Subject<EditedSectorContour | null> =
-        new BehaviorSubject<EditedSectorContour | null>(null);
+    private readonly sectorForContourEditionChanged = new BehaviorSubject<EditedSectorContour | null>(null);
 
-    public readonly sectorForContourEdition$: Observable<EditedSectorContour | null> =
-        this.sectorForContourEditionChanged.asObservable();
+    public readonly sectorForContourEdition$ = this.sectorForContourEditionChanged.asObservable();
 
-    private readonly sectorListChanged: Subject<SectorListChangeEvent> = new BehaviorSubject(null);
+    private readonly sectorListChanged = new BehaviorSubject<SectorListChangeEvent | null>(null);
 
-    public readonly sectorListChange$: Observable<SectorListChangeEvent> = this.sectorListChanged.asObservable();
+    public readonly sectorListChange$ = this.sectorListChanged.asObservable();
 
-    private readonly sectorForPropertyEditionChanged: Subject<EditedSectorWithTriangulationMesh | null> = new BehaviorSubject(null);
+    private readonly sectorForPropertyEditionChanged = new BehaviorSubject<EditedSectorWithTriangulationMesh | null>(null);
 
-    public readonly sectorForPropertyEdition$: Observable<EditedSectorWithTriangulationMesh | null> =
-        this.sectorForPropertyEditionChanged.asObservable();
+    public readonly sectorForPropertyEdition$ = this.sectorForPropertyEditionChanged.asObservable();
 
-    private readonly canvasClickedSub: Subject<IVector> = new Subject();
+    private readonly canvasClickedSub = new Subject<IVector>();
 
-    public readonly canvasClicked$: Observable<IVector> = this.canvasClickedSub.asObservable();
+    public readonly canvasClicked$ = this.canvasClickedSub.asObservable();
 
-    public emitEditedSectorContour(sectorContour: EditedSectorContour): void {
+    public emitEditedSectorContour(sectorContour: EditedSectorContour | null): void {
         this.sectorForContourEditionChanged.next(sectorContour);
     }
 
-    public emitEditedSectorProperty(sector: EditedSectorWithTriangulationMesh): void {
+    public emitEditedSectorProperty(sector: EditedSectorWithTriangulationMesh | null): void {
         this.sectorForPropertyEditionChanged.next(sector);
     }
 

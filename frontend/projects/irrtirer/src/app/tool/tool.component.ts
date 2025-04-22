@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, signal, Signal, viewChild, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -36,39 +36,41 @@ import { RibbonAction } from './ribbon/ribbon-action.interface';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToolComponent {
-    protected tilesLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
+    private readonly store = inject(Store);
+
+    protected readonly translate = inject(TranslateService);
+
+    private readonly destroyRef = inject(DestroyRef);
+
+    protected readonly toolService = inject(ToolService);
+
+    protected readonly tilesLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
         map((mosaicProject) => !mosaicProject)
     );
 
-    protected sectorsLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
+    protected readonly sectorsLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
         map((mosaicProject) => !mosaicProject)
     );
 
-    protected mosaicGeneratingLinkDisabled$ = this.store.select(selectSectors).pipe(
+    protected readonly mosaicGeneratingLinkDisabled$ = this.store.select(selectSectors).pipe(
         takeUntilDestroyed(this.destroyRef),
         map((sectors) => !sectors?.length)
     );
 
-    protected activeCanvas: Signal<ActiveCanvasComponent> = viewChild('activeCanvas');
+    protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');
 
-    protected ribbonActionsSignal: WritableSignal<RibbonAction[]> = signal([]);
-
-    constructor(
-        private store: Store,
-        protected translate: TranslateService,
-        protected toolService: ToolService,
-        private destroyRef: DestroyRef
-    ) {}
+    protected readonly ribbonActions = signal<RibbonAction[]>([]);
+    
 
     protected onActivate(view: ToolView): void {
         const viewSetting = view.sectionEntered(this.activeCanvas());
-        this.ribbonActionsSignal.set(viewSetting.ribbon);
+        this.ribbonActions.set(viewSetting.ribbon);
     }
 
     protected onDeactivate(): void {
-        this.ribbonActionsSignal.set([]);
+        this.ribbonActions.set([]);
         this.activeCanvas().removeObjects();
     }
 }

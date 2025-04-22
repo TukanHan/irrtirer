@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.interface';
 
 @Component({
@@ -8,7 +8,7 @@ import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.int
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProgressInfoComponent {
-    public infoState: InputSignal<InfoState> = input.required<InfoState>();
+    public readonly infoState = input.required<InfoState>();
 
     protected isProgressInfo(state: InfoState): state is ProgressInfoState {
         return state.type === 'progress';

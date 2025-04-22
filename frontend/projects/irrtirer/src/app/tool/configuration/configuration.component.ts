@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, signal, Signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Store } from '@ngrx/store';
@@ -24,28 +24,28 @@ import { RibbonAction } from '../ribbon/ribbon-action.interface';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConfigurationComponent implements ToolView, AfterViewInit {
-    protected mosaicConfigSignal: Signal<MosaicConfig> = this.store.selectSignal(selectMosaicConfig);
+    private readonly store = inject(Store);
 
-    private activeCanvas: IActiveCanvas;
+    private readonly destroyRef = inject(DestroyRef);
 
-    private imageObjectSignal: WritableSignal<ImageObject> = signal(null);
+    private readonly configService = inject(ConfigurationService);
 
-    protected ribbonActions: RibbonAction[] = [
+    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig>(selectMosaicConfig);
+
+    private readonly imageObject = signal<ImageObject | null>(null);
+
+    protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'recenter',
-            visibility: computed(() => this.imageObjectSignal() ? 'on' : 'disabled'),
+            visibility: computed(() => this.imageObject() ? 'on' : 'disabled'),
             onClick: () => {
-                this.focusOnImage(this.imageObjectSignal());
+                this.focusOnImage(this.imageObject()!);
                 this.activeCanvas.redraw();
             } 
         }
     ];
 
-    constructor(
-        private store: Store,
-        private configService: ConfigurationService,
-        private destroyRef: DestroyRef
-    ) {}
+    private activeCanvas: IActiveCanvas;
 
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
@@ -62,8 +62,8 @@ export class ConfigurationComponent implements ToolView, AfterViewInit {
             .subscribe((imageChange) => this.drawImage(imageChange?.mosaicConfig, imageChange?.shouldFocus));
     }
 
-    private async drawImage(mosaicConfig: MosaicConfig, focusOn: boolean): Promise<void> {
-        let imageObject: ImageObject = this.imageObjectSignal();
+    private async drawImage(mosaicConfig: MosaicConfig | null, focusOn: boolean): Promise<void> {
+        let imageObject: ImageObject | null = this.imageObject();
         imageObject?.removeObject();
         imageObject = null;
 
@@ -76,7 +76,7 @@ export class ConfigurationComponent implements ToolView, AfterViewInit {
             }
         }
 
-        this.imageObjectSignal.set(imageObject);
+        this.imageObject.set(imageObject);
         this.activeCanvas.redraw();
     }
 
@@ -86,6 +86,6 @@ export class ConfigurationComponent implements ToolView, AfterViewInit {
     }
 
     protected onRouterChange(): void {
-        this.configService.emitImageChange(this.mosaicConfigSignal(), false);
+        this.configService.emitImageChange(this.mosaicConfig(), false);
     }
 }

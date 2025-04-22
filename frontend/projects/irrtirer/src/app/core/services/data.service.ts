@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { getPolygonTriangulationMeshApiAddress } from '../constants/api';
 import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '../models/api/api.models';
@@ -8,7 +8,7 @@ import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '.
     providedIn: 'root',
 })
 export class DataService {
-    constructor(private http: HttpClient) {}
+    private readonly http = inject(HttpClient);
 
     public getPolygonTriangulationMesh(sectorTriangulationData: SectorTriangulationRequestModel): Observable<SectorTriangulationMeshModel> {
         const options = {

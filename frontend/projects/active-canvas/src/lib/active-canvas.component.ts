@@ -3,12 +3,13 @@ import {
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
+    computed,
     ElementRef,
-    EventEmitter,
+    inject,
     Input,
     OnDestroy,
-    Output,
-    ViewChild,
+    output,
+    viewChild,
 } from '@angular/core';
 import { CanvasObject } from './canvas-objects/canvas-object.interface';
 import { Viewport } from './models/canvas/viewport.model';
@@ -28,8 +29,7 @@ import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDestroy {
-    @Output()
-    public clicked: EventEmitter<IVector> = new EventEmitter<IVector>();
+    public readonly clicked = output<IVector>();
 
     @Input()
     public set options(value: CanvasOptions) {
@@ -41,18 +41,17 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         return this._viewport;
     }
 
-    @ViewChild('canvas')
-    private canvas: ElementRef<HTMLCanvasElement>;
+    private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
     private _options: CanvasOptions = DEFAULT_CANVAS_OPTIONS;
 
-    private _viewport: Viewport;
+    private _viewport: Viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
 
     private isDragging = false;
 
-    private ctx: CanvasRenderingContext2D;
+    private readonly ctx = computed<CanvasRenderingContext2D>(() => this.canvas().nativeElement.getContext('2d')! );
 
-    private gridObject: GridObject;
+    private gridObject?: GridObject;
 
     private canvasObjects: CanvasObject[] = [];
 
@@ -66,21 +65,18 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     private handleResize: () => void = this.onResize.bind(this);
 
-    constructor(private cd: ChangeDetectorRef) {}
+    private readonly cd = inject(ChangeDetectorRef);
 
     public ngAfterViewInit(): void {
-        this.ctx = this.canvas.nativeElement.getContext('2d');
-
         window.addEventListener('resize', this.handleResize, false);
 
-        this.canvas.nativeElement.addEventListener('wheel', this.handleWheelMove);
-        this.canvas.nativeElement.addEventListener('mousedown', this.handleMouseDown);
+        this.canvas().nativeElement.addEventListener('wheel', this.handleWheelMove);
+        this.canvas().nativeElement.addEventListener('mousedown', this.handleMouseDown);
         window.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('mouseup', this.handleMouseUp);
 
         this.configureCanvas();
 
-        this._viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
         setTimeout(() => this.onResize(), 1);
     }
 
@@ -102,8 +98,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     public ngOnDestroy(): void {
-        this.canvas.nativeElement.removeEventListener('wheel', this.handleWheelMove);
-        this.canvas.nativeElement.removeEventListener('mousedown', this.handleMouseDown);
+        this.canvas().nativeElement.removeEventListener('wheel', this.handleWheelMove);
+        this.canvas().nativeElement.removeEventListener('mousedown', this.handleMouseDown);
         window.removeEventListener('resize', this.handleResize, false);
         window.removeEventListener('mousemove', this.handleMouseMove);
         window.removeEventListener('mouseup', this.handleMouseUp);
@@ -162,20 +158,20 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     };
 
     private onResize(): void {
-        const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
+        const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
             height: canvasRect.height,
             width: canvasRect.width,
         };
 
-        this.canvas.nativeElement.width = newCanvasSize.width;
-        this.canvas.nativeElement.height = newCanvasSize.height;
+        this.canvas().nativeElement.width = newCanvasSize.width;
+        this.canvas().nativeElement.height = newCanvasSize.height;
 
         this._viewport = new Viewport(this._viewport.position, this._viewport.zoom, newCanvasSize);
         this.redraw();
     };
 
-    public setViewport(zoom: number = null, position: IVector = null, redraw: boolean = false): void {
+    public setViewport(zoom: number | null = null, position: IVector | null = null, redraw: boolean = false): void {
         this._viewport = new Viewport(
             position ?? this._viewport.position,
             zoom ?? this._viewport.zoom,
@@ -210,13 +206,14 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     }
 
     public redraw(): void {
-        this.ctx.clearRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
-        this.ctx.fillStyle = this._options.backgroundColor;
-        this.ctx.fillRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
+        const canvasContext = this.ctx();
+        canvasContext.clearRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
+        canvasContext.fillStyle = this._options.backgroundColor;
+        canvasContext.fillRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
 
         for (const object of this.canvasObjects) {
             if (object.getVisibility()) {
-                object.drawObject(this.ctx, this._viewport);
+                object.drawObject(canvasContext, this._viewport);
             }
         }
 

@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
     SectorSchema,
     SectorSchemaEvaluationParams,
@@ -21,6 +21,33 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api/api.mo
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ActivatedRoute, Router } from '@angular/router';
+
+interface SectorSchemaPropertiesForm {
+    initialPopulationSize: FormControl<number>;
+    countOfTriesToInsertTile: FormControl<number>;
+    countOfTrianglePositionDraws: FormControl<number>;
+    countOfColorMatchingAttempts: FormControl<number>;
+    iterationsCount: FormControl<number>;
+    populationSize: FormControl<number>;
+}
+
+export interface SectorSchemaEvaluationParamsForm {
+    singleSectionPopulation: FormControl<number>;
+    overlappingAreaOutsideSector: FormControl<number>;
+    additionalPopulationOfNeighboringSectors: FormControl<number>;
+    overlappingNotPopulatedSections: FormControl<number>;
+    tileColorMismatch: FormControl<number>;
+}
+
+interface SectorSchemaForm {
+    sectionMaxArea: FormControl<number>;
+    sectionMinAngle: FormControl<number>;
+    minTileRadius: FormControl<number>;
+    maxTileRadius: FormControl<number>;
+    tileMargin: FormControl<number>;
+    populationParams: FormGroup<SectorSchemaPropertiesForm>;
+    evaluationParams: FormGroup<SectorSchemaEvaluationParamsForm>;
+}
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -39,20 +66,25 @@ import { ActivatedRoute, Router } from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorPropertyEditorComponent implements OnInit {
-    private sector: SectorSchema = null;
+    private sector!: SectorSchema;
 
-    protected sectorPropertyForm: FormGroup;
+    protected sectorPropertyForm!: FormGroup<SectorSchemaForm>;
 
-    constructor(
-        private store: Store,
-        private formBuilder: FormBuilder,
-        private dataService: DataService,
-        private snackBar: MatSnackBar,
-        private service: SectorsContoursService,
-        protected translate: TranslateService,
-        private route: ActivatedRoute,
-        private router: Router
-    ) {}
+    private readonly fb = inject(FormBuilder);
+
+    private readonly store = inject(Store);
+
+    private readonly dataService = inject(DataService);
+
+    private readonly snackBar = inject(MatSnackBar);
+
+    private readonly service = inject(SectorsContoursService);
+
+    protected readonly translate = inject(TranslateService);
+
+    private readonly route = inject(ActivatedRoute);
+
+    private readonly router = inject(Router);
 
     public ngOnInit(): void {
         this.prepareSector();
@@ -61,14 +93,14 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     private prepareSector(): void {
-        const sectorId: string = this.route.snapshot.paramMap.get('id');
+        const sectorId = this.route.snapshot.paramMap.get('id');
         if (sectorId) {
-            this.sector = this.store.selectSignal(selectSectors)().find(s => s.id === sectorId);
+            this.sector = this.store.selectSignal(selectSectors)().find(s => s.id === sectorId)!;
         }
     }
 
     private generateForm(properties: SectorSchemaProperties): FormGroup {
-        return this.formBuilder.group({
+        return this.fb.group({
             sectionMaxArea: [properties.sectionMaxArea, [Validators.required, Validators.min(0.1)]],
             sectionMinAngle: [properties.sectionMinAngle, [Validators.required, Validators.min(10), Validators.max(90)]],
             minTileRadius: [properties.minTileRadius, [Validators.min(0)]],
@@ -80,7 +112,7 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     private generatePopulationParamsForm(properties: SectorSchemaPopulationParams): FormGroup {
-        return this.formBuilder.group({
+        return this.fb.group({
             initialPopulationSize: [properties.initialPopulationSize, [Validators.required]],
             countOfTriesToInsertTile: [properties.countOfTriesToInsertTile, [Validators.required]],
             countOfTrianglePositionDraws: [properties.countOfTrianglePositionDraws, [Validators.required]],
@@ -91,7 +123,7 @@ export class SectorPropertyEditorComponent implements OnInit {
     }
 
     private generateEvaluationParamsForm(properties: SectorSchemaEvaluationParams): FormGroup {
-        return this.formBuilder.group({
+        return this.fb.group({
             singleSectionPopulation: [properties.singleSectionPopulation, [Validators.required]],
             overlappingAreaOutsideSector: [properties.overlappingAreaOutsideSector, [Validators.required]],
             additionalPopulationOfNeighboringSectors: [properties.additionalPopulationOfNeighboringSectors, [Validators.required]],
@@ -121,42 +153,46 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     private getFormData(): SectorSchemaProperties {
         return {
-            sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
-            sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value,
-            minTileRadius: this.sectorPropertyForm.get('minTileRadius').value,
-            maxTileRadius: this.sectorPropertyForm.get('maxTileRadius').value,
-            tilesMargin: this.sectorPropertyForm.get('tileMargin').value,
+            sectionMaxArea: this.sectorPropertyForm.controls.sectionMaxArea.value,
+            sectionMinAngle: this.sectorPropertyForm.controls.sectionMinAngle.value,
+            minTileRadius: this.sectorPropertyForm.controls.minTileRadius.value,
+            maxTileRadius: this.sectorPropertyForm.controls.maxTileRadius.value,
+            tilesMargin: this.sectorPropertyForm.controls.tileMargin.value,
             evaluationParams: this.getFormEvaluationParams(),
             populationParams: this.getFormPopulationParams(),
         };
     }
 
     private getFormPopulationParams(): SectorSchemaPopulationParams {
+        const populationParamsControls = this.sectorPropertyForm.controls.populationParams.controls;
+
         return {
-            initialPopulationSize: this.sectorPropertyForm.get('populationParams.initialPopulationSize').value,
-            countOfTriesToInsertTile: this.sectorPropertyForm.get('populationParams.countOfTriesToInsertTile').value,
-            countOfTrianglePositionDraws: this.sectorPropertyForm.get('populationParams.countOfTrianglePositionDraws').value,
-            countOfColorMatchingAttempts: this.sectorPropertyForm.get('populationParams.countOfColorMatchingAttempts').value,
-            iterationsCount: this.sectorPropertyForm.get('populationParams.iterationsCount').value,
-            populationSize: this.sectorPropertyForm.get('populationParams.populationSize').value,
+            initialPopulationSize: populationParamsControls.initialPopulationSize.value,
+            countOfTriesToInsertTile: populationParamsControls.countOfTriesToInsertTile.value,
+            countOfTrianglePositionDraws: populationParamsControls.countOfTrianglePositionDraws.value,
+            countOfColorMatchingAttempts: populationParamsControls.countOfColorMatchingAttempts.value,
+            iterationsCount: populationParamsControls.iterationsCount.value,
+            populationSize: populationParamsControls.populationSize.value,
         };
     }
 
     private getFormEvaluationParams(): SectorSchemaEvaluationParams {
+        const evaluationParamsControls = this.sectorPropertyForm.controls.evaluationParams.controls;
+
         return {
-            singleSectionPopulation: this.sectorPropertyForm.get('evaluationParams.singleSectionPopulation').value,
-            overlappingAreaOutsideSector: this.sectorPropertyForm.get('evaluationParams.overlappingAreaOutsideSector').value,
-            additionalPopulationOfNeighboringSectors: this.sectorPropertyForm.get('evaluationParams.additionalPopulationOfNeighboringSectors').value,
-            overlappingNotPopulatedSections: this.sectorPropertyForm.get('evaluationParams.overlappingNotPopulatedSections').value,
-            tileColorMismatch: this.sectorPropertyForm.get('evaluationParams.tileColorMismatch').value,
+            singleSectionPopulation: evaluationParamsControls.singleSectionPopulation.value,
+            overlappingAreaOutsideSector: evaluationParamsControls.overlappingAreaOutsideSector.value,
+            additionalPopulationOfNeighboringSectors: evaluationParamsControls.additionalPopulationOfNeighboringSectors.value,
+            overlappingNotPopulatedSections: evaluationParamsControls.overlappingNotPopulatedSections.value,
+            tileColorMismatch: evaluationParamsControls.tileColorMismatch.value,
         };
     }
 
     protected getTriangulationMesh(): void {
         const sectorTriangulationRequestData: SectorTriangulationRequestModel = {
             polygonVertices: this.sector.vertices,
-            sectionMaxArea: this.sectorPropertyForm.get('sectionMaxArea').value,
-            sectionMinAngle: this.sectorPropertyForm.get('sectionMinAngle').value,
+            sectionMaxArea: this.sectorPropertyForm.controls.sectionMaxArea.value,
+            sectionMinAngle: this.sectorPropertyForm.controls.sectionMinAngle.value,
         };
 
         this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData).subscribe({

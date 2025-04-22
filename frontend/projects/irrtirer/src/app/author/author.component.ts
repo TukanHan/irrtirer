@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
 
@@ -10,5 +10,5 @@ import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthorComponent {
-    constructor(protected translate: TranslateService) {}
+    protected readonly translate = inject(TranslateService);
 }

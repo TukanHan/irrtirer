@@ -10,8 +10,8 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     private hexColor: string;
     private order: number;
 
-    private borderThicnses: number = 6;
-    private innerThicnes: number = 3;
+    private borderThickness: number = 6;
+    private innerThickness: number = 3;
 
     constructor(mesh: Triangle[], contour: Vector[], hexColor: string, order: number = 100) {
         super();
@@ -35,7 +35,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     }
 
     private drawBorder(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        ctx.lineWidth = this.borderThicnses;
+        ctx.lineWidth = this.borderThickness;
         let point: IVector = viewport.getViewportPosition(this.outerContour[0]);
 
         ctx.beginPath();
@@ -55,7 +55,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     }
 
     private drawTriangulationMesh(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        ctx.lineWidth = this.innerThicnes;
+        ctx.lineWidth = this.innerThickness;
         ctx.globalAlpha = 0.3;
 
         for (const line of this.innerLines) {
@@ -95,7 +95,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
 
         for (const triangle of triangulationMesh) {
             const triangleVertices = triangle.getVertices();
-            let previousVertex: Vector = triangleVertices.at(-1);
+            let previousVertex: Vector = triangleVertices.at(-1)!;
             for (let i = 0; i < 3; ++i) {
                 const currentVertex = triangleVertices[i];
                 const vertices =

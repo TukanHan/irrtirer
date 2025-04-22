@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,9 +14,9 @@ import { Size } from '../../core/models/math/size.interface';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RibbonComponent {
-    public viewportSize: InputSignal<Size> = input.required();
+    public readonly viewportSize = input.required<Size>();
 
-    public actions: InputSignal<RibbonAction[]> = input.required();
+    public readonly actions = input.required<RibbonAction[]>();
 
     protected onClick(action: RibbonAction): void {
         if (this.isActive(action.visibility())) {

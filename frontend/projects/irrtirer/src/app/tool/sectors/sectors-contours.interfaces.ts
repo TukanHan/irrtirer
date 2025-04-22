@@ -9,8 +9,8 @@ export interface EditedSectorContour {
 
 export interface EditedSectorWithTriangulationMesh {
     sector: SectorSchema;
-    mesh: Triangle[];
-    contour: Vector[];
+    mesh: Triangle[] | null;
+    contour: Vector[] | null;
 }
 
 export interface SectorListChangeEvent {

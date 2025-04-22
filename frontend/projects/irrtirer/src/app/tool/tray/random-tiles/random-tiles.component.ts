@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,24 +23,26 @@ import { FormHelper } from '../../../core/helpers/form-helper';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RandomTilesComponent implements OnInit {
-    protected formGroup: FormGroup;
+    protected formGroup!: FormGroup;
 
-    protected seriesNamesSignal: WritableSignal<string[]> = signal([]);
+    protected readonly seriesNamesSignal = signal<string[]>([]);
 
-    private errorLabels: { [key: string]: () => string } = {
+    private readonly errorLabels: { [key: string]: () => string } = {
         min: () => this.translate.instant('tool.tiles.random.radiusTooSmall'),
         max: () => this.translate.instant('tool.tiles.random.radiusTooLarge'),
         required: () => this.translate.instant('tool.tiles.random.fieldRequired'),
         minGreaterThenMax: () => this.translate.instant('tool.tiles.random.maxRadiusLargerThanMin'),
     };
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private router: Router,
-        private store: Store,
-        private snackBar: MatSnackBar,
-        private translate: TranslateService
-    ) {}
+    private readonly formBuilder = inject(FormBuilder);
+
+    private readonly router = inject(Router);
+
+    private readonly store = inject(Store);
+
+    private readonly snackBar = inject(MatSnackBar);
+
+    private readonly translate = inject(TranslateService);
 
     public ngOnInit(): void {
         this.initForm();
@@ -64,7 +66,7 @@ export class RandomTilesComponent implements OnInit {
     }
 
     private comparisonValidator(minKey: string, maxKey: string): ValidatorFn {
-        return (group: FormGroup): ValidationErrors => {
+        return (group: FormGroup): ValidationErrors | null => {
             const min = group.controls[minKey];
             const max = group.controls[maxKey];
             if (min.value > max.value) {

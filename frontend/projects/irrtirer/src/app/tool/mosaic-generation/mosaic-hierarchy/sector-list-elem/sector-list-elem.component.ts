@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
@@ -20,28 +20,23 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     styleUrl: './sector-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SectorListElemComponent implements OnInit {
-    @Input({ required: true })
-    public sector: GeneratedSectorModel;
+export class SectorListElemComponent {
+    public readonly sector = input.required<GeneratedSectorModel>();
 
-    protected isOpenSignal: WritableSignal<boolean> = signal(false);
+    protected readonly isOpen = signal<boolean>(false);
 
-    protected items$: Observable<GeneratedTileModel[]>;
+    protected readonly items$ = computed<Observable<GeneratedTileModel[]>>(() => this.sector().tiles$ );
 
-    protected areTilesVisibleSignal: WritableSignal<boolean> = signal(true);
+    protected readonly areTilesVisible = signal<boolean>(true);
 
-    constructor(protected translate: TranslateService) {}
-
-    public ngOnInit(): void {
-        this.items$ = this.sector.tiles$;
-    }
+    protected readonly translate = inject(TranslateService);
 
     protected toggleTilesList(): void {
-        this.isOpenSignal.update((value) => !value);
+        this.isOpen.update((value) => !value);
     }
 
     protected toggleTilesVisibility(): void {
-        this.areTilesVisibleSignal.update((value) => !value);
-        this.sector.setTilesVisibility(this.areTilesVisibleSignal());
+        this.areTilesVisible.update((value) => !value);
+        this.sector().setTilesVisibility(this.areTilesVisible());
     }
 }

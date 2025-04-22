@@ -1,8 +1,8 @@
 export class Vector {
-    readonly x: number = 0;
-    readonly y: number = 0;
+    public readonly x: number = 0;
+    public readonly y: number = 0;
 
-    static readonly zero: Vector = new Vector(0, 0);
+    public static readonly zero: Vector = new Vector(0, 0);
 
     constructor(x: number, y: number) {
         this.x = x;

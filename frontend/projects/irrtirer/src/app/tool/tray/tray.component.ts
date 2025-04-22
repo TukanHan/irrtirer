@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { RouterOutlet } from '@angular/router';
@@ -17,11 +17,13 @@ import { TrayService } from './tray.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TrayComponent implements ToolView, AfterViewInit {
-    private tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
+    private readonly store = inject(Store);
 
-    private activeCanvas: IActiveCanvas;
+    private readonly destroyRef = inject(DestroyRef);
 
-    constructor(private store: Store, private destroyRef: DestroyRef) {}
+    private readonly tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
+
+    private activeCanvas!: IActiveCanvas;
 
     public ngAfterViewInit(): void {
         queueMicrotask(() => this.subscribeOnTilesSetsChange());

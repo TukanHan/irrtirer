@@ -14,16 +14,16 @@
         accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"/>
 
     <button mat-flat-button 
-        [color]="projectForm.get('mosaicImage').valid ? '' : 'accent'"
+        [color]="projectForm.controls.mosaicImage.valid ? '' : 'accent'"
         (click)="imageUploader.click()"
         [hidden]="isReadOnlyMode()">
-        {{ (projectForm.get('mosaicImage').valid ? 'tool.config.project.changeImage': 'tool.config.project.chooseImage') | translate }}
+        {{ (projectForm.controls.mosaicImage.valid ? 'tool.config.project.changeImage': 'tool.config.project.chooseImage') | translate }}
     </button>
 
     <mat-form-field appearance="outline" class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
         <input matInput type="number" formControlName="mosaicWidth">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
-        <mat-error>{{ getErrorLabel(projectForm.get('mosaicWidth')) }}</mat-error>
+        <mat-error>{{ getErrorLabel(projectForm.controls.mosaicWidth) }}</mat-error>
     </mat-form-field>
 </form>

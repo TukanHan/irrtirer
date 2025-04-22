@@ -13,7 +13,7 @@ import {
     providedIn: 'root',
 })
 export class MosaicSignalRService {
-    private hubConnection: signalR.HubConnection;
+    private readonly hubConnection: signalR.HubConnection;
 
     private readonly sectionsMeshReceivedSub: Subject<SectorTriangulationMeshPartsModel[]> = new Subject();
 

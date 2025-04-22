@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, InputSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -14,9 +14,9 @@ import { TranslateModule } from '@ngx-translate/core';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TileListElemComponent {
-    public tile: InputSignal<TileModel> = input.required();
+    public readonly tile = input.required<TileModel>();
 
-    constructor(private router: Router) {}
+    private readonly router = inject(Router);
 
     protected navigateToTileDetails(): void {
         this.router.navigate([`/tool/tray/tile/${this.tile().id}`]);

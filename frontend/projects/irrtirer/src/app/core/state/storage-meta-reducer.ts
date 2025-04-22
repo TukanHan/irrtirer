@@ -8,7 +8,7 @@ function setSavedState<T>(state: T, localStorageKey: string): void {
     localStorage.setItem(localStorageKey, JSON.stringify(state));
 }
 
-function getSavedState(localStorageKey: string): object {
+function getSavedState(localStorageKey: string): object | null {
     const storageValue = localStorage.getItem(localStorageKey);
     if (storageValue) {
         return JSON.parse(storageValue);

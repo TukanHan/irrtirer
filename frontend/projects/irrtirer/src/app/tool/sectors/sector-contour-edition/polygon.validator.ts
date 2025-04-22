@@ -23,7 +23,7 @@ function arePolygonEdgesIntersecting(vertices: Vector[]): boolean {
     const edges: Line[] = [];
 
     for (let i = 0; i < vertices.length; ++i) {
-        edges.push(new Line(vertices.at(i), vertices.at(i - 1)));
+        edges.push(new Line(vertices[i], vertices[i - 1]));
     }
 
     for (let i = 0; i < vertices.length; ++i) {

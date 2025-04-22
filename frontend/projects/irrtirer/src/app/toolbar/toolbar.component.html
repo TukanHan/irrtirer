@@ -15,11 +15,11 @@
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
-        <span class="language-label">{{selectedLanguageSignal() | titlecase}}</span>
+        <span class="language-label">{{selectedLanguage() | titlecase}}</span>
     </button>
 
     <mat-menu #menu="matMenu">
-        <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguageSignal()">
+        <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
             <mat-radio-button value="pl" class="lang-radio">
                 {{ 'toolbar.languages.polish' | translate }}
                 <mat-icon svgIcon="pl"></mat-icon>

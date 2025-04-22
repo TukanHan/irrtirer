@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -19,15 +19,17 @@ import { ConfigurationService } from '../configuration.service';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ConfigMenuComponent {
-    protected mosaicConfigSignal: Signal<MosaicConfig> = this.store.selectSignal(selectMosaicConfig);
+    private readonly store = inject(Store);
 
-    constructor(
-        private router: Router,
-        private translate: TranslateService,
-        private store: Store,
-        private dialog: MatDialog,
-        private configService: ConfigurationService
-    ) {}
+    protected readonly translate = inject(TranslateService);
+
+    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig>(selectMosaicConfig);
+
+    private readonly dialog = inject(MatDialog);
+
+    private readonly router = inject(Router);
+
+    private readonly configService = inject(ConfigurationService);
 
     protected navigateToProjectConfiguration(): void {
         this.router.navigate(['/tool/config/project']);

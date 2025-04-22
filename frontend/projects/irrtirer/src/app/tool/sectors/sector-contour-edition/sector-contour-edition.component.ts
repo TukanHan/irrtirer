@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +19,12 @@ import { nonUniqueValueValidator } from '../../../core/validators/unique-value.v
 import { polygonValidator } from './polygon.validator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
+interface SectorContourForm {
+    name: FormControl<string>;
+    color: FormControl<string>;
+    vertices: FormControl<Vector[]>;
+}
 
 @Component({
     selector: 'app-sector-contour-edition',
@@ -41,21 +47,27 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 export class SectorContourEditionComponent implements OnInit {
     private sector!: SectorSchema;
 
-    protected selectedVertexSignal: WritableSignal<Vector> = signal(null);
+    protected readonly selectedVertex = signal<Vector | null>(null);
 
-    protected sectorForm: FormGroup;
+    protected sectorForm!: FormGroup<SectorContourForm>;
 
-    constructor(
-        private store: Store,
-        private snackbarService: MatSnackBar,
-        private service: SectorsContoursService,
-        protected translate: TranslateService,
-        private formBuilder: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
-        private destroyRef: DestroyRef,
-        private changeDetector: ChangeDetectorRef
-    ) {}
+    private readonly store = inject(Store);
+
+    private readonly snackbarService = inject(MatSnackBar);
+
+    private readonly sectorsContoursService = inject(SectorsContoursService);
+
+    protected readonly translate = inject(TranslateService);
+
+    private readonly fb = inject(FormBuilder);
+
+    private readonly route = inject(ActivatedRoute);
+
+    private readonly router = inject(Router);
+
+    private readonly destroyRef = inject(DestroyRef);
+
+    private readonly changeDetector = inject(ChangeDetectorRef);
 
     public ngOnInit(): void {
         this.prepareSector();
@@ -65,16 +77,18 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private subscribeOnCanvasClicked(): void {
-        this.service.canvasClicked$
+        this.sectorsContoursService.canvasClicked$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((vector) => this.addVertex(new Vector(vector.x, vector.y)));
     }
 
     private prepareSector(): void {
-        const sectorId: string = this.route.snapshot.paramMap.get('id');
+        const sectorId = this.route.snapshot.paramMap.get('id');
         if (sectorId) {
-            this.sector = this.store.selectSignal(selectSectors)().find(s => s.id === sectorId);
-            this.selectedVertexSignal.set(this.sector.vertices.at(0));
+            this.sector = this.store
+                .selectSignal(selectSectors)()
+                .find((s) => s.id === sectorId)!;
+            this.selectedVertex.set(this.sector.vertices[0]);
         } else {
             this.sector = SectorsContoursService.createNewSector();
         }
@@ -86,32 +100,30 @@ export class SectorContourEditionComponent implements OnInit {
             .filter((s) => s.id !== this.sector.id)
             .map((s) => s.name);
 
-        this.sectorForm = this.formBuilder.group({
-            name: [this.sector.name, [Validators.required, nonUniqueValueValidator(usedSectorNames)]],
-            color: [this.sector.color, [Validators.required]],
-            vertices: [this.sector.vertices, [polygonValidator()]],
+        this.sectorForm = this.fb.group<SectorContourForm>({
+            name: this.fb.nonNullable.control(this.sector.name, { validators: [Validators.required, nonUniqueValueValidator(usedSectorNames)] }),
+            color: this.fb.nonNullable.control(this.sector.color, { validators: [Validators.required] }),
+            vertices: this.fb.nonNullable.control(this.sector.vertices, { validators: [polygonValidator()] }),
         });
 
-        this.sectorForm.statusChanges
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.changeDetector.markForCheck());
+        this.sectorForm.statusChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.changeDetector.markForCheck());
     }
 
     private addVertex(vertex: Vector): void {
-        const vertices: Vector[] = [...this.sectorForm.value.vertices];
-        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertexSignal());
+        const vertices: Vector[] = [...this.sectorForm.controls.vertices.value];
+        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex());
         vertices.splice(indexOfSelectedVertex + 1, 0, vertex);
 
-        this.sectorForm.get('vertices').setValue(vertices);
-        this.selectedVertexSignal.set(vertex);
+        this.sectorForm.controls.vertices.setValue(vertices);
+        this.selectedVertex.set(vertex);
         this.emitContourPreviewChanged();
     }
 
     public removeVertex(vertex: Vector): void {
-        const vertices: Vector[] = this.sectorForm.value.vertices.filter((x) => x !== vertex);
+        const vertices: Vector[] = this.sectorForm.controls.vertices.value.filter((x) => x !== vertex);
 
-        this.sectorForm.get('vertices').setValue(vertices);
-        if (vertex === this.selectedVertexSignal()) {
+        this.sectorForm.controls.vertices.setValue(vertices);
+        if (vertex === this.selectedVertex()) {
             this.resetSelectedVertex();
         }
 
@@ -123,14 +135,14 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     protected cancel(): void {
-        this.service.emitEditedSectorContour(null);
+        this.sectorsContoursService.emitEditedSectorContour(null);
         this.navigateToSectorList();
     }
 
     protected save(): void {
         if (this.sectorForm.valid) {
             this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: this.getUpdatedSectorModel() }));
-            this.service.emitEditedSectorContour(null);
+            this.sectorsContoursService.emitEditedSectorContour(null);
             this.navigateToSectorList();
         } else {
             this.showWarning(this.showValidationError());
@@ -138,16 +150,16 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private showValidationError(): string {
-        if (this.sectorForm.get('name').hasError('required')) {
+        if (this.sectorForm.controls.name.hasError('required')) {
             return this.translate.instant('tool.sectors.sectorContour.nameRequired');
         }
-        if (this.sectorForm.get('name').hasError('nonUnique')) {
+        if (this.sectorForm.controls.name.hasError('nonUnique')) {
             return this.translate.instant('tool.sectors.sectorContour.nameAlreadyInUse');
         }
-        if (this.sectorForm.get('vertices').hasError('tooFewVertices')) {
+        if (this.sectorForm.controls.vertices.hasError('tooFewVertices')) {
             return this.translate.instant('tool.sectors.sectorContour.tooFewVertices');
         }
-        if (this.sectorForm.get('vertices').hasError('edgesIntersect')) {
+        if (this.sectorForm.controls.vertices.hasError('edgesIntersect')) {
             return this.translate.instant('tool.sectors.sectorContour.linesCannotIntersecting');
         }
 
@@ -159,7 +171,7 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     protected onBoxSelected(vertex: Vector): void {
-        this.selectedVertexSignal.set(vertex);
+        this.selectedVertex.set(vertex);
         this.emitContourPreviewChanged();
     }
 
@@ -168,9 +180,9 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     protected dropVertexBox(event: CdkDragDrop<string[]>): void {
-        const vertices: Vector[] = this.sectorForm.value.vertices;
+        const vertices: Vector[] = this.sectorForm.controls.vertices.value;
         moveItemInArray(vertices, event.previousIndex, event.currentIndex);
-        this.sectorForm.get('vertices').setValue(vertices);
+        this.sectorForm.controls.vertices.setValue(vertices);
 
         this.emitContourPreviewChanged();
     }
@@ -180,23 +192,25 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private resetSelectedVertex(): void {
-        const vertices: Vector[] = this.sectorForm.value.vertices;
-        this.selectedVertexSignal.set(vertices.length ? vertices.at(-1) : null);
+        const vertices: Vector[] = this.sectorForm.controls.vertices.value;
+        this.selectedVertex.set(vertices.at(-1) ?? null);
     }
 
     private emitContourPreviewChanged(): void {
-        this.service.emitEditedSectorContour({
+        this.sectorsContoursService.emitEditedSectorContour({
             sector: this.getUpdatedSectorModel(),
-            selectedVertex: this.selectedVertexSignal(),
+            selectedVertex: this.selectedVertex(),
         });
     }
 
     private getUpdatedSectorModel(): SectorSchema {
+        const formValue = this.sectorForm.getRawValue();
+
         return {
             ...this.sector,
-            color: this.sectorForm.value.color,
-            name: this.sectorForm.value.name,
-            vertices: this.sectorForm.value.vertices,
+            color: formValue.color,
+            name: formValue.name,
+            vertices: formValue.vertices,
         };
     }
 }

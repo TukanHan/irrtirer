@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
@@ -15,9 +15,11 @@ import { TranslateModule } from '@ngx-translate/core';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TrayMenuComponent {
-    protected tilesSetsSignal: Signal<TilesSet[]> = this.store.selectSignal(selectTilesSets);
+    private readonly router = inject(Router);
 
-    constructor(private router: Router, private store: Store) {}
+    private readonly store = inject(Store);
+
+    protected readonly tilesSets = this.store.selectSignal<TilesSet[]>(selectTilesSets);
 
     protected navigateToRandomTiles(): void {
         this.router.navigate(['/tool/tray/random']);

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
@@ -23,19 +23,19 @@ import { Router } from '@angular/router';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorsContoursListComponent {
-    protected sectorsSignal: Signal<SectorSchema[]>;
+    private readonly store = inject(Store);
 
-    protected selectedSector: SectorSchema;
+    protected readonly translate = inject(TranslateService);
 
-    constructor(
-        public dialog: MatDialog,
-        private store: Store,
-        private sectorsContoursService: SectorsContoursService,
-        private translate: TranslateService,
-        private router: Router
-    ) {
-        this.sectorsSignal = store.selectSignal(selectSectors);
-    }
+    private readonly dialog = inject(MatDialog);
+
+    private readonly router = inject(Router);
+
+    protected selectedSector: SectorSchema | null;
+
+    protected readonly sectors = this.store.selectSignal<SectorSchema[]>(selectSectors);
+
+    private readonly sectorsContoursService = inject(SectorsContoursService);
 
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
@@ -50,7 +50,7 @@ export class SectorsContoursListComponent {
                 if (this.selectedSector === sector) {
                     this.resetSelectedSector();
                 }
-                this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector });
+                this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
             }
         });
     }
@@ -58,7 +58,7 @@ export class SectorsContoursListComponent {
     protected emitSectorToEditContour(sector: SectorSchema): void {
         this.sectorsContoursService.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
-            selectedVertex: sector.vertices.at(-1),
+            selectedVertex: sector.vertices.at(-1)!,
         });
     }
 
@@ -89,11 +89,11 @@ export class SectorsContoursListComponent {
 
     protected dropSectorBox(event: CdkDragDrop<string[]>): void {
         this.store.dispatch(MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex }));
-        this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector });
+        this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
     }
 
     private resetSelectedSector(): void {
-        const sectors: SectorSchema[] = this.sectorsSignal();
-        this.selectedSector = sectors.length ? sectors.at(0) : null;
+        const sectors: SectorSchema[] = this.sectors();
+        this.selectedSector = sectors.length ? sectors[0] : null;
     }
 }

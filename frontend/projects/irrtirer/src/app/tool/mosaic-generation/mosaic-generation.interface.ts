@@ -41,7 +41,7 @@ export class GeneratedSectorModel {
         const tiles: GeneratedTileModel[] = this.tilesSub.value;
         if (tiles.length) {
             tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
-            tiles.at(0).tileObject.parentCanvas.redraw();
+            tiles[0].tileObject.parentCanvas.redraw();
         }
     }
 }

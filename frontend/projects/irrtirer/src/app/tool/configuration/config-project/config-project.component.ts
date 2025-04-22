@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, OnInit, Signal } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -17,39 +17,42 @@ import { FormHelper } from '../../../core/helpers/form-helper';
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
 
+interface ProjectConfigForm {
+    mosaicWidth: FormControl<number>;
+    mosaicImage: FormControl<File | null>;
+}
+
 @Component({
     selector: 'app-config-project',
-    imports: [
-        TranslateModule,
-        MatButtonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        ReactiveFormsModule
-    ],
+    imports: [TranslateModule, MatButtonModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule],
     templateUrl: './config-project.component.html',
     styleUrl: './config-project.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConfigProjectComponent implements OnInit {
-    protected mosaicConfigSignal: Signal<MosaicConfig> = this.store.selectSignal(selectMosaicConfig);
+    private readonly fb = inject(FormBuilder);
 
-    protected projectForm: FormGroup;
+    private readonly destroyRef = inject(DestroyRef);
 
-    private errorLabels: { [key: string]: () => string } = {
+    private readonly snackBar = inject(MatSnackBar);
+
+    private readonly router = inject(Router);
+
+    private readonly configService = inject(ConfigurationService);
+
+    private readonly store = inject(Store);
+
+    private readonly translate = inject(TranslateService);
+
+    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig | null>(selectMosaicConfig);
+
+    private readonly errorLabels: { [key: string]: () => string } = {
         min: () => this.translate.instant('tool.config.project.mosaicMinWidthErrorMessage', { width: MIN_WIDTH }),
         max: () => this.translate.instant('tool.config.project.mosaicMaxWidthErrorMessage', { width: MAX_WIDTH }),
-        required: () => this.translate.instant('tool.config.project.mosaicWidthRequiredErrorMessage')
+        required: () => this.translate.instant('tool.config.project.mosaicWidthRequiredErrorMessage'),
     };
 
-    constructor(
-        private formBuilder: FormBuilder,
-        private translate: TranslateService,
-        private store: Store,
-        private destroyRef: DestroyRef,
-        private snackBar: MatSnackBar,
-        private router: Router,
-        private configService: ConfigurationService
-    ) {}
+    protected projectForm!: FormGroup<ProjectConfigForm>;
 
     public ngOnInit(): void {
         this.buildProjectForm();
@@ -62,12 +65,11 @@ export class ConfigProjectComponent implements OnInit {
     }
 
     private buildProjectForm(): void {
-        this.projectForm = this.formBuilder.group({
-            mosaicWidth: [
-                this.mosaicConfigSignal()?.mosaicWidth ?? 100, 
-                [Validators.required, Validators.min(MIN_WIDTH), Validators.max(MAX_WIDTH)]
-            ],
-            mosaicImage: [null, Validators.required],
+        this.projectForm = this.fb.group<ProjectConfigForm>({
+            mosaicWidth: this.fb.nonNullable.control(this.mosaicConfig()?.mosaicWidth ?? 100, {
+                validators: [Validators.required, Validators.min(MIN_WIDTH), Validators.max(MAX_WIDTH)],
+            }),
+            mosaicImage: this.fb.control(null, { validators: [Validators.required] }),
         });
     }
 
@@ -75,12 +77,15 @@ export class ConfigProjectComponent implements OnInit {
         this.projectForm.valueChanges.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((valueChange) => {
             if (this.projectForm.valid) {
                 const reader = new FileReader();
-                reader.readAsDataURL(valueChange.mosaicImage);
+                reader.readAsDataURL(valueChange.mosaicImage!);
                 reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
-                    this.configService.emitImageChange({
-                        base64Image: readingEvent?.target?.result as string,
-                        mosaicWidth: valueChange.mosaicWidth,
-                    }, true);
+                    this.configService.emitImageChange(
+                        {
+                            base64Image: readingEvent?.target?.result as string,
+                            mosaicWidth: valueChange.mosaicWidth!,
+                        },
+                        true
+                    );
                 };
             } else {
                 this.configService.emitImageChange(null, false);
@@ -102,10 +107,10 @@ export class ConfigProjectComponent implements OnInit {
     }
 
     private save(): void {
-        const projectFromValue = this.projectForm.value;
+        const projectFromValue = this.projectForm.getRawValue();
 
         const reader = new FileReader();
-        reader.readAsDataURL(projectFromValue.mosaicImage);
+        reader.readAsDataURL(projectFromValue.mosaicImage!);
         reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
             const image: string = readingEvent?.target?.result as string;
             const project: MosaicProjectModel = {
@@ -128,15 +133,15 @@ export class ConfigProjectComponent implements OnInit {
     }
 
     private getErrorMessage(): string {
-        if (!this.projectForm.get('mosaicImage').valid) {
+        if (!this.projectForm.controls.mosaicImage.valid) {
             return this.translate.instant('tool.config.project.selectImageErrorMessage');
-        } else if (this.projectForm.get('mosaicWidth')) {
-            return this.getErrorLabel(this.projectForm.get('mosaicWidth'));
+        } else if (!this.projectForm.controls.mosaicWidth.valid) {
+            return this.getErrorLabel(this.projectForm.controls.mosaicWidth);
         }
 
-        return null;
+        return '';
     }
-    
+
     protected getErrorLabel(control: AbstractControl): string {
         return FormHelper.getErrorLabel(control, this.errorLabels);
     }
@@ -148,6 +153,6 @@ export class ConfigProjectComponent implements OnInit {
     }
 
     protected isReadOnlyMode(): boolean {
-        return !!this.mosaicConfigSignal();
+        return !!this.mosaicConfig();
     }
 }

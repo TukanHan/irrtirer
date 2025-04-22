@@ -1,9 +1,9 @@
 import { Vector } from './vector.model';
 
 export class Triangle {
-    a: Vector;
-    b: Vector;
-    c: Vector;
+    public readonly a: Vector;
+    public readonly b: Vector;
+    public readonly c: Vector;
 
     public getVertices(): Vector[] {
         return [this.a, this.b, this.c];

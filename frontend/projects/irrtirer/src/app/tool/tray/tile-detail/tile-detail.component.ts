@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit, signal, WritableSignal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
@@ -16,24 +16,27 @@ import { FormsModule } from '@angular/forms';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TileDetailComponent implements OnInit {
-    protected tileSignal: WritableSignal<TileModel> = signal(null);
+    protected readonly tile = signal<TileModel | null>(null);
 
-    constructor(
-        private route: ActivatedRoute,
-        private store: Store,
-        private router: Router,
-        protected translate: TranslateService
-    ) {}
+    private readonly route = inject(ActivatedRoute);
+    
+    private readonly store = inject(Store);
+    
+    private readonly router = inject(Router);
+    
+    protected readonly translate = inject(TranslateService);
 
     public ngOnInit(): void {
-        const tileId: string = this.route.snapshot.paramMap.get('id');
+        const tileId = this.route.snapshot.paramMap.get('id');
         if (tileId) {
-            const tileModel: TileModel = this.getTileModel(tileId);
-            this.tileSignal.set(tileModel);
+            const tileModel = this.getTileModel(tileId);
+            if(tileModel) {
+                this.tile.set(tileModel);
+            }
         }
     }
 
-    private getTileModel(id: string): TileModel {
+    private getTileModel(id: string): TileModel | undefined {
         const tilesSets = this.store.selectSignal(selectTilesSets)();
         return tilesSets.flatMap((tilesSets) => tilesSets.tiles).find((x) => x.id === id);
     }

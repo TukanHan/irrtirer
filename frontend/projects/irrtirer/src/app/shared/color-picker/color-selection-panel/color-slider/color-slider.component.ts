@@ -7,10 +7,8 @@ import {
     OnChanges,
     OnDestroy,
     output,
-    OutputEmitterRef,
     signal,
-    ViewChild,
-    WritableSignal,
+    viewChild,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import { CommonModule } from '@angular/common';
@@ -29,15 +27,14 @@ export interface CursorDataModel {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges {
-    @ViewChild('canvas')
-    protected canvas: ElementRef<HTMLCanvasElement>;
-
     @Input()
     public value: number;
 
-    public valueChange: OutputEmitterRef<number> = output<number>();
+    public readonly valueChange = output<number>();
 
-    protected cursorDataSignal: WritableSignal<CursorDataModel> = signal(null);
+    protected readonly cursorDataSignal = signal<CursorDataModel | null>(null);
+
+    protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
     private isDragging: boolean = false;
 
@@ -59,7 +56,7 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
     };
 
     private onSliderMouseInteraction(evt: MouseEvent): void {
-        const canvasRect: DOMRect = this.canvas.nativeElement.getBoundingClientRect();
+        const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
 
         const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
         this.value = Math.max(0, Math.min(1, rawValue));
@@ -72,28 +69,28 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
         this.drawSliderCanvas();
         this.updateCursor(this.value);
 
-        this.canvas.nativeElement.addEventListener('mousedown', this.onMouseDown);
+        this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mouseup', this.onMouseUp);
         window.addEventListener('mousemove', this.onMouseMove);
     }
 
     public ngOnDestroy(): void {
-        this.canvas.nativeElement.removeEventListener('mousedown', this.onMouseDown);
+        this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
         window.removeEventListener('mouseup', this.onMouseUp);
         window.removeEventListener('mousemove', this.onMouseMove);
     }
 
     public ngOnChanges(): void {
-        if (this.canvas) {
+        if (this.canvas()) {
             this.updateCursor(this.value);
         }
     }
 
     private drawSliderCanvas(): void {
-        const ctx: CanvasRenderingContext2D = this.canvas.nativeElement.getContext('2d');
+        const ctx: CanvasRenderingContext2D = this.canvas().nativeElement.getContext('2d')!;
         const pixelSize: Size = {
-            height: this.canvas.nativeElement.height,
-            width: this.canvas.nativeElement.width,
+            height: this.canvas().nativeElement.height,
+            width: this.canvas().nativeElement.width,
         };
 
         const gradient = ctx.createLinearGradient(0, 0, pixelSize.width, 0);
@@ -109,7 +106,7 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
     }
 
     private updateCursor(value: number): void {
-        const sliderWidth: number = this.canvas.nativeElement.getBoundingClientRect().width;
+        const sliderWidth: number = this.canvas().nativeElement.getBoundingClientRect().width;
         const horizontalPosition: number = sliderWidth * value - 8;
         const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
 

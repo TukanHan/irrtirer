@@ -4,10 +4,9 @@
   </button>
 </div>
 
-@let sectors = sectorsSignal();
-@if(sectors.length) {
+@if(sectors().length) {
   <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
-    @for (sector of sectors; track sector) {
+    @for (sector of sectors(); track sector) {
       <div class="sector-box" [class.selected]="sector === selectedSector" cdkDrag (mousedown)="onSectorSelected(sector)">
         {{sector.name}}
         <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">

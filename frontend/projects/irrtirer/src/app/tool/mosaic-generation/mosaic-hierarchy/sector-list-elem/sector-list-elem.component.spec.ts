@@ -20,8 +20,8 @@ describe('SectorListElemComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorListElemComponent);
+        fixture.componentRef.setInput('sector', new GeneratedSectorModel(faceSector));
         component = fixture.componentInstance;
-        component.sector = new GeneratedSectorModel(faceSector);
         fixture.detectChanges();
     });
 

@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, OnDestroy, signal, WritableSignal } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, OnDestroy, signal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
@@ -38,19 +38,19 @@ import { ToolService } from '../tool.service';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, ToolView {
-    protected isImageVisibleSignal: WritableSignal<boolean> = signal<boolean>(false);
+    protected readonly isImageVisible = signal<boolean>(false);
 
-    protected isMeshVisibleSignal: WritableSignal<boolean> = signal<boolean>(true);
+    protected readonly isMeshVisible = signal<boolean>(true);
 
-    private showMesh$: BehaviorSubject<boolean> = new BehaviorSubject(true);
+    private readonly showMesh$ = new BehaviorSubject<boolean>(true);
 
-    protected progressStateSignal: WritableSignal<InfoState> = signal(null);
+    protected readonly progressState = signal<InfoState | null>(null);
 
-    private imageObject: ImageObject;
+    private imageObject?: ImageObject;
 
     private availableTiles: TileModel[];
 
-    protected ribbonActions: RibbonAction[] = [
+    protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'recenter',
             visibility: signal('on'),
@@ -62,31 +62,34 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
         {
             iconName: 'graph_3',
             onClick: () => this.toggleMeshVisibility(),
-            visibility: computed(() =>  this.isMeshVisibleSignal() ? 'on' : 'off'),
+            visibility: computed(() =>  this.isMeshVisible() ? 'on' : 'off'),
         },
         {
             iconName: 'image',
             onClick: () => this.toggleImageVisibility(),
-            visibility: computed(() => this.isImageVisibleSignal() ? 'on' : 'off'), 
+            visibility: computed(() => this.isImageVisible() ? 'on' : 'off'), 
         }
     ];
 
     private activeCanvas: IActiveCanvas;
 
-    constructor(
-        private store: Store,
-        private service: MosaicGenerationService,
-        private signalRService: MosaicSignalRService,
-        private snackbarService: MatSnackBar,
-        private translate: TranslateService,
-        private destroyRef: DestroyRef
-    ) {}
+    private readonly store = inject(Store);
+
+    protected readonly translate = inject(TranslateService);
+
+    private readonly destroyRef = inject(DestroyRef);
+
+    private readonly snackBar = inject(MatSnackBar);
+
+    private readonly signalRService = inject(MosaicSignalRService);
+
+    private readonly service = inject(MosaicGenerationService);
 
     public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
 
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
-        this.imageObject.setVisibility(this.isImageVisibleSignal());
+        this.imageObject.setVisibility(this.isImageVisible());
         this.activeCanvas.addCanvasObject(this.imageObject);
 
         this.activeCanvas.redraw();
@@ -110,7 +113,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
                 this.availableTiles = this.getAvailableTiles();
 
-                this.progressStateSignal.set({ type: 'init', message: this.translate.instant('tool.generation.message.sectorsMeshGeneration') });
+                this.progressState.set({ type: 'init', message: this.translate.instant('tool.generation.message.sectorsMeshGeneration') });
 
                 this.signalRService
                     .initMosaicTriangulation(initMosaicGenerationRequest)
@@ -136,7 +139,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
                 const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
                 this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
 
-                this.progressStateSignal.set({
+                this.progressState.set({
                     type: 'progress',
                     sector: sectorInfo.schema.name,
                     percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
@@ -170,7 +173,7 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
         this.signalRService.generationFinished$
             .pipe(takeUntilDestroyed(this.destroyRef))    
             .subscribe(() => {
-                this.progressStateSignal.set(null);
+                this.progressState.set(null);
                 this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
             });
     }
@@ -240,25 +243,25 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
     }
 
     protected toggleMeshVisibility(): void {
-        const isVisible = !this.isMeshVisibleSignal();
+        const isVisible = !this.isMeshVisible();
         this.showMesh$.next(isVisible);
-        this.isMeshVisibleSignal.set(isVisible);
+        this.isMeshVisible.set(isVisible);
     }
 
     protected toggleImageVisibility(): void {
-        const isVisible = !this.isImageVisibleSignal();
+        const isVisible = !this.isImageVisible();
         this.imageObject.setVisibility(isVisible);
         this.activeCanvas.redraw();
-        this.isImageVisibleSignal.set(isVisible);
+        this.isImageVisible.set(isVisible);
     }
 
     private setError(message: string): void {
-        this.progressStateSignal.set(null);
+        this.progressState.set(null);
         this.showMessage(message);
     }
 
     private showMessage(message: string): void {
-        this.snackbarService.open(message, this.translate.instant('common.ok'), { duration: 3000 });
+        this.snackBar.open(message, this.translate.instant('common.ok'), { duration: 3000 });
     }
 
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {

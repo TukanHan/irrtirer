@@ -53,7 +53,7 @@ export class SizeDisplayPipe implements PipeTransform {
             }
         }
 
-        return units.at(-1);
+        return units.at(-1)!;
     }
 
     private formatValue(value: number, unit: Unit): string {

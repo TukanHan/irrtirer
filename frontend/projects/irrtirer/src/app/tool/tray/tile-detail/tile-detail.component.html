@@ -8,8 +8,7 @@
 </div>
 
 <div class="details">
-    @let tile = tileSignal();
-    @if(tile) {
+    @if(tile(); as tile) {
         <div class="id">
             <div class="label">{{ 'tool.tiles.details.tileId' | translate }}:</div>
             <div class="value">{{tile.id}}</div>

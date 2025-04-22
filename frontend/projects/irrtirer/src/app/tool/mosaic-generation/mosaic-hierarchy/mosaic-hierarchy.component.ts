@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MosaicGenerationService } from '../mosaic-generation.service';
 import { CommonModule } from '@angular/common';
 import { SectorListElemComponent } from './sector-list-elem/sector-list-elem.component';
@@ -11,5 +11,5 @@ import { SectorListElemComponent } from './sector-list-elem/sector-list-elem.com
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MosaicHierarchyComponent {
-    constructor(public service: MosaicGenerationService) {}
+    protected readonly service = inject(MosaicGenerationService);
 }
