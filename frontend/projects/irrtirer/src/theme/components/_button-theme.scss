@@ -22,11 +22,11 @@
 
 @mixin icon-button($button-size: 48px, $icon-size: 24px) {
     @include icon-button-icon($icon-size);
-    --mdc-icon-button-state-layer-size: #{$button-size};
+    --mat-icon-button-state-layer-size: #{$button-size};
     padding: math.div($button-size - $icon-size, 2);
 
     .mat-mdc-button-touch-target {
-        width: var(--mdc-icon-button-state-layer-size);
-        height: var(--mdc-icon-button-state-layer-size);
+        width: var(--mat-icon-button-state-layer-size);
+        height: var(--mat-icon-button-state-layer-size);
     }
 }

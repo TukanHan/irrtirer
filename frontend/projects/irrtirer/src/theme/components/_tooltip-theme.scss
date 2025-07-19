@@ -6,7 +6,7 @@
     mat-tooltip-component {
         .mat-mdc-tooltip {
             &.hint {
-                --mdc-plain-tooltip-container-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 400)};
+                --mat-tooltip-container-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 400)};
                 
                 .mat-mdc-tooltip-surface {
                     padding: 10px;

@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,7 +8,7 @@ import { Size } from '../../core/models/math/size.interface';
 
 @Component({
     selector: 'app-ribbon',
-    imports: [CommonModule, MatIconModule, MatButtonModule, SizeDisplayPipe],
+    imports: [MatIconModule, MatButtonModule, SizeDisplayPipe],
     templateUrl: './ribbon.component.html',
     styleUrl: './ribbon.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

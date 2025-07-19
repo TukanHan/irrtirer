@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';
+
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [MatButtonModule, MatIconModule, MatMenuModule, CommonModule, CdkDropList, CdkDrag, TranslateModule],
+    imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslateModule],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
