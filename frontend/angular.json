@@ -87,24 +87,7 @@
           }
         },
         "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
-            "tsConfig": "projects/irrtirer/tsconfig.spec.json",
-            "inlineStyleLanguage": "scss",
-            "assets": [
-              "projects/irrtirer/src/favicon.ico",
-              "projects/irrtirer/src/assets"
-            ],
-            "styles": [
-              "projects/irrtirer/src/styles.scss"
-            ],
-            "scripts": [],
-            "karmaConfig": "projects/irrtirer/karma.conf.js"
-          }
+          "builder": "@analogjs/vitest-angular:test"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -139,14 +122,7 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@angular/build:karma",
-          "options": {
-            "tsConfig": "projects/active-canvas/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
+          "builder": "@analogjs/vitest-angular:test"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
