@@ -4,7 +4,7 @@ import { Line } from '../../../core/models/math/line.model';
 import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
 
 export function polygonValidator(): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
+    return (control: AbstractControl<Vector[]>): ValidationErrors | null => {
         const vertices: Vector[] = control.value;
         
         if (vertices.length < 3) {
@@ -23,7 +23,7 @@ function arePolygonEdgesIntersecting(vertices: Vector[]): boolean {
     const edges: Line[] = [];
 
     for (let i = 0; i < vertices.length; ++i) {
-        edges.push(new Line(vertices[i], vertices[i - 1]));
+        edges.push(new Line(vertices[i], vertices.at(i - 1)));
     }
 
     for (let i = 0; i < vertices.length; ++i) {
