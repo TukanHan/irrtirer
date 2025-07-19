@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
-import { Size } from 'active-canvas';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { Size } from '../../../../../active-canvas/src/public-api';
 
 interface TileWithSize {
     tile: TileModel;

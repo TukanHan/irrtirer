@@ -23,15 +23,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "localize": [
-              "pl"
-            ],
             "outputPath": "dist/irrtirer",
             "index": "projects/irrtirer/src/index.html",
             "browser": "projects/irrtirer/src/main.ts",
             "polyfills": [
-              "zone.js",
-              "@angular/localize/init"
+              "zone.js"
             ],
             "tsConfig": "projects/irrtirer/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
