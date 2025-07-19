@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Vector } from '../../../core/models/math/vector.model';
@@ -29,17 +29,16 @@ interface SectorContourForm {
 @Component({
     selector: 'app-sector-contour-edition',
     imports: [
-        MatButtonModule,
-        CommonModule,
-        CdkDropList,
-        CdkDrag,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
-        ColorPickerComponent,
-        TranslateModule,
-        ReactiveFormsModule,
-    ],
+    MatButtonModule,
+    CdkDropList,
+    CdkDrag,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    ColorPickerComponent,
+    TranslateModule,
+    ReactiveFormsModule
+],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

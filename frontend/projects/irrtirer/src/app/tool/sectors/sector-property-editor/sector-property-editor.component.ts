@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
-import { CommonModule } from '@angular/common';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -52,15 +52,14 @@ interface SectorSchemaForm {
 @Component({
     selector: 'app-sector-property-editor',
     imports: [
-        MatButtonModule,
-        CommonModule,
-        MatFormFieldModule,
-        MatInputModule,
-        MatTooltipModule,
-        ReactiveFormsModule,
-        ExtendedPanelComponent,
-        TranslateModule,
-    ],
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTooltipModule,
+    ReactiveFormsModule,
+    ExtendedPanelComponent,
+    TranslateModule
+],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush
