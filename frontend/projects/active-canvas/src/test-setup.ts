@@ -1,6 +1,7 @@
 
 import '@angular/compiler';
 import '@analogjs/vitest-angular/setup-zone';
+import 'vitest-canvas-mock';
 
 import {
   BrowserTestingModule,

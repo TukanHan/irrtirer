@@ -7,7 +7,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [
       angular(),
-      
     ],
     test: {
       globals: true,

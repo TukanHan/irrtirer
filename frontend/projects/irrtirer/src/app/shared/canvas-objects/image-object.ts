@@ -6,7 +6,7 @@ export class ImageObject extends BaseCanvasObject implements CanvasObject {
 
     private position: IVector;
 
-    size: Size;
+    public readonly size: Size;
 
     private order: number;
 
