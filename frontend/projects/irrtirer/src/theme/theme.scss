@@ -29,15 +29,6 @@ $irrtirer-theme: mat.m2-define-dark-theme((
   density: 0
 ));
 
-
-$backgroundColor: #191c1c;
-$color: map.get($irrtirer-theme, 'color');
-$colorBackground: map.get($color, "background");
-$colorBackground: map.set($colorBackground, "background", $backgroundColor);
-$color: map.set($color, "background", $colorBackground);
-$irrtirer-theme: map.set($irrtirer-theme, "color", $color);
-
-
 @include mat.all-component-themes($irrtirer-theme);
 @include toolbar.theme($irrtirer-theme);
 @include button.theme($irrtirer-theme);

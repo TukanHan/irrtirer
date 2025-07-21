@@ -1,24 +1,29 @@
-@use 'sass:map';
-@use '@angular/material' as mat;
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./../gray-palette.scss" as palette;
 
 @mixin theme($theme) {
     mat-toolbar {
         &.mat-toolbar {
-            background: #333333;
+            background: #{mat.m2-get-color-from-palette(palette.$grey-palette, 500)};
         }
-        
+
         .toolbar-item {
             * {
                 color: mat.get-theme-color($theme, primary, A200);
             }
-            
+
             .mat-icon {
                 width: 22px;
                 height: 22px;
 
                 &.material-icons {
                     font-size: 22px;
-                }            
+                }
+
+                &:not(.material-icons) {
+                    display: flex;
+                }
             }
 
             span {

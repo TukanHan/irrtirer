@@ -14,7 +14,7 @@
                 appearance="outline"
                 class="density-3 no-hint" 
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.maxAreaHint')"
-                matTooltipPosition="left" 
+                matTooltipPosition="left"
                 matTooltipClass="hint">
                 <mat-label>{{ 'tool.sectors.sectorProperty.maxArea' | translate }}</mat-label>
                 <input matInput formControlName="sectionMaxArea" type="number" (change)="getTriangulationMesh()">

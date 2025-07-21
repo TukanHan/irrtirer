@@ -6,5 +6,5 @@ export const DEFAULT_CANVAS_OPTIONS: CanvasOptions = {
     minZoom: 0.00_000_000_1,
     maxZoom: 1_000_000_000,
     backgroundColor: "transparent",
-    canvasGridColor: '#424242',
+    canvasGridColor: '#3f3f3f',
 };
