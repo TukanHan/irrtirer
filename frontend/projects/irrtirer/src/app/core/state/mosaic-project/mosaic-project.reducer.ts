@@ -8,7 +8,7 @@ export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
     on(MosaicProjectActions.projectCreated, (_state, { project }) => ({
         ...project,
     })),
-    on(MosaicProjectActions.projectCanceled, (_state): null => null),
+    on(MosaicProjectActions.projectCanceled, (): null => null),
     on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({
         ...state!,
         config: { ...state!.config, mosaicWidth: width },

@@ -22,11 +22,11 @@
         <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
             <mat-radio-button value="pl" class="lang-radio">
                 {{ 'toolbar.languages.polish' | translate }}
-                <mat-icon svgIcon="pl"></mat-icon>
+                <mat-icon svgIcon="pl" />
             </mat-radio-button>
             <mat-radio-button value="en" class="lang-radio">
                 {{ 'toolbar.languages.english' | translate }}
-                <mat-icon svgIcon="gb"></mat-icon>
+                <mat-icon svgIcon="gb" />
             </mat-radio-button>
         </mat-radio-group>
     </mat-menu>

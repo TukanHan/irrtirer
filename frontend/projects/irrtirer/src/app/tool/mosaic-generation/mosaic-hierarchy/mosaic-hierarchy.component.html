@@ -1,5 +1,5 @@
 <div class="sectors">
     @for (sector of this.service.sectors$ | async; track $index) {
-        <app-sector-list-elem [sector]='sector'></app-sector-list-elem>
+        <app-sector-list-elem [sector]='sector' />
     }
 </div>
