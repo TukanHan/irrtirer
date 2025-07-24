@@ -1,16 +1,12 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 
-export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {
-    vertices: IVector[];
-    hexColor: string;
-    order: number;
-    lineThickness: number = 8;
+export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {    
+    public lineThickness: number = 8;
 
-    constructor(vertices: IVector[], hexColor: string, order: number = 10) {
+    constructor(private vertices: IVector[], private hexColor: string, private order: number = 10) {
         super();
 
         this.vertices = vertices;
-        this.hexColor = hexColor;
         this.order = order;
     }
 

@@ -5,10 +5,10 @@ import { CanvasObject } from '../../../../../active-canvas/src/public-api';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 
 export class GeneratedSectorModel {
-    schema: SectorSchema;
-    visualObjects: CanvasObject[] = [];
-    countOfSections?: number;
-    sections: GeneratedSectionModel[] = [];
+    public schema: SectorSchema;
+    public visualObjects: CanvasObject[] = [];
+    public countOfSections?: number;
+    public sections: GeneratedSectionModel[] = [];
 
     private readonly tilesSub: BehaviorSubject<GeneratedTileModel[]> = new BehaviorSubject([]);
     public readonly tiles$: Observable<GeneratedTileModel[]> = this.tilesSub.asObservable();

@@ -1,3 +1,5 @@
+@use './../../theme/components/button-theme' as *;
+
 .toolbar {
     position: fixed;
     height: 55px;
@@ -16,6 +18,16 @@
 
         &.active-button {
             background: #00dddd1a;
+        }
+    }
+
+    .mode {
+        .mat-icon {
+            font-weight: 300;
+        }
+        
+        ::ng-deep {
+            @include icon-button(36px, 22px);
         }
     }
 

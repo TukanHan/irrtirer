@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
@@ -14,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-sectors-contours-list',
@@ -31,6 +31,8 @@ export class SectorsContoursListComponent {
 
     private readonly router = inject(Router);
 
+    private readonly destroyRef = inject(DestroyRef);
+
     protected selectedSector: SectorSchema | null;
 
     protected readonly sectors = this.store.selectSignal<SectorSchema[]>(selectSectors);
@@ -40,19 +42,22 @@ export class SectorsContoursListComponent {
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: this.translate.instant('tool.sectors.contourList.removeSector'),
-            message:  this.translate.instant('tool.sectors.contourList.removeSectorMessage'),
+            message: this.translate.instant('tool.sectors.contourList.removeSectorMessage'),
         };
 
-        const dialogRef = this.dialog.open(DialogComponent, { data: dialogData });
-        dialogRef.afterClosed().subscribe((result) => {
-            if (result) {
-                this.store.dispatch(MosaicProjectActions.sectorRemoved({ sector }));
-                if (this.selectedSector === sector) {
-                    this.resetSelectedSector();
+        this.dialog
+            .open<DialogComponent, DialogData, boolean>(DialogComponent, { data: dialogData })
+            .afterClosed()
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((result) => {
+                if (result) {
+                    this.store.dispatch(MosaicProjectActions.sectorRemoved({ sector }));
+                    if (this.selectedSector === sector) {
+                        this.resetSelectedSector();
+                    }
+                    this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
                 }
-                this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
-            }
-        });
+            });
     }
 
     protected emitSectorToEditContour(sector: SectorSchema): void {

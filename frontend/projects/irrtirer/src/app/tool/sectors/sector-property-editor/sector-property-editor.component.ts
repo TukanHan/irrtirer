@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -21,6 +21,7 @@ import { SectorTriangulationRequestModel } from '../../../core/models/api/api.mo
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ActivatedRoute, Router } from '@angular/router';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 interface SectorSchemaPropertiesForm {
     initialPopulationSize: FormControl<number>;
@@ -51,18 +52,10 @@ interface SectorSchemaForm {
 
 @Component({
     selector: 'app-sector-property-editor',
-    imports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTooltipModule,
-    ReactiveFormsModule,
-    ExtendedPanelComponent,
-    TranslateModule
-],
+    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ReactiveFormsModule, ExtendedPanelComponent, TranslateModule],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorPropertyEditorComponent implements OnInit {
     private sector!: SectorSchema;
@@ -85,6 +78,8 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     private readonly router = inject(Router);
 
+    private readonly destroyRef = inject(DestroyRef);
+
     public ngOnInit(): void {
         this.prepareSector();
         this.sectorPropertyForm = this.generateForm(this.sector.properties);
@@ -94,7 +89,9 @@ export class SectorPropertyEditorComponent implements OnInit {
     private prepareSector(): void {
         const sectorId = this.route.snapshot.paramMap.get('id');
         if (sectorId) {
-            this.sector = this.store.selectSignal(selectSectors)().find(s => s.id === sectorId)!;
+            this.sector = this.store
+                .selectSignal(selectSectors)()
+                .find((s) => s.id === sectorId)!;
         }
     }
 
@@ -194,15 +191,18 @@ export class SectorPropertyEditorComponent implements OnInit {
             sectionMinAngle: this.sectorPropertyForm.controls.sectionMinAngle.value,
         };
 
-        this.dataService.getPolygonTriangulationMesh(sectorTriangulationRequestData).subscribe({
-            next: (mesh) =>
-                this.service.emitEditedSectorProperty({
-                    sector: this.sector,
-                    mesh: mesh.triangles,
-                    contour: mesh.contour,
-                }),
-            error: () => this.showPolygonTriangulationError(),
-        });
+        this.dataService
+            .getPolygonTriangulationMesh(sectorTriangulationRequestData)
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe({
+                next: (mesh) =>
+                    this.service.emitEditedSectorProperty({
+                        sector: this.sector,
+                        mesh: mesh.triangles,
+                        contour: mesh.contour,
+                    }),
+                error: () => this.showPolygonTriangulationError(),
+            });
     }
 
     private showPolygonTriangulationError(): void {

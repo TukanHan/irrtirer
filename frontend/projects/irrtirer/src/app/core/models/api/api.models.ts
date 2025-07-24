@@ -4,8 +4,8 @@ import { Vector } from "../math/vector.model";
 import { Triangle } from "../math/triangle.model";
 
 export class SectorTriangulationMeshPartsModel {
-    sectorId: string;
-    parts: SectorTriangulationMeshModel[];
+    public readonly sectorId: string;
+    public readonly parts: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
         obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
@@ -13,8 +13,8 @@ export class SectorTriangulationMeshPartsModel {
 }
 
 export class SectorTriangulationMeshModel {
-    triangles: Triangle[];
-    contour: Vector[];
+    public readonly triangles: Triangle[];
+    public readonly contour: Vector[];
 
     public static restore(obj: SectorTriangulationMeshModel): void {
         obj.triangles.forEach((triangle) => Triangle.restore(triangle));
@@ -51,8 +51,8 @@ export interface TileRequestModel {
 }
 
 export class SectionGenerationResult {
-    sectorId: string;
-    tilesTransforms: TileTransformResult[];
+    public readonly sectorId: string;
+    public readonly tilesTransforms: TileTransformResult[];
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
@@ -61,9 +61,9 @@ export class SectionGenerationResult {
 }
 
 export class TileTransformResult {
-    tileId: string;
-    position: Vector;
-    angle: number;
+    public readonly tileId: string;
+    public readonly position: Vector;
+    public readonly angle: number;
 
     public static restore(obj: TileTransformResult): void {
         Object.setPrototypeOf(obj, TileTransformResult);

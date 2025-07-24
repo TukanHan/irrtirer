@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { CommonModule } from '@angular/common';
 import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
@@ -13,6 +13,7 @@ import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
 import { TileListElemComponent } from './tile-list-elem/tile-list-elem.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
@@ -31,13 +32,15 @@ export class TilesSetListElemComponent {
     private readonly dialog = inject(MatDialog);
 
     private readonly translate = inject(TranslateService);
+    
+    private readonly destroyRef = inject(DestroyRef);
 
     protected toggleTilesList(): void {
         this.isOpen.update((value) => !value);
     }
 
     protected removeTilesSet(): void {
-        this.showRemoveTilesSetWarning().subscribe((result) => {
+        this.showRemoveTilesSetWarning().pipe(takeUntilDestroyed(this.destroyRef)).subscribe((result) => {
             if (result) {
                 this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet: this.tilesSet() }));
             }

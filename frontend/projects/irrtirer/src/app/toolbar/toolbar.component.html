@@ -13,6 +13,10 @@
 
     <span class="example-spacer"></span>
 
+    <button matIconButton class="toolbar-item mode" (click)="isDarkMode.set(!isDarkMode())">
+        <mat-icon class="material-symbols-outlined">{{isDarkMode() ? 'dark_mode' : 'light_mode'}}</mat-icon>
+    </button>
+
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
         <span class="language-label">{{selectedLanguage() | titlecase}}</span>

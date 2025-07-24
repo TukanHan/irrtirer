@@ -39,6 +39,8 @@ export class ToolbarComponent implements OnInit {
 
     protected readonly selectedLanguage = signal<string>(this.translate.currentLang);
 
+    protected readonly isDarkMode = signal<boolean>(true);
+
     public ngOnInit(): void {
         this.translate.onLangChange
             .pipe(takeUntilDestroyed(this.destroyRef))
