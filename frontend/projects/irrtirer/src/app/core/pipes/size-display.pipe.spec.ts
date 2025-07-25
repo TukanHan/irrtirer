@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { SizeDisplayPipe } from './size-display.pipe';
 
 describe('SizeDisplayPipe', () => {

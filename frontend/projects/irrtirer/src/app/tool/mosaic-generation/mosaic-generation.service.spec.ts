@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-
 import { MosaicGenerationService } from './mosaic-generation.service';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('MosaicGenerationService', () => {
   let service: MosaicGenerationService;

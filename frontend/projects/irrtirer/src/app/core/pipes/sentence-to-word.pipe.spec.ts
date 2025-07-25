@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { SentenceToWordPipe } from './sentence-to-word.pipe';
 
 describe('SentenceToWordPipe', () => {

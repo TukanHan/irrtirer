@@ -26,9 +26,7 @@
             "outputPath": "dist/irrtirer",
             "index": "projects/irrtirer/src/index.html",
             "browser": "projects/irrtirer/src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": [],
             "tsConfig": "projects/irrtirer/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

@@ -3,6 +3,7 @@ import { ConfigurationComponent } from './configuration.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('ConfigurationComponent', () => {
     let component: ConfigurationComponent;

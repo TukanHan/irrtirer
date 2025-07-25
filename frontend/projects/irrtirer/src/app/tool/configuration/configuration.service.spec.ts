@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { ConfigurationService } from './configuration.service';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('ConfigurationService', () => {
     let service: ConfigurationService;

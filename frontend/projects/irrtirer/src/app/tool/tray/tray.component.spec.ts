@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TrayComponent } from './tray.component';
 import { provideMockStore } from '@ngrx/store/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('TrayComponent', () => {
     let component: TrayComponent;
