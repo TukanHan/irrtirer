@@ -14,8 +14,7 @@
                 appearance="outline"
                 class="density-3 no-hint" 
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.maxAreaHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.maxArea' | translate }}</mat-label>
                 <input matInput formControlName="sectionMaxArea" type="number" (change)="getTriangulationMesh()">
             </mat-form-field>
@@ -23,8 +22,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.minAngleHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minAngle' | translate }}</mat-label>
                 <input matInput formControlName="sectionMinAngle" type="number" (change)="getTriangulationMesh()">
             </mat-form-field>
@@ -37,8 +35,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.minRadiusHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minRadius' | translate }}</mat-label>
                 <input matInput formControlName="minTileRadius" type="number">
             </mat-form-field>
@@ -46,8 +43,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.maxRadiusHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.maxRadius' | translate }}</mat-label>
                 <input matInput formControlName="maxTileRadius" type="number">
             </mat-form-field>
@@ -55,8 +51,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.minMarginHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minMargin' | translate }}</mat-label>
                 <input matInput formControlName="tileMargin" type="number" min="0">
             </mat-form-field>
@@ -69,8 +64,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.initialPopulationSizeHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.initialPopulationSize' | translate }}</mat-label>
                 <input matInput formControlName="initialPopulationSize" type="number">
             </mat-form-field>
@@ -78,8 +72,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.populationSizeHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.populationSize' | translate }}</mat-label>
                 <input matInput formControlName="populationSize" type="number">
             </mat-form-field>
@@ -87,8 +80,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.iterationsCountHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.iterationsCount' | translate }}</mat-label>
                 <input matInput formControlName="iterationsCount" type="number">
             </mat-form-field>
@@ -96,8 +88,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.countOfTrianglePositionDrawsHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfTrianglePositionDraws' | translate }}</mat-label>
                 <input matInput formControlName="countOfTrianglePositionDraws" type="number">
             </mat-form-field>
@@ -105,8 +96,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.countOfTriesToInsertTileHint')" 
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfTriesToInsertTile' | translate }}</mat-label>
                 <input matInput formControlName="countOfTriesToInsertTile" type="number">
             </mat-form-field>
@@ -114,8 +104,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.countOfColorMatchingAttemptsHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfColorMatchingAttempts' | translate }}</mat-label>
                 <input matInput formControlName="countOfColorMatchingAttempts" type="number">
             </mat-form-field>
@@ -128,8 +117,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.singleSectionPopulationHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.singleSectionPopulation' | translate }}</mat-label>
                 <input matInput formControlName="singleSectionPopulation" type="number">
             </mat-form-field>
@@ -137,8 +125,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
-                matTooltipPosition="left"
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.overlappingAreaOutsideSector' | translate }}</mat-label>
                 <input matInput formControlName="overlappingAreaOutsideSector" type="number">
             </mat-form-field>
@@ -146,8 +133,7 @@
                 appearance="outline"
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.additionalPopulationOfNeighboringSectors' | translate }}</mat-label>
                 <input matInput formControlName="additionalPopulationOfNeighboringSectors" type="number">
             </mat-form-field>
@@ -155,8 +141,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.overlappingNotPopulatedSectionsHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.overlappingNotPopulatedSections' | translate }}</mat-label>
                 <input matInput formControlName="overlappingNotPopulatedSections" type="number">
             </mat-form-field>
@@ -164,8 +149,7 @@
                 appearance="outline" 
                 class="density-3 no-hint"
                 [matTooltip]="this.translate.instant('tool.sectors.sectorProperty.tileColorMismatchHint')"
-                matTooltipPosition="left" 
-                matTooltipClass="hint">
+                matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.tileColorMismatch' | translate }}</mat-label>
                 <input matInput formControlName="tileColorMismatch" type="number">
             </mat-form-field>

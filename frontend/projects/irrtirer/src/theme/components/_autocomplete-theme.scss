@@ -1,4 +1,4 @@
-@mixin theme($theme) {
+@mixin theme() {
     .cdk-overlay-pane {
         .mat-mdc-autocomplete-panel {
             padding: 0;

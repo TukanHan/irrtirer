@@ -1,8 +1,6 @@
-@use 'sass:map';
 @use 'sass:math';
-@use '@angular/material' as mat;
 
-@mixin theme($theme) {
+@mixin theme() {
     button, a {
         &.mdc-button {
             letter-spacing: normal;

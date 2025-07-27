@@ -1,18 +1,14 @@
-@use 'sass:map';
-@use '@angular/material' as mat;
-@use './../../theme/gray-palette.scss' as palette;
-
-@mixin theme($theme) {
+@mixin theme() {
     mat-tooltip-component {
         .mat-mdc-tooltip {
-            &.hint {
-                --mat-tooltip-container-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 500)};
-                --mat-tooltip-supporting-text-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 50)};
+            &:not(.contrast) {
+                --mat-tooltip-container-color: var(--irr-panel-background-color);
+                --mat-tooltip-supporting-text-color: var(--irr-panel-text-color);
             }
 
-            &.label {
-                --mat-tooltip-container-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 100)};
-                --mat-tooltip-supporting-text-color: #{mat.m2-get-color-from-palette(palette.$grey-palette, 700)};
+            &.contrast {
+                --mat-tooltip-container-color: var(--irr-panel-contrast-background-color);
+                --mat-tooltip-supporting-text-color: var(--irr-panel-contrast-text-color);
             }
 
             .mat-mdc-tooltip-surface {

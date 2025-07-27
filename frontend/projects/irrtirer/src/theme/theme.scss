@@ -2,7 +2,6 @@
 @use '@angular/material' as mat;
 @use './components/toolbar-theme' as toolbar;
 @use './components/button-theme' as button;
-@use './components/tabs-theme' as tabs;
 @use './components/input-theme' as input;
 @use './components/menu-theme' as menu;
 @use './components/tooltip-theme' as tooltip;
@@ -11,9 +10,6 @@
 @use './components/autocomplete-theme' as autocomplete;
 @use './primary-palette.scss' as *;
 @use './variables.scss' as variables;
-
-@include mat.elevation-classes();
-@include mat.app-background();
 
 $irrtirer-primary: mat.m2-define-palette($cyan-palette, A200);
 $irrtirer-accent: mat.m2-define-palette(mat.$m2-amber-palette, A200, A100, A400);
@@ -30,13 +26,12 @@ $irrtirer-theme: mat.m2-define-dark-theme((
 ));
 
 @include mat.all-component-themes($irrtirer-theme);
-@include toolbar.theme($irrtirer-theme);
-@include button.theme($irrtirer-theme);
-@include tabs.theme($irrtirer-theme);
-@include input.theme($irrtirer-theme);
-@include menu.theme($irrtirer-theme);
-@include tooltip.theme($irrtirer-theme);
-@include icon.theme($irrtirer-theme);
-@include variables.theme($irrtirer-theme);
-@include dialog.theme($irrtirer-theme);
-@include autocomplete.theme($irrtirer-theme);
+@include toolbar.theme();
+@include button.theme();
+@include input.theme();
+@include menu.theme();
+@include tooltip.theme();
+@include icon.theme();
+@include dialog.theme();
+@include autocomplete.theme();
+@include variables.theme();

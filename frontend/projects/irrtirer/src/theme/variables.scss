@@ -1,10 +1,16 @@
-@use "sass:map";
-@use "@angular/material" as mat;
-
-@mixin theme($theme) {
+@mixin theme() {
     html {
-        --irr-accent-color: #{mat.get-theme-color($theme, accent, A200)};
-        --irr-background-color: #1e2023;
+        --irr-accent-color: light-dark(#ffd740, #ffd740);
+        --irr-background-color: light-dark(#1e2023, #1e2023);
+        
+        --irr-panel-background-color: light-dark(#333333, #333333);
+        --irr-panel-text-color: light-dark(#ffffff, #ffffff);
+        --irr-panel-contrast-background-color: light-dark(#e5e5e5, #e5e5e5);
+        --irr-panel-contrast-text-color: light-dark(#212121, #212121);
+
+        --irr-toolbar-background-color: light-dark(#333333, #333333);
+        --irr-toolbar-color: light-dark(#00dddd, #00dddd);
+
         --mat-sidenav-content-background-color: var(--irr-background-color);
     }
 }

@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 
-@mixin theme($theme) {
+@mixin theme() {
     .density-3{
         @include mat.form-field-density(-3);
     }

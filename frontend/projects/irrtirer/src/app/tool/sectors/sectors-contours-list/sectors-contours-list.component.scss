@@ -1,5 +1,4 @@
-@use "@angular/material" as mat;
-@use "./../../../../theme/gray-palette.scss" as palette;
+@use "./../../../../theme/gray-palette.scss" as *;
 @use "./../../../../styles/utils/list-item-box.scss" as *;
 @use "./../../../../theme/components/button-theme" as *;
 
@@ -15,7 +14,7 @@
     }
 
     .no-sectors {
-        color: mat.m2-get-color-from-palette(palette.$grey-palette, 300);
+        color: #{$gray-60};
         margin: auto;
     }
 }
@@ -34,7 +33,7 @@
                 @include icon-button(32px);
             }
             margin: -6px;
-            color: mat.m2-get-color-from-palette(palette.$grey-palette, 200);
+            color: #{$gray-46};
         }
 
         &.cdk-drag-placeholder {

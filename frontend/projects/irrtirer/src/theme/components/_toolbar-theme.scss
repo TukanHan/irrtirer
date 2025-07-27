@@ -1,16 +1,12 @@
-@use "sass:map";
-@use "@angular/material" as mat;
-@use "./../gray-palette.scss" as palette;
-
-@mixin theme($theme) {
+@mixin theme() {
     mat-toolbar {
         &.mat-toolbar {
-            background: #{mat.m2-get-color-from-palette(palette.$grey-palette, 500)};
+            background: var(--irr-toolbar-background-color);
         }
 
         .toolbar-item {
             * {
-                color: mat.get-theme-color($theme, primary, A200);
+                color: var(--irr-toolbar-color);
             }
 
             .mat-icon {
