@@ -13,8 +13,8 @@
 
     <span class="example-spacer"></span>
 
-    <button matIconButton class="toolbar-item mode" (click)="isDarkMode.set(!isDarkMode())">
-        <mat-icon class="material-symbols-outlined">{{isDarkMode() ? 'dark_mode' : 'light_mode'}}</mat-icon>
+    <button matIconButton class="toolbar-item mode" (click)="toggleTheme()">
+        <mat-icon class="material-symbols-outlined">{{themeMode() === 'dark' ? 'dark_mode' : 'light_mode'}}</mat-icon>
     </button>
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">

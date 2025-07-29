@@ -4,8 +4,6 @@ import { UserPreferencesActions } from './user-preferences.actions';
 
 export const userPreferencesReducer = createReducer<UserPreferences>(
     {},
-    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({
-        ...state,
-        lang
-    }))
+    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),
+    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme }))
 );

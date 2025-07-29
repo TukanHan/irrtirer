@@ -4,6 +4,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Store } from '@ngrx/store';
 import { selectUserLang } from './core/state/user-preferences/user-preferences.selectors';
+import { ThemeService } from './core/services/theme/theme.service';
 
 @Component({
     selector: 'app-root',
@@ -19,10 +20,21 @@ export class AppComponent implements OnInit {
 
     protected readonly translate = inject(TranslateService);
 
+    private readonly themeService = inject(ThemeService);
+
     public ngOnInit(): void {
+        this.initLanguage();
+        this.initTheme();
+    }
+
+    private initLanguage(): void {
         this.translate.addLangs(['pl', 'en']);
         this.translate.setDefaultLang('pl');
         this.translate.use(this.getLanguage());
+    }
+
+    private initTheme(): void {
+        this.themeService.init();
     }
 
     private getLanguage(): string {

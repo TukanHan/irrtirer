@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 const initialState = {
     userPreferences: {

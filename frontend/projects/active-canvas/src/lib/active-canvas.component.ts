@@ -35,6 +35,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
     public set options(value: CanvasOptions) {
         this._options = Object.assign(DEFAULT_CANVAS_OPTIONS, value);
         this.configureCanvas();
+        this.redraw();
     }
 
     public get viewport(): Viewport {

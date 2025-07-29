@@ -1,16 +1,18 @@
+@use './gray-palette.scss' as *;
+
 @mixin theme() {
-    html {
-        --irr-accent-color: light-dark(#ffd740, #ffd740);
-        --irr-background-color: light-dark(#1e2023, #1e2023);
-        
-        --irr-panel-background-color: light-dark(#333333, #333333);
-        --irr-panel-text-color: light-dark(#ffffff, #ffffff);
-        --irr-panel-contrast-background-color: light-dark(#e5e5e5, #e5e5e5);
-        --irr-panel-contrast-text-color: light-dark(#212121, #212121);
+    --irr-accent-color: light-dark(#ffab40, #ffd740);
+    --irr-primary-color: light-dark(#0288d1, #00dddd);
+    
+    --irr-background-color: light-dark(#{$gray-10}, #1e2023);
+    --irr-sidenav-color: light-dark(#{$gray-20}, #{$gray-75});
+    --irr-grid-color: light-dark(#{$gray-30}, #{$gray-80});
 
-        --irr-toolbar-background-color: light-dark(#333333, #333333);
-        --irr-toolbar-color: light-dark(#00dddd, #00dddd);
+    --irr-panel-background-color: light-dark(#e5e5e5, #{$gray-80});
+    --irr-panel-text-color: light-dark(#{$gray-87}, #{$gray-0});
+    --irr-panel-contrast-background-color: light-dark(#{$gray-80}, #e5e5e5);
+    --irr-panel-contrast-text-color: light-dark(#{$gray-0}, #{$gray-87});
 
-        --mat-sidenav-content-background-color: var(--irr-background-color);
-    }
+    --irr-toolbar-background-color: light-dark(#{$gray-0}, #{$gray-80});
+    --irr-toolbar-color: light-dark(#{$gray-87}, #00dddd);
 }

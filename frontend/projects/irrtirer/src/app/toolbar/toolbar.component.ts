@@ -8,9 +8,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { Store } from '@ngrx/store';
 import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
+import { ThemeService } from '../core/services/theme/theme.service';
+import { ThemeMode } from '../core/models/user-preferences.interface';
 
 @Component({
     selector: 'app-toolbar',
@@ -33,13 +35,15 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 export class ToolbarComponent implements OnInit {
     private readonly translate = inject(TranslateService);
 
+    private readonly themeService = inject(ThemeService);
+
     private readonly destroyRef = inject(DestroyRef);
 
     private readonly store = inject(Store);
 
     protected readonly selectedLanguage = signal<string>(this.translate.currentLang);
 
-    protected readonly isDarkMode = signal<boolean>(true);
+    protected readonly themeMode = toSignal<ThemeMode>(this.themeService.theme$);
 
     public ngOnInit(): void {
         this.translate.onLangChange
@@ -50,5 +54,10 @@ export class ToolbarComponent implements OnInit {
     protected languageChanged(selected: MatRadioChange): void {
         this.translate.use(selected.value);
         this.store.dispatch(UserPreferencesActions.languageChanged({ lang: selected.value }));
+    }
+
+    protected toggleTheme(): void {
+        const nextState = this.themeMode() === 'dark' ? 'light' : 'dark';
+        this.themeService.changeTheme(nextState);
     }
 }

@@ -36,7 +36,7 @@
                 [actions]="ribbonActions()" 
                 [viewportSize]="activeCanvas?.viewport?.cmSize"/>
             <div class="main">
-                <ac-active-canvas #activeCanvas class="canvas"/>
+                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas"/>
                 <div class="panel">
                     <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()"/>
                 </div>

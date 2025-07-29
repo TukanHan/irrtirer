@@ -17,7 +17,7 @@
         }
 
         &.active-button {
-            background: #00dddd1a;
+            background: color-mix(in srgb, var(--irr-primary-color), transparent 90%);
         }
     }
 

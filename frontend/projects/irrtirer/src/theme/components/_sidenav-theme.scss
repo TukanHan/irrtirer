@@ -1,0 +1,12 @@
+@use './../gray-palette.scss' as *;
+
+@mixin theme() {
+    mat-sidenav-container {
+        --mat-sidenav-content-background-color: var(--irr-background-color);
+        --mat-sidenav-container-background-color:var(--irr-sidenav-color);
+        --mat-sidenav-container-width: auto;
+        --mat-sidenav-container-shape: 0px;
+        --mat-list-active-indicator-shape: 0px;
+        --mat-list-list-item-disabled-state-layer-color: transparent;
+    }
+}

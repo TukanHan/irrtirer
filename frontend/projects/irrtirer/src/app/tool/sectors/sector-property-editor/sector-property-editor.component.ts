@@ -15,7 +15,7 @@ import {
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
-import { DataService } from '../../../core/services/data.service';
+import { DataService } from '../../../core/services/data/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
