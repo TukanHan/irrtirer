@@ -4,8 +4,14 @@
     --irr-accent-color: light-dark(#ffab40, #ffd740);
     --irr-primary-color: light-dark(#0288d1, #00dddd);
     
-    --irr-background-color: light-dark(#{$gray-10}, #1e2023);
-    --irr-sidenav-color: light-dark(#{$gray-20}, #{$gray-75});
+    --irr-contrast-lightest: light-dark(#{$gray-20}, #{$gray-80});
+    --irr-contrast-light: light-dark(#{$gray-30}, #{$gray-75});
+    --irr-contrast-medium: light-dark(#{$gray-60}, #{$gray-46});
+    --irr-contrast-high: light-dark(#{$gray-84}, #{$gray-20});
+    --irr-contrast-highest: light-dark(#{$gray-92}, #{$gray-10});
+
+    --irr-background-color: light-dark(#{$gray-0}, #1e2023);
+    --irr-sidenav-color: light-dark(#{$gray-10}, #{$gray-75});
     --irr-grid-color: light-dark(#{$gray-30}, #{$gray-80});
 
     --irr-panel-background-color: light-dark(#e5e5e5, #{$gray-80});
@@ -13,6 +19,6 @@
     --irr-panel-contrast-background-color: light-dark(#{$gray-80}, #e5e5e5);
     --irr-panel-contrast-text-color: light-dark(#{$gray-0}, #{$gray-87});
 
-    --irr-toolbar-background-color: light-dark(#{$gray-0}, #{$gray-80});
+    --irr-toolbar-background-color: light-dark(#f3f3f3, #{$gray-80});
     --irr-toolbar-color: light-dark(#{$gray-87}, #00dddd);
 }

@@ -16,12 +16,12 @@
                     @include icon-button(32px);
                 }
     
-                color: #{$gray-46};
+                color: var(--irr-contrast-medium);
                 margin: -6px;
             }
     
             .toggle-action {
-                color: #{$gray-46};
+                color: var(--irr-contrast-medium);
 
                 .chevron {
                     transition: all 0.25s ease;

@@ -6,6 +6,10 @@
             letter-spacing: normal;
             border-radius: 20px;
             padding: 0 12px !important;
+
+            .mat-mdc-button-touch-target {
+                height: var(--mat-button-text-container-height);
+            }
         }
     }
 }

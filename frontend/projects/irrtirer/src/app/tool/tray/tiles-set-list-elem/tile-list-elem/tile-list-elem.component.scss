@@ -1,7 +1,6 @@
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
 @use "./../../../../../styles/utils/mixins.scss" as *;
 @use './../../../../../theme/components/button-theme' as *;
-@use './../../../../../theme/gray-palette.scss' as *;
 
 :host {
     @include list-item-box();
@@ -22,7 +21,7 @@
                 @include icon-button(32px);
             }
 
-            color: #{$gray-46};
+            color: var(--irr-contrast-medium);
             margin: -6px;
         }
     }

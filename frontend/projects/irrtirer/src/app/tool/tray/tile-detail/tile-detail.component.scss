@@ -38,7 +38,7 @@
         }
 
         .no-exist {
-            color: #{$gray-46};
+            color: var(--irr-contrast-medium);
             margin: auto;
         }
     }

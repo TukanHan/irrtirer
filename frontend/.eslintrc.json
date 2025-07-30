@@ -52,7 +52,9 @@
         "no-var": "error",
         "no-duplicate-imports": "error",
         "consistent-return": "error",
-        "@angular-eslint/prefer-on-push-component-change-detection": "warn"
+        "@angular-eslint/prefer-on-push-component-change-detection": "warn",
+        "@angular-eslint/no-output-native": "error",
+        "@angular-eslint/use-lifecycle-interface": "warn"
       }
     },
     {

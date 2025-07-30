@@ -1,11 +1,8 @@
-@use './../../../../theme/gray-palette.scss' as *;
-
 :host {
     display: flex;
     flex-direction: column;
     
-    background-color: #{$gray-75};
-    color: #{$gray-10};
+    background-color: var(--irr-contrast-light);
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -28,7 +25,7 @@
             min-width: 40px;
             height: 40px;
             border-radius: 50%;
-            border: 1px solid #{$gray-46};
+            box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
         }
 
         .code-input {

@@ -33,7 +33,7 @@
                 @include icon-button(32px);
             }
             margin: -6px;
-            color: #{$gray-46};
+            color: var(--irr-contrast-medium);
         }
 
         &.cdk-drag-placeholder {

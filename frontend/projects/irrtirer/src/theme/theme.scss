@@ -35,17 +35,17 @@ $irr-light-theme: mat.m2-define-light-theme((
   density: 0
 ));
 
-:root {
-  &:not(.light-theme) {
-    color-scheme: dark;
-    @include mat.all-component-themes($irr-dark-theme);
-  }
- 
-  &.light-theme {
-    color-scheme: light;
-    @include mat.all-component-themes($irr-light-theme);
-  }
+.dark-theme {
+  color-scheme: dark;
+  @include mat.all-component-themes($irr-dark-theme);
+}
 
+.light-theme {
+  color-scheme: light;
+  @include mat.all-component-themes($irr-light-theme);
+}
+
+:root {
   @include variables.theme();
 }
 

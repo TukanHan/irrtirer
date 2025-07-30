@@ -12,8 +12,23 @@
 
 .mdc-list {
     padding-top: 12px;
+
     .mat-mdc-list-item {
         height: 52px !important;
+        --mat-list-list-item-label-text-color: var(--irr-contrast-high);
+
+        &.active {
+            background-color: color-mix(in srgb, var(--irr-primary-color), transparent 90%);
+            mat-icon {
+                color: var(--irr-primary-color);
+                font-weight: 300;
+            }
+        }
+
+        &:focus {
+            --mat-list-list-item-focus-state-layer-opacity: 0;
+        }
+
         ::ng-deep {
             .mat-mdc-list-item-unscoped-content {
                 display: flex;
@@ -52,13 +67,5 @@ mat-sidenav-content {
                 border-left: 1px solid var(--irr-grid-color);
             }
         }
-    }
-}
-
-a.active {
-    background-color: rgba(255, 255, 255, 0.1);
-    mat-icon {
-        color: var(--irr-primary-color);
-        font-weight: 300;
     }
 }
