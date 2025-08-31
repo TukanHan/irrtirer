@@ -2,16 +2,15 @@ import {
     AfterViewInit,
     ChangeDetectionStrategy,
     Component,
+    computed,
+    DestroyRef,
     ElementRef,
-    Input,
-    OnChanges,
-    OnDestroy,
+    inject,
+    model,
     output,
-    signal,
     viewChild,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
-import { CommonModule } from '@angular/common';
 import Color from 'color';
 
 export interface CursorDataModel {
@@ -21,20 +20,24 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-slider',
-    imports: [CommonModule],
     templateUrl: './color-slider.component.html',
     styleUrl: './color-slider.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges {
-    @Input()
-    public value: number;
+export class ColorSliderComponent implements AfterViewInit {
+    public readonly value = model<number>();
 
     public readonly valueChange = output<number>();
 
-    protected readonly cursorDataSignal = signal<CursorDataModel | null>(null);
-
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
+
+    protected readonly cursorData = computed<CursorDataModel>(() => {
+        const value = this.value();
+        const sliderWidth: number = this.canvas()?.nativeElement.getBoundingClientRect().width ?? 1;
+        return this.computeCursorData(value, sliderWidth);
+    });
+
+    private readonly destroyRef = inject(DestroyRef);
 
     private isDragging: boolean = false;
 
@@ -59,31 +62,22 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
         const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
 
         const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
-        this.value = Math.max(0, Math.min(1, rawValue));
-
-        this.valueChange.emit(this.value);
-        this.updateCursor(this.value);
+        this.value.set(Math.max(0, Math.min(1, rawValue)));
+        this.valueChange.emit(this.value());
     }
 
     public ngAfterViewInit(): void {
         this.drawSliderCanvas();
-        this.updateCursor(this.value);
 
         this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mouseup', this.onMouseUp);
         window.addEventListener('mousemove', this.onMouseMove);
-    }
-
-    public ngOnDestroy(): void {
-        this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
-        window.removeEventListener('mouseup', this.onMouseUp);
-        window.removeEventListener('mousemove', this.onMouseMove);
-    }
-
-    public ngOnChanges(): void {
-        if (this.canvas()) {
-            this.updateCursor(this.value);
-        }
+        
+        this.destroyRef.onDestroy(() => {
+            this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
+            window.removeEventListener('mouseup', this.onMouseUp);
+            window.removeEventListener('mousemove', this.onMouseMove);
+        });
     }
 
     private drawSliderCanvas(): void {
@@ -105,14 +99,13 @@ export class ColorSliderComponent implements AfterViewInit, OnDestroy, OnChanges
         ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
     }
 
-    private updateCursor(value: number): void {
-        const sliderWidth: number = this.canvas().nativeElement.getBoundingClientRect().width;
+    private computeCursorData(value: number, sliderWidth: number): CursorDataModel {
         const horizontalPosition: number = sliderWidth * value - 8;
         const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
 
-        this.cursorDataSignal.set({
+        return {
             horizontalOffset: `${horizontalPosition}px`,
             color: hexCodeColor,
-        });
+        };
     }
 }

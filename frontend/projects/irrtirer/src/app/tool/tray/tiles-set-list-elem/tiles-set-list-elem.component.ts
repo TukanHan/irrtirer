@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
-import { CommonModule } from '@angular/common';
 import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,7 +16,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [CommonModule, ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule],
+    imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule],
     templateUrl: './tiles-set-list-elem.component.html',
     styleUrl: './tiles-set-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

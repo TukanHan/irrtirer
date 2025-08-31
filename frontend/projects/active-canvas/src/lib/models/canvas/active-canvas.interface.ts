@@ -1,11 +1,11 @@
-import { OutputEmitterRef } from '@angular/core';
+import { ModelSignal, OutputEmitterRef } from '@angular/core';
 import { CanvasObject } from '../../canvas-objects/canvas-object.interface';
 import { IVector } from '../math/vector.interface';
 import { CanvasOptions } from './canvas-options.interface';
 import { Viewport } from './viewport.model';
 
 export interface IActiveCanvas {
-    set options(value: CanvasOptions);
+    options: ModelSignal<CanvasOptions>;
     get viewport(): Viewport;
 
     clicked: OutputEmitterRef<IVector>;

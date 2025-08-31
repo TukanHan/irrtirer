@@ -6,7 +6,7 @@
 <div role="presentation" 
     class="color-preview"
     [class.disabled]="isDisabled()"
-    [ngStyle]="{'background-color': (hexColor())}" 
+    [style.background-color]="hexColor()"
     (click)="toggleColorPanel()"
     cdkOverlayOrigin 
     #trigger="cdkOverlayOrigin">

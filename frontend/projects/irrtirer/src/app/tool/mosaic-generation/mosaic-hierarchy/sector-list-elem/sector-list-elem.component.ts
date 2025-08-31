@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 import { MatIconModule } from '@angular/material/icon';
-import { CommonModule } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
@@ -12,7 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
     imports: [
         MatIconModule,
         MatButtonModule,
-        CommonModule,
+        AsyncPipe,
         ExpandablePanelComponent,
         TranslateModule
     ],

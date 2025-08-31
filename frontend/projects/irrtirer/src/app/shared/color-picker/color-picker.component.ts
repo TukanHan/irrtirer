@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, forwardRef, input, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ColorSelectionPanelComponent } from './color-selection-panel/color-selection-panel.component';
 import { ColorInstance } from 'color';
@@ -7,7 +6,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
     selector: 'app-color-picker',
-    imports: [CommonModule, OverlayModule, ColorSelectionPanelComponent],
+    imports: [OverlayModule, ColorSelectionPanelComponent],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

@@ -7,7 +7,7 @@
             </mat-icon>
         </button>
         <button class="sector-action toggle-action" mat-icon-button (click)="toggleTilesList()">
-            <mat-icon class="chevron" [ngClass]="{'chevron--closed' : !isOpen()}">
+            <mat-icon class="chevron" [class.chevron--closed]="!isOpen()">
                 keyboard_arrow_up
             </mat-icon>
         </button>

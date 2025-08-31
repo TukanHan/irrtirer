@@ -1,6 +1,18 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, OnChanges, OnDestroy, output, signal, viewChild } from '@angular/core';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    Component,
+    computed,
+    DestroyRef,
+    effect,
+    ElementRef,
+    inject,
+    input,
+    model,
+    output,
+    viewChild,
+} from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
-import { CommonModule } from '@angular/common';
 import Color, { ColorInstance } from 'color';
 
 export interface CursorDataModel {
@@ -11,28 +23,30 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-canvas',
-    imports: [CommonModule],
     templateUrl: './color-canvas.component.html',
     styleUrl: './color-canvas.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy {
-    @Input()
-    public hValue: number;
+export class ColorCanvasComponent implements AfterViewInit {
+    public readonly hValue = input<number>();
 
-    @Input()
-    public sValue: number;
+    public readonly sValue = model<number>();
 
-    @Input()
-    public vValue: number;
+    public readonly vValue = model<number>();
 
     public readonly colorChange = output<ColorInstance>();
 
-    protected readonly cursorDataSignal = signal<CursorDataModel | null>(null);
-
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
+    protected readonly cursorData = computed<CursorDataModel>(() => this.computeCursorData());
+
+    private readonly destroyRef = inject(DestroyRef);
+
     private isDragging: boolean = false;
+
+    constructor() {
+        effect(() => this.drawColorCanvas());
+    }
 
     private onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
         this.isDragging = true;
@@ -57,37 +71,22 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         const horizontalRawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
         const verticalRawValue = (evt.clientY - canvasRect.y) / canvasRect.height;
 
-        this.sValue = Math.min(1, Math.max(0, horizontalRawValue));
-        this.vValue = Math.min(1, Math.max(0, 1 - verticalRawValue));
+        this.sValue.set(Math.min(1, Math.max(0, horizontalRawValue)));
+        this.vValue.set(Math.min(1, Math.max(0, 1 - verticalRawValue)));
 
-        this.colorChange.emit(Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }));
-
-        this.updateColorCanvas();
-    }
-
-    public ngOnDestroy(): void {
-        this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
-        window.removeEventListener('mouseup', this.onMouseUp);
-        window.removeEventListener('mousemove', this.onMouseMove);
+        this.colorChange.emit(Color({ h: this.hValue() * 360, s: this.sValue() * 100, v: this.vValue() * 100 }));
     }
 
     public ngAfterViewInit(): void {
-        this.updateColorCanvas();
-
         this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mouseup', this.onMouseUp);
         window.addEventListener('mousemove', this.onMouseMove);
-    }
 
-    public ngOnChanges(): void {
-        if (this.canvas()) {
-            this.updateColorCanvas();
-        }
-    }
-
-    private updateColorCanvas(): void {
-        this.drawColorCanvas();
-        this.drawCursor();
+        this.destroyRef.onDestroy(() => {
+            this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
+            window.addEventListener('mouseup', this.onMouseUp);
+            window.addEventListener('mousemove', this.onMouseMove);
+        });
     }
 
     private drawColorCanvas(): void {
@@ -101,7 +100,7 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         const whiteToColorGrad: CanvasGradient = ctx.createLinearGradient(0, 0, pixelSize.width, 0);
         whiteToColorGrad.addColorStop(0, '#FFFFFF');
 
-        const hueHexColor: string = Color({ h: this.hValue * 360, s: 100, v: 100 }).hex();
+        const hueHexColor: string = Color({ h: this.hValue() * 360, s: 100, v: 100 }).hex();
         whiteToColorGrad.addColorStop(1, hueHexColor);
 
         const transparentToBlackGrad: CanvasGradient = ctx.createLinearGradient(0, 0, 0, pixelSize.height);
@@ -115,15 +114,15 @@ export class ColorCanvasComponent implements AfterViewInit, OnChanges, OnDestroy
         ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
     }
 
-    private drawCursor(): void {
+    private computeCursorData(): CursorDataModel {
         const canvasSize: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
-        const horizontalPosition: number = canvasSize.width * this.sValue - 8;
-        const verticalPosition: number = canvasSize.height * (1 - this.vValue) - 8;
+        const horizontalPosition: number = canvasSize.width * this.sValue() - 8;
+        const verticalPosition: number = canvasSize.height * (1 - this.vValue()) - 8;
 
-        this.cursorDataSignal.set({
+        return {
             horizontalOffset: `${horizontalPosition}px`,
             verticalOffset: `${verticalPosition}px`,
-            color: Color({ h: this.hValue * 360, s: this.sValue * 100, v: this.vValue * 100 }).hex(),
-        });
+            color: Color({ h: this.hValue() * 360, s: this.sValue() * 100, v: this.vValue() * 100 }).hex(),
+        };
     }
 }

@@ -1,15 +1,9 @@
-<canvas #canvas 
-    class="panel" 
-    width="250" height="150">
+<canvas #canvas class="panel" width="250" height="150">
 </canvas>
 
-@let cursorData = cursorDataSignal();
-@if(cursorData) {
-    <div class="cursor" 
-        [ngStyle]="{
-            'left': cursorData.horizontalOffset,
-            'top': cursorData.verticalOffset,
-            'background-color': cursorData.color
-        }">
-    </div>
-}
+@let cursor = cursorData();
+<div class="cursor"
+    [style.left]="cursor.horizontalOffset"
+    [style.top]="cursor.verticalOffset"
+    [style.background-color]="cursor.color">
+</div>

@@ -7,7 +7,6 @@ import { RouterLink, RouterOutlet, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
 import { map } from 'rxjs';
-import { CommonModule } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { RibbonComponent } from './ribbon/ribbon.component';
 import { ToolService } from './tool.service';
@@ -18,10 +17,12 @@ import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { ThemeService } from '../core/services/theme/theme.service';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { ThemeMode } from '../core/models/user-preferences.interface';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-tool',
     imports: [
+        AsyncPipe,
         MatIconModule,
         MatSidenavModule,
         MatListModule,
@@ -29,7 +30,6 @@ import { ThemeMode } from '../core/models/user-preferences.interface';
         RouterOutlet,
         RouterLink,
         RouterModule,
-        CommonModule,
         RibbonComponent,
         ActiveCanvasComponent
     ],

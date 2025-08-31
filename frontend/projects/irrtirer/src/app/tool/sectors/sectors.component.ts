@@ -94,9 +94,10 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private onEditedSectorChanged(sector: EditedSectorContour | null): void {
-        this.activeCanvas.options = {
+        this.activeCanvas.options.update((state) => ({
+            ...state,
             isMovable: !sector,
-        };
+        }));
 
         this.redrawSectors();
     }
