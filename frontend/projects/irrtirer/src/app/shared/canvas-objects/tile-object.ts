@@ -2,7 +2,7 @@ import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../.
 
 
 export class TileObject extends BaseCanvasObject implements CanvasObject {
-    constructor(private vertices: IVector[], private hexColor: string) {
+    constructor(private readonly vertices: IVector[], private readonly hexColor: string) {
         super();
     }
 

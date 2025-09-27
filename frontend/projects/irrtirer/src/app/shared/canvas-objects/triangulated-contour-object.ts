@@ -4,14 +4,14 @@ import { Triangle } from '../../core/models/math/triangle.model';
 import { Vector } from '../../core/models/math/vector.model';
 
 export class TriangulatedContourObject extends BaseCanvasObject implements CanvasObject {
-    private outerContour: Vector[];
+    private readonly outerContour: Vector[];
     private innerLines: Line[];
 
-    private hexColor: string;
-    private order: number;
+    private readonly hexColor: string;
+    private readonly order: number;
 
-    private borderThickness: number = 6;
-    private innerThickness: number = 3;
+    private readonly borderThickness: number = 6;
+    private readonly innerThickness: number = 3;
 
     constructor(mesh: Triangle[], contour: Vector[], hexColor: string, order: number = 100) {
         super();
@@ -91,7 +91,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     }
 
     private static collectMeshLines(triangulationMesh: Triangle[]): Map<number, { line: Line; count: number }> {
-        const lines: Map<number, { line: Line; count: number }> = new Map();
+        const lines = new Map<number, { line: Line; count: number }>();
 
         for (const triangle of triangulationMesh) {
             const triangleVertices = triangle.getVertices();

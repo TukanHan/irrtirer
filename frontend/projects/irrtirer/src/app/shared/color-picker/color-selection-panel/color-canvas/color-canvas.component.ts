@@ -48,18 +48,18 @@ export class ColorCanvasComponent implements AfterViewInit {
         effect(() => this.drawColorCanvas());
     }
 
-    private onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+    private readonly onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
         this.isDragging = true;
         document.body.style.cursor = 'pointer';
         this.onCanvasMouseInteraction(evt);
     };
 
-    private onMouseUp: (evt: MouseEvent) => void = () => {
+    private readonly onMouseUp: (evt: MouseEvent) => void = () => {
         this.isDragging = false;
         document.body.style.cursor = '';
     };
 
-    private onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+    private readonly onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
         if (this.isDragging) {
             this.onCanvasMouseInteraction(evt);
         }

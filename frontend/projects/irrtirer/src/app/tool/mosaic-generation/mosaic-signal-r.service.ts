@@ -9,25 +9,23 @@ import {
     TileRequestModel,
 } from '../../core/models/api/api.models';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class MosaicSignalRService {
     private readonly hubConnection: signalR.HubConnection;
 
-    private readonly sectionsMeshReceivedSub: Subject<SectorTriangulationMeshPartsModel[]> = new Subject();
+    private readonly sectionsMeshReceivedSub = new Subject<SectorTriangulationMeshPartsModel[]>();
 
     public readonly sectionsMeshReceived$: Observable<SectorTriangulationMeshPartsModel[]> = this.sectionsMeshReceivedSub.asObservable();
 
-    private readonly sectionGeneratedSub: Subject<SectionGenerationResult> = new Subject();
+    private readonly sectionGeneratedSub = new Subject<SectionGenerationResult>();
 
     public readonly sectionGenerated$: Observable<SectionGenerationResult> = this.sectionGeneratedSub.asObservable();
 
-    private readonly generationFinishedSub: Subject<void> = new Subject();
+    private readonly generationFinishedSub = new Subject<void>();
 
     public readonly generationFinished$: Observable<void> = this.generationFinishedSub.asObservable();
 
-    private readonly generationAbortedWithErrorSub: Subject<void> = new Subject();
+    private readonly generationAbortedWithErrorSub = new Subject<void>();
 
     public readonly generationAbortedWithError$: Observable<void> = this.generationAbortedWithErrorSub.asObservable();
 

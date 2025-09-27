@@ -4,7 +4,7 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-const iconDictionary: { [key: string]: string } = {
+const iconDictionary: Record<string, string> = {
   github: 'github-mark.svg',
   pl: 'pl.svg',
   gb: 'gb.svg',
@@ -17,8 +17,8 @@ const iconDictionary: { [key: string]: string } = {
 })
 export class IconSvgModuleModule {
   constructor(
-    private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private readonly matIconRegistry: MatIconRegistry,
+    private readonly domSanitizer: DomSanitizer
   ) {
     for (const key in iconDictionary) {
       this.matIconRegistry.addSvgIcon(

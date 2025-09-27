@@ -3,7 +3,7 @@ import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../.
 export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {    
     public lineThickness: number = 8;
 
-    constructor(private vertices: IVector[], private hexColor: string, private order: number = 10) {
+    constructor(private readonly vertices: IVector[], private readonly hexColor: string, private readonly order: number = 10) {
         super();
 
         this.vertices = vertices;

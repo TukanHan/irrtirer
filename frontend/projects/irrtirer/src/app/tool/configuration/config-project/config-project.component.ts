@@ -46,7 +46,7 @@ export class ConfigProjectComponent implements OnInit {
 
     protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig | null>(selectMosaicConfig);
 
-    private readonly errorLabels: { [key: string]: () => string } = {
+    private readonly errorLabels: Record<string, () => string> = {
         min: () => this.translate.instant('tool.config.project.mosaicMinWidthErrorMessage', { width: MIN_WIDTH }),
         max: () => this.translate.instant('tool.config.project.mosaicMaxWidthErrorMessage', { width: MAX_WIDTH }),
         required: () => this.translate.instant('tool.config.project.mosaicWidthRequiredErrorMessage'),

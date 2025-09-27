@@ -41,18 +41,18 @@ export class ColorSliderComponent implements AfterViewInit {
 
     private isDragging: boolean = false;
 
-    private onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+    private readonly onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
         this.isDragging = true;
         document.body.style.cursor = 'pointer';
         this.onSliderMouseInteraction(evt);
     };
 
-    private onMouseUp: (evt: MouseEvent) => void = () => {
+    private readonly onMouseUp: (evt: MouseEvent) => void = () => {
         this.isDragging = false;
         document.body.style.cursor = '';
     };
 
-    private onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+    private readonly onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
         if (this.isDragging) {
             this.onSliderMouseInteraction(evt);
         }

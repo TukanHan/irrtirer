@@ -42,15 +42,13 @@ export class PolygonHelper {
         let area = 0;
         let b: Vector = vertices.at(-1);
 
-        for (let i = 0; i < vertices.length; i++) {
-            const a = vertices[i];
-
-            const tempArea = a.y * b.x - a.x * b.y;
+        for (const vector of vertices) {
+            const tempArea = vector.y * b.x - vector.x * b.y;
             area += tempArea;
-            x += (a.x + b.x) * tempArea;
-            y += (a.y + b.y) * tempArea;
+            x += (vector.x + b.x) * tempArea;
+            y += (vector.y + b.y) * tempArea;
 
-            b = a;
+            b = vector;
         }
 
         area *= 3;

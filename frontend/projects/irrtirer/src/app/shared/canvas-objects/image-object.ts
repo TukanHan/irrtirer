@@ -2,13 +2,13 @@ import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport 
 import { Vector } from "../../core/models/math/vector.model";
 
 export class ImageObject extends BaseCanvasObject implements CanvasObject {
-    private image: HTMLImageElement;
+    private readonly image: HTMLImageElement;
 
-    private position: IVector;
+    private readonly position: IVector;
 
     public readonly size: Size;
 
-    private order: number;
+    private readonly order: number;
 
     constructor(image: HTMLImageElement, position: IVector, size: Size, order: number = 0) {
         super();

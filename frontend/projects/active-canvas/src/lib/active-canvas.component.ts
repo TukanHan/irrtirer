@@ -55,15 +55,15 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     private canvasObjects: CanvasObject[] = [];
 
-    private handleMouseUp: () => void = this.onMouseUp.bind(this);
+    private readonly handleMouseUp: () => void = this.onMouseUp.bind(this);
 
-    private handleMouseMove: (event: MouseEvent) => void = this.onMouseMove.bind(this);
+    private readonly handleMouseMove: (event: MouseEvent) => void = this.onMouseMove.bind(this);
 
-    private handleMouseDown: (event: MouseEvent) => void = this.onMouseDown.bind(this);
+    private readonly handleMouseDown: (event: MouseEvent) => void = this.onMouseDown.bind(this);
 
-    private handleWheelMove: (event: WheelEvent) => void = this.onWheelMove.bind(this);
+    private readonly handleWheelMove: (event: WheelEvent) => void = this.onWheelMove.bind(this);
 
-    private handleResize: () => void = this.onResize.bind(this);
+    private readonly handleResize: () => void = this.onResize.bind(this);
 
     private readonly cd = inject(ChangeDetectorRef);
 

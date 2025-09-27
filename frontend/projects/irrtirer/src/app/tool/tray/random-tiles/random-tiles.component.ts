@@ -27,7 +27,7 @@ export class RandomTilesComponent implements OnInit {
 
     protected readonly seriesNamesSignal = signal<string[]>([]);
 
-    private readonly errorLabels: { [key: string]: () => string } = {
+    private readonly errorLabels: Record<string, () => string> = {
         min: () => this.translate.instant('tool.tiles.random.radiusTooSmall'),
         max: () => this.translate.instant('tool.tiles.random.radiusTooLarge'),
         required: () => this.translate.instant('tool.tiles.random.fieldRequired'),

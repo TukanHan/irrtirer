@@ -7,9 +7,9 @@ import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class MosaicGenerationService {
-    private sectorsInfo: Map<string, GeneratedSectorModel> = new Map();
+    private readonly sectorsInfo = new Map<string, GeneratedSectorModel>();
 
-    private readonly sectorsSub: Subject<GeneratedSectorModel[]> = new Subject();
+    private readonly sectorsSub = new Subject<GeneratedSectorModel[]>();
     
     public readonly sectors$: Observable<GeneratedSectorModel[]> = this.sectorsSub.asObservable();
 

@@ -6,7 +6,7 @@ import { Vector } from '../../../core/models/math/vector.model';
 import Color, { ColorInstance } from 'color';
 
 export class TileGenerator {
-    constructor(private imagePixelArray: Uint8ClampedArray) {}
+    constructor(private readonly imagePixelArray: Uint8ClampedArray) {}
 
     public generateTileSet(range: Range, count: number): TileModel[] {
         const tiles: TileModel[] = [];
