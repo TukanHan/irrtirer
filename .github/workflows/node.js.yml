@@ -20,6 +20,6 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '24'
-    - run: npm ci --verbose
+    - run: npm ci
     - run: npm run build:all
     - run: npm test
