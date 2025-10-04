@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-test-front:
@@ -13,14 +13,33 @@ jobs:
     defaults:
       run:
         working-directory: frontend
-    
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js 
-      uses: actions/setup-node@v4
-      with:
-        node-version: '24'
-    - run: npm ci
-    - run: npm run lint
-    - run: npm run build:all
-    - run: npm test
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+      - name: Build
+        run: npm run build:all
+
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+
+      - name: Upload coverage report (irrtirer)
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitest-coverage-irrtirer
+          path: frontend/projects/irrtirer/coverage
+
+      - name: Upload coverage report (active-canvas)
+        uses: actions/upload-artifact@v4
+        with:
+          name: vitest-coverage-active-canvas
+          path: frontend/projects/active-canvas/coverage
