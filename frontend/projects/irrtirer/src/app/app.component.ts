@@ -29,7 +29,6 @@ export class AppComponent implements OnInit {
 
     private initLanguage(): void {
         this.translate.addLangs(['pl', 'en']);
-        this.translate.setDefaultLang('pl');
         this.translate.use(this.getLanguage());
     }
 
