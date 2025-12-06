@@ -36,6 +36,7 @@ export default defineConfig([
             "@typescript-eslint/prefer-readonly": "warn",
             "@typescript-eslint/no-inferrable-types": "off",
             "@typescript-eslint/no-empty-function": "off",
+            "@typescript-eslint/no-deprecated": "error",
             curly: "error",
             semi: "warn",
             "no-unused-vars": ["error", { args: "none" }],

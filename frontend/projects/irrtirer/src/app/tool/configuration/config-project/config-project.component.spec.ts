@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ConfigProjectComponent } from './config-project.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConfigurationService } from '../configuration.service';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('ConfigProjectComponent', () => {
     let component: ConfigProjectComponent;
@@ -11,7 +11,7 @@ describe('ConfigProjectComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ConfigProjectComponent, TranslateModule.forRoot({}), BrowserAnimationsModule],
+            imports: [ConfigProjectComponent, TranslateModule.forRoot({})],
             providers: [provideMockStore(), ConfigurationService],
         }).compileComponents();
 
