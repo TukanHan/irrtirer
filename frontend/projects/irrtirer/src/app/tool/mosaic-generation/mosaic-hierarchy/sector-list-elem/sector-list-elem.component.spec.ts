@@ -1,10 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SectorListElemComponent } from './sector-list-elem.component';
 import { GeneratedSectorModel } from '../../mosaic-generation.interface';
 import { faceSector } from '../../../../../test-data/sector.data';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('SectorListElemComponent', () => {
     let component: SectorListElemComponent;
@@ -12,11 +11,7 @@ describe('SectorListElemComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [
-                SectorListElemComponent,
-                BrowserAnimationsModule,
-                TranslateModule.forRoot({})
-            ],
+            imports: [SectorListElemComponent, TranslateModule.forRoot({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorListElemComponent);

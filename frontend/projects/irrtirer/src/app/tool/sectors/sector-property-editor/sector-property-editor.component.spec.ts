@@ -2,11 +2,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SectorPropertyEditorComponent } from './sector-property-editor.component';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideMockStore } from '@ngrx/store/testing';
 import { faceSector } from '../../../../test-data/sector.data';
 import { TranslateModule } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('SectorPropertyEditorComponent', () => {
     let component: SectorPropertyEditorComponent;
@@ -26,7 +26,7 @@ describe('SectorPropertyEditorComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorPropertyEditorComponent, BrowserAnimationsModule, TranslateModule.forRoot({})],
+            imports: [SectorPropertyEditorComponent, TranslateModule.forRoot({})],
             providers: [
                 provideMockStore({ initialState }),
                 provideHttpClient(),

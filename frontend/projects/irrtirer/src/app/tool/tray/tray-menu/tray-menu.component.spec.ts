@@ -3,7 +3,7 @@ import { TrayMenuComponent } from './tray-menu.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 const initialState = {
     mosaicProject: {
@@ -17,7 +17,7 @@ describe('TrayMenuComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TrayMenuComponent, BrowserAnimationsModule, TranslateModule.forRoot({})],
+            imports: [TrayMenuComponent, TranslateModule.forRoot({})],
             providers: [provideMockStore({ initialState })],
         }).compileComponents();
 
