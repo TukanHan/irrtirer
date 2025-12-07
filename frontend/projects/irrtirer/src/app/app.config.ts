@@ -8,6 +8,7 @@ import { storageMetaReducer } from './core/state/storage-meta-reducer';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideTranslateService } from '@ngx-translate/core';
 import { userPreferencesReducer } from './core/state/user-preferences/user-preferences.reducer';
+import { APP_BASE_HREF } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -30,5 +31,6 @@ export const appConfig: ApplicationConfig = {
             fallbackLang: 'pl',
             lang: 'pl',
         }),
+        { provide: APP_BASE_HREF, useValue: '/' }
     ],
 };
