@@ -36,13 +36,13 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vitest-coverage-irrtirer
-          path: frontend/projects/coverage/irrtirer
+          path: frontend/coverage/irrtirer
 
       - name: Upload coverage report (active-canvas)
         uses: actions/upload-artifact@v4
         with:
           name: vitest-coverage-active-canvas
-          path: frontend/projects/coverage/active-canvas
+          path: frontend/coverage/active-canvas
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
