@@ -3,10 +3,10 @@
     flex-direction: column;
     overflow: hidden;
 
-    max-height: 0;
-    transition: max-height var(--expand-duration, 300ms) ease-out;
+    height: 0;
+    transition: height var(--expand-duration, 300ms) ease-out;
 
     &.open {
-        max-height: var(--panel-height, 1000px);
+        height: var(--panel-height, 1000px);
     }
 }
