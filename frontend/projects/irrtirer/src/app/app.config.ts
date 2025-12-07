@@ -31,6 +31,6 @@ export const appConfig: ApplicationConfig = {
             fallbackLang: 'pl',
             lang: 'pl',
         }),
-        { provide: APP_BASE_HREF, useValue: '/' }
+        { provide: APP_BASE_HREF, useValue: '/irrtirer/' }
     ],
 };
