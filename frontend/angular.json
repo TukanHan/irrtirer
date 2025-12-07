@@ -82,7 +82,10 @@
           }
         },
         "test": {
-          "builder": "@analogjs/vitest-angular:test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "runnerConfig": "projects/irrtirer/vite.config.ts"
+          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",
@@ -117,7 +120,10 @@
           "defaultConfiguration": "production"
         },
         "test": {
-          "builder": "@analogjs/vitest-angular:test"
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "runnerConfig": "projects/active-canvas/vite.config.ts"
+          }
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",

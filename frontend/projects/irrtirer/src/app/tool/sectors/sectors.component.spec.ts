@@ -6,7 +6,7 @@ import { faceSector } from '../../../test-data/sector.data';
 import { ToolService } from '../tool.service';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { imageObjectMock } from '../../../test-data/image-object.data';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 const initialState = {
     mosaicProject: { sectors: [faceSector] },
@@ -22,7 +22,7 @@ describe('SectorsComponent', () => {
             providers: [provideMockStore({ initialState })],
         }).compileComponents();
 
-        jest.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
+        vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
 
         fixture = TestBed.createComponent(SectorsComponent);
         component = fixture.componentInstance;

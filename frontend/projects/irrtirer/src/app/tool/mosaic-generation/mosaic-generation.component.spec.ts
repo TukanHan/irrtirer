@@ -6,12 +6,19 @@ import { ToolService } from '../tool.service';
 import { imageObjectMock } from '../../../test-data/image-object.data';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { faceSector } from '../../../test-data/sector.data';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 const initialState = {
-    mosaicProject: { 
+    mosaicProject: {
         sectors: [faceSector],
-        config: {}
+        config: {},
     },
+};
+
+export const mockMatSnackBar = {
+    open: vi.fn(() => ({ dismiss: vi.fn() })),
+    dismiss: vi.fn(),
 };
 
 describe('MosaicGenerationComponent', () => {
@@ -21,10 +28,13 @@ describe('MosaicGenerationComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [MosaicGenerationComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState })],
+            providers: [
+                provideMockStore({ initialState }),
+                { provide: MatSnackBar, useValue: mockMatSnackBar },
+            ],
         }).compileComponents();
 
-        jest.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
+        vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
 
         fixture = TestBed.createComponent(MosaicGenerationComponent);
         component = fixture.componentInstance;
