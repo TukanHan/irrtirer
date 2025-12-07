@@ -27,7 +27,7 @@ jobs:
       - name: Lint
         run: npm run lint
       - name: Build
-        run: npm run build:irrtirer -- --base-href=/irrtirer/
+        run: ng build irrtirer --base-href https://tukanhan.github.io/irrtirer/ --deploy-url https://tukanhan.github.io/irrtirer/
 
       - name: Run tests with coverage
         run: npm test -- --coverage --watch=false
