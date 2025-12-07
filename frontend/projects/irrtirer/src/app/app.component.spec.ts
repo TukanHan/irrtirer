@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { APP_BASE_HREF } from '@angular/common';
 
 const initialState = {
     userPreferences: {
@@ -16,7 +15,7 @@ describe('AppComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [AppComponent, RouterModule.forRoot([]), TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState }), { provide: APP_BASE_HREF, useValue: '/' }],
+            providers: [provideMockStore({ initialState })],
         }).compileComponents();
     });
 
