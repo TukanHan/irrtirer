@@ -1,9 +1,8 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Store } from '@ngrx/store';
 import { MatButtonModule } from '@angular/material/button';
-
 import { TranslateModule } from '@ngx-translate/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
@@ -12,8 +11,9 @@ import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { Vector } from '../../core/models/math/vector.model';
 import { RouterOutlet } from '@angular/router';
 import { ConfigurationService } from './configuration.service';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
+import { outputToObservable, takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { combineLatest, map, of } from 'rxjs';
 
 @Component({
     selector: 'app-configuration',
@@ -23,7 +23,7 @@ import { RibbonAction } from '../ribbon/ribbon-action.interface';
     styleUrl: './configuration.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ConfigurationComponent implements ToolView, AfterViewInit {
+export class ConfigurationComponent implements ToolView {
     private readonly store = inject(Store);
 
     private readonly destroyRef = inject(DestroyRef);
@@ -34,32 +34,34 @@ export class ConfigurationComponent implements ToolView, AfterViewInit {
 
     private readonly imageObject = signal<ImageObject | null>(null);
 
+    private readonly imageChanged$ = toObservable(this.configService.imageChange);
+
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'recenter',
-            visibility: computed(() => this.imageObject() ? 'on' : 'disabled'),
+            visibility: computed(() => (this.imageObject() ? 'on' : 'disabled')),
             onClick: () => {
                 this.focusOnImage(this.imageObject()!);
                 this.activeCanvas.redraw();
-            } 
-        }
+            },
+        },
     ];
 
     private activeCanvas: IActiveCanvas;
 
-    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+    public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-        return { ribbon: this.ribbonActions };
-    }
 
-    public ngAfterViewInit(): void {
-        queueMicrotask(() => this.subscribeOnMosaicConfigChange());
-    }
+        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
 
-    protected subscribeOnMosaicConfigChange(): void {
-        this.configService.imageChange$
+        combineLatest([canvasLoaded$, this.imageChanged$])
             .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((imageChange) => this.drawImage(imageChange?.mosaicConfig, imageChange?.shouldFocus));
+            .subscribe(([shouldFocusOnObject, imageChange]) => {
+                const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
+                this.drawImage(imageChange.mosaicConfig, shouldFocus);
+            });
+
+        return { ribbon: this.ribbonActions };
     }
 
     private async drawImage(mosaicConfig: MosaicConfig | null, focusOn: boolean): Promise<void> {

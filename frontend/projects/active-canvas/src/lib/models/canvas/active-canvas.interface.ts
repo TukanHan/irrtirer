@@ -9,6 +9,7 @@ export interface IActiveCanvas {
     get viewport(): Viewport;
 
     clicked: OutputEmitterRef<IVector>;
+    canvasLoaded: OutputEmitterRef<void>;
 
     addCanvasObject(addedObject: CanvasObject, redraw?: boolean): void;
     removeObject(removedObject: CanvasObject): void;

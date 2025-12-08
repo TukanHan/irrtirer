@@ -6,5 +6,5 @@ export interface ToolViewInitSetting {
 }
 
 export interface ToolView {
-    sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting;
+    sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting;
 }

@@ -26,7 +26,7 @@ describe('SectorsComponent', () => {
 
         fixture = TestBed.createComponent(SectorsComponent);
         component = fixture.componentInstance;
-        component.sectionEntered(activeCanvas);
+        component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();
     });
 

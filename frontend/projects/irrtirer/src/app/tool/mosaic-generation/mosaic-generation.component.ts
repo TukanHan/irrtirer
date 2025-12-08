@@ -85,12 +85,17 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
     private readonly service = inject(MosaicGenerationService);
 
+    private shouldInitiallyFocusOnObject: boolean = false;
+
     public async ngAfterViewInit(): Promise<void> {
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
 
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
         this.imageObject.setVisibility(this.isImageVisible());
         this.activeCanvas.addCanvasObject(this.imageObject);
+        if (this.shouldInitiallyFocusOnObject) {
+            this.focusOnImage();
+        }
 
         this.activeCanvas.redraw();
 
@@ -264,8 +269,9 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
         this.snackBar.open(message, this.translate.instant('common.ok'), { duration: 3000 });
     }
 
-    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+    public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
+        this.shouldInitiallyFocusOnObject = shouldFocusOnObject;
         return { ribbon: this.ribbonActions };
     }
 

@@ -43,6 +43,8 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     
     private imageObject!: ImageObject;
 
+    private shouldInitiallyFocusOnObject: boolean = false;
+
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'recenter',
@@ -64,11 +66,14 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
         this.activeCanvas.addCanvasObject(this.imageObject);
+        if (this.shouldInitiallyFocusOnObject) {
+            this.focusOnImage();
+        }
+        this.activeCanvas.redraw();
 
         this.subscribeOnEditedSectorChange();
         this.subscribeOnEditedSectorPropertiesChange();
         this.subscribeOnSectorListChange();
-        this.activeCanvas.redraw();
 
         outputToObservable(this.activeCanvas.clicked)
             .pipe(takeUntilDestroyed(this.destroyRef))
@@ -163,8 +168,9 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         });
     }
 
-    public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
+    public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
+        this.shouldInitiallyFocusOnObject = shouldFocusOnObject;
         return { ribbon: this.ribbonActions };
     }
 

@@ -17,7 +17,7 @@ describe('ConfigurationComponent', () => {
 
         fixture = TestBed.createComponent(ConfigurationComponent);
         component = fixture.componentInstance;
-        component.sectionEntered(activeCanvas);
+        component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();
     });
 

@@ -70,9 +70,12 @@ export class ToolComponent {
         canvasGridColor: this.themeMode() === "dark" ? "#3f3f3f" : "#b3b3b3",
     }));
 
+    private wasInitialized: boolean = false;
+
     protected onActivate(view: ToolView): void {
-        const viewSetting = view.sectionEntered(this.activeCanvas());
+        const viewSetting = view.sectionEntered(this.activeCanvas(), !this.wasInitialized);
         this.ribbonActions.set(viewSetting.ribbon);
+        this.wasInitialized = true;
     }
 
     protected onDeactivate(): void {

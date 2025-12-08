@@ -1,6 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
-import { BehaviorSubject, Observable } from 'rxjs';
 
 export interface ImageChange {
     mosaicConfig: MosaicConfig | null;
@@ -9,11 +8,11 @@ export interface ImageChange {
 
 @Injectable()
 export class ConfigurationService {
-    private readonly imageChangeSub = new BehaviorSubject<ImageChange>({ mosaicConfig: null, shouldFocus: false});
+    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false});
 
-    public readonly imageChange$: Observable<ImageChange> = this.imageChangeSub.asObservable();
+    public readonly imageChange = this._imageChange.asReadonly();
 
     public emitImageChange(mosaicConfig: MosaicConfig | null, shouldFocus: boolean): void {
-        this.imageChangeSub.next({ mosaicConfig, shouldFocus });
+        this._imageChange.set({ mosaicConfig, shouldFocus });
     }
 }

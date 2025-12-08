@@ -34,6 +34,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     public readonly options = model<CanvasOptions>();
 
+    public readonly canvasLoaded = output<void>();
+
     public get viewport(): Viewport {
         return this._viewport;
     }
@@ -81,7 +83,11 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         window.addEventListener('mouseup', this.handleMouseUp);
         window.addEventListener('resize', this.handleResize, false);
 
-        setTimeout(() => this.onResize(), 1);
+        setTimeout(() => { 
+            this.onResize(false);
+            this.canvasLoaded.emit();
+            this.redraw();
+        }, 1);
     }
 
     private configureCanvas(): void {
@@ -162,7 +168,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.cd.markForCheck();
     }
 
-    private onResize(): void {
+    private onResize(redraw: boolean = true): void {
         const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
             height: canvasRect.height,
@@ -173,7 +179,9 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvas().nativeElement.height = newCanvasSize.height;
 
         this._viewport = new Viewport(this._viewport.position, this._viewport.zoom, newCanvasSize);
-        this.redraw();
+        if(redraw) {
+            this.redraw();
+        }
     }
 
     public setViewport(zoom: number | null = null, position: IVector | null = null, redraw: boolean = false): void {

@@ -38,7 +38,7 @@ describe('MosaicGenerationComponent', () => {
 
         fixture = TestBed.createComponent(MosaicGenerationComponent);
         component = fixture.componentInstance;
-        component.sectionEntered(activeCanvas);
+        component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();
     });
 
