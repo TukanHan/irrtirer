@@ -1,14 +1,14 @@
 import {
-    AfterViewInit,
+    afterRenderEffect,
     ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
     computed,
-    effect,
     ElementRef,
     inject,
     model,
     OnDestroy,
+    OnInit,
     output,
     viewChild,
 } from '@angular/core';
@@ -29,12 +29,10 @@ import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
     styleUrl: 'active-canvas.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDestroy {
+export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     public readonly clicked = output<IVector>();
 
     public readonly options = model<CanvasOptions>();
-
-    public readonly canvasLoaded = output<void>();
 
     public get viewport(): Viewport {
         return this._viewport;
@@ -69,25 +67,19 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
 
     private readonly cd = inject(ChangeDetectorRef);
 
-    constructor() {
-        effect(() => {
-            this.configureCanvas();
-            this.redraw();
-        });
-    }
+    protected readonly configChangeEffect = afterRenderEffect(() => {
+        this.configureCanvas();
+        this.redraw();
+    });
 
-    public ngAfterViewInit(): void {
+    public ngOnInit(): void {
         this.canvas().nativeElement.addEventListener('wheel', this.handleWheelMove);
         this.canvas().nativeElement.addEventListener('mousedown', this.handleMouseDown);
         window.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('mouseup', this.handleMouseUp);
         window.addEventListener('resize', this.handleResize, false);
 
-        setTimeout(() => { 
-            this.onResize(false);
-            this.canvasLoaded.emit();
-            this.redraw();
-        }, 1);
+        this.onResize();
     }
 
     private configureCanvas(): void {
@@ -168,7 +160,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.cd.markForCheck();
     }
 
-    private onResize(redraw: boolean = true): void {
+    private onResize(): void {
         const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
         const newCanvasSize: Size = {
             height: canvasRect.height,
@@ -179,9 +171,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, AfterViewInit, OnDe
         this.canvas().nativeElement.height = newCanvasSize.height;
 
         this._viewport = new Viewport(this._viewport.position, this._viewport.zoom, newCanvasSize);
-        if(redraw) {
-            this.redraw();
-        }
+        this.redraw();
     }
 
     public setViewport(zoom: number | null = null, position: IVector | null = null, redraw: boolean = false): void {

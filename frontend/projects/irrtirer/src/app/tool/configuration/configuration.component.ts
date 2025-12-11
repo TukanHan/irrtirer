@@ -12,8 +12,8 @@ import { Vector } from '../../core/models/math/vector.model';
 import { RouterOutlet } from '@angular/router';
 import { ConfigurationService } from './configuration.service';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
-import { outputToObservable, takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
-import { combineLatest, map, of } from 'rxjs';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { skip } from 'rxjs';
 
 @Component({
     selector: 'app-configuration',
@@ -52,11 +52,9 @@ export class ConfigurationComponent implements ToolView {
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
 
-        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
-
-        combineLatest([canvasLoaded$, this.imageChanged$])
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(([shouldFocusOnObject, imageChange]) => {
+        this.imageChanged$
+            .pipe(takeUntilDestroyed(this.destroyRef), skip(1))
+            .subscribe((imageChange) => {
                 const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
                 this.drawImage(imageChange.mosaicConfig, shouldFocus);
             });

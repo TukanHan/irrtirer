@@ -5,7 +5,7 @@ import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/s
 import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
-import { BehaviorSubject, map, of, take } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
@@ -19,7 +19,7 @@ import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
-import { outputToObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
@@ -269,10 +269,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
 
-        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
-        canvasLoaded$
-            .pipe(take(1))
-            .subscribe(async (shouldFocusOnObject) => this.onCanvasReady(shouldFocusOnObject));
+        this.onCanvasReady(shouldFocusOnObject);
 
         return { ribbon: this.ribbonActions };
     }

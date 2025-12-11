@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
-import { first, map, of, take } from 'rxjs';
+import { first } from 'rxjs';
 import { SectorsContoursService } from './sectors-contours.service';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
@@ -161,9 +161,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         this.activeCanvas = activeCanvas;
 
         const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
-
-        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
-        canvasLoaded$.pipe(take(1)).subscribe(async (shouldFocusOnObject) => {
+        queueMicrotask( async () => {
             this.imageObject = await ToolService.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(this.imageObject);
             
