@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
-import { first } from 'rxjs';
+import { first, map, of, take } from 'rxjs';
 import { SectorsContoursService } from './sectors-contours.service';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
@@ -43,8 +43,6 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     
     private imageObject!: ImageObject;
 
-    private shouldInitiallyFocusOnObject: boolean = false;
-
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'recenter',
@@ -61,16 +59,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         this.service.emitEditedSectorProperty(null);
     }
 
-    public async ngAfterViewInit(): Promise<void> {
-        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
-
-        this.imageObject = await ToolService.createImageObject(mosaicConfig);
-        this.activeCanvas.addCanvasObject(this.imageObject);
-        if (this.shouldInitiallyFocusOnObject) {
-            this.focusOnImage();
-        }
-        this.activeCanvas.redraw();
-
+    public ngAfterViewInit(): void {
         this.subscribeOnEditedSectorChange();
         this.subscribeOnEditedSectorPropertiesChange();
         this.subscribeOnSectorListChange();
@@ -170,7 +159,20 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-        this.shouldInitiallyFocusOnObject = shouldFocusOnObject;
+
+        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
+
+        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
+        canvasLoaded$.pipe(take(1)).subscribe(async (shouldFocusOnObject) => {
+            this.imageObject = await ToolService.createImageObject(mosaicConfig);
+            this.activeCanvas.addCanvasObject(this.imageObject);
+            
+            if (shouldFocusOnObject) {
+                this.focusOnImage();
+            }
+            this.activeCanvas.redraw();
+        });
+
         return { ribbon: this.ribbonActions };
     }
 

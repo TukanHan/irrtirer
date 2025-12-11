@@ -1,11 +1,11 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, computed, DestroyRef, inject, OnDestroy, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, map, of, take } from 'rxjs';
 import { MosaicSignalRService } from './mosaic-signal-r.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
@@ -19,7 +19,7 @@ import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { outputToObservable, takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateService } from '@ngx-translate/core';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
@@ -37,7 +37,7 @@ import { ToolService } from '../tool.service';
     styleUrl: './mosaic-generation.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, ToolView {
+export class MosaicGenerationComponent implements OnInit, ToolView {
     protected readonly isImageVisible = signal<boolean>(false);
 
     protected readonly isMeshVisible = signal<boolean>(true);
@@ -85,24 +85,25 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
     private readonly service = inject(MosaicGenerationService);
 
-    private shouldInitiallyFocusOnObject: boolean = false;
-
-    public async ngAfterViewInit(): Promise<void> {
-        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
-
-        this.imageObject = await ToolService.createImageObject(mosaicConfig);
-        this.imageObject.setVisibility(this.isImageVisible());
-        this.activeCanvas.addCanvasObject(this.imageObject);
-        if (this.shouldInitiallyFocusOnObject) {
-            this.focusOnImage();
-        }
-
-        this.activeCanvas.redraw();
-
+    public ngOnInit(): void {
         this.subscribeOnGenerationProgress();
         this.subscribeOnSectorsMeshReceived();
         this.subscribeOnMeshGenerationFinished();
         this.subscribeOnMeshVisibilityChange();
+        this.destroyRef.onDestroy(() => this.signalRService.stopConnection());
+    }
+
+    private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
+        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
+        
+        this.imageObject = await ToolService.createImageObject(mosaicConfig);
+        this.imageObject.setVisibility(this.isImageVisible());
+        this.activeCanvas.addCanvasObject(this.imageObject);
+        if (shouldFocusOnObject) {
+            this.focusOnImage();
+        }
+
+        this.activeCanvas.redraw();
 
         this.initSectors();
         this.initGeneration(mosaicConfig.base64Image, this.imageObject.size);
@@ -195,10 +196,6 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
             });
     }
 
-    public ngOnDestroy(): void {
-        this.signalRService.stopConnection();
-    }
-
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
@@ -271,7 +268,12 @@ export class MosaicGenerationComponent implements AfterViewInit, OnDestroy, Tool
 
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-        this.shouldInitiallyFocusOnObject = shouldFocusOnObject;
+
+        const canvasLoaded$ = shouldFocusOnObject ? outputToObservable(this.activeCanvas.canvasLoaded).pipe(map(() => true)) : of(false);
+        canvasLoaded$
+            .pipe(take(1))
+            .subscribe(async (shouldFocusOnObject) => this.onCanvasReady(shouldFocusOnObject));
+
         return { ribbon: this.ribbonActions };
     }
 

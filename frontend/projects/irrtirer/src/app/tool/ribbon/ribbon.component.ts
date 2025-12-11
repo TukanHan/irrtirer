@@ -24,7 +24,7 @@ export class RibbonComponent {
         }
     }
 
-    protected isActive(action: ActionVisibility): boolean {
+    private isActive(action: ActionVisibility): boolean {
         return action === 'off' || action === 'on';
     }
 }

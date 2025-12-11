@@ -9,7 +9,7 @@ describe('SizeDisplayPipe', () => {
 
     it('should return empty string', () => {
         const pipe = new SizeDisplayPipe();
-        expect(pipe.transform(null)).toEqual('');
+        expect(pipe.transform(null)).toEqual('0 x 0');
     });
 
     it('should return result in cm unit', () => {

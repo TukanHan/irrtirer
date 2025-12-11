@@ -38,8 +38,8 @@ const units: Unit[] = [
 })
 export class SizeDisplayPipe implements PipeTransform {
     public transform(size: Size): string {
-        if (!size) {
-            return '';
+        if(!size) {
+            return '0 x 0';
         }
 
         const unit: Unit = this.selectUnit(Math.max(size.width, size.height));
