@@ -25,6 +25,7 @@ import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
+import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-mosaic-generation',
@@ -51,6 +52,14 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     private availableTiles: TileModel[];
 
     protected readonly ribbonActions: RibbonAction[] = [
+        {
+            iconName: 'crop',
+            visibility: signal('on'),
+            onClick: () => {
+                const base64Image = this.activeCanvas.saveAsPng();
+                ImageHelper.downloadBase64Image(base64Image, 'generating_snapshot.png');
+            },
+        },
         {
             iconName: 'recenter',
             visibility: signal('on'),

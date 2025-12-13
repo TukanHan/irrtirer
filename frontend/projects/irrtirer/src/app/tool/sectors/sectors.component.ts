@@ -18,6 +18,7 @@ import { ToolService } from '../tool.service';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { RouterOutlet } from '@angular/router';
+import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-sectors',
@@ -44,6 +45,14 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private imageObject!: ImageObject;
 
     protected readonly ribbonActions: RibbonAction[] = [
+        {
+            iconName: 'crop',
+            visibility: signal('on'),
+            onClick: () => {
+                const base64Image = this.activeCanvas.saveAsPng();
+                ImageHelper.downloadBase64Image(base64Image, 'sectors_snapshot.png');
+            },
+        },
         {
             iconName: 'recenter',
             visibility: signal('on'),

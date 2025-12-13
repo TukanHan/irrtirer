@@ -63,7 +63,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
 
     private readonly handleWheelMove: (event: WheelEvent) => void = this.onWheelMove.bind(this);
 
-    private readonly handleResize: () => void = this.onResize.bind(this);
+    private readonly resizeObserver = new ResizeObserver(() => this.onResize());
 
     private readonly cd = inject(ChangeDetectorRef);
 
@@ -77,9 +77,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         this.canvas().nativeElement.addEventListener('mousedown', this.handleMouseDown);
         window.addEventListener('mousemove', this.handleMouseMove);
         window.addEventListener('mouseup', this.handleMouseUp);
-        window.addEventListener('resize', this.handleResize, false);
-
-        this.onResize();
+        this.resizeObserver.observe(this.canvas().nativeElement);
     }
 
     private configureCanvas(): void {
@@ -103,9 +101,9 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     public ngOnDestroy(): void {
         this.canvas().nativeElement.removeEventListener('wheel', this.handleWheelMove);
         this.canvas().nativeElement.removeEventListener('mousedown', this.handleMouseDown);
-        window.removeEventListener('resize', this.handleResize, false);
         window.removeEventListener('mousemove', this.handleMouseMove);
         window.removeEventListener('mouseup', this.handleMouseUp);
+        this.resizeObserver.unobserve(this.canvas().nativeElement);
     }
 
     private onWheelMove(event: WheelEvent): void {
@@ -217,5 +215,9 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         }
 
         this.cd.markForCheck();
+    }
+
+    public saveAsPng(): string {
+        return this.canvas().nativeElement.toDataURL("image/png");
     }
 }

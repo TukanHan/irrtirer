@@ -23,4 +23,31 @@ export class ImageHelper {
 
         return context.getImageData(0, 0, canvas.width, canvas.height).data;
     }
+
+    public static downloadBase64Image(base64String: string, fileName: string): void {
+        const mimeType = 'image/png';
+
+        const base64Data = base64String.replace(/^data:image\/(png|jpeg|jpg);base64,/, '');
+
+        const binaryString = atob(base64Data);
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+
+        const blob = new Blob([bytes], { type: mimeType });
+
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(url);
+    }
 }

@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { RouterOutlet } from '@angular/router';
@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { TileModel, TilesSet } from '../../core/models/mosaic-project.model';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TrayService } from './tray.service';
+import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-tray',
@@ -37,7 +38,18 @@ export class TrayComponent implements ToolView, AfterViewInit {
 
     public sectionEntered(activeCanvas: IActiveCanvas): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
-        return { ribbon: [] };
+        return {
+            ribbon: [
+                {
+                    iconName: 'crop',
+                    visibility: signal('on'),
+                    onClick: () => {
+                        const base64Image = this.activeCanvas.saveAsPng();
+                        ImageHelper.downloadBase64Image(base64Image, 'sectors_snapshot.png');
+                    },
+                },
+            ],
+        };
     }
 
     private drawTiles(tiles: TileModel[]): void {

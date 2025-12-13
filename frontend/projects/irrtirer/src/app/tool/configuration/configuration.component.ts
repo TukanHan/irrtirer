@@ -14,6 +14,7 @@ import { ConfigurationService } from './configuration.service';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { skip } from 'rxjs';
+import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-configuration',
@@ -37,6 +38,14 @@ export class ConfigurationComponent implements ToolView {
     private readonly imageChanged$ = toObservable(this.configService.imageChange);
 
     protected readonly ribbonActions: RibbonAction[] = [
+        {
+            iconName: 'crop',
+            visibility: signal('on'),
+            onClick: () => {
+                const base64Image = this.activeCanvas.saveAsPng();
+                ImageHelper.downloadBase64Image(base64Image, 'configuration_snapshot.png');
+            },
+        },
         {
             iconName: 'recenter',
             visibility: computed(() => (this.imageObject() ? 'on' : 'disabled')),

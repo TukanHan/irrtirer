@@ -15,4 +15,5 @@ export interface IActiveCanvas {
     removeObjects(redraw?: boolean): void;
     setViewport(zoom?: number, position?: IVector, redraw?: boolean): void;
     redraw(): void;
+    saveAsPng(): string;
 }
