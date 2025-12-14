@@ -2,6 +2,7 @@
   "title": "Irrtirer",
   "common": {
     "cancel": "Cancel",
+    "save": "Save",
     "confirm": "Confirm",
     "return": "Return",
     "edit": "Edit",
@@ -151,6 +152,11 @@
         "errorOnStartingMosaicGeneration": "There was an error on starting generating mosaic.",
         "generationCompleted": "Mosaic generation has been completed"
       }
+    },
+    "snapshotDialog": {
+      "title": "Snapshot save",
+      "transparentBackgroundLabel": "Use transparent background",
+      "scaleFactorLabel": "Snapshot quality (scaling)"
     }
   }
 }
