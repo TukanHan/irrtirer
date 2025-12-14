@@ -18,7 +18,6 @@ import { ToolService } from '../tool.service';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { RouterOutlet } from '@angular/router';
-import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-sectors',
@@ -34,6 +33,8 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     private readonly destroyRef = inject(DestroyRef);
 
+    private readonly toolService = inject(ToolService);
+
     protected readonly sectorForContourEdition = toSignal<EditedSectorContour | null>(this.service.sectorForContourEdition$, { requireSync: true });
 
     protected readonly sectorForPropertyEdition = toSignal<EditedSectorWithTriangulationMesh | null> (this.service.sectorForPropertyEdition$, { requireSync: true });
@@ -48,10 +49,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
-            onClick: () => {
-                const base64Image = this.activeCanvas.saveAsPng();
-                ImageHelper.downloadBase64Image(base64Image, 'sectors_snapshot.png');
-            },
+            onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
         },
         {
             iconName: 'recenter',

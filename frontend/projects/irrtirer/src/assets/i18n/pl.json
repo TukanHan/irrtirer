@@ -2,6 +2,7 @@
     "title": "Irrtirer",
     "common": {
         "cancel": "Anuluj",
+        "save": "Zapisz",
         "return": "Wróć",
         "confirm": "Potwierdź",
         "edit": "Edytuj",
@@ -151,6 +152,11 @@
                 "errorOnStartingMosaicGeneration": "Wystąpił błąd na etapie rozpoczęcia generowania.",
                 "generationCompleted": "Ukończono generowanie mozaiki"
             }
+        },
+        "snapshotDialog": {
+            "title": "Zapis zrzutu",
+            "transparentBackgroundLabel": "Użyj przezroczystego tła",
+            "scaleFactorLabel": "Jakość zrzutu (skalowanie)"
         }
     }
 }

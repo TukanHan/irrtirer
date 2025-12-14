@@ -19,7 +19,7 @@ describe('SectorsComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [SectorsComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState })],
+            providers: [provideMockStore({ initialState }), { provide: ToolService, useValue: {} }],
         }).compileComponents();
 
         vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);

@@ -1,0 +1,20 @@
+.dialog-content {
+    width: 400px;
+
+    .mat-mdc-dialog-content {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px 20px;
+        margin: 0 auto;
+        align-items: center;
+        padding-bottom: 6px;
+
+        mat-slider {
+            margin: -6px 0;
+        }
+
+        mat-checkbox {
+            margin-left: -11px;
+        }
+    }
+}

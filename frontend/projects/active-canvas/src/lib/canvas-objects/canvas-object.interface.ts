@@ -1,5 +1,6 @@
 import { Viewport } from '../models/canvas/viewport.model';
 import { IActiveCanvas } from '../models/canvas/active-canvas.interface';
+import { CanvasRenderingContext } from '../models/canvas/canvas-rendering-context';
 
 export interface CanvasObject {
     /**
@@ -7,7 +8,7 @@ export interface CanvasObject {
      * @param ctx Canvas
      * @param viewport Current visible canvas frame
      */
-    drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void;
+    drawObject(ctx: CanvasRenderingContext, viewport: Viewport): void;
 
     /**
      * Method for internal use to get object order on canvas

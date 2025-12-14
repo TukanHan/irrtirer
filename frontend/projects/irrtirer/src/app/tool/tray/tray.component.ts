@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 import { TileModel, TilesSet } from '../../core/models/mosaic-project.model';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TrayService } from './tray.service';
-import { ImageHelper } from '../../core/helpers/image-helper';
+import { ToolService } from '../tool.service';
 
 @Component({
     selector: 'app-tray',
@@ -21,6 +21,8 @@ export class TrayComponent implements ToolView, AfterViewInit {
     private readonly store = inject(Store);
 
     private readonly destroyRef = inject(DestroyRef);
+
+    private readonly toolService = inject(ToolService);
 
     private readonly tilesSets$: Observable<TilesSet[]> = this.store.select(selectTilesSets);
 
@@ -43,10 +45,7 @@ export class TrayComponent implements ToolView, AfterViewInit {
                 {
                     iconName: 'crop',
                     visibility: signal('on'),
-                    onClick: () => {
-                        const base64Image = this.activeCanvas.saveAsPng();
-                        ImageHelper.downloadBase64Image(base64Image, 'sectors_snapshot.png');
-                    },
+                    onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
                 },
             ],
         };

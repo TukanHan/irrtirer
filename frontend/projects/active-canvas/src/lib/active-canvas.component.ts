@@ -22,6 +22,8 @@ import { CanvasOptions } from './models/canvas/canvas-options.interface';
 import { IActiveCanvas } from './models/canvas/active-canvas.interface';
 import { GridObject } from './canvas-objects/grid-object.model';
 import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
+import { CanvasRenderingContext } from './models/canvas/canvas-rendering-context';
+import { CanvasToImageOptions } from './models/canvas/canvas-to-image-options';
 
 @Component({
     selector: 'ac-active-canvas',
@@ -204,20 +206,42 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
 
     public redraw(): void {
         const canvasContext = this.ctx();
-        canvasContext.clearRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
-        canvasContext.fillStyle = this.currentOptions().backgroundColor;
-        canvasContext.fillRect(0, 0, this._viewport.pxSize.width, this._viewport.pxSize.height);
-
-        for (const object of this.canvasObjects) {
-            if (object.getVisibility()) {
-                object.drawObject(canvasContext, this._viewport);
-            }
-        }
+        ActiveCanvasComponent.drawBackground(canvasContext, this.viewport.pxSize, this.currentOptions().backgroundColor);
+        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, this.viewport);
 
         this.cd.markForCheck();
     }
 
-    public saveAsPng(): string {
-        return this.canvas().nativeElement.toDataURL("image/png");
+    public saveAsImage(options?: CanvasToImageOptions): Promise<Blob> {
+        const scaleFactor = options?.scaleFactor ?? 1.0;
+        const pxSize = {
+            width: this.viewport.pxSize.width * scaleFactor,
+            height: this.viewport.pxSize.height * scaleFactor
+        };
+
+        const snapshotViewport = new Viewport(this._viewport.position, this._viewport.zoom / scaleFactor, pxSize);
+
+        const offscreenCanvas = new OffscreenCanvas(pxSize.width, pxSize.height);
+        const canvasContext = offscreenCanvas.getContext('2d');
+
+        const backgroundColor = options?.backgroundColor ?? this.currentOptions().backgroundColor;
+        ActiveCanvasComponent.drawBackground(canvasContext, pxSize, backgroundColor);
+        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, snapshotViewport);
+
+        return offscreenCanvas.convertToBlob({ type: 'image/png' });
+    }
+
+    private static drawBackground(canvasContext: CanvasRenderingContext, pxSize: Size, backgroundColor?: string): void {
+        canvasContext.clearRect(0, 0, pxSize.width, pxSize.height);
+        canvasContext.fillStyle = backgroundColor;
+        canvasContext.fillRect(0, 0, pxSize.width, pxSize.height);
+    }
+
+    private static drawObjects(canvasContext: CanvasRenderingContext, canvasObjects: CanvasObject[], viewport: Viewport): void {
+        for (const object of canvasObjects) {
+            if (object.getVisibility()) {
+                object.drawObject(canvasContext, viewport);
+            }
+        }
     }
 }

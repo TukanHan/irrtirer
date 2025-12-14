@@ -1,0 +1,1 @@
+export type CanvasRenderingContext = CanvasRect & CanvasFillStrokeStyles;

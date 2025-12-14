@@ -31,6 +31,7 @@ describe('MosaicGenerationComponent', () => {
             providers: [
                 provideMockStore({ initialState }),
                 { provide: MatSnackBar, useValue: mockMatSnackBar },
+                { provide: ToolService, useValue: {} },
             ],
         }).compileComponents();
 

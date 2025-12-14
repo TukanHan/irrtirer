@@ -10,13 +10,11 @@ import { map } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { RibbonComponent } from './ribbon/ribbon.component';
 import { ToolService } from './tool.service';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActiveCanvasComponent } from '../../../../active-canvas/src/public-api';
 import { ToolView } from './tool-view.interface';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
-import { ThemeService } from '../core/services/theme/theme.service';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
-import { ThemeMode } from '../core/models/user-preferences.interface';
 import { AsyncPipe } from '@angular/common';
 
 @Component({
@@ -43,6 +41,8 @@ export class ToolComponent {
 
     protected readonly translate = inject(TranslateService);
 
+    private readonly toolService = inject(ToolService);
+
     private readonly destroyRef = inject(DestroyRef);
 
     protected readonly tilesLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
@@ -64,10 +64,8 @@ export class ToolComponent {
 
     protected readonly ribbonActions = signal<RibbonAction[]>([]);
 
-    private readonly themeMode = toSignal<ThemeMode>(inject(ThemeService).theme$);
-
     protected readonly canvasOptions = computed<CanvasOptions>(() =>({
-        canvasGridColor: this.themeMode() === "dark" ? "#3f3f3f" : "#b3b3b3",
+        canvasGridColor: this.toolService.canvasGridColor(),
     }));
 
     private wasInitialized: boolean = false;

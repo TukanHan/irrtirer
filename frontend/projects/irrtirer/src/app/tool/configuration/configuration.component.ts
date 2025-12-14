@@ -14,7 +14,6 @@ import { ConfigurationService } from './configuration.service';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { skip } from 'rxjs';
-import { ImageHelper } from '../../core/helpers/image-helper';
 
 @Component({
     selector: 'app-configuration',
@@ -31,6 +30,8 @@ export class ConfigurationComponent implements ToolView {
 
     private readonly configService = inject(ConfigurationService);
 
+    private readonly toolService = inject(ToolService);
+
     protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig>(selectMosaicConfig);
 
     private readonly imageObject = signal<ImageObject | null>(null);
@@ -41,10 +42,7 @@ export class ConfigurationComponent implements ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
-            onClick: () => {
-                const base64Image = this.activeCanvas.saveAsPng();
-                ImageHelper.downloadBase64Image(base64Image, 'configuration_snapshot.png');
-            },
+            onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'configuration_snapshot.png'),
         },
         {
             iconName: 'recenter',
