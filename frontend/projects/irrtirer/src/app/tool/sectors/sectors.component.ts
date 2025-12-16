@@ -155,11 +155,8 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
                 const contour = sectorWithTriangulationMesh.contour!;
                 return new TriangulatedContourObject(triangles, contour, sectorWithTriangulationMesh.sector.color);
             } else {
-                const contour = new ClosedContourObject([...sector.vertices], sector.color, 10 + index);
-                if (sector.id === selectedSectorOnList?.id) {
-                    contour.lineThickness = 10;
-                }
-                return contour;
+                const baseLineThickness = (sector.id === selectedSectorOnList?.id) ? 10 : 8;
+                return new ClosedContourObject([...sector.vertices], sector.color, 10 + index, baseLineThickness);
             }
         });
     }

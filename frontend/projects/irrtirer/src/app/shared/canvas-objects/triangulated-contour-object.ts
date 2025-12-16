@@ -5,21 +5,21 @@ import { Vector } from '../../core/models/math/vector.model';
 
 export class TriangulatedContourObject extends BaseCanvasObject implements CanvasObject {
     private readonly outerContour: Vector[];
-    private innerLines: Line[];
+    private readonly innerLines: Line[];
 
-    private readonly hexColor: string;
-    private readonly order: number;
-
-    private readonly borderThickness: number = 6;
+    private readonly borderThickness: number = 8;
     private readonly innerThickness: number = 3;
 
-    constructor(mesh: Triangle[], contour: Vector[], hexColor: string, order: number = 100) {
+    constructor(
+        mesh: Triangle[],
+        contour: Vector[],
+        private readonly hexColor: string,
+        private readonly order: number = 100
+    ) {
         super();
-        this.hexColor = hexColor;
-        this.order = order;
 
         this.outerContour = contour;
-        this.selectLines(mesh);
+        this.innerLines = TriangulatedContourObject.getLines(mesh);
     }
 
     public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
@@ -35,7 +35,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     }
 
     private drawBorder(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        ctx.lineWidth = this.borderThickness;
+        ctx.lineWidth = this.borderThickness * viewport.scaleFactor;
         let point: IVector = viewport.getViewportPosition(this.outerContour[0]);
 
         ctx.beginPath();
@@ -55,7 +55,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     }
 
     private drawTriangulationMesh(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
-        ctx.lineWidth = this.innerThickness;
+        ctx.lineWidth = this.innerThickness * viewport.scaleFactor;
         ctx.globalAlpha = 0.3;
 
         for (const line of this.innerLines) {
@@ -72,18 +72,18 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
         ctx.globalAlpha = 1;
     }
 
-    private selectLines(mesh: Triangle[]): void {
-        const lines: Map<number, { line: Line; count: number }> = TriangulatedContourObject.collectMeshLines(mesh);
+    private static getLines(mesh: Triangle[]): Line[] {
+        const lines: Map<number, { line: Line; count: number }> = this.collectMeshLines(mesh);
 
         const innerLines: Line[] = [];
 
         for (const line of lines.values()) {
-            if (line.count == 2) {
+            if (line.count === 2) {
                 innerLines.push(line.line);
             }
         }
 
-        this.innerLines = innerLines;
+        return innerLines;
     }
 
     public getOrder(): number {

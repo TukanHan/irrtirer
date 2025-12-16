@@ -219,7 +219,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
             height: this.viewport.pxSize.height * scaleFactor
         };
 
-        const snapshotViewport = new Viewport(this._viewport.position, this._viewport.zoom / scaleFactor, pxSize);
+        const snapshotViewport = new Viewport(this._viewport.position, this._viewport.zoom / scaleFactor, pxSize, scaleFactor);
 
         const offscreenCanvas = new OffscreenCanvas(pxSize.width, pxSize.height);
         const canvasContext = offscreenCanvas.getContext('2d');

@@ -1,8 +1,10 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
 
-
 export class TileObject extends BaseCanvasObject implements CanvasObject {
-    constructor(private readonly vertices: IVector[], private readonly hexColor: string) {
+    constructor(
+        private readonly vertices: IVector[],
+        private readonly hexColor: string
+    ) {
         super();
     }
 

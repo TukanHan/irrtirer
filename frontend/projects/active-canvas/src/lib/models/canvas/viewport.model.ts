@@ -4,41 +4,31 @@ import { Vector } from '../math/vector.model';
 import { UnitConverter } from '../../utils/unit-converter';
 
 export class Viewport {
-    /**
-     * Position of canvas center in unit
-     */
-    public readonly position: IVector;
-
-    /**
-     * Zoom of viewport
-     */
-    public readonly zoom: number;
-
-    /**
-     * Size of canvas in px
-     */
-    public readonly pxSize: Size;
-
-    /**
-     * Size of canvas in unit
-     */
+    /** Size of canvas in unit */
     public readonly cmSize: Size;
 
-    /**
-     * Position of canvas point (0,0) in unit system
-     */
+    /** Position of canvas point (0,0) in unit system  */
     public readonly startWorldPos: IVector;
 
-    /**
-     * Position of canvas point (w,h) in unit system
-     */
+    /** Position of canvas point (w,h) in unit system  */
     public readonly endWorldPos: IVector;
 
-    constructor(position: IVector, zoom: number, pxSize: Size) {
-        this.position = position;
-        this.zoom = zoom;
-        this.pxSize = pxSize;
-
+    constructor(
+        /** Position of canvas center in unit  */
+        public readonly position: IVector,
+        /** Zoom of viewport */
+        public readonly zoom: number,
+        /** Size of canvas in px */
+        public readonly pxSize: Size,
+        /**
+         * This represents that the generated image is produced at a larger
+         * scale (higher resolution) to increase detail. Rendering code
+         * should use this value to scale stroke widths so lines are
+         * adjusted appropriately when the output is generated at a
+         * higher scale (not because of viewport zoom).
+         */
+        public readonly scaleFactor: number = 1
+    ) {
         this.cmSize = this.calculateCmSize();
         this.startWorldPos = this.calculateStartWorldPos();
         this.endWorldPos = this.calculateEndWorldPos();

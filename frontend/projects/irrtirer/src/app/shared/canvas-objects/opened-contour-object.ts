@@ -1,25 +1,24 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
 
+const BASE_LINE_THICKNESS: number = 10;
+const BASE_POINT_RADIUS: number = 10;
 
 export class OpenedContourObject extends BaseCanvasObject implements CanvasObject {
-    private readonly vertices: IVector[];
-    private readonly selectedIndex: number;
-    private readonly hexColor: string;
-    private readonly order: number;
-
-    constructor(vertices: IVector[], selectedIndex: number, hexColor: string, order: number = 100) {
+    constructor(
+        private readonly vertices: IVector[],
+        private readonly selectedIndex: number,
+        private readonly hexColor: string,
+        private readonly order: number = 100
+    ) {
         super();
-        this.vertices = vertices;
-        this.selectedIndex = selectedIndex;
-        this.hexColor = hexColor;
-        this.order = order;
     }
 
     public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
         if (this.vertices.length >= 2) {
-            ctx.lineWidth = 10;
+            const lineThickness = BASE_LINE_THICKNESS * viewport.scaleFactor;
+            ctx.lineWidth = lineThickness;
             ctx.strokeStyle = this.hexColor;
-            ctx.setLineDash([10]);
+            ctx.setLineDash([lineThickness]);
 
             ctx.beginPath();
             ctx.globalAlpha = 0.25;
@@ -53,7 +52,8 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
         const viewportPosition = viewport.getViewportPosition(position);
 
         ctx.beginPath();
-        ctx.arc(viewportPosition.x, viewportPosition.y, 10, 0, 2 * Math.PI);
+        const pointRadius = BASE_POINT_RADIUS * viewport.scaleFactor;
+        ctx.arc(viewportPosition.x, viewportPosition.y, pointRadius, 0, 2 * Math.PI);
 
         ctx.fillStyle = this.hexColor;
         ctx.fill();

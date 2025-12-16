@@ -1,13 +1,13 @@
 import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 
-export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {    
-    public lineThickness: number = 8;
-
-    constructor(private readonly vertices: IVector[], private readonly hexColor: string, private readonly order: number = 10) {
+export class ClosedContourObject extends BaseCanvasObject implements CanvasObject {
+    constructor(
+        private readonly vertices: IVector[],
+        private readonly hexColor: string,
+        private readonly order: number = 10,
+        private readonly baseLineThickness: number = 8,
+    ) {
         super();
-
-        this.vertices = vertices;
-        this.order = order;
     }
 
     public drawObject(ctx: CanvasRenderingContext2D, viewport: Viewport): void {
@@ -23,7 +23,7 @@ export class ClosedContourObject extends BaseCanvasObject implements CanvasObjec
             ctx.lineTo(point.x, point.y);
         }
 
-        ctx.lineWidth = this.lineThickness;
+        ctx.lineWidth = this.baseLineThickness * viewport.scaleFactor;
         ctx.strokeStyle = this.hexColor;
         ctx.closePath();
 
