@@ -15,6 +15,7 @@ export const tileMock: TileModel = {
 
 export const tilesSetMock: TilesSet = {
     name: '232',
+    source: 'generated',
     tiles: [
         tileMock,
         {

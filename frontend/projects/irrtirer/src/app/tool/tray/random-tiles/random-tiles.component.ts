@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -10,32 +9,27 @@ import { Store } from '@ngrx/store';
 import { selectMosaicImage, selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TileGenerator } from './tile-generator';
 import { ImageHelper } from '../../../core/helpers/image-helper';
-import { TilesSet } from '../../../core/models/mosaic-project.model';
+import { GeneratedTilesSet } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { FormHelper } from '../../../core/helpers/form-helper';
+import { form, max, min, required, Field, validate, customError, FieldState } from '@angular/forms/signals';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+
+interface RandomTileSetModel {
+    name: string;
+    minRadius?: number;
+    maxRadius?: number;
+    count?: number;
+}
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, TranslateModule, MatButtonModule, MatAutocompleteModule],
+    imports: [MatFormFieldModule, MatInputModule, TranslateModule, MatButtonModule, MatAutocompleteModule, Field],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RandomTilesComponent implements OnInit {
-    protected formGroup!: FormGroup;
-
-    protected readonly seriesNamesSignal = signal<string[]>([]);
-
-    private readonly errorLabels: Record<string, () => string> = {
-        min: () => this.translate.instant('tool.tiles.random.radiusTooSmall'),
-        max: () => this.translate.instant('tool.tiles.random.radiusTooLarge'),
-        required: () => this.translate.instant('tool.tiles.random.fieldRequired'),
-        minGreaterThenMax: () => this.translate.instant('tool.tiles.random.maxRadiusLargerThanMin'),
-    };
-
-    private readonly formBuilder = inject(FormBuilder);
-
+export class RandomTilesComponent {
     private readonly router = inject(Router);
 
     private readonly store = inject(Store);
@@ -44,56 +38,64 @@ export class RandomTilesComponent implements OnInit {
 
     private readonly translate = inject(TranslateService);
 
-    public ngOnInit(): void {
-        this.initForm();
+    private readonly tilesSetsSignal = this.store.selectSignal(selectTilesSets);
 
-        const tileSetsNames: string[] = this.store
-            .selectSignal(selectTilesSets)()
-            .map(tileSet => tileSet.name);
+    protected readonly seriesNamesSignal = computed<string[]>(() => this.tilesSetsSignal().map((tileSet) => tileSet.name));
 
-        this.seriesNamesSignal.set(tileSetsNames);
-    }
+    private readonly errorLabels: Record<string, () => string> = {
+        min: () => this.translate.instant('tool.tiles.random.radiusTooSmall'),
+        max: () => this.translate.instant('tool.tiles.random.radiusTooLarge'),
+        required: () => this.translate.instant('tool.tiles.random.fieldRequired'),
+        minGreaterThenMax: () => this.translate.instant('tool.tiles.random.maxRadiusLargerThanMin'),
+    };
 
-    private initForm(): void {
-        this.formGroup = this.formBuilder.group({
-            name: [null, [Validators.required]],
-            minRadius: [null, [Validators.required, Validators.min(0.01), Validators.max(1000)]],
-            maxRadius: [null, [Validators.required, Validators.min(0.01), Validators.max(1000)]],
-            count: [null, [Validators.required, Validators.min(1)]],
-        });
+    private readonly formData = signal<RandomTileSetModel>({
+        name: '',
+        minRadius: null,
+        maxRadius: null,
+        count: null,
+    });
 
-        this.formGroup.setValidators(this.comparisonValidator('minRadius', 'maxRadius'));
-    }
+    protected readonly form = form(this.formData, (schemaPath) => {
+        required(schemaPath.name);
 
-    private comparisonValidator(minKey: string, maxKey: string): ValidatorFn {
-        return (group: FormGroup): ValidationErrors | null => {
-            const min = group.controls[minKey];
-            const max = group.controls[maxKey];
-            if (min.value > max.value) {
-                max.setErrors({ minGreaterThenMax: true });
-            } else {
-                max.setErrors(null);
+        required(schemaPath.minRadius);
+        min(schemaPath.minRadius, 0.01);
+        max(schemaPath.minRadius, 1000);
+
+        required(schemaPath.maxRadius);
+        min(schemaPath.maxRadius, 0.01);
+        max(schemaPath.maxRadius, 1000);
+        validate(schemaPath.maxRadius, ({ value, valueOf }) => {
+            if (value() < valueOf(schemaPath.minRadius)) {
+                return customError({ kind: 'minGreaterThenMax' });
             }
 
             return null;
-        };
-    }
+        });
 
-    protected getErrorLabel(control: AbstractControl): string {
-        return FormHelper.getErrorLabel(control, this.errorLabels);
+        required(schemaPath.count, { message: this.translate.instant('tool.tiles.random.fieldRequired') });
+    });
+
+    protected getFieldErrorLabel(field: FieldState<unknown>): string {
+        return FormHelper.getFieldErrorLabel(field, this.errorLabels);
     }
 
     public async getTileSet(): Promise<void> {
-        if (this.formGroup.valid) {
-            const formData: { minRadius: number; maxRadius: number; count: number; name: string } = this.formGroup.getRawValue();
-
+        if (this.form().valid()) {
+            const formData = this.formData();
             const tileGenerator: TileGenerator = new TileGenerator(await this.getImagePixelArray());
-            const tilesSet: TilesSet = {
+            const tilesSet: GeneratedTilesSet = {
                 name: formData.name,
+                source: 'generated',
                 tiles: tileGenerator.generateTileSet({ min: formData.minRadius, max: formData.maxRadius }, formData.count),
+                minRadius: formData.minRadius,
+                maxRadius: formData.maxRadius
             };
 
-            this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), { duration: 3000 });
+            this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), {
+                duration: 3000,
+            });
             this.store.dispatch(MosaicProjectActions.tilesSetAdded({ tilesSet }));
             this.navigateToMenu();
         }

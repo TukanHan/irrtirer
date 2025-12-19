@@ -11,9 +11,17 @@ export interface MosaicConfig {
     mosaicWidth: number;
 }
 
+type TileSetSource = 'generated';
+
 export interface TilesSet {
     name: string;
+    source: TileSetSource;
     tiles: TileModel[];
+}
+
+export interface GeneratedTilesSet extends TilesSet {
+    minRadius: number;
+    maxRadius: number;
 }
 
 export interface TileModel {

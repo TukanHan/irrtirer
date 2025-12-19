@@ -29,6 +29,7 @@ export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
         const existingTileSet = state!.tilesSets.find((x) => x.name === tilesSet.name);
         const newTileSet: TilesSet = {
             name: tilesSet.name,
+            source: tilesSet.source,
             tiles: [...tilesSet.tiles, ...(existingTileSet?.tiles ?? [])],
         };
 

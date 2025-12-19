@@ -12,7 +12,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
-import { FormHelper } from '../../../core/helpers/form-helper';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
