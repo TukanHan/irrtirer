@@ -14,6 +14,7 @@ export interface MosaicConfig {
 type TileSetSource = 'generated';
 
 export interface TilesSet {
+    id: string;
     name: string;
     source: TileSetSource;
     tiles: TileModel[];

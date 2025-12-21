@@ -13,6 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { TileListElemComponent } from './tile-list-elem/tile-list-elem.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
@@ -34,6 +35,8 @@ export class TilesSetListElemComponent {
     
     private readonly destroyRef = inject(DestroyRef);
 
+    private readonly router = inject(Router);
+
     protected toggleTilesList(): void {
         this.isOpen.update((value) => !value);
     }
@@ -53,5 +56,9 @@ export class TilesSetListElemComponent {
         };
 
         return this.dialog.open(DialogComponent, { data: dialogData }).afterClosed();
+    }
+
+    protected navigateToRandomSetAgain(): void {
+        this.router.navigate([`/tool/tray/random/${this.tilesSet().id}`]);
     }
 }

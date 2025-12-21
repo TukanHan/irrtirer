@@ -1,5 +1,6 @@
+@let tilesSetValue = tilesSet();
 <div class="list-elem">
-    <span>{{tilesSet().name}}</span>
+    <span>{{ tilesSetValue.name }}</span>
     <div class="elem-actions">
         <button class="elem-action" mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon matListIcon>
@@ -13,15 +14,25 @@
         </button>
 
         <mat-menu #menu="matMenu" classList="paddingless">
+            @if (tilesSetValue.source === 'generated') {
+                <button mat-menu-item (click)="navigateToRandomSetAgain()">
+                    <mat-icon class="material-symbols-outlined" matListIcon>
+                        shuffle
+                    </mat-icon>
+                    {{ 'tool.tiles.menu.generateAgain' | translate }}
+                </button>
+            }
             <button mat-menu-item (click)="removeTilesSet()">
-                <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+                <mat-icon class="material-symbols-outlined" matListIcon>
+                    delete
+                </mat-icon>
                 {{ 'tool.tiles.menu.removeTilesSet' | translate }}
             </button>
         </mat-menu>
     </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    @for(tile of tilesSet().tiles.slice(0,100); track $index) {
-        <app-tile-list-elem [tile]="tile"/>
+    @for(tile of tilesSetValue.tiles.slice(0,100); track $index) {
+    <app-tile-list-elem [tile]="tile"/>
     }
 </app-expandable-panel>

@@ -10,7 +10,8 @@
     "no": "No",
     "yes": "Yes",
     "ok": "Ok",
-    "cm": "cm"
+    "cm": "cm",
+    "warning": "Warning"
   },
   "toolbar": {
     "languages": {
@@ -63,7 +64,8 @@
         "noTiles": "No tiles",
         "loadFromFile": "Load from file",
         "createTile": "Tile creator",
-        "randomTiles": "Generate random"
+        "randomTiles": "Generate random",
+        "generateAgain": "Edit and generate"
       },
       "random": {
         "randomTiles": "Randomize",
@@ -75,7 +77,10 @@
         "radiusTooLarge": "Radius too large",
         "fieldRequired": "Field required",
         "maxRadiusLargerThanMin": "Minimum radius is larger than maximum radius",
-        "tilesSeriesGenerated": "Tile series generated"
+        "tilesSeriesGenerated": "Tile series generated",
+        "cannotNowOverrideOtherTilesSet": "Cannot now override another tiles set",
+        "cannotOverrideTilesSet": "Cannot override this tiles set",
+        "overrideTileSetWarning": "Regenerating the tile set will result in the deletion of the current set and the creation of a new one."
       },
       "details": {
         "tileId": "Tile Id",

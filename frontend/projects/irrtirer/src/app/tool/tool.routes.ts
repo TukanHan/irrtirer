@@ -31,6 +31,7 @@ export const toolRoutes: Routes = [
         children: [
             { path: '', component: TrayMenuComponent },
             { path: 'random', component: RandomTilesComponent },
+            { path: 'random/:id', component: RandomTilesComponent },
             { path: 'tile/:id', component: TileDetailComponent },
         ],
     },
