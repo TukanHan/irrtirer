@@ -10,7 +10,8 @@
         "no": "Nie",
         "yes": "Tak",
         "ok": "Ok",
-        "cm": "cm"
+        "cm": "cm",
+        "warning": "Uwaga"
     },
     "toolbar": {
         "languages": {
@@ -63,7 +64,8 @@
                 "noTiles": "Brak kafelków",
                 "loadFromFile": "Wczytaj z pliku",
                 "createTile": "Kreator kafelków",
-                "randomTiles": "Generuj losowe"
+                "randomTiles": "Generuj losowe",
+                "generateAgain": "Edytuj i generuj"
             },
             "random": {
                 "randomTiles": "Losuj",
@@ -75,7 +77,10 @@
                 "radiusTooLarge": "Promień zbyt duży",
                 "fieldRequired": "Pole wymagane",
                 "maxRadiusLargerThanMin": "Minimalny promień jest większy niż maksymalny",
-                "tilesSeriesGenerated": "Seria kafelków wygenerowana"
+                "tilesSeriesGenerated": "Seria kafelków wygenerowana",
+                "cannotNowOverrideOtherTilesSet": "Nie można teraz nadpisać innego tego zestawu kafelków",
+                "cannotOverrideTilesSet": "Nie można nadpisać tego zestawu kafelków",
+                "overrideTileSetWarning": "Przegenerowanie edytowanego zbioru kafelków spowoduje utworzenie nowego zbioru i usunięcie starego."
             },
             "details": {
                 "tileId": "Id kafelka",
