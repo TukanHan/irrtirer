@@ -1,10 +1,10 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
+import { Signal } from '@angular/core';
+import { customError, CustomValidationError, WithoutField } from '@angular/forms/signals';
 
-export function nonUniqueValueValidator<T>(values: T[]): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-        const value = control.value;
-        if (values.includes(value)) {
-            return { nonUnique: true };
+export function nonUniqueValueValidatorFactory<T>(array: Signal<T[]>) {
+    return ({ value }: { value: Signal<T> }): WithoutField<CustomValidationError> => {
+        if (array().includes(value())) {
+            return customError({ kind: 'nonUnique' });
         }
         
         return null;

@@ -3,22 +3,22 @@
     <button mat-flat-button color="accent" (click)="save()">{{ 'common.confirm' | translate }}</button>
 </div>
 
-<form [formGroup]="sectorForm" class="info">
+<div class="info">
     <mat-form-field appearance="outline" class="density-3" subscriptSizing="dynamic">
         <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
-        <input matInput formControlName="name" >
+        <input matInput [field]="form.name">
+        <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
     </mat-form-field>
 
-    <app-color-picker 
-        formControlName="color"
-        (ngModelChange)="onColorChanged()"
-        [label]="this.translate.instant('tool.sectors.sectorContour.sectorColor')"/>
+    <app-color-picker
+        [label]="translate.instant('tool.sectors.sectorContour.sectorColor')"
+        [field]="form.color" />
 
-    @if(sectorForm.get('vertices').value.length) {
+    @if(form.vertices().value().length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
-            @for (vertex of sectorForm.get('vertices').value; track vertex) {
+            @for (vertex of form.vertices().value(); track vertex) {
                 <div class="vertex-box" [class.selected]="vertex === selectedVertex()" cdkDrag (mousedown)="onBoxSelected(vertex)">
-                    {{getVertexLabel(vertex)}}
+                    {{ getVertexLabel(vertex) }}
                     <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
                         <mat-icon matListIcon>close</mat-icon>
                     </button>
@@ -28,4 +28,4 @@
     } @else { 
         <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
     }
-</form>
+</div>

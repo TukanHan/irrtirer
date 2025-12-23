@@ -1,22 +1,19 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 import { Vector } from '../../../core/models/math/vector.model';
 import { Line } from '../../../core/models/math/line.model';
 import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
+import { customError, CustomValidationError, WithoutField } from '@angular/forms/signals';
+import { Signal } from '@angular/core';
 
-export function polygonValidator(): ValidatorFn {
-    return (control: AbstractControl<Vector[]>): ValidationErrors | null => {
-        const vertices: Vector[] = control.value;
-        
-        if (vertices.length < 3) {
-            return { tooFewVertices: true };
-        }
+export function polygonValidator({ value }: { value: Signal<Vector[]> }): WithoutField<CustomValidationError> {        
+    if (value().length < 3) {
+        return customError({ kind: 'tooFewVertices' });
+    }
 
-        if (arePolygonEdgesIntersecting(vertices)) {
-            return { edgesIntersect: true };
-        }
+    if (arePolygonEdgesIntersecting(value())) {
+        return customError({ kind: 'edgesIntersect' });
+    }
 
-        return null;
-    };
+    return null;
 }
 
 function arePolygonEdgesIntersecting(vertices: Vector[]): boolean {

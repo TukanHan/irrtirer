@@ -1,5 +1,5 @@
 import { Vector } from '../app/core/models/math/vector.model';
-import { TileModel, TilesSet } from '../app/core/models/mosaic-project.model';
+import { GeneratedTilesSet, TileModel } from '../app/core/models/mosaic-project.model';
 
 export const tileMock: TileModel = {
     id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',
@@ -13,9 +13,12 @@ export const tileMock: TileModel = {
     ],
 };
 
-export const tilesSetMock: TilesSet = {
+export const tilesSetMock: GeneratedTilesSet = {
+    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',
     name: '232',
     source: 'generated',
+    minRadius: 1,
+    maxRadius: 2,
     tiles: [
         tileMock,
         {
