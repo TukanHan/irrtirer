@@ -1,12 +1,12 @@
 <div class="color-label">
     <span class="color-label__header">{{ label() }}</span>
-    <span class="color-label__code">{{ hexColor() }}</span>
+    <span class="color-label__code">{{ value() }}</span>
 </div>
 
 <div role="presentation" 
     class="color-preview"
-    [class.disabled]="isDisabled()"
-    [style.background-color]="hexColor()"
+    [class.disabled]="disabled()"
+    [style.background-color]="value()"
     (click)="toggleColorPanel()"
     cdkOverlayOrigin 
     #trigger="cdkOverlayOrigin">
@@ -18,5 +18,5 @@
     [cdkConnectedOverlayHasBackdrop]="isOpen()"
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
     (backdropClick)="toggleColorPanel()">
-    <app-color-selection-panel [color]="hexColor()" (colorChange)="onColorChanged($event)"/>
+    <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)"/>
 </ng-template>

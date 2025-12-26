@@ -15,7 +15,7 @@
         </div>
 
         <app-color-picker 
-            disabled="true"
+            [disabled]="true"
             [ngModel]="tile.color"
             [label]="translate.instant('tool.tiles.details.tileColor')"/>
     } @else { 
