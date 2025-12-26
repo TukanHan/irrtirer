@@ -11,7 +11,8 @@
         "yes": "Tak",
         "ok": "Ok",
         "cm": "cm",
-        "warning": "Uwaga"
+        "warning": "Uwaga",
+        "fieldRequired": "Pole wymagane"
     },
     "toolbar": {
         "languages": {
@@ -75,7 +76,6 @@
                 "count": "Ilość",
                 "radiusTooSmall": "Promień zbyt mały",
                 "radiusTooLarge": "Promień zbyt duży",
-                "fieldRequired": "Pole wymagane",
                 "maxRadiusLargerThanMin": "Minimalny promień jest większy niż maksymalny",
                 "tilesSeriesGenerated": "Seria kafelków wygenerowana",
                 "cannotNowOverrideOtherTilesSet": "Nie można teraz nadpisać innego tego zestawu kafelków",
@@ -134,7 +134,10 @@
                 "overlappingNotPopulatedSectionsHint": "Ocena za uzurpowanie przestrzeni jeszcze niewygenerowanych sektorów. Służy do ograniczenia złego gospodarowania przestrzenią. [Sugerowana ujemna]",
                 "tileColorMismatch": "Kara za niepasujący kolor",
                 "tileColorMismatchHint": "Ocena za rozbieżność między kolorem kafelka, a obrazkiem. Służy do utrzymania prawidłowego koloru mozaiki. [Sugerowana ujemna]",
-                "errorOnSectorMeshRequesting": "Wystąpił problem z pobraniem siatki triangulacji"
+                "errorOnSectorMeshRequesting": "Wystąpił problem z pobraniem siatki triangulacji",
+                "valueToSmall": "Wartość musi wynosić co najmniej 0.01",
+                "sectionMinAngleOutOfRange": "Wartość musi być się w przedziale od 10 do 90",
+                "valueCannotBeNegative": "Wartość nie może być ujemna"
             },
             "sectorContour": {
                 "sectorName": "Nazwa sektora",
