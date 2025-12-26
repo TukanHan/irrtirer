@@ -63,7 +63,7 @@ export class RandomTilesComponent implements OnInit {
     private readonly errorLabels: Record<string, () => string> = {
         min: () => this.translate.instant('tool.tiles.random.radiusTooSmall'),
         max: () => this.translate.instant('tool.tiles.random.radiusTooLarge'),
-        required: () => this.translate.instant('tool.tiles.random.fieldRequired'),
+        required: () => this.translate.instant('common.fieldRequired'),
         minGreaterThenMax: () => this.translate.instant('tool.tiles.random.maxRadiusLargerThanMin'),
         cannotNowOverrideOtherTilesSet: () => this.translate.instant('tool.tiles.random.cannotNowOverrideOtherTilesSet'),
         cannotOverrideTilesSet: () => this.translate.instant('tool.tiles.random.cannotOverrideTilesSet'),
@@ -114,7 +114,7 @@ export class RandomTilesComponent implements OnInit {
             return null;
         });
 
-        required(schemaPath.count, { message: this.translate.instant('tool.tiles.random.fieldRequired') });
+        required(schemaPath.count);
     });
 
     public ngOnInit(): void {

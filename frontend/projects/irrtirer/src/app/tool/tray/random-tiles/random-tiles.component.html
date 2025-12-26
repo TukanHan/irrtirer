@@ -8,7 +8,7 @@
 </div>
 
 <form class="form">
-    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+    <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.seriesName' | translate }}</mat-label>
         <input matInput type="text" [field]="form.name" [matAutocomplete]="auto">
         <mat-autocomplete #auto="matAutocomplete">
@@ -21,21 +21,21 @@
         <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+    <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.minRadius' | translate }}</mat-label>
         <input matInput type="number" [field]="form.minRadius">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.minRadius()) }}</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+    <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.maxRadius' | translate }}</mat-label>
         <input matInput type="number" [field]="form.maxRadius">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.maxRadius()) }}</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" subscriptSizing="dynamic" class="density-3">
+    <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.count' | translate }}</mat-label>
         <input matInput type="number" [field]="form.count">
         <mat-error>{{ getFieldErrorLabel(form.count()) }}</mat-error>

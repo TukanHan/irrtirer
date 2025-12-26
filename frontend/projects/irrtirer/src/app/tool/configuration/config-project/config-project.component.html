@@ -21,7 +21,7 @@
         {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage': 'tool.config.project.chooseImage') | translate }}
     </button>
 
-    <mat-form-field appearance="outline" class="density-3">
+    <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
         <input matInput type="number" [field]="form.mosaicWidth">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>

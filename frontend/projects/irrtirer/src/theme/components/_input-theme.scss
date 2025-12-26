@@ -6,12 +6,6 @@
         @include mat.form-field-density(-3);
     }
 
-    .no-hint {
-        .mat-mdc-form-field-subscript-wrapper {
-            display: none;
-        }
-    }
-
     .mat-form-field-disabled {
         .mat-mdc-form-field-text-suffix {
             color: var(--mat-form-field-outlined-disabled-input-text-color);

@@ -11,7 +11,8 @@
     "yes": "Yes",
     "ok": "Ok",
     "cm": "cm",
-    "warning": "Warning"
+    "warning": "Warning",
+    "fieldRequired": "Field required"
   },
   "toolbar": {
     "languages": {
@@ -75,7 +76,6 @@
         "count": "Count",
         "radiusTooSmall": "Radius too small",
         "radiusTooLarge": "Radius too large",
-        "fieldRequired": "Field required",
         "maxRadiusLargerThanMin": "Minimum radius is larger than maximum radius",
         "tilesSeriesGenerated": "Tile series generated",
         "cannotNowOverrideOtherTilesSet": "Cannot now override another tiles set",
@@ -134,7 +134,10 @@
         "overlappingNotPopulatedSectionsHint": "Assessment for usurping the space of still unferamed sectors. ",
         "tileColorMismatch": "Penalty for color mismatch",
         "tileColorMismatchHint": "Assessment for the discrepancy between the color of the tile and the picture. ",
-        "errorOnSectorMeshRequesting": "There was a problem with downloading the triangulation network"
+        "errorOnSectorMeshRequesting": "There was a problem with downloading the triangulation network",
+        "valueToSmall": "Value must be at least 0.01",
+        "sectionMinAngleOutOfRange": "Value must be in the range from 10 to 90",
+        "valueCannotBeNegative": "Value cannot be negative"
       },
       "sectorContour": {
         "sectorName": "Sector name",
