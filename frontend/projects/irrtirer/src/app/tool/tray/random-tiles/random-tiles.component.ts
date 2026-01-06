@@ -80,14 +80,14 @@ export class RandomTilesComponent implements OnInit {
 
     protected readonly form = form(this.formData, (schemaPath) => {
         required(schemaPath.name);
-        validate(schemaPath.name, ({value}) => {
+        validate(schemaPath.name, ({ value }) => {
             if (this.immutableSeriesNames().includes(value())) {
                 return customError({ kind: 'cannotOverrideTilesSet' });
             }
 
             return null;
         });
-        validate(schemaPath.name, ({value}) => {
+        validate(schemaPath.name, ({ value }) => {
             if (this.editedTilesSet) {
                 const nameAlreadyUsed = this.existingSeriesNames().some((name) => name === value() && name !== this.editedTilesSet.name);
 
@@ -121,7 +121,7 @@ export class RandomTilesComponent implements OnInit {
         const tileSetId = this.route.snapshot.paramMap.get('id');
         if (tileSetId) {
             this.initFormForEditedTilesSet(tileSetId);
-        }        
+        }
     }
 
     private initFormForEditedTilesSet(tileSetId: string): void {
@@ -172,22 +172,31 @@ export class RandomTilesComponent implements OnInit {
     }
 
     private async saveTileSet(originalId: string | null): Promise<void> {
-        const formData = this.formData();
-        const tileGenerator: TileGenerator = new TileGenerator(await this.getImagePixelArray());
-        const tilesSet: GeneratedTilesSet = {
-            id: originalId ?? crypto.randomUUID(),
-            name: formData.name,
-            source: 'generated',
-            tiles: tileGenerator.generateTileSet({ min: formData.minRadius, max: formData.maxRadius }, formData.count),
-            minRadius: formData.minRadius,
-            maxRadius: formData.maxRadius,
-        };
-
         this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), {
             duration: 3000,
         });
-        this.store.dispatch(MosaicProjectActions.tilesSetCommitted({ tilesSet }));
+        this.store.dispatch(MosaicProjectActions.tilesSetCommitted({
+            tilesSet: await this.buildTileSet(originalId) 
+        }));
+        
         this.navigateToMenu();
+    }
+
+    private async buildTileSet(originalId: string | null): Promise<GeneratedTilesSet> {
+        const { name, minRadius, maxRadius, count } = this.formData();
+            
+        const min = Number(minRadius);
+        const max = Number(maxRadius);
+        const tileGenerator = new TileGenerator(await this.getImagePixelArray());
+
+        return {
+            id: originalId ?? crypto.randomUUID(),
+            name,
+            source: 'generated',
+            tiles: tileGenerator.generateTileSet({ min, max }, Number(count)),
+            minRadius: min,
+            maxRadius: max,
+        };
     }
 
     private async getImagePixelArray(): Promise<Uint8ClampedArray> {

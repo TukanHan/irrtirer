@@ -42,7 +42,7 @@ export class SectorsContoursListComponent {
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
             title: this.translate.instant('tool.sectors.contourList.removeSector'),
-            message: this.translate.instant('tool.sectors.contourList.removeSectorMessage'),
+            message: this.translate.instant('tool.sectors.contourList.removeSectorMessage', { sectorName: sector.name }),
         };
 
         this.dialog
