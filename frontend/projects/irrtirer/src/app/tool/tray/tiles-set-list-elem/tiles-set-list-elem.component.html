@@ -32,7 +32,9 @@
     </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    @for(tile of tilesSetValue.tiles.slice(0,100); track $index) {
-    <app-tile-list-elem [tile]="tile"/>
-    }
+    <app-scrollable-list [items]="tilesSetValue.tiles" >
+        <ng-template #element let-tile>
+            <app-tile-list-elem [tile]="tile"/>
+        </ng-template>
+    </app-scrollable-list>
 </app-expandable-panel>

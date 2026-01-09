@@ -1,0 +1,15 @@
+@if(hasPreviousPage()) {
+    @let previousPages = previousPageNumbers();
+    <button mat-flat-button class="page-button previous" (click)="goToPreviousPage()">
+        {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
+    </button>
+}
+@for(item of itemsToShow(); track $index) {
+    <ng-container [ngTemplateOutlet]="template()" [ngTemplateOutletContext]="{ $implicit: item }"/>
+}
+@if(hasNextPage()) {
+    @let nextPages = nextPageNumbers();
+    <button mat-flat-button class="page-button next" (click)="goToNextPage()">
+        {{ 'common.nextElements' | translate }} {{ nextPages.from }}-{{ nextPages.to }}
+    </button>
+}

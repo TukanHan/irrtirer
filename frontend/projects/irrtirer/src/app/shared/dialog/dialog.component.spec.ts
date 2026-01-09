@@ -1,26 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { DialogComponent } from './dialog.component';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('DialogComponent', () => {
-  let component: DialogComponent;
-  let fixture: ComponentFixture<DialogComponent>;
+    let component: DialogComponent;
+    let fixture: ComponentFixture<DialogComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [DialogComponent, TranslateModule.forRoot({})],
-      providers: [ { provide: MAT_DIALOG_DATA, useValue: {} }]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(DialogComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [DialogComponent, TranslateModule.forRoot({})],
+            providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
+        }).compileComponents();
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+        fixture = TestBed.createComponent(DialogComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

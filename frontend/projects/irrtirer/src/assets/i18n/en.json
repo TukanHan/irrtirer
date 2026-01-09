@@ -12,7 +12,9 @@
     "ok": "Ok",
     "cm": "cm",
     "warning": "Warning",
-    "fieldRequired": "Field required"
+    "fieldRequired": "Field required",
+    "nextElements": "Next",
+    "previousElements": "Previous"
   },
   "toolbar": {
     "languages": {

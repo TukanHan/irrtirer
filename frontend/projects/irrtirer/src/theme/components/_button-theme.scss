@@ -4,7 +4,8 @@
     button, a {
         &.mdc-button {
             letter-spacing: normal;
-            border-radius: 20px;
+            --mat-button-filled-container-shape: 20px;
+            --mat-button-text-container-shape: 20px;
             padding: 0 12px !important;
 
             .mat-mdc-button-touch-target {

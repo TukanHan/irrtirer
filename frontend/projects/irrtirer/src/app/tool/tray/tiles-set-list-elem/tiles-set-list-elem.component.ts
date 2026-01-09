@@ -14,10 +14,11 @@ import { TileListElemComponent } from './tile-list-elem/tile-list-elem.component
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
+import { ScrollableListComponent } from '../../../shared/scrollable-list/scrollable-list.component';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule],
+    imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule, ScrollableListComponent],
     templateUrl: './tiles-set-list-elem.component.html',
     styleUrl: './tiles-set-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
