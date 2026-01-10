@@ -6,6 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { ScrollableListComponent } from '../../../../shared/scrollable-list/scrollable-list.component';
 
 @Component({
     selector: 'app-sector-list-elem',
@@ -14,7 +15,8 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
         MatButtonModule,
         AsyncPipe,
         ExpandablePanelComponent,
-        TranslateModule
+        TranslateModule,
+        ScrollableListComponent
     ],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',

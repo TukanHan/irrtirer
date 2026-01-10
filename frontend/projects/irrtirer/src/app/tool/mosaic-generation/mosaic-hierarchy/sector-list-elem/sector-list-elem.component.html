@@ -14,13 +14,18 @@
     </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    @for(tile of items$() | async; track $index;) {
-        <div class="tile">
-            <span class="label">
-                {{tile.tileTransform.tileId}}
-            </span>
-        </div>
-    } @empty {
+    @let items = items$() | async;
+    @if(items.length) {
+        <app-scrollable-list [items]="items">
+            <ng-template #element let-tile>
+                <div class="tile">
+                    <span class="label">
+                        {{tile.tileTransform.tileId}}
+                    </span>
+                </div>
+            </ng-template>
+        </app-scrollable-list>
+    } @else {
         <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }
 </app-expandable-panel>
