@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RibbonComponent } from './ribbon.component';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('RibbonComponent', () => {
     let component: RibbonComponent;
@@ -8,7 +9,7 @@ describe('RibbonComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RibbonComponent],
+            imports: [RibbonComponent, TranslateModule.forRoot({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(RibbonComponent);

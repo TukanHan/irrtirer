@@ -167,6 +167,12 @@
             "title": "Zapis zrzutu",
             "transparentBackgroundLabel": "Użyj przezroczystego tła",
             "scaleFactorLabel": "Jakość zrzutu (skalowanie)"
+        },
+        "ribbon": {
+            "takeSnapshot": "Zapisz jako obraz",
+            "focusOnImage": "Przenieś do obrazu",
+            "toggleMeshVisibility": "Przełącz widoczność sektorów",
+            "toggleImageVisibility": "Przełącz widoczność obrazu"
         }
     }
 }

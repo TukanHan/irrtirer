@@ -45,6 +45,7 @@ export class TrayComponent implements ToolView, AfterViewInit {
                 {
                     iconName: 'crop',
                     visibility: signal('on'),
+                    tooltipKey: "tool.ribbon.takeSnapshot",
                     onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
                 },
             ],

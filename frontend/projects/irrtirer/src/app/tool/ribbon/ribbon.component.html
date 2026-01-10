@@ -3,7 +3,9 @@
         [hidden]="action.visibility() === 'hidden'"
         [disabled]="action.visibility() === 'disabled'"
         [class.active]="action.visibility() === 'on'"
-        (click)="onClick(action)">
+        (click)="onClick(action)"
+        [matTooltip]="translate.instant(action.tooltipKey)"
+        matTooltipPosition="below">
         <mat-icon class="material-symbols-outlined">{{action.iconName}}</mat-icon>
     </button>
 }

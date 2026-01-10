@@ -49,11 +49,13 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
+            tooltipKey: "tool.ribbon.takeSnapshot",
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
+            tooltipKey: "tool.ribbon.focusOnImage",
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();

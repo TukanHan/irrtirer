@@ -56,11 +56,13 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
+            tooltipKey: "tool.ribbon.takeSnapshot",
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'generating_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
+            tooltipKey: "tool.ribbon.focusOnImage",
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();
@@ -68,11 +70,13 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         },
         {
             iconName: 'graph_3',
+            tooltipKey: "tool.ribbon.toggleMeshVisibility",
             onClick: () => this.toggleMeshVisibility(),
             visibility: computed(() =>  this.isMeshVisible() ? 'on' : 'off'),
         },
         {
             iconName: 'image',
+            tooltipKey: "tool.ribbon.toggleImageVisibility",
             onClick: () => this.toggleImageVisibility(),
             visibility: computed(() => this.isImageVisible() ? 'on' : 'off'), 
         }

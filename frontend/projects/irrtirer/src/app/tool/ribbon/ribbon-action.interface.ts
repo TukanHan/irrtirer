@@ -6,4 +6,5 @@ export interface RibbonAction {
     visibility: Signal<ActionVisibility>;
     onClick: () => void;
     iconName: string;
+    tooltipKey: string;
 }
