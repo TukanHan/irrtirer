@@ -167,6 +167,12 @@
       "title": "Snapshot save",
       "transparentBackgroundLabel": "Use transparent background",
       "scaleFactorLabel": "Snapshot quality (scaling)"
+    },
+    "ribbon": {
+      "takeSnapshot": "Save as image",
+      "focusOnImage": "Focus on image",
+      "toggleMeshVisibility": "Toggle sectors visibility",
+      "toggleImageVisibility": "Toggle image visibility"
     }
   }
 }
