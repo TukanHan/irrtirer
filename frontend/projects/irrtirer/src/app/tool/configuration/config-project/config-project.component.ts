@@ -3,7 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { MosaicConfig, MosaicProjectModel } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -39,7 +39,7 @@ export class ConfigProjectComponent {
 
     private readonly translate = inject(TranslateService);
 
-    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig | null>(selectMosaicConfig);
+    protected readonly mosaicConfig = this.store.selectSignal(selectMosaicConfig);
 
     protected readonly isReadOnlyMode = computed<boolean>(() => !!this.mosaicConfig());
 
@@ -66,7 +66,7 @@ export class ConfigProjectComponent {
     protected readonly formValueChangedEffect = effect(() => {
         if (this.form().valid()) {
             const reader = new FileReader();
-            reader.readAsDataURL(this.form.mosaicImage().value());
+            reader.readAsDataURL(this.form.mosaicImage().value()!);
             reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
                 this.configService.emitImageChange(
                     {
@@ -89,8 +89,8 @@ export class ConfigProjectComponent {
         if (this.form().valid()) {
             this.save();
         } else {
-            const errorMessage: string = this.getErrorMessage();
-            this.snackBar.open(errorMessage, this.translate.instant('common.ok'), { duration: 2000 });
+            const errorMessage = this.getErrorMessage();
+            this.snackBar.open(errorMessage!, this.translate.instant('common.ok'), { duration: 2000 });
         }
     }
 
@@ -136,7 +136,7 @@ export class ConfigProjectComponent {
 
     protected onImageSelected(event: Event): void {
         const target = event.target as HTMLInputElement;
-        const file = target.files?.item(0);
+        const file = target.files?.item(0) ?? null;
         this.formData.update((state) => ({ ...state, mosaicImage: file }));
     }
 }

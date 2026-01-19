@@ -47,7 +47,13 @@
         "newProject": "New project",
         "exampleProjects": "Choose example project",
         "rejectProject": "Reject project",
-        "rejectProjectWarning": "Are you sure you want to reject the project? If you haven't saved the file, it will not be recoverable."
+        "rejectProjectWarning": "Are you sure you want to reject the project? If you haven't saved the file, it will not be recoverable.",
+        "enterValidName": "Enter a valid name",
+        "chooseFileName": "Choose file name",
+        "projectSavedMessage": "Project saved as {{projectName}}.irr",
+        "loadProjectDialogTitle": "Load project",
+        "loadProjectDialogMessage": "Your current work will be replaced by the loaded project. Are you sure?",
+        "loadProjectError": "There was an issue loading the project data."
       },
       "project": {
         "changeImage": "Change image",

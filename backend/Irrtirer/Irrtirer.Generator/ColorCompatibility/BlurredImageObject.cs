@@ -30,6 +30,12 @@ namespace Irrtirer.Generator.ColorCompatibility
         protected Color GetColorFromWorldPoint(Vector2 worldPos)
         {
             Point pixelPos = GetPixelPositionFromWorldPosition(worldPos);
+            
+            if (pixelPos.Y * TextureSize.Width + pixelPos.X >= BlurredImage.Length)
+            {
+                throw new System.Exception();
+            }
+
             return BlurredImage[pixelPos.Y * TextureSize.Width + pixelPos.X];
         }
 

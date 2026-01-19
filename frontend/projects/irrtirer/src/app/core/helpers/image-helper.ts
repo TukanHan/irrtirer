@@ -24,19 +24,16 @@ export class ImageHelper {
         return context.getImageData(0, 0, canvas.width, canvas.height).data;
     }
 
-    public static downloadBlobAsImage(blob: Blob, fileName: string): void {
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = fileName;
-        a.style.display = 'none';
-
-        document.body.appendChild(a);
-
-        a.click();
+    public static base64ToUint8Array(base64: string): Uint8Array<ArrayBuffer> {
+        const base64Data = base64.split(',')[1] || base64;
         
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
+        const binaryString = atob(base64Data);
+        const len = binaryString.length;
+        const bytes = new Uint8Array(len);
+        
+        for (let i = 0; i < len; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+        }
+        return bytes;
     }
 }

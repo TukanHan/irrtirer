@@ -3,6 +3,8 @@ import { ConfigMenuComponent } from './config-menu.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
 import { ConfigurationService } from '../configuration.service';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { ProjectImportService } from '../../shared/project-import.service';
 
 describe('ConfigMenuComponent', () => {
     let component: ConfigMenuComponent;
@@ -11,7 +13,7 @@ describe('ConfigMenuComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ConfigMenuComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore(), ConfigurationService],
+            providers: [provideMockStore(), ConfigurationService, ProjectImportService],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ConfigMenuComponent);

@@ -12,6 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SnapshotOptionsDialogComponent } from './snapshot-options-dialog/snapshot-options-dialog.component';
 import { SnapshotOptions } from './snapshot-options-dialog/snapshot-options.interface';
 import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { saveAs } from '../core/helpers/download-helper';
 
 @Injectable()
 export class ToolService {
@@ -60,7 +61,7 @@ export class ToolService {
                         scaleFactor: result.scaleFactor,
                         backgroundColor: result.transparentBackground ? undefined : this.backgroundColor(),
                     })
-                    .then((blob) => ImageHelper.downloadBlobAsImage(blob, fileName));
+                    .then((blob) => saveAs(blob, fileName));
             });
     }
 }

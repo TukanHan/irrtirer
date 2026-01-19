@@ -16,6 +16,7 @@ import { ToolView } from './tool-view.interface';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
+import { ProjectImportService } from './shared/project-import.service';
 
 @Component({
     selector: 'app-tool',
@@ -31,7 +32,7 @@ import { AsyncPipe } from '@angular/common';
         RibbonComponent,
         ActiveCanvasComponent
     ],
-    providers: [ToolService],
+    providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
     styleUrl: './tool.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
