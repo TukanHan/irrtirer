@@ -47,7 +47,13 @@
                 "newProject": "Nowy projekt",
                 "exampleProjects": "Wybierz przykładowy projekt",
                 "rejectProject": "Odrzuć projekt",
-                "rejectProjectWarning": "Czy na pewno chcesz porzucić projekt? Jeśli nie masz zapisanego pliku, nie będzie można do niego wrócić."
+                "rejectProjectWarning": "Czy na pewno chcesz porzucić projekt? Jeśli nie masz zapisanego pliku, nie będzie można do niego wrócić.",
+                "enterValidName": "Wprowadź poprawną nazwę",
+                "chooseFileName": "Wybierz nazwę pliku",
+                "projectSavedMessage": "Projekt zapisany jako {{projectName}}.irr",
+                "loadProjectDialogTitle": "Wczytaj projekt",
+                "loadProjectDialogMessage": "Twoje aktualne prace nad projektem zostaną zastąpione przez wczytany projekt, czy na pewno chcesz to zrobić?",
+                "loadProjectError": "Wystąpił problem na etapie ładowania danych."
             },
             "project": {
                 "changeImage": "Zmień obraz",
