@@ -11,7 +11,7 @@ import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-pr
 import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { disabled, Field, FieldState, form, max, min, required } from '@angular/forms/signals';
+import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
@@ -23,7 +23,7 @@ interface ProjectConfigForm {
 
 @Component({
     selector: 'app-config-project',
-    imports: [TranslateModule, MatButtonModule, MatFormFieldModule, MatInputModule, Field],
+    imports: [TranslateModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
     styleUrl: './config-project.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

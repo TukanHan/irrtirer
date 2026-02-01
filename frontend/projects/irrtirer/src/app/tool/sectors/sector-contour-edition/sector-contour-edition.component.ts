@@ -13,16 +13,16 @@ import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { nonUniqueValueValidatorFactory } from '../../../core/validators/unique-value.validator';
+import { nonUniqueValueValidator } from '../../../core/validators/unique-value.validator';
 import { polygonValidator } from './polygon.validator';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Field, FieldState, form, required, validate } from '@angular/forms/signals';
+import { FieldState, form, FormField, required } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslateModule, Field],
+    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslateModule, FormField],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -69,11 +69,11 @@ export class SectorContourEditionComponent implements OnInit {
 
     protected readonly form = form<SectorSchema>(this.formData, (schemaPath) => {
         required(schemaPath.name);
-        validate(schemaPath.name, nonUniqueValueValidatorFactory(this.usedSectorNames));
+        nonUniqueValueValidator(schemaPath.name, this.usedSectorNames);
 
         required(schemaPath.color);
 
-        validate(schemaPath.vertices, polygonValidator);
+        polygonValidator(schemaPath.vertices);
     });
 
     public ngOnInit(): void {

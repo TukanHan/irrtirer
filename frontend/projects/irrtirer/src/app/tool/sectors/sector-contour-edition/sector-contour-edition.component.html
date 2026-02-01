@@ -6,13 +6,13 @@
 <div class="info">
     <mat-form-field class="density-3" subscriptSizing="dynamic">
         <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
-        <input matInput [field]="form.name">
+        <input matInput [formField]="form.name">
         <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
     </mat-form-field>
 
     <app-color-picker
         [label]="translate.instant('tool.sectors.sectorContour.sectorColor')"
-        [field]="form.color" />
+        [formField]="form.color" />
 
     @if(form.vertices().value().length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Field, form, pattern, required } from '@angular/forms/signals';
+import { form, FormField, pattern, required } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,7 +16,7 @@ interface FileNameFormData {
 
 @Component({
     selector: 'app-project-name-dialog',
-    imports: [MatFormFieldModule, MatInputModule, MatDialogModule, MatButtonModule, TranslateModule, Field],
+    imports: [MatFormFieldModule, MatInputModule, MatDialogModule, MatButtonModule, TranslateModule, FormField],
     styleUrl: './project-name-dialog.component.scss',
     templateUrl: './project-name-dialog.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,

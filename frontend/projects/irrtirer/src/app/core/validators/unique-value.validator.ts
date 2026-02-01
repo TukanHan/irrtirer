@@ -1,12 +1,14 @@
 import { Signal } from '@angular/core';
-import { customError, CustomValidationError, WithoutField } from '@angular/forms/signals';
+import { SchemaPath, validate } from '@angular/forms/signals';
 
-export function nonUniqueValueValidatorFactory<T>(array: Signal<T[]>) {
-    return ({ value }: { value: Signal<T> }): WithoutField<CustomValidationError> | null => {
-        if (array().includes(value())) {
-            return customError({ kind: 'nonUnique' });
-        }
-        
-        return null;
-    };
+export function nonUniqueValueValidator<T>(field: SchemaPath<T>, array: Signal<T[]>): void {
+    validate(field, ({ value }) => nonUniqueValueValidationFunc(value, array));
+}
+
+export function nonUniqueValueValidationFunc<T>(value: Signal<T>, array: Signal<T[]>): { kind: string } | null {
+    if (array().includes(value())) {
+        return { kind: 'nonUnique' };
+    }
+    
+    return null;
 }

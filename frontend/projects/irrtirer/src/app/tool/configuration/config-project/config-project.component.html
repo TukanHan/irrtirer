@@ -23,7 +23,7 @@
 
     <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
-        <input matInput type="number" [field]="form.mosaicWidth">
+        <input matInput type="number" [formField]="form.mosaicWidth">
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.mosaicWidth()) }}</mat-error>
     </mat-form-field>

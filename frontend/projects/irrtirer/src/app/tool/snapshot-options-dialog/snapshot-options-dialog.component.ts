@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { form, Field } from '@angular/forms/signals';
+import { form, FormField } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSliderModule } from '@angular/material/slider';
@@ -9,7 +9,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-snapshot-options-dialog',
-    imports: [MatDialogModule, MatButtonModule, MatSliderModule, MatCheckboxModule, Field, TranslateModule],
+    imports: [MatDialogModule, MatButtonModule, MatSliderModule, MatCheckboxModule, FormField, TranslateModule],
     templateUrl: './snapshot-options-dialog.component.html',
     styleUrl: './snapshot-options-dialog.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

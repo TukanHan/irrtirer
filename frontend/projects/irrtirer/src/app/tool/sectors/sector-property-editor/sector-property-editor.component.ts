@@ -15,7 +15,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { form, required, min, max, Field, submit, FieldState } from '@angular/forms/signals';
+import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
@@ -30,7 +30,7 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslateModule, Field],
+    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslateModule, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

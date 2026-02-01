@@ -12,7 +12,7 @@ import { ImageHelper } from '../../../core/helpers/image-helper';
 import { GeneratedTilesSet, TilesSet } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { form, max, min, required, Field, validate, customError, FieldState, submit } from '@angular/forms/signals';
+import { form, max, min, required, validate, FieldState, submit, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
@@ -28,7 +28,7 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslateModule, MatButtonModule, MatAutocompleteModule, Field],
+    imports: [MatFormFieldModule, MatInputModule, TranslateModule, MatButtonModule, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -82,7 +82,7 @@ export class RandomTilesComponent implements OnInit {
         required(schemaPath.name);
         validate(schemaPath.name, ({ value }) => {
             if (this.immutableSeriesNames().includes(value())) {
-                return customError({ kind: 'cannotOverrideTilesSet' });
+                return { kind: 'cannotOverrideTilesSet' };
             }
 
             return null;
@@ -93,7 +93,7 @@ export class RandomTilesComponent implements OnInit {
                     .some((name) => name === value() && name !== this.editedTilesSet!.name);
 
                 if (nameAlreadyUsed) {
-                    return customError({ kind: 'cannotNowOverrideOtherTilesSet' });
+                    return { kind: 'cannotNowOverrideOtherTilesSet' };
                 }
             }
 
@@ -109,7 +109,7 @@ export class RandomTilesComponent implements OnInit {
         max(schemaPath.maxRadius, 1000);
         validate(schemaPath.maxRadius, ({ value, valueOf }) => {
             if (Number(value()) < Number(valueOf(schemaPath.minRadius))) {
-                return customError({ kind: 'minGreaterThenMax' });
+                return { kind: 'minGreaterThenMax' };
             }
 
             return null;

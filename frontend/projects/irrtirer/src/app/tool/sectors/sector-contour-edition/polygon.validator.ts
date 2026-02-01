@@ -1,16 +1,20 @@
 import { Vector } from '../../../core/models/math/vector.model';
 import { Line } from '../../../core/models/math/line.model';
 import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
-import { customError, CustomValidationError, WithoutField } from '@angular/forms/signals';
+import { SchemaPath, validate } from '@angular/forms/signals';
 import { Signal } from '@angular/core';
 
-export function polygonValidator({ value }: { value: Signal<Vector[]> }): WithoutField<CustomValidationError> | null {        
+export function polygonValidator(field: SchemaPath<Vector[]>): void {
+    validate(field, ({ value }) => polygonValidationFunc(value));
+}
+
+export function polygonValidationFunc(value: Signal<Vector[]>): { kind: string } | null {
     if (value().length < 3) {
-        return customError({ kind: 'tooFewVertices' });
+        return { kind: 'tooFewVertices' };
     }
 
     if (arePolygonEdgesIntersecting(value())) {
-        return customError({ kind: 'edgesIntersect' });
+        return { kind: 'edgesIntersect' };
     }
 
     return null;

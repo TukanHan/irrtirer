@@ -1,26 +1,20 @@
 import { describe, expect, it } from 'vitest';
-import { nonUniqueValueValidatorFactory } from './unique-value.validator';
+import { nonUniqueValueValidationFunc } from './unique-value.validator';
 import { signal } from '@angular/core';
 
-describe('nonUniqueValueValidatorFactory', () => {
+describe('nonUniqueValueValidationFunc', () => {
     it('should be valid', () => {
-        const validator = nonUniqueValueValidatorFactory(signal(['a', 'b', 'c']));
-        const result = validator({ value: signal('d') });
-
+        const result = nonUniqueValueValidationFunc(signal('d'), signal(['a', 'b', 'c']));
         expect(result).toBeNull();
     });
 
     it('should be valid (empty array)', () => {
-        const validator = nonUniqueValueValidatorFactory(signal<boolean[]>([]));
-        const result = validator({ value: signal(false) });
-
+        const result = nonUniqueValueValidationFunc(signal(false), signal<boolean[]>([]));
         expect(result).toBeNull();
     });
 
     it('should be non unique', () => {
-        const validator = nonUniqueValueValidatorFactory(signal([1, 2, 3]));
-        const result = validator({ value: signal(3) });
-
+        const result = nonUniqueValueValidationFunc(signal(3), signal([1, 2, 3]));
         expect(result?.kind).toEqual("nonUnique");
     });
 });
