@@ -54,9 +54,9 @@ export class SectorContourEditionComponent implements OnInit {
     };
 
     private readonly formData = signal<SectorSchema>({
-        id: null,
-        name: null,
-        color: null,
+        id: '',
+        name: '',
+        color: '',
         vertices: [],
         properties: null,
     });

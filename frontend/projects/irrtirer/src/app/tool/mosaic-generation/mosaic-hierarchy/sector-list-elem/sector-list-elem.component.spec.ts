@@ -4,6 +4,7 @@ import { GeneratedSectorModel } from '../../mosaic-generation.interface';
 import { faceSector } from '../../../../../test-data/sector.data';
 import { TranslateModule } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { inputBinding } from '@angular/core';
 
 describe('SectorListElemComponent', () => {
     let component: SectorListElemComponent;
@@ -14,8 +15,10 @@ describe('SectorListElemComponent', () => {
             imports: [SectorListElemComponent, TranslateModule.forRoot({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(SectorListElemComponent);
-        fixture.componentRef.setInput('sector', new GeneratedSectorModel(faceSector));
+        fixture = TestBed.createComponent(SectorListElemComponent, {
+            bindings: [inputBinding('sector', () =>new GeneratedSectorModel(faceSector))],
+        });
+
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

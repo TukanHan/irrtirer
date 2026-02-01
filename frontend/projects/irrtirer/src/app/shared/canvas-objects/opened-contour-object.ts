@@ -22,7 +22,7 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
 
             ctx.beginPath();
             ctx.globalAlpha = 0.25;
-            let point: IVector = viewport.getViewportPosition(this.vertices.at(-1));
+            let point: IVector = viewport.getViewportPosition(this.vertices.at(-1)!);
             ctx.moveTo(point.x, point.y);
             point = viewport.getViewportPosition(this.vertices[0]);
             ctx.lineTo(point.x, point.y);

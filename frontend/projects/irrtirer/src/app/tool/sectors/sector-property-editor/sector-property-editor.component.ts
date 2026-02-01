@@ -161,9 +161,8 @@ export class SectorPropertyEditorComponent implements OnInit {
         this.navigateToSectorList();
     }
 
-    protected getFieldErrorLabel(field: FieldState<unknown>): string {
-        const x = FormHelper.getFieldErrorLabel(field, this.errorLabels);
-        return x;
+    protected getFieldErrorLabel(field: FieldState<unknown>): string | null {
+        return FormHelper.getFieldErrorLabel(field, this.errorLabels);
     }
 
     protected save(): void {

@@ -43,7 +43,7 @@ export class MosaicGenerationService {
 
     public fillSectorsGenerationInfo(sectorsTriangulations: SectorTriangulationMeshPartsModel[]): void {
         for(const sectorTriangulation of sectorsTriangulations) {
-            const generatedSector: GeneratedSectorModel = this.sectorsInfo.get(sectorTriangulation.sectorId);
+            const generatedSector = this.sectorsInfo.get(sectorTriangulation.sectorId)!;
             generatedSector.countOfSections = sectorTriangulation.parts.flatMap(x => x.triangles).length;
         }
 
@@ -51,12 +51,12 @@ export class MosaicGenerationService {
     }
 
     public addSectionTilesObjects(sectorId: string, sectionTiles: GeneratedTileModel[]): void {
-        const sector = this.sectorsInfo.get(sectorId);
+        const sector = this.sectorsInfo.get(sectorId)!;
         sector.addSection({ tiles: sectionTiles });
     }
 
     public getSectorById(sectorId: string): GeneratedSectorModel {
-        return this.sectorsInfo.get(sectorId);
+        return this.sectorsInfo.get(sectorId)!;
     }
 
     public getSectors(): GeneratedSectorModel[] {

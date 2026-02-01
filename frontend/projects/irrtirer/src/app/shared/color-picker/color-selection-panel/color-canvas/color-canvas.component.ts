@@ -28,11 +28,11 @@ export interface CursorDataModel {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorCanvasComponent implements AfterViewInit {
-    public readonly hValue = input<number>();
+    public readonly hValue = input.required<number>();
 
-    public readonly sValue = model<number>();
+    public readonly sValue = model.required<number>();
 
-    public readonly vValue = model<number>();
+    public readonly vValue = model.required<number>();
 
     public readonly colorChange = output<ColorInstance>();
 

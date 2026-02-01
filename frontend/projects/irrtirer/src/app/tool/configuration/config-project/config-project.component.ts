@@ -130,7 +130,7 @@ export class ConfigProjectComponent {
         return null;
     }
 
-    protected getFieldErrorLabel(field: FieldState<unknown>): string {
+    protected getFieldErrorLabel(field: FieldState<unknown>): string | null {
         return FormHelper.getFieldErrorLabel(field, this.errorLabels);
     }
 

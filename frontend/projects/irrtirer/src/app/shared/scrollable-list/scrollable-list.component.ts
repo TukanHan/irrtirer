@@ -15,7 +15,7 @@ export class ScrollableListComponent<T> {
 
     public readonly pageSize = input<number>(50);
 
-    public readonly items = input<T[]>();
+    public readonly items = input.required<T[]>();
 
     private readonly page = signal<number>(1);
 

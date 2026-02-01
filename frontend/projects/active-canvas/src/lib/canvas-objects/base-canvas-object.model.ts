@@ -3,7 +3,7 @@ import { CanvasObject } from './canvas-object.interface';
 import { Viewport } from '../models/canvas/viewport.model';
 
 export abstract class BaseCanvasObject implements CanvasObject {
-    public parentCanvas: IActiveCanvas;
+    public parentCanvas: IActiveCanvas | null = null;
 
     protected isVisible: boolean = true;
 
@@ -27,7 +27,7 @@ export abstract class BaseCanvasObject implements CanvasObject {
     public setVisibility(visibility: boolean, redraw: boolean = false): void {
         this.isVisible = visibility;
         if (redraw) {
-            this.parentCanvas.redraw();
+            this.parentCanvas?.redraw();
         }
     }
 }

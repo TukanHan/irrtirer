@@ -4,6 +4,7 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
+import { inputBinding } from '@angular/core';
 
 describe('TilesSetListElemComponent', () => {
     let component: TilesSetListElemComponent;
@@ -15,9 +16,11 @@ describe('TilesSetListElemComponent', () => {
             providers: [provideMockStore()],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(TilesSetListElemComponent);
+        fixture = TestBed.createComponent(TilesSetListElemComponent, {
+            bindings: [inputBinding('tilesSet', () => tilesSetMock)],
+        });
+        
         component = fixture.componentInstance;
-        fixture.componentRef.setInput('tilesSet', tilesSetMock);
         fixture.detectChanges();
     });
 

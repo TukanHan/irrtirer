@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TileListElemComponent } from './tile-list-elem.component';
 import { tileMock } from '../../../../../test-data/tiles-set.data';
 import { TranslateModule } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { inputBinding } from '@angular/core';
 
 describe('TileListElemComponent', () => {
     let component: TileListElemComponent;
@@ -12,9 +14,11 @@ describe('TileListElemComponent', () => {
             imports: [TileListElemComponent, TranslateModule.forRoot({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(TileListElemComponent);
+        fixture = TestBed.createComponent(TileListElemComponent, {
+            bindings: [inputBinding('tile', () => tileMock)],
+        });
+        
         component = fixture.componentInstance;
-        fixture.componentRef.setInput('tile', tileMock);
         fixture.detectChanges();
     });
 

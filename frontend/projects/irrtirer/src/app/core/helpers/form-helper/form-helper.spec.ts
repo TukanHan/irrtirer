@@ -11,7 +11,7 @@ describe('FormHelper', () => {
 
     describe('getFieldErrorLabel', () => {
         it('should return null when no errors', () => {
-            const field = { errors: () => [] } as FieldState<unknown>;
+            const field = { errors: () => [] as unknown[] } as FieldState<unknown>;
             const result = FormHelper.getFieldErrorLabel(field, errorLabels);
             expect(result).toBeNull();
         });

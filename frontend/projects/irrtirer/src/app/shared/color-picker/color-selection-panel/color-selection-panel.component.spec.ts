@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ColorSelectionPanelComponent } from './color-selection-panel.component';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { inputBinding } from '@angular/core';
 
 describe('ColorSelectionPanelComponent', () => {
     let component: ColorSelectionPanelComponent;
@@ -11,8 +12,9 @@ describe('ColorSelectionPanelComponent', () => {
             imports: [ColorSelectionPanelComponent],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ColorSelectionPanelComponent);
-        fixture.componentRef.setInput('color', '#ff0000');
+        fixture = TestBed.createComponent(ColorSelectionPanelComponent, {
+            bindings: [inputBinding('color', () => '#ff0000')],
+        });
 
         component = fixture.componentInstance;
         fixture.detectChanges();

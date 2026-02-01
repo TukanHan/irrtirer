@@ -16,8 +16,8 @@ export class PolygonHelper {
             throw new Error('polygon should have at least 3 vertices');
         }
 
-        let up: number = vertices.at(-1).x * vertices[0].y;
-        let down: number = vertices.at(-1).y * vertices[0].x;
+        let up: number = vertices.at(-1)!.x * vertices[0].y;
+        let down: number = vertices.at(-1)!.y * vertices[0].x;
 
         for (let i = 0, n = vertices.length - 1; i < n; ++i) {
             up += vertices[i].x * vertices[i + 1].y;
@@ -28,7 +28,7 @@ export class PolygonHelper {
     }
 
     public static calculatePolygonCircumference(vertices: Vector[]): number {
-        let circumference: number = Vector.distance(vertices[0], vertices.at(-1));
+        let circumference: number = Vector.distance(vertices[0], vertices.at(-1)!);
 
         for (let i = 1; i < vertices.length; ++i) {
             circumference += Vector.distance(vertices[i], vertices[i - 1]);
@@ -40,7 +40,7 @@ export class PolygonHelper {
     public static calculatePolygonCentroid(vertices: Vector[]): Vector {
         let x = 0, y = 0;
         let area = 0;
-        let b: Vector = vertices.at(-1);
+        let b: Vector = vertices.at(-1)!;
 
         for (const vector of vertices) {
             const tempArea = vector.y * b.x - vector.x * b.y;

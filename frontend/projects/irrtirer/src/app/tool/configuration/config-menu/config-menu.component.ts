@@ -70,7 +70,7 @@ export class ConfigMenuComponent {
         const dialogRef = this.dialog.open<ProjectNameDialogComponent, ProjectNameDialogData, string>(ProjectNameDialogComponent, {
             data: { defaultName: DEFAULT_PROJECT_NAME },
         });
-        dialogRef.afterClosed().subscribe((projectName: string) => {
+        dialogRef.afterClosed().subscribe((projectName: string | undefined) => {
             if (projectName) {
                 this.projectImportService.saveProject(projectName);
                 const message = this.translate.instant('tool.config.menu.projectSavedMessage', { projectName });

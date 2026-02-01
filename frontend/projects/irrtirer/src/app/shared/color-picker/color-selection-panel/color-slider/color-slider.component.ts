@@ -25,7 +25,7 @@ export interface CursorDataModel {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit {
-    public readonly value = model<number>();
+    public readonly value = model.required<number>();
 
     public readonly valueChange = output<number>();
 

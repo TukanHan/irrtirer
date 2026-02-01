@@ -4,7 +4,7 @@ import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-
 import { customError, CustomValidationError, WithoutField } from '@angular/forms/signals';
 import { Signal } from '@angular/core';
 
-export function polygonValidator({ value }: { value: Signal<Vector[]> }): WithoutField<CustomValidationError> {        
+export function polygonValidator({ value }: { value: Signal<Vector[]> }): WithoutField<CustomValidationError> | null {        
     if (value().length < 3) {
         return customError({ kind: 'tooFewVertices' });
     }
@@ -20,7 +20,7 @@ function arePolygonEdgesIntersecting(vertices: Vector[]): boolean {
     const edges: Line[] = [];
 
     for (let i = 0; i < vertices.length; ++i) {
-        edges.push(new Line(vertices[i], vertices.at(i - 1)));
+        edges.push(new Line(vertices[i], vertices.at(i - 1)!));
     }
 
     for (let i = 0; i < vertices.length; ++i) {

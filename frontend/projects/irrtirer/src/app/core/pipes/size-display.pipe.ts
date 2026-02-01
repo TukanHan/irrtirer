@@ -37,7 +37,7 @@ const units: Unit[] = [
     name: 'sizeDisplay',
 })
 export class SizeDisplayPipe implements PipeTransform {
-    public transform(size: Size): string {
+    public transform(size: Size | null | undefined): string {
         if(!size) {
             return '0 x 0';
         }

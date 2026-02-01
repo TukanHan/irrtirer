@@ -3,6 +3,7 @@ import { TileDetailComponent } from './tile-detail.component';
 import { RouterModule } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { TranslateModule } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('TileDetailComponent', () => {
     let component: TileDetailComponent;
@@ -11,7 +12,7 @@ describe('TileDetailComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [TileDetailComponent, RouterModule.forRoot([]), TranslateModule.forRoot({})],
-            providers: [provideMockStore()]
+            providers: [provideMockStore()],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TileDetailComponent);

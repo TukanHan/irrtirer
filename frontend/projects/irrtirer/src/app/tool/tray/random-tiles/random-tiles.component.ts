@@ -21,9 +21,9 @@ import { Observable } from 'rxjs';
 
 interface RandomTileSetModel {
     name: string;
-    minRadius?: number;
-    maxRadius?: number;
-    count?: number;
+    minRadius: number | null;
+    maxRadius: number | null;
+    count: number | null;
 }
 
 @Component({
@@ -89,7 +89,8 @@ export class RandomTilesComponent implements OnInit {
         });
         validate(schemaPath.name, ({ value }) => {
             if (this.editedTilesSet) {
-                const nameAlreadyUsed = this.existingSeriesNames().some((name) => name === value() && name !== this.editedTilesSet.name);
+                const nameAlreadyUsed = this.existingSeriesNames()
+                    .some((name) => name === value() && name !== this.editedTilesSet!.name);
 
                 if (nameAlreadyUsed) {
                     return customError({ kind: 'cannotNowOverrideOtherTilesSet' });
@@ -126,7 +127,7 @@ export class RandomTilesComponent implements OnInit {
 
     private initFormForEditedTilesSet(tileSetId: string): void {
         const tilesSet = this.tilesSetsSignal().find((s) => s.id === tileSetId);
-        if (this.isGeneratedTilesSet(tilesSet)) {
+        if (tilesSet && this.isGeneratedTilesSet(tilesSet)) {
             this.editedTilesSet = tilesSet;
             this.formData.set({
                 name: tilesSet.name,
@@ -137,7 +138,7 @@ export class RandomTilesComponent implements OnInit {
         }
     }
 
-    protected getFieldErrorLabel(field: FieldState<unknown>): string {
+    protected getFieldErrorLabel(field: FieldState<unknown>): string | null {
         return FormHelper.getFieldErrorLabel(field, this.errorLabels);
     }
 
@@ -165,7 +166,7 @@ export class RandomTilesComponent implements OnInit {
         if (this.existingSeriesNames().includes(name)) {
             return this.tilesSetsSignal()
                 .filter((tileSet) => this.isGeneratedTilesSet(tileSet))
-                .find((tilesSet) => tilesSet.name === name);
+                .find((tilesSet) => tilesSet.name === name)!;
         }
 
         return null;

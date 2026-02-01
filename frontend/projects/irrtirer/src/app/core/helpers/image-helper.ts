@@ -14,7 +14,7 @@ export class ImageHelper {
 
     private static getImagePixelArray(decodedImg: HTMLImageElement): Uint8ClampedArray {
         const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
+        const context = canvas.getContext('2d')!;
 
         canvas.width = decodedImg.width;
         canvas.height = decodedImg.height;

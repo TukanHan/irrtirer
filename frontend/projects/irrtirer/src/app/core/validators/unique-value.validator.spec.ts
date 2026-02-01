@@ -11,7 +11,7 @@ describe('nonUniqueValueValidatorFactory', () => {
     });
 
     it('should be valid (empty array)', () => {
-        const validator = nonUniqueValueValidatorFactory(signal([]));
+        const validator = nonUniqueValueValidatorFactory(signal<boolean[]>([]));
         const result = validator({ value: signal(false) });
 
         expect(result).toBeNull();
@@ -21,6 +21,6 @@ describe('nonUniqueValueValidatorFactory', () => {
         const validator = nonUniqueValueValidatorFactory(signal([1, 2, 3]));
         const result = validator({ value: signal(3) });
 
-        expect(result.kind).toEqual("nonUnique");
+        expect(result?.kind).toEqual("nonUnique");
     });
 });

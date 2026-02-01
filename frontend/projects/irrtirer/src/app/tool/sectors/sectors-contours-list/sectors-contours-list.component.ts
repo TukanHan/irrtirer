@@ -33,7 +33,7 @@ export class SectorsContoursListComponent {
 
     private readonly destroyRef = inject(DestroyRef);
 
-    protected selectedSector: SectorSchema | null;
+    protected selectedSector: SectorSchema | null = null;
 
     protected readonly sectors = this.store.selectSignal<SectorSchema[]>(selectSectors);
 

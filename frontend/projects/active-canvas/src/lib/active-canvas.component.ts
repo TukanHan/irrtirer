@@ -34,7 +34,7 @@ import { CanvasToImageOptions } from './models/canvas/canvas-to-image-options';
 export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     public readonly clicked = output<IVector>();
 
-    public readonly options = model<CanvasOptions>();
+    public readonly options = model<CanvasOptions>({});
 
     public get viewport(): Viewport {
         return this._viewport;
@@ -231,7 +231,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         return offscreenCanvas.convertToBlob({ type: 'image/png' });
     }
 
-    private static drawBackground(canvasContext: CanvasRenderingContext, pxSize: Size, backgroundColor?: string): void {
+    private static drawBackground(canvasContext: CanvasRenderingContext, pxSize: Size, backgroundColor: string): void {
         canvasContext.clearRect(0, 0, pxSize.width, pxSize.height);
         canvasContext.fillStyle = backgroundColor;
         canvasContext.fillRect(0, 0, pxSize.width, pxSize.height);

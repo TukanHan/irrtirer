@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
     name: 'sentenceToWord',
 })
 export class SentenceToWordPipe implements PipeTransform {
-    public transform(value: string): string[] {
+    public transform(value: string | null | undefined): string[] {
         if(!value) {
             return [];
         }
