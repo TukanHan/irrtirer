@@ -16,7 +16,7 @@ export class DialogComponent {
 
     protected readonly data = inject<DialogData>(MAT_DIALOG_DATA);
 
-    protected noLabel: string = this.data.noCustomLabel ?? this.translate.instant('common.no');
+    protected readonly noLabel: string = this.data.noCustomLabel ?? this.translate.instant('common.no');
 
-    protected yesLabel: string = this.data.yesCustomLabel ?? this.translate.instant('common.yes');
+    protected readonly yesLabel: string = this.data.yesCustomLabel ?? this.translate.instant('common.yes');
 }

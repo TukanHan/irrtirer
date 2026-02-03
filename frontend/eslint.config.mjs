@@ -2,13 +2,17 @@ import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 import angular from "angular-eslint";
 import eslintConfigPrettier from "eslint-config-prettier";
+import storybook from "eslint-plugin-storybook";
 
 export default defineConfig([
     {
         files: ["**/*.ts"],
         languageOptions: {
             parserOptions: {
-                project: "./tsconfig.json",
+                project: [
+                    "./tsconfig.json",
+                    "./projects/irrtirer/.storybook/tsconfig.json",
+                ],
                 sourceType: "module",
             },
         },
@@ -103,4 +107,5 @@ export default defineConfig([
             "@angular-eslint/template/prefer-self-closing-tags": "error",
         },
     },
+    ...storybook.configs["flat/recommended"],
 ]);

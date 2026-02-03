@@ -44,3 +44,8 @@ Thumbs.db
 # Vitest
 **/node_modules/
 **/coverage/
+
+# Storybook
+*storybook.log
+storybook-static
+documentation.json

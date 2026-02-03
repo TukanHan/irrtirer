@@ -95,6 +95,36 @@
               "projects/irrtirer/**/*.html"
             ]
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/irrtirer/.storybook",
+            "browserTarget": "irrtirer:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irrtirer"
+            ],
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/irrtirer/.storybook",
+            "browserTarget": "irrtirer:build",
+            "compodoc": true,
+            "compodocArgs": [
+              "-e",
+              "json",
+              "-d",
+              "projects/irrtirer"
+            ],
+            "outputDir": "dist/storybook/irrtirer"
+          }
         }
       }
     },
