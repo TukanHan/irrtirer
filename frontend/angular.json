@@ -123,7 +123,7 @@
               "-d",
               "projects/irrtirer"
             ],
-            "outputDir": "dist/storybook/irrtirer"
+            "outputDir": "dist/irrtirer/browser/storybook"
           }
         }
       }
