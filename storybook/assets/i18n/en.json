@@ -1,0 +1,184 @@
+{
+  "title": "Irrtirer",
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "confirm": "Confirm",
+    "return": "Return",
+    "edit": "Edit",
+    "details": "Details",
+    "no": "No",
+    "yes": "Yes",
+    "ok": "Ok",
+    "cm": "cm",
+    "warning": "Warning",
+    "fieldRequired": "Field required",
+    "nextElements": "Next",
+    "previousElements": "Previous"
+  },
+  "toolbar": {
+    "languages": {
+      "polish": "Polish",
+      "english": "English"
+    },
+    "github": "GitHub"
+  },
+  "aboutProject": {
+    "header": "About project",
+    "content": "Coming soon"
+  },
+  "aboutAuthor": {
+    "header": "About author",
+    "itWas": "It was",
+    "me": "Me"
+  },
+  "tool": {
+    "nav": {
+      "projectSettings": "Project settings",
+      "tileTrey": "Tile tray",
+      "sectors": "Sector selection",
+      "generation": "Mosaic ordering"
+    },
+    "config": {
+      "menu": {
+        "projectSettings": "Project settings",
+        "saveProject": "Save project",
+        "loadProject": "Load project",
+        "newProject": "New project",
+        "exampleProjects": "Choose example project",
+        "rejectProject": "Reject project",
+        "rejectProjectWarning": "Are you sure you want to reject the project? If you haven't saved the file, it will not be recoverable.",
+        "enterValidName": "Enter a valid name",
+        "chooseFileName": "Choose file name",
+        "projectSavedMessage": "Project saved as {{projectName}}.irr",
+        "loadProjectDialogTitle": "Load project",
+        "loadProjectDialogMessage": "Your current work will be replaced by the loaded project. Are you sure?",
+        "loadProjectError": "There was an issue loading the project data."
+      },
+      "project": {
+        "changeImage": "Change image",
+        "chooseImage": "Choose image",
+        "mosaicWidth": "Mosaic width",
+        "projectCreated": "Project created",
+        "selectImageErrorMessage": "An image must be selected",
+        "mosaicMaxWidthErrorMessage": "The width cannot be greater than {{width}} cm",
+        "mosaicMinWidthErrorMessage": "The width cannot be less than {{width}} cm",
+        "mosaicWidthRequiredErrorMessage": "Mosaic width is required"
+      }
+    },
+    "tiles": {
+      "menu": {
+        "removeTilesSet": "Remove tiles set",
+        "removeTilesSetQuery": "Are you sure you want to remove the tiles set {{name}}?",
+        "noTiles": "No tiles",
+        "loadFromFile": "Load from file",
+        "createTile": "Tile creator",
+        "randomTiles": "Generate random",
+        "generateAgain": "Edit and generate"
+      },
+      "random": {
+        "randomTiles": "Randomize",
+        "seriesName": "Series name",
+        "maxRadius": "Maximum radius",
+        "minRadius": "Minimum radius",
+        "count": "Count",
+        "radiusTooSmall": "Radius too small",
+        "radiusTooLarge": "Radius too large",
+        "maxRadiusLargerThanMin": "Minimum radius is larger than maximum radius",
+        "tilesSeriesGenerated": "Tile series generated",
+        "cannotNowOverrideOtherTilesSet": "Cannot now override another tiles set",
+        "cannotOverrideTilesSet": "Cannot override this tiles set",
+        "overrideTileSetWarning": "Regenerating the tile set will result in the deletion of the current set and the creation of a new one."
+      },
+      "details": {
+        "tileId": "Tile Id",
+        "tileColor": "Tile color",
+        "tileNoExist": "Tile does not exist"
+      }
+    },
+    "sectors": {
+      "contourList": {
+        "addSector": "Add sector",
+        "noSectors": "Add sectors",
+        "removeSector": "Remove sector",
+        "removeSectorMessage": "Are you sure you want to remove the sector {{sectorName}}? This action is irreversible.",
+        "editProperties": "Edit properties",
+        "editContour": "Edit contour"
+      },
+      "sectorProperty": {
+        "sectorsSize": "Section size",
+        "maxArea": "Max section area",
+        "maxAreaHint": "Maximum square surface of individual triangles that are sectors building sections.",
+        "minAngle": "Min section angle",
+        "minAngleHint": "The minimum required angle expressed in degrees to create a section triangle.",
+        "tilesLimitations": "Tile restrictions",
+        "minRadius": "Min tile radius",
+        "minRadiusHint": "The minimum ray of the tile required to be included in the sector.",
+        "maxRadius": "Max tile radius",
+        "maxRadiusHint": "The maximum ray of the tile required to be included in the sector.",
+        "minMargin": "Min tiles margin",
+        "minMarginHint": "The minimum distance between two generated tiles required.",
+        "populationParams": "Population parameters",
+        "initialPopulationSize": "Initial population size",
+        "initialPopulationSizeHint": "The initial size of the population",
+        "populationSize": "Population size",
+        "populationSizeHint": "Number of individuals for selection, during the usual algorithm. ",
+        "iterationsCount": "Iterations count",
+        "iterationsCountHint": "The number of iterations of the algorithm. ",
+        "countOfTrianglePositionDraws": "Count of triangle position draws",
+        "countOfTrianglePositionDrawsHint": "Number of attempts to place an additional tile in the section. ",
+        "countOfTriesToInsertTile": "Count of tries to insert tile",
+        "countOfTriesToInsertTileHint": "Number of attempts to change the tile with one operation.",
+        "countOfColorMatchingAttempts": "Count of color matching attempts",
+        "countOfColorMatchingAttemptsHint": "The number of tile color samples taken when choosing the best -matching tile to a specific place.",
+        "evaluationParams": "Evaluation parameters",
+        "singleSectionPopulation": "Incentive for section populating",
+        "singleSectionPopulationHint": "Assessment for filling the space of the section with tiles. ",
+        "overlappingAreaOutsideSector": "Penalty for overlapping area outside sector",
+        "overlappingAreaOutsideSectorHint": "Assessment for protruding tiles outside the sector. ",
+        "additionalPopulationOfNeighboringSectors": "Incentive for additional populating neighboring sectors",
+        "additionalPopulationOfNeighboringSectorsHint": "Assessment for completing the unused (wasted) space space that was already generated. ",
+        "overlappingNotPopulatedSections": "Penalty for overlapping not populated sections",
+        "overlappingNotPopulatedSectionsHint": "Assessment for usurping the space of still unferamed sectors. ",
+        "tileColorMismatch": "Penalty for color mismatch",
+        "tileColorMismatchHint": "Assessment for the discrepancy between the color of the tile and the picture. ",
+        "errorOnSectorMeshRequesting": "There was a problem with downloading the triangulation network",
+        "valueToSmall": "Value must be at least 0.01",
+        "sectionMinAngleOutOfRange": "Value must be in the range from 10 to 90",
+        "valueCannotBeNegative": "Value cannot be negative"
+      },
+      "sectorContour": {
+        "sectorName": "Sector name",
+        "addSectorVertices": "Add sector vertices",
+        "sectorColor": "Sector color",
+        "nameRequired": "Sector must have a name.",
+        "nameAlreadyInUse": "Sector with this name exists, choose another.",
+        "tooFewVertices": "Sector must have at least 3 vertices.",
+        "linesCannotIntersecting": "Sector lines cannot intersect"
+      }
+    },
+    "generation": {
+      "sectorList": {
+        "noTiles": "There are no tiles"
+      },
+      "message": {
+        "sectorsMeshGeneration": "Generating sector mesh",
+        "errorOnSectorsMeshGeneration": "There was an error on generating sector mesh.",
+        "errorOnServerConnection": "There was an error on connecting to server.",
+        "errorOnStartingMosaicGeneration": "There was an error on starting generating mosaic.",
+        "generationCompleted": "Mosaic generation has been completed"
+      }
+    },
+    "snapshotDialog": {
+      "title": "Snapshot save",
+      "transparentBackgroundLabel": "Use transparent background",
+      "scaleFactorLabel": "Snapshot quality (scaling)"
+    },
+    "ribbon": {
+      "takeSnapshot": "Save as image",
+      "focusOnImage": "Focus on image",
+      "toggleMeshVisibility": "Toggle sectors visibility",
+      "toggleImageVisibility": "Toggle image visibility"
+    }
+  }
+}
