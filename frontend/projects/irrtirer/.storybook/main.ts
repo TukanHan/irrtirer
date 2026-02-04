@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-docs",
     "@storybook/addon-themes",
   ],
-  framework: "@storybook/angular"
+  framework: "@storybook/angular",
+  staticDirs: [{ from: '../src/assets/i18n', to: '/assets/i18n' }],
 };
 export default config;

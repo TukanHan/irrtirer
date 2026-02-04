@@ -1,16 +1,10 @@
-import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
+import { type Meta, type StoryObj } from '@storybook/angular';
 import { ScrollableListComponent } from './scrollable-list.component';
-import { TranslateModule } from '@ngx-translate/core';
 
 const meta: Meta<ScrollableListComponent<string>> = {
     title: 'Example/Scrollable List',
     component: ScrollableListComponent,
     tags: ['autodocs'],
-    decorators: [
-        moduleMetadata({
-            imports: [TranslateModule.forRoot()],
-        })
-   ]
 };
 
 export default meta;

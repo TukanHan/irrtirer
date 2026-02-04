@@ -1,6 +1,5 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { DialogComponent } from './dialog.component';
-import { TranslateModule } from '@ngx-translate/core';
 import { DialogData } from './dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
@@ -28,7 +27,7 @@ const meta: Meta<DialogComponent> = {
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
-            imports: [TranslateModule.forRoot(), DialogHostComponent],
+            imports: [DialogHostComponent],
         }),
     ],
 };
