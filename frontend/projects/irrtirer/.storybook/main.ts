@@ -11,6 +11,6 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
   ],
   framework: "@storybook/angular",
-  staticDirs: [{ from: '../src/assets/i18n', to: '/assets/i18n' }],
+  staticDirs: [{ from: '../src/assets/i18n', to: 'assets/i18n' }],
 };
 export default config;
