@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { ColorPickerComponent } from './color-picker.component';
 
 const meta: Meta<ColorPickerComponent> = {
-    title: 'Example/Color Picker',
+    title: 'Komponenty/Color Picker',
     component: ColorPickerComponent,
     tags: ['autodocs'],
     argTypes: {

@@ -20,6 +20,9 @@ const preview: Preview = {
                 date: /Date$/i,
             },
         },
+        docs: {
+            codePanel: true,
+        },
         backgrounds: {
             options: {
                 gray0: { name: 'gray-0', value: '#ffffff' },

@@ -22,7 +22,7 @@ class DialogHostComponent {
 }
 
 const meta: Meta<DialogComponent> = {
-    title: 'Example/Dialog',
+    title: 'Komponenty/Dialog',
     component: DialogComponent,
     tags: ['autodocs'],
     decorators: [

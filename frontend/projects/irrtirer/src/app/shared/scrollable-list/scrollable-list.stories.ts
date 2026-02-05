@@ -1,10 +1,27 @@
-import { type Meta, type StoryObj } from '@storybook/angular';
+import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { ScrollableListComponent } from './scrollable-list.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+@Component({
+    selector: 'app-dummy-item',
+    template: `<ng-content />`,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    styles: [`
+        @use "./../../../styles/utils/list-item-box.scss" as *;
+        :host {
+            @include list-item-box();
+        }
+    `]
+})
+class DummyItemComponent {}
 
 const meta: Meta<ScrollableListComponent<string>> = {
-    title: 'Example/Scrollable List',
+    title: 'Komponenty/Scrollable List',
     component: ScrollableListComponent,
     tags: ['autodocs'],
+    decorators: [
+        moduleMetadata({ imports: [DummyItemComponent]}),
+    ],
 };
 
 export default meta;
@@ -20,16 +37,9 @@ export const Default: Story = {
         template: `
             <app-scrollable-list [items]="items" [pageSize]="pageSize">
                 <ng-template #element let-item>
-                    <span class="item">{{ item }}</span>
+                    <app-dummy-item>{{ item }}</app-dummy-item>
                 </ng-template>
             </app-scrollable-list>
         `,
-        styles: [`
-            .item {
-                padding: 10px 16px;
-                border-radius: 4px;
-                background: var(--irr-contrast-lightest);
-            }
-        `]
     })
 };
