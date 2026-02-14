@@ -1,6 +1,5 @@
 @use "./../../../../styles/utils/list-item-box.scss" as *;
 @use './../../../../theme/gray-palette.scss' as *;
-@use './../../../../theme/components/button-theme' as *;
 
 :host {
     .list-elem {
@@ -12,10 +11,7 @@
             gap: 12px;
 
             .elem-action {
-                ::ng-deep {
-                    @include icon-button(32px);
-                }
-    
+                --irr-icon-button-size: 32px;
                 color: var(--irr-contrast-medium);
                 margin: -6px;
             }

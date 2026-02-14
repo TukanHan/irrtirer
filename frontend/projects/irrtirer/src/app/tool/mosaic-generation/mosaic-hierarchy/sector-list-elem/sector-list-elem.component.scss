@@ -1,6 +1,5 @@
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
 @use "./../../../../../styles/utils/mixins.scss" as *;
-@use './../../../../../theme/components/button-theme' as *;
 
 :host {
     .parent-elem {
@@ -17,10 +16,7 @@
             }
 
             .sector-action {
-                ::ng-deep {
-                    @include icon-button(32px);
-                }
-    
+                --irr-icon-button-size: 32px;
                 margin: -6px;
             }
     

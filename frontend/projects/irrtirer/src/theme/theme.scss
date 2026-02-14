@@ -1,60 +1,61 @@
-@use 'sass:map';
-@use '@angular/material' as mat;
-@use './components/toolbar-theme' as toolbar;
-@use './components/button-theme' as button;
-@use './components/input-theme' as input;
-@use './components/menu-theme' as menu;
-@use './components/tooltip-theme' as tooltip;
-@use './components/icon-theme' as icon;
-@use './components/dialog-theme' as dialog;
-@use './components/autocomplete-theme' as autocomplete;
-@use './components/sidenav-theme' as sidenav;
-@use './primary-palette.scss' as *;
-@use './variables.scss' as variables;
+@use "sass:map";
+@use "@angular/material" as mat;
+@use "./components/toolbar-theme" as toolbar;
+@use "./components/button-theme" as button;
+@use "./components/input-theme" as input;
+@use "./components/menu-theme" as menu;
+@use "./components/tooltip-theme" as tooltip;
+@use "./components/icon-theme" as icon;
+@use "./components/dialog-theme" as dialog;
+@use "./components/autocomplete-theme" as autocomplete;
+@use "./components/sidenav-theme" as sidenav;
+@use "./primary-palette.scss" as *;
+@use "./variables.scss" as variables;
 
-$irrtirer-primary: mat.m2-define-palette($cyan-palette, A200);
-$irrtirer-warn: mat.m2-define-palette(mat.$m2-red-palette);
+@mixin custom-theme($theme) {
+    @include mat.all-component-themes($theme);
 
-$irr-dark-theme: mat.m2-define-dark-theme((
-  color: (
-    primary: $irrtirer-primary,
-    accent: mat.m2-define-palette(mat.$m2-amber-palette, A200, A100, A400),
-    warn: $irrtirer-warn,
-  ),
-  typography: mat.m2-define-typography-config(),
-  density: 0
-));
-
-$irr-light-theme: mat.m2-define-light-theme((
-  color: (
-    primary: mat.m2-define-palette(mat.$m2-light-blue-palette, 700),
-    accent: mat.m2-define-palette(mat.$m2-orange-palette, A200, A100, A400),
-    warn: $irrtirer-warn,
-  ),
-  typography: mat.m2-define-typography-config(),
-  density: 0
-));
+    @include toolbar.theme();
+    @include button.theme();
+    @include input.theme();
+    @include menu.theme();
+    @include tooltip.theme();
+    @include icon.theme();
+    @include dialog.theme();
+    @include autocomplete.theme();
+    @include sidenav.theme();
+}
 
 .dark-theme {
-  color-scheme: dark;
-  @include mat.all-component-themes($irr-dark-theme);
+    color-scheme: dark;
+
+    $irr-dark-theme: mat.m2-define-dark-theme((
+        color: (
+            primary: mat.m2-define-palette($cyan-palette, A200),
+            accent: mat.m2-define-palette(mat.$m2-amber-palette, A200, A100, A400),
+            warn:  mat.m2-define-palette(mat.$m2-red-palette),
+        ),
+        typography: mat.m2-define-typography-config(),
+        density: 0,
+    ));
+    @include custom-theme($irr-dark-theme);
 }
 
 .light-theme {
-  color-scheme: light;
-  @include mat.all-component-themes($irr-light-theme);
+    color-scheme: light;
+
+    $irr-light-theme: mat.m2-define-light-theme((
+        color: (
+            primary: mat.m2-define-palette(mat.$m2-light-blue-palette, 700),
+            accent: mat.m2-define-palette(mat.$m2-orange-palette, A200, A100, A400),
+            warn:  mat.m2-define-palette(mat.$m2-red-palette),
+        ),
+        typography: mat.m2-define-typography-config(),
+        density: 0,
+    ));
+    @include custom-theme($irr-light-theme);
 }
 
 :root {
-  @include variables.theme();
+    @include variables.theme();
 }
-
-@include toolbar.theme();
-@include button.theme();
-@include input.theme();
-@include menu.theme();
-@include tooltip.theme();
-@include icon.theme();
-@include dialog.theme();
-@include autocomplete.theme();
-@include sidenav.theme();

@@ -1,5 +1,3 @@
-@use "./../../../../../theme/components/button-theme" as *;
-
 :host {
     .label {
         display: flex;
@@ -13,9 +11,7 @@
 
         .toggle-button {
             margin-left: auto;
-            ::ng-deep {
-                @include icon-button(32px);
-            }
+            --irr-icon-button-size: 32px;
 
             .chevron {
                 transition: all 0.25s ease;

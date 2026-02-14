@@ -1,6 +1,28 @@
 @use 'sass:math';
 
+@mixin icon-button() {
+    .mat-icon {
+        width: var(--irr-icon-button-icon-size);
+        height: var(--irr-icon-button-icon-size);
+        font-size: var(--irr-icon-button-icon-size);
+        display: block;
+    }
+
+    --mat-icon-button-state-layer-size: var(--irr-icon-button-size);
+    padding: calc((var(--irr-icon-button-size) - var(--irr-icon-button-icon-size)) / 2);
+
+    .mat-mdc-button-touch-target {
+        width: var(--mat-icon-button-state-layer-size);
+        height: var(--mat-icon-button-state-layer-size);
+    }
+}
+
 @mixin theme() {
+    :root {
+        --irr-icon-button-size: 48px;
+        --irr-icon-button-icon-size: 24px;
+    }
+
     button, a {
         &.mdc-button {
             letter-spacing: normal;
@@ -12,24 +34,9 @@
                 height: var(--mat-button-text-container-height);
             }
         }
-    }
-}
-
-@mixin icon-button-icon($icon-size: 24px) {
-    .mat-icon {
-        width: $icon-size;
-        height: $icon-size;
-        font-size: $icon-size;
-    }
-}
-
-@mixin icon-button($button-size: 48px, $icon-size: 24px) {
-    @include icon-button-icon($icon-size);
-    --mat-icon-button-state-layer-size: #{$button-size};
-    padding: math.div($button-size - $icon-size, 2);
-
-    .mat-mdc-button-touch-target {
-        width: var(--mat-icon-button-state-layer-size);
-        height: var(--mat-icon-button-state-layer-size);
+        
+        &.mdc-icon-button.mat-mdc-button-base {
+            @include icon-button();
+        }
     }
 }

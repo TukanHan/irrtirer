@@ -1,5 +1,4 @@
 @use "./../../../../styles/utils/list-item-box.scss" as *;
-@use "./../../../../theme/components/button-theme" as *;
 
 :host {
     display: flex;
@@ -44,9 +43,7 @@
         cursor: move;
 
         .vertex-remove {
-            ::ng-deep {
-                @include icon-button(32px);
-            }
+            --irr-icon-button-size: 32px;
             margin: -6px;
             color: var(--irr-contrast-medium);
         }
