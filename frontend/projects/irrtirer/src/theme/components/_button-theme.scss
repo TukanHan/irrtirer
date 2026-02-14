@@ -17,12 +17,12 @@
     }
 }
 
-@mixin theme() {
-    :root {
-        --irr-icon-button-size: 48px;
-        --irr-icon-button-icon-size: 24px;
-    }
+@mixin variables() {
+    --irr-icon-button-size: 48px;
+    --irr-icon-button-icon-size: 24px;
+}
 
+@mixin theme() {
     button, a {
         &.mdc-button {
             letter-spacing: normal;

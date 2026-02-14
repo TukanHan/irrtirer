@@ -1,5 +1,3 @@
-@use './../gray-palette.scss' as *;
-
 @mixin theme() {
     mat-sidenav-container {
         --mat-sidenav-content-background-color: var(--irr-background-color);

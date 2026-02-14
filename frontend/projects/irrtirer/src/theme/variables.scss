@@ -1,6 +1,6 @@
-@use './gray-palette.scss' as *;
+@use './palettes/gray-palette.scss' as *;
 
-@mixin theme() {
+@mixin variables() {
     --irr-accent-color: light-dark(#ffab40, #ffd740);
     --irr-primary-color: light-dark(#0288d1, #00dddd);
     

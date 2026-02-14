@@ -1,5 +1,5 @@
 @use './../../../../styles/utils/mixins.scss' as *;
-@use './../../../../theme/gray-palette.scss' as *;
+@use './../../../../theme/palettes/gray-palette.scss' as *;
 
 :host {
     display: flex;

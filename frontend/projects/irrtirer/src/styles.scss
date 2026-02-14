@@ -1,5 +1,5 @@
-@use 'tailwindcss';
-@use './theme/theme';
+@forward './theme/tailwind';
+@forward './theme/material-theme';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
