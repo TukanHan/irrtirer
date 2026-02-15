@@ -1,13 +1,13 @@
-<div class="actions">
-    <button mat-flat-button (click)="navigateToConfiguration()">
+<div class="flex flex-row gap-2.5">
+    <button class="flex-1" mat-flat-button (click)="navigateToConfiguration()">
         {{ 'common.return' | translate }}
     </button>
-    <button mat-flat-button color="accent" (click)="trySave()" [hidden]="isReadOnlyMode()">
+    <button class="flex-1" mat-flat-button color="accent" (click)="trySave()" [hidden]="isReadOnlyMode()">
         {{ 'common.confirm' | translate }}
     </button>
 </div>
 
-<form class="form">
+<form class="flex flex-col gap-5">
     <input #imageUploader
         hidden type="file"
         (change)="onImageSelected($event)"

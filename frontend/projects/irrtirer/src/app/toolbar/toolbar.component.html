@@ -19,7 +19,7 @@
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
-        <span class="language-label">{{selectedLanguage() | titlecase}}</span>
+        <span class="block min-w-5">{{selectedLanguage() | titlecase}}</span>
     </button>
 
     <mat-menu #menu="matMenu">

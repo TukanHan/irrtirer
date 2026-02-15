@@ -7,14 +7,6 @@
     background-color: var(--color-surface);
 
     .label {
-        display: flex;
-        gap: 20px;
-        align-items: baseline;
-        font-family: "Monomakh";
-        font-weight: 500;
         letter-spacing: 2px;
-
-        font-size: 24px;
-        color: var(--color-contrast-medium);
     }
 }

@@ -1,4 +1,3 @@
-@use './../../../../styles/utils/mixins.scss' as *;
 @use './../../../../theme/palettes/gray-palette.scss' as *;
 
 :host {
@@ -29,11 +28,6 @@
 
             .label {
                 font-weight: 500;
-            }
-
-            .value {
-                font-size: 12px;
-                @include text-ellipsis();
             }
         }
 

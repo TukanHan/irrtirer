@@ -1,5 +1,4 @@
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
-@use "./../../../../../styles/utils/mixins.scss" as *;
 
 :host {
     .parent-elem {
@@ -42,11 +41,6 @@
 
         .tile {
             @include list-item-box();
-
-            .label {
-                @include text-ellipsis();
-                font-size: 12px;
-            }
         }
 
         .empty {

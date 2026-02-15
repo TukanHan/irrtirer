@@ -9,9 +9,7 @@
 
     .toolbar-item {
         &.first {
-            span {
-                font-size: 18px !important;
-            }
+            font-size: 18px !important;
         }
 
         &.active-button {
@@ -30,11 +28,6 @@
 
     .example-spacer {
         flex: 1 1 auto;
-    }
-
-    .language-label {
-        min-width: 20px;
-        display: block;
     }
 }
 
