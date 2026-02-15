@@ -2,13 +2,13 @@
     mat-tooltip-component {
         .mat-mdc-tooltip {
             &:not(.contrast) {
-                --mat-tooltip-container-color: var(--irr-panel-background-color);
-                --mat-tooltip-supporting-text-color: var(--irr-panel-text-color);
+                --mat-tooltip-container-color: var(--color-surface-panel);
+                --mat-tooltip-supporting-text-color: var(--color-contrast-highest);
             }
 
             &.contrast {
-                --mat-tooltip-container-color: var(--irr-panel-contrast-background-color);
-                --mat-tooltip-supporting-text-color: var(--irr-panel-contrast-text-color);
+                --mat-tooltip-container-color: var(--color-surface-panel-contrast);
+                --mat-tooltip-supporting-text-color: var(--color-contrast-max);
             }
 
             .mat-mdc-tooltip-surface {

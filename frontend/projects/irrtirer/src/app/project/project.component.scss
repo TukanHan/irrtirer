@@ -4,7 +4,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: var(--irr-background-color);
+    background-color: var(--color-surface);
 
     .label {
         display: flex;
@@ -15,6 +15,6 @@
         letter-spacing: 2px;
 
         font-size: 24px;
-        color: var(--irr-contrast-medium);
+        color: var(--color-contrast-medium);
     }
 }

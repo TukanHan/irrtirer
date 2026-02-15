@@ -12,7 +12,7 @@
 
             .visibility-icon {
                 font-weight: 300;
-                color: var(--irr-contrast-medium);
+                color: var(--color-contrast-medium);
             }
 
             .sector-action {
@@ -21,7 +21,7 @@
             }
     
             .toggle-action {
-                color: var(--irr-contrast-medium);
+                color: var(--color-contrast-medium);
 
                 .chevron {
                     transition: all 0.25s ease;
@@ -51,7 +51,7 @@
 
         .empty {
             align-self: center;
-            color: var(--irr-contrast-light);
+            color: var(--color-contrast-light);
         }
     }
 

@@ -12,12 +12,12 @@
 
             .elem-action {
                 --irr-icon-button-size: 32px;
-                color: var(--irr-contrast-medium);
+                color: var(--color-contrast-medium);
                 margin: -6px;
             }
     
             .toggle-action {
-                color: var(--irr-contrast-medium);
+                color: var(--color-contrast-medium);
 
                 .chevron {
                     transition: all 0.25s ease;

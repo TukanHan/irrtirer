@@ -4,7 +4,7 @@
     align-items: center;
     border-radius: 4px;
     padding: 10px 15px;
-    background-color: var(--irr-contrast-lightest);
+    background-color: var(--color-contrast-lightest);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
     .color-preview {
@@ -25,11 +25,11 @@
         flex-direction: column;
 
         &__header {
-            color: var(--irr-contrast-highest);
+            color: var(--color-contrast-highest);
         }
 
         &__code {
-            color: var(--irr-contrast-medium);
+            color: var(--color-contrast-medium);
             font-size: 15px;
         }
     }

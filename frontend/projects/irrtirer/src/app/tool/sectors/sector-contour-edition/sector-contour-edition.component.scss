@@ -28,7 +28,7 @@
     }
 
     .no-vertices {
-        color: var(--irr-contrast-light);
+        color: var(--color-contrast-light);
         margin: auto;
     }
 }
@@ -45,7 +45,7 @@
         .vertex-remove {
             --irr-icon-button-size: 32px;
             margin: -6px;
-            color: var(--irr-contrast-medium);
+            color: var(--color-contrast-medium);
         }
 
         &.cdk-drag-placeholder {

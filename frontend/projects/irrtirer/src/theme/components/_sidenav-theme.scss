@@ -1,7 +1,7 @@
 @mixin theme() {
     mat-sidenav-container {
-        --mat-sidenav-content-background-color: var(--irr-background-color);
-        --mat-sidenav-container-background-color:var(--irr-sidenav-color);
+        --mat-sidenav-content-background-color: var(--color-surface);
+        --mat-sidenav-container-background-color:var(--color-surface-side);
         --mat-sidenav-container-width: auto;
         --mat-sidenav-container-shape: 0px;
         --mat-list-active-indicator-shape: 0px;

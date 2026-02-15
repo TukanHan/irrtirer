@@ -1,12 +1,12 @@
 @mixin theme() {
     mat-toolbar {
         &.mat-toolbar {
-            background: var(--irr-toolbar-background-color);
+            background: var(--color-surface-toolbar);
         }
 
         .toolbar-item {
             * {
-                color: var(--irr-toolbar-color);
+                color: var(--color-primary-label);
             }
 
             .mat-icon {
