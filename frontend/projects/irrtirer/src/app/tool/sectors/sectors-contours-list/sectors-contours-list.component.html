@@ -8,7 +8,7 @@
   <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
     @for (sector of sectors(); track sector) {
       <div class="sector-box" [class.selected]="sector === selectedSector" cdkDrag (mousedown)="onSectorSelected(sector)">
-        {{sector.name}}
+        <span class="truncate">{{sector.name}}</span>
         <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
           <mat-icon matListIcon>more_vert</mat-icon>
         </button>

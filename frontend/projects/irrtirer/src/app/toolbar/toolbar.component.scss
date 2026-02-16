@@ -8,9 +8,8 @@
                 0 1px 18px #0000001f;
 
     .toolbar-item {
-        &.first {
-            font-size: 18px !important;
-        }
+        --irr-icon-button-icon-size: 22px;
+        color: var(--color-primary-label);
 
         &.active-button {
             background: color-mix(in srgb, var(--color-primary), transparent 90%);

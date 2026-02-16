@@ -1,4 +1,4 @@
-@mixin theme() {
+@mixin theme {
     mat-tooltip-component {
         .mat-mdc-tooltip {
             &:not(.contrast) {

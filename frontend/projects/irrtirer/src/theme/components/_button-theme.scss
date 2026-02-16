@@ -5,34 +5,39 @@
     --irr-icon-button-icon-size: 24px;
 }
 
-@mixin theme() {
+@mixin theme {
     button, a {
-        &.mdc-button {
-            letter-spacing: normal;
-            --mat-button-filled-container-shape: 20px;
-            --mat-button-text-container-shape: 20px;
-            padding: 0 12px !important;
+        &.mat-mdc-button-base {
+            &.mdc-button {
+                --mat-button-filled-label-text-tracking: normal;
+                --mat-button-filled-container-shape: 20px;
+                --mat-button-text-label-text-tracking: normal;
+                --mat-button-text-container-shape: 20px;
+                --mat-button-filled-label-text-size: var(--text-sm);
 
-            .mat-mdc-button-touch-target {
-                height: var(--mat-button-text-container-height);
+                padding: 0 12px !important;
+
+                .mat-mdc-button-touch-target {
+                    height: var(--mat-button-text-container-height);
+                }
             }
-        }
-        
-        &.mdc-icon-button.mat-mdc-button-base {
-            --mat-icon-button-state-layer-size: var(--irr-icon-button-size);
-            padding: calc((var(--irr-icon-button-size) - var(--irr-icon-button-icon-size)) / 2);
 
-            .mat-mdc-button-touch-target {
-                width: var(--mat-icon-button-state-layer-size);
-                height: var(--mat-icon-button-state-layer-size);
+            &.mdc-icon-button {
+                --mat-icon-button-state-layer-size: var(--irr-icon-button-size);
+                padding: calc((var(--irr-icon-button-size) - var(--irr-icon-button-icon-size)) / 2);
+
+                .mat-mdc-button-touch-target {
+                    width: var(--mat-icon-button-state-layer-size);
+                    height: var(--mat-icon-button-state-layer-size);
+                }
             }
-        }
 
-        .mat-icon {
-            width: var(--irr-icon-button-icon-size);
-            height: var(--irr-icon-button-icon-size);
-            font-size: var(--irr-icon-button-icon-size);
-            display: block;
+            .mat-icon {
+                width: var(--irr-icon-button-icon-size);
+                height: var(--irr-icon-button-icon-size);
+                font-size: var(--irr-icon-button-icon-size);
+                display: block;
+            }
         }
     }
 }

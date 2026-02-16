@@ -1,17 +1,5 @@
-@mixin theme() {
+@mixin theme {
     mat-toolbar {
-        &.mat-toolbar {
-            @apply bg-surface-toolbar;
-        }
-
-        .toolbar-item {
-            --irr-icon-button-icon-size: 22px;
-            color: var(--color-primary-label);
-
-            span {
-                letter-spacing: normal;
-                @apply text-sm;
-            }
-        }
+        --mat-toolbar-container-background-color: var(--color-surface-toolbar);
     }
 }

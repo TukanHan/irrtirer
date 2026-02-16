@@ -11,9 +11,7 @@
 @use "./components/sidenav-theme" as sidenav;
 @use "./palettes/primary-palette" as *;
 
-@mixin _custom-theme($theme) {
-    @include mat.all-component-themes($theme);
-
+@mixin custom-theme() {
     @include toolbar.theme();
     @include button.theme();
     @include input.theme();
@@ -35,7 +33,7 @@
         typography: mat.m2-define-typography-config(),
         density: 0,
     ));
-    @include _custom-theme($irr-dark-theme);
+    @include mat.all-component-themes($irr-dark-theme);
 }
 
 @mixin material-light-theme() {
@@ -48,19 +46,23 @@
         typography: mat.m2-define-typography-config(),
         density: 0,
     ));
-    @include _custom-theme($irr-light-theme);
+    @include mat.all-component-themes($irr-light-theme);
 }
 
-.dark-theme {
-    color-scheme: dark;
-    @include material-dark-theme();
-}
+@layer base {
+    .dark-theme {
+        color-scheme: dark;
+        @include material-dark-theme();
+    }
 
-.light-theme {
-    color-scheme: light;
-    @include material-light-theme();
+    .light-theme {
+        color-scheme: light;
+        @include material-light-theme();
+    }
 }
 
 :root {
     @include button.variables();
 }
+
+@include custom-theme();
