@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
     selector: 'app-project',
     imports: [TranslateModule],
     templateUrl: './project.component.html',
-    styleUrl: './project.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex h-full items-center justify-center bg-surface' },
 })
 export class ProjectComponent {}

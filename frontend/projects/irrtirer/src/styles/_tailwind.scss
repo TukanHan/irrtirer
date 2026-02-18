@@ -21,6 +21,34 @@
 
     --font-sans: "Roboto", sans-serif;
     --font-serif: "Monomakh", serif;
+
+    --animate-fade-in: fadeIn 5s forwards;
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+@utility heading-hero {
+    @apply text-2xl font-serif text-contrast-medium tracking-wider;
+}
+
+@utility heading-hero-accent {
+    @apply text-5xl font-serif text-accent tracking-wider;
+}
+
+@utility block-label {
+    @apply text-sm font-sans text-contrast-high truncate;
+}
+
+@utility block-label-sm {
+    @apply text-xs font-sans text-contrast-high truncate;
+}
+
+@utility animated-word-fade-in {
+  opacity: 0;
+  @apply animate-fade-in;
 }
 
 .force {
@@ -29,8 +57,4 @@
 
     @apply text-contrast-max;
     @apply text-contrast-lightest;
-    @apply text-contrast-light;
-    @apply text-contrast-medium;
-    @apply text-contrast-high;
-    @apply text-contrast-highest;
 }
