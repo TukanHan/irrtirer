@@ -1,0 +1,23 @@
+@use "./components/toolbar-theme" as toolbar;
+@use "./components/button-theme" as button;
+@use "./components/input-theme" as input;
+@use "./components/menu-theme" as menu;
+@use "./components/tooltip-theme" as tooltip;
+@use "./components/icon-theme" as icon;
+@use "./components/dialog-theme" as dialog;
+@use "./components/autocomplete-theme" as autocomplete;
+@use "./components/sidenav-theme" as sidenav;
+
+:root {
+    @include button.variables();
+}
+
+@include toolbar.theme();
+@include button.theme();
+@include input.theme();
+@include menu.theme();
+@include tooltip.theme();
+@include icon.theme();
+@include dialog.theme();
+@include autocomplete.theme();
+@include sidenav.theme();
