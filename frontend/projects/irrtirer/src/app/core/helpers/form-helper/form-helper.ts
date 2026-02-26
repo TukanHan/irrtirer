@@ -5,7 +5,7 @@ export class FormHelper {
         return this.getErrorLabel(field.errors(), errorLabels);
     }
 
-    public static getErrorLabel(errors: ValidationError.WithField[], errorLabels: Record<string, () => string>): string | null {
+    public static getErrorLabel(errors: ValidationError.WithFieldTree[], errorLabels: Record<string, () => string>): string | null {
         for (const { kind } of errors) {
             if (kind in errorLabels) {
                 return errorLabels[kind]();
