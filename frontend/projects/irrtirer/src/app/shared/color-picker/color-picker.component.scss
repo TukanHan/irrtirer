@@ -19,18 +19,4 @@
             cursor: pointer;
         }
     }
-
-    .color-label {
-        display: flex;
-        flex-direction: column;
-
-        &__header {
-            color: var(--color-contrast-highest);
-        }
-
-        &__code {
-            color: var(--color-contrast-medium);
-            font-size: 14px;
-        }
-    }
 }
