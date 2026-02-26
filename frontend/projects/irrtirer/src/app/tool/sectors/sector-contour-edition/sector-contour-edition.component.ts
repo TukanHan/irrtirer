@@ -108,7 +108,7 @@ export class SectorContourEditionComponent implements OnInit {
         const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex());
         vertices.splice(indexOfSelectedVertex + 1, 0, vertex);
 
-        this.form.vertices().setControlValue(vertices);
+        this.form.vertices().controlValue.set(vertices);
         this.selectedVertex.set(vertex);
     }
 
@@ -118,7 +118,7 @@ export class SectorContourEditionComponent implements OnInit {
             .value()
             .filter((x) => x !== vertex);
 
-        this.form.vertices().setControlValue(vertices);
+        this.form.vertices().controlValue.set(vertices);
         if (vertex === this.selectedVertex()) {
             this.resetSelectedVertex();
         }
@@ -163,7 +163,7 @@ export class SectorContourEditionComponent implements OnInit {
     protected dropVertexBox(event: CdkDragDrop<string[]>): void {
         const vertices: Vector[] = this.form.vertices().value();
         moveItemInArray(vertices, event.previousIndex, event.currentIndex);
-        this.form.vertices().setControlValue(vertices);
+        this.form.vertices().controlValue.set(vertices);
     }
 
     protected getVertexLabel(vertex: Vector): string {
