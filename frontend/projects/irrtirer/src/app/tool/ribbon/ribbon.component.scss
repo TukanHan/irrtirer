@@ -1,5 +1,3 @@
-@use './../../../theme/components/button-theme' as *;
-
 :host {
     display: flex;
     flex-direction: row;
@@ -12,20 +10,17 @@
     gap: 6px;
 
     .size-display {
-        color: var(--irr-contrast-medium);
+        color: var(--color-contrast-medium);
         text-align: right;
         margin-left: auto;
     }
 
     .action {
-        ::ng-deep {
-            @include icon-button(32px, 24px);
-        }
-
-        color: var(--irr-contrast-medium);
+        --irr-icon-button-size: 32px;
+        color: var(--color-contrast-medium);
 
         &.active {
-            color: var(--irr-contrast-highest);
+            color: var(--color-contrast-highest);
         }
     }
 }

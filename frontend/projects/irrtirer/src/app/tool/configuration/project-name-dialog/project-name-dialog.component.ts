@@ -17,7 +17,6 @@ interface FileNameFormData {
 @Component({
     selector: 'app-project-name-dialog',
     imports: [MatFormFieldModule, MatInputModule, MatDialogModule, MatButtonModule, TranslateModule, FormField],
-    styleUrl: './project-name-dialog.component.scss',
     templateUrl: './project-name-dialog.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -1,11 +1,11 @@
-<div class="label">
+<div class="flex gap-2.5 items-baseline heading-hero">
     @let words = this.translate.instant('aboutAuthor.itWas') | sentenceToWord;
     @for(word of words; track $index) {
-        <span class="word normal" [class.normal]="true" [style.animationDelay]="$index * 0.75 + 's'">
+        <span class="animated-word-fade-in" [class.normal]="true" [style.animationDelay]="$index * 0.75 + 's'">
             {{ word }}
         </span>
     }
-    <span class="word highlighted" [style.animationDelay]="(words.length * 0.75 + 1)+ 's'">
+    <span class="animated-word-fade-in heading-hero-accent" [style.animationDelay]="(words.length * 0.75 + 1)+ 's'">
         {{ 'aboutAuthor.me' | translate }}
     </span>
 </div>

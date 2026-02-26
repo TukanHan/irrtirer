@@ -6,8 +6,8 @@ import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
     selector: 'app-author',
     imports: [TranslateModule, SentenceToWordPipe],
     templateUrl: './author.component.html',
-    styleUrl: './author.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex h-full items-center justify-center bg-surface' },
 })
 export class AuthorComponent {
     protected readonly translate = inject(TranslateService);

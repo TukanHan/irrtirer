@@ -1,5 +1,3 @@
-@use './../../../../../theme/gray-palette.scss' as *;
-
 :host {
     width: 100%;
     position: relative;
@@ -17,7 +15,7 @@
         width: 18px;
         height: 18px;
         border-radius: 50%;
-        border: 2px solid #{$gray-0};
+        border: 2px solid #fff;
         box-sizing: border-box;
         top: -5px;
         pointer-events: none;

@@ -1,55 +1,44 @@
-@use './../../theme/components/button-theme' as *;
+:host {
+    --mat-toolbar-standard-height: 55px;
+    height: var(--mat-toolbar-standard-height);
 
-.toolbar {
-    position: fixed;
-    height: 55px;
-    padding: 0 48px;
-    z-index: 2;
-    box-shadow: 0 3px 5px -1px #0003,
-                0 6px 10px #00000024,
-                0 1px 18px #0000001f;
+    .toolbar {
+        position: fixed;
+        padding: 0 48px;
+        z-index: 2;
+        box-shadow: 0 3px 5px -1px #0003,
+                    0 6px 10px #00000024,
+                    0 1px 18px #0000001f;
+        --mat-toolbar-container-background-color: var(--color-surface-toolbar);
+        --mat-toolbar-standard-height: inherit;
 
-    .toolbar-item {
-        &.first {
-            span {
-                font-size: 18px !important;
+        .toolbar-item {
+            --irr-icon-button-icon-size: 22px;
+            color: var(--color-primary-label);
+
+            &.active-button {
+                background: color-mix(in srgb, var(--color-primary), transparent 90%);
             }
         }
 
-        &.active-button {
-            background: color-mix(in srgb, var(--irr-primary-color), transparent 90%);
+        .mode {
+            .mat-icon {
+                font-weight: 300;
+            }
+            
+            --irr-icon-button-size: 36px;
+            --irr-icon-button-icon-size: 22px;
         }
-    }
-
-    .mode {
-        .mat-icon {
-            font-weight: 300;
-        }
-        
-        ::ng-deep {
-            @include icon-button(36px, 22px);
-        }
-    }
-
-    .example-spacer {
-        flex: 1 1 auto;
-    }
-
-    .language-label {
-        min-width: 20px;
-        display: block;
     }
 }
 
 .lang-radio-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    min-width: 150px;
+    min-width: 170px;
     padding: 0 10px;
 
     .lang-radio {
-        width: 100%;
         ::ng-deep {
             .mdc-form-field {
                 width: 100%;
@@ -58,10 +47,8 @@
                     display: flex;
                     width: 100%;
                     align-items: center;
-
-                    .mat-icon {
-                        margin-left: auto;
-                    }
+                    justify-content: space-between;
+                    gap: 16px;
                 }
             }
         }

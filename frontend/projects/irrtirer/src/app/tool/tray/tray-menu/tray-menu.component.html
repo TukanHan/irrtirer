@@ -1,4 +1,4 @@
-<div class="actions">
+<div class="flex flex-col gap-2.5">
     <button mat-flat-button color="accent" disabled>
         {{ 'tool.tiles.menu.loadFromFile' | translate }}
     </button>
@@ -10,11 +10,11 @@
     </button>
 </div>
 
-<div class="tiles-sets">
+<div class="flex flex-col gap-1.5 flex-1">
     @for(tilesSet of tilesSets(); track $index) {
         <app-tiles-set-list-elem [tilesSet]="tilesSet"/>
     } @empty {
-        <span class="no-sets">
+        <span class="m-auto text-contrast-light">
             {{ 'tool.tiles.menu.noTiles' | translate }}
         </span>
     }

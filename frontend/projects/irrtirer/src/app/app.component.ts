@@ -10,8 +10,8 @@ import { ThemeService } from './core/services/theme/theme.service';
     selector: 'app-root',
     imports: [RouterOutlet, ToolbarComponent, TranslateModule],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex flex-col h-dvh' },
 })
 export class AppComponent implements OnInit {
     public readonly title: string = 'Irrtirer';
