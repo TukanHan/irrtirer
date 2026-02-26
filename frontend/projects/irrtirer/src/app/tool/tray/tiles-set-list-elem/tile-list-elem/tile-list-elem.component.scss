@@ -1,14 +1,7 @@
 @use "./../../../../../styles/utils/list-item-box.scss" as *;
-@use "./../../../../../styles/utils/mixins.scss" as *;
-@use './../../../../../theme/components/button-theme' as *;
 
 :host {
     @include list-item-box();
-
-    .label {
-        font-size: 12px;
-        @include text-ellipsis();
-    }
 
     .elem-actions {
         display: flex;
@@ -17,11 +10,8 @@
         margin-left: 4px;
 
         .elem-action {
-            ::ng-deep {
-                @include icon-button(32px);
-            }
-
-            color: var(--irr-contrast-medium);
+            --irr-icon-button-size: 32px;
+            color: var(--color-contrast-medium);
             margin: -6px;
         }
     }

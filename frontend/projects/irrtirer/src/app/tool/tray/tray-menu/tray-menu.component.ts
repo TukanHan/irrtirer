@@ -11,8 +11,8 @@ import { TranslateModule } from '@ngx-translate/core';
     selector: 'app-tray-menu',
     imports: [MatButtonModule, TilesSetListElemComponent, TranslateModule],
     templateUrl: './tray-menu.component.html',
-    styleUrl: './tray-menu.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex flex-col gap-5' }
 })
 export class TrayMenuComponent {
     private readonly router = inject(Router);

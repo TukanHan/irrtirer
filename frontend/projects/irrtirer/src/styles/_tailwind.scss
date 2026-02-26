@@ -1,0 +1,41 @@
+@use "tailwindcss";
+@use "./palettes/gray-palette.scss" as *;
+
+@theme {
+    --color-accent: light-dark(#ffab40, #ffd740);
+    --color-primary: light-dark(#0288d1, #00dddd);
+    --color-primary-label: light-dark(#{$gray-87}, #00dddd);
+
+    --color-contrast-max: light-dark(#{$gray-0}, #{$gray-92});
+    --color-contrast-lightest: light-dark(#{$gray-20}, #{$gray-80});
+    --color-contrast-light: light-dark(#{$gray-30}, #{$gray-75});
+    --color-contrast-medium: light-dark(#{$gray-60}, #{$gray-46});
+    --color-contrast-high: light-dark(#{$gray-84}, #{$gray-20});
+    --color-contrast-highest: light-dark(#{$gray-92}, #{$gray-10});
+
+    --color-surface: light-dark(#{$gray-0}, #1e2023);
+    --color-surface-side: light-dark(#{$gray-10}, #{$gray-75});
+    --color-surface-panel: light-dark(#{$gray-0}, #{$gray-80});
+    --color-surface-panel-contrast: light-dark(#{$gray-80}, #e5e5e5);
+    --color-surface-toolbar: light-dark(#f3f3f3, #{$gray-80});
+
+    --font-sans: "Roboto", sans-serif;
+    --font-serif: "Monomakh", serif;
+
+    --animate-fade-in: fadeIn 5s forwards;
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+}
+
+.force {
+    @apply text-primary;
+    @apply text-primary-label;
+
+    @apply text-contrast-max;
+    @apply text-contrast-lightest;
+
+    @apply bg-surface-toolbar;
+}

@@ -1,6 +1,6 @@
-<mat-toolbar class="toolbar" color="primary">
-    <a mat-button class="toolbar-item first" routerLink="/tool" routerLinkActive="active-button">
-        {{ 'title' | translate }}
+<mat-toolbar class="toolbar">
+    <a mat-button class="toolbar-item" routerLink="/tool" routerLinkActive="active-button">
+        <span class="text-base">{{ 'title' | translate }}</span>
     </a>
 
     <a class="toolbar-item" mat-button routerLink="/project" routerLinkActive="active-button">
@@ -11,7 +11,7 @@
         {{ 'aboutAuthor.header' | translate }}
     </a>
 
-    <span class="example-spacer"></span>
+    <span class="flex-1"></span>
 
     <button matIconButton class="toolbar-item mode" (click)="toggleTheme()">
         <mat-icon class="material-symbols-outlined">{{themeMode() === 'dark' ? 'dark_mode' : 'light_mode'}}</mat-icon>
@@ -19,7 +19,7 @@
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
-        <span class="language-label">{{selectedLanguage() | titlecase}}</span>
+        <span class="block min-w-5">{{selectedLanguage() | titlecase}}</span>
     </button>
 
     <mat-menu #menu="matMenu">

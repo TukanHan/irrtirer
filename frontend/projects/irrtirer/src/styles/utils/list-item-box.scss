@@ -6,12 +6,10 @@
     padding: 10px 16px;
     box-sizing: border-box;
     border-radius: 4px;
-    background: var(--irr-contrast-lightest);
-    color: var(--irr-contrast-high);
-    font-size: 14px;
+    background: var(--color-contrast-lightest);
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
     &.selected {
-        background: var(--irr-contrast-light);
+        background: var(--color-contrast-light);
     }
 }

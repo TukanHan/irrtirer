@@ -22,8 +22,8 @@ const DEFAULT_PROJECT_NAME: string = "irrtirer_project";
     selector: 'app-config-menu',
     imports: [MatButtonModule, TranslateModule],
     templateUrl: './config-menu.component.html',
-    styleUrl: './config-menu.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex flex-col gap-2.5' }
 })
 export class ConfigMenuComponent {
     private readonly store = inject(Store);

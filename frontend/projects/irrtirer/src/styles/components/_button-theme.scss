@@ -1,0 +1,43 @@
+@use 'sass:math';
+
+@mixin variables() {
+    --irr-icon-button-size: 48px;
+    --irr-icon-button-icon-size: 24px;
+}
+
+@mixin theme {
+    button, a {
+        &.mat-mdc-button-base {
+            &.mdc-button {
+                --mat-button-filled-label-text-tracking: normal;
+                --mat-button-filled-container-shape: 20px;
+                --mat-button-text-label-text-tracking: normal;
+                --mat-button-text-container-shape: 20px;
+                --mat-button-filled-label-text-size: var(--text-sm);
+
+                padding: 0 12px !important;
+
+                .mat-mdc-button-touch-target {
+                    height: var(--mat-button-text-container-height);
+                }
+            }
+
+            &.mdc-icon-button {
+                --mat-icon-button-state-layer-size: var(--irr-icon-button-size);
+                padding: calc((var(--irr-icon-button-size) - var(--irr-icon-button-icon-size)) / 2);
+
+                .mat-mdc-button-touch-target {
+                    width: var(--mat-icon-button-state-layer-size);
+                    height: var(--mat-icon-button-state-layer-size);
+                }
+            }
+
+            .mat-icon {
+                width: var(--irr-icon-button-icon-size);
+                height: var(--irr-icon-button-icon-size);
+                font-size: var(--irr-icon-button-icon-size);
+                display: block;
+            }
+        }
+    }
+}
