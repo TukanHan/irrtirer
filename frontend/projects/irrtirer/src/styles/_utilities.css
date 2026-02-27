@@ -18,3 +18,21 @@
   opacity: 0;
   @apply animate-fade-in;
 }
+
+@custom-variant selected (&.selected);
+
+@utility list-item-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    @apply bg-contrast-lightest;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+
+    @variant selected {
+        background: var(--color-contrast-light);
+    }
+}

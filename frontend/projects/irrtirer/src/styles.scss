@@ -1,7 +1,7 @@
 @forward "./styles/tailwind";
 @forward "./styles/base-styles";
 @forward "./styles/material-theme";
-@forward "./styles/utilities";
+@forward "./styles/_utilities.css";
 @forward "./styles/material-overrides";
 
 @import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap") layer(external);

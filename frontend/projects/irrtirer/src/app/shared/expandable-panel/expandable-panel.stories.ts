@@ -6,12 +6,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     selector: 'app-dummy-item',
     template: `<ng-content />`,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    styles: [`
-        @use "./../../../styles/utils/list-item-box.scss" as *;
-        :host {
-            @include list-item-box();
-        }
-    `]
+    host: { class: 'list-item-box' },
 })
 class DummyItemComponent {}
 

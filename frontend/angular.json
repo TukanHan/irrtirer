@@ -97,10 +97,9 @@
           }
         },
         "storybook": {
-          "builder": "@storybook/angular:start-storybook",
+          "builder": "@analogjs/storybook-angular:start-storybook",
           "options": {
             "configDir": "projects/irrtirer/.storybook",
-            "browserTarget": "irrtirer:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",
@@ -112,10 +111,9 @@
           }
         },
         "build-storybook": {
-          "builder": "@storybook/angular:build-storybook",
+          "builder": "@analogjs/storybook-angular:build-storybook",
           "options": {
             "configDir": "projects/irrtirer/.storybook",
-            "browserTarget": "irrtirer:build",
             "compodoc": true,
             "compodocArgs": [
               "-e",

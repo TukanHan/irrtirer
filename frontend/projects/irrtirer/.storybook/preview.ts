@@ -7,6 +7,7 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideHttpClient } from '@angular/common/http';
 import { StorybookI18nService } from './storybook-I18n.service';
 import { inject, provideAppInitializer } from '@angular/core';
+import '../src/styles.scss';
 
 setCompodocJson(docJson);
 
