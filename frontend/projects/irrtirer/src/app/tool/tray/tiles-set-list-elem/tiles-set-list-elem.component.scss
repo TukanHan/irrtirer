@@ -1,9 +1,5 @@
-@use "./../../../../styles/utils/list-item-box.scss" as *;
-
 :host {
     .list-elem {
-        @include list-item-box();
-
         .elem-actions {
             display: flex;
             flex-direction: row;

@@ -1,5 +1,3 @@
-@use "./../../../../styles/utils/list-item-box.scss" as *;
-
 :host {
     display: flex;
     flex-direction: column;
@@ -23,7 +21,6 @@
     gap: 6px;
 
     .sector-box {
-        @include list-item-box();
         cursor: move;
 
         .sector-actions {
@@ -43,7 +40,6 @@
 }
 
 .cdk-drag-preview {
-    @include list-item-box();
     cursor: grab;
 
     .sector-actions {

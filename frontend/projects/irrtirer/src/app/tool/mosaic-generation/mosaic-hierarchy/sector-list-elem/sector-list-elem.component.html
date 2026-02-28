@@ -1,4 +1,4 @@
-<div class="parent-elem">
+<div class="parent-elem list-item-box">
     <span class="block-label">{{sector().schema.name}}</span>
     <div class="sector-actions">
         <button class="sector-action" mat-icon-button (click)="toggleTilesVisibility()">
@@ -15,10 +15,10 @@
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
     @let items = items$() | async;
-    @if(items.length) {
+    @if(items && items.length) {
         <app-scrollable-list [items]="items">
             <ng-template #element let-tile>
-                <div class="tile">
+                <div class="list-item-box">
                     <span class="block-label-sm">
                         {{tile.tileTransform.tileId}}
                     </span>

@@ -11,7 +11,8 @@ import { TranslateModule } from '@ngx-translate/core';
     imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslateModule],
     templateUrl: './tile-list-elem.component.html',
     styleUrl: './tile-list-elem.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'list-item-box' },
 })
 export class TileListElemComponent {
     public readonly tile = input.required<TileModel>();

@@ -1,18 +1,12 @@
-@use "./../../../../../styles/utils/list-item-box.scss" as *;
+.elem-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-left: 4px;
 
-:host {
-    @include list-item-box();
-
-    .elem-actions {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-        margin-left: 4px;
-
-        .elem-action {
-            --irr-icon-button-size: 32px;
-            color: var(--color-contrast-medium);
-            margin: -6px;
-        }
+    .elem-action {
+        --irr-icon-button-size: 32px;
+        color: var(--color-contrast-medium);
+        margin: -6px;
     }
 }

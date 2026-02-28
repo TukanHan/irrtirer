@@ -1,9 +1,5 @@
-@use "./../../../../../styles/utils/list-item-box.scss" as *;
-
 :host {
     .parent-elem {
-        @include list-item-box();
-
         .sector-actions {
             display: flex;
             flex-direction: row;
@@ -38,10 +34,6 @@
         display: flex;
         flex-direction: column;
         gap: 6px;
-
-        .tile {
-            @include list-item-box();
-        }
 
         .empty {
             align-self: center;

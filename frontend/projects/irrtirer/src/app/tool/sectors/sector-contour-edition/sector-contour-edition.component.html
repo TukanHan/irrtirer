@@ -17,11 +17,13 @@
     @if(form.vertices().value().length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
             @for (vertex of form.vertices().value(); track vertex) {
-                <div class="vertex-box" [class.selected]="vertex === selectedVertex()" cdkDrag (mousedown)="onBoxSelected(vertex)">
-                    <span class="block-label">{{ getVertexLabel(vertex) }}</span>
-                    <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
-                        <mat-icon matListIcon>close</mat-icon>
-                    </button>
+                <div cdkDrag class="vertex-box" (mousedown)="onBoxSelected(vertex)">
+                    <div class="list-item-box" [class.selected]="vertex === selectedVertex()" >
+                        <span class="block-label">{{ getVertexLabel(vertex) }}</span>
+                        <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
+                            <mat-icon matListIcon>close</mat-icon>
+                        </button>
+                    </div>
                 </div>
             }
         </div>
