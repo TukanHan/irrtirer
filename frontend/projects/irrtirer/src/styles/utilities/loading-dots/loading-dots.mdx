@@ -1,0 +1,20 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/addon-docs/blocks';
+import * as LoadingDotsStories from './loading-dots.stories';
+import rawCss from './loading-dots.css?raw';
+
+<Meta of={LoadingDotsStories} title="Style/Animacje/Loading Dots" />
+
+# Animacja: Loading Dots
+
+Klasa `loading-dots` animuje pojawianie się kropek w trakcie ładowania.
+
+## Podgląd
+
+Umożliwia ustawienie czasu trwania animacji za pomocą zmiennej CSS `--loading-dots-duration`.
+
+<Canvas of={LoadingDotsStories.Example} />
+<Controls of={LoadingDotsStories.Example} />
+
+## Kod źródłowy
+
+<Source code={rawCss} language="css" dark format={false} />

@@ -8,15 +8,19 @@ interface ExpandablePanelStoryProps {
 const meta: Meta<ExpandablePanelStoryProps> = {
     title: 'Style/Atomy/List Item Box',
     argTypes: {
-        selected: {
-            control: 'boolean',
-            description: 'Czy element jest zaznaczony',
-            category: 'Class',
-        },
         content: {
             control: 'text',
             description: 'Treść elementu w przykładzie',
-            category: 'Content',
+            table: {
+                category: 'Content',
+            }
+        },
+        selected: {
+            control: 'boolean',
+            description: 'Czy element jest zaznaczony',
+            table: {
+                category: 'Class',
+            }
         },
     },
     globals: { locale: 'pl' },
@@ -27,8 +31,8 @@ type Story = StoryObj<ExpandablePanelStoryProps>;
 
 export const Example: Story = {
     args: {
-        selected: false,
         content: 'text',
+        selected: false,
     },
     render: (args) => {
         return {

@@ -1,0 +1,9 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@utility word-fade-in {
+    animation: fadeIn var(--word-fade-in-duration, 5s) forwards;
+    @apply opacity-0;
+}

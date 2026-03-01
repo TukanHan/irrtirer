@@ -31,13 +31,6 @@
 
     --font-sans: "Roboto", sans-serif;
     --font-serif: "Monomakh", serif;
-
-    --animate-fade-in: fadeIn 5s forwards;
-
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
 }
 
 .force {

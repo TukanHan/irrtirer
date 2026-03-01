@@ -13,6 +13,8 @@ Application supports both dark and light themes, which can be switched at any ti
 - SignalR
 - ngx-translate
 - Vite
+- Tailwind CSS
+- Storybook
 
 ## Usage
 

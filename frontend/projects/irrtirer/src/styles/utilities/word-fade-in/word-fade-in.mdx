@@ -1,0 +1,20 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/addon-docs/blocks';
+import * as WordFadeInStories from './word-fade-in.stories';
+import rawCss from './word-fade-in.css?raw';
+import pipeCode from './word-fade-in.stories?raw';
+
+<Meta of={WordFadeInStories} title="Style/Animacje/Word Fade In" />
+
+# Animacja: Word Fade In
+
+Klasa `word-fade-in` animuje pojawienie się wyrazu. Wraz z użyciem innych mechanizmów można uzyskać efekt stopniowego pojawiania się kolejnych słów w zdaniu.
+Przykładowo, można użyć tej klasy w połączeniu z pipe'm `sentenceToWord`, aby rozbić zdanie na słowa i animować każde z nich z różnym opóźnieniem.
+
+## Podgląd
+
+<Canvas of={WordFadeInStories.Example} />
+<Controls of={WordFadeInStories.Example} />
+
+## Kod źródłowy
+
+<Source code={rawCss} language="css" dark format={false} />

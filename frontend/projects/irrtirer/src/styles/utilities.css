@@ -1,5 +1,7 @@
 @import './utilities/chevron/chevron.css';
 @import './utilities/list-item-box/list-item-box.css';
+@import './utilities/word-fade-in/word-fade-in.css';
+@import './utilities/loading-dots/loading-dots.css';
 
 @utility heading-hero {
     @apply text-2xl font-serif text-contrast-medium tracking-wider;
@@ -15,9 +17,4 @@
 
 @utility block-label-sm {
     @apply text-xs font-sans text-contrast-high truncate;
-}
-
-@utility animated-word-fade-in {
-  opacity: 0;
-  @apply animate-fade-in;
 }
