@@ -1,4 +1,4 @@
-var a=Object.defineProperty;var o=(n,e)=>a(n,"name",{value:e,configurable:!0});import{j as t,M as l,C as d,e as x,S as c}from"./blocks-CvTe43an.js";import{useMDXComponents as r}from"./index-DZX-eLRT.js";import{L as m,E as s}from"./list-item-box.stories-Bk8bxdMV.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-BcbxFC_P.js";const p=`@utility list-item-box {
+var a=Object.defineProperty;var o=(n,e)=>a(n,"name",{value:e,configurable:!0});import{j as t,M as l,C as d,e as x,S as c}from"./blocks-BvJfDUeM.js";import{useMDXComponents as r}from"./index-JQ9DS79x.js";import{L as m,E as s}from"./list-item-box.stories-DwNZtgIs.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-DixSXlI8.js";const p=`@utility list-item-box {
     @apply flex flex-row items-center justify-between rounded-sm bg-contrast-lightest px-4 py-2.5;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
