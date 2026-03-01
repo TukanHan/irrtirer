@@ -1,7 +1,7 @@
 @mixin theme() {
     .cdk-overlay-pane {
         .mat-mdc-autocomplete-panel {
-            padding: 0;
+            @apply p-0;
 
             .mat-pseudo-checkbox {
                 display: none;

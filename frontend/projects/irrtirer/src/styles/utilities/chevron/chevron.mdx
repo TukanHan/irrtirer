@@ -1,0 +1,19 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/addon-docs/blocks';
+import * as ChevronStories from './chevron.stories';
+import rawCss from './chevron.css?raw';
+
+<Meta of={ChevronStories} title="Style/Animacje/Chevron" />
+
+# Animacja Chevron
+
+Standardowa animacja obrotu ikony strzałki o 180 stopni, sygnalizująca rozkładanie lub zwijanie elementów interfejsu.
+
+## Podgląd
+
+Klasa `chevron` jest nakładana na element `mat-icon` i współpracuje z klasą `closed`, która jest dodawana, gdy element jest zwinięty.
+
+<Canvas of={ChevronStories.Example} />
+
+## Kod źródłowy
+
+<Source code={rawCss} language="css" dark format={false} />

@@ -1,23 +1,33 @@
 @use "tailwindcss";
-@use "./palettes/gray-palette.scss" as *;
 
 @theme {
+    --gray-10: #e6e6e6;
+    --gray-20: #cccccc;
+    --gray-30: #b3b3b3;
+    --gray-46: #898989;
+    --gray-60: #666666;
+    --gray-75: #3f3f3f;
+    --gray-80: #333333;
+    --gray-84: #292929;
+    --gray-87: #212121;
+    --gray-92: #141414;
+
     --color-accent: light-dark(#ffab40, #ffd740);
     --color-primary: light-dark(#0288d1, #00dddd);
-    --color-primary-label: light-dark(#{$gray-87}, #00dddd);
+    --color-primary-label: light-dark(var(--gray-87), #00dddd);
 
-    --color-contrast-max: light-dark(#{$gray-0}, #{$gray-92});
-    --color-contrast-lightest: light-dark(#{$gray-20}, #{$gray-80});
-    --color-contrast-light: light-dark(#{$gray-30}, #{$gray-75});
-    --color-contrast-medium: light-dark(#{$gray-60}, #{$gray-46});
-    --color-contrast-high: light-dark(#{$gray-84}, #{$gray-20});
-    --color-contrast-highest: light-dark(#{$gray-92}, #{$gray-10});
+    --color-contrast-max: light-dark(var(--color-white), var(--gray-92));
+    --color-contrast-lightest: light-dark(var(--gray-20), var(--gray-80));
+    --color-contrast-light: light-dark(var(--gray-30), var(--gray-75));
+    --color-contrast-medium: light-dark(var(--gray-60), var(--gray-46));
+    --color-contrast-high: light-dark(var(--gray-84), var(--gray-20));
+    --color-contrast-highest: light-dark(var(--gray-92), var(--gray-10));
 
-    --color-surface: light-dark(#{$gray-0}, #1e2023);
-    --color-surface-side: light-dark(#{$gray-10}, #{$gray-75});
-    --color-surface-panel: light-dark(#{$gray-0}, #{$gray-80});
-    --color-surface-panel-contrast: light-dark(#{$gray-80}, #e5e5e5);
-    --color-surface-toolbar: light-dark(#f3f3f3, #{$gray-80});
+    --color-surface: light-dark(var(--color-white), #1e2023);
+    --color-surface-side: light-dark(var(--gray-10), var(--gray-75));
+    --color-surface-panel: light-dark(var(--color-white), var(--gray-80));
+    --color-surface-panel-contrast: light-dark(var(--gray-80), #e5e5e5);
+    --color-surface-toolbar: light-dark(#f3f3f3, var(--gray-80));
 
     --font-sans: "Roboto", sans-serif;
     --font-serif: "Monomakh", serif;

@@ -7,8 +7,8 @@ import { AsyncPipe } from '@angular/common';
     selector: 'app-mosaic-hierarchy',
     imports: [AsyncPipe, SectorListElemComponent],
     templateUrl: './mosaic-hierarchy.component.html',
-    styleUrl: './mosaic-hierarchy.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex flex-col gap-1.5' },
 })
 export class MosaicHierarchyComponent {
     protected readonly service = inject(MosaicGenerationService);

@@ -1,0 +1,18 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/addon-docs/blocks';
+import * as ListItemBoxStories from './list-item-box.stories';
+import rawCss from './list-item-box.css?raw';
+
+<Meta of={ListItemBoxStories} title="Style/Atomy/List Item Box" />
+
+# List Item Box
+
+Klasa `list-item-box` definiuje stylizację dla elementów listy.
+
+## Podgląd
+
+<Canvas of={ListItemBoxStories.Example} />
+<Controls of={ListItemBoxStories.Example} />
+
+## Kod źródłowy
+
+<Source code={rawCss} language="css" dark format={false} />

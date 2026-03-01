@@ -12,14 +12,6 @@
         .toggle-button {
             margin-left: auto;
             --irr-icon-button-size: 32px;
-
-            .chevron {
-                transition: all 0.25s ease;
-    
-                &--closed {
-                    transform: rotate(180deg);
-                }
-            }
         }
     }
 }

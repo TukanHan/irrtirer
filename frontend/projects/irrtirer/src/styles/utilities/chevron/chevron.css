@@ -1,0 +1,7 @@
+@utility chevron {
+    @apply transition-all duration-250 ease-in-out;
+
+    &.closed {
+        @apply rotate-180;
+    }
+}

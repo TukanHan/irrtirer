@@ -2,7 +2,7 @@
     .mat-mdc-menu-panel {
         &.paddingless {
             .mat-mdc-menu-content {
-                padding: 0;
+                @apply p-0;
             }
         }
     }

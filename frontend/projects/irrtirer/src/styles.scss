@@ -1,8 +1,9 @@
 @forward "./styles/tailwind";
 @forward "./styles/base-styles";
 @forward "./styles/material-theme";
-@forward "./styles/_utilities.css";
 @forward "./styles/material-overrides";
+
+@import "./styles/utilities.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap") layer(external);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap") layer(external);

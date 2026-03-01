@@ -17,14 +17,6 @@
     
             .toggle-action {
                 color: var(--color-contrast-medium);
-
-                .chevron {
-                    transition: all 0.25s ease;
-        
-                    &--closed {
-                        transform: rotate(180deg);
-                    }
-                }
             }
         }
     }

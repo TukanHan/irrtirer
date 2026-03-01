@@ -1,5 +1,6 @@
 <app-mosaic-hierarchy/>
 
-@if(progressState()) {
-    <app-progress-info class="info" [infoState]="progressState()"/>
+@let progress = progressState();
+@if(progress) {
+    <app-progress-info class="info" [infoState]="progress"/>
 }
