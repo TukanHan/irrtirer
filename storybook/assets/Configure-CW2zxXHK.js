@@ -1,4 +1,4 @@
-var s=Object.defineProperty;var e=(t,n)=>s(t,"name",{value:n,configurable:!0});import{j as r,M as l}from"./blocks-BjIBUOXm.js";import{useMDXComponents as o}from"./index-C-6ZGUvt.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-ZbkurkVF.js";function i(t){const n={h1:"h1",h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...o(),...t.components};return r.jsxs(r.Fragment,{children:[r.jsx(l,{title:"Biblioteka kontrolek irrtirer"}),`
+var s=Object.defineProperty;var e=(t,n)=>s(t,"name",{value:n,configurable:!0});import{j as r,M as l}from"./blocks-CvTe43an.js";import{useMDXComponents as o}from"./index-DZX-eLRT.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-BcbxFC_P.js";function i(t){const n={h1:"h1",h2:"h2",li:"li",p:"p",strong:"strong",ul:"ul",...o(),...t.components};return r.jsxs(r.Fragment,{children:[r.jsx(l,{title:"Biblioteka kontrolek irrtirer"}),`
 `,r.jsx(n.h1,{id:"biblioteka-kontrolek-irrtirer",children:"Biblioteka kontrolek Irrtirer"}),`
 `,r.jsxs(n.p,{children:["Witaj w dokumentacji biblioteki kontrolek projektu ",r.jsx(n.strong,{children:"Irrtirer"}),"."]}),`
 `,r.jsx(n.h2,{id:"stack-techniczny",children:"Stack Techniczny:"}),`
