@@ -1,4 +1,4 @@
-var c=Object.defineProperty;var n=(o,t)=>c(o,"name",{value:t,configurable:!0});import{U as d,L as p,s as f,N as i,O as l,V as P,H as g,Q as u,T as h,W as x,X as S,J as b}from"./iframe-DixSXlI8.js";import{M as _}from"./button-DyLnDtBy.js";import"./preload-helper-Cc2_yIPf.js";import"./_icon-button-chunk-B-NEwwTQ.js";import"./_animation-chunk-BGx_3jlP.js";import"./bidi-KcUjW4AA.js";const z=`@if(hasPreviousPage()) {
+var c=Object.defineProperty;var n=(o,t)=>c(o,"name",{value:t,configurable:!0});import{U as d,L as p,s as f,N as i,O as l,V as P,H as g,Q as u,T as h,W as x,X as S,J as b}from"./iframe-BA8P8WBF.js";import{M as _}from"./button-DTDbvVN5.js";import"./preload-helper-Cc2_yIPf.js";import"./_icon-button-chunk-CzdXi9Jv.js";import"./_animation-chunk-COYwMrcD.js";import"./bidi-C7rOlZ5h.js";const z=`@if(hasPreviousPage()) {
     @let previousPages = previousPageNumbers();
     <button mat-flat-button class="page-button previous" (click)="goToPreviousPage()">
         {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}

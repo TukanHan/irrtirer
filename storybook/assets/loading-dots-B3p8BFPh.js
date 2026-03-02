@@ -1,4 +1,4 @@
-var d=Object.defineProperty;var a=(t,o)=>d(t,"name",{value:o,configurable:!0});import{j as n,M as r,C as c,e as l,S as m}from"./blocks-BvJfDUeM.js";import{useMDXComponents as s}from"./index-JQ9DS79x.js";import{L as j,E as e}from"./loading-dots.stories-DmBQgNZB.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-DixSXlI8.js";const x=`@keyframes dots {
+var d=Object.defineProperty;var a=(t,o)=>d(t,"name",{value:o,configurable:!0});import{j as n,M as r,C as c,e as l,S as m}from"./blocks-qFJwgttv.js";import{useMDXComponents as s}from"./index--4_C1rTw.js";import{L as j,E as e}from"./loading-dots.stories-B4bH9ns2.js";import"./preload-helper-Cc2_yIPf.js";import"./iframe-BA8P8WBF.js";const x=`@keyframes dots {
     0%, 20% { content: "." }
     40% { content: ".." }
     60% { content: "..." }
