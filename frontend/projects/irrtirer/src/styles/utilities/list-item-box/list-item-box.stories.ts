@@ -34,14 +34,12 @@ export const Example: Story = {
         content: 'text',
         selected: false,
     },
-    render: (args) => {
-        return {
-            props: args,
-            template: `
-                <div class="list-item-box" [class.selected]="selected">
-                    {{ content }}
-                </div>
-            `,
-        };
-    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <div class="list-item-box" [class.selected]="selected">
+                {{ content }}
+            </div>
+        `,
+    }),
 };

@@ -1,0 +1,34 @@
+import { Meta, Canvas, Controls, Source } from '@storybook/addon-docs/blocks';
+import * as TypographyStories from './typography.stories';
+import rawCss from './typography.css?raw';
+
+<Meta of={TypographyStories} title="Style/Typografia" />
+
+# Typografia
+
+Zdefiniowane klasy typograficzne umożliwiają spójne formatowanie tekstu w całym projekcie.
+
+## Podgląd
+
+<Canvas of={TypographyStories.Example} />
+<Controls of={TypographyStories.Example} />
+
+### Heading Hero
+
+<Canvas of={TypographyStories.HeadingHero} />
+
+### Heading Hero Accent
+
+<Canvas of={TypographyStories.HeadingHeroAccent} />
+
+### Block Label
+
+<Canvas of={TypographyStories.BlockLabel} />
+
+### Block Label Sm
+
+<Canvas of={TypographyStories.BlockLabelSm} />
+
+## Kod źródłowy
+
+<Source code={rawCss} language="css" dark format={false} />

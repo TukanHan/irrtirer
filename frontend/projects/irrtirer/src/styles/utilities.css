@@ -2,19 +2,4 @@
 @import './utilities/list-item-box/list-item-box.css';
 @import './utilities/word-fade-in/word-fade-in.css';
 @import './utilities/loading-dots/loading-dots.css';
-
-@utility heading-hero {
-    @apply text-2xl font-serif text-contrast-medium tracking-wider;
-}
-
-@utility heading-hero-accent {
-    @apply text-5xl font-serif text-accent tracking-wider;
-}
-
-@utility block-label {
-    @apply text-sm font-sans text-contrast-high truncate;
-}
-
-@utility block-label-sm {
-    @apply text-xs font-sans text-contrast-high truncate;
-}
+@import './utilities/typography/typography.css';
