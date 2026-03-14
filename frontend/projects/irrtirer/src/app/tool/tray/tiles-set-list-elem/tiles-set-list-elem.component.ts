@@ -20,7 +20,6 @@ import { ScrollableListComponent } from '../../../shared/scrollable-list/scrolla
     selector: 'app-tiles-set-list-elem',
     imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslateModule, ScrollableListComponent],
     templateUrl: './tiles-set-list-elem.component.html',
-    styleUrl: './tiles-set-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TilesSetListElemComponent {

@@ -10,9 +10,8 @@ import { TranslateModule } from '@ngx-translate/core';
     selector: 'app-tile-list-elem',
     imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslateModule],
     templateUrl: './tile-list-elem.component.html',
-    styleUrl: './tile-list-elem.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    host: { class: 'list-item-box' },
+    host: { class: 'list-item-box gap-3' },
 })
 export class TileListElemComponent {
     public readonly tile = input.required<TileModel>();

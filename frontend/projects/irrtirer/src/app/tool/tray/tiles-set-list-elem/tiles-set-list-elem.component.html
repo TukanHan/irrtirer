@@ -1,13 +1,13 @@
 @let tilesSetValue = tilesSet();
 <div class="list-elem list-item-box">
     <span class="block-label">{{ tilesSetValue.name }}</span>
-    <div class="elem-actions">
-        <button class="elem-action" mat-icon-button [matMenuTriggerFor]="menu">
+    <div class="flex -m-1.5">
+        <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon matListIcon>
                 more_vert
             </mat-icon>
         </button>
-        <button class="elem-action toggle-action" mat-icon-button (click)="toggleTilesList()">
+        <button class="button-size-small !text-contrast-medium" mat-icon-button (click)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()">
                 keyboard_arrow_up
             </mat-icon>
@@ -31,8 +31,8 @@
         </mat-menu>
     </div>
 </div>
-<app-expandable-panel class="panel" [isOpen]="isOpen()">
-    <app-scrollable-list [items]="tilesSetValue.tiles" >
+<app-expandable-panel [isOpen]="isOpen()">
+    <app-scrollable-list class="mt-1.5" [items]="tilesSetValue.tiles" >
         <ng-template #element let-tile>
             <app-tile-list-elem [tile]="tile"/>
         </ng-template>

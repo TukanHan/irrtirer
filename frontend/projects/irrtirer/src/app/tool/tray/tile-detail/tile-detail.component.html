@@ -1,16 +1,16 @@
-<div class="actions">
-    <button mat-flat-button (click)="navigateToMenu()">
+<div class="flex flex-row gap-3">
+    <button class="flex-1" mat-flat-button (click)="navigateToMenu()">
         {{ 'common.return' | translate }}
     </button>
-    <button mat-flat-button color="accent" disabled>
+    <button class="flex-1" mat-flat-button color="accent" disabled>
         {{ 'common.edit' | translate }}
     </button>
 </div>
 
-<div class="details">
+<div class="flex flex-1 flex-col gap-2">
     @if(tile(); as tile) {
-        <div class="id text-contrast-medium">
-            <div class="label">{{ 'tool.tiles.details.tileId' | translate }}:</div>
+        <div class="p-0.5 text-contrast-medium">
+            <div class="font-medium">{{ 'tool.tiles.details.tileId' | translate }}:</div>
             <div class="text-xs truncate">{{tile.id}}</div>
         </div>
 
@@ -19,6 +19,6 @@
             [ngModel]="tile.color"
             [label]="translate.instant('tool.tiles.details.tileColor')"/>
     } @else { 
-        <div class="no-exist">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
+        <div class="m-auto text-contrast-medium">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
     }
 </div>

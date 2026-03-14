@@ -23,6 +23,10 @@
             }
 
             &.mdc-icon-button {
+                &.button-size-small {
+                    --irr-icon-button-size: 32px;
+                }
+
                 --mat-icon-button-state-layer-size: var(--irr-icon-button-size);
                 padding: calc((var(--irr-icon-button-size) - var(--irr-icon-button-icon-size)) / 2);
 

@@ -12,8 +12,8 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-tile-detail',
     imports: [TranslateModule, MatButtonModule, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
-    styleUrl: './tile-detail.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: { class: 'flex flex-col gap-3 h-full' },
 })
 export class TileDetailComponent implements OnInit {
     protected readonly tile = signal<TileModel | null>(null);
