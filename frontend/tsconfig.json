@@ -25,6 +25,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "strictNullChecks": false, //remove in future
     //"strict": true
   },
   "angularCompilerOptions": {

@@ -9,6 +9,8 @@ import {
     model,
     output,
     viewChild,
+    input,
+    linkedSignal,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color from 'color';
@@ -25,7 +27,8 @@ export interface CursorDataModel {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit {
-    public readonly value = model.required<number>();
+    public readonly valueInput = input.required<number>({ alias: 'value' });
+    public readonly value = linkedSignal(this.valueInput);
 
     public readonly valueChange = output<number>();
 
@@ -72,7 +75,7 @@ export class ColorSliderComponent implements AfterViewInit {
         this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mouseup', this.onMouseUp);
         window.addEventListener('mousemove', this.onMouseMove);
-        
+
         this.destroyRef.onDestroy(() => {
             this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
             window.removeEventListener('mouseup', this.onMouseUp);

@@ -1,52 +1,78 @@
 <mat-sidenav-container class="tool-sidenav-container">
     <mat-sidenav mode="side" opened>
         <mat-nav-list>
-            <a mat-list-item 
-                routerLink="config" 
-                routerLinkActive="active" 
+            <a
+                mat-list-item
+                routerLink="config"
+                routerLinkActive="active"
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.projectSettings')">
-                <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
+                [matTooltip]="translate.instant('tool.nav.projectSettings')"
+            >
+                <mat-icon matListIcon class="material-symbols-outlined"
+                    >flowsheet</mat-icon
+                >
             </a>
-            <a mat-list-item 
-                routerLink="tray" 
-                routerLinkActive="active" 
+            <a
+                mat-list-item
+                routerLink="tray"
+                routerLinkActive="active"
                 [disabled]="tilesLinkDisabled$ | async"
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.tileTrey')">
-                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
+                [matTooltip]="translate.instant('tool.nav.tileTrey')"
+            >
+                <mat-icon matListIcon class="material-symbols-outlined"
+                    >dashboard</mat-icon
+                >
             </a>
-            <a mat-list-item 
-                routerLink="sectors" 
-                routerLinkActive="active" 
+            <a
+                mat-list-item
+                routerLink="sectors"
+                routerLinkActive="active"
                 [disabled]="sectorsLinkDisabled$ | async"
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.sectors')">
-                <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
+                [matTooltip]="translate.instant('tool.nav.sectors')"
+            >
+                <mat-icon matListIcon class="material-symbols-outlined"
+                    >view_in_ar</mat-icon
+                >
             </a>
-            <a mat-list-item 
-                routerLink="generating" 
-                routerLinkActive="active" 
+            <a
+                mat-list-item
+                routerLink="generating"
+                routerLinkActive="active"
                 [disabled]="mosaicGeneratingLinkDisabled$ | async"
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.generation')">
-                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
+                [matTooltip]="translate.instant('tool.nav.generation')"
+            >
+                <mat-icon matListIcon class="material-symbols-outlined"
+                    >rocket_launch</mat-icon
+                >
             </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
-            <app-ribbon 
-                [actions]="ribbonActions()" 
-                [viewportSize]="activeCanvas?.viewport?.cmSize"/>
+            <app-ribbon
+                [actions]="ribbonActions()"
+                [viewportSize]="
+                    $safeNavigationMigration(activeCanvas?.viewport?.cmSize)
+                "
+            />
             <div class="main">
-                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas"/>
+                <ac-active-canvas
+                    #activeCanvas
+                    [options]="canvasOptions()"
+                    class="canvas"
+                />
                 <div class="panel">
-                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()"/>
+                    <router-outlet
+                        (activate)="onActivate($event)"
+                        (deactivate)="onDeactivate()"
+                    />
                 </div>
             </div>
         </div>
