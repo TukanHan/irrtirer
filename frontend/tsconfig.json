@@ -8,9 +8,7 @@
       ]
     },
     "outDir": "./dist/out-tsc",
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "useUnknownInCatchVariables": true,
+    "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
@@ -22,11 +20,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "strictNullChecks": false, //remove in future
-    //"strict": true
+    "target": "ES2023",
+    "module": "esnext",
+    "useDefineForClassFields": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

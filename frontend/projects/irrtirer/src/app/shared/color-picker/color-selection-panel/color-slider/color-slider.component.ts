@@ -22,7 +22,7 @@ export interface CursorDataModel {
     styleUrl: './color-slider.component.scss',
 })
 export class ColorSliderComponent implements AfterViewInit {
-    public readonly value = model<number>();
+    public readonly value = model<number>(0);
 
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 

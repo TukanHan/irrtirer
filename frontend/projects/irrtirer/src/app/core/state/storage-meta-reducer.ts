@@ -19,7 +19,7 @@ function getSavedState(localStorageKey: string): object | null {
 
 export function storageMetaReducer<S, A extends Action = Action>(reducer: ActionReducer<S, A>) {
     let onInit = true;
-    return function (state: S, action: A): S {
+    return function (state: S | undefined, action: A): S {
         const nextState: S = reducer(state, action);
 
         if (onInit) {

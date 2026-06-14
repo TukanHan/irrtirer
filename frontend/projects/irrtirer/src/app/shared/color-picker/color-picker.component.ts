@@ -35,6 +35,10 @@ export class ColorPickerComponent implements ControlValueAccessor, FormValueCont
         this.onChange(this.value());
     });
 
+    protected readonly touchedEffect = effect(() => {
+        this.onTouched();
+    });
+
     protected toggleColorPanel(): void {
         if(!this.disabled()) {
             this.isOpen.update((value) => !value);

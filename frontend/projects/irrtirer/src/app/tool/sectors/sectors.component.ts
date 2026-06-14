@@ -180,7 +180,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private focusOnImage(): void {
-        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport);
+        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }

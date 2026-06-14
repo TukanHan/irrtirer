@@ -52,7 +52,7 @@
         <div class="content">
             <app-ribbon
                 [actions]="ribbonActions()"
-                [viewportSize]="activeCanvas?.viewport?.cmSize"
+                [viewportSize]="viewportSize()"
             />
             <div class="main">
                 <ac-active-canvas

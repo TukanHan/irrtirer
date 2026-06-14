@@ -7,7 +7,7 @@ import { TileObject } from '../../shared/canvas-objects/tile-object';
 export class GeneratedSectorModel {
     public schema: SectorSchema;
     public visualObjects: CanvasObject[] = [];
-    public countOfSections?: number;
+    public countOfSections!: number;
     public sections: GeneratedSectionModel[] = [];
 
     private readonly tilesSub = new BehaviorSubject<GeneratedTileModel[]>([]);
@@ -41,7 +41,7 @@ export class GeneratedSectorModel {
         const tiles: GeneratedTileModel[] = this.tilesSub.value;
         if (tiles.length) {
             tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
-            tiles[0].tileObject.parentCanvas.redraw();
+            tiles[0].tileObject.parentCanvas?.redraw();
         }
     }
 }

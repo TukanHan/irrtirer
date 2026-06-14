@@ -54,7 +54,7 @@ export class ConfigurationComponent implements ToolView {
         },
     ];
 
-    private activeCanvas: IActiveCanvas;
+    private activeCanvas!: IActiveCanvas;
 
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
@@ -88,7 +88,7 @@ export class ConfigurationComponent implements ToolView {
     }
 
     private focusOnImage(imageObject: ImageObject): void {
-        const zoom = ToolService.calculateZoomForImage(imageObject.size, this.activeCanvas.viewport);
+        const zoom = ToolService.calculateZoomForImage(imageObject.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 

@@ -49,7 +49,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private imageObject?: ImageObject;
 
-    private availableTiles: TileModel[];
+    private availableTiles!: TileModel[];
 
     protected readonly ribbonActions: RibbonAction[] = [
         {
@@ -81,7 +81,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         }
     ];
 
-    private activeCanvas: IActiveCanvas;
+    private activeCanvas!: IActiveCanvas;
 
     private readonly store = inject(Store);
 
@@ -145,7 +145,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
                 const sectionTileObjects: GeneratedTileModel[] = [];
 
                 for (const tileTransform of sectionGenerationResult.tilesTransforms) {
-                    const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId);
+                    const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId)!;
                     const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
                     const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
                     this.activeCanvas.addCanvasObject(tileObject);
@@ -262,7 +262,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     protected toggleImageVisibility(): void {
         const isVisible = !this.isImageVisible();
-        this.imageObject.setVisibility(isVisible);
+        this.imageObject!.setVisibility(isVisible);
         this.activeCanvas.redraw();
         this.isImageVisible.set(isVisible);
     }
@@ -285,7 +285,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private focusOnImage(): void {
-        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport);
+        const zoom = ToolService.calculateZoomForImage(this.imageObject!.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }

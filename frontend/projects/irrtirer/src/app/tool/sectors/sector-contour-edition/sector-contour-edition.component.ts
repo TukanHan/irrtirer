@@ -52,13 +52,7 @@ export class SectorContourEditionComponent implements OnInit {
         required: () => this.translate.instant('tool.sectors.sectorContour.nameRequired'),
     };
 
-    private readonly formData = signal<SectorSchema>({
-        id: '',
-        name: '',
-        color: '',
-        vertices: [],
-        properties: null,
-    });
+    private readonly formData = signal<SectorSchema>(SectorsContoursService.createNewSector());
 
     private readonly usedSectorNames = computed<string[]>(() =>
         this.existingSectors()
@@ -88,7 +82,7 @@ export class SectorContourEditionComponent implements OnInit {
 
     private prepareSector(): void {
         const sectorId = this.route.snapshot.paramMap.get('id');
-         const sector = this.existingSectors().find((s) => s.id === sectorId);
+        const sector = this.existingSectors().find((s) => s.id === sectorId);
         if (sector) {
             this.formData.set({
                 ...sector,
@@ -96,9 +90,6 @@ export class SectorContourEditionComponent implements OnInit {
             });
 
             this.selectedVertex.set(this.formData().vertices[0]);
-        } else {
-            const newSector = SectorsContoursService.createNewSector();
-            this.formData.set(newSector);
         }
     }
 

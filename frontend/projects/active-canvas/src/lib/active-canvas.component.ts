@@ -9,6 +9,7 @@ import {
     OnDestroy,
     OnInit,
     output,
+    signal,
     viewChild,
 } from '@angular/core';
 import { CanvasObject } from './canvas-objects/canvas-object.interface';
@@ -34,18 +35,16 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
 
     public readonly options = model<CanvasOptions>({});
 
-    public get viewport(): Viewport {
-        return this._viewport;
-    }
-
     private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
-    private readonly currentOptions = computed<CanvasOptions>(() => ({
+    private readonly currentOptions = computed<Required<CanvasOptions>>(() => ({
         ...DEFAULT_CANVAS_OPTIONS,
         ...this.options(),
-    }));
+    } as Required<CanvasOptions>));
 
-    private _viewport: Viewport = new Viewport(Vector.zero, 1, { width: 0, height: 0 });
+    private readonly _viewport = signal<Viewport>(new Viewport(Vector.zero, 1, { width: 0, height: 0 }));
+
+    public readonly viewport = this._viewport.asReadonly();
 
     private isDragging = false;
 
@@ -107,22 +106,23 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     }
 
     private onWheelMove(event: WheelEvent): void {
-        const cursorWorldPos: IVector = this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
-        const zoomDelta: number = this._viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(this._viewport.zoom + zoomDelta, this.currentOptions().maxZoom), this.currentOptions().minZoom) / this._viewport.zoom;
+        const viewport = this._viewport();
+        const cursorWorldPos: IVector = viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
+        const zoomDelta: number = viewport.zoom * (event.deltaY / 1000);
+        const zoomMultiplier = Math.max(Math.min(viewport.zoom + zoomDelta, this.currentOptions().maxZoom), this.currentOptions().minZoom) / viewport.zoom;
 
         const newPosition: Vector = new Vector(
-            cursorWorldPos.x - (cursorWorldPos.x - this._viewport.position.x) * zoomMultiplier,
-            cursorWorldPos.y - (cursorWorldPos.y - this._viewport.position.y) * zoomMultiplier
+            cursorWorldPos.x - (cursorWorldPos.x - viewport.position.x) * zoomMultiplier,
+            cursorWorldPos.y - (cursorWorldPos.y - viewport.position.y) * zoomMultiplier
         );
 
-        this._viewport = new Viewport(newPosition, this._viewport.zoom * zoomMultiplier, this._viewport.pxSize);
+        this._viewport.set(new Viewport(newPosition, viewport.zoom * zoomMultiplier, viewport.pxSize));
         this.redraw();
         event.preventDefault();
     }
 
     private onMouseDown(event: MouseEvent): void {
-        this.clicked.emit(this._viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY)));
+        this.clicked.emit(this._viewport().getWorldPosition(new Vector(event.offsetX, event.offsetY)));
         if (this.currentOptions().isMovable === false) {
             return;
         }
@@ -138,12 +138,13 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         }
 
         if (this.isDragging) {
+            const viewport = this._viewport();
             const newPosition: Vector = new Vector(
-                this._viewport.position.x - UnitConverter.pxToCm(event.movementX) * this._viewport.zoom,
-                this._viewport.position.y - UnitConverter.pxToCm(event.movementY) * this._viewport.zoom
+                viewport.position.x - UnitConverter.pxToCm(event.movementX) * viewport.zoom,
+                viewport.position.y - UnitConverter.pxToCm(event.movementY) * viewport.zoom
             );
 
-            this._viewport = new Viewport(newPosition, this._viewport.zoom, this._viewport.pxSize);
+            this._viewport.set(new Viewport(newPosition, viewport.zoom, viewport.pxSize));
             this.redraw();
         }
     }
@@ -168,12 +169,14 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         this.canvas().nativeElement.width = newCanvasSize.width;
         this.canvas().nativeElement.height = newCanvasSize.height;
 
-        this._viewport = new Viewport(this._viewport.position, this._viewport.zoom, newCanvasSize);
+        const viewport = this._viewport();
+        this._viewport.set(new Viewport(viewport.position, viewport.zoom, newCanvasSize));
         this.redraw();
     }
 
     public setViewport(zoom: number | null = null, position: IVector | null = null, redraw: boolean = false): void {
-        this._viewport = new Viewport(position ?? this._viewport.position, zoom ?? this._viewport.zoom, this._viewport.pxSize);
+        const viewport = this._viewport();
+        this._viewport.set(new Viewport(position ?? viewport.position, zoom ?? viewport.zoom, viewport.pxSize));
 
         if (redraw) {
             this.redraw();
@@ -204,23 +207,25 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
 
     public redraw(): void {
         const canvasContext = this.ctx();
-        ActiveCanvasComponent.drawBackground(canvasContext, this.viewport.pxSize, this.currentOptions().backgroundColor);
-        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, this.viewport);
+        const viewport = this._viewport();
+        ActiveCanvasComponent.drawBackground(canvasContext, viewport.pxSize, this.currentOptions().backgroundColor);
+        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, viewport);
 
         this.cd.markForCheck();
     }
 
     public saveAsImage(options?: CanvasToImageOptions): Promise<Blob> {
+        const viewport = this._viewport();
         const scaleFactor = options?.scaleFactor ?? 1.0;
         const pxSize = {
-            width: this.viewport.pxSize.width * scaleFactor,
-            height: this.viewport.pxSize.height * scaleFactor
+            width: viewport.pxSize.width * scaleFactor,
+            height: viewport.pxSize.height * scaleFactor
         };
 
-        const snapshotViewport = new Viewport(this._viewport.position, this._viewport.zoom / scaleFactor, pxSize, scaleFactor);
+        const snapshotViewport = new Viewport(viewport.position, viewport.zoom / scaleFactor, pxSize, scaleFactor);
 
         const offscreenCanvas = new OffscreenCanvas(pxSize.width, pxSize.height);
-        const canvasContext = offscreenCanvas.getContext('2d');
+        const canvasContext = offscreenCanvas.getContext('2d')!;
 
         const backgroundColor = options?.backgroundColor ?? this.currentOptions().backgroundColor;
         ActiveCanvasComponent.drawBackground(canvasContext, pxSize, backgroundColor);

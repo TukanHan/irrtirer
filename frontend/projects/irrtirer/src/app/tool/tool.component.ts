@@ -62,6 +62,8 @@ export class ToolComponent {
 
     protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');
 
+    protected readonly viewportSize = computed(() => this.activeCanvas().viewport().cmSize);
+
     protected readonly ribbonActions = signal<RibbonAction[]>([]);
 
     protected readonly canvasOptions = computed<CanvasOptions>(() =>({
