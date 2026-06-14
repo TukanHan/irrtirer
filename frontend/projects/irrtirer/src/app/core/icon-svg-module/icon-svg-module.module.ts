@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { provideHttpClient, withInterceptorsFromDi, withXhr } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const iconDictionary: Record<string, string> = {
     github: 'github-mark.svg',
@@ -12,7 +12,7 @@ const iconDictionary: Record<string, string> = {
 
 @NgModule({
     imports: [CommonModule],
-    providers: [provideHttpClient(withXhr(), withInterceptorsFromDi())],
+    providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class IconSvgModuleModule {
     constructor(

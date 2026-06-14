@@ -8,10 +8,8 @@
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.projectSettings')"
-            >
-                <mat-icon matListIcon class="material-symbols-outlined"
-                    >flowsheet</mat-icon
-                >
+>
+                <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
             <a
                 mat-list-item
@@ -22,8 +20,7 @@
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.tileTrey')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined"
-                    >dashboard</mat-icon
+                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon
                 >
             </a>
             <a
@@ -35,9 +32,7 @@
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.sectors')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined"
-                    >view_in_ar</mat-icon
-                >
+                <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
             </a>
             <a
                 mat-list-item
@@ -48,8 +43,7 @@
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.generation')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined"
-                    >rocket_launch</mat-icon
+                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon
                 >
             </a>
         </mat-nav-list>
@@ -58,9 +52,7 @@
         <div class="content">
             <app-ribbon
                 [actions]="ribbonActions()"
-                [viewportSize]="
-                    $safeNavigationMigration(activeCanvas?.viewport?.cmSize)
-                "
+                [viewportSize]="activeCanvas?.viewport?.cmSize"
             />
             <div class="main">
                 <ac-active-canvas

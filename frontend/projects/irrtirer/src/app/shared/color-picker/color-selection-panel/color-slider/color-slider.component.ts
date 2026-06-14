@@ -6,11 +6,8 @@ import {
     DestroyRef,
     ElementRef,
     inject,
-    model,
-    output,
     viewChild,
-    input,
-    linkedSignal,
+    model,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color from 'color';
@@ -27,17 +24,13 @@ export interface CursorDataModel {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit {
-    public readonly valueInput = input.required<number>({ alias: 'value' });
-    public readonly value = linkedSignal(this.valueInput);
-
-    public readonly valueChange = output<number>();
+    public readonly value = model<number>();
 
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
     protected readonly cursorData = computed<CursorDataModel>(() => {
-        const value = this.value();
         const sliderWidth: number = this.canvas()?.nativeElement.getBoundingClientRect().width ?? 1;
-        return this.computeCursorData(value, sliderWidth);
+        return this.computeCursorData(this.value(), sliderWidth);
     });
 
     private readonly destroyRef = inject(DestroyRef);
@@ -66,7 +59,6 @@ export class ColorSliderComponent implements AfterViewInit {
 
         const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
         this.value.set(Math.max(0, Math.min(1, rawValue)));
-        this.valueChange.emit(this.value());
     }
 
     public ngAfterViewInit(): void {

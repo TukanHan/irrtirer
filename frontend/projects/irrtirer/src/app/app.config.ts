@@ -1,7 +1,7 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
-import { provideHttpClient, withXhr } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { mosaicProjectReducer } from './core/state/mosaic-project/mosaic-project.reducer';
 import { storageMetaReducer } from './core/state/storage-meta-reducer';
@@ -13,7 +13,7 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 export const appConfig: ApplicationConfig = {
     providers: [
         provideRouter(routes),
-        provideHttpClient(withXhr()),
+        provideHttpClient(),
         provideStore(
             {
                 mosaicProject: mosaicProjectReducer,
