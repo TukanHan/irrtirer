@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TrayMenuComponent } from './tray-menu.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { provideTranslateService } from '@ngx-translate/core';
 
 const initialState = {
     mosaicProject: {
@@ -17,8 +17,8 @@ describe('TrayMenuComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TrayMenuComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState })],
+            imports: [TrayMenuComponent],
+            providers: [provideTranslateService({}), provideMockStore({ initialState })],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TrayMenuComponent);

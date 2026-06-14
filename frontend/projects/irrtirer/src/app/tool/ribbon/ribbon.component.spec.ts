@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RibbonComponent } from './ribbon.component';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { inputBinding } from '@angular/core';
 
 describe('RibbonComponent', () => {
@@ -10,7 +10,8 @@ describe('RibbonComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RibbonComponent, TranslateModule.forRoot({})],
+            imports: [RibbonComponent],
+            providers: [provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(RibbonComponent, {

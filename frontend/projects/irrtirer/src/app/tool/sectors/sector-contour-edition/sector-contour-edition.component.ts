@@ -12,7 +12,7 @@ import { SectorsContoursService } from '../sectors-contours.service';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { nonUniqueValueValidator } from '../../../core/validators/unique-value.validator';
 import { polygonValidator } from './polygon.validator';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -22,7 +22,7 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslateModule, FormField],
+    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslatePipe, FormField],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

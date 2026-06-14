@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TilesSetListElemComponent } from './tiles-set-list-elem.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
 import { inputBinding } from '@angular/core';
@@ -12,8 +12,8 @@ describe('TilesSetListElemComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TilesSetListElemComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore()],
+            imports: [TilesSetListElemComponent],
+            providers: [provideMockStore(), provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(TilesSetListElemComponent, {

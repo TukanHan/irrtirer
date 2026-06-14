@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SectorListElemComponent } from './sector-list-elem.component';
 import { GeneratedSectorModel } from '../../mosaic-generation.interface';
 import { faceSector } from '../../../../../test-data/sector.data';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { inputBinding } from '@angular/core';
 
@@ -12,7 +12,8 @@ describe('SectorListElemComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorListElemComponent, TranslateModule.forRoot({})],
+            imports: [SectorListElemComponent],
+            providers: [provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorListElemComponent, {

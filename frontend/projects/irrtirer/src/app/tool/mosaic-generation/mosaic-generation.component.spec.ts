@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MosaicGenerationComponent } from './mosaic-generation.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { ToolService } from '../tool.service';
 import { imageObjectMock } from '../../../test-data/image-object.data';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
@@ -27,9 +27,10 @@ describe('MosaicGenerationComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [MosaicGenerationComponent, TranslateModule.forRoot({})],
+            imports: [MosaicGenerationComponent],
             providers: [
                 provideMockStore({ initialState }),
+                provideTranslateService({}),
                 { provide: MatSnackBar, useValue: mockMatSnackBar },
                 { provide: ToolService, useValue: {} },
             ],

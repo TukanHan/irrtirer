@@ -11,13 +11,13 @@ import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslateModule],
+    imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,

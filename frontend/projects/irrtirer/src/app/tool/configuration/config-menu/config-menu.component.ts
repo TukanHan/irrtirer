@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
@@ -20,7 +20,7 @@ const DEFAULT_PROJECT_NAME: string = "irrtirer_project";
 
 @Component({
     selector: 'app-config-menu',
-    imports: [MatButtonModule, TranslateModule],
+    imports: [MatButtonModule, TranslatePipe],
     templateUrl: './config-menu.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col gap-2.5' }

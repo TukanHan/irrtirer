@@ -4,11 +4,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-tile-list-elem',
-    imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslateModule],
+    imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslatePipe],
     templateUrl: './tile-list-elem.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'list-item-box gap-3' },

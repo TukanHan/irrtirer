@@ -6,7 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { Store } from '@ngrx/store';
 import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
@@ -25,7 +25,7 @@ import { TitleCasePipe } from '@angular/common';
         IconSvgModuleModule,
         MatMenuModule,
         MatRadioModule,
-        TranslateModule,
+        TranslatePipe,
         TitleCasePipe
     ],
     templateUrl: './toolbar.component.html',

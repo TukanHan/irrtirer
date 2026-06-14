@@ -11,7 +11,7 @@ import { ExtendedPanelComponent } from './extended-panel/extended-panel.componen
 import { DataService } from '../../../core/services/data/data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -30,7 +30,7 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslateModule, FormField],
+    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
