@@ -1,6 +1,5 @@
 import {
     afterRenderEffect,
-    ChangeDetectionStrategy,
     ChangeDetectorRef,
     Component,
     computed,
@@ -29,7 +28,6 @@ import { CanvasToImageOptions } from './models/canvas/canvas-to-image-options';
     selector: 'ac-active-canvas',
     templateUrl: 'active-canvas.component.html',
     styleUrl: 'active-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     public readonly clicked = output<IVector>();

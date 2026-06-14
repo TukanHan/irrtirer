@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -18,7 +18,6 @@ interface FileNameFormData {
     selector: 'app-project-name-dialog',
     imports: [MatFormFieldModule, MatInputModule, MatDialogModule, MatButtonModule, TranslatePipe, FormField],
     templateUrl: './project-name-dialog.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectNameDialogComponent {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);

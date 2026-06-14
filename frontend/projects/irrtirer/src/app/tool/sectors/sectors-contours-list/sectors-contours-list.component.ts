@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
@@ -20,7 +20,6 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorsContoursListComponent {
     private readonly store = inject(Store);

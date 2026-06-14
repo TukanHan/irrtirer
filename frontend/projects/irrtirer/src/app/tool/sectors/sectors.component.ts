@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
@@ -21,10 +21,9 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
     selector: 'app-sectors',
-    imports: [ RouterOutlet],
+    imports: [RouterOutlet],
     templateUrl: './sectors.component.html',
     styleUrl: './sectors.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private readonly store = inject(Store);

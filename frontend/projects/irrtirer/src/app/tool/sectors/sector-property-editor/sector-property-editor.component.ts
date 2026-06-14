@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
+import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
@@ -33,7 +33,6 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
     imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorPropertyEditorComponent implements OnInit {
     private sector!: SectorSchema;

@@ -1,5 +1,5 @@
 
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,7 +13,6 @@ import { TranslateService } from '@ngx-translate/core';
     imports: [MatIconModule, MatButtonModule, SizeDisplayPipe, MatTooltip],
     templateUrl: './ribbon.component.html',
     styleUrl: './ribbon.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RibbonComponent {
     public readonly viewportSize = input.required<Size>();

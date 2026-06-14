@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TranslateService } from '@ngx-translate/core';
@@ -10,7 +10,6 @@ import { ThemeService } from './core/services/theme/theme.service';
     selector: 'app-root',
     imports: [RouterOutlet, ToolbarComponent],
     templateUrl: './app.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col h-dvh' },
 })
 export class AppComponent implements OnInit {

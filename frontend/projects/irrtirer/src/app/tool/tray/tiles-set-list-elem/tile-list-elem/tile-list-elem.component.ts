@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +10,6 @@ import { TranslatePipe } from '@ngx-translate/core';
     selector: 'app-tile-list-elem',
     imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslatePipe],
     templateUrl: './tile-list-elem.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'list-item-box gap-3' },
 })
 export class TileListElemComponent {

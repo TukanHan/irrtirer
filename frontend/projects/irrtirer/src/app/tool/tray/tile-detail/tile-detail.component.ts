@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-tile-detail',
     imports: [TranslatePipe, MatButtonModule, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col gap-3 h-full' },
 })
 export class TileDetailComponent implements OnInit {

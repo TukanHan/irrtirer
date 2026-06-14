@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -31,7 +31,6 @@ interface RandomTileSetModel {
     imports: [MatFormFieldModule, MatInputModule, TranslatePipe, MatButtonModule, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RandomTilesComponent implements OnInit {
     private readonly router = inject(Router);

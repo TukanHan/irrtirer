@@ -1,6 +1,5 @@
 import {
     AfterViewInit,
-    ChangeDetectionStrategy,
     Component,
     computed,
     DestroyRef,
@@ -21,7 +20,6 @@ export interface CursorDataModel {
     selector: 'app-color-slider',
     templateUrl: './color-slider.component.html',
     styleUrl: './color-slider.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit {
     public readonly value = model<number>();

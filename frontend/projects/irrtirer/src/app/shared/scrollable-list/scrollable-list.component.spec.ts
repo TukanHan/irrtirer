@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ScrollableListComponent } from './scrollable-list.component';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { provideTranslateService } from '@ngx-translate/core';
 
 const ITEMS_COUNT = 10;
@@ -15,7 +15,6 @@ const ITEMS_COUNT = 10;
         </app-scrollable-list>
     `,
     imports: [ScrollableListComponent],
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 class HostComponent {
     protected readonly count = ITEMS_COUNT;

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -22,7 +22,6 @@ const DEFAULT_PROJECT_NAME: string = "irrtirer_project";
     selector: 'app-config-menu',
     imports: [MatButtonModule, TranslatePipe],
     templateUrl: './config-menu.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col gap-2.5' }
 })
 export class ConfigMenuComponent {

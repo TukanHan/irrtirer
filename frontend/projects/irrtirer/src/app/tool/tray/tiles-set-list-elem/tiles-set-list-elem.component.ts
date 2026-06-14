@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, signal } from '@angular/core';
+import { Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,7 +20,6 @@ import { ScrollableListComponent } from '../../../shared/scrollable-list/scrolla
     selector: 'app-tiles-set-list-elem',
     imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslatePipe, ScrollableListComponent],
     templateUrl: './tiles-set-list-elem.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TilesSetListElemComponent {
     public readonly tilesSet = input.required<TilesSet>();

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
@@ -11,7 +11,6 @@ import { TranslatePipe } from '@ngx-translate/core';
     selector: 'app-tray-menu',
     imports: [MatButtonModule, TilesSetListElemComponent, TranslatePipe],
     templateUrl: './tray-menu.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col gap-5' }
 })
 export class TrayMenuComponent {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe } from '@angular/common';
@@ -20,7 +20,6 @@ import { ScrollableListComponent } from '../../../../shared/scrollable-list/scro
     ],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorListElemComponent {
     public readonly sector = input.required<GeneratedSectorModel>();

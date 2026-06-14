@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
+import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -35,7 +35,6 @@ import { ProjectImportService } from './shared/project-import.service';
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
     styleUrl: './tool.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ToolComponent {
     private readonly store = inject(Store);
