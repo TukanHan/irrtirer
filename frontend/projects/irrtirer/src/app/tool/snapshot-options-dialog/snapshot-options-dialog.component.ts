@@ -1,18 +1,17 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SnapshotOptions } from './snapshot-options.interface';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-snapshot-options-dialog',
-    imports: [MatDialogModule, MatButtonModule, MatSliderModule, MatCheckboxModule, FormField, TranslateModule],
+    imports: [MatDialogModule, MatButtonModule, MatSliderModule, MatCheckboxModule, FormField, TranslatePipe],
     templateUrl: './snapshot-options-dialog.component.html',
     styleUrl: './snapshot-options-dialog.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SnapshotOptionsDialogComponent {
     protected readonly translate = inject<TranslateService>(TranslateService);

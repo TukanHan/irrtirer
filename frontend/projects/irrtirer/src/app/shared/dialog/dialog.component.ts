@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { DialogData } from './dialog-data.interface';
@@ -9,7 +9,6 @@ import { TranslateService } from '@ngx-translate/core';
     imports: [MatDialogModule, MatButtonModule],
     templateUrl: './dialog.component.html',
     styleUrl: './dialog.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DialogComponent {
     protected readonly translate = inject<TranslateService>(TranslateService);

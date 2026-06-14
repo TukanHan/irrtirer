@@ -1,6 +1,5 @@
 import {
     AfterViewInit,
-    ChangeDetectionStrategy,
     Component,
     computed,
     DestroyRef,
@@ -25,7 +24,6 @@ export interface CursorDataModel {
     selector: 'app-color-canvas',
     templateUrl: './color-canvas.component.html',
     styleUrl: './color-canvas.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorCanvasComponent implements AfterViewInit {
     public readonly hValue = input.required<number>();

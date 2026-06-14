@@ -4,7 +4,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideMockStore } from '@ngrx/store/testing';
 import { faceSector } from '../../../../test-data/sector.data';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { beforeEach, describe, expect, it } from 'vitest';
 
@@ -26,11 +26,12 @@ describe('SectorPropertyEditorComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorPropertyEditorComponent, TranslateModule.forRoot({})],
+            imports: [SectorPropertyEditorComponent],
             providers: [
                 provideMockStore({ initialState }),
                 provideHttpClient(),
                 provideHttpClientTesting(),
+                provideTranslateService({}),
                 { provide: ActivatedRoute, useValue: mockActivatedRoute },
             ],
         }).compileComponents();

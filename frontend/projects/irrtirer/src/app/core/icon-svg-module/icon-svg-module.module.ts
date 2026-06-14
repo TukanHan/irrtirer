@@ -20,10 +20,7 @@ export class IconSvgModuleModule {
         private readonly domSanitizer: DomSanitizer,
     ) {
         for (const key in iconDictionary) {
-            this.matIconRegistry.addSvgIcon(
-                key,
-                this.domSanitizer.bypassSecurityTrustResourceUrl(`../irrtirer/assets/icons/${iconDictionary[key]}`)
-            );
+            this.matIconRegistry.addSvgIcon(key, this.domSanitizer.bypassSecurityTrustResourceUrl(`../irrtirer/assets/icons/${iconDictionary[key]}`));
         }
     }
 }

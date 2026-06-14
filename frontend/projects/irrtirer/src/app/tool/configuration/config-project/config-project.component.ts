@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, computed, effect, inject, signal } from '@angular/core';
+import { Component, computed, effect, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
@@ -23,9 +23,8 @@ interface ProjectConfigForm {
 
 @Component({
     selector: 'app-config-project',
-    imports: [TranslateModule, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
+    imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'flex flex-col gap-5' }
 })
 export class ConfigProjectComponent {
@@ -58,7 +57,7 @@ export class ConfigProjectComponent {
         required(schemaPath.mosaicWidth);
         min(schemaPath.mosaicWidth, MIN_WIDTH);
         max(schemaPath.mosaicWidth, MAX_WIDTH);
-        disabled(schemaPath.mosaicWidth, () => this.isReadOnlyMode());
+        disabled(schemaPath.mosaicWidth, { when: () => this.isReadOnlyMode() });
 
         required(schemaPath.mosaicImage);
     });

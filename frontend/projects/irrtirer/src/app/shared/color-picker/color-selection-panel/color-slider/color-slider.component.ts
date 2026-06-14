@@ -1,14 +1,12 @@
 import {
     AfterViewInit,
-    ChangeDetectionStrategy,
     Component,
     computed,
     DestroyRef,
     ElementRef,
     inject,
-    model,
-    output,
     viewChild,
+    model,
 } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color from 'color';
@@ -22,19 +20,15 @@ export interface CursorDataModel {
     selector: 'app-color-slider',
     templateUrl: './color-slider.component.html',
     styleUrl: './color-slider.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorSliderComponent implements AfterViewInit {
-    public readonly value = model.required<number>();
-
-    public readonly valueChange = output<number>();
+    public readonly value = model<number>();
 
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
     protected readonly cursorData = computed<CursorDataModel>(() => {
-        const value = this.value();
         const sliderWidth: number = this.canvas()?.nativeElement.getBoundingClientRect().width ?? 1;
-        return this.computeCursorData(value, sliderWidth);
+        return this.computeCursorData(this.value(), sliderWidth);
     });
 
     private readonly destroyRef = inject(DestroyRef);
@@ -63,7 +57,6 @@ export class ColorSliderComponent implements AfterViewInit {
 
         const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
         this.value.set(Math.max(0, Math.min(1, rawValue)));
-        this.valueChange.emit(this.value());
     }
 
     public ngAfterViewInit(): void {
@@ -72,7 +65,7 @@ export class ColorSliderComponent implements AfterViewInit {
         this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
         window.addEventListener('mouseup', this.onMouseUp);
         window.addEventListener('mousemove', this.onMouseMove);
-        
+
         this.destroyRef.onDestroy(() => {
             this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
             window.removeEventListener('mouseup', this.onMouseUp);

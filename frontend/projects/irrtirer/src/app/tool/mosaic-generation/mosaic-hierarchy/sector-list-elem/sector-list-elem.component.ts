@@ -1,11 +1,11 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Observable } from 'rxjs';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ScrollableListComponent } from '../../../../shared/scrollable-list/scrollable-list.component';
 
 @Component({
@@ -15,12 +15,11 @@ import { ScrollableListComponent } from '../../../../shared/scrollable-list/scro
         MatButtonModule,
         AsyncPipe,
         ExpandablePanelComponent,
-        TranslateModule,
+        TranslatePipe,
         ScrollableListComponent
     ],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorListElemComponent {
     public readonly sector = input.required<GeneratedSectorModel>();

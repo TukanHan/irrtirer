@@ -2,14 +2,13 @@ import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { DialogComponent } from './dialog.component';
 import { DialogData } from './dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
-import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
     selector: 'app-dialog-host',
     imports: [MatButtonModule],
     template: `<button mat-raised-button (click)="openDialog()">Otwórz Dialog</button>`,
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 class DialogHostComponent {
     public readonly dialogData = input.required<DialogData>();

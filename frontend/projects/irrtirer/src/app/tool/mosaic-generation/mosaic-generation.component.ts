@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
@@ -35,7 +35,6 @@ import { ToolService } from '../tool.service';
     providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MosaicGenerationComponent implements OnInit, ToolView {
     private readonly toolService = inject(ToolService);

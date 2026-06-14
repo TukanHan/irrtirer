@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
@@ -12,7 +12,7 @@ import { SectorsContoursService } from '../sectors-contours.service';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { nonUniqueValueValidator } from '../../../core/validators/unique-value.validator';
 import { polygonValidator } from './polygon.validator';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -22,10 +22,9 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslateModule, FormField],
+    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslatePipe, FormField],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SectorContourEditionComponent implements OnInit {
     protected readonly selectedVertex = signal<Vector | null>(null);
@@ -89,8 +88,8 @@ export class SectorContourEditionComponent implements OnInit {
 
     private prepareSector(): void {
         const sectorId = this.route.snapshot.paramMap.get('id');
-        if (sectorId) {
-            const sector = this.existingSectors().find((s) => s.id === sectorId);
+         const sector = this.existingSectors().find((s) => s.id === sectorId);
+        if (sector) {
             this.formData.set({
                 ...sector,
                 vertices: sector!.vertices.map((v) => new Vector(v.x, v.y)),
@@ -105,7 +104,7 @@ export class SectorContourEditionComponent implements OnInit {
 
     private addVertex(vertex: Vector): void {
         const vertices: Vector[] = [...this.form.vertices().value()];
-        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex());
+        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex()!);
         vertices.splice(indexOfSelectedVertex + 1, 0, vertex);
 
         this.form.vertices().controlValue.set(vertices);
@@ -139,16 +138,19 @@ export class SectorContourEditionComponent implements OnInit {
             this.sectorsContoursService.emitEditedSectorContour(null);
             this.navigateToSectorList();
         } else {
-            this.showWarning(this.showValidationError());
+            const errorMessage = this.showValidationError();
+            if (errorMessage) {
+                this.showWarning(errorMessage);
+            }
         }
     }
 
-    private showValidationError(): string {
+    private showValidationError(): string | null {
         const errors = this.form().errorSummary();
         return FormHelper.getErrorLabel(errors, this.errorLabels);
     }
 
-    protected getFieldErrorLabel(field: FieldState<unknown>): string {
+    protected getFieldErrorLabel(field: FieldState<unknown>): string | null {
         return FormHelper.getErrorLabel(field.errorSummary(), this.errorLabels);
     }
 
@@ -178,7 +180,7 @@ export class SectorContourEditionComponent implements OnInit {
     protected readonly onContourChangeEffect = effect(() => {
         this.sectorsContoursService.emitEditedSectorContour({
             sector: this.formData(),
-            selectedVertex: this.selectedVertex(),
+            selectedVertex: this.selectedVertex()!,
         });
     });
 }

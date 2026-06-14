@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DialogComponent } from './dialog.component';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('DialogComponent', () => {
@@ -10,8 +10,8 @@ describe('DialogComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [DialogComponent, TranslateModule.forRoot({})],
-            providers: [{ provide: MAT_DIALOG_DATA, useValue: {} }],
+            imports: [DialogComponent],
+            providers: [provideTranslateService({}), { provide: MAT_DIALOG_DATA, useValue: {} }],
         }).compileComponents();
 
         fixture = TestBed.createComponent(DialogComponent);

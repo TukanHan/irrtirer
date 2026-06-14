@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SectorsComponent } from './sectors.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../test-data/sector.data';
 import { ToolService } from '../tool.service';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
@@ -18,8 +18,8 @@ describe('SectorsComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorsComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState }), { provide: ToolService, useValue: {} }],
+            imports: [SectorsComponent],
+            providers: [provideMockStore({ initialState }), { provide: ToolService, useValue: {} }, provideTranslateService({})],
         }).compileComponents();
 
         vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);

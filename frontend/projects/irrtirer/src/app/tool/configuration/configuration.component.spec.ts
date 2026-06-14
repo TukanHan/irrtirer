@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ConfigurationComponent } from './configuration.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { ToolService } from '../tool.service';
@@ -12,8 +12,8 @@ describe('ConfigurationComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ConfigurationComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore(), { provide: ToolService, useValue: {} }],
+            imports: [ConfigurationComponent],
+            providers: [provideMockStore(), provideTranslateService({}), { provide: ToolService, useValue: {} }],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ConfigurationComponent);

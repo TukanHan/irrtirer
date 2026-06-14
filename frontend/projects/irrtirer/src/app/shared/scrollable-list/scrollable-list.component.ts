@@ -1,14 +1,13 @@
 import { NgTemplateOutlet } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, contentChild, input, signal, TemplateRef } from '@angular/core';
+import { Component, computed, contentChild, input, signal, TemplateRef } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-scrollable-list',
-    imports: [NgTemplateOutlet, MatButton, TranslateModule],
+    imports: [NgTemplateOutlet, MatButton, TranslatePipe],
     templateUrl: './scrollable-list.component.html',
     styleUrl: './scrollable-list.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScrollableListComponent<T> {
     public readonly template = contentChild.required<TemplateRef<unknown>>('element');

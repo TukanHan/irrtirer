@@ -1,9 +1,8 @@
-import { ChangeDetectionStrategy, Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Store } from '@ngrx/store';
 import { MatButtonModule } from '@angular/material/button';
-import { TranslateModule } from '@ngx-translate/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
@@ -17,11 +16,10 @@ import { skip } from 'rxjs';
 
 @Component({
     selector: 'app-configuration',
-    imports: [MatButtonModule, TranslateModule, RouterOutlet],
+    imports: [MatButtonModule, RouterOutlet],
     providers: [ConfigurationService],
     templateUrl: './configuration.component.html',
     styleUrl: './configuration.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConfigurationComponent implements ToolView {
     private readonly store = inject(Store);

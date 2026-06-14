@@ -1,10 +1,9 @@
-import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, input } from '@angular/core';
+import { Component, computed, ElementRef, inject, input } from '@angular/core';
 
 @Component({
     selector: 'app-expandable-panel',
     templateUrl: './expandable-panel.component.html',
     styleUrl: 'expandable-panel.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: {
         '[class.open]': 'isOpen()',
         '[style.--expand-duration]': 'expandDuration() + "ms"',

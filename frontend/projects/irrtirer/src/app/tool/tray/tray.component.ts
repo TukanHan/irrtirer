@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, inject, signal } from '@angular/core';
+import { AfterViewInit, Component, DestroyRef, inject, signal } from '@angular/core';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { RouterOutlet } from '@angular/router';
@@ -15,7 +15,6 @@ import { ToolService } from '../tool.service';
     imports: [RouterOutlet],
     templateUrl: './tray.component.html',
     styleUrl: './tray.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TrayComponent implements ToolView, AfterViewInit {
     private readonly store = inject(Store);

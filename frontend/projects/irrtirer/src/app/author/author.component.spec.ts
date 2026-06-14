@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AuthorComponent } from './author.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('AuthorComponent', () => {
@@ -9,7 +9,8 @@ describe('AuthorComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AuthorComponent, TranslateModule.forRoot({})],
+            imports: [AuthorComponent],
+            providers: [provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(AuthorComponent);

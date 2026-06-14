@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Store } from '@ngrx/store';
 import { selectMosaicImage, selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TileGenerator } from './tile-generator';
@@ -28,10 +28,9 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslateModule, MatButtonModule, MatAutocompleteModule, FormField],
+    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, MatButtonModule, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RandomTilesComponent implements OnInit {
     private readonly router = inject(Router);

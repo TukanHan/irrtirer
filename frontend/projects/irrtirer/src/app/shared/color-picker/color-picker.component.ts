@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, forwardRef, input, model, signal } from '@angular/core';
+import { Component, effect, forwardRef, input, model, signal } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ColorSelectionPanelComponent } from './color-selection-panel/color-selection-panel.component';
 import { ColorInstance } from 'color';
@@ -17,7 +17,6 @@ import { FormValueControl } from '@angular/forms/signals';
     ],
     templateUrl: './color-picker.component.html',
     styleUrl: './color-picker.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string>  {
     public readonly label = input.required<string>();

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { SectorsContoursListComponent } from './sectors-contours-list.component';
 import { provideMockStore } from '@ngrx/store/testing';
-import { TranslateModule } from '@ngx-translate/core';
+import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../../test-data/sector.data';
 import { beforeEach, describe, expect, it } from 'vitest';
 
@@ -15,8 +15,8 @@ describe('SectorsContoursListComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorsContoursListComponent, TranslateModule.forRoot({})],
-            providers: [provideMockStore({ initialState })],
+            imports: [SectorsContoursListComponent],
+            providers: [provideMockStore({ initialState }), provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorsContoursListComponent);
