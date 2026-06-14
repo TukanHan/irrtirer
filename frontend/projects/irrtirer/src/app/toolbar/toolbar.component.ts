@@ -40,7 +40,7 @@ export class ToolbarComponent implements OnInit {
 
     private readonly store = inject(Store);
 
-    protected readonly selectedLanguage = signal<string>(this.translate.getCurrentLang());
+    protected readonly selectedLanguage = signal<string>(this.translate.getCurrentLang() ?? 'pl');
 
     protected readonly themeMode = toSignal<ThemeMode>(this.themeService.theme$);
 

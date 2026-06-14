@@ -1,11 +1,10 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { ScrollableListComponent } from './scrollable-list.component';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-dummy-item',
     template: `<ng-content />`,
-    changeDetection: ChangeDetectionStrategy.OnPush,
     host: { class: 'list-item-box' },
 })
 class DummyItemComponent {}

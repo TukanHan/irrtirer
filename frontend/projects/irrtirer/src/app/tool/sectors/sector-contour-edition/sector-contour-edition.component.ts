@@ -88,8 +88,8 @@ export class SectorContourEditionComponent implements OnInit {
 
     private prepareSector(): void {
         const sectorId = this.route.snapshot.paramMap.get('id');
-        if (sectorId) {
-            const sector = this.existingSectors().find((s) => s.id === sectorId);
+         const sector = this.existingSectors().find((s) => s.id === sectorId);
+        if (sector) {
             this.formData.set({
                 ...sector,
                 vertices: sector!.vertices.map((v) => new Vector(v.x, v.y)),
@@ -104,7 +104,7 @@ export class SectorContourEditionComponent implements OnInit {
 
     private addVertex(vertex: Vector): void {
         const vertices: Vector[] = [...this.form.vertices().value()];
-        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex());
+        const indexOfSelectedVertex: number = vertices.indexOf(this.selectedVertex()!);
         vertices.splice(indexOfSelectedVertex + 1, 0, vertex);
 
         this.form.vertices().controlValue.set(vertices);
@@ -180,7 +180,7 @@ export class SectorContourEditionComponent implements OnInit {
     protected readonly onContourChangeEffect = effect(() => {
         this.sectorsContoursService.emitEditedSectorContour({
             sector: this.formData(),
-            selectedVertex: this.selectedVertex(),
+            selectedVertex: this.selectedVertex()!,
         });
     });
 }

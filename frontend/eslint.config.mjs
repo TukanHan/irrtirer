@@ -20,7 +20,6 @@ export default defineConfig([
             ...tseslint.configs.recommended,
             ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
-            eslintConfigPrettier,
         ],
         rules: {
             "@typescript-eslint/explicit-member-accessibility": [
@@ -41,9 +40,9 @@ export default defineConfig([
             "@typescript-eslint/no-inferrable-types": "off",
             "@typescript-eslint/no-empty-function": "off",
             "@typescript-eslint/no-deprecated": "error",
+            "@typescript-eslint/no-unused-vars": "error",
             curly: "error",
             semi: "warn",
-            "no-unused-vars": ["error", { args: "none" }],
             "prefer-const": "warn",
             "no-var": "error",
             "no-duplicate-imports": "error",
@@ -108,4 +107,5 @@ export default defineConfig([
         },
     },
     ...storybook.configs["flat/recommended"],
+    eslintConfigPrettier,
 ]);
