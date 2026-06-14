@@ -139,16 +139,19 @@ export class SectorContourEditionComponent implements OnInit {
             this.sectorsContoursService.emitEditedSectorContour(null);
             this.navigateToSectorList();
         } else {
-            this.showWarning(this.showValidationError());
+            const errorMessage = this.showValidationError();
+            if (errorMessage) {
+                this.showWarning(errorMessage);
+            }
         }
     }
 
-    private showValidationError(): string {
+    private showValidationError(): string | null {
         const errors = this.form().errorSummary();
         return FormHelper.getErrorLabel(errors, this.errorLabels);
     }
 
-    protected getFieldErrorLabel(field: FieldState<unknown>): string {
+    protected getFieldErrorLabel(field: FieldState<unknown>): string | null {
         return FormHelper.getErrorLabel(field.errorSummary(), this.errorLabels);
     }
 
