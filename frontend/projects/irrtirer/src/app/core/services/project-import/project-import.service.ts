@@ -1,11 +1,11 @@
 import { inject, Injectable } from '@angular/core';
 import JSZip from 'jszip';
 import { Store } from '@ngrx/store';
-import { selectMosaicProject } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { saveAs } from '../../core/helpers/download-helper';
-import { ImageHelper } from '../../core/helpers/image-helper';
-import { environment } from '../../../environment/environment';
-import { MosaicProjectModel } from '../../core/models/mosaic-project.model';
+import { selectMosaicProject } from '../../state/mosaic-project/mosaic-project.selectors';
+import { saveAs } from '../../helpers/download-helper';
+import { ImageHelper } from '../../helpers/image-helper';
+import { environment } from '../../../../environment/environment';
+import { MosaicProjectModel } from '../../models/mosaic-project.model';
 
 const PROJECT_FORMAT: string = 'irr';
 

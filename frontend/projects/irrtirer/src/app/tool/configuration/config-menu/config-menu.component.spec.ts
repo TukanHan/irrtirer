@@ -4,7 +4,7 @@ import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
 import { ConfigurationService } from '../configuration.service';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ProjectImportService } from '../../shared/project-import.service';
+import { ProjectImportService } from '../../../core/services/project-import/project-import.service';
 
 describe('ConfigMenuComponent', () => {
     let component: ConfigMenuComponent;

@@ -16,7 +16,7 @@ import { ToolView } from './tool-view.interface';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
-import { ProjectImportService } from './shared/project-import.service';
+import { ProjectImportService } from '../core/services/project-import/project-import.service';
 
 @Component({
     selector: 'app-tool',

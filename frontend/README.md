@@ -6,7 +6,7 @@ Application supports both dark and light themes, which can be switched at any ti
 
 ## Technologies used
 
-- Angular 21
+- Angular 22
 - Angular Material
 - RxJS
 - NgRx

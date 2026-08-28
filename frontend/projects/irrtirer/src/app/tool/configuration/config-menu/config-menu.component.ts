@@ -11,7 +11,7 @@ import { MosaicConfig } from '../../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ConfigurationService } from '../configuration.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ProjectImportService } from '../../shared/project-import.service';
+import { ProjectImportService } from '../../../core/services/project-import/project-import.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
