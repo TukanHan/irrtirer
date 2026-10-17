@@ -27,7 +27,7 @@ export class ColorSliderComponent implements AfterViewInit {
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
     protected readonly cursorData = computed<CursorDataModel>(() => {
-        const sliderWidth: number = this.canvas()?.nativeElement.getBoundingClientRect().width ?? 1;
+        const sliderWidth: number = this.canvas().nativeElement.getBoundingClientRect().width;
         return this.computeCursorData(this.value(), sliderWidth);
     });
 

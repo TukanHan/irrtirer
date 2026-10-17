@@ -6,6 +6,17 @@ import { ConfigurationService } from '../configuration.service';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { ProjectImportService } from '../../../core/services/project-import/project-import.service';
 
+const initialState = {
+    mosaicProject: {
+        config: {
+            base64Image: '',
+            mosaicWidth: 100,
+        },
+        tilesSets: [],
+        sectors: [],
+    },
+};
+
 describe('ConfigMenuComponent', () => {
     let component: ConfigMenuComponent;
     let fixture: ComponentFixture<ConfigMenuComponent>;
@@ -13,7 +24,7 @@ describe('ConfigMenuComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ConfigMenuComponent],
-            providers: [provideMockStore(), provideTranslateService({}), ConfigurationService, ProjectImportService],
+            providers: [provideMockStore({ initialState }), provideTranslateService({}), ConfigurationService, ProjectImportService],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ConfigMenuComponent);

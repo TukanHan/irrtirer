@@ -2,7 +2,7 @@ import { AfterViewInit, Component, DestroyRef, inject, OnInit, signal } from '@a
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Vector } from '../../core/models/math/vector.model';
-import { MosaicConfig, SectorSchema } from '../../core/models/mosaic-project.model';
+import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { first } from 'rxjs';
 import { SectorsContoursService } from './sectors-contours.service';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
@@ -151,7 +151,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
                     editedSector.sector.vertices.indexOf(editedSector.selectedVertex),
                     editedSector.sector.color
                 );
-            } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh?.sector.id) {
+            } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh.sector.id) {
                 const triangles = sectorWithTriangulationMesh.mesh;
                 const contour = sectorWithTriangulationMesh.contour!;
                 return new TriangulatedContourObject(triangles, contour, sectorWithTriangulationMesh.sector.color);
@@ -165,7 +165,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
 
-        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
+        const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
         queueMicrotask( async () => {
             this.imageObject = await ToolService.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(this.imageObject);

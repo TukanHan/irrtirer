@@ -11,7 +11,7 @@ export interface MosaicConfig {
     mosaicWidth: number;
 }
 
-type TileSetSource = 'generated';
+type TileSetSource = 'generated' | 'imported';
 
 export interface TilesSet {
     id: string;

@@ -69,7 +69,7 @@ export class ConfigProjectComponent {
             reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
                 this.configService.emitImageChange(
                     {
-                        base64Image: readingEvent?.target?.result as string,
+                        base64Image: readingEvent.target?.result as string,
                         mosaicWidth: this.form.mosaicWidth().value(),
                     },
                     true,
@@ -99,7 +99,7 @@ export class ConfigProjectComponent {
         const reader = new FileReader();
         reader.readAsDataURL(projectFromValue.mosaicImage!);
         reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
-            const image: string = readingEvent?.target?.result as string;
+            const image: string = readingEvent.target?.result as string;
             const project: MosaicProjectModel = {
                 config: {
                     base64Image: image,

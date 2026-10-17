@@ -37,12 +37,10 @@ export function storageMetaReducer<S, A extends Action = Action>(reducer: Action
     };
 }
 
-function restoreStateModelObjects(state: { mosaicProject: MosaicProjectModel}): void {
-    if(state?.mosaicProject) {
-        state.mosaicProject.tilesSets.forEach((tilesSet: TilesSet) => {
-            tilesSet.tiles.forEach((tile) => {
-                tile.vertices.forEach((vector) => Vector.restore(vector));
-            });
+function restoreStateModelObjects(state: { mosaicProject: MosaicProjectModel } | undefined): void {
+    state?.mosaicProject.tilesSets.forEach((tilesSet: TilesSet) => {
+        tilesSet.tiles.forEach((tile) => {
+            tile.vertices.forEach((vector) => Vector.restore(vector));
         });
-    }
+    });
 }

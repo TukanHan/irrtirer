@@ -7,7 +7,6 @@ import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { MosaicConfig } from '../../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ConfigurationService } from '../configuration.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -29,7 +28,7 @@ export class ConfigMenuComponent {
 
     protected readonly translate = inject(TranslateService);
 
-    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig>(selectMosaicConfig);
+    protected readonly mosaicConfig = this.store.selectSignal(selectMosaicConfig);
 
     private readonly dialog = inject(MatDialog);
 

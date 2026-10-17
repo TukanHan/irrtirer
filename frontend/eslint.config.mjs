@@ -9,16 +9,11 @@ export default defineConfig([
         files: ["**/*.ts"],
         languageOptions: {
             parserOptions: {
-                project: [
-                    "./tsconfig.json",
-                    "./projects/irrtirer/.storybook/tsconfig.json",
-                ],
-                sourceType: "module",
+                projectService: true,
             },
         },
         extends: [
             ...tseslint.configs.recommended,
-            ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
         ],
         rules: {
@@ -37,20 +32,16 @@ export default defineConfig([
                 },
             ],
             "@typescript-eslint/prefer-readonly": "warn",
-            "@typescript-eslint/no-inferrable-types": "off",
-            "@typescript-eslint/no-empty-function": "off",
             "@typescript-eslint/no-deprecated": "error",
-            "@typescript-eslint/no-unused-vars": "error",
+            "@typescript-eslint/switch-exhaustiveness-check": "error",
+            "@typescript-eslint/no-unnecessary-condition": "warn",
             curly: "error",
-            semi: "warn",
-            "prefer-const": "warn",
-            "no-var": "error",
             "no-duplicate-imports": "error",
             "consistent-return": "error",
             "@angular-eslint/prefer-on-push-component-change-detection":
                 "error",
             "@angular-eslint/no-output-native": "error",
-            "@angular-eslint/use-lifecycle-interface": "warn",
+            "@angular-eslint/use-lifecycle-interface": "error",
             "@angular-eslint/prefer-signals": "error",
         },
     },

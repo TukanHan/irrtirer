@@ -57,7 +57,7 @@ export class ToolComponent {
 
     protected readonly mosaicGeneratingLinkDisabled$ = this.store.select(selectSectors).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((sectors) => !sectors?.length)
+        map((sectors) => !sectors.length)
     );
 
     protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');

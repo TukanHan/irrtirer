@@ -30,7 +30,7 @@ export class ConfigurationComponent implements ToolView {
 
     private readonly toolService = inject(ToolService);
 
-    protected readonly mosaicConfig = this.store.selectSignal<MosaicConfig>(selectMosaicConfig);
+    protected readonly mosaicConfig = this.store.selectSignal(selectMosaicConfig);
 
     private readonly imageObject = signal<ImageObject | null>(null);
 
@@ -93,6 +93,6 @@ export class ConfigurationComponent implements ToolView {
     }
 
     protected onRouterChange(): void {
-        this.configService.emitImageChange(this.mosaicConfig(), false);
+        this.configService.emitImageChange(this.mosaicConfig()!, false);
     }
 }

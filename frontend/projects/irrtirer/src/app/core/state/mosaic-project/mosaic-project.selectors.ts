@@ -18,7 +18,7 @@ export const selectMosaicImage = createSelector(
 
 export const selectMosaicConfig = createSelector(
   selectMosaicProject,
-  (state: MosaicProjectModel) => state?.config
+  (state: MosaicProjectModel | undefined) => state?.config
 );
 
 export const selectIsProjectCreated = createSelector(
@@ -33,5 +33,5 @@ export const selectTilesSets = createSelector(
 
 export const selectSectors = createSelector(
   selectMosaicProject,
-  (state: MosaicProjectModel) => state?.sectors
+  (state: MosaicProjectModel | undefined) => state?.sectors ?? []
 );

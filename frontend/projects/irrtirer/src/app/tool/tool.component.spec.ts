@@ -8,7 +8,16 @@ import { beforeEach, describe, expect, it } from 'vitest';
 describe('ToolComponent', () => {
     let component: ToolComponent;
     let fixture: ComponentFixture<ToolComponent>;
-    const initialState = {};
+    const initialState = {
+        mosaicProject: {
+            config: {
+                base64Image: '',
+                mosaicWidth: 100,
+            },
+            tilesSets: [],
+            sectors: [],
+        },
+    };
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({

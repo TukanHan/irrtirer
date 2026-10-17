@@ -1,5 +1,5 @@
 import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { MosaicConfig, SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
+import { SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Size } from '../../core/models/math/size.interface';
@@ -104,7 +104,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
-        const mosaicConfig: MosaicConfig = this.store.selectSignal(selectMosaicConfig)();
+        const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
         
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
         this.imageObject.setVisibility(this.isImageVisible());
