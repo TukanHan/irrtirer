@@ -7,12 +7,12 @@ export const activeCanvas: IActiveCanvas = {
     options: {
         update: vi.fn(),
     },
-    viewport: {
+    viewport: vi.fn(() => ({
         cmSize: {
             width: 0,
             height: 0,
         }
-    },
+    })),
     clicked: new EventEmitter<IVector>(),
     canvasLoaded: new EventEmitter<void>(),
 
