@@ -1,6 +1,10 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-cB8hh8-K.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-OuvFQrIT.js";import{n as l,r as u,t as d}from"./word-fade-in.stories-Cmu9C7Yw.js";var f;function p(){return(p=e((()=>{f=`@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-cB8hh8-K.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-OuvFQrIT.js";import{n as l,r as u,t as d}from"./word-fade-in.stories-BJrpc6o4.js";var f;function p(){return(p=e((()=>{f=`@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @utility word-fade-in {

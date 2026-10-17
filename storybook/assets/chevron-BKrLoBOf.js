@@ -1,10 +1,11 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,l as n,n as r,s as i}from"./blocks-cB8hh8-K.js";import{i as a,r as o}from"./react-DITjJg24.js";import{a as s}from"./chunk-W22LQPXL-OuvFQrIT.js";import{n as c,r as l,t as u}from"./chevron.stories-CnvrD-8y.js";var d;function f(){return(f=e((()=>{d=`@utility chevron {
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,l as n,n as r,s as i}from"./blocks-cB8hh8-K.js";import{i as a,r as o}from"./react-DITjJg24.js";import{a as s}from"./chunk-W22LQPXL-OuvFQrIT.js";import{n as c,r as l,t as u}from"./chevron.stories-BRZ6SywT.js";var d;function f(){return(f=e((()=>{d=`@utility chevron {
     @apply transition-all duration-250 ease-in-out;
 
     &.closed {
         @apply rotate-180;
     }
-}`})))()}function p(e){let n={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...a(),...e.components};return(0,h.jsxs)(h.Fragment,{children:[(0,h.jsx)(i,{of:c,title:`Style/Animacje/Chevron`}),`
+}
+`})))()}function p(e){let n={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...a(),...e.components};return(0,h.jsxs)(h.Fragment,{children:[(0,h.jsx)(i,{of:c,title:`Style/Animacje/Chevron`}),`
 `,(0,h.jsx)(n.h1,{id:`animacja-chevron`,children:`Animacja: Chevron`}),`
 `,(0,h.jsx)(n.p,{children:`Standardowa animacja obrotu ikony strzałki o 180 stopni, sygnalizująca rozkładanie lub zwijanie elementów interfejsu.`}),`
 `,(0,h.jsx)(n.h2,{id:`podgląd`,children:`Podgląd`}),`

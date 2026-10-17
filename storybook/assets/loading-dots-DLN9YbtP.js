@@ -1,8 +1,18 @@
 import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-cB8hh8-K.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-OuvFQrIT.js";import{n as l,r as u,t as d}from"./loading-dots.stories-DbZVp0Jk.js";var f;function p(){return(p=e((()=>{f=`@keyframes dots {
-    0%, 20% { content: "." }
-    40% { content: ".." }
-    60% { content: "..." }
-    90%, 100% { content: "" }
+    0%,
+    20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60% {
+        content: '...';
+    }
+    90%,
+    100% {
+        content: '';
+    }
 }
 
 @utility loading-dots {
@@ -10,7 +20,8 @@ import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n
         content: '';
         animation: dots var(--loading-dots-duration, 2s) linear infinite;
     }
-}`})))()}function m(e){let r={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...o(),...e.components};return(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(a,{of:u,title:`Style/Animacje/Loading Dots`}),`
+}
+`})))()}function m(e){let r={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...o(),...e.components};return(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(a,{of:u,title:`Style/Animacje/Loading Dots`}),`
 `,(0,g.jsx)(r.h1,{id:`animacja-loading-dots`,children:`Animacja: Loading Dots`}),`
 `,(0,g.jsxs)(r.p,{children:[`Klasa `,(0,g.jsx)(r.code,{children:`loading-dots`}),` animuje pojawianie się kropek w trakcie ładowania.`]}),`
 `,(0,g.jsx)(r.h2,{id:`podgląd`,children:`Podgląd`}),`

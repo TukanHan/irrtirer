@@ -5,7 +5,8 @@ import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n
     &.selected {
         @apply bg-contrast-light;
     }
-}`})))()}function m(e){let r={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...o(),...e.components};return(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(a,{of:u,title:`Style/Atomy/List Item Box`}),`
+}
+`})))()}function m(e){let r={code:`code`,h1:`h1`,h2:`h2`,p:`p`,...o(),...e.components};return(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(a,{of:u,title:`Style/Atomy/List Item Box`}),`
 `,(0,g.jsx)(r.h1,{id:`list-item-box`,children:`List Item Box`}),`
 `,(0,g.jsxs)(r.p,{children:[`Klasa `,(0,g.jsx)(r.code,{children:`list-item-box`}),` definiuje stylizację dla elementów listy.`]}),`
 `,(0,g.jsx)(r.h2,{id:`podgląd`,children:`Podgląd`}),`

@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DUakCAXC.js","./rolldown-runtime-sJBDdmOt.js","./blocks-cB8hh8-K.js","./preload-helper-2GovK0wV.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./components-BSmd2whY.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chunk-W22LQPXL-OuvFQrIT.js","./theming-BhZtsTV5.js","./chunk-242VQQM5-CQUR7y2g.js","./react-DITjJg24.js","./chunk-QQBDHPVZ-DGKYZDIn.js","./chevron-Cs58madN.js","./chevron.stories-CnvrD-8y.js","./core-QBUKwUZA.js","./takeUntil-CCdCFxEd.js","./button-DZD2MFT7.js","./_animation-chunk-BlmlY8Da.js","./skip-NEpxY_8a.js","./common-BPUSdxxt.js","./list-item-box-B4pR8Bfu.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-190tDa_U.js","./loading-dots.stories-DbZVp0Jk.js","./typography-WXOZEFd6.js","./typography.stories-C8mzPWQP.js","./word-fade-in-BHVTbVse.js","./word-fade-in.stories-Cmu9C7Yw.js","./color-picker.stories-B4Hz6X4_.js","./observers-BtDAlz70.js","./switchMap-DXiBxS2W.js","./dialog.stories-yPlK5nHU.js","./expandable-panel.stories-qXfbccmZ.js","./scrollable-list.stories-CNzBEI6Y.js","./animations-Bcy6G_7s.js","./axe-kNrNOYD6.js","./matchers-JIUQ3HVY-_vs9p5fQ.js","./DocsRenderer-JROSPFPF-a1_DVel7.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DUakCAXC.js","./rolldown-runtime-sJBDdmOt.js","./blocks-cB8hh8-K.js","./preload-helper-2GovK0wV.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./components-BSmd2whY.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chunk-W22LQPXL-OuvFQrIT.js","./theming-BhZtsTV5.js","./chunk-242VQQM5-CQUR7y2g.js","./react-DITjJg24.js","./chunk-QQBDHPVZ-DGKYZDIn.js","./chevron-BKrLoBOf.js","./chevron.stories-BRZ6SywT.js","./core-QBUKwUZA.js","./takeUntil-CCdCFxEd.js","./button-DZD2MFT7.js","./_animation-chunk-BlmlY8Da.js","./skip-NEpxY_8a.js","./common-BPUSdxxt.js","./list-item-box-TGK4p5rY.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-DLN9YbtP.js","./loading-dots.stories-DbZVp0Jk.js","./typography-WXOZEFd6.js","./typography.stories-C8mzPWQP.js","./word-fade-in-BK0pbLvD.js","./word-fade-in.stories-BJrpc6o4.js","./color-picker.stories-Dc-W-coM.js","./observers-BtDAlz70.js","./switchMap-DXiBxS2W.js","./dialog.stories-qPGyIJt5.js","./expandable-panel.stories-D0M9KlJX.js","./scrollable-list.stories-JdbfcQWT.js","./animations-CZR_lMhr.js","./axe-kNrNOYD6.js","./matchers-JIUQ3HVY-_vs9p5fQ.js","./DocsRenderer-JROSPFPF-a1_DVel7.js"])))=>i.map(i=>d[i]);
 import{a as e,i as t,n,r}from"./rolldown-runtime-sJBDdmOt.js";import{n as i,t as a}from"./preload-helper-2GovK0wV.js";import{$ as o,$n as s,A as c,An as l,Bn as u,Cn as d,Dn as f,E as p,En as m,F as h,Fn as g,Ft as _,G as v,Gn as y,H as b,Hn as x,In as S,J as C,Kn as w,L as T,Ln as E,M as D,Mn as O,Nt as ee,O as k,Pn as te,Pt as A,Q as ne,Qn as re,R as ie,Rn as ae,Sn as oe,Tn as se,Tr as ce,U as le,Un as ue,V as de,Vn as fe,W as pe,Wn as me,Wt as he,X as ge,Xn as _e,Y as ve,Yn as ye,Z as be,Zn as xe,_t as Se,at as Ce,bn as we,dn as Te,fn as Ee,g as De,gn as Oe,gt as ke,ht as Ae,it as je,j as Me,jn as Ne,ln as Pe,m as Fe,mn as Ie,mr as Le,n as Re,nt as ze,ot as Be,p as Ve,pn as He,q as Ue,qn as We,rt as Ge,s as Ke,st as qe,t as Je,tt as Ye,un as Xe,vn as Ze,w as Qe,wn as j,x as $e,xn as et,yr as tt,z as nt,zn as rt}from"./core-QBUKwUZA.js";import{D as it,F as at,I as ot,O as st,S as ct,a as eee,c as lt,l as ut,m as dt,n as tee,o as ft,p as nee,s as pt,t as ree,u as iee,x as mt}from"./takeUntil-CCdCFxEd.js";import{a as aee,c as ht,i as oee,n as gt,o as _t,r as see,s as cee,t as lee}from"./switchMap-DXiBxS2W.js";import{i as vt,n as uee,r as yt,t as dee}from"./skip-NEpxY_8a.js";import{a as bt,d as fee,f as pee,h as mee,i as hee,m as gee,n as xt,o as St,p as Ct,t as _ee}from"./common-BPUSdxxt.js";import{a as wt,i as vee,l as Tt,n as Et,u as Dt}from"./chunk-RDNWKK3U-U0neV263.js";import{i as yee,n as bee}from"./chunk-UAWMPV5J-BrGPyIDv.js";import{t as xee}from"./react-DlPsW1c0.js";function Ot(){return(Ot=n((()=>{(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})()})))()}function kt(e){var t=[...arguments].slice(1),n=Array.from(typeof e==`string`?[e]:e);n[n.length-1]=n[n.length-1].replace(/\r?\n([\t ]*)$/,``);var r=n.reduce(function(e,t){var n=t.match(/\n([\t ]+|(?!\s).)/g);return n?e.concat(n.map(function(e){return e.match(/[\t ]/g)?.length??0})):e},[]);if(r.length){var i=RegExp(`
 [	 ]{`+Math.min.apply(Math,r)+`}`,`g`);n=n.map(function(e){return e.replace(i,`
 `)})}n[0]=n[0].replace(/^\r?\n/,``);var a=n[0];return t.forEach(function(e,t){var r=a.match(/(?:^|\n)( *)$/),i=r?r[1]:``,o=e;typeof e==`string`&&e.includes(`
@@ -1023,7 +1023,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
       font-weight: bold;
       color: hsl(212 100 46);
     }
-  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},uz=Ap(e_(),1),bp()})))()}var pz,mz,hz;function gz(){return(gz=n((()=>{({createBrowserChannel:pz}=__STORYBOOK_MODULE_CHANNELS__),{addons:mz}=__STORYBOOK_MODULE_PREVIEW_API__,hz=pz({page:`preview`}),mz.setChannel(hz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=hz)})))()}async function hde(e){return await _z[e]()}var _z;function vz(){return(vz=n((()=>{i(),_z={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DUakCAXC.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-Cs58madN.js`),__vite__mapDeps([15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-B4pR8Bfu.js`),__vite__mapDeps([23,1,2,3,4,5,6,7,8,9,10,11,12,13,14,24]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-190tDa_U.js`),__vite__mapDeps([25,1,2,3,4,5,6,7,8,9,10,11,12,13,14,26]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-WXOZEFd6.js`),__vite__mapDeps([27,1,2,3,4,5,6,7,8,9,10,11,12,13,14,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-BHVTbVse.js`),__vite__mapDeps([29,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,17]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-B4Hz6X4_.js`),__vite__mapDeps([31,1,17,32,18,33,20,21,22]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-yPlK5nHU.js`),__vite__mapDeps([34,1,17,32,18,33,20,21,22,19]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-qXfbccmZ.js`),__vite__mapDeps([35,1,17]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-CNzBEI6Y.js`),__vite__mapDeps([36,1,17,22,19,18,20,21]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-CnvrD-8y.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([16,1,17,18,19,20,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([24,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([26,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([28,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-Cmu9C7Yw.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([30,1,17]),import.meta.url)}})))()}function yz(e){return new xe(function(t){st(e()).subscribe(t)})}function bz(){return(bz=n((()=>{re(),it()})))()}function xz(e){return _e(function(t,n){var r=null,i=!1,a;r=t.subscribe(w(n,void 0,void 0,function(o){a=st(e(o,xz(e)(t))),r?(r.unsubscribe(),r=null,a.subscribe(n)):i=!0})),i&&(r.unsubscribe(),r=null,a.subscribe(n))})}function Sz(){return(Sz=n((()=>{it(),We(),ye()})))()}function Cz(e,t){return Le(t)?dt(e,t,1):dt(e,1)}function wz(){return(wz=n((()=>{nee()})))()}function Tz(e){return _e(function(t,n){try{t.subscribe(n)}finally{n.add(e)}})}function Ez(){return(Ez=n((()=>{ye()})))()}function Dz(e,t,n){var r=Le(e)||t||n?{next:e,error:t,complete:n}:e;return r?_e(function(e,t){var n;(n=r.subscribe)==null||n.call(r);var i=!0;e.subscribe(w(t,function(e){var n;(n=r.next)==null||n.call(r,e),t.next(e)},function(){var e;i=!1,(e=r.complete)==null||e.call(r),t.complete()},function(e){var n;i=!1,(n=r.error)==null||n.call(r,e),t.error(e)},function(){var e,t;i&&((e=r.unsubscribe)==null||e.call(r)),(t=r.finalize)==null||t.call(r)}))}):s}function Oz(){return(Oz=n((()=>{ye(),We()})))()}var gde=r({});function kz(){return(kz=n((()=>{Fe(),Ve()})))()}function _de(){return LW||(LW=HW(),Az(IW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Az(IW.STYLE,void 0,[[`*`,[`style`]]]),Az(IW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Az(IW.URL,zW,[[`*`,[`href`,`xlink:href`]]]),Az(IW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Az(IW.URL,RW,[[`a`,[`href`,`xlink:href`]]]),Az(IW.ATTRIBUTE_NO_BINDING,RW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Az(IW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),LW)}function Az(e,t,n){let r=t??BW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=LW[i]??=HW(),o=a[r]??=HW();o[n]=e}}}function vde(e,t,n){let r=_de()[t.toLowerCase()];if(!r)return IW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[VW])}if(a===void 0){let e=r[BW];e&&(a=e[i]??e[VW])}if(a===void 0&&(!n||n===BW)){let e=r[RW];e&&(a=e[i])}return a??IW.NONE}function yde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function bde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function xde(e){let t=yde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>bde(e)):[];return t.concat(...n)}function jz(e){return e?jW.parse(e).map(xde):[]}function Sde(e){return Tde(wde(e.nodes).join(``)+`[${e.meaning}]`)}function Cde(e){return e.id||Mz(e)}function Mz(e){let t=new QW;return Fz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function wde(e){return e.map(e=>e.visit(ZW,null))}function Tde(e){YW??=new TextEncoder;let t=[...YW.encode(e)],n=Ode(t,$W.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=zz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Ede(t,o,s,c),u=r[0],d=r[1],f=[zz(a,5),u,l,d,i[t]].reduce(Rz);l=c,c=s,s=zz(o,30),o=a,a=f}a=Rz(a,t),o=Rz(o,r),s=Rz(s,u),c=Rz(c,d),l=Rz(l,f)}return Nz(a)+Nz(o)+Nz(s)+Nz(c)+Nz(l)}function Nz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Ede(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Pz(e){YW??=new TextEncoder;let t=YW.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=Iz(n,t.length,0),i=Iz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Fz(e,t=``){let n=Pz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Pz(t)),BigInt.asUintN(63,n).toString()}function Iz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Lz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Lz(r,i,n)[2]}function Lz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Rz(e,t){return Dde(e,t)[1]}function Dde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function zz(e,t){return e<<t|e>>>32-t}function Ode(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=kde(e,i*4,t);return r}function Bz(e,t){return t>=e.length?0:e[t]}function kde(e,t,n){let r=0;if(n===$W.Big)for(let n=0;n<4;n++)r+=Bz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Bz(e,t+n)<<8*n;return r}function Ade(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Vz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function Hz(e,t){return Vz(e,t,(e,t)=>e.isEquivalent(t))}function Uz(e,t,n){return e===``?{cooked:t,raw:NG(jG(AG(t))),range:n}:{cooked:`:${e}:${t}`,raw:NG(`:${MG(AG(e))}:${AG(t)}`),range:n}}function jde(e,t=!1,n=!0){return new eK(e,t,n)}function Mde(e=[]){return new tK(e)}function Wz(e,t,n,r){return new pG(e,t,n,r)}function R(e,t=null,n){return new PG(e,null,t,n)}function Gz(e,t,n){return new iG(e,t,n)}function Kz(e){return new mG(e)}function qz(e,t,n){return new GG(e,t,n)}function Jz(e,t=null){return new JG(e.map(e=>new KG(e.key,e.value,e.quoted)),t,null)}function Nde(e,t){return new IG(e,t)}function Yz(e,t,n,r,i){return new RG(e,t,n,r,i)}function Xz(e,t,n,r){return new zG(e,t,n,r)}function Zz(e,t,n,r,i){return new sK(e,t,n,r,i)}function Pde(e,t,n,r){return new vG(e,t,n,r)}function z(e,t,n){return new xG(e,t,n)}function Fde(e,t,n,r,i){return new kG(e,t,n,r,i)}function Qz(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Ide(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${Qz(e[0])} `;let t=`*
+  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},uz=Ap(e_(),1),bp()})))()}var pz,mz,hz;function gz(){return(gz=n((()=>{({createBrowserChannel:pz}=__STORYBOOK_MODULE_CHANNELS__),{addons:mz}=__STORYBOOK_MODULE_PREVIEW_API__,hz=pz({page:`preview`}),mz.setChannel(hz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=hz)})))()}async function hde(e){return await _z[e]()}var _z;function vz(){return(vz=n((()=>{i(),_z={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DUakCAXC.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-BKrLoBOf.js`),__vite__mapDeps([15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-TGK4p5rY.js`),__vite__mapDeps([23,1,2,3,4,5,6,7,8,9,10,11,12,13,14,24]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-DLN9YbtP.js`),__vite__mapDeps([25,1,2,3,4,5,6,7,8,9,10,11,12,13,14,26]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-WXOZEFd6.js`),__vite__mapDeps([27,1,2,3,4,5,6,7,8,9,10,11,12,13,14,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-BK0pbLvD.js`),__vite__mapDeps([29,1,2,3,4,5,6,7,8,9,10,11,12,13,14,30,17]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-Dc-W-coM.js`),__vite__mapDeps([31,1,17,32,18,33,20,21,22]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-qPGyIJt5.js`),__vite__mapDeps([34,1,17,32,18,33,20,21,22,19]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-D0M9KlJX.js`),__vite__mapDeps([35,1,17]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-JdbfcQWT.js`),__vite__mapDeps([36,1,17,22,19,18,20,21]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-BRZ6SywT.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([16,1,17,18,19,20,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([24,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([26,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([28,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-BJrpc6o4.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([30,1,17]),import.meta.url)}})))()}function yz(e){return new xe(function(t){st(e()).subscribe(t)})}function bz(){return(bz=n((()=>{re(),it()})))()}function xz(e){return _e(function(t,n){var r=null,i=!1,a;r=t.subscribe(w(n,void 0,void 0,function(o){a=st(e(o,xz(e)(t))),r?(r.unsubscribe(),r=null,a.subscribe(n)):i=!0})),i&&(r.unsubscribe(),r=null,a.subscribe(n))})}function Sz(){return(Sz=n((()=>{it(),We(),ye()})))()}function Cz(e,t){return Le(t)?dt(e,t,1):dt(e,1)}function wz(){return(wz=n((()=>{nee()})))()}function Tz(e){return _e(function(t,n){try{t.subscribe(n)}finally{n.add(e)}})}function Ez(){return(Ez=n((()=>{ye()})))()}function Dz(e,t,n){var r=Le(e)||t||n?{next:e,error:t,complete:n}:e;return r?_e(function(e,t){var n;(n=r.subscribe)==null||n.call(r);var i=!0;e.subscribe(w(t,function(e){var n;(n=r.next)==null||n.call(r,e),t.next(e)},function(){var e;i=!1,(e=r.complete)==null||e.call(r),t.complete()},function(e){var n;i=!1,(n=r.error)==null||n.call(r,e),t.error(e)},function(){var e,t;i&&((e=r.unsubscribe)==null||e.call(r)),(t=r.finalize)==null||t.call(r)}))}):s}function Oz(){return(Oz=n((()=>{ye(),We()})))()}var gde=r({});function kz(){return(kz=n((()=>{Fe(),Ve()})))()}function _de(){return LW||(LW=HW(),Az(IW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Az(IW.STYLE,void 0,[[`*`,[`style`]]]),Az(IW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Az(IW.URL,zW,[[`*`,[`href`,`xlink:href`]]]),Az(IW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Az(IW.URL,RW,[[`a`,[`href`,`xlink:href`]]]),Az(IW.ATTRIBUTE_NO_BINDING,RW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Az(IW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),LW)}function Az(e,t,n){let r=t??BW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=LW[i]??=HW(),o=a[r]??=HW();o[n]=e}}}function vde(e,t,n){let r=_de()[t.toLowerCase()];if(!r)return IW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[VW])}if(a===void 0){let e=r[BW];e&&(a=e[i]??e[VW])}if(a===void 0&&(!n||n===BW)){let e=r[RW];e&&(a=e[i])}return a??IW.NONE}function yde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function bde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function xde(e){let t=yde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>bde(e)):[];return t.concat(...n)}function jz(e){return e?jW.parse(e).map(xde):[]}function Sde(e){return Tde(wde(e.nodes).join(``)+`[${e.meaning}]`)}function Cde(e){return e.id||Mz(e)}function Mz(e){let t=new QW;return Fz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function wde(e){return e.map(e=>e.visit(ZW,null))}function Tde(e){YW??=new TextEncoder;let t=[...YW.encode(e)],n=Ode(t,$W.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=zz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Ede(t,o,s,c),u=r[0],d=r[1],f=[zz(a,5),u,l,d,i[t]].reduce(Rz);l=c,c=s,s=zz(o,30),o=a,a=f}a=Rz(a,t),o=Rz(o,r),s=Rz(s,u),c=Rz(c,d),l=Rz(l,f)}return Nz(a)+Nz(o)+Nz(s)+Nz(c)+Nz(l)}function Nz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Ede(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Pz(e){YW??=new TextEncoder;let t=YW.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=Iz(n,t.length,0),i=Iz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Fz(e,t=``){let n=Pz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Pz(t)),BigInt.asUintN(63,n).toString()}function Iz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Lz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Lz(r,i,n)[2]}function Lz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Rz(e,t){return Dde(e,t)[1]}function Dde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function zz(e,t){return e<<t|e>>>32-t}function Ode(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=kde(e,i*4,t);return r}function Bz(e,t){return t>=e.length?0:e[t]}function kde(e,t,n){let r=0;if(n===$W.Big)for(let n=0;n<4;n++)r+=Bz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Bz(e,t+n)<<8*n;return r}function Ade(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Vz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function Hz(e,t){return Vz(e,t,(e,t)=>e.isEquivalent(t))}function Uz(e,t,n){return e===``?{cooked:t,raw:NG(jG(AG(t))),range:n}:{cooked:`:${e}:${t}`,raw:NG(`:${MG(AG(e))}:${AG(t)}`),range:n}}function jde(e,t=!1,n=!0){return new eK(e,t,n)}function Mde(e=[]){return new tK(e)}function Wz(e,t,n,r){return new pG(e,t,n,r)}function R(e,t=null,n){return new PG(e,null,t,n)}function Gz(e,t,n){return new iG(e,t,n)}function Kz(e){return new mG(e)}function qz(e,t,n){return new GG(e,t,n)}function Jz(e,t=null){return new JG(e.map(e=>new KG(e.key,e.value,e.quoted)),t,null)}function Nde(e,t){return new IG(e,t)}function Yz(e,t,n,r,i){return new RG(e,t,n,r,i)}function Xz(e,t,n,r){return new zG(e,t,n,r)}function Zz(e,t,n,r,i){return new sK(e,t,n,r,i)}function Pde(e,t,n,r){return new vG(e,t,n,r)}function z(e,t,n){return new xG(e,t,n)}function Fde(e,t,n,r,i){return new kG(e,t,n,r,i)}function Qz(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Ide(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${Qz(e[0])} `;let t=`*
 `;for(let n of e)t+=` *`,t+=Qz(n).replace(/\n/g,`
  * `),t+=`
 `;return t+=` `,t}function $z(e){return e instanceof xG&&typeof e.value==`string`&&e.value.length>=uK}function Lde(e){return e.replace(mK,(...e)=>e[1].toUpperCase())}function Rde(e,t){return eB(e,`:`,t)}function zde(e,t){return eB(e,`.`,t)}function eB(e,t,n){let r=e.indexOf(t);return r==-1?n:[e.slice(0,r).trim(),e.slice(r+1).trim()]}function Bde(e){let t=[];for(let n=0;n<e.length;n++){let r=e.charCodeAt(n);if(r>=55296&&r<=56319&&e.length>n+1){let t=e.charCodeAt(n+1);t>=56320&&t<=57343&&(n++,r=(r-55296<<10)+t-56320+65536)}r<=127?t.push(r):r<=2047?t.push(r>>6&31|192,r&63|128):r<=65535?t.push(r>>12|224,r>>6&63|128,r&63|128):r<=2097151&&t.push(r>>18&7|240,r>>12&63|128,r>>6&63|128,r&63|128)}return t}function tB(e){if(typeof e==`string`)return e;if(Array.isArray(e))return`[${e.map(tB).join(`, `)}]`;if(e==null)return``+e;let t=e.overriddenName||e.name;if(t)return`${t}`;if(!e.toString)return`object`;let n=e.toString();if(n==null)return``+n;let r=n.indexOf(`
@@ -1064,7 +1064,7 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
           In Storybook v7.0 we are using Angular's new bootstrapApplication API to mount an Angular application to the DOM.
           Note that the BrowserModule providers are automatically included when starting an application with bootstrapApplication()
           Please remove the "BrowserModule" from the list of imports in your moduleMetadata definition to remove this warning.
-        `),[!0];try{let t=await a(()=>import(`./animations-Bcy6G_7s.js`),__vite__mapDeps([37,1,17,22]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Tt`
+        `),[!0];try{let t=await a(()=>import(`./animations-CZR_lMhr.js`),__vite__mapDeps([37,1,17,22]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Tt`
             Storybook Warning:
             You have added the "BrowserAnimationsModule" to the list of "imports" in your moduleMetadata definition of your Story.
             In Storybook 7.0 we use Angular's new 'bootstrapApplication' API to mount the component to the DOM, which accepts a list of providers to set up application-wide providers.
@@ -1133,7 +1133,7 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
 </svg>`})))()}var $be,exe;function txe(){return(txe=n((()=>{$be=Object.defineProperty,exe=(e,t)=>{for(var n in t)$be(e,n,{get:t[n],enumerable:!0})}})))()}function nxe(){try{return!1}catch{return!1}}var rxe,b7,ixe,axe,oxe,sxe,cxe,lxe,uxe,x7,S7,C7,dxe,fxe,pxe,w7,T7,E7,D7,mxe,O7,hxe,gxe,_xe,k7,A7,j7,M7,N7;function vxe(){return(vxe=n((()=>{y7(),txe(),i(),rxe={},exe(rxe,{afterEach:()=>j7,decorators:()=>A7,initialGlobals:()=>M7,parameters:()=>N7}),{expect:b7}=__STORYBOOK_MODULE_TEST__,{ElementA11yParameterError:ixe}=__STORYBOOK_MODULE_CORE_EVENTS_PREVIEW_ERRORS__,{global:axe}=__STORYBOOK_MODULE_GLOBAL__,{addons:oxe,waitForAnimations:sxe}=__STORYBOOK_MODULE_PREVIEW_API__,{global:cxe}=__STORYBOOK_MODULE_GLOBAL__,{document:lxe}=cxe,uxe=(e,t)=>{let n=lxe.location.pathname.replace(/iframe\.html$/,``),r={...e};return[`incomplete`,`passes`,`violations`].forEach(i=>{Array.isArray(e[i])&&(r[i]=e[i].map(e=>({...e,nodes:e.nodes.map((r,a)=>{let o=`${i}.${e.id}.${a+1}`,s=`${n}?path=/story/${t}&addonPanel=storybook/a11y/panel&a11ySelection=${o}`;return{id:o,...r,linkPath:s}})})))}),r},{document:x7}=axe,S7=oxe.getChannel(),C7={config:{},options:{}},dxe=[`region`],fxe=(e=[])=>{let t={};for(let{id:n,enabled:r}of e)!n||typeof r!=`boolean`||(r?delete t[n]:t[n]={enabled:!1});return t},pxe=(e,t)=>{if(!e.runOnly)return e;let n=fxe(t.rules);return Object.keys(n).length===0?e:{...e,rules:{...n,...e.rules}}},w7=[],T7=!1,E7=async()=>{if(w7.length===0){T7=!1;return}T7=!0;let e=w7.shift();e&&await e(),E7()},D7=async(t=C7,n)=>{let r=(await a(()=>import(`./axe-kNrNOYD6.js`).then(t=>e(t.default,1)),__vite__mapDeps([38,1]),import.meta.url))?.default||globalThis.axe,{config:i={},options:o={}}=t;if(t.element)throw new ixe;let s={include:x7?.body,exclude:[`.sb-wrapper`,`#storybook-docs`,`#storybook-highlights-root`]};if(t.context){let e=typeof t.context==`object`&&`include`in t.context&&t.context.include!==void 0,n=typeof t.context==`object`&&`exclude`in t.context&&t.context.exclude!==void 0;e?s.include=t.context.include:!e&&!n&&(s.include=t.context),n&&(s.exclude=s.exclude.concat(t.context.exclude))}r.reset();let c={...i,rules:[...dxe.map(e=>({id:e,enabled:!1})),...i?.rules??[]]};r.configure(c);let l=pxe(o,c);return new Promise((e,t)=>{let i=x7?.getElementById(`storybook-highlights-root`);i&&(i.style.display=`none`),w7.push(async()=>{try{e(uxe(await r.run(s,l),n))}catch(e){t(e)}}),T7||E7(),i&&(i.style.display=``)})},S7.on(_7.MANUAL,async(e,t=C7)=>{try{await sxe();let n=await D7(t,e),r=JSON.parse(JSON.stringify(n));S7.emit(_7.RESULT,r,e)}catch(e){S7.emit(_7.ERROR,e)}}),{useCallback:mxe,useEffect:O7}=__STORYBOOK_MODULE_PREVIEW_API__,hxe=Object.values(v7).map(e=>e.filter),gxe=RegExp(`\\b(${hxe.join(`|`)})\\b`,`g`),_xe=(e,{globals:t})=>{let{vision:n}=t,r=mxe(()=>{let e=document.body.style.filter.replaceAll(gxe,``).trim(),t=v7[n]?.filter;return t&&document.body.classList.contains(`sb-show-main`)?!e||e===`none`?document.body.style.filter=t:document.body.style.filter=`${e} ${t}`:document.body.style.filter=e||`none`,()=>document.body.style.filter=e||`none`},[n]);return O7(()=>{let e=r(),t=new MutationObserver(()=>r());return t.observe(document.body,{attributeFilter:[`class`]}),()=>{e(),t.disconnect()}},[r]),O7(()=>(document.body.insertAdjacentHTML(`beforeend`,Qbe),()=>{let e=document.getElementById(`storybook-a11y-vision-filters`);e?.parentElement?.removeChild(e)}),[]),e()},k7=!1,A7=[_xe],j7=async({id:e,reporting:t,parameters:n,globals:r,viewMode:i})=>{let o=n.a11y,s=r.a11y,c=!r.ghostStories&&o?.disable!==!0&&o?.test!==`off`&&s?.manual!==!0,l=()=>o?.test===`todo`?`warning`:`failed`;if(c&&i===`story`)try{let n=await D7(o,e);if(n){let e=(n?.violations.length??0)>0;if(t.addReport({type:`a11y`,version:1,result:n,status:e?l():`passed`}),nxe()&&e&&l()===`failed`){if(!k7){let{toHaveNoViolations:e}=await a(async()=>{let{toHaveNoViolations:e}=await import(`./matchers-JIUQ3HVY-_vs9p5fQ.js`);return{toHaveNoViolations:e}},__vite__mapDeps([39,1]),import.meta.url);b7.extend({toHaveNoViolations:e}),k7=!0}b7(n).toHaveNoViolations()}}}catch(e){if(t.addReport({type:`a11y`,version:1,result:{error:e},status:`failed`}),nxe())throw e}},M7={a11y:{manual:!1},vision:void 0},N7={a11y:{test:`todo`}}})))()}var yxe=r({afterEach:()=>j7,decorators:()=>A7,initialGlobals:()=>M7,parameters:()=>N7});function bxe(){return(bxe=n((()=>{vxe(),y7()})))()}var xxe,Sxe,P7;function Cxe(){return(Cxe=n((()=>{yee(),i(),xxe={},bee(xxe,{parameters:()=>P7}),Sxe=Object.entries(globalThis.TAGS_OPTIONS??{}).reduce((e,t)=>{let[n,r]=t;return r.excludeFromDocsStories&&(e[n]=!0),e},{}),P7={docs:{renderer:async()=>{let{DocsRenderer:e}=await a(async()=>{let{DocsRenderer:e}=await import(`./DocsRenderer-JROSPFPF-a1_DVel7.js`);return{DocsRenderer:e}},__vite__mapDeps([40,1,3,2,4,5,6,7,8,9,10,11,12,13,14]),import.meta.url);return new e},stories:{filter:e=>(e.tags||[]).filter(e=>Sxe[e]).length===0&&!e.parameters.docs?.disable}}}})))()}var wxe=r({parameters:()=>P7});function Txe(){return(Txe=n((()=>{Cxe()})))()}var Exe,F7,I7,L7,Dxe,R7,Oxe;function z7(){return(z7=n((()=>{Exe=Object.defineProperty,F7=(e,t)=>{for(var n in t)Exe(e,n,{get:t[n],enumerable:!0})},I7=`themes`,L7=`storybook/${I7}`,Dxe=`theme`,`${L7}`,R7={},Oxe={REGISTER_THEMES:`${L7}/REGISTER_THEMES`}})))()}var kxe,B7;function V7(){return(V7=n((()=>{z7(),kxe={},F7(kxe,{initialGlobals:()=>B7}),B7={[Dxe]:``}})))()}var Axe=r({initialGlobals:()=>B7});function jxe(){return(jxe=n((()=>{V7(),z7()})))()}function H7(e){let t=e9.__Zone_symbol_prefix;return(typeof t==`string`?t:`__zone_symbol__`)+e}function Mxe(){let e=e9.performance;function t(t){e&&e.mark&&e.mark(t)}function n(t,n){e&&e.measure&&e.measure(t,n)}t(`Zone`);let r=class e{constructor(e,t){$7(this,`_parent`),$7(this,`_name`),$7(this,`_properties`),$7(this,`_zoneDelegate`),this._parent=e,this._name=t?t.name||`unnamed`:`<root>`,this._properties=t&&t.properties||{},this._zoneDelegate=new o(this,this._parent&&this._parent._zoneDelegate,t)}static assertZonePatched(){if(e9.Promise!==O.ZoneAwarePromise)throw Error("Zone.js has detected that ZoneAwarePromise `(window|global).Promise` has been overwritten.\nMost likely cause is that a Promise polyfill has been loaded after Zone.js (Polyfilling Promise api is not necessary when zone.js is loaded. If you must load one, do so before loading zone.js.)")}static get root(){let t=e.current;for(;t.parent;)t=t.parent;return t}static get current(){return k.zone}static get currentTask(){return te}static __load_patch(r,i,a=!1){if(Object.hasOwn(O,r)){let e=e9[H7(`forceDuplicateZoneCheck`)]===!0;if(!a&&e)throw Error(`Already loaded patch: `+r)}else if(!e9[`__Zone_disable_`+r]){let a=`Zone:`+r;t(a),O[r]=i(e9,e,ee),n(a,a)}}get parent(){return this._parent}get name(){return this._name}get(e){let t=this.getZoneWith(e);if(t)return t._properties[e]}getZoneWith(e){let t=this;for(;t;){if(Object.hasOwn(t._properties,e))return t;t=t._parent}return null}fork(e){if(!e)throw Error(`ZoneSpec required!`);return this._zoneDelegate.fork(this,e)}wrap(e,t){if(typeof e!=`function`)throw Error(`Expecting function got: `+e);let n=this._zoneDelegate.intercept(this,e,t),r=this;return function(){return r.runGuarded(n,this,arguments,t)}}run(e,t,n,r){k={parent:k,zone:this};try{return this._zoneDelegate.invoke(this,e,t,n,r)}finally{k=k.parent}}runGuarded(e,t=null,n,r){k={parent:k,zone:this};try{try{return this._zoneDelegate.invoke(this,e,t,n,r)}catch(e){if(this._zoneDelegate.handleError(this,e))throw e}}finally{k=k.parent}}runTask(e,t,n){if(e.zone!=this)throw Error(`A task can only be run in the zone of creation! (Creation: `+(e.zone||v).name+`; Execution: `+this.name+`)`);let r=e,{type:i,data:{isPeriodic:a=!1,isRefreshable:o=!1}={}}=e;if(e.state===y&&(i===D||i===E))return;let s=e.state!=S;s&&r._transitionTo(S,x);let c=te;te=r,k={parent:k,zone:this};try{i==E&&e.data&&!a&&!o&&(e.cancelFn=void 0);try{return this._zoneDelegate.invokeTask(this,r,t,n)}catch(e){if(this._zoneDelegate.handleError(this,e))throw e}}finally{let t=e.state;if(t!==y&&t!==w){if(i==D||a||o&&t===b)s&&r._transitionTo(x,S,b);else{let e=r._zoneDelegates;this._updateTaskCount(r,-1),s&&r._transitionTo(y,S,y),o&&(r._zoneDelegates=e)}}k=k.parent,te=c}}scheduleTask(e){if(e.zone&&e.zone!==this){let t=this;for(;t;){if(t===e.zone)throw Error(`can not reschedule task to ${this.name} which is descendants of the original zone ${e.zone.name}`);t=t.parent}}e._transitionTo(b,y);let t=[];e._zoneDelegates=t,e._zone=this;try{e=this._zoneDelegate.scheduleTask(this,e)}catch(t){throw e._transitionTo(w,b,y),this._zoneDelegate.handleError(this,t),t}return e._zoneDelegates===t&&this._updateTaskCount(e,1),e.state==b&&e._transitionTo(x,b),e}scheduleMicroTask(e,t,n,r){return this.scheduleTask(new s(T,e,t,n,r,void 0))}scheduleMacroTask(e,t,n,r,i){return this.scheduleTask(new s(E,e,t,n,r,i))}scheduleEventTask(e,t,n,r,i){return this.scheduleTask(new s(D,e,t,n,r,i))}cancelTask(e){if(e.zone!=this)throw Error(`A task can only be cancelled in the zone of creation! (Creation: `+(e.zone||v).name+`; Execution: `+this.name+`)`);if(e.state===x||e.state===S){e._transitionTo(C,x,S);try{this._zoneDelegate.cancelTask(this,e)}catch(t){throw e._transitionTo(w,C),this._zoneDelegate.handleError(this,t),t}return this._updateTaskCount(e,-1),e._transitionTo(y,C),e.runCount=-1,e}}_updateTaskCount(e,t){let n=e._zoneDelegates;t==-1&&(e._zoneDelegates=null);for(let r=0;r<n.length;r++)n[r]._updateTaskCount(e.type,t)}};$7(r,`__symbol__`,H7);let i=r,a={name:``,onHasTask:(e,t,n,r)=>e.hasTask(n,r),onScheduleTask:(e,t,n,r)=>e.scheduleTask(n,r),onInvokeTask:(e,t,n,r,i,a)=>e.invokeTask(n,r,i,a),onCancelTask:(e,t,n,r)=>e.cancelTask(n,r)};class o{constructor(e,t,n){$7(this,`_zone`),$7(this,`_taskCounts`,{microTask:0,macroTask:0,eventTask:0}),$7(this,`_forkDlgt`),$7(this,`_forkZS`),$7(this,`_forkCurrZone`),$7(this,`_interceptDlgt`),$7(this,`_interceptZS`),$7(this,`_interceptCurrZone`),$7(this,`_invokeDlgt`),$7(this,`_invokeZS`),$7(this,`_invokeCurrZone`),$7(this,`_handleErrorDlgt`),$7(this,`_handleErrorZS`),$7(this,`_handleErrorCurrZone`),$7(this,`_scheduleTaskDlgt`),$7(this,`_scheduleTaskZS`),$7(this,`_scheduleTaskCurrZone`),$7(this,`_invokeTaskDlgt`),$7(this,`_invokeTaskZS`),$7(this,`_invokeTaskCurrZone`),$7(this,`_cancelTaskDlgt`),$7(this,`_cancelTaskZS`),$7(this,`_cancelTaskCurrZone`),$7(this,`_hasTaskDlgt`),$7(this,`_hasTaskDlgtOwner`),$7(this,`_hasTaskZS`),$7(this,`_hasTaskCurrZone`),this._zone=e,this._forkZS=n&&(n&&n.onFork?n:t._forkZS),this._forkDlgt=n&&(n.onFork?t:t._forkDlgt),this._forkCurrZone=n&&(n.onFork?this._zone:t._forkCurrZone),this._interceptZS=n&&(n.onIntercept?n:t._interceptZS),this._interceptDlgt=n&&(n.onIntercept?t:t._interceptDlgt),this._interceptCurrZone=n&&(n.onIntercept?this._zone:t._interceptCurrZone),this._invokeZS=n&&(n.onInvoke?n:t._invokeZS),this._invokeDlgt=n&&(n.onInvoke?t:t._invokeDlgt),this._invokeCurrZone=n&&(n.onInvoke?this._zone:t._invokeCurrZone),this._handleErrorZS=n&&(n.onHandleError?n:t._handleErrorZS),this._handleErrorDlgt=n&&(n.onHandleError?t:t._handleErrorDlgt),this._handleErrorCurrZone=n&&(n.onHandleError?this._zone:t._handleErrorCurrZone),this._scheduleTaskZS=n&&(n.onScheduleTask?n:t._scheduleTaskZS),this._scheduleTaskDlgt=n&&(n.onScheduleTask?t:t._scheduleTaskDlgt),this._scheduleTaskCurrZone=n&&(n.onScheduleTask?this._zone:t._scheduleTaskCurrZone),this._invokeTaskZS=n&&(n.onInvokeTask?n:t._invokeTaskZS),this._invokeTaskDlgt=n&&(n.onInvokeTask?t:t._invokeTaskDlgt),this._invokeTaskCurrZone=n&&(n.onInvokeTask?this._zone:t._invokeTaskCurrZone),this._cancelTaskZS=n&&(n.onCancelTask?n:t._cancelTaskZS),this._cancelTaskDlgt=n&&(n.onCancelTask?t:t._cancelTaskDlgt),this._cancelTaskCurrZone=n&&(n.onCancelTask?this._zone:t._cancelTaskCurrZone),this._hasTaskZS=null,this._hasTaskDlgt=null,this._hasTaskDlgtOwner=null,this._hasTaskCurrZone=null;let r=n&&n.onHasTask,i=t&&t._hasTaskZS;(r||i)&&(this._hasTaskZS=r?n:a,this._hasTaskDlgt=t,this._hasTaskDlgtOwner=this,this._hasTaskCurrZone=this._zone,n.onScheduleTask||(this._scheduleTaskZS=a,this._scheduleTaskDlgt=t,this._scheduleTaskCurrZone=this._zone),n.onInvokeTask||(this._invokeTaskZS=a,this._invokeTaskDlgt=t,this._invokeTaskCurrZone=this._zone),n.onCancelTask||(this._cancelTaskZS=a,this._cancelTaskDlgt=t,this._cancelTaskCurrZone=this._zone))}get zone(){return this._zone}fork(e,t){return this._forkZS?this._forkZS.onFork(this._forkDlgt,this.zone,e,t):new i(e,t)}intercept(e,t,n){return this._interceptZS?this._interceptZS.onIntercept(this._interceptDlgt,this._interceptCurrZone,e,t,n):t}invoke(e,t,n,r,i){return this._invokeZS?this._invokeZS.onInvoke(this._invokeDlgt,this._invokeCurrZone,e,t,n,r,i):t.apply(n,r)}handleError(e,t){return!this._handleErrorZS||this._handleErrorZS.onHandleError(this._handleErrorDlgt,this._handleErrorCurrZone,e,t)}scheduleTask(e,t){let n=t;if(this._scheduleTaskZS)this._hasTaskZS&&n._zoneDelegates.push(this._hasTaskDlgtOwner),n=this._scheduleTaskZS.onScheduleTask(this._scheduleTaskDlgt,this._scheduleTaskCurrZone,e,t),n||=t;else if(t.scheduleFn)t.scheduleFn(t);else if(t.type==T)g(t);else throw Error(`Task is missing scheduleFn.`);return n}invokeTask(e,t,n,r){return this._invokeTaskZS?this._invokeTaskZS.onInvokeTask(this._invokeTaskDlgt,this._invokeTaskCurrZone,e,t,n,r):t.callback.apply(n,r)}cancelTask(e,t){let n;if(this._cancelTaskZS)n=this._cancelTaskZS.onCancelTask(this._cancelTaskDlgt,this._cancelTaskCurrZone,e,t);else{if(!t.cancelFn)throw Error(`Task is not cancelable`);n=t.cancelFn(t)}return n}hasTask(e,t){try{this._hasTaskZS&&this._hasTaskZS.onHasTask(this._hasTaskDlgt,this._hasTaskCurrZone,e,t)}catch(t){this.handleError(e,t)}}_updateTaskCount(e,t){let n=this._taskCounts,r=n[e],i=n[e]=r+t;if(i<0)throw Error(`More tasks executed then were scheduled.`);if(r==0||i==0){let t={microTask:n.microTask>0,macroTask:n.macroTask>0,eventTask:n.eventTask>0,change:e};this.hasTask(this._zone,t)}}}class s{constructor(e,t,n,r,i,a){if($7(this,`type`),$7(this,`source`),$7(this,`invoke`),$7(this,`callback`),$7(this,`data`),$7(this,`scheduleFn`),$7(this,`cancelFn`),$7(this,`_zone`,null),$7(this,`runCount`,0),$7(this,`_zoneDelegates`,null),$7(this,`_state`,`notScheduled`),this.type=e,this.source=t,this.data=r,this.scheduleFn=i,this.cancelFn=a,!n)throw Error(`callback is not defined`);this.callback=n;let o=this;this.invoke=e===D&&r&&r.useG?s.invokeTask:function(){return s.invokeTask.call(e9,o,this,arguments)}}static invokeTask(e,t,n){e||=this,A++;try{return e.runCount++,e.zone.runTask(e,t,n)}finally{try{A===1&&!e9[d]&&_()}finally{A--}}}get zone(){return this._zone}get state(){return this._state}cancelScheduleRequest(){this._transitionTo(y,b)}_transitionTo(e,t,n){if(this._state===t||this._state===n)this._state=e,e==y&&(this._zoneDelegates=null);else throw Error(`${this.type} '${this.source}': can not transition to '${e}', expecting state '${t}'${n?` or '`+n+`'`:``}, was '${this._state}'.`)}toString(){return this.data&&this.data.handleId!==void 0?this.data.handleId.toString():Object.prototype.toString.call(this)}toJSON(){return{type:this.type,state:this.state,source:this.source,zone:this.zone.name,runCount:this.runCount}}}let c=H7(`setTimeout`),l=H7(`Promise`),u=H7(`then`),d=H7(`enable_native_microtask_draining`),f=[],p=!1,m;function h(e){!m&&e9[l]&&(m=e9[l].resolve(0)),m?(m[u]??m.then).call(m,e):e9[c](e,0)}function g(e){let t=e9[d],n=t&&f.length===0&&!p,r=!t&&A===0&&f.length===0;(n||r)&&h(_),e&&f.push(e)}function _(){if(!p){p=!0;try{for(;f.length;){let e=f;f=[];for(let t of e)try{t.zone.runTask(t,null,null)}catch(e){ee.onUnhandledError(e)}}}finally{if(e9[d])p=!1,ee.microtaskDrainDone();else try{ee.microtaskDrainDone()}finally{p=!1}}}}let v={name:`NO ZONE`},y=`notScheduled`,b=`scheduling`,x=`scheduled`,S=`running`,C=`canceling`,w=`unknown`,T=`microTask`,E=`macroTask`,D=`eventTask`,O=Object.create(null),ee={symbol:H7,currentZoneFrame:()=>k,onUnhandledError:ne,microtaskDrainDone:ne,scheduleMicroTask:g,showUncaughtError:()=>!i[H7(`ignoreConsoleErrorUncaughtError`)],patchEventTarget:()=>[],patchOnProperties:ne,patchMethod:()=>ne,bindArguments:()=>[],patchThen:()=>ne,patchMacroTask:()=>ne,patchEventPrototype:()=>ne,getGlobalObjects:()=>void 0,ObjectDefineProperty:()=>ne,ObjectGetOwnPropertyDescriptor:()=>void 0,ObjectCreate:()=>void 0,ArraySlice:()=>[],patchClass:()=>ne,wrapWithCurrentZone:()=>ne,filterProperties:()=>[],attachOriginToPatched:()=>ne,_redefineProperty:()=>ne,patchCallbacks:()=>ne,nativeScheduleMicroTask:h},k={parent:null,zone:new i(null,null)},te=null,A=0;function ne(){}return n(`Zone`,`Zone`),i}function Nxe(){let e=globalThis,t=e[H7(`forceDuplicateZoneCheck`)]===!0;if(e.Zone&&(t||typeof e.Zone.__symbol__!=`function`))throw Error(`Zone already loaded.`);return e.Zone??=Mxe(),e.Zone}function U7(e,t){return Zone.current.wrap(e,t)}function W7(e,t,n,r,i){return Zone.current.scheduleMacroTask(e,t,n,r,i)}function G7(e,t){for(let n=e.length-1;n>=0;n--)typeof e[n]==`function`&&(e[n]=U7(e[n],t+`_`+n));return e}function Pxe(e,t){let n=e.constructor.name;for(let r=0;r<t.length;r++){let i=t[r],a=e[i];if(a){if(!Fxe(t9(e,i)))continue;e[i]=(e=>{let t=function(){return e.apply(this,G7(arguments,n+`.`+i))};return J7(t,e),t})(a)}}}function Fxe(e){return e?e.writable===!1?!1:typeof e.get!=`function`||e.set!==void 0:!0}function Ixe(e,t,n){let r=t9(e,t);if(!r&&n&&t9(n,t)&&(r={enumerable:!0,configurable:!0}),!r||!r.configurable)return;let i=d9(`on`+t+`patched`);if(Object.hasOwn(e,i)&&e[i])return;delete r.writable,delete r.value;let a=r.get,o=r.set,s=t.slice(2),c=y9[s];c||=y9[s]=d9(`ON_PROPERTY`+s),r.set=function(t){let n=this;!n&&e===m9&&(n=m9),n&&(typeof n[c]==`function`&&n.removeEventListener(s,b9),o?.call(n,null),n[c]=t,typeof t==`function`&&n.addEventListener(s,b9,!1))},r.get=function(){let n=this;if(!n&&e===m9&&(n=m9),!n)return null;let i=n[c];if(i)return i;if(a){let e=a.call(this);if(e)return r.set.call(this,e),typeof n[dSe]==`function`&&n.removeAttribute(t),e}return null},n9(e,t,r),e[i]=!0}function Lxe(e,t,n){if(t)for(let r=0;r<t.length;r++)Ixe(e,`on`+t[r],n);else{let t=[];for(let n in e)n.slice(0,2)==`on`&&t.push(n);for(let r=0;r<t.length;r++)Ixe(e,t[r],n)}}function K7(e){let t=m9[e];if(!t)return;m9[d9(e)]=t,m9[e]=function(){let n=G7(arguments,e);switch(n.length){case 0:this[x9]=new t;break;case 1:this[x9]=new t(n[0]);break;case 2:this[x9]=new t(n[0],n[1]);break;case 3:this[x9]=new t(n[0],n[1],n[2]);break;case 4:this[x9]=new t(n[0],n[1],n[2],n[3]);break;default:throw Error(`Arg list too long.`)}},J7(m9[e],t);let n=new t(function(){}),r;for(r in n)(e!==`XMLHttpRequest`||r!==`responseBlob`)&&(function(t){typeof n[t]==`function`?m9[e].prototype[t]=function(){return this[x9][t].apply(this[x9],arguments)}:n9(m9[e].prototype,t,{set:function(n){typeof n==`function`?(this[x9][t]=U7(n,e+`.`+t),J7(this[x9][t],n)):this[x9][t]=n},get:function(){return this[x9][t]}})})(r);for(r in t)r!==`prototype`&&Object.hasOwn(t,r)&&(m9[e][r]=t[r])}function Rxe(e,t){typeof Object.getOwnPropertySymbols==`function`&&Object.getOwnPropertySymbols(e).forEach(n=>{let r=Object.getOwnPropertyDescriptor(e,n);Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){(!r||r.writable&&typeof r.set==`function`)&&(e[n]=t)},enumerable:!r||r.enumerable,configurable:!r||r.configurable})})}function q7(e,t,n){let r=e;for(;r&&!Object.hasOwn(r,t);)r=r9(r);!r&&e[t]&&(r=e);let i=d9(t),a=null;if(r&&(!(a=r[i])||!Object.hasOwn(r,i))&&(a=r[i]=r[t],Fxe(r&&t9(r,t)))){let e=n(a,i,t);r[t]=function(){return e(this,arguments)},J7(r[t],a),pSe&&Rxe(a,r[t])}return a}function zxe(e,t,n){let r=null;function i(e){let t=e.data;return t.args[t.cbIdx]=function(){e.invoke.apply(this,arguments)},r.apply(t.target,t.args),e}r=q7(e,t,e=>function(t,r){let a=n(t,r);return a.cbIdx>=0&&typeof r[a.cbIdx]==`function`?W7(a.name,r[a.cbIdx],a,i):e.apply(t,r)})}function J7(e,t){e[d9(`OriginalDelegate`)]=t}function Bxe(e){return typeof e==`function`}function Vxe(e){return typeof e==`number`}function Hxe(e,t){let n=(t?t(e):e)+l9,r=(t?t(e):e)+c9,i=u9+n,a=u9+r;S9[e]={[l9]:i,[c9]:a}}function Uxe(e,t,n,r){let i=r&&r.add||i9,a=r&&r.rm||a9,o=r&&r.listeners||`eventListeners`,s=r&&r.rmAll||`removeAllListeners`,c=d9(i),l=`.`+i+`:`,u=function(e,t,n){if(e.isRemoved)return;let r=e.callback;typeof r==`object`&&r.handleEvent&&(e.callback=e=>r.handleEvent(e),e.originalDelegate=r);let i;try{e.invoke(e,t,[n])}catch(e){i=e}let o=e.options;if(o&&typeof o==`object`&&o.once){let r=e.originalDelegate?e.originalDelegate:e.callback;t[a].call(t,n.type,r,o)}return i};function d(n,r,i){if(r||=e.event,!r)return;let a=n||r.target||e,o=a[S9[r.type][i?c9:l9]];if(o){let e=[];if(o.length===1){let t=u(o[0],a,r);t&&e.push(t)}else{let t=o.slice();for(let n=0;n<t.length&&!(r&&r[T9]===!0);n++){let i=u(t[n],a,r);i&&e.push(i)}}if(e.length===1)throw e[0];for(let n=0;n<e.length;n++){let r=e[n];t.nativeScheduleMicroTask(()=>{throw r})}}}let f=function(e){return d(this,e,!1)},p=function(e){return d(this,e,!0)};function m(t,n){if(!t)return!1;let r=!0;n&&n.useG!==void 0&&(r=n.useG);let u=n&&n.vh,d=!0;n&&n.chkDup!==void 0&&(d=n.chkDup);let m=!1;n&&n.rt!==void 0&&(m=n.rt);let h=t;for(;h&&!Object.hasOwn(h,i);)h=r9(h);if(!h&&t[i]&&(h=t),!h||h[c])return!1;let g=n&&n.eventNameToString,_={},v=h[c]=h[i],y=h[d9(a)]=h[a],b=h[d9(o)]=h[o],x=h[d9(s)]=h[s],S;n&&n.prepend&&(S=h[d9(n.prepend)]=h[n.prepend]);function C(e,t){return t?typeof e==`boolean`?{capture:e,passive:!0}:e?(typeof e==`object`&&e.passive!==!1&&(e.passive=!0),e):{passive:!0}:e}let w=function(e){if(!_.isExisting)return v.call(_.target,_.eventName,_.capture?p:f,_.options)},T=function(e){if(!e.isRemoved){let t=S9[e.eventName],n;t&&(n=t[e.capture?c9:l9]);let r=n&&e.target[n];if(r){for(let t=0;t<r.length;t++)if(r[t]===e){r.splice(t,1),e.isRemoved=!0,e.removeAbortListener&&=(e.removeAbortListener(),null),r.length===0&&(e.allRemoved=!0,e.target[n]=null);break}}}if(e.allRemoved)return y.call(e.target,e.eventName,e.capture?p:f,e.options)},E=function(e){return v.call(_.target,_.eventName,e.invoke,_.options)},D=function(e){return S.call(_.target,_.eventName,e.invoke,_.options)},O=function(e){return y.call(e.target,e.eventName,e.invoke,e.options)},ee=r?w:E,k=r?T:O,te=n?.diff||function(e,t){let n=typeof t;return n===`function`&&e.callback===t||n===`object`&&e.originalDelegate===t},A=Zone[d9(`UNPATCHED_EVENTS`)],ne=e[d9(`PASSIVE_EVENTS`)];function re(e){if(typeof e!=`object`||!e)return e;let t=cSe({},e);for(let n of hSe)!Object.hasOwn(t,n)&&n in e&&(t[n]=e[n]);return t}let ie=function(t,i,a,o,s=!1,c=!1){return function(){let l=this||e,f=arguments[0];n&&n.transferEventName&&(f=n.transferEventName(f));let p=arguments[1];if(!p||g9&&f===`uncaughtException`)return t.apply(this,arguments);let m=!1;if(typeof p!=`function`){if(!p.handleEvent)return t.apply(this,arguments);m=!0}if(u&&!u(t,p,l,arguments))return;let h=!!ne&&ne.indexOf(f)!==-1,v=C(re(arguments[2]),h),y=v?.signal;if(y?.aborted)return;if(A){for(let e=0;e<A.length;e++)if(f===A[e])return h?t.call(l,f,p,v):t.apply(this,arguments)}let b=v?typeof v==`boolean`||v.capture:!1,x=v&&typeof v==`object`?v.once:!1,S=Zone.current,w=S9[f];w||=(Hxe(f,g),S9[f]);let T=w[b?c9:l9],E=l[T],D=!1;if(E){if(D=!0,d){for(let e=0;e<E.length;e++)if(te(E[e],p))return}}else E=l[T]=[];let O,ee=l.constructor.name,k=C9[ee];k&&(O=k[f]),O||=ee+i+(g?g(f):f),_.options=v,x&&(_.options.once=!1),_.target=l,_.capture=b,_.eventName=f,_.isExisting=D;let ie=r?mSe:void 0;ie&&(ie.taskData=_),y&&(_.options.signal=void 0);let ae=S.scheduleEventTask(O,p,ie,a,o);if(y){_.options.signal=y;let e=()=>ae.zone.cancelTask(ae);t.call(y,`abort`,e,{once:!0}),ae.removeAbortListener=()=>y.removeEventListener(`abort`,e)}if(_.target=null,ie&&(ie.taskData=null),x&&(_.options.once=!0),typeof ae.options!=`boolean`&&(ae.options=v),ae.target=l,ae.capture=b,ae.eventName=f,m&&(ae.originalDelegate=p),c?E.unshift(ae):E.push(ae),s)return l}};return h[i]=ie(v,l,ee,k,m),S&&(h.prependListener=ie(S,`.prependListener:`,D,k,m,!0)),h[a]=function(){let t=this||e,r=arguments[0];n&&n.transferEventName&&(r=n.transferEventName(r));let i=arguments[2],a=i?typeof i==`boolean`||i.capture:!1,o=arguments[1];if(!o)return y.apply(this,arguments);if(u&&!u(y,o,t,arguments))return;let s=S9[r],c;s&&(c=s[a?c9:l9]);let l=c&&t[c];if(l)for(let e=0;e<l.length;e++){let n=l[e];if(te(n,o)){if(l.splice(e,1),n.isRemoved=!0,l.length===0&&(n.allRemoved=!0,t[c]=null,!a&&typeof r==`string`)){let e=u9+`ON_PROPERTY`+r;t[e]=null}return n.zone.cancelTask(n),m?t:void 0}}return y.apply(this,arguments)},h[o]=function(){let t=this||e,r=arguments[0];n&&n.transferEventName&&(r=n.transferEventName(r));let i=[],a=Wxe(t,g?g(r):r);for(let e=0;e<a.length;e++){let t=a[e],n=t.originalDelegate?t.originalDelegate:t.callback;i.push(n)}return i},h[s]=function(){let t=this||e,r=arguments[0];if(r){n&&n.transferEventName&&(r=n.transferEventName(r));let e=S9[r];if(e){let n=e[l9],i=e[c9],o=t[n],s=t[i];if(o){let e=o.slice();for(let t=0;t<e.length;t++){let n=e[t],i=n.originalDelegate?n.originalDelegate:n.callback;this[a].call(this,r,i,n.options)}}if(s){let e=s.slice();for(let t=0;t<e.length;t++){let n=e[t],i=n.originalDelegate?n.originalDelegate:n.callback;this[a].call(this,r,i,n.options)}}}}else{let e=Object.keys(t);for(let t=0;t<e.length;t++){let n=e[t],r=w9.exec(n),i=r&&r[1];i&&i!==`removeListener`&&this[s].call(this,i)}this[s].call(this,`removeListener`)}if(m)return this},J7(h[i],v),J7(h[a],y),x&&J7(h[s],x),b&&J7(h[o],b),!0}let h=[];for(let e=0;e<n.length;e++)h[e]=m(n[e],r);return h}function Wxe(e,t){if(!t){let n=[];for(let r in e){let i=w9.exec(r),a=i&&i[1];if(a&&(!t||a===t)){let t=e[r];if(t)for(let e=0;e<t.length;e++)n.push(t[e])}}return n}let n=S9[t];n||=(Hxe(t),S9[t]);let r=e[n[l9]],i=e[n[c9]];return r?i?r.concat(i):r.slice():i?i.slice():[]}function Gxe(e,t){let n=e.Event;n&&n.prototype&&t.patchMethod(n.prototype,`stopImmediatePropagation`,e=>function(t,n){t[T9]=!0,e&&e.apply(t,n)})}function Kxe(e,t){t.patchMethod(e,`queueMicrotask`,e=>function(e,t){Zone.current.scheduleMicroTask(`queueMicrotask`,t[0])})}function Y7(e,t,n,r){let i=null,a=null;t+=r,n+=r;let o={};function s(t){let n=t.data;n.args[0]=function(){return t.invoke.apply(this,arguments)};let r=i.apply(e,n.args);return Vxe(r)?n.handleId=r:(n.handle=r,n.isRefreshable=Bxe(r?.refresh)),t}function c(t){let{handle:n,handleId:r}=t.data;return a.call(e,n??r)}i=q7(e,t,n=>function(i,a){if(Bxe(a[0])){let e={isRefreshable:!1,isPeriodic:r===`Interval`,delay:r===`Timeout`||r===`Interval`?a[1]||0:void 0,args:a},n=a[0];a[0]=function(){try{return n.apply(this,arguments)}finally{let{handle:t,handleId:n,isPeriodic:r,isRefreshable:i}=e;!r&&!i&&(n?delete o[n]:t&&(t[E9]=null))}};let i=W7(t,a[0],e,s,c);if(!i)return i;let{handleId:l,handle:u,isRefreshable:d,isPeriodic:f}=i.data;if(l)o[l]=i;else if(u&&(u[E9]=i,d&&!f)){let e=u.refresh;u.refresh=function(){let{zone:t,state:n}=i;return n===`notScheduled`?(i._state=`scheduled`,t._updateTaskCount(i,1)):n===`running`&&(i._state=`scheduling`),e.call(this)}}return u??l??i}return n.apply(e,a)}),a=q7(e,n,t=>function(n,r){let i=r[0],a;Vxe(i)?(a=o[i],delete o[i]):(a=i?.[E9],a?i[E9]=null:a=i),a?.type?a.cancelFn&&a.zone.cancelTask(a):t.apply(e,r)})}function qxe(e,t){let{isBrowser:n,isMix:r}=t.getGlobalObjects();(n||r)&&e.customElements&&`customElements`in e&&t.patchCallbacks(t,e.customElements,`customElements`,`define`,[`connectedCallback`,`disconnectedCallback`,`adoptedCallback`,`attributeChangedCallback`,`formAssociatedCallback`,`formDisabledCallback`,`formResetCallback`,`formStateRestoreCallback`])}function Jxe(e,t){if(Zone[t.symbol(`patchEventTarget`)])return;let{eventNames:n,zoneSymbolEventNames:r,TRUE_STR:i,FALSE_STR:a,ZONE_SYMBOL_PREFIX:o}=t.getGlobalObjects();for(let e=0;e<n.length;e++){let t=n[e],s=t+a,c=t+i,l=o+s,u=o+c;r[t]={},r[t][a]=l,r[t][i]=u}let s=e.EventTarget;if(s&&s.prototype)return t.patchEventTarget(e,t,[s&&s.prototype]),!0}function Yxe(e,t){t.patchEventPrototype(e,t)}function Xxe(e,t,n){if(!n||n.length===0)return t;let r=n.filter(t=>t.target===e);if(r.length===0)return t;let i=r[0].ignoreProperties;return t.filter(e=>i.indexOf(e)===-1)}function Zxe(e,t,n,r){e&&Lxe(e,Xxe(e,t,n),r)}function X7(e){return Object.getOwnPropertyNames(e).filter(e=>e.startsWith(`on`)&&e.length>2).map(e=>e.substring(2))}function Qxe(e,t){if(g9&&!v9||Zone[e.symbol(`patchEvents`)])return;let n=t.__Zone_ignore_on_properties,r=[];if(_9){let e=window;r=r.concat([`Document`,`SVGElement`,`Element`,`HTMLElement`,`HTMLBodyElement`,`HTMLMediaElement`,`HTMLFrameSetElement`,`HTMLFrameElement`,`HTMLIFrameElement`,`HTMLMarqueeElement`,`Worker`]),Zxe(e,X7(e),n,r9(e))}r=r.concat([`XMLHttpRequest`,`XMLHttpRequestEventTarget`,`IDBIndex`,`IDBRequest`,`IDBOpenDBRequest`,`IDBDatabase`,`IDBTransaction`,`IDBCursor`,`WebSocket`]);for(let e=0;e<r.length;e++){let i=t[r[e]];i!=null&&i.prototype&&Zxe(i.prototype,X7(i.prototype),n)}}function $xe(e){e.__load_patch(`timers`,e=>{let t=`clear`;Y7(e,`set`,t,`Timeout`),Y7(e,`set`,t,`Interval`),Y7(e,`set`,t,`Immediate`)}),e.__load_patch(`requestAnimationFrame`,e=>{Y7(e,`request`,`cancel`,`AnimationFrame`),Y7(e,`mozRequest`,`mozCancel`,`AnimationFrame`),Y7(e,`webkitRequest`,`webkitCancel`,`AnimationFrame`)}),e.__load_patch(`blocking`,(e,t)=>{let n=[`alert`,`prompt`,`confirm`];for(let r=0;r<n.length;r++){let i=n[r];q7(e,i,(n,r,i)=>function(r,a){return t.current.run(n,e,a,i)})}}),e.__load_patch(`EventTarget`,(e,t,n)=>{Yxe(e,n),Jxe(e,n);let r=e.XMLHttpRequestEventTarget;r&&r.prototype&&n.patchEventTarget(e,n,[r.prototype])}),e.__load_patch(`MutationObserver`,(e,t,n)=>{K7(`MutationObserver`),K7(`WebKitMutationObserver`)}),e.__load_patch(`IntersectionObserver`,(e,t,n)=>{K7(`IntersectionObserver`)}),e.__load_patch(`FileReader`,(e,t,n)=>{K7(`FileReader`)}),e.__load_patch(`on_property`,(e,t,n)=>{Qxe(n,e)}),e.__load_patch(`customElements`,(e,t,n)=>{qxe(e,n)}),e.__load_patch(`XHR`,(e,t)=>{c(e);let n=d9(`xhrTask`),r=d9(`xhrSync`),i=d9(`xhrListener`),a=d9(`xhrScheduled`),o=d9(`xhrURL`),s=d9(`xhrErrorBeforeScheduled`);function c(e){let c=e.XMLHttpRequest;if(!c)return;let l=c.prototype;function u(e){return e[n]}let d=l[o9],f=l[s9];if(!d){let t=e.XMLHttpRequestEventTarget;if(t){let e=t.prototype;d=e[o9],f=e[s9]}}let p=`readystatechange`,m=`scheduled`;function h(e){let r=e.data,o=r.target;o[a]=!1,o[s]=!1;let c=o[i];d||(d=o[o9],f=o[s9]),c&&f.call(o,p,c);let l=o[i]=()=>{if(o.readyState===o.DONE){if(!r.aborted&&o[a]&&e.state===m){let n=o[t.__symbol__(`loadfalse`)];if(o.status!==0&&n&&n.length>0){let i=e.invoke;e.invoke=function(){let n=o[t.__symbol__(`loadfalse`)];for(let t=0;t<n.length;t++)n[t]===e&&n.splice(t,1);!r.aborted&&e.state===m&&i.call(e)},n.push(e)}else e.invoke()}else!r.aborted&&o[a]===!1&&(o[s]=!0)}};return d.call(o,p,l),o[n]||(o[n]=e),x.apply(o,r.args),o[a]=!0,e}function g(){}function _(e){let t=e.data;return t.aborted=!0,S.apply(t.target,t.args)}let v=q7(l,`open`,()=>function(e,t){return e[r]=t[2]==0,e[o]=t[1],v.apply(e,t)}),y=d9(`fetchTaskAborting`),b=d9(`fetchTaskScheduling`),x=q7(l,`send`,()=>function(e,n){if(t.current[b]===!0||e[r])return x.apply(e,n);{let t={target:e,url:e[o],isPeriodic:!1,args:n,aborted:!1},r=W7(`XMLHttpRequest.send`,g,t,h,_);e&&e[s]===!0&&!t.aborted&&r.state===m&&r.invoke()}}),S=q7(l,`abort`,()=>function(e,n){let r=u(e);if(r&&typeof r.type==`string`){if(r.cancelFn==null||r.data&&r.data.aborted)return;r.zone.cancelTask(r)}else if(t.current[y]===!0)return S.apply(e,n)})}}),e.__load_patch(`geolocation`,e=>{e.navigator&&e.navigator.geolocation&&Pxe(e.navigator.geolocation,[`getCurrentPosition`,`watchPosition`])}),e.__load_patch(`PromiseRejectionEvent`,(e,t)=>{function n(t){return function(n){Wxe(e,t).forEach(r=>{let i=e.PromiseRejectionEvent;if(i){let e=new i(t,{promise:n.promise,reason:n.rejection});r.invoke(e)}})}}e.PromiseRejectionEvent&&(t[d9(`unhandledPromiseRejectionHandler`)]=n(`unhandledrejection`),t[d9(`rejectionHandledHandler`)]=n(`rejectionhandled`))}),e.__load_patch(`queueMicrotask`,(e,t,n)=>{Kxe(e,n)})}function eSe(e){e.__load_patch(`ZoneAwarePromise`,(e,t,n)=>{let r=Object.getOwnPropertyDescriptor,i=Object.defineProperty;function a(e){return e&&e.toString===Object.prototype.toString?(e.constructor&&e.constructor.name||``)+`: `+JSON.stringify(e):e?e.toString():Object.prototype.toString.call(e)}let o=n.symbol,s=[],c=e[o(`DISABLE_WRAPPING_UNCAUGHT_PROMISE_REJECTION`)]!==!1,l=o(`Promise`),u=o(`then`);n.onUnhandledError=e=>{if(n.showUncaughtError()){let t=e&&e.rejection;t&&e.zone&&e.task?console.error(`Unhandled Promise rejection:`,t instanceof Error?t.message:t,`; Zone:`,e.zone.name,`; Task:`,e.task&&e.task.source,`; Value:`,t,t instanceof Error?t.stack:void 0):console.error(e)}},n.microtaskDrainDone=()=>{for(;s.length;){let e=s.shift();try{e.zone.runGuarded(()=>{throw e.throwOriginal?e.rejection:e})}catch(e){f(e)}}};let d=o(`unhandledPromiseRejectionHandler`);function f(e){n.onUnhandledError(e);try{let n=t[d];typeof n==`function`&&n.call(this,e)}catch{}}function p(e){return e&&typeof e.then==`function`}function m(e){return e}function h(e){return k.reject(e)}let g=o(`state`),_=o(`value`),v=o(`finally`),y=o(`parentPromiseValue`),b=o(`parentPromiseState`);function x(e,t){return n=>{try{w(e,t,n)}catch(t){w(e,!1,t)}}}let S=function(){let e=!1;return function(t){return function(){e||(e=!0,t.apply(null,arguments))}}},C=o(`currentTaskTrace`);function w(e,r,o){let l=S();if(e===o)throw TypeError(`Promise resolved with itself`);if(e[g]===null){let u=null;try{(typeof o==`object`||typeof o==`function`)&&(u=o&&o.then)}catch(t){return l(()=>{w(e,!1,t)})(),e}if(r!==!1&&o instanceof k&&Object.hasOwn(o,g)&&Object.hasOwn(o,_)&&o[g]!==null)E(o),w(e,o[g],o[_]);else if(r!==!1&&typeof u==`function`)try{u.call(o,l(x(e,r)),l(x(e,!1)))}catch(t){l(()=>{w(e,!1,t)})()}else{e[g]=r;let l=e[_];if(e[_]=o,e[v]===v&&r===!0&&(e[g]=e[b],e[_]=e[y]),r===!1&&o instanceof Error){let e=t.currentTask&&t.currentTask.data&&t.currentTask.data.__creationTrace__;e&&i(o,C,{configurable:!0,enumerable:!1,writable:!0,value:e})}for(let t=0;t<l.length;)D(e,l[t++],l[t++],l[t++],l[t++]);if(l.length==0&&r==0){e[g]=0;let r=o;try{throw Error(`Uncaught (in promise): `+a(o)+(o&&o.stack?`
 `+o.stack:``))}catch(e){r=e}c&&(r.throwOriginal=!0),r.rejection=o,r.promise=e,r.zone=t.current,r.task=t.currentTask,s.push(r),n.scheduleMicroTask()}}}return e}let T=o(`rejectionHandledHandler`);function E(e){if(e[g]===0){try{let n=t[T];n&&typeof n==`function`&&n.call(this,{rejection:e[_],promise:e})}catch{}e[g]=!1;for(let t=0;t<s.length;t++)e===s[t].promise&&s.splice(t,1)}}function D(e,t,n,r,i){E(e);let a=e[g],o=a?typeof r==`function`?r:m:typeof i==`function`?i:h;t.scheduleMicroTask(`Promise.then`,()=>{try{let r=e[_],i=!!n&&v===n[v];i&&(n[y]=r,n[b]=a),w(n,!0,t.run(o,void 0,i&&o!==h&&o!==m?[]:[r]))}catch(e){w(n,!1,e)}},n)}let O=function(){},ee=e.AggregateError;class k{static toString(){return`function ZoneAwarePromise() { [native code] }`}static resolve(e){return e instanceof k?e:w(new this(null),!0,e)}static reject(e){return w(new this(null),!1,e)}static withResolvers(){let e={};return e.promise=new k((t,n)=>{e.resolve=t,e.reject=n}),e}static any(e){if(!e||typeof e[Symbol.iterator]!=`function`)return Promise.reject(new ee([],`All promises were rejected`));let t=[],n=0;try{for(let r of e)n++,t.push(k.resolve(r))}catch{return Promise.reject(new ee([],`All promises were rejected`))}if(n===0)return Promise.reject(new ee([],`All promises were rejected`));let r=!1,i=[];return new k((e,a)=>{for(let o=0;o<t.length;o++)t[o].then(t=>{r||(r=!0,e(t))},e=>{i.push(e),n--,n===0&&(r=!0,a(new ee(i,`All promises were rejected`)))})})}static race(e){let t,n,r=new this((e,r)=>{t=e,n=r});function i(e){t(e)}function a(e){n(e)}for(let t of e)p(t)||(t=this.resolve(t)),t.then(i,a);return r}static all(e){return k.allWithCallback(e)}static allSettled(e){return(this&&this.prototype instanceof k?this:k).allWithCallback(e,{thenCallback:e=>({status:`fulfilled`,value:e}),errorCallback:e=>({status:`rejected`,reason:e})})}static allWithCallback(e,t){let n,r,i=new this((e,t)=>{n=e,r=t}),a=2,o=0,s=[];for(let i of e){p(i)||(i=this.resolve(i));let e=o;try{i.then(r=>{s[e]=t?t.thenCallback(r):r,a--,a===0&&n(s)},i=>{t?(s[e]=t.errorCallback(i),a--,a===0&&n(s)):r(i)})}catch(e){r(e)}a++,o++}return a-=2,a===0&&n(s),i}constructor(e){let t=this;if(!(t instanceof k))throw Error(`Must be an instanceof Promise.`);t[g]=null,t[_]=[];try{let n=S();e&&e(n(x(t,!0)),n(x(t,!1)))}catch(e){w(t,!1,e)}}get[Symbol.toStringTag](){return`Promise`}get[Symbol.species](){return k}then(e,n){let r=this.constructor?.[Symbol.species];(!r||typeof r!=`function`)&&(r=this.constructor||k);let i=new r(O),a=t.current;return this[g]==null?this[_].push(a,i,e,n):D(this,a,i,e,n),i}catch(e){return this.then(null,e)}finally(e){let n=this.constructor?.[Symbol.species];(!n||typeof n!=`function`)&&(n=k);let r=new n(O);r[v]=v;let i=t.current;return this[g]==null?this[_].push(i,r,e,e):D(this,i,r,e,e),r}}k.resolve=k.resolve,k.reject=k.reject,k.race=k.race,k.all=k.all;let te=e[l]=e.Promise;e.Promise=k;let A=o(`thenPatched`);function ne(e){let t=e.prototype,n=r(t,`then`);if(n&&(n.writable===!1||!n.configurable))return;let i=t.then;t[u]=i,e.prototype.then=function(e,t){return new k((e,t)=>{i.call(this,e,t)}).then(e,t)},e[A]=!0}n.patchThen=ne;function re(e){return function(t,n){let r=e.apply(t,n);if(r instanceof k)return r;let i=r.constructor;return i[A]||ne(i),r}}if(te){ne(te);let t=te.try;t&&typeof t==`function`&&(k.try=t),q7(e,`fetch`,e=>re(e))}return Promise[t.__symbol__(`uncaughtPromiseErrors`)]=s,k})}function tSe(e){e.__load_patch(`toString`,e=>{let t=Function.prototype.toString,n=d9(`OriginalDelegate`),r=d9(`Promise`),i=d9(`Error`),a=function(){if(typeof this==`function`){let a=this[n];if(a)return typeof a==`function`?t.call(a):Object.prototype.toString.call(a);if(this===Promise){let n=e[r];if(n)return t.call(n)}if(this===Error){let n=e[i];if(n)return t.call(n)}}return t.call(this)};a[n]=t,Function.prototype.toString=a;let o=Object.prototype.toString;Object.prototype.toString=function(){return typeof Promise==`function`&&this instanceof Promise?`[object Promise]`:o.call(this)}})}function nSe(e,t,n,r,i){let a=Zone.__symbol__(r);if(t[a])return;let o=t[a]=t[r];t[r]=function(a,s,c){return s&&s.prototype&&i.forEach(function(t){let i=`${n}.${r}::`+t,a=s.prototype;try{if(Object.hasOwn(a,t)){let n=e.ObjectGetOwnPropertyDescriptor(a,t);n&&n.value?(n.value=e.wrapWithCurrentZone(n.value,i),e._redefineProperty(s.prototype,t,n)):a[t]&&(a[t]=e.wrapWithCurrentZone(a[t],i))}else a[t]&&(a[t]=e.wrapWithCurrentZone(a[t],i))}catch{}}),o.call(t,a,s,c)},e.attachOriginToPatched(t[r],o)}function rSe(e){e.__load_patch(`util`,(e,t,n)=>{let r=X7(e);n.patchOnProperties=Lxe,n.patchMethod=q7,n.bindArguments=G7,n.patchMacroTask=zxe;let i=t.__symbol__(`BLACK_LISTED_EVENTS`),a=t.__symbol__(`UNPATCHED_EVENTS`);e[a]&&(e[i]=e[a]),e[i]&&(t[i]=t[a]=e[i]),n.patchEventPrototype=Gxe,n.patchEventTarget=Uxe,n.ObjectDefineProperty=n9,n.ObjectGetOwnPropertyDescriptor=t9,n.ObjectCreate=lSe,n.ArraySlice=uSe,n.patchClass=K7,n.wrapWithCurrentZone=U7,n.filterProperties=Xxe,n.attachOriginToPatched=J7,n._redefineProperty=Object.defineProperty,n.patchCallbacks=nSe,n.getGlobalObjects=()=>({globalSources:C9,zoneSymbolEventNames:S9,eventNames:r,isBrowser:_9,isMix:v9,isNode:g9,TRUE_STR:c9,FALSE_STR:l9,ZONE_SYMBOL_PREFIX:u9,ADD_EVENT_LISTENER_STR:i9,REMOVE_EVENT_LISTENER_STR:a9})})}function iSe(e){eSe(e),tSe(e),rSe(e)}var aSe,Z7,oSe,sSe,Q7,cSe,$7,e9,t9,n9,r9,lSe,uSe,i9,a9,o9,s9,c9,l9,u9,d9,f9,p9,m9,dSe,h9,g9,_9,v9,y9,fSe,b9,x9,pSe,mSe,S9,C9,w9,T9,hSe,E9,D9;function gSe(){return(gSe=n((()=>{aSe=Object.defineProperty,Z7=Object.getOwnPropertySymbols,oSe=Object.prototype.hasOwnProperty,sSe=Object.prototype.propertyIsEnumerable,Q7=(e,t,n)=>t in e?aSe(e,t,{enumerable:!0,configurable:!0,writable:!0,value:n}):e[t]=n,cSe=(e,t)=>{for(var n in t||={})oSe.call(t,n)&&Q7(e,n,t[n]);if(Z7)for(var n of Z7(t))sSe.call(t,n)&&Q7(e,n,t[n]);return e},$7=(e,t,n)=>(Q7(e,typeof t==`symbol`?t:t+``,n),n),e9=globalThis,t9=Object.getOwnPropertyDescriptor,n9=Object.defineProperty,r9=Object.getPrototypeOf,lSe=Object.create,uSe=Array.prototype.slice,i9=`addEventListener`,a9=`removeEventListener`,o9=H7(i9),s9=H7(a9),c9=`true`,l9=`false`,u9=H7(``),d9=H7,f9=typeof window<`u`,p9=f9?window:void 0,m9=f9&&p9||globalThis,dSe=`removeAttribute`,h9=typeof WorkerGlobalScope<`u`&&self instanceof WorkerGlobalScope,g9=!(`nw`in m9)&&m9.process!==void 0&&m9.process.toString()===`[object process]`,_9=!g9&&!h9&&!!(f9&&p9.HTMLElement),v9=m9.process!==void 0&&m9.process.toString()===`[object process]`&&!h9&&!!(f9&&p9.HTMLElement),y9=Object.create(null),fSe=d9(`enable_beforeunload`),b9=function(e){if(e||=m9.event,!e)return;let t=y9[e.type];t||=y9[e.type]=d9(`ON_PROPERTY`+e.type);let n=this||e.target||m9,r=n[t],i;if(_9&&n===p9&&e.type===`error`){let t=e;i=r&&r.call(this,t.message,t.filename,t.lineno,t.colno,t.error),i===!0&&e.preventDefault()}else i=r&&r.apply(this,arguments),e.type===`beforeunload`&&m9[fSe]&&typeof i==`string`?e.returnValue=i:i!=null&&!i&&e.preventDefault();return i},x9=d9(`originalInstance`),pSe=!1,mSe={useG:!0},S9=Object.create(null),C9={},w9=RegExp(`^`+u9+`(\\w+)(true|false)$`),T9=d9(`propagationStopped`),hSe=[`capture`,`once`,`passive`,`signal`],E9=d9(`zoneTask`),D9=Nxe(),iSe(D9),$xe(D9)})))()}function _Se(e){return t=>{let n=t(),r=n.applicationConfig;return{...n,applicationConfig:r||e?{...e,...r,providers:[...e?.providers||[],...r?.providers||[]]}:void 0}}}var vSe,ySe,bSe;function O9(){return(O9=n((()=>{n7(),f7(),Y8(),{setProjectAnnotations:vSe,setDefaultProjectAnnotations:ySe}=__STORYBOOK_MODULE_PREVIEW_API__,bSe=e=>t=>{let n=t(),r=n.moduleMetadata||{};return e||={},{...n,moduleMetadata:{declarations:[...e.declarations||[],...r.declarations||[]],entryComponents:[...e.entryComponents||[],...r.entryComponents||[]],imports:[...e.imports||[],...r.imports||[]],schemas:[...e.schemas||[],...r.schemas||[]],providers:[...e.providers||[],...r.providers||[]]}}}})))()}function k9(){return(k9=n((()=>{O9(),n7(),f7(),Y8()})))()}var xSe,A9,SSe;function CSe(){return(CSe=n((()=>{({logger:xSe}=__STORYBOOK_MODULE_CLIENT_LOGGER__),A9=!1,SSe=e=>{globalThis.FEATURES?.experimentalDocgenServer?A9||(A9=!0,xSe.warn(`setCompodocJson() had no effect: with the experimentalDocgenServer feature enabled, Storybook extracts Angular metadata on the server and never reads Compodoc output. You can delete the setCompodocJson call and the documentation.json import from your preview config.`)):globalThis.__STORYBOOK_COMPODOC_JSON__=e}})))()}function wSe({globals:e}){return e.theme||``}function TSe(e){return kSe(Tt`The useThemeParameters function is deprecated. Please access parameters via the context directly instead e.g.
     - const { themeOverride } = context.parameters.themes ?? {};
-    `),e?e.parameters.themes??R7:jSe(I7,R7)}function ESe(e,t){ASe.getChannel().emit(Oxe.REGISTER_THEMES,{defaultTheme:t,themes:e})}var DSe,OSe,kSe,ASe,jSe,MSe,j9,NSe,PSe,FSe;function ISe(){return(ISe=n((()=>{V7(),z7(),Dt(),xee(),{useEffect:DSe}=__STORYBOOK_MODULE_PREVIEW_API__,OSe={},F7(OSe,{initializeThemeState:()=>ESe,pluckThemeFromContext:()=>wSe,useThemeParameters:()=>TSe}),{deprecate:kSe}=__STORYBOOK_MODULE_CLIENT_LOGGER__,{addons:ASe,useParameter:jSe}=__STORYBOOK_MODULE_PREVIEW_API__,MSe=`html`,j9=e=>e.split(` `).filter(Boolean),NSe=({themes:e,defaultTheme:t,parentSelector:n=MSe})=>(ESe(Object.keys(e),t),(r,i)=>{let{themeOverride:a}=i.parameters.themes??{},o=wSe(i);return DSe(()=>{let r=a||o||t,i=document.querySelector(n);if(!i)return;Object.entries(e).filter(([e])=>e!==r).forEach(([e,t])=>{let n=j9(t);n.length>0&&i.classList.remove(...n)});let s=j9(e[r]);s.length>0&&i.classList.add(...s)},[a,o]),r()}),{useEffect:PSe}=__STORYBOOK_MODULE_PREVIEW_API__,{useMemo:FSe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var LSe,RSe,zSe,BSe,VSe,HSe,USe,WSe,GSe,KSe,qSe;function JSe(){return(JSe=n((()=>{LSe=[{name:`SentenceToWordPipe`,id:`pipe-SentenceToWordPipe-ae88ccdc46f73f79458b4f0d8b8a53971c93723ce2b86c18447ee7fc7a86dc541345460fdf60ac9704a138681384a4d1082987988b3bfe451702995e3ddb5676`,file:`projects/irrtirer/src/app/core/pipes/sentence-to-word.pipe.ts`,type:`pipe`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
+    `),e?e.parameters.themes??R7:jSe(I7,R7)}function ESe(e,t){ASe.getChannel().emit(Oxe.REGISTER_THEMES,{defaultTheme:t,themes:e})}var DSe,OSe,kSe,ASe,jSe,MSe,j9,NSe,PSe,FSe;function ISe(){return(ISe=n((()=>{V7(),z7(),Dt(),xee(),{useEffect:DSe}=__STORYBOOK_MODULE_PREVIEW_API__,OSe={},F7(OSe,{initializeThemeState:()=>ESe,pluckThemeFromContext:()=>wSe,useThemeParameters:()=>TSe}),{deprecate:kSe}=__STORYBOOK_MODULE_CLIENT_LOGGER__,{addons:ASe,useParameter:jSe}=__STORYBOOK_MODULE_PREVIEW_API__,MSe=`html`,j9=e=>e.split(` `).filter(Boolean),NSe=({themes:e,defaultTheme:t,parentSelector:n=MSe})=>(ESe(Object.keys(e),t),(r,i)=>{let{themeOverride:a}=i.parameters.themes??{},o=wSe(i);return DSe(()=>{let r=a||o||t,i=document.querySelector(n);if(!i)return;Object.entries(e).filter(([e])=>e!==r).forEach(([e,t])=>{let n=j9(t);n.length>0&&i.classList.remove(...n)});let s=j9(e[r]);s.length>0&&i.classList.add(...s)},[a,o]),r()}),{useEffect:PSe}=__STORYBOOK_MODULE_PREVIEW_API__,{useMemo:FSe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var LSe,RSe,zSe,BSe,VSe,HSe,USe,WSe,GSe,KSe,qSe;function JSe(){return(JSe=n((()=>{LSe=[{name:`SentenceToWordPipe`,id:`pipe-SentenceToWordPipe-1890efdf9ad2bf903c1c043483428a980a7dbe5447050e7d6c18865156a975ccb1f3b05ef0e8030eecf14f0f4ef7901d14762bd8eb51d66bcf100d04eda27f27`,file:`projects/irrtirer/src/app/core/pipes/sentence-to-word.pipe.ts`,type:`pipe`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,properties:[],methods:[{name:`transform`,coverageIgnore:!1,args:[{name:`value`,type:`string | null | undefined`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`string[]`,typeParameters:[],line:7,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`value`,type:`string | null | undefined`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],standalone:!0,ngname:`sentenceToWord`,sourceCode:`import { Pipe, PipeTransform } from '@angular/core';
 
@@ -1142,13 +1142,14 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
 })
 export class SentenceToWordPipe implements PipeTransform {
     public transform(value: string | null | undefined): string[] {
-        if(!value) {
+        if (!value) {
             return [];
         }
-        
+
         return value.split(' ');
     }
-}`,relationships:{incoming:[{name:`AuthorComponent`,type:`component`}],outgoing:[]}},{name:`SizeDisplayPipe`,id:`pipe-SizeDisplayPipe-c4d08ce716dbe87ae218c72923837981373a49d99e1984b59634234e7cbecab456aedfead757b71d0936a63d1ec4ee5cd9025171a7e1a662589143b1a854205a`,file:`projects/irrtirer/src/app/core/pipes/size-display.pipe.ts`,type:`pipe`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
+}
+`,relationships:{incoming:[{name:`AuthorComponent`,type:`component`}],outgoing:[]}},{name:`SizeDisplayPipe`,id:`pipe-SizeDisplayPipe-d3b02cf574aa350feeaa044ba483447a831269b272658e2053a32b3c194fea265be147bd04f4e12bec027e0484350d29e81846edc707035701fc18547096293b`,file:`projects/irrtirer/src/app/core/pipes/size-display.pipe.ts`,type:`pipe`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,properties:[],methods:[{name:`transform`,coverageIgnore:!1,args:[{name:`size`,type:`Size | null | undefined`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`string`,typeParameters:[],line:40,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`size`,type:`Size | null | undefined`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],standalone:!0,ngname:`sizeDisplay`,sourceCode:`import { Pipe, PipeTransform } from '@angular/core';
 import { Size } from '../../../../../active-canvas/src/public-api';
@@ -1190,7 +1191,7 @@ const units: Unit[] = [
 })
 export class SizeDisplayPipe implements PipeTransform {
     public transform(size: Size | null | undefined): string {
-        if(!size) {
+        if (!size) {
             return '0 x 0';
         }
 
@@ -1216,7 +1217,7 @@ export class SizeDisplayPipe implements PipeTransform {
         return \`\${this.formatValue(size.width, unit)} x \${this.formatValue(size.height, unit)} \${unit.label}\`;
     }
 }
-`,relationships:{incoming:[{name:`RibbonComponent`,type:`component`}],outgoing:[]}}],RSe=[{name:`BaseInfoState`,id:`interface-BaseInfoState-6dce61f03488017d20e489ac31f29eba4fde6586b2cd0ff203a4ffa79357ce4b3e58a1cd7b976a2016d4da703c084b4de6ff1cc891fbaa3defb4d9e3b7bb4dbd`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
+`,relationships:{incoming:[{name:`RibbonComponent`,type:`component`}],outgoing:[]}}],RSe=[{name:`BaseInfoState`,id:`interface-BaseInfoState-70f3b89f2435dfef1e739dd26212feb0a1b83f3e0218569f2cf32da248c3c4e10de6da11b37ae87a60355f1fa54817d233b6f6663051cbbd817963806c92cd28`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
     type: 'progress';
     sector: string;
     percent: number;
@@ -1228,23 +1229,12 @@ export interface InitInfoState extends BaseInfoState {
 }
 
 interface BaseInfoState {
-    type: 'progress' | 'init'
+    type: 'progress' | 'init';
 }
 
-export type InfoState = ProgressInfoState | InitInfoState;`,displayName:`BaseInfoState`,properties:[{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`"progress" | "init"`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`InitInfoState`,type:`interface`},{name:`ProgressInfoState`,type:`interface`}],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-6b8ec841627aa0c0d1d2277ddbe2d7c145e23f07861f9742f891add51701773ff19797c5577105711177eb470a98f9b65165067b5c1143a706a6281c519accaa`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import {
-    AfterViewInit,
-    Component,
-    computed,
-    DestroyRef,
-    effect,
-    ElementRef,
-    inject,
-    input,
-    model,
-    output,
-    viewChild,
-} from '@angular/core';
+export type InfoState = ProgressInfoState | InitInfoState;
+`,displayName:`BaseInfoState`,properties:[{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`"progress" | "init"`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`InitInfoState`,type:`interface`},{name:`ProgressInfoState`,type:`interface`}],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-478ac2e0417be2f5700f6bba715cd663f6bc00fb4ca0a1e20bc0833c630e32f1b7c14e3420c49f30552f699c380c2e9ec8ed0702fe2c36b2df5a6b5da314abe5`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, output, viewChild } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color, { ColorInstance } from 'color';
 
@@ -1358,19 +1348,10 @@ export class ColorCanvasComponent implements AfterViewInit {
         };
     }
 }
-`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:20,rawdescription:`
-`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
-`},{name:`verticalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-da7dbddd03de2211e32fa77645cf3cdc8207e352caaf37d9974cb293f489f1107cfa37d51c9b0b082332649cd43dd6c9872deadc2e1399cca167bf3d667cd19d-1`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import {
-    AfterViewInit,
-    Component,
-    computed,
-    DestroyRef,
-    ElementRef,
-    inject,
-    viewChild,
-    model,
-} from '@angular/core';
+`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
+`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
+`},{name:`verticalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-016d9799a6b14d62981354a9324ec8948e7b0df04b17f8b70d496f38135fb96bea3a01d3ed4195dd37838fd80531d6cededa9cfb56ec4d4803582b836f6bc9ee-1`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, ElementRef, inject, viewChild, model } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color from 'color';
 
@@ -1465,20 +1446,21 @@ export class ColorSliderComponent implements AfterViewInit {
         };
     }
 }
-`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
-`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:15,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],isDuplicate:!0,duplicateId:1,duplicateName:`CursorDataModel-1`,relationships:{incoming:[],outgoing:[]}},{name:`DialogData`,id:`interface-DialogData-03e574de24d6081a9339dace35975386226a8c9174a3f47b43fe0efaf393ffee03c8839f46147428435ac2da3614aad2fe694d157ae53b9d94806688254a9f51`,file:`projects/irrtirer/src/app/shared/dialog/dialog-data.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface DialogData {
-    title: string,
-    message: string,
-    noCustomLabel?: string,
-    yesCustomLabel?: string
-}`,displayName:`DialogData`,properties:[{name:`message`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:3,rawdescription:`
+`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
+`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],isDuplicate:!0,duplicateId:1,duplicateName:`CursorDataModel-1`,relationships:{incoming:[],outgoing:[]}},{name:`DialogData`,id:`interface-DialogData-aa76a6555adcf24db07ac994550f53e155aa90b0ba7ea313082e73cdf114508a96dc92d0c4621de0495cdf50ced7b50622717008d434fc99d37fbb578ab9a038`,file:`projects/irrtirer/src/app/shared/dialog/dialog-data.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface DialogData {
+    title: string;
+    message: string;
+    noCustomLabel?: string;
+    yesCustomLabel?: string;
+}
+`,displayName:`DialogData`,properties:[{name:`message`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:3,rawdescription:`
 `},{name:`noCustomLabel`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!0,description:``,line:4,rawdescription:`
 `},{name:`title`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
 `},{name:`yesCustomLabel`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!0,description:``,line:5,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`EditedSectorContour`,id:`interface-EditedSectorContour-8f3d23ed493a147464ded847d624b3018228a778282a5431b6db9f03ea1bbd2b3c0643d4d1566f5781dd23f8cefcd5fcda6a510e79ddf8aa211b1c8b8a4babbe`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from "../../core/models/mosaic-project.model";
-import { Vector } from "../../core/models/math/vector.model";
-import { Triangle } from "../../core/models/math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`EditedSectorContour`,id:`interface-EditedSectorContour-81c2be49e7fa952493da2684bd342c68797f2239d2e1d69e8334ed6ee8c9c546b8ea55205fa4788ab2976591779ff8590517002c5a9950de5ceed890831ef92b`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from '../../core/models/mosaic-project.model';
+import { Vector } from '../../core/models/math/vector.model';
+import { Triangle } from '../../core/models/math/triangle.model';
 
 export interface EditedSectorContour {
     sector: SectorSchema;
@@ -1493,11 +1475,12 @@ export interface EditedSectorWithTriangulationMesh {
 
 export interface SectorListChangeEvent {
     selectedSector: SectorSchema;
-}`,displayName:`EditedSectorContour`,properties:[{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
+}
+`,displayName:`EditedSectorContour`,properties:[{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `},{name:`selectedVertex`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`EditedSectorWithTriangulationMesh`,id:`interface-EditedSectorWithTriangulationMesh-8f3d23ed493a147464ded847d624b3018228a778282a5431b6db9f03ea1bbd2b3c0643d4d1566f5781dd23f8cefcd5fcda6a510e79ddf8aa211b1c8b8a4babbe`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from "../../core/models/mosaic-project.model";
-import { Vector } from "../../core/models/math/vector.model";
-import { Triangle } from "../../core/models/math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`EditedSectorWithTriangulationMesh`,id:`interface-EditedSectorWithTriangulationMesh-81c2be49e7fa952493da2684bd342c68797f2239d2e1d69e8334ed6ee8c9c546b8ea55205fa4788ab2976591779ff8590517002c5a9950de5ceed890831ef92b`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from '../../core/models/mosaic-project.model';
+import { Vector } from '../../core/models/math/vector.model';
+import { Triangle } from '../../core/models/math/triangle.model';
 
 export interface EditedSectorContour {
     sector: SectorSchema;
@@ -1512,7 +1495,8 @@ export interface EditedSectorWithTriangulationMesh {
 
 export interface SectorListChangeEvent {
     selectedSector: SectorSchema;
-}`,displayName:`EditedSectorWithTriangulationMesh`,properties:[{name:`contour`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[] | null`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+}
+`,displayName:`EditedSectorWithTriangulationMesh`,properties:[{name:`contour`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[] | null`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `},{name:`mesh`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Triangle[] | null`,indexKey:``,optional:!1,description:``,line:12,rawdescription:`
 `},{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema`,indexKey:``,optional:!1,description:``,line:11,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`EvaluationParams`,id:`interface-EvaluationParams-cf4e6a66b3808241180a6edd2239e834a2bf73df1c5aefcf3d97d363dbeeb53e5a6521f75fcff1a8f64c033d337b62e4df831eb5ebed098fba0a392e274a441c`,file:`projects/irrtirer/src/app/core/models/api/evaluation-params.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface EvaluationParams {
@@ -1527,7 +1511,7 @@ export interface SectorListChangeEvent {
 `},{name:`overlappingNotPopulatedSections`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
 `},{name:`singleSectionPopulation`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
 `},{name:`tileColorMismatch`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`FileNameFormData`,id:`interface-FileNameFormData-33b383b2ea4d1eee36036c78dea7194ffa7fc4cfd8643903dd7943946d443adb88f8b78be99d225ba3104e07f5fac39ee0f171e0d64552d6b9f01092552b135d`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, inject, signal } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`FileNameFormData`,id:`interface-FileNameFormData-9dcf11eea367ebec78f92e6fc3ac332474ee6edf0543531b5fc8e790212510ddc41b6dfb994041a89e0bfd0f1b87e13d18ee55d7af981d838a88c2d77e88003f`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -1552,7 +1536,7 @@ export class ProjectNameDialogComponent {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);
 
     private readonly value = signal<FileNameFormData>({
-        name: this.data.defaultName  
+        name: this.data.defaultName,
     });
 
     protected readonly form = form(this.value, (schemaPath) => {
@@ -1561,7 +1545,7 @@ export class ProjectNameDialogComponent {
     });
 }
 `,displayName:`FileNameFormData`,properties:[{name:`name`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:14,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedSectionModel`,id:`interface-GeneratedSectionModel-48813e528289e70892488b263f3686a8568009024ba869a49c8323ef6924c6a3a35289143094f913c84c016d872cd49c3b361c4cf6397b1bac66df03387a952c`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedSectionModel`,id:`interface-GeneratedSectionModel-62382497c13c1efe33876260bd508b0383b97bede11f990d1ea43edc0687b223b441e2ec47b91d06559def7375e4a0f80bacc21ff877d28089402e3a1f760667`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
 import { TileTransformResult } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { CanvasObject } from '../../../../../active-canvas/src/public-api';
@@ -1584,7 +1568,7 @@ export class GeneratedSectorModel {
 
     public addSection(generatedSection: GeneratedSectionModel): void {
         this.sections.push(generatedSection);
-        generatedSection.tiles.forEach(tile => tile.tileObject.setVisibility(this.areTilesVisible));
+        generatedSection.tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
         this.tilesSub.next(this.sections.flatMap((section) => section.tiles));
     }
 
@@ -1618,7 +1602,7 @@ export interface GeneratedTileModel {
     tileTransform: TileTransformResult;
 }
 `,displayName:`GeneratedSectionModel`,properties:[{name:`tiles`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`GeneratedTileModel[]`,indexKey:``,optional:!1,description:``,line:50,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedTileModel`,id:`interface-GeneratedTileModel-48813e528289e70892488b263f3686a8568009024ba869a49c8323ef6924c6a3a35289143094f913c84c016d872cd49c3b361c4cf6397b1bac66df03387a952c`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedTileModel`,id:`interface-GeneratedTileModel-62382497c13c1efe33876260bd508b0383b97bede11f990d1ea43edc0687b223b441e2ec47b91d06559def7375e4a0f80bacc21ff877d28089402e3a1f760667`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
 import { TileTransformResult } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { CanvasObject } from '../../../../../active-canvas/src/public-api';
@@ -1641,7 +1625,7 @@ export class GeneratedSectorModel {
 
     public addSection(generatedSection: GeneratedSectionModel): void {
         this.sections.push(generatedSection);
-        generatedSection.tiles.forEach(tile => tile.tileObject.setVisibility(this.areTilesVisible));
+        generatedSection.tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
         this.tilesSub.next(this.sections.flatMap((section) => section.tiles));
     }
 
@@ -1749,7 +1733,7 @@ export interface SectorSchemaPopulationParams {
 `,inheritance:{file:`TilesSet`}},{name:`name`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
 `,inheritance:{file:`TilesSet`}},{name:`source`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileSetSource`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
 `,inheritance:{file:`TilesSet`}},{name:`tiles`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileModel[]`,indexKey:``,optional:!1,description:``,line:20,rawdescription:`
-`,inheritance:{file:`TilesSet`}}],indexSignatures:[],kind:172,methods:[],extends:[`TilesSet`],relationships:{incoming:[],outgoing:[{name:`TilesSet`,type:`interface`}]}},{name:`ImageChange`,id:`interface-ImageChange-9eaf9c807a46b6c20da2a4a63a2359d383eb50a7e62ff091699b00424f3bac8b16cfaa80ee9a4ee5c8d50711e312039266b13cf5425b00b092d553c324bdd363`,file:`projects/irrtirer/src/app/tool/configuration/configuration.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable, signal } from '@angular/core';
+`,inheritance:{file:`TilesSet`}}],indexSignatures:[],kind:172,methods:[],extends:[`TilesSet`],relationships:{incoming:[],outgoing:[{name:`TilesSet`,type:`interface`}]}},{name:`ImageChange`,id:`interface-ImageChange-ec9cb015768f99cb9721b7167b1dbdb55c53a4f7ad9351b9bd38f9da9ab0f0b27cbf8180bf0950da25397e07f2ce81ded420b1c57f6bf9e66e46cc1596859389`,file:`projects/irrtirer/src/app/tool/configuration/configuration.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 
 export interface ImageChange {
@@ -1759,7 +1743,7 @@ export interface ImageChange {
 
 @Injectable()
 export class ConfigurationService {
-    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false});
+    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false });
 
     public readonly imageChange = this._imageChange.asReadonly();
 
@@ -1769,7 +1753,7 @@ export class ConfigurationService {
 }
 `,displayName:`ImageChange`,properties:[{name:`mosaicConfig`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MosaicConfig | null`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
 `},{name:`shouldFocus`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`InitInfoState`,id:`interface-InitInfoState-6dce61f03488017d20e489ac31f29eba4fde6586b2cd0ff203a4ffa79357ce4b3e58a1cd7b976a2016d4da703c084b4de6ff1cc891fbaa3defb4d9e3b7bb4dbd`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`InitInfoState`,id:`interface-InitInfoState-70f3b89f2435dfef1e739dd26212feb0a1b83f3e0218569f2cf32da248c3c4e10de6da11b37ae87a60355f1fa54817d233b6f6663051cbbd817963806c92cd28`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
     type: 'progress';
     sector: string;
     percent: number;
@@ -1781,22 +1765,23 @@ export interface InitInfoState extends BaseInfoState {
 }
 
 interface BaseInfoState {
-    type: 'progress' | 'init'
+    type: 'progress' | 'init';
 }
 
-export type InfoState = ProgressInfoState | InitInfoState;`,displayName:`InitInfoState`,properties:[{name:`message`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:9,rawdescription:`
+export type InfoState = ProgressInfoState | InitInfoState;
+`,displayName:`InitInfoState`,properties:[{name:`message`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:9,rawdescription:`
 `},{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
-`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`InitMosaicGenerationRequestModel`,id:`interface-InitMosaicGenerationRequestModel-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`InitMosaicGenerationRequestModel`,id:`interface-InitMosaicGenerationRequestModel-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -1835,7 +1820,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -1844,7 +1829,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -1857,7 +1842,8 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`InitMosaicGenerationRequestModel`,properties:[{name:`base64Image`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
+}
+`,displayName:`InitMosaicGenerationRequestModel`,properties:[{name:`base64Image`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
 `},{name:`mosaicWidth`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
 `},{name:`sectorsGenerationParams`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorGenerationParams[]`,indexKey:``,optional:!1,description:``,line:28,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`MosaicConfig`,id:`interface-MosaicConfig-8f25837169aab6dff73e536c7793c941ee6203f7daf09cf9a2ec28f29afa1a184f04fe81728a81bb510b60d54a7bc2a6ec5335937cdb214024a420f8ff0a0003`,file:`projects/irrtirer/src/app/core/models/mosaic-project.model.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Vector } from './math/vector.model';
@@ -1999,7 +1985,7 @@ export interface SectorSchemaPopulationParams {
 `,displayName:`MosaicProjectModel`,properties:[{name:`config`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MosaicConfig`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
 `},{name:`sectors`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema[]`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `},{name:`tilesSets`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TilesSet[]`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Node`,id:`interface-Node-d8873b43ec45d1b07515bee6b345cb48ee2db5f39bbe65649b04ad9f4ed0033e309584fe89f30fd5e98f1809e60eec67f879879d7acd51a29ca8b54b74ef5c35`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Node`,id:`interface-Node-ddc09fc0aa39b835336835bf51fadf0b49c615bd9bd3596fec41abb0030deffba872195ed00da884cc37fc481a4728ed4aab5e754022248a846dce26050f9dfb`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
@@ -2053,7 +2039,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -2063,13 +2049,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);
@@ -2150,7 +2136,7 @@ export class TrayService {
 }
 `,displayName:`Node`,properties:[{name:`size`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Size`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
 `},{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`"group" | "leaf"`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`NodeGroup`,type:`interface`},{name:`NodeLeaf`,type:`interface`}],outgoing:[]}},{name:`NodeGroup`,id:`interface-NodeGroup-d8873b43ec45d1b07515bee6b345cb48ee2db5f39bbe65649b04ad9f4ed0033e309584fe89f30fd5e98f1809e60eec67f879879d7acd51a29ca8b54b74ef5c35`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`NodeGroup`,type:`interface`},{name:`NodeLeaf`,type:`interface`}],outgoing:[]}},{name:`NodeGroup`,id:`interface-NodeGroup-ddc09fc0aa39b835336835bf51fadf0b49c615bd9bd3596fec41abb0030deffba872195ed00da884cc37fc481a4728ed4aab5e754022248a846dce26050f9dfb`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
@@ -2204,7 +2190,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -2214,13 +2200,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);
@@ -2304,7 +2290,7 @@ export class TrayService {
 `},{name:`split`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`"horizontal" | "vertical"`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
 `},{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
 `,inheritance:{file:`Node`}},{name:`size`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Size`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
-`,inheritance:{file:`Node`}}],indexSignatures:[],kind:172,methods:[],extends:[`Node`],relationships:{incoming:[],outgoing:[{name:`Node`,type:`interface`}]}},{name:`NodeLeaf`,id:`interface-NodeLeaf-d8873b43ec45d1b07515bee6b345cb48ee2db5f39bbe65649b04ad9f4ed0033e309584fe89f30fd5e98f1809e60eec67f879879d7acd51a29ca8b54b74ef5c35`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
+`,inheritance:{file:`Node`}}],indexSignatures:[],kind:172,methods:[],extends:[`Node`],relationships:{incoming:[],outgoing:[{name:`Node`,type:`interface`}]}},{name:`NodeLeaf`,id:`interface-NodeLeaf-ddc09fc0aa39b835336835bf51fadf0b49c615bd9bd3596fec41abb0030deffba872195ed00da884cc37fc481a4728ed4aab5e754022248a846dce26050f9dfb`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
@@ -2358,7 +2344,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -2368,13 +2354,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);
@@ -2470,7 +2456,7 @@ export class TrayService {
 `},{name:`initialPopulationSize`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
 `},{name:`iterationsCount`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `},{name:`populationSize`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ProgressInfoState`,id:`interface-ProgressInfoState-6dce61f03488017d20e489ac31f29eba4fde6586b2cd0ff203a4ffa79357ce4b3e58a1cd7b976a2016d4da703c084b4de6ff1cc891fbaa3defb4d9e3b7bb4dbd`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ProgressInfoState`,id:`interface-ProgressInfoState-70f3b89f2435dfef1e739dd26212feb0a1b83f3e0218569f2cf32da248c3c4e10de6da11b37ae87a60355f1fa54817d233b6f6663051cbbd817963806c92cd28`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface ProgressInfoState extends BaseInfoState {
     type: 'progress';
     sector: string;
     percent: number;
@@ -2482,13 +2468,14 @@ export interface InitInfoState extends BaseInfoState {
 }
 
 interface BaseInfoState {
-    type: 'progress' | 'init'
+    type: 'progress' | 'init';
 }
 
-export type InfoState = ProgressInfoState | InitInfoState;`,displayName:`ProgressInfoState`,properties:[{name:`percent`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
+export type InfoState = ProgressInfoState | InitInfoState;
+`,displayName:`ProgressInfoState`,properties:[{name:`percent`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
 `},{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:3,rawdescription:`
 `},{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
-`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`ProjectConfigForm`,id:`interface-ProjectConfigForm-dae044be2c2d92ac87d09b0d0735ff5a2baae0639515bebe6d1d0981b937c202adeda7353ff50302c2227af9dcf3d6fdce362e8dafe85bbcf01a1abf6b6a7e02`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
+`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`ProjectConfigForm`,id:`interface-ProjectConfigForm-2f878296bb35642ceba006836b84271e2b15c414af8b0efd539f07810ed6d210359f22aa9f7180c293784e71a640bb86c987b961d7bd16cbd895acf8079d85c9`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -2515,7 +2502,7 @@ interface ProjectConfigForm {
     selector: 'app-config-project',
     imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
-    host: { class: 'flex flex-col gap-5' }
+    host: { class: 'flex flex-col gap-5' },
 })
 export class ConfigProjectComponent {
     private readonly snackBar = inject(MatSnackBar);
@@ -2631,7 +2618,7 @@ export class ConfigProjectComponent {
 }
 `,displayName:`ProjectConfigForm`,properties:[{name:`mosaicImage`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`File | null`,indexKey:``,optional:!1,description:``,line:21,rawdescription:`
 `},{name:`mosaicWidth`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:20,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ProjectNameDialogData`,id:`interface-ProjectNameDialogData-33b383b2ea4d1eee36036c78dea7194ffa7fc4cfd8643903dd7943946d443adb88f8b78be99d225ba3104e07f5fac39ee0f171e0d64552d6b9f01092552b135d`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, inject, signal } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ProjectNameDialogData`,id:`interface-ProjectNameDialogData-9dcf11eea367ebec78f92e6fc3ac332474ee6edf0543531b5fc8e790212510ddc41b6dfb994041a89e0bfd0f1b87e13d18ee55d7af981d838a88c2d77e88003f`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -2656,7 +2643,7 @@ export class ProjectNameDialogComponent {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);
 
     private readonly value = signal<FileNameFormData>({
-        name: this.data.defaultName  
+        name: this.data.defaultName,
     });
 
     protected readonly form = form(this.value, (schemaPath) => {
@@ -2665,7 +2652,7 @@ export class ProjectNameDialogComponent {
     });
 }
 `,displayName:`ProjectNameDialogData`,properties:[{name:`defaultName`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:10,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RandomTileSetModel`,id:`interface-RandomTileSetModel-d6e32fc60af08bc2302332b6c3354e25b41bc13460a890c4299225a341f6b8ada52c071e0e67d461982e3f313a65808d55a27b38734647ba500270df55658a4b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RandomTileSetModel`,id:`interface-RandomTileSetModel-680fb3514963d338d737771c8d3702ca40fade55f5b78c86623c64984301ecaefe11139daff5e51be1d1b2f4fa63ccd3f56e4bbef5fdbb3d6fa7b5951c05d54b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -2755,8 +2742,7 @@ export class RandomTilesComponent implements OnInit {
         });
         validate(schemaPath.name, ({ value }) => {
             if (this.editedTilesSet) {
-                const nameAlreadyUsed = this.existingSeriesNames()
-                    .some((name) => name === value() && name !== this.editedTilesSet!.name);
+                const nameAlreadyUsed = this.existingSeriesNames().some((name) => name === value() && name !== this.editedTilesSet!.name);
 
                 if (nameAlreadyUsed) {
                     return { kind: 'cannotNowOverrideOtherTilesSet' };
@@ -2842,16 +2828,18 @@ export class RandomTilesComponent implements OnInit {
         this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), {
             duration: 3000,
         });
-        this.store.dispatch(MosaicProjectActions.tilesSetCommitted({
-            tilesSet: await this.buildTileSet(originalId) 
-        }));
-        
+        this.store.dispatch(
+            MosaicProjectActions.tilesSetCommitted({
+                tilesSet: await this.buildTileSet(originalId),
+            }),
+        );
+
         this.navigateToMenu();
     }
 
     private async buildTileSet(originalId: string | null): Promise<GeneratedTilesSet> {
         const { name, minRadius, maxRadius, count } = this.formData();
-            
+
         const min = Number(minRadius);
         const max = Number(maxRadius);
         const tileGenerator = new TileGenerator(await this.getImagePixelArray());
@@ -2909,30 +2897,31 @@ export class RandomTilesComponent implements OnInit {
 `},{name:`width`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
 `},{name:`x`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
 `},{name:`y`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:3,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RibbonAction`,id:`interface-RibbonAction-bbaf46951028e55c280d9ca0c44653bdb0d1bafe2935e26fe8755e4d6a6080f8aa362934a350dd274aed5d06d80fde83994aa5ada1c396c75b76c41a32b9522f`,file:`projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Signal } from "@angular/core";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RibbonAction`,id:`interface-RibbonAction-b2ea4841ada0f97692b1b88a6e3bc5ae2e405ca96456640b9a0274a30f5b5a95e46f966335ac015ac1773b6de91a8af424c44271d692b5ffe58051234fff8d2b`,file:`projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Signal } from '@angular/core';
 
-export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden'
+export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden';
 
 export interface RibbonAction {
     visibility: Signal<ActionVisibility>;
     onClick: () => void;
     iconName: string;
     tooltipKey: string;
-}`,displayName:`RibbonAction`,properties:[{name:`iconName`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
+}
+`,displayName:`RibbonAction`,properties:[{name:`iconName`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
 `},{name:`onClick`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`function`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
 `},{name:`tooltipKey`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:9,rawdescription:`
 `},{name:`visibility`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Signal<ActionVisibility>`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorGenerationParams`,id:`interface-SectorGenerationParams-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorGenerationParams`,id:`interface-SectorGenerationParams-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -2971,7 +2960,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -2980,7 +2969,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -2993,16 +2982,17 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`SectorGenerationParams`,properties:[{name:`evaluationParams`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`EvaluationParams`,indexKey:``,optional:!1,description:``,line:37,rawdescription:`
+}
+`,displayName:`SectorGenerationParams`,properties:[{name:`evaluationParams`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`EvaluationParams`,indexKey:``,optional:!1,description:``,line:37,rawdescription:`
 `},{name:`id`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:32,rawdescription:`
 `},{name:`populationParams`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`PopulationParams`,indexKey:``,optional:!1,description:``,line:38,rawdescription:`
 `},{name:`tileMargin`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:35,rawdescription:`
 `},{name:`tileMaxRadius`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:34,rawdescription:`
 `},{name:`tileMinRadius`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
 `},{name:`triangulationData`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorTriangulationRequestModel`,indexKey:``,optional:!1,description:``,line:36,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorListChangeEvent`,id:`interface-SectorListChangeEvent-8f3d23ed493a147464ded847d624b3018228a778282a5431b6db9f03ea1bbd2b3c0643d4d1566f5781dd23f8cefcd5fcda6a510e79ddf8aa211b1c8b8a4babbe`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from "../../core/models/mosaic-project.model";
-import { Vector } from "../../core/models/math/vector.model";
-import { Triangle } from "../../core/models/math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorListChangeEvent`,id:`interface-SectorListChangeEvent-81c2be49e7fa952493da2684bd342c68797f2239d2e1d69e8334ed6ee8c9c546b8ea55205fa4788ab2976591779ff8590517002c5a9950de5ceed890831ef92b`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.interfaces.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { SectorSchema } from '../../core/models/mosaic-project.model';
+import { Vector } from '../../core/models/math/vector.model';
+import { Triangle } from '../../core/models/math/triangle.model';
 
 export interface EditedSectorContour {
     sector: SectorSchema;
@@ -3017,7 +3007,8 @@ export interface EditedSectorWithTriangulationMesh {
 
 export interface SectorListChangeEvent {
     selectedSector: SectorSchema;
-}`,displayName:`SectorListChangeEvent`,properties:[{name:`selectedSector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
+}
+`,displayName:`SectorListChangeEvent`,properties:[{name:`selectedSector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorSchema`,id:`interface-SectorSchema-8f25837169aab6dff73e536c7793c941ee6203f7daf09cf9a2ec28f29afa1a184f04fe81728a81bb510b60d54a7bc2a6ec5335937cdb214024a420f8ff0a0003`,file:`projects/irrtirer/src/app/core/models/mosaic-project.model.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Vector } from './math/vector.model';
 
 export interface MosaicProjectModel {
@@ -3309,17 +3300,17 @@ export interface SectorSchemaPopulationParams {
 `},{name:`sectionMaxArea`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:43,rawdescription:`
 `},{name:`sectionMinAngle`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:44,rawdescription:`
 `},{name:`tilesMargin`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:47,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationRequestModel`,id:`interface-SectorTriangulationRequestModel-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationRequestModel`,id:`interface-SectorTriangulationRequestModel-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -3358,7 +3349,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -3367,7 +3358,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -3380,7 +3371,8 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`SectorTriangulationRequestModel`,properties:[{name:`polygonVertices`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:42,rawdescription:`
+}
+`,displayName:`SectorTriangulationRequestModel`,properties:[{name:`polygonVertices`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:42,rawdescription:`
 `},{name:`sectionMaxArea`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:43,rawdescription:`
 `},{name:`sectionMinAngle`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:44,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Size`,id:`interface-Size-b5d4d2bba1edf10062ee2bfdc2cc7358be1b57576e66445e2d66efd81d1e2f2df4d2ea41f820ea5bd750ae6c845b26e523f3211d504562f9c01fa8585f516f3f`,file:`projects/irrtirer/src/app/core/models/math/size.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface Size {
@@ -3465,17 +3457,17 @@ export interface SectorSchemaPopulationParams {
 `,displayName:`TileModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:31,rawdescription:`
 `},{name:`id`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
 `},{name:`vertices`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`TileRequestModel`,id:`interface-TileRequestModel-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`TileRequestModel`,id:`interface-TileRequestModel-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -3514,7 +3506,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -3523,7 +3515,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -3536,7 +3528,8 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`TileRequestModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:49,rawdescription:`
+}
+`,displayName:`TileRequestModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:49,rawdescription:`
 `},{name:`id`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:48,rawdescription:`
 `},{name:`vertices`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:50,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`TilesSet`,id:`interface-TilesSet-8f25837169aab6dff73e536c7793c941ee6203f7daf09cf9a2ec28f29afa1a184f04fe81728a81bb510b60d54a7bc2a6ec5335937cdb214024a420f8ff0a0003`,file:`projects/irrtirer/src/app/core/models/mosaic-project.model.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Vector } from './math/vector.model';
@@ -3610,7 +3603,7 @@ export interface SectorSchemaPopulationParams {
 `},{name:`name`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
 `},{name:`source`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileSetSource`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
 `},{name:`tiles`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileModel[]`,indexKey:``,optional:!1,description:``,line:20,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`GeneratedTilesSet`,type:`interface`}],outgoing:[]}},{name:`TileWithSize`,id:`interface-TileWithSize-d8873b43ec45d1b07515bee6b345cb48ee2db5f39bbe65649b04ad9f4ed0033e309584fe89f30fd5e98f1809e60eec67f879879d7acd51a29ca8b54b74ef5c35`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`GeneratedTilesSet`,type:`interface`}],outgoing:[]}},{name:`TileWithSize`,id:`interface-TileWithSize-ddc09fc0aa39b835336835bf51fadf0b49c615bd9bd3596fec41abb0030deffba872195ed00da884cc37fc481a4728ed4aab5e754022248a846dce26050f9dfb`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
@@ -3664,7 +3657,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -3674,13 +3667,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);
@@ -3762,27 +3755,29 @@ export class TrayService {
 `,displayName:`TileWithSize`,properties:[{name:`radius`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `},{name:`size`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Size`,indexKey:``,optional:!1,description:``,line:12,rawdescription:`
 `},{name:`tile`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileModel`,indexKey:``,optional:!1,description:``,line:11,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ToolView`,id:`interface-ToolView-da25d01b4c23fc282f8f1c51b174b7f8bac67f4aea7d1f3feced30272def737cabb908fe85a18b56d491c31bd6c0583ab974d44cc57c056bab568194de7da404`,file:`projects/irrtirer/src/app/tool/tool-view.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { IActiveCanvas } from "../../../../active-canvas/src/lib/models/canvas/active-canvas.interface";
-import { RibbonAction } from "./ribbon/ribbon-action.interface";
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`ToolView`,id:`interface-ToolView-0ba2d6bbed8ffb9ef2bb762577d45de163a00de69bae136dd69e5196923c0b31eff22aba4366e1e77f15fa14a03bdbfefcb52bdbe0ed34d0459b373e85cd9759`,file:`projects/irrtirer/src/app/tool/tool-view.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { RibbonAction } from './ribbon/ribbon-action.interface';
 
 export interface ToolViewInitSetting {
-    ribbon: RibbonAction[]
+    ribbon: RibbonAction[];
 }
 
 export interface ToolView {
     sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting;
-}`,displayName:`ToolView`,properties:[],indexSignatures:[],kind:174,methods:[{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:9,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],extends:[],relationships:{incoming:[{name:`ConfigurationComponent`,type:`component`},{name:`MosaicGenerationComponent`,type:`component`},{name:`SectorsComponent`,type:`component`},{name:`TrayComponent`,type:`component`}],outgoing:[]}},{name:`ToolViewInitSetting`,id:`interface-ToolViewInitSetting-da25d01b4c23fc282f8f1c51b174b7f8bac67f4aea7d1f3feced30272def737cabb908fe85a18b56d491c31bd6c0583ab974d44cc57c056bab568194de7da404`,file:`projects/irrtirer/src/app/tool/tool-view.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { IActiveCanvas } from "../../../../active-canvas/src/lib/models/canvas/active-canvas.interface";
-import { RibbonAction } from "./ribbon/ribbon-action.interface";
+}
+`,displayName:`ToolView`,properties:[],indexSignatures:[],kind:174,methods:[{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:9,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],extends:[],relationships:{incoming:[{name:`ConfigurationComponent`,type:`component`},{name:`MosaicGenerationComponent`,type:`component`},{name:`SectorsComponent`,type:`component`},{name:`TrayComponent`,type:`component`}],outgoing:[]}},{name:`ToolViewInitSetting`,id:`interface-ToolViewInitSetting-0ba2d6bbed8ffb9ef2bb762577d45de163a00de69bae136dd69e5196923c0b31eff22aba4366e1e77f15fa14a03bdbfefcb52bdbe0ed34d0459b373e85cd9759`,file:`projects/irrtirer/src/app/tool/tool-view.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { RibbonAction } from './ribbon/ribbon-action.interface';
 
 export interface ToolViewInitSetting {
-    ribbon: RibbonAction[]
+    ribbon: RibbonAction[];
 }
 
 export interface ToolView {
     sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting;
-}`,displayName:`ToolViewInitSetting`,properties:[{name:`ribbon`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`RibbonAction[]`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Unit`,id:`interface-Unit-c4d08ce716dbe87ae218c72923837981373a49d99e1984b59634234e7cbecab456aedfead757b71d0936a63d1ec4ee5cd9025171a7e1a662589143b1a854205a`,file:`projects/irrtirer/src/app/core/pipes/size-display.pipe.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Pipe, PipeTransform } from '@angular/core';
+}
+`,displayName:`ToolViewInitSetting`,properties:[{name:`ribbon`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`RibbonAction[]`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Unit`,id:`interface-Unit-d3b02cf574aa350feeaa044ba483447a831269b272658e2053a32b3c194fea265be147bd04f4e12bec027e0484350d29e81846edc707035701fc18547096293b`,file:`projects/irrtirer/src/app/core/pipes/size-display.pipe.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Pipe, PipeTransform } from '@angular/core';
 import { Size } from '../../../../../active-canvas/src/public-api';
 
 interface Unit {
@@ -3822,7 +3817,7 @@ const units: Unit[] = [
 })
 export class SizeDisplayPipe implements PipeTransform {
     public transform(size: Size | null | undefined): string {
-        if(!size) {
+        if (!size) {
             return '0 x 0';
         }
 
@@ -3850,14 +3845,15 @@ export class SizeDisplayPipe implements PipeTransform {
 }
 `,displayName:`Unit`,properties:[{name:`denominator`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
 `},{name:`label`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`UserPreferences`,id:`interface-UserPreferences-0c60bd9e21a4db1a966bad9d47958d40dc3210831236859f1c6e50f4cf4bd694d8b30c64f27c1ba59abff773fbff0e37d8c991518d0a9ec730b47078d47be7d1`,file:`projects/irrtirer/src/app/core/models/user-preferences.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export type ThemeMode = 'light' | 'dark';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`UserPreferences`,id:`interface-UserPreferences-1e5eb5e55fe99b64c9dba32e76e50a7ec6ce19fc274358b335e2ed6ffe1ebdd36fcef8bd8dceb04f4b063efb0110b67357fdbd70d3dfde48ddca98dfe7194f58`,file:`projects/irrtirer/src/app/core/models/user-preferences.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export type ThemeMode = 'light' | 'dark';
 
 export interface UserPreferences {
     lang?: string;
     theme?: ThemeMode;
-}`,displayName:`UserPreferences`,properties:[{name:`lang`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!0,description:``,line:4,rawdescription:`
+}
+`,displayName:`UserPreferences`,properties:[{name:`lang`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!0,description:``,line:4,rawdescription:`
 `},{name:`theme`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ThemeMode`,indexKey:``,optional:!0,description:``,line:5,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}}],zSe=[{name:`ConfigurationService`,id:`injectable-ConfigurationService-9eaf9c807a46b6c20da2a4a63a2359d383eb50a7e62ff091699b00424f3bac8b16cfaa80ee9a4ee5c8d50711e312039266b13cf5425b00b092d553c324bdd363`,file:`projects/irrtirer/src/app/tool/configuration/configuration.service.ts`,coverageIgnore:!1,properties:[{name:`imageChange`,coverageIgnore:!1,defaultValue:`this._imageChange.asReadonly()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}}],zSe=[{name:`ConfigurationService`,id:`injectable-ConfigurationService-ec9cb015768f99cb9721b7167b1dbdb55c53a4f7ad9351b9bd38f9da9ab0f0b27cbf8180bf0950da25397e07f2ce81ded420b1c57f6bf9e66e46cc1596859389`,file:`projects/irrtirer/src/app/tool/configuration/configuration.service.ts`,coverageIgnore:!1,properties:[{name:`imageChange`,coverageIgnore:!1,defaultValue:`this._imageChange.asReadonly()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`emitImageChange`,coverageIgnore:!1,args:[{name:`mosaicConfig`,type:`MosaicConfig | null`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocus`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:15,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`mosaicConfig`,type:`MosaicConfig | null`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocus`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,sourceCode:`import { Injectable, signal } from '@angular/core';
@@ -3870,7 +3866,7 @@ export interface ImageChange {
 
 @Injectable()
 export class ConfigurationService {
-    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false});
+    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false });
 
     public readonly imageChange = this._imageChange.asReadonly();
 
@@ -3905,12 +3901,12 @@ export class DataService {
             .pipe(tap((response: SectorTriangulationMeshModel) => SectorTriangulationMeshModel.restore(response)));
     }
 }
-`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`LayoutImportService`,id:`injectable-LayoutImportService-431b0d4994fbb4e4353b87497787946cf0e40affe2075c1090b3d1b20f7a0c719e949c45071f1656ed243f4fbb2d64aa2d528162c4c6b762ceff44fb6c943b35`,file:`projects/irrtirer/src/app/core/services/layout-import/layout-import.service.ts`,coverageIgnore:!1,properties:[],methods:[],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
-`,sourceCode:`import { Injectable } from "@angular/core";
+`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`LayoutImportService`,id:`injectable-LayoutImportService-ef26d72ed166731a31de75d777c552699dff84ac08a3540bbab6af91cdf094a8cd8974b476d95201a0cc697f0e10b7039be979d03177e3d74a5b37aad4e09e79`,file:`projects/irrtirer/src/app/core/services/layout-import/layout-import.service.ts`,coverageIgnore:!1,properties:[],methods:[],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
+`,sourceCode:`import { Injectable } from '@angular/core';
 
 @Injectable()
-export class LayoutImportService {
-}`,extends:[],type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`MosaicGenerationService`,id:`injectable-MosaicGenerationService-897818d8223f6a044bb5aa3c281e5abd69c60688d44db9c94c274f2209d224eb1484af84f93462a3a83f5989dacd0489f361a1654bf9bc1d42c992ff319bec54`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.service.ts`,coverageIgnore:!1,properties:[{name:`sectors$`,coverageIgnore:!1,defaultValue:`this.sectorsSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<GeneratedSectorModel[]>`,indexKey:``,optional:!1,description:``,line:14,rawdescription:`
+export class LayoutImportService {}
+`,extends:[],type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`MosaicGenerationService`,id:`injectable-MosaicGenerationService-f05a7c0b18929ce29890c09bd68e406f0ac5d5cc85fbed65b2220605f50473513a3bf208e574563ce33537e290b081b97773a49867fe1b71b949af8bc39f4400`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.service.ts`,coverageIgnore:!1,properties:[{name:`sectors$`,coverageIgnore:!1,defaultValue:`this.sectorsSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<GeneratedSectorModel[]>`,indexKey:``,optional:!1,description:``,line:14,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`addSectionTilesObjects`,coverageIgnore:!1,args:[{name:`sectorId`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`sectionTiles`,type:`GeneratedTileModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:53,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`sectorId`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`sectionTiles`,type:`GeneratedTileModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`buildInitMosaicRequest`,coverageIgnore:!1,args:[{name:`base64Image`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`mosaicSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`sectorsSchemas`,type:`SectorSchema[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`InitMosaicGenerationRequestModel`,typeParameters:[],line:16,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`base64Image`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`mosaicSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`sectorsSchemas`,type:`SectorSchema[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`fillSectorsGenerationInfo`,coverageIgnore:!1,args:[{name:`sectorsTriangulations`,type:`SectorTriangulationMeshPartsModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:44,deprecated:!1,deprecationMessage:``,rawdescription:`
@@ -3930,7 +3926,7 @@ export class MosaicGenerationService {
     private readonly sectorsInfo = new Map<string, GeneratedSectorModel>();
 
     private readonly sectorsSub = new Subject<GeneratedSectorModel[]>();
-    
+
     public readonly sectors$: Observable<GeneratedSectorModel[]> = this.sectorsSub.asObservable();
 
     public buildInitMosaicRequest(base64Image: string, mosaicSize: Size, sectorsSchemas: SectorSchema[]): InitMosaicGenerationRequestModel {
@@ -3954,7 +3950,7 @@ export class MosaicGenerationService {
     }
 
     public initGeneratedSectorsData(sectorsSchemas: SectorSchema[]): void {
-        for(const sectorSchema of sectorsSchemas) {
+        for (const sectorSchema of sectorsSchemas) {
             this.sectorsInfo.set(sectorSchema.id, new GeneratedSectorModel(sectorSchema));
         }
 
@@ -3962,9 +3958,9 @@ export class MosaicGenerationService {
     }
 
     public fillSectorsGenerationInfo(sectorsTriangulations: SectorTriangulationMeshPartsModel[]): void {
-        for(const sectorTriangulation of sectorsTriangulations) {
+        for (const sectorTriangulation of sectorsTriangulations) {
             const generatedSector = this.sectorsInfo.get(sectorTriangulation.sectorId)!;
-            generatedSector.countOfSections = sectorTriangulation.parts.flatMap(x => x.triangles).length;
+            generatedSector.countOfSections = sectorTriangulation.parts.flatMap((x) => x.triangles).length;
         }
 
         this.sectorsSub.next(Array.from(this.sectorsInfo.values()));
@@ -3983,14 +3979,14 @@ export class MosaicGenerationService {
         return Array.from(this.sectorsInfo.values());
     }
 }
-`,extends:[],type:`injectable`,relationships:{incoming:[{name:`MosaicGenerationComponent`,type:`component`}],outgoing:[]}},{name:`MosaicSignalRService`,id:`injectable-MosaicSignalRService-4f81732500e7c9d449188f099dbd85d4d086835d71a13ed0eb70d5deaac01861040b0ada0c1736840220d6d947a3e2a21765ae6c5172dae9c8cd1a03570c7393`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-signal-r.service.ts`,coverageIgnore:!1,properties:[{name:`generationAbortedWithError$`,coverageIgnore:!1,defaultValue:`this.generationAbortedWithErrorSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
+`,extends:[],type:`injectable`,relationships:{incoming:[{name:`MosaicGenerationComponent`,type:`component`}],outgoing:[]}},{name:`MosaicSignalRService`,id:`injectable-MosaicSignalRService-c7a450bc763ba2876f1b1f9e77618229417f353f2b17733d7ebda4d829514271b78aef0e6c2c3d98234ed293e9650991c5c16eb2a05dc574bd52058784d90f19`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-signal-r.service.ts`,coverageIgnore:!1,properties:[{name:`generationAbortedWithError$`,coverageIgnore:!1,defaultValue:`this.generationAbortedWithErrorSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
 `,modifierKind:[125,148]},{name:`generationFinished$`,coverageIgnore:!1,defaultValue:`this.generationFinishedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
 `,modifierKind:[125,148]},{name:`sectionGenerated$`,coverageIgnore:!1,defaultValue:`this.sectionGeneratedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<SectionGenerationResult>`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
 `,modifierKind:[125,148]},{name:`sectionsMeshReceived$`,coverageIgnore:!1,defaultValue:`this.sectionsMeshReceivedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<SectorTriangulationMeshPartsModel[]>`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
-`,modifierKind:[125,148]}],methods:[{name:`initMosaicTriangulation`,coverageIgnore:!1,args:[{name:`initMosaicGenerationRequest`,type:`InitMosaicGenerationRequestModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:76,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`initMosaicGenerationRequest`,type:`InitMosaicGenerationRequestModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`startConnection`,coverageIgnore:!1,args:[],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:85,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,modifierKind:[125,148]}],methods:[{name:`initMosaicTriangulation`,coverageIgnore:!1,args:[{name:`initMosaicGenerationRequest`,type:`InitMosaicGenerationRequestModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:75,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125],jsdoctags:[{name:`initMosaicGenerationRequest`,type:`InitMosaicGenerationRequestModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`startConnection`,coverageIgnore:!1,args:[],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:83,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`startLongRunningTask`,coverageIgnore:!1,args:[{name:`tiles`,type:`TileRequestModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:67,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`tiles`,type:`TileRequestModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`stopConnection`,coverageIgnore:!1,args:[],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:89,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125],jsdoctags:[{name:`tiles`,type:`TileRequestModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`stopConnection`,coverageIgnore:!1,args:[],optional:!1,returnType:`Promise<void>`,typeParameters:[],line:87,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,sourceCode:`import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
@@ -4059,21 +4055,19 @@ export class MosaicSignalRService {
     }
 
     public startLongRunningTask(tiles: TileRequestModel[]): Promise<void> {
-        return this.hubConnection.invoke('StartMosaicGeneration', tiles)
-            .catch((error) => {
-                if(!this.isClosed) {
-                    throw error;
-                }
-            });
+        return this.hubConnection.invoke('StartMosaicGeneration', tiles).catch((error) => {
+            if (!this.isClosed) {
+                throw error;
+            }
+        });
     }
 
     public initMosaicTriangulation(initMosaicGenerationRequest: InitMosaicGenerationRequestModel): Promise<void> {
-        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest)
-            .catch((error) => {
-                if(!this.isClosed) {
-                    throw error;
-                }
-            });
+        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest).catch((error) => {
+            if (!this.isClosed) {
+                throw error;
+            }
+        });
     }
 
     public startConnection(): Promise<void> {
@@ -4086,7 +4080,7 @@ export class MosaicSignalRService {
     }
 }
 `,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[],line:32,rawdescription:`
-`},extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ProjectImportService`,id:`injectable-ProjectImportService-fc0da1d05da1e59ad7537eafcf05218b60745eae6d11b159b9bc3dc25907696771cc7577660cdf37f18537af7907a03abd740702e578fb22f44efa7d86e52151`,file:`projects/irrtirer/src/app/core/services/project-import/project-import.service.ts`,coverageIgnore:!1,properties:[],methods:[{name:`loadProject`,coverageIgnore:!1,args:[{name:`file`,type:`File`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<MosaicProjectModel>`,typeParameters:[],line:38,deprecated:!1,deprecationMessage:``,rawdescription:`
+`},extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ProjectImportService`,id:`injectable-ProjectImportService-3d274317bf89a962822675b8670c9953d5b0dcb2b6876802148d132ec7a88c76d717610e4ccab10cf945d049bdf0aa211fecf8fd0fafb795ce7de13c5b8775f7`,file:`projects/irrtirer/src/app/core/services/project-import/project-import.service.ts`,coverageIgnore:!1,properties:[],methods:[{name:`loadProject`,coverageIgnore:!1,args:[{name:`file`,type:`File`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<MosaicProjectModel>`,typeParameters:[],line:41,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`file`,type:`File`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`saveProject`,coverageIgnore:!1,args:[{name:`fileName`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:18,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`fileName`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,sourceCode:`import { inject, Injectable } from '@angular/core';
@@ -4107,11 +4101,14 @@ export class ProjectImportService {
     private readonly project = this.store.selectSignal(selectMosaicProject);
 
     public saveProject(fileName: string): void {
-        const { config: { base64Image, ...configRest }, ...rest } = this.project();
+        const {
+            config: { base64Image, ...configRest },
+            ...rest
+        } = this.project();
         const project = {
             config: { ...configRest },
             ...rest,
-            version: environment.version
+            version: environment.version,
         };
 
         const zip = new JSZip();
@@ -4119,7 +4116,7 @@ export class ProjectImportService {
         zip.file('project.json', JSON.stringify(project));
 
         const imageData = ImageHelper.base64ToUint8Array(base64Image);
-        zip.file("image.png", imageData, {binary: true});
+        zip.file('image.png', imageData, { binary: true });
 
         zip.generateAsync({ type: 'blob', compression: 'DEFLATE' }).then((content) => {
             saveAs(content, \`\${fileName}.\${PROJECT_FORMAT}\`);
@@ -4128,31 +4125,32 @@ export class ProjectImportService {
 
     public loadProject(file: File): Promise<MosaicProjectModel> {
         const zip = new JSZip();
-        return file.arrayBuffer().then(buffer => {
-            return zip.loadAsync(buffer);
-        }).then(loadedZip => {
-            return Promise.all([
-                loadedZip.file('project.json')?.async('string'),
-                loadedZip.file('image.png')?.async('base64')
-            ]);
-        }).then(([projectJson, imageData]) => {
-            if (!projectJson) {
-                throw new Error('Brak pliku project.json w archiwum.');
-            } else if(!imageData) {
-                throw new Error('Wystąpił problem z plikiem image.png');
-            }
-            
-            const project: MosaicProjectModel = JSON.parse(projectJson);
-            const base64Image = \`data:image/png;base64,\${imageData}\`;
-
-            return {
-                ...project,
-                config: {
-                    ...project.config,
-                    base64Image
+        return file
+            .arrayBuffer()
+            .then((buffer) => {
+                return zip.loadAsync(buffer);
+            })
+            .then((loadedZip) => {
+                return Promise.all([loadedZip.file('project.json')?.async('string'), loadedZip.file('image.png')?.async('base64')]);
+            })
+            .then(([projectJson, imageData]) => {
+                if (!projectJson) {
+                    throw new Error('Brak pliku project.json w archiwum.');
+                } else if (!imageData) {
+                    throw new Error('Wystąpił problem z plikiem image.png');
                 }
-            };
-        });
+
+                const project: MosaicProjectModel = JSON.parse(projectJson);
+                const base64Image = \`data:image/png;base64,\${imageData}\`;
+
+                return {
+                    ...project,
+                    config: {
+                        ...project.config,
+                        base64Image,
+                    },
+                };
+            });
     }
 }
 `,extends:[],type:`injectable`,relationships:{incoming:[{name:`ToolComponent`,type:`component`}],outgoing:[]}},{name:`SectorsContoursService`,id:`injectable-SectorsContoursService-247ebec3771002b5689d64dd6f2fc0398b6258d625b384160fb08661528713c98f199833b496e07799afdfe30e67afd71e1c1cd7bb180be1f08d2bd67103b859`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours.service.ts`,coverageIgnore:!1,properties:[{name:`canvasClicked$`,coverageIgnore:!1,defaultValue:`this.canvasClickedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
@@ -4240,7 +4238,7 @@ export class SectorsContoursService {
         };
     }
 }
-`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ThemeService`,id:`injectable-ThemeService-edf250cf74d9167c72fce64060e8122c1f3f84dd745521de4c04ae3561dfe47dfab3cc91a07371e7076d06310347b7966a596b7ff3a8ebeb5434f702984b1e7c`,file:`projects/irrtirer/src/app/core/services/theme/theme.service.ts`,coverageIgnore:!1,properties:[{name:`theme$`,coverageIgnore:!1,defaultValue:`this.theme.asObservable()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
+`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ThemeService`,id:`injectable-ThemeService-49b92e073911a3f64e78b3ab87367e18dce230802d3dce2028dda129726ed964fb11e9545f00b0937c252555ef3d2c0dac800774c984c23b1b5e6a9dde334660`,file:`projects/irrtirer/src/app/core/services/theme/theme.service.ts`,coverageIgnore:!1,properties:[{name:`theme$`,coverageIgnore:!1,defaultValue:`this.theme.asObservable()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`changeTheme`,coverageIgnore:!1,args:[{name:`theme`,type:`ThemeMode`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`theme`,type:`ThemeMode`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`init`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:18,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
@@ -4265,7 +4263,7 @@ export class ThemeService {
         let selectedTheme = this.store.selectSignal<ThemeMode | undefined>(selectThemeMode)();
         if (!selectedTheme) {
             const browserLightPreference = window.matchMedia('(prefers-color-scheme: light)');
-            selectedTheme = browserLightPreference.matches ? 'light': 'dark';
+            selectedTheme = browserLightPreference.matches ? 'light' : 'dark';
         }
 
         this.setTheme(selectedTheme);
@@ -4284,15 +4282,11 @@ export class ThemeService {
         this.theme.next(theme);
     }
 }
-`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ToolService`,id:`injectable-ToolService-7b521aa2d2522ccae038bdcd566b08855c3ffaa76f1305c9527780b0e2977619a225ba9288cb0634fde510b52fb12a0f1f3c3b123504930269769b923a9404c9`,file:`projects/irrtirer/src/app/tool/tool.service.ts`,coverageIgnore:!1,properties:[{name:`backgroundColor`,coverageIgnore:!1,defaultValue:`computed<string>(() =>
-        this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'
-    )`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
-`,modifierKind:[125,148]},{name:`canvasGridColor`,coverageIgnore:!1,defaultValue:`computed<string>(() =>
-        this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'
-    )`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:23,rawdescription:`
-`,modifierKind:[125,148]}],methods:[{name:`calculateZoomForImage`,coverageIgnore:!1,args:[{name:`imageSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:42,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`imageSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`createImageObject`,coverageIgnore:!1,args:[{name:`mosaicConfig`,type:`MosaicConfig`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<ImageObject>`,typeParameters:[],line:31,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126,134],jsdoctags:[{name:`mosaicConfig`,type:`MosaicConfig`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`openTakeSnapshotDialog`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`fileName`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:51,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,extends:[],providedIn:`root`,type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`ToolService`,id:`injectable-ToolService-4868bf4223dd2308df68456ead96741e8aa7ee28faeeb598a135c754a2e2e5f5b09a0009f235a9c5f4c453a55767db8cce39a0f694b2fb2dcc58f191aaff5d14`,file:`projects/irrtirer/src/app/tool/tool.service.ts`,coverageIgnore:!1,properties:[{name:`backgroundColor`,coverageIgnore:!1,defaultValue:`computed<string>(() => (this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'))`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
+`,modifierKind:[125,148]},{name:`canvasGridColor`,coverageIgnore:!1,defaultValue:`computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'))`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:23,rawdescription:`
+`,modifierKind:[125,148]}],methods:[{name:`calculateZoomForImage`,coverageIgnore:!1,args:[{name:`imageSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:38,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[126],jsdoctags:[{name:`imageSize`,type:`Size`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`createImageObject`,coverageIgnore:!1,args:[{name:`mosaicConfig`,type:`MosaicConfig`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<ImageObject>`,typeParameters:[],line:27,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[126,134],jsdoctags:[{name:`mosaicConfig`,type:`MosaicConfig`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`openTakeSnapshotDialog`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`fileName`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:47,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`fileName`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,sourceCode:`import { computed, inject, Injectable } from '@angular/core';
 import { ImageObject } from '../shared/canvas-objects/image-object';
@@ -4316,13 +4310,9 @@ export class ToolService {
 
     private readonly themeMode = toSignal<ThemeMode>(inject(ThemeService).theme$);
 
-    public readonly canvasGridColor = computed<string>(() =>
-        this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'
-    );
+    public readonly canvasGridColor = computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'));
 
-    public readonly backgroundColor = computed<string>(() =>
-        this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'
-    );
+    public readonly backgroundColor = computed<string>(() => (this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'));
 
     public static async createImageObject(mosaicConfig: MosaicConfig): Promise<ImageObject> {
         const image = await ImageHelper.getImageObjectBySrc(mosaicConfig.base64Image);
@@ -4337,15 +4327,16 @@ export class ToolService {
 
     public static calculateZoomForImage(imageSize: Size, viewport: Viewport): number {
         const imageZoom: Size = {
-            height: (imageSize.height * 1.1) / viewport.cmSize.height * viewport.zoom,
-            width: (imageSize.width * 1.1) / viewport.cmSize.width * viewport.zoom,
+            height: ((imageSize.height * 1.1) / viewport.cmSize.height) * viewport.zoom,
+            width: ((imageSize.width * 1.1) / viewport.cmSize.width) * viewport.zoom,
         };
 
         return Math.max(imageZoom.height, imageZoom.width);
     }
 
     public openTakeSnapshotDialog(activeCanvas: IActiveCanvas, fileName: string): void {
-        this.matDialog.open<SnapshotOptionsDialogComponent, unknown, SnapshotOptions>(SnapshotOptionsDialogComponent)
+        this.matDialog
+            .open<SnapshotOptionsDialogComponent, unknown, SnapshotOptions>(SnapshotOptionsDialogComponent)
             .afterClosed()
             .subscribe((result) => {
                 if (!result) {
@@ -4361,7 +4352,7 @@ export class ToolService {
             });
     }
 }
-`,extends:[],type:`injectable`,relationships:{incoming:[{name:`ToolComponent`,type:`component`}],outgoing:[]}},{name:`TrayService`,id:`injectable-TrayService-d8873b43ec45d1b07515bee6b345cb48ee2db5f39bbe65649b04ad9f4ed0033e309584fe89f30fd5e98f1809e60eec67f879879d7acd51a29ca8b54b74ef5c35`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,coverageIgnore:!1,properties:[],methods:[{name:`drawTiles`,coverageIgnore:!1,args:[{name:`tiles`,type:`TileModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:35,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,extends:[],type:`injectable`,relationships:{incoming:[{name:`ToolComponent`,type:`component`}],outgoing:[]}},{name:`TrayService`,id:`injectable-TrayService-ddc09fc0aa39b835336835bf51fadf0b49c615bd9bd3596fec41abb0030deffba872195ed00da884cc37fc481a4728ed4aab5e754022248a846dce26050f9dfb`,file:`projects/irrtirer/src/app/tool/tray/tray.service.ts`,coverageIgnore:!1,properties:[],methods:[{name:`drawTiles`,coverageIgnore:!1,args:[{name:`tiles`,type:`TileModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:35,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126],jsdoctags:[{name:`tiles`,type:`TileModel[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
 `,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
@@ -4417,7 +4408,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -4427,13 +4418,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);
@@ -4631,7 +4622,7 @@ export class FormHelper {
 }
 `,displayName:`FormHelper`,inputsClass:[],outputsClass:[],properties:[],methods:[{name:`getErrorLabel`,coverageIgnore:!1,args:[{name:`errors`,type:`ValidationError.WithFieldTree[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`errorLabels`,type:`Record<string, () => string>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`string | null`,typeParameters:[],line:8,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126],jsdoctags:[{name:`errors`,type:`ValidationError.WithFieldTree[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`errorLabels`,type:`Record<string, () => string>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getFieldErrorLabel`,coverageIgnore:!1,args:[{name:`field`,type:`FieldState<unknown>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`errorLabels`,type:`Record<string, () => string>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`string | null`,typeParameters:[],line:4,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`field`,type:`FieldState<unknown>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`errorLabels`,type:`Record<string, () => string>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedSectorModel`,id:`class-GeneratedSectorModel-48813e528289e70892488b263f3686a8568009024ba869a49c8323ef6924c6a3a35289143094f913c84c016d872cd49c3b361c4cf6397b1bac66df03387a952c`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
+`,description:``,modifierKind:[126],jsdoctags:[{name:`field`,type:`FieldState<unknown>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`errorLabels`,type:`Record<string, () => string>`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`GeneratedSectorModel`,id:`class-GeneratedSectorModel-62382497c13c1efe33876260bd508b0383b97bede11f990d1ea43edc0687b223b441e2ec47b91d06559def7375e4a0f80bacc21ff877d28089402e3a1f760667`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.interface.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BehaviorSubject, Observable } from 'rxjs';
 import { TileTransformResult } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { CanvasObject } from '../../../../../active-canvas/src/public-api';
@@ -4654,7 +4645,7 @@ export class GeneratedSectorModel {
 
     public addSection(generatedSection: GeneratedSectionModel): void {
         this.sections.push(generatedSection);
-        generatedSection.tiles.forEach(tile => tile.tileObject.setVisibility(this.areTilesVisible));
+        generatedSection.tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
         this.tilesSub.next(this.sections.flatMap((section) => section.tiles));
     }
 
@@ -4697,7 +4688,7 @@ export interface GeneratedTileModel {
 `,description:``,modifierKind:[125],jsdoctags:[{name:`generatedSection`,type:`GeneratedSectionModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`setSectorMeshVisibility`,coverageIgnore:!1,args:[{name:`isVisible`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`isVisible`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`setSectorVisualObjects`,coverageIgnore:!1,args:[{name:`visualObjects`,type:`CanvasObject[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:34,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`visualObjects`,type:`CanvasObject[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`setTilesVisibility`,coverageIgnore:!1,args:[{name:`areTilesVisible`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:39,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`areTilesVisible`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`ImageHelper`,id:`class-ImageHelper-00fcd81513d54c18e7f8547fbc0f85b0b36f75cffb133c3055134b960b62d752868d13fa98f9e0acafa8365798d38cc5a9774f5c9d75c73cfb8a457fb185b5b2`,file:`projects/irrtirer/src/app/core/helpers/image-helper.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`export class ImageHelper {
+`,description:``,modifierKind:[125],jsdoctags:[{name:`areTilesVisible`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`ImageHelper`,id:`class-ImageHelper-afe6248a0f0b8a6a315f7700c195dcc7d6e859d80c6d8032cf9cb919d5e8a14382e67b97e2bd0ae65389660fab74278a89c30f6eea5a0712a5b31c701203b1de`,file:`projects/irrtirer/src/app/core/helpers/image-helper.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`export class ImageHelper {
     public static async getImageSrcPixelArray(imgSrc: string): Promise<Uint8ClampedArray> {
         const img = await this.getImageObjectBySrc(imgSrc);
         return this.getImagePixelArray(img);
@@ -4725,11 +4716,11 @@ export interface GeneratedTileModel {
 
     public static base64ToUint8Array(base64: string): Uint8Array<ArrayBuffer> {
         const base64Data = base64.split(',')[1] || base64;
-        
+
         const binaryString = atob(base64Data);
         const len = binaryString.length;
         const bytes = new Uint8Array(len);
-        
+
         for (let i = 0; i < len; i++) {
             bytes[i] = binaryString.charCodeAt(i);
         }
@@ -4739,15 +4730,15 @@ export interface GeneratedTileModel {
 `,displayName:`ImageHelper`,inputsClass:[],outputsClass:[],properties:[],methods:[{name:`base64ToUint8Array`,coverageIgnore:!1,args:[{name:`base64`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Uint8Array<ArrayBuffer>`,typeParameters:[],line:27,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126],jsdoctags:[{name:`base64`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getImageObjectBySrc`,coverageIgnore:!1,args:[{name:`imgSrc`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<HTMLImageElement>`,typeParameters:[],line:7,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126,134],jsdoctags:[{name:`imgSrc`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getImageSrcPixelArray`,coverageIgnore:!1,args:[{name:`imgSrc`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Promise<Uint8ClampedArray>`,typeParameters:[],line:2,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126,134],jsdoctags:[{name:`imgSrc`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`ImageObject`,id:`class-ImageObject-3ca7f0fccdd84233f4a0d6159deb0f3c8ff82bce19012c5a2789bad59d57349c8543a9df50c50e59d6a9ba9fdce20bc31dca88730cd8974f3f44e2a88eb5432a`,file:`projects/irrtirer/src/app/shared/canvas-objects/image-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from "../../../../../active-canvas/src/public-api";
-import { Vector } from "../../core/models/math/vector.model";
+`,description:``,modifierKind:[126,134],jsdoctags:[{name:`imgSrc`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`ImageObject`,id:`class-ImageObject-e982d59b7181207e9c53a5a48907b4f6181f02968565cbde254be0e947cd4452ac0db69a137ffcaf670c03446bebcb5e38204ed380d21006543ccf7ed0148b64`,file:`projects/irrtirer/src/app/shared/canvas-objects/image-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from '../../../../../active-canvas/src/public-api';
+import { Vector } from '../../core/models/math/vector.model';
 
 export class ImageObject extends BaseCanvasObject implements CanvasObject {
     constructor(
         private readonly image: HTMLImageElement,
         private readonly position: IVector,
         public readonly size: Size,
-        private readonly order: number = 0
+        private readonly order: number = 0,
     ) {
         super();
     }
@@ -4795,7 +4786,7 @@ export class Line {
 `,jsdoctags:[{name:`start`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`end`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},inputsClass:[],outputsClass:[],properties:[{name:`end`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `,modifierKind:[125]},{name:`start`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
 `,modifierKind:[125]}],methods:[{name:`hash`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:13,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`OpenedContourObject`,id:`class-OpenedContourObject-cc02422323fbb481300b7142061329d76a817a234bd6e5f4c59898ae90b03dc7d56f4587ff614b83e31478abf6c8c15487c1c5164e076223441e81f770b32d98`,file:`projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
+`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`OpenedContourObject`,id:`class-OpenedContourObject-f899378a77e32b0f7a70cbfb9b5f7c1adc6d0eb99d7fe78acf585474213767fe4fc079d02db98866e0244a0372c2beb992a36651ee98a23de24b7a982adbcece`,file:`projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 
 const BASE_LINE_THICKNESS: number = 10;
 const BASE_POINT_RADIUS: number = 10;
@@ -4805,7 +4796,7 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
         private readonly vertices: IVector[],
         private readonly selectedIndex: number,
         private readonly hexColor: string,
-        private readonly order: number = 100
+        private readonly order: number = 100,
     ) {
         super();
     }
@@ -4863,7 +4854,7 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
 `,displayName:`OpenedContourObject`,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[{name:`vertices`,type:`IVector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`selectedIndex`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`order`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,defaultValue:`100`}],line:6,rawdescription:`
 `,jsdoctags:[{name:`vertices`,type:`IVector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`selectedIndex`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`order`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,defaultValue:`100`,tagName:{text:`param`}}]},inputsClass:[],outputsClass:[],properties:[],methods:[{name:`drawObject`,coverageIgnore:!1,args:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:16,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getOrder`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:62,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`PolygonHelper`,id:`class-PolygonHelper-a58e6c9f14d32c1c0fa9a5b20018df074d7d8887f999827d08d8211c69a53ddc19f197c58f081eeb81d88153d3e206a4a003e13bd2e6080500a75f0b64874ead`,file:`projects/irrtirer/src/app/core/helpers/polygon/polygon-helper.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { Vector } from '../../models/math/vector.model';
+`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`PolygonHelper`,id:`class-PolygonHelper-8820c84b05f9cb71509ebdcda6d6ae2b5aace9e1368ddff4c281d783ac5068d9768255fa9545bf469b4c997456bdf560da1556cee3bb0e0e8270c7a64f1639bc`,file:`projects/irrtirer/src/app/core/helpers/polygon/polygon-helper.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { Vector } from '../../models/math/vector.model';
 
 export class PolygonHelper {
     public static calculateConvexityFactor(vertices: Vector[]): number {
@@ -4903,7 +4894,8 @@ export class PolygonHelper {
     }
 
     public static calculatePolygonCentroid(vertices: Vector[]): Vector {
-        let x = 0, y = 0;
+        let x = 0,
+            y = 0;
         let area = 0;
         let b: Vector = vertices.at(-1)!;
 
@@ -4934,7 +4926,7 @@ export class PolygonHelper {
     }
 }
 `,displayName:`PolygonHelper`,inputsClass:[],outputsClass:[],properties:[],methods:[{name:`calculateConvexityFactor`,coverageIgnore:!1,args:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:4,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`calculateOuterRadius`,coverageIgnore:!1,args:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:59,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[126],jsdoctags:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`calculateOuterRadius`,coverageIgnore:!1,args:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:60,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126],jsdoctags:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`calculatePolygonArea`,coverageIgnore:!1,args:[{name:`vertices`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`number`,typeParameters:[],line:14,deprecated:!1,deprecationMessage:``,rawdescription:`
 
 Shoelace formula
@@ -5062,17 +5054,17 @@ export class PresenceInPoligonHelper {
 `,description:``,modifierKind:[126],jsdoctags:[{name:{pos:50,end:53,kind:80,id:0,flags:16842752,transformFlags:0,escapedText:`min`},type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{pos:44,end:49,kind:80,id:0,flags:16842752,transformFlags:0,escapedText:`param`},comment:`<p>included</p>
 `},{name:{pos:77,end:80,kind:80,id:0,flags:16842752,transformFlags:0,escapedText:`max`},type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{pos:71,end:76,kind:80,id:0,flags:16842752,transformFlags:0,escapedText:`param`},comment:`<p>included</p>
 `},{tagName:{pos:98,end:105,kind:80,id:0,flags:16842752,transformFlags:0,escapedText:`returns`},comment:`<p>random value in range</p>
-`}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectionGenerationResult`,id:`class-SectionGenerationResult-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectionGenerationResult`,id:`class-SectionGenerationResult-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -5111,7 +5103,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -5120,7 +5112,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -5133,20 +5125,21 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`SectionGenerationResult`,inputsClass:[],outputsClass:[],properties:[{name:`sectorId`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:54,rawdescription:`
+}
+`,displayName:`SectionGenerationResult`,inputsClass:[],outputsClass:[],properties:[{name:`sectorId`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:54,rawdescription:`
 `,modifierKind:[125,148]},{name:`tilesTransforms`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TileTransformResult[]`,indexKey:``,optional:!1,description:``,line:55,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`SectionGenerationResult`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:57,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectionGenerationResult`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationMeshModel`,id:`class-SectorTriangulationMeshModel-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectionGenerationResult`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationMeshModel`,id:`class-SectorTriangulationMeshModel-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -5185,7 +5178,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -5194,7 +5187,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -5207,20 +5200,21 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`SectorTriangulationMeshModel`,inputsClass:[],outputsClass:[],properties:[{name:`contour`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
+}
+`,displayName:`SectorTriangulationMeshModel`,inputsClass:[],outputsClass:[],properties:[{name:`contour`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector[]`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
 `,modifierKind:[125,148]},{name:`triangles`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Triangle[]`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`SectorTriangulationMeshModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:19,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectorTriangulationMeshModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationMeshPartsModel`,id:`class-SectorTriangulationMeshPartsModel-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectorTriangulationMeshModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`SectorTriangulationMeshPartsModel`,id:`class-SectorTriangulationMeshPartsModel-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -5259,7 +5253,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -5268,7 +5262,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -5281,10 +5275,11 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`SectorTriangulationMeshPartsModel`,inputsClass:[],outputsClass:[],properties:[{name:`parts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorTriangulationMeshModel[]`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
+}
+`,displayName:`SectorTriangulationMeshPartsModel`,inputsClass:[],outputsClass:[],properties:[{name:`parts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorTriangulationMeshModel[]`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
 `,modifierKind:[125,148]},{name:`sectorId`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`SectorTriangulationMeshPartsModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:10,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectorTriangulationMeshPartsModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TileGenerator`,id:`class-TileGenerator-b2d0a577149ccb4158c8f091245db6ec636f976016d5190f41fae93eca43cd1a6ab49b138f7ec8915ef88487d434fa2806d46a25becee9a04837456e58241dd0`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/tile-generator.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { PolygonHelper } from '../../../core/helpers/polygon/polygon-helper';
+`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`SectorTriangulationMeshPartsModel`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TileGenerator`,id:`class-TileGenerator-b30ee8063cf81b053099c850bab4551bc70c91d67fc42ed579f9f002904cb18b9fee78ff4846fef1841f306e9a04b5302415a1a0b2043b78282555175ab2793c`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/tile-generator.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { PolygonHelper } from '../../../core/helpers/polygon/polygon-helper';
 import { RandomHelper } from '../../../core/helpers/random-helper';
 import { TileModel } from '../../../core/models/mosaic-project.model';
 import { Range } from '../../../core/models/math/range.interface';
@@ -5344,7 +5339,7 @@ export class TileGenerator {
 
     private randomColor(): ColorInstance {
         const pixelCount = this.imagePixelArray.length / 4;
-        const pixelIndex = RandomHelper.nextInt(0, pixelCount-1);
+        const pixelIndex = RandomHelper.nextInt(0, pixelCount - 1);
 
         return Color({
             r: this.imagePixelArray[pixelIndex * 4],
@@ -5358,10 +5353,7 @@ export class TileGenerator {
     }
 
     private roundVertexCoords(vertex: Vector): Vector {
-        return new Vector(
-            Math.round((vertex.x + Number.EPSILON) * 100) / 100,
-            Math.round((vertex.y + Number.EPSILON) * 100) / 100,
-        );
+        return new Vector(Math.round((vertex.x + Number.EPSILON) * 100) / 100, Math.round((vertex.y + Number.EPSILON) * 100) / 100);
     }
 
     private rotatePolygonToHorizontal(vertices: Vector[]): Vector[] {
@@ -5395,12 +5387,12 @@ export class TileGenerator {
 }
 `,displayName:`TileGenerator`,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[{name:`imagePixelArray`,type:`Uint8ClampedArray`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],line:8,rawdescription:`
 `,jsdoctags:[{name:`imagePixelArray`,type:`Uint8ClampedArray`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},inputsClass:[],outputsClass:[],properties:[],methods:[{name:`generateTileSet`,coverageIgnore:!1,args:[{name:`range`,type:`Range`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`count`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`TileModel[]`,typeParameters:[],line:11,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`range`,type:`Range`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`count`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TileObject`,id:`class-TileObject-6223b566a23e67fa5eef2567b906d2f0aaad17bdbef57f61dd0736e5e2a11ef0484a044b57daf6ec263a3f8b5c9c35f7705788e73a6b0afdef907ecf96e0ac50`,file:`projects/irrtirer/src/app/shared/canvas-objects/tile-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
+`,description:``,modifierKind:[125],jsdoctags:[{name:`range`,type:`Range`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`count`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TileObject`,id:`class-TileObject-caf8a332958fea8373b02d82850af1a63c481f0a1a395c93d49849e2aa2db0eac6beeebec4aa2598a97137075f4d9115a5c7ff50c9d85695a3d4682dc852dbf7`,file:`projects/irrtirer/src/app/shared/canvas-objects/tile-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 
 export class TileObject extends BaseCanvasObject implements CanvasObject {
     constructor(
         private readonly vertices: IVector[],
-        private readonly hexColor: string
+        private readonly hexColor: string,
     ) {
         super();
     }
@@ -5427,17 +5419,17 @@ export class TileObject extends BaseCanvasObject implements CanvasObject {
 `,displayName:`TileObject`,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[{name:`vertices`,type:`IVector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],line:3,rawdescription:`
 `,jsdoctags:[{name:`vertices`,type:`IVector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},inputsClass:[],outputsClass:[],properties:[],methods:[{name:`drawObject`,coverageIgnore:!1,args:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:11,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getOrder`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:26,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`TileTransformResult`,id:`class-TileTransformResult-6dfa86348f6ef8267cc92848f05e8011570ddd3655f915283a16cac6fad62ac6325ceacdc32ce1bcf2187c7e64db94443e43a95c728aa672894785b60c662b15`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`TileTransformResult`,id:`class-TileTransformResult-969a263ebd349c87c56e9a8ba870a2ae1efe221ada2aabcd794ff8fa84d3122208e5720332778bf15cbf4d5b4c260791aabff922d5ed79483643a74794a643f9`,file:`projects/irrtirer/src/app/core/models/api/api.models.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -5476,7 +5468,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -5485,7 +5477,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 
@@ -5498,7 +5490,8 @@ export class TileTransformResult {
         Object.setPrototypeOf(obj, TileTransformResult);
         Vector.restore(obj.position);
     }
-}`,displayName:`TileTransformResult`,inputsClass:[],outputsClass:[],properties:[{name:`angle`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:66,rawdescription:`
+}
+`,displayName:`TileTransformResult`,inputsClass:[],outputsClass:[],properties:[{name:`angle`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:66,rawdescription:`
 `,modifierKind:[125,148]},{name:`position`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Vector`,indexKey:``,optional:!1,description:``,line:65,rawdescription:`
 `,modifierKind:[125,148]},{name:`tileId`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:64,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`TileTransformResult`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:68,deprecated:!1,deprecationMessage:``,rawdescription:`
@@ -5523,7 +5516,7 @@ export class Triangle {
 `,modifierKind:[125,148]},{name:`c`,coverageIgnore:!1,defaultValue:`Vector.zero`,deprecated:!1,deprecationMessage:``,type:`Vector`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `,modifierKind:[125,148]}],methods:[{name:`getVertices`,coverageIgnore:!1,args:[],optional:!1,returnType:`Vector[]`,typeParameters:[],line:8,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`Triangle`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:12,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`Triangle`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TriangulatedContourObject`,id:`class-TriangulatedContourObject-2818a8dac2b7b528fa7f8ca3ccd6ef48fdf681e73943e61b27d04c1153f48a42158c3709673b6b892035e01587a8dec9492be5bc5252eee4a04a42be6bcb5a66`,file:`projects/irrtirer/src/app/shared/canvas-objects/triangulated-contour-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+`,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`Triangle`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}},{name:`TriangulatedContourObject`,id:`class-TriangulatedContourObject-cb5e4f2324fa7a39050c3e34d902b1b88f2b6838ae48783c338322524c0cd85bd657c4b747a1592be7869e2d56269dc797c7b743d73fd4682e24b3058434829d`,file:`projects/irrtirer/src/app/shared/canvas-objects/triangulated-contour-object.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 import { Line } from '../../core/models/math/line.model';
 import { Triangle } from '../../core/models/math/triangle.model';
 import { Vector } from '../../core/models/math/vector.model';
@@ -5539,7 +5532,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
         mesh: Triangle[],
         contour: Vector[],
         private readonly hexColor: string,
-        private readonly order: number = 100
+        private readonly order: number = 100,
     ) {
         super();
 
@@ -5646,7 +5639,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
 `,displayName:`TriangulatedContourObject`,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[{name:`mesh`,type:`Triangle[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`contour`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`order`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,defaultValue:`100`}],line:11,rawdescription:`
 `,jsdoctags:[{name:`mesh`,type:`Triangle[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`contour`,type:`Vector[]`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`hexColor`,type:`string`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`order`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,defaultValue:`100`,tagName:{text:`param`}}]},inputsClass:[],outputsClass:[],properties:[],methods:[{name:`drawObject`,coverageIgnore:!1,args:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:25,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`ctx`,type:`CanvasRenderingContext2D`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`viewport`,type:`Viewport`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`getOrder`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:89,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`Vector`,id:`class-Vector-23f2bcd64226b80b06aa35bfa328bfb4bc36cc1e0207e1747ee95b07c80dd5e18827db377e2af95819bbd7b6239a31d32db4ca9aaff216bb9f0f1c24b92ebb70`,file:`projects/irrtirer/src/app/core/models/math/vector.model.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`export class Vector {
+`,description:``,modifierKind:[125]}],indexSignatures:[],extends:[`BaseCanvasObject`],hostBindings:[],hostListeners:[],implements:[`CanvasObject`],relationships:{incoming:[],outgoing:[{name:`BaseCanvasObject`,type:`class`},{name:`CanvasObject`,type:`interface`}]}},{name:`Vector`,id:`class-Vector-26e417ac75e3f2aa4a50f0b54a49c7f36d2703c96fc92a96cd05f0340c4b27232ef6fb0f6e5b03ca2aef90c8202e08514371fbbb39ebd4ee5085acb08732234d`,file:`projects/irrtirer/src/app/core/models/math/vector.model.ts`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`class`,sourceCode:`export class Vector {
     public readonly x: number = 0;
     public readonly y: number = 0;
 
@@ -5668,7 +5661,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     public sub(b: Vector): Vector {
         return new Vector(this.x - b.x, this.y - b.y);
     }
-    
+
     public magnitude(): number {
         return Math.hypot(this.x, this.y);
     }
@@ -5689,7 +5682,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
     public static dot(a: Vector, b: Vector): number {
         return a.x * b.x + a.y * b.y;
     }
-    
+
     public static areEqual(a: Vector, b: Vector): boolean {
         return a.x === b.x && a.y === b.y;
     }
@@ -5759,8 +5752,9 @@ export class AppComponent implements OnInit {
 `,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`ToolbarComponent`,type:`component`},{name:`OnInit`,type:`interface`}]},templateData:`<app-toolbar />
 <div class="flex-1 mat-app-background">
     <router-outlet />
-</div>`},{name:`AuthorComponent`,id:`component-AuthorComponent-927cf0157edaaadb54d67fdad793db031ba1bb4197fad06be1bc094fd1b72074ed1a631635a9ac5517268fc0590e24eb9db6841e4e6829eb50ddd4f4e93778b9`,file:`projects/irrtirer/src/app/author/author.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-author`,styleUrls:[],styles:[],templateUrl:[`./author.component.html`],templateVariables:[{name:`words`,defaultValue:`this.translate.instant('aboutAuthor.itWas') | sentenceToWord`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`SentenceToWordPipe`,type:`pipe`}],description:``,rawdescription:`
-`,type:`component`,sourceCode:`import {  Component, inject } from '@angular/core';
+</div>
+`},{name:`AuthorComponent`,id:`component-AuthorComponent-2965595e947c9e8f57962a9bc644f4b20336f9566069994a0e7e5051c23be769479afe5768ddaecef92d174274fa588056580a3d9913a98060f4431ccb8f092a`,file:`projects/irrtirer/src/app/author/author.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-author`,styleUrls:[],styles:[],templateUrl:[`./author.component.html`],templateVariables:[{name:`words`,defaultValue:`this.translate.instant('aboutAuthor.itWas') | sentenceToWord`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`SentenceToWordPipe`,type:`pipe`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
 
@@ -5775,35 +5769,24 @@ export class AuthorComponent {
 }
 `,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`SentenceToWordPipe`,type:`pipe`}]},templateData:`<div class="flex gap-2.5 items-baseline heading-hero">
     @let words = this.translate.instant('aboutAuthor.itWas') | sentenceToWord;
-    @for(word of words; track $index) {
+    @for (word of words; track $index) {
         <span class="word-fade-in" [class.normal]="true" [style.animationDelay]="$index * 0.75 + 's'">
             {{ word }}
         </span>
     }
-    <span class="word-fade-in heading-hero-accent" [style.animationDelay]="(words.length * 0.75 + 1)+ 's'">
+    <span class="word-fade-in heading-hero-accent" [style.animationDelay]="words.length * 0.75 + 1 + 's'">
         {{ 'aboutAuthor.me' | translate }}
     </span>
-</div>`},{name:`ColorCanvasComponent`,id:`component-ColorCanvasComponent-6b8ec841627aa0c0d1d2277ddbe2d7c145e23f07861f9742f891add51701773ff19797c5577105711177eb470a98f9b65165067b5c1143a706a6281c519accaa`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-canvas`,styleUrls:[`./color-canvas.component.scss`],styles:[],templateUrl:[`./color-canvas.component.html`],templateVariables:[{name:`cursor`,defaultValue:`cursorData()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`hValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
-`,modifierKind:[125,148],required:!0},{name:`sValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:31,rawdescription:`
-`,modifierKind:[125,148],required:!0},{name:`vValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
-`,modifierKind:[125,148],required:!0}],outputsClass:[{name:`colorChange`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ColorInstance`,indexKey:``,optional:!1,description:``,line:35,rawdescription:`
-`,modifierKind:[125,148],required:!1},{name:`sValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:31,rawdescription:`
-`,modifierKind:[125,148],required:!0},{name:`vValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
-`,modifierKind:[125,148],required:!0}],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:78,deprecated:!1,deprecationMessage:``,rawdescription:`
+</div>
+`},{name:`ColorCanvasComponent`,id:`component-ColorCanvasComponent-478ac2e0417be2f5700f6bba715cd663f6bc00fb4ca0a1e20bc0833c630e32f1b7c14e3420c49f30552f699c380c2e9ec8ed0702fe2c36b2df5a6b5da314abe5`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-canvas`,styleUrls:[`./color-canvas.component.scss`],styles:[],templateUrl:[`./color-canvas.component.html`],templateVariables:[{name:`cursor`,defaultValue:`cursorData()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`hValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`sValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`vValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:21,rawdescription:`
+`,modifierKind:[125,148],required:!0}],outputsClass:[{name:`colorChange`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ColorInstance`,indexKey:``,optional:!1,description:``,line:23,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`sValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`vValue`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:21,rawdescription:`
+`,modifierKind:[125,148],required:!0}],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:66,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
-`,type:`component`,sourceCode:`import {
-    AfterViewInit,
-    Component,
-    computed,
-    DestroyRef,
-    effect,
-    ElementRef,
-    inject,
-    input,
-    model,
-    output,
-    viewChild,
-} from '@angular/core';
+`,type:`component`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, output, viewChild } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color, { ColorInstance } from 'color';
 
@@ -5927,7 +5910,7 @@ export class ColorCanvasComponent implements AfterViewInit {
         display: block;
         width: 100%;
     }
-    
+
     .cursor {
         position: absolute;
         width: 18px;
@@ -5937,16 +5920,13 @@ export class ColorCanvasComponent implements AfterViewInit {
         box-sizing: border-box;
         pointer-events: none;
     }
-}`,styleUrl:`./color-canvas.component.scss`}],stylesData:``,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[],line:43,rawdescription:`
-`},extends:[],implements:[`AfterViewInit`],relationships:{incoming:[{name:`ColorSelectionPanelComponent`,type:`component`}],outgoing:[{name:`AfterViewInit`,type:`interface`}]},templateData:`<canvas #canvas class="panel" width="250" height="150">
-</canvas>
+}
+`,styleUrl:`./color-canvas.component.scss`}],stylesData:``,constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[],line:31,rawdescription:`
+`},extends:[],implements:[`AfterViewInit`],relationships:{incoming:[{name:`ColorSelectionPanelComponent`,type:`component`}],outgoing:[{name:`AfterViewInit`,type:`interface`}]},templateData:`<canvas #canvas class="panel" width="250" height="150"> </canvas>
 
 @let cursor = cursorData();
-<div class="cursor"
-    [style.left]="cursor.horizontalOffset"
-    [style.top]="cursor.verticalOffset"
-    [style.background-color]="cursor.color">
-</div>`},{name:`ColorPickerComponent`,id:`component-ColorPickerComponent-8ab1630dea30c53a6c9f16cbf9df5cfdb04fa1df012b1b1ee645694554fbe97e02093b17f35c0f6d3565f000b6dd4b7827ceb28ae8f94780cc985f969fc17d76`,file:`projects/irrtirer/src/app/shared/color-picker/color-picker.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-color-picker`,styleUrls:[`./color-picker.component.scss`],styles:[],templateUrl:[`./color-picker.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
+<div class="cursor" [style.left]="cursor.horizontalOffset" [style.top]="cursor.verticalOffset" [style.background-color]="cursor.color"></div>
+`},{name:`ColorPickerComponent`,id:`component-ColorPickerComponent-b4a62fecfafe2cf9a63d5b5322946a003a64c7042fa59750170b99faf2a2014457376991548244ad51886362eadf307b3f59e1f063a29ee3f401607591e8cc8e`,file:`projects/irrtirer/src/app/shared/color-picker/color-picker.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-color-picker`,styleUrls:[`./color-picker.component.scss`],styles:[],templateUrl:[`./color-picker.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
 `,modifierKind:[125,148],required:!1},{name:`label`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
 `,modifierKind:[125,148],required:!0},{name:`value`,coverageIgnore:!1,defaultValue:`'#000000'`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:24,rawdescription:`
 `,modifierKind:[125,148],required:!1}],outputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
@@ -5976,7 +5956,7 @@ import { FormValueControl } from '@angular/forms/signals';
     templateUrl: './color-picker.component.html',
     styleUrl: './color-picker.component.scss',
 })
-export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string>  {
+export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string> {
     public readonly label = input.required<string>();
 
     public readonly value = model<string>('#000000');
@@ -5998,7 +5978,7 @@ export class ColorPickerComponent implements ControlValueAccessor, FormValueCont
     });
 
     protected toggleColorPanel(): void {
-        if(!this.disabled()) {
+        if (!this.disabled()) {
             this.isOpen.update((value) => !value);
         }
     }
@@ -6044,28 +6024,33 @@ export class ColorPickerComponent implements ControlValueAccessor, FormValueCont
             cursor: pointer;
         }
     }
-}`,styleUrl:`./color-picker.component.scss`}],stylesData:``,extends:[],implements:[`ControlValueAccessor`,`FormValueControl`],relationships:{incoming:[{name:`SectorContourEditionComponent`,type:`component`},{name:`TileDetailComponent`,type:`component`}],outgoing:[{name:`OverlayModule`,type:`module`},{name:`ColorSelectionPanelComponent`,type:`component`},{name:`)`,type:`injectable`},{name:`ControlValueAccessor`,type:`interface`},{name:`FormValueControl`,type:`interface`}]},templateData:`<div class="flex flex-col">
+}
+`,styleUrl:`./color-picker.component.scss`}],stylesData:``,extends:[],implements:[`ControlValueAccessor`,`FormValueControl`],relationships:{incoming:[{name:`SectorContourEditionComponent`,type:`component`},{name:`TileDetailComponent`,type:`component`}],outgoing:[{name:`OverlayModule`,type:`module`},{name:`ColorSelectionPanelComponent`,type:`component`},{name:`)`,type:`injectable`},{name:`ControlValueAccessor`,type:`interface`},{name:`FormValueControl`,type:`interface`}]},templateData:`<div class="flex flex-col">
     <span class="text-base text-contrast-highest">{{ label() }}</span>
     <span class="text-sm text-contrast-medium">{{ value() }}</span>
 </div>
 
-<div role="presentation" 
+<div
+    role="presentation"
     class="color-preview"
     [class.disabled]="disabled()"
     [style.background-color]="value()"
     (click)="toggleColorPanel()"
-    cdkOverlayOrigin 
-    #trigger="cdkOverlayOrigin">
-</div>
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+></div>
 
-<ng-template cdkConnectedOverlay 
+<ng-template
+    cdkConnectedOverlay
     [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isOpen()" 
+    [cdkConnectedOverlayOpen]="isOpen()"
     [cdkConnectedOverlayHasBackdrop]="isOpen()"
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
-    (backdropClick)="toggleColorPanel()">
-    <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)"/>
-</ng-template>`},{name:`ColorSelectionPanelComponent`,id:`component-ColorSelectionPanelComponent-f54a6706c43f255be99ee3bdbb0e330168fe4a93b110c0cf4eebd82047871ac67da40a2501915e3cfe6af7624a87ad36a9d8f0ac61262596d7a869f43337316b`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-selection-panel`,styleUrls:[`./color-selection-panel.component.scss`],styles:[],templateUrl:[`./color-selection-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ColorInstance`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
+    (backdropClick)="toggleColorPanel()"
+>
+    <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)" />
+</ng-template>
+`},{name:`ColorSelectionPanelComponent`,id:`component-ColorSelectionPanelComponent-f54a6706c43f255be99ee3bdbb0e330168fe4a93b110c0cf4eebd82047871ac67da40a2501915e3cfe6af7624a87ad36a9d8f0ac61262596d7a869f43337316b`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-selection-panel`,styleUrls:[`./color-selection-panel.component.scss`],styles:[],templateUrl:[`./color-selection-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ColorInstance`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[{name:`colorChange`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`ColorInstance`,indexKey:``,optional:!1,description:``,line:21,rawdescription:`
 `,modifierKind:[125,148],required:!1}],propertiesClass:[],methodsClass:[{name:`ngOnDestroy`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:40,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatInputModule`,type:`module`},{name:`FormsModule`,type:`module`},{name:`ColorSliderComponent`,type:`component`},{name:`ColorCanvasComponent`,type:`component`}],description:``,rawdescription:`
@@ -6131,13 +6116,14 @@ export class ColorSelectionPanelComponent implements OnDestroy {
 `,styleUrl:`./color-selection-panel.component.scss`,assetsDirs:[],styleUrlsData:[{data:`:host {
     display: flex;
     flex-direction: column;
-    
+
     background-color: var(--color-contrast-lightest);
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-                0px 6px 10px 0px rgba(0, 0, 0, 0.14),
-                0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 
     .slider-container {
         padding: 20px 10px;
@@ -6167,42 +6153,28 @@ export class ColorSelectionPanelComponent implements OnDestroy {
             }
         }
     }
-}`,styleUrl:`./color-selection-panel.component.scss`}],stylesData:``,extends:[],implements:[`OnDestroy`],relationships:{incoming:[{name:`ColorPickerComponent`,type:`component`}],outgoing:[{name:`MatInputModule`,type:`module`},{name:`FormsModule`,type:`module`},{name:`ColorSliderComponent`,type:`component`},{name:`ColorCanvasComponent`,type:`component`},{name:`OnDestroy`,type:`interface`}]},templateData:`<div class="sv-preview">
-    <app-color-canvas 
-        [hValue]="hValue()"
-        [sValue]="sValue()"
-        [vValue]="vValue()"
-        (colorChange)="onColorCanvasChanged($event)" />
+}
+`,styleUrl:`./color-selection-panel.component.scss`}],stylesData:``,extends:[],implements:[`OnDestroy`],relationships:{incoming:[{name:`ColorPickerComponent`,type:`component`}],outgoing:[{name:`MatInputModule`,type:`module`},{name:`FormsModule`,type:`module`},{name:`ColorSliderComponent`,type:`component`},{name:`ColorCanvasComponent`,type:`component`},{name:`OnDestroy`,type:`interface`}]},templateData:`<div class="sv-preview">
+    <app-color-canvas [hValue]="hValue()" [sValue]="sValue()" [vValue]="vValue()" (colorChange)="onColorCanvasChanged($event)" />
 </div>
 
 <div class="slider-container">
-    <app-color-slider [(value)]="hValue"/>
+    <app-color-slider [(value)]="hValue" />
 </div>
 
 <div class="result-wrapper">
-    <div role="presentation"
-        class="color-preview"
-        [style.background]="hexColor()">
-    </div>
+    <div role="presentation" class="color-preview" [style.background]="hexColor()"></div>
 
     <mat-form-field class="density-3 code-input" appearance="outline">
         <mat-label>Hex</mat-label>
-        <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)">
+        <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)" />
     </mat-form-field>
-</div>`},{name:`ColorSliderComponent`,id:`component-ColorSliderComponent-da7dbddd03de2211e32fa77645cf3cdc8207e352caaf37d9974cb293f489f1107cfa37d51c9b0b082332649cd43dd6c9872deadc2e1399cca167bf3d667cd19d`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-slider`,styleUrls:[`./color-slider.component.scss`],styles:[],templateUrl:[`./color-slider.component.html`],templateVariables:[{name:`cursor`,defaultValue:`cursorData()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`value`,coverageIgnore:!1,defaultValue:`0`,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
-`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`value`,coverageIgnore:!1,defaultValue:`0`,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
-`,modifierKind:[125,148],required:!1}],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:62,deprecated:!1,deprecationMessage:``,rawdescription:`
+</div>
+`},{name:`ColorSliderComponent`,id:`component-ColorSliderComponent-016d9799a6b14d62981354a9324ec8948e7b0df04b17f8b70d496f38135fb96bea3a01d3ed4195dd37838fd80531d6cededa9cfb56ec4d4803582b836f6bc9ee`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-color-slider`,styleUrls:[`./color-slider.component.scss`],styles:[],templateUrl:[`./color-slider.component.html`],templateVariables:[{name:`cursor`,defaultValue:`cursorData()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`value`,coverageIgnore:!1,defaultValue:`0`,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`value`,coverageIgnore:!1,defaultValue:`0`,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:53,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
-`,type:`component`,sourceCode:`import {
-    AfterViewInit,
-    Component,
-    computed,
-    DestroyRef,
-    ElementRef,
-    inject,
-    viewChild,
-    model,
-} from '@angular/core';
+`,type:`component`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, ElementRef, inject, viewChild, model } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color from 'color';
 
@@ -6319,13 +6291,12 @@ export class ColorSliderComponent implements AfterViewInit {
         top: -5px;
         pointer-events: none;
     }
-}`,styleUrl:`./color-slider.component.scss`}],stylesData:``,extends:[],implements:[`AfterViewInit`],relationships:{incoming:[{name:`ColorSelectionPanelComponent`,type:`component`}],outgoing:[{name:`AfterViewInit`,type:`interface`}]},templateData:`<canvas #canvas width="250" height="8" class="slider"></canvas>
+}
+`,styleUrl:`./color-slider.component.scss`}],stylesData:``,extends:[],implements:[`AfterViewInit`],relationships:{incoming:[{name:`ColorSelectionPanelComponent`,type:`component`}],outgoing:[{name:`AfterViewInit`,type:`interface`}]},templateData:`<canvas #canvas width="250" height="8" class="slider"></canvas>
 
 @let cursor = cursorData();
-<div class="cursor"
-    [style.left]="cursor.horizontalOffset"
-    [style.background-color]="cursor.color">
-</div>`},{name:`ConfigMenuComponent`,id:`component-ConfigMenuComponent-d8c9d5650523b1b070f02fc14cc5bbcc86dac1cfef88aa12750c066cf7f366eb63d1456f7ac8a2776b347fcdf63257b22fefc3e5d515aa57dc7da076df9cf163`,file:`projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-menu`,styleUrls:[],styles:[],templateUrl:[`./config-menu.component.html`],templateVariables:[{name:`isMosaicSet`,defaultValue:`!!mosaicConfig()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+<div class="cursor" [style.left]="cursor.horizontalOffset" [style.background-color]="cursor.color"></div>
+`},{name:`ConfigMenuComponent`,id:`component-ConfigMenuComponent-dbe4215e3721bacbe034d02acd33b5139bf5646ef9fb022e2190fffb322589d02a2e51939cb8d6e841f8e259b8f383ef768c343ae60eb424f613c5fdcb803a3e`,file:`projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-menu`,styleUrls:[],styles:[],templateUrl:[`./config-menu.component.html`],templateVariables:[{name:`isMosaicSet`,defaultValue:`!!mosaicConfig()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
@@ -6343,13 +6314,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
 
-const DEFAULT_PROJECT_NAME: string = "irrtirer_project";
+const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 
 @Component({
     selector: 'app-config-menu',
     imports: [MatButtonModule, TranslatePipe],
     templateUrl: './config-menu.component.html',
-    host: { class: 'flex flex-col gap-2.5' }
+    host: { class: 'flex flex-col gap-2.5' },
 })
 export class ConfigMenuComponent {
     private readonly store = inject(Store);
@@ -6432,12 +6403,14 @@ export class ConfigMenuComponent {
 
     private selectProjectToLoad(): void {
         const action = (file: File): void => {
-            this.projectImportService.loadProject(file)
+            this.projectImportService
+                .loadProject(file)
                 .then((project) => {
                     this.store.dispatch(MosaicProjectActions.projectCreated({ project }));
                     this.configService.emitImageChange(project.config, true);
-                }).catch(() => {
-                    this.snackBar.open(this.translate.instant('tool.config.menu.loadProjectError'),);
+                })
+                .catch(() => {
+                    this.snackBar.open(this.translate.instant('tool.config.menu.loadProjectError'));
                 });
         };
 
@@ -6446,7 +6419,7 @@ export class ConfigMenuComponent {
 }
 `,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@let isMosaicSet = !!mosaicConfig();
 
-@if(isMosaicSet) {
+@if (isMosaicSet) {
     <button mat-flat-button (click)="navigateToProjectConfiguration()">
         {{ 'tool.config.menu.projectSettings' | translate }}
     </button>
@@ -6466,11 +6439,12 @@ export class ConfigMenuComponent {
     {{ 'tool.config.menu.loadProject' | translate }}
 </button>
 
-@if(isMosaicSet) {
+@if (isMosaicSet) {
     <button mat-flat-button color="warn" (click)="rejectProject()">
         {{ 'tool.config.menu.rejectProject' | translate }}
     </button>
-}`},{name:`ConfigProjectComponent`,id:`component-ConfigProjectComponent-dae044be2c2d92ac87d09b0d0735ff5a2baae0639515bebe6d1d0981b937c202adeda7353ff50302c2227af9dcf3d6fdce362e8dafe85bbcf01a1abf6b6a7e02`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-project`,styleUrls:[],styles:[],templateUrl:[`./config-project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
+}
+`},{name:`ConfigProjectComponent`,id:`component-ConfigProjectComponent-2f878296bb35642ceba006836b84271e2b15c414af8b0efd539f07810ed6d210359f22aa9f7180c293784e71a640bb86c987b961d7bd16cbd895acf8079d85c9`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-project`,styleUrls:[],styles:[],templateUrl:[`./config-project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -6498,7 +6472,7 @@ interface ProjectConfigForm {
     selector: 'app-config-project',
     imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
-    host: { class: 'flex flex-col gap-5' }
+    host: { class: 'flex flex-col gap-5' },
 })
 export class ConfigProjectComponent {
     private readonly snackBar = inject(MatSnackBar);
@@ -6622,26 +6596,26 @@ export class ConfigProjectComponent {
 </div>
 
 <form class="flex flex-col gap-5">
-    <input #imageUploader
-        hidden type="file"
-        (change)="onImageSelected($event)"
-        accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"/>
+    <input #imageUploader hidden type="file" (change)="onImageSelected($event)" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
 
-    <button mat-flat-button 
+    <button
+        mat-flat-button
         [color]="form.mosaicImage().valid() ? '' : 'accent'"
         (click)="imageUploader.click()"
         [hidden]="isReadOnlyMode()"
-        type="button">
-        {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage': 'tool.config.project.chooseImage') | translate }}
+        type="button"
+    >
+        {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage' : 'tool.config.project.chooseImage') | translate }}
     </button>
 
     <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
-        <input matInput type="number" [formField]="form.mosaicWidth">
+        <input matInput type="number" [formField]="form.mosaicWidth" />
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.mosaicWidth()) }}</mat-error>
     </mat-form-field>
-</form>`},{name:`ConfigurationComponent`,id:`component-ConfigurationComponent-3cbd3e974192e02250f7b5be45bc8c75624cc2366927e7a9b6954115f999b78bde4e2f407f13968faa9292e2c9c9b514a6061c19f9d00914f877fd5b9ca08ccc`,file:`projects/irrtirer/src/app/tool/configuration/configuration.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ConfigurationService`,type:`injectable`}],selector:`app-configuration`,styleUrls:[`./configuration.component.scss`],styles:[],templateUrl:[`./configuration.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:59,deprecated:!1,deprecationMessage:``,rawdescription:`
+</form>
+`},{name:`ConfigurationComponent`,id:`component-ConfigurationComponent-5575a6f37228a2b3f1cfdba38ab46b37c7bcbaf92b967d62082a9b6e5628a529428439c128a8d94b13615b54cb94f7a6ecbd4bda0f2d582649414af703d8452c`,file:`projects/irrtirer/src/app/tool/configuration/configuration.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ConfigurationService`,type:`injectable`}],selector:`app-configuration`,styleUrls:[`./configuration.component.scss`],styles:[],templateUrl:[`./configuration.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:59,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`RouterOutlet`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
@@ -6684,13 +6658,13 @@ export class ConfigurationComponent implements ToolView {
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'crop',
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             visibility: signal('on'),
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'configuration_snapshot.png'),
         },
         {
             iconName: 'recenter',
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             visibility: computed(() => (this.imageObject() ? 'on' : 'disabled')),
             onClick: () => {
                 this.focusOnImage(this.imageObject()!);
@@ -6704,12 +6678,10 @@ export class ConfigurationComponent implements ToolView {
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
 
-        this.imageChanged$
-            .pipe(takeUntilDestroyed(this.destroyRef), skip(1))
-            .subscribe((imageChange) => {
-                const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
-                this.drawImage(imageChange.mosaicConfig, shouldFocus);
-            });
+        this.imageChanged$.pipe(takeUntilDestroyed(this.destroyRef), skip(1)).subscribe((imageChange) => {
+            const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
+            this.drawImage(imageChange.mosaicConfig, shouldFocus);
+        });
 
         return { ribbon: this.ribbonActions };
     }
@@ -6745,7 +6717,9 @@ export class ConfigurationComponent implements ToolView {
 
 :host {
     @include tool-panel();
-}`,styleUrl:`./configuration.component.scss`}],stylesData:``,extends:[],implements:[`ToolView`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`RouterOutlet`,type:`module`},{name:`ConfigurationService`,type:`injectable`},{name:`ToolView`,type:`interface`}]},templateData:`<router-outlet (activate)="onRouterChange()" />`},{name:`DialogComponent`,id:`component-DialogComponent-c1b47d286a489d1ce9a450b56a9d8b68333da17927c59a4ca0eab6a9a61e89e289d3e595fa7b81797afe16a01f6dacbf5dbf766f1ca5908635671ca34bc6b82d`,file:`projects/irrtirer/src/app/shared/dialog/dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-dialog`,styleUrls:[`./dialog.component.scss`],styles:[],templateUrl:[`./dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`}],description:``,rawdescription:`
+}
+`,styleUrl:`./configuration.component.scss`}],stylesData:``,extends:[],implements:[`ToolView`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`RouterOutlet`,type:`module`},{name:`ConfigurationService`,type:`injectable`},{name:`ToolView`,type:`interface`}]},templateData:`<router-outlet (activate)="onRouterChange()" />
+`},{name:`DialogComponent`,id:`component-DialogComponent-c1b47d286a489d1ce9a450b56a9d8b68333da17927c59a4ca0eab6a9a61e89e289d3e595fa7b81797afe16a01f6dacbf5dbf766f1ca5908635671ca34bc6b82d`,file:`projects/irrtirer/src/app/shared/dialog/dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-dialog`,styleUrls:[`./dialog.component.scss`],styles:[],templateUrl:[`./dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
@@ -6773,14 +6747,16 @@ export class DialogComponent {
     .mat-mdc-dialog-content {
         padding-bottom: 0;
     }
-}`,styleUrl:`./dialog.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`}]},templateData:`<div class="dialog-content">
-    <h1 mat-dialog-title>{{data.title}}</h1>
-    <div mat-dialog-content>{{data.message}}</div>
+}
+`,styleUrl:`./dialog.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`}]},templateData:`<div class="dialog-content">
+    <h1 mat-dialog-title>{{ data.title }}</h1>
+    <div mat-dialog-content>{{ data.message }}</div>
     <div mat-dialog-actions align="end">
-        <button mat-button mat-dialog-close>{{noLabel}}</button>
-        <button mat-button [mat-dialog-close]="true">{{yesLabel}}</button>
+        <button mat-button mat-dialog-close>{{ noLabel }}</button>
+        <button mat-button [mat-dialog-close]="true">{{ yesLabel }}</button>
     </div>
-</div>`},{name:`ExpandablePanelComponent`,id:`component-ExpandablePanelComponent-76fb95f1e672a0aede94ac19106ceabf3e1168fb7aefbd0e90b5769848b579bac52975f4b9a583d94a5a58f5cccd576dd49bb64fc9918635d17bf236fdfee678`,file:`projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-expandable-panel`,styleUrls:[`expandable-panel.component.scss`],styles:[],templateUrl:[`./expandable-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`isOpen`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+</div>
+`},{name:`ExpandablePanelComponent`,id:`component-ExpandablePanelComponent-76fb95f1e672a0aede94ac19106ceabf3e1168fb7aefbd0e90b5769848b579bac52975f4b9a583d94a5a58f5cccd576dd49bb64fc9918635d17bf236fdfee678`,file:`projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-expandable-panel`,styleUrls:[`expandable-panel.component.scss`],styles:[],templateUrl:[`./expandable-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`isOpen`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, ElementRef, inject, input } from '@angular/core';
 
@@ -6816,7 +6792,9 @@ export class ExpandablePanelComponent {
     &.open {
         height: auto;
     }
-}`,styleUrl:`expandable-panel.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`ExtendedPanelComponent`,type:`component`},{name:`SectorListElemComponent`,type:`component`},{name:`TilesSetListElemComponent`,type:`component`}],outgoing:[]},templateData:`<ng-content />`},{name:`ExtendedPanelComponent`,id:`component-ExtendedPanelComponent-d02ce785719a56aca79e38db5c4c07af79f94be09d08c294870fe8f25b78eaf80e4f8095987dc9bbacb0285b440fd2f59e4bd166ddd5806ea6fe657958dff386`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/extended-panel/extended-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-extended-panel`,styleUrls:[`./extended-panel.component.scss`],styles:[],templateUrl:[`./extended-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`label`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+}
+`,styleUrl:`expandable-panel.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`ExtendedPanelComponent`,type:`component`},{name:`SectorListElemComponent`,type:`component`},{name:`TilesSetListElemComponent`,type:`component`}],outgoing:[]},templateData:`<ng-content />
+`},{name:`ExtendedPanelComponent`,id:`component-ExtendedPanelComponent-d02ce785719a56aca79e38db5c4c07af79f94be09d08c294870fe8f25b78eaf80e4f8095987dc9bbacb0285b440fd2f59e4bd166ddd5806ea6fe657958dff386`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/extended-panel/extended-panel.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-extended-panel`,styleUrls:[`./extended-panel.component.scss`],styles:[],templateUrl:[`./extended-panel.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`label`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `,modifierKind:[125,148],required:!0},{name:`shouldBeOpen`,coverageIgnore:!1,defaultValue:`true`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:15,rawdescription:`
 `,modifierKind:[125,148],required:!1}],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:19,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`ExpandablePanelComponent`,type:`component`}],description:``,rawdescription:`
@@ -6862,18 +6840,18 @@ export class ExtendedPanelComponent implements OnInit {
             --irr-icon-button-size: 32px;
         }
     }
-}`,styleUrl:`./extended-panel.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`SectorPropertyEditorComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`ExpandablePanelComponent`,type:`component`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="label">
-    <span class="label-content">{{label()}}</span>
+}
+`,styleUrl:`./extended-panel.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`SectorPropertyEditorComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`ExpandablePanelComponent`,type:`component`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="label">
+    <span class="label-content">{{ label() }}</span>
     <button class="toggle-button" mat-icon-button (click)="toggle()">
-        <mat-icon class="chevron" [class.closed]="!isOpen()">
-            keyboard_arrow_up
-        </mat-icon>
+        <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
     </button>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    <ng-content/>
-</app-expandable-panel>`},{name:`MosaicGenerationComponent`,id:`component-MosaicGenerationComponent-87cafe11938ec2d84d4c8f7d6c040b1f839ebc98fc5f63a17e977a7709330edd7961f92c6553b8144bd1090a84d128d1847b993de435e95c5b33f357e4f38d7e`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`MosaicGenerationService`,type:`injectable`}],selector:`app-mosaic-generation`,styleUrls:[`./mosaic-generation.component.scss`],styles:[],templateUrl:[`./mosaic-generation.component.html`],templateVariables:[{name:`progress`,defaultValue:`progressState()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:98,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:279,deprecated:!1,deprecationMessage:``,rawdescription:`
+    <ng-content />
+</app-expandable-panel>
+`},{name:`MosaicGenerationComponent`,id:`component-MosaicGenerationComponent-4f698fdda975be4ea5abb1eba787d8abfa842547e73d00351b77a7911ff4d787c08459443f7247c831f7f613eca2a6e7536a0777c4cc3384c44b6daa1f0f8045`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`MosaicGenerationService`,type:`injectable`}],selector:`app-mosaic-generation`,styleUrls:[`./mosaic-generation.component.scss`],styles:[],templateUrl:[`./mosaic-generation.component.html`],templateVariables:[{name:`progress`,defaultValue:`progressState()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:95,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:270,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MosaicHierarchyComponent`,type:`component`},{name:`ProgressInfoComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
@@ -6905,10 +6883,7 @@ import { ToolService } from '../tool.service';
 
 @Component({
     selector: 'app-mosaic-generation',
-    imports: [
-        MosaicHierarchyComponent,
-        ProgressInfoComponent
-    ],
+    imports: [MosaicHierarchyComponent, ProgressInfoComponent],
     providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
@@ -6932,30 +6907,30 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'generating_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();
-            } 
+            },
         },
         {
             iconName: 'graph_3',
-            tooltipKey: "tool.ribbon.toggleMeshVisibility",
+            tooltipKey: 'tool.ribbon.toggleMeshVisibility',
             onClick: () => this.toggleMeshVisibility(),
-            visibility: computed(() =>  this.isMeshVisible() ? 'on' : 'off'),
+            visibility: computed(() => (this.isMeshVisible() ? 'on' : 'off')),
         },
         {
             iconName: 'image',
-            tooltipKey: "tool.ribbon.toggleImageVisibility",
+            tooltipKey: 'tool.ribbon.toggleImageVisibility',
             onClick: () => this.toggleImageVisibility(),
-            visibility: computed(() => this.isImageVisible() ? 'on' : 'off'), 
-        }
+            visibility: computed(() => (this.isImageVisible() ? 'on' : 'off')),
+        },
     ];
 
     private activeCanvas!: IActiveCanvas;
@@ -6982,7 +6957,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
-        
+
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
         this.imageObject.setVisibility(this.isImageVisible());
         this.activeCanvas.addCanvasObject(this.imageObject);
@@ -7016,34 +6991,32 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnGenerationProgress(): void {
-        this.signalRService.sectionGenerated$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((sectionGenerationResult) => {
-                const sectionTileObjects: GeneratedTileModel[] = [];
+        this.signalRService.sectionGenerated$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((sectionGenerationResult) => {
+            const sectionTileObjects: GeneratedTileModel[] = [];
 
-                for (const tileTransform of sectionGenerationResult.tilesTransforms) {
-                    const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId)!;
-                    const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
-                    const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
-                    this.activeCanvas.addCanvasObject(tileObject);
-                    sectionTileObjects.push({ tileObject, tileTransform });
-                }
+            for (const tileTransform of sectionGenerationResult.tilesTransforms) {
+                const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId)!;
+                const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
+                const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
+                this.activeCanvas.addCanvasObject(tileObject);
+                sectionTileObjects.push({ tileObject, tileTransform });
+            }
 
-                const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
-                this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
+            const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
+            this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
 
-                this.progressState.set({
-                    type: 'progress',
-                    sector: sectorInfo.schema.name,
-                    percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
-                });
-
-                this.activeCanvas.redraw();
+            this.progressState.set({
+                type: 'progress',
+                sector: sectorInfo.schema.name,
+                percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
             });
+
+            this.activeCanvas.redraw();
+        });
     }
 
     private subscribeOnSectorsMeshReceived(): void {
-       this.signalRService.sectionsMeshReceived$
+        this.signalRService.sectionsMeshReceived$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
@@ -7063,24 +7036,20 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnMeshGenerationFinished(): void {
-        this.signalRService.generationFinished$
-            .pipe(takeUntilDestroyed(this.destroyRef))    
-            .subscribe(() => {
-                this.progressState.set(null);
-                this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
-            });
+        this.signalRService.generationFinished$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
+            this.progressState.set(null);
+            this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
+        });
     }
 
     private subscribeOnMeshVisibilityChange(): void {
-        this.showMesh$
-            .pipe(takeUntilDestroyed(this.destroyRef))    
-            .subscribe((shouldShowMesh) => {
-                for (const sector of this.service.getSectors()) {
-                    sector.setSectorMeshVisibility(shouldShowMesh);
-                }
+        this.showMesh$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((shouldShowMesh) => {
+            for (const sector of this.service.getSectors()) {
+                sector.setSectorMeshVisibility(shouldShowMesh);
+            }
 
-                this.activeCanvas.redraw();
-            });
+            this.activeCanvas.redraw();
+        });
     }
 
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
@@ -7176,12 +7145,14 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         left: -250px;
         bottom: 30px;
     }
-}`,styleUrl:`./mosaic-generation.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`,`ToolView`],relationships:{incoming:[],outgoing:[{name:`MosaicHierarchyComponent`,type:`component`},{name:`ProgressInfoComponent`,type:`component`},{name:`MosaicGenerationService`,type:`injectable`},{name:`OnInit`,type:`interface`},{name:`ToolView`,type:`interface`}]},templateData:`<app-mosaic-hierarchy/>
+}
+`,styleUrl:`./mosaic-generation.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`,`ToolView`],relationships:{incoming:[],outgoing:[{name:`MosaicHierarchyComponent`,type:`component`},{name:`ProgressInfoComponent`,type:`component`},{name:`MosaicGenerationService`,type:`injectable`},{name:`OnInit`,type:`interface`},{name:`ToolView`,type:`interface`}]},templateData:`<app-mosaic-hierarchy />
 
 @let progress = progressState();
-@if(progress) {
-    <app-progress-info class="info" [infoState]="progress"/>
-}`},{name:`MosaicHierarchyComponent`,id:`component-MosaicHierarchyComponent-e8d4645df1a06b27f1fe85df8b753eabb1829ebb0eee61457b5929b7552c619ddb68112ae296135daa4ec9355ded9ae6218c9aedbf9ee7baa52ee668277bfc36`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-hierarchy/mosaic-hierarchy.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-mosaic-hierarchy`,styleUrls:[],styles:[],templateUrl:[`./mosaic-hierarchy.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`SectorListElemComponent`,type:`component`}],description:``,rawdescription:`
+@if (progress) {
+    <app-progress-info class="info" [infoState]="progress" />
+}
+`},{name:`MosaicHierarchyComponent`,id:`component-MosaicHierarchyComponent-e8d4645df1a06b27f1fe85df8b753eabb1829ebb0eee61457b5929b7552c619ddb68112ae296135daa4ec9355ded9ae6218c9aedbf9ee7baa52ee668277bfc36`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-hierarchy/mosaic-hierarchy.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-mosaic-hierarchy`,styleUrls:[],styles:[],templateUrl:[`./mosaic-hierarchy.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`SectorListElemComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject } from '@angular/core';
 import { MosaicGenerationService } from '../mosaic-generation.service';
 import { SectorListElemComponent } from './sector-list-elem/sector-list-elem.component';
@@ -7197,8 +7168,9 @@ export class MosaicHierarchyComponent {
     protected readonly service = inject(MosaicGenerationService);
 }
 `,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicGenerationComponent`,type:`component`}],outgoing:[{name:`AsyncPipe`,type:`pipe`},{name:`SectorListElemComponent`,type:`component`}]},templateData:`@for (sector of this.service.sectors$ | async; track $index) {
-    <app-sector-list-elem [sector]='sector' />
-}`},{name:`ProgressInfoComponent`,id:`component-ProgressInfoComponent-e2589c4b0884db838b19dcf3c98d39d5ea2a1bcd27666da105a26ab91f1e941515f727c8e7f6d3d8cb9eb925495c46146290d057b2f47b2588a5b96a9798c94b`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-progress-info`,styleUrls:[`./progress-info.component.scss`],styles:[],templateUrl:[`./progress-info.component.html`],templateVariables:[{name:`info`,defaultValue:`infoState()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`infoState`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`InfoState`,indexKey:``,optional:!1,description:``,line:10,rawdescription:`
+    <app-sector-list-elem [sector]="sector" />
+}
+`},{name:`ProgressInfoComponent`,id:`component-ProgressInfoComponent-e2589c4b0884db838b19dcf3c98d39d5ea2a1bcd27666da105a26ab91f1e941515f727c8e7f6d3d8cb9eb925495c46146290d057b2f47b2588a5b96a9798c94b`,file:`projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-progress-info`,styleUrls:[`./progress-info.component.scss`],styles:[],templateUrl:[`./progress-info.component.html`],templateVariables:[{name:`info`,defaultValue:`infoState()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`infoState`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`InfoState`,indexKey:``,optional:!1,description:``,line:10,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, input } from '@angular/core';
 import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.interface';
@@ -7232,18 +7204,20 @@ export class ProgressInfoComponent {
     background: var(--color-contrast-highest);
     opacity: 0.85;
     color: var(--color-contrast-lightest);
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+    box-shadow:
+        0px 3px 5px -1px rgba(0, 0, 0, 0.2),
         0px 6px 10px 0px rgba(0, 0, 0, 0.14),
         0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 `,styleUrl:`./progress-info.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicGenerationComponent`,type:`component`}],outgoing:[]},templateData:`@let info = infoState();
 
 @if (isProgressInfo(info)) {
-    <span class="loading-dots">{{info.sector}}</span>
-    <span class="ml-auto">{{info.percent}}%</span>
-} @else if(isInitInfo(info)){
-    <span class="loading-dots">{{info.message}}</span>
-}`},{name:`ProjectComponent`,id:`component-ProjectComponent-d40a1dbc8a274ce0e5f8c4d3edbe19bd5ab58350c4c04f3d0347e857924c526695b78d03512a59b6386c51018f74b51ff4d8ee664bb6172b1964f98685f8f639`,file:`projects/irrtirer/src/app/project/project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-project`,styleUrls:[],styles:[],templateUrl:[`./project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+    <span class="loading-dots">{{ info.sector }}</span>
+    <span class="ml-auto">{{ info.percent }}%</span>
+} @else if (isInitInfo(info)) {
+    <span class="loading-dots">{{ info.message }}</span>
+}
+`},{name:`ProjectComponent`,id:`component-ProjectComponent-d40a1dbc8a274ce0e5f8c4d3edbe19bd5ab58350c4c04f3d0347e857924c526695b78d03512a59b6386c51018f74b51ff4d8ee664bb6172b1964f98685f8f639`,file:`projects/irrtirer/src/app/project/project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-project`,styleUrls:[],styles:[],templateUrl:[`./project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
 
@@ -7254,7 +7228,8 @@ import { TranslatePipe } from '@ngx-translate/core';
     host: { class: 'flex h-full items-center justify-center bg-surface' },
 })
 export class ProjectComponent {}
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="heading-hero">{{ 'aboutProject.content' | translate }}</div>`},{name:`ProjectNameDialogComponent`,id:`component-ProjectNameDialogComponent-33b383b2ea4d1eee36036c78dea7194ffa7fc4cfd8643903dd7943946d443adb88f8b78be99d225ba3104e07f5fac39ee0f171e0d64552d6b9f01092552b135d`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-project-name-dialog`,styleUrls:[],styles:[],templateUrl:[`./project-name-dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="heading-hero">{{ 'aboutProject.content' | translate }}</div>
+`},{name:`ProjectNameDialogComponent`,id:`component-ProjectNameDialogComponent-9dcf11eea367ebec78f92e6fc3ac332474ee6edf0543531b5fc8e790212510ddc41b6dfb994041a89e0bfd0f1b87e13d18ee55d7af981d838a88c2d77e88003f`,file:`projects/irrtirer/src/app/tool/configuration/project-name-dialog/project-name-dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-project-name-dialog`,styleUrls:[],styles:[],templateUrl:[`./project-name-dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
@@ -7280,7 +7255,7 @@ export class ProjectNameDialogComponent {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);
 
     private readonly value = signal<FileNameFormData>({
-        name: this.data.defaultName  
+        name: this.data.defaultName,
     });
 
     protected readonly form = form(this.value, (schemaPath) => {
@@ -7292,7 +7267,7 @@ export class ProjectNameDialogComponent {
 
 <div class="mx-6 my-1.5 flex w-[300px]">
     <mat-form-field class="density-3 w-full" subscriptSizing="dynamic">
-        <input matInput [formField]="form.name">
+        <input matInput [formField]="form.name" />
         <mat-error>{{ 'tool.config.menu.enterValidName' | translate }}</mat-error>
     </mat-form-field>
 </div>
@@ -7303,7 +7278,8 @@ export class ProjectNameDialogComponent {
     <button mat-button [mat-dialog-close]="form.name().value()" [disabled]="!form().valid()">
         {{ 'common.save' | translate }}
     </button>
-</div>`},{name:`RandomTilesComponent`,id:`component-RandomTilesComponent-d6e32fc60af08bc2302332b6c3354e25b41bc13460a890c4299225a341f6b8ada52c071e0e67d461982e3f313a65808d55a27b38734647ba500270df55658a4b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-random-tiles`,styleUrls:[`./random-tiles.component.scss`],styles:[],templateUrl:[`./random-tiles.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:120,deprecated:!1,deprecationMessage:``,rawdescription:`
+</div>
+`},{name:`RandomTilesComponent`,id:`component-RandomTilesComponent-680fb3514963d338d737771c8d3702ca40fade55f5b78c86623c64984301ecaefe11139daff5e51be1d1b2f4fa63ccd3f56e4bbef5fdbb3d6fa7b5951c05d54b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-random-tiles`,styleUrls:[`./random-tiles.component.scss`],styles:[],templateUrl:[`./random-tiles.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:119,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -7395,8 +7371,7 @@ export class RandomTilesComponent implements OnInit {
         });
         validate(schemaPath.name, ({ value }) => {
             if (this.editedTilesSet) {
-                const nameAlreadyUsed = this.existingSeriesNames()
-                    .some((name) => name === value() && name !== this.editedTilesSet!.name);
+                const nameAlreadyUsed = this.existingSeriesNames().some((name) => name === value() && name !== this.editedTilesSet!.name);
 
                 if (nameAlreadyUsed) {
                     return { kind: 'cannotNowOverrideOtherTilesSet' };
@@ -7482,16 +7457,18 @@ export class RandomTilesComponent implements OnInit {
         this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), {
             duration: 3000,
         });
-        this.store.dispatch(MosaicProjectActions.tilesSetCommitted({
-            tilesSet: await this.buildTileSet(originalId) 
-        }));
-        
+        this.store.dispatch(
+            MosaicProjectActions.tilesSetCommitted({
+                tilesSet: await this.buildTileSet(originalId),
+            }),
+        );
+
         this.navigateToMenu();
     }
 
     private async buildTileSet(originalId: string | null): Promise<GeneratedTilesSet> {
         const { name, minRadius, maxRadius, count } = this.formData();
-            
+
         const min = Number(minRadius);
         const max = Number(maxRadius);
         const tileGenerator = new TileGenerator(await this.getImagePixelArray());
@@ -7533,7 +7510,7 @@ export class RandomTilesComponent implements OnInit {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        
+
         button {
             flex: 1 1 0;
         }
@@ -7545,7 +7522,8 @@ export class RandomTilesComponent implements OnInit {
         margin-top: 20px;
         gap: 18px;
     }
-}`,styleUrl:`./random-tiles.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
+}
+`,styleUrl:`./random-tiles.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
     <button mat-flat-button (click)="navigateToMenu()">
         {{ 'common.return' | translate }}
     </button>
@@ -7557,11 +7535,11 @@ export class RandomTilesComponent implements OnInit {
 <form class="form">
     <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.seriesName' | translate }}</mat-label>
-        <input matInput type="text" [formField]="form.name" [matAutocomplete]="auto">
+        <input matInput type="text" [formField]="form.name" [matAutocomplete]="auto" />
         <mat-autocomplete #auto="matAutocomplete">
             @for (option of existingSeriesNames(); track option) {
                 <mat-option [value]="option" [disabled]="immutableSeriesNames().includes(option)">
-                    {{option}}
+                    {{ option }}
                 </mat-option>
             }
         </mat-autocomplete>
@@ -7570,25 +7548,26 @@ export class RandomTilesComponent implements OnInit {
 
     <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.minRadius' | translate }}</mat-label>
-        <input matInput type="number" [formField]="form.minRadius">
+        <input matInput type="number" [formField]="form.minRadius" />
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.minRadius()) }}</mat-error>
     </mat-form-field>
 
     <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.maxRadius' | translate }}</mat-label>
-        <input matInput type="number" [formField]="form.maxRadius">
+        <input matInput type="number" [formField]="form.maxRadius" />
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.maxRadius()) }}</mat-error>
     </mat-form-field>
 
     <mat-form-field subscriptSizing="dynamic" class="density-3">
         <mat-label>{{ 'tool.tiles.random.count' | translate }}</mat-label>
-        <input matInput type="number" [formField]="form.count">
+        <input matInput type="number" [formField]="form.count" />
         <mat-error>{{ getFieldErrorLabel(form.count()) }}</mat-error>
     </mat-form-field>
-</form>`},{name:`RibbonComponent`,id:`component-RibbonComponent-ebc381c65b5b761274b2b646d5eb539bd1179f8e16f155cabea4f814c95e50fa789191b61fadecd7b42a6d257bb006e40506039d673623efdc31dbca5478be7e`,file:`projects/irrtirer/src/app/tool/ribbon/ribbon.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-ribbon`,styleUrls:[`./ribbon.component.scss`],styles:[],templateUrl:[`./ribbon.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`actions`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`RibbonAction[]`,indexKey:``,optional:!1,description:``,line:20,rawdescription:`
-`,modifierKind:[125,148],required:!0},{name:`viewportSize`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Size`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
+</form>
+`},{name:`RibbonComponent`,id:`component-RibbonComponent-ebc381c65b5b761274b2b646d5eb539bd1179f8e16f155cabea4f814c95e50fa789191b61fadecd7b42a6d257bb006e40506039d673623efdc31dbca5478be7e`,file:`projects/irrtirer/src/app/tool/ribbon/ribbon.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-ribbon`,styleUrls:[`./ribbon.component.scss`],styles:[],templateUrl:[`./ribbon.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`actions`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`RibbonAction[]`,indexKey:``,optional:!1,description:``,line:19,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`viewportSize`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Size`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`SizeDisplayPipe`,type:`pipe`},{name:`MatTooltip`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, input } from '@angular/core';
 import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
@@ -7647,19 +7626,24 @@ export class RibbonComponent {
             color: var(--color-contrast-highest);
         }
     }
-}`,styleUrl:`./ribbon.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`ToolComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`SizeDisplayPipe`,type:`pipe`},{name:`MatTooltip`,type:`module`}]},templateData:`@for(action of actions(); track action.iconName) {
-    <button mat-icon-button class="action"
+}
+`,styleUrl:`./ribbon.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`ToolComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`SizeDisplayPipe`,type:`pipe`},{name:`MatTooltip`,type:`module`}]},templateData:`@for (action of actions(); track action.iconName) {
+    <button
+        mat-icon-button
+        class="action"
         [hidden]="action.visibility() === 'hidden'"
         [disabled]="action.visibility() === 'disabled'"
         [class.active]="action.visibility() === 'on'"
         (click)="onClick(action)"
         [matTooltip]="translate.instant(action.tooltipKey)"
-        matTooltipPosition="below">
-        <mat-icon class="material-symbols-outlined">{{action.iconName}}</mat-icon>
+        matTooltipPosition="below"
+    >
+        <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
     </button>
 }
 
-<span class="size-display">{{ viewportSize() | sizeDisplay }}</span>`},{name:`ScrollableListComponent`,id:`component-ScrollableListComponent-37779795719c92269c4b8bf324f6582c040e061ac9826616c90b3a8915dc7ce11c0d986f24f07dcad8a1985df1d16317379054c5b0e2b5be135a80d50b52e1a6`,file:`projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-scrollable-list`,styleUrls:[`./scrollable-list.component.scss`],styles:[],templateUrl:[`./scrollable-list.component.html`],templateVariables:[{name:`previousPages`,defaultValue:`previousPageNumbers()`},{name:`nextPages`,defaultValue:`nextPageNumbers()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`items`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`T[]`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
+<span class="size-display">{{ viewportSize() | sizeDisplay }}</span>
+`},{name:`ScrollableListComponent`,id:`component-ScrollableListComponent-37779795719c92269c4b8bf324f6582c040e061ac9826616c90b3a8915dc7ce11c0d986f24f07dcad8a1985df1d16317379054c5b0e2b5be135a80d50b52e1a6`,file:`projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-scrollable-list`,styleUrls:[`./scrollable-list.component.scss`],styles:[],templateUrl:[`./scrollable-list.component.html`],templateVariables:[{name:`previousPages`,defaultValue:`previousPageNumbers()`},{name:`nextPages`,defaultValue:`nextPageNumbers()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`items`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`T[]`,indexKey:``,optional:!1,description:``,line:17,rawdescription:`
 `,modifierKind:[125,148],required:!0},{name:`pageSize`,coverageIgnore:!1,defaultValue:`50`,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:15,rawdescription:`
 `,modifierKind:[125,148],required:!1}],outputsClass:[],propertiesClass:[{name:`template`,coverageIgnore:!1,defaultValue:`contentChild.required<TemplateRef<unknown>>('element')`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
 `,modifierKind:[125,148]}],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`NgTemplateOutlet`},{name:`MatButton`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
@@ -7727,23 +7711,23 @@ export class ScrollableListComponent<T> {
         --mat-button-filled-container-shape: 4px;
     }
 }
-
-`,styleUrl:`./scrollable-list.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`SectorListElemComponent`,type:`component`},{name:`TilesSetListElemComponent`,type:`component`}],outgoing:[{name:`NgTemplateOutlet`,type:`module`},{name:`MatButton`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@if(hasPreviousPage()) {
+`,styleUrl:`./scrollable-list.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`SectorListElemComponent`,type:`component`},{name:`TilesSetListElemComponent`,type:`component`}],outgoing:[{name:`NgTemplateOutlet`,type:`module`},{name:`MatButton`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@if (hasPreviousPage()) {
     @let previousPages = previousPageNumbers();
     <button mat-flat-button class="page-button previous" (click)="goToPreviousPage()">
         {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
     </button>
 }
-@for(item of itemsToShow(); track $index) {
-    <ng-container [ngTemplateOutlet]="template()" [ngTemplateOutletContext]="{ $implicit: item }"/>
+@for (item of itemsToShow(); track $index) {
+    <ng-container [ngTemplateOutlet]="template()" [ngTemplateOutletContext]="{ $implicit: item }" />
 }
-@if(hasNextPage()) {
+@if (hasNextPage()) {
     @let nextPages = nextPageNumbers();
     <button mat-flat-button class="page-button next" (click)="goToNextPage()">
         {{ 'common.nextElements' | translate }} {{ nextPages.from }}-{{ nextPages.to }}
     </button>
-}`},{name:`SectorContourEditionComponent`,id:`component-SectorContourEditionComponent-2634d91439e5f5a6a3200b327517b2c2cf300af5d0c2c4a993bc37fe944fca2a912df90a2c7f716165fede2039a503f3b7be1427f2a5f3286d468049db0bc707`,file:`projects/irrtirer/src/app/tool/sectors/sector-contour-edition/sector-contour-edition.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-contour-edition`,styleUrls:[`./sector-contour-edition.component.scss`],styles:[],templateUrl:[`./sector-contour-edition.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:72,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]},{name:`removeVertex`,coverageIgnore:!1,args:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:105,deprecated:!1,deprecationMessage:``,rawdescription:`
+}
+`},{name:`SectorContourEditionComponent`,id:`component-SectorContourEditionComponent-4e57504caafd899df2012c1e4d767f3d539d6f9d52b94563405281be285ca8c4dba2fb8f8667934403aa653760c5a55e6cde4adfeb57d9688df8200702b341d6`,file:`projects/irrtirer/src/app/tool/sectors/sector-contour-edition/sector-contour-edition.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-contour-edition`,styleUrls:[`./sector-contour-edition.component.scss`],styles:[],templateUrl:[`./sector-contour-edition.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:82,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`removeVertex`,coverageIgnore:!1,args:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:115,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
@@ -7769,7 +7753,17 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslatePipe, FormField],
+    imports: [
+        MatButtonModule,
+        CdkDropList,
+        CdkDrag,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        ColorPickerComponent,
+        TranslatePipe,
+        FormField,
+    ],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
 })
@@ -7932,7 +7926,7 @@ export class SectorContourEditionComponent implements OnInit {
         display: flex;
         flex-direction: row;
         gap: 10px;
-        
+
         button {
             flex: 1 1 0;
         }
@@ -7946,7 +7940,7 @@ export class SectorContourEditionComponent implements OnInit {
 
         mat-form-field {
             width: 100%;
-        }    
+        }
     }
 
     .no-vertices {
@@ -7998,31 +7992,30 @@ export class SectorContourEditionComponent implements OnInit {
 <div class="info">
     <mat-form-field class="density-3" subscriptSizing="dynamic">
         <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
-        <input matInput [formField]="form.name">
+        <input matInput [formField]="form.name" />
         <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
     </mat-form-field>
 
-    <app-color-picker
-        [label]="translate.instant('tool.sectors.sectorContour.sectorColor')"
-        [formField]="form.color" />
+    <app-color-picker [label]="translate.instant('tool.sectors.sectorContour.sectorColor')" [formField]="form.color" />
 
-    @if(form.vertices().value().length) {
+    @if (form.vertices().value().length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
             @for (vertex of form.vertices().value(); track vertex) {
                 <div cdkDrag class="vertex-box" (mousedown)="onBoxSelected(vertex)">
-                    <div class="list-item-box" [class.selected]="vertex === selectedVertex()" >
+                    <div class="list-item-box" [class.selected]="vertex === selectedVertex()">
                         <span class="block-label">{{ getVertexLabel(vertex) }}</span>
-                        <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
+                        <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation()">
                             <mat-icon matListIcon>close</mat-icon>
                         </button>
                     </div>
                 </div>
             }
         </div>
-    } @else { 
+    } @else {
         <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
     }
-</div>`},{name:`SectorListElemComponent`,id:`component-SectorListElemComponent-70296a10002fc76169e7750a0f38382ad818fe4a3c573f5318f60a5ee55b74dac443a859505aaa931e65fe913c92000b91e43a661dab6458a58b91c1ee1bf81f`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-hierarchy/sector-list-elem/sector-list-elem.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-list-elem`,styleUrls:[`./sector-list-elem.component.scss`],styles:[],templateUrl:[`./sector-list-elem.component.html`],templateVariables:[{name:`items`,defaultValue:`items$() | async`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`GeneratedSectorModel`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
+</div>
+`},{name:`SectorListElemComponent`,id:`component-SectorListElemComponent-86c93588f38278d52327a6e1a3a8acf3f8f29ca5f4205d6e90651077b3e37fadd27e9b885a6fd74c38d061be35fe05a5fb8d17a4e917701f7e9a97661f77a218`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-hierarchy/sector-list-elem/sector-list-elem.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-list-elem`,styleUrls:[`./sector-list-elem.component.scss`],styles:[],templateUrl:[`./sector-list-elem.component.html`],templateVariables:[{name:`items`,defaultValue:`items$() | async`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`GeneratedSectorModel`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`AsyncPipe`,type:`pipe`},{name:`ExpandablePanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableListComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, inject, input, signal } from '@angular/core';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
@@ -8036,14 +8029,7 @@ import { ScrollableListComponent } from '../../../../shared/scrollable-list/scro
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [
-        MatIconModule,
-        MatButtonModule,
-        AsyncPipe,
-        ExpandablePanelComponent,
-        TranslatePipe,
-        ScrollableListComponent
-    ],
+    imports: [MatIconModule, MatButtonModule, AsyncPipe, ExpandablePanelComponent, TranslatePipe, ScrollableListComponent],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
 })
@@ -8052,7 +8038,7 @@ export class SectorListElemComponent {
 
     protected readonly isOpen = signal<boolean>(false);
 
-    protected readonly items$ = computed<Observable<GeneratedTileModel[]>>(() => this.sector().tiles$ );
+    protected readonly items$ = computed<Observable<GeneratedTileModel[]>>(() => this.sector().tiles$);
 
     protected readonly areTilesVisible = signal<boolean>(true);
 
@@ -8083,7 +8069,7 @@ export class SectorListElemComponent {
                 --irr-icon-button-size: 32px;
                 margin: -6px;
             }
-    
+
             .toggle-action {
                 color: var(--color-contrast-medium);
             }
@@ -8105,29 +8091,28 @@ export class SectorListElemComponent {
     .panel > *:first-child {
         margin-top: 6px;
     }
-}`,styleUrl:`./sector-list-elem.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicHierarchyComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`AsyncPipe`,type:`pipe`},{name:`ExpandablePanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableListComponent`,type:`component`}]},templateData:`<div class="parent-elem list-item-box">
-    <span class="block-label">{{sector().schema.name}}</span>
+}
+`,styleUrl:`./sector-list-elem.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicHierarchyComponent`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`AsyncPipe`,type:`pipe`},{name:`ExpandablePanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableListComponent`,type:`component`}]},templateData:`<div class="parent-elem list-item-box">
+    <span class="block-label">{{ sector().schema.name }}</span>
     <div class="sector-actions">
         <button class="sector-action" mat-icon-button (click)="toggleTilesVisibility()">
             <mat-icon class="visibility-icon material-symbols-outlined">
-                {{areTilesVisible() ? 'visibility' : 'visibility_off'}}
+                {{ areTilesVisible() ? 'visibility' : 'visibility_off' }}
             </mat-icon>
         </button>
         <button class="sector-action toggle-action" mat-icon-button (click)="toggleTilesList()">
-            <mat-icon class="chevron" [class.closed]="!isOpen()">
-                keyboard_arrow_up
-            </mat-icon>
+            <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
         </button>
     </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
     @let items = items$() | async;
-    @if(items && items.length) {
+    @if (items && items.length) {
         <app-scrollable-list [items]="items">
             <ng-template #element let-tile>
                 <div class="list-item-box">
                     <span class="block-label-sm">
-                        {{tile.tileTransform.tileId}}
+                        {{ tile.tileTransform.tileId }}
                     </span>
                 </div>
             </ng-template>
@@ -8135,7 +8120,8 @@ export class SectorListElemComponent {
     } @else {
         <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }
-</app-expandable-panel>`},{name:`SectorPropertyEditorComponent`,id:`component-SectorPropertyEditorComponent-3ee11b625da5db565af3bb95f2f413e4881ddf49fa8afe28aa58e20eaea422591d8dd47af9c4fa7cd19569324f84ae20975a49633d26df19cad8fd8561bfe0ca`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/sector-property-editor.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-sector-property-editor`,styleUrls:[`./sector-property-editor.component.scss`],styles:[],templateUrl:[`./sector-property-editor.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:113,deprecated:!1,deprecationMessage:``,rawdescription:`
+</app-expandable-panel>
+`},{name:`SectorPropertyEditorComponent`,id:`component-SectorPropertyEditorComponent-1d43fad8471639f673afed2edebbdad0f8b1380bd669b6b96f5b56476377bd41826d78d0570e51536da72725d687e4fdd4f213b2d616032b0a57ca8d6b88d86f`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/sector-property-editor.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-sector-property-editor`,styleUrls:[`./sector-property-editor.component.scss`],styles:[],templateUrl:[`./sector-property-editor.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:113,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
@@ -8230,7 +8216,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         min(schemaPath.sectionMinAngle, 10, { error: { kind: 'sectionMinAngleOutOfRange' } });
         max(schemaPath.sectionMinAngle, 90, { error: { kind: 'sectionMinAngleOutOfRange' } });
 
-        min(schemaPath.minTileRadius, 0.00, { error: { kind: 'valueCannotBeNegative' } });
+        min(schemaPath.minTileRadius, 0.0, { error: { kind: 'valueCannotBeNegative' } });
         min(schemaPath.maxTileRadius, 0.01, { error: { kind: 'valueToSmall' } });
         min(schemaPath.tilesMargin, 0.01, { error: { kind: 'valueToSmall' } });
         required(schemaPath.tilesMargin);
@@ -8349,7 +8335,8 @@ export class SectorPropertyEditorComponent implements OnInit {
             margin-top: 12px;
         }
     }
-}`,styleUrl:`./sector-property-editor.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
+}
+`,styleUrl:`./sector-property-editor.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
     <button mat-flat-button (click)="cancel()">
         {{ 'common.cancel' | translate }}
     </button>
@@ -8361,20 +8348,14 @@ export class SectorPropertyEditorComponent implements OnInit {
 <div class="sector-property-form">
     <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.sectorsSize')">
         <div class="form-group">
-            <mat-form-field 
-                class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.maxAreaHint')"
-                matTooltipPosition="left">
+            <mat-form-field class="density-3" [matTooltip]="translate.instant('tool.sectors.sectorProperty.maxAreaHint')" matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.maxArea' | translate }}</mat-label>
-                <input matInput [formField]="form.sectionMaxArea" type="number">
+                <input matInput [formField]="form.sectionMaxArea" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.sectionMaxArea()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field
-                class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.minAngleHint')"
-                matTooltipPosition="left">
+            <mat-form-field class="density-3" [matTooltip]="translate.instant('tool.sectors.sectorProperty.minAngleHint')" matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minAngle' | translate }}</mat-label>
-                <input matInput [formField]="form.sectionMinAngle" type="number">
+                <input matInput [formField]="form.sectionMinAngle" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.sectionMinAngle()) }}</mat-error>
             </mat-form-field>
         </div>
@@ -8382,28 +8363,19 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.tilesLimitations')">
         <div class="form-group">
-            <mat-form-field 
-                class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.minRadiusHint')"
-                matTooltipPosition="left">
+            <mat-form-field class="density-3" [matTooltip]="translate.instant('tool.sectors.sectorProperty.minRadiusHint')" matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minRadius' | translate }}</mat-label>
-                <input matInput [formField]="form.minTileRadius" type="number">
+                <input matInput [formField]="form.minTileRadius" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.minTileRadius()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
-                class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.maxRadiusHint')"
-                matTooltipPosition="left">
+            <mat-form-field class="density-3" [matTooltip]="translate.instant('tool.sectors.sectorProperty.maxRadiusHint')" matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.maxRadius' | translate }}</mat-label>
-                <input matInput [formField]="form.maxTileRadius" type="number">
+                <input matInput [formField]="form.maxTileRadius" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.maxTileRadius()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
-                class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.minMarginHint')"
-                matTooltipPosition="left">
+            <mat-form-field class="density-3" [matTooltip]="translate.instant('tool.sectors.sectorProperty.minMarginHint')" matTooltipPosition="left">
                 <mat-label>{{ 'tool.sectors.sectorProperty.minMargin' | translate }}</mat-label>
-                <input matInput [formField]="form.tilesMargin" type="number">
+                <input matInput [formField]="form.tilesMargin" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.tilesMargin()) }}</mat-error>
             </mat-form-field>
         </div>
@@ -8411,52 +8383,58 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.populationParams')" [shouldBeOpen]="false">
         <div class="form-group">
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.initialPopulationSizeHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.initialPopulationSize' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.initialPopulationSize" type="number">
+                <input matInput [formField]="form.populationParams.initialPopulationSize" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.initialPopulationSize()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.populationSizeHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.populationSize' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.populationSize" type="number">
+                <input matInput [formField]="form.populationParams.populationSize" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.populationSize()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.iterationsCountHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.iterationsCount' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.iterationsCount" type="number">
+                <input matInput [formField]="form.populationParams.iterationsCount" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.iterationsCount()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.countOfTrianglePositionDrawsHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfTrianglePositionDraws' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.countOfTrianglePositionDraws" type="number">
+                <input matInput [formField]="form.populationParams.countOfTrianglePositionDraws" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfTrianglePositionDraws()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
-                [matTooltip]="translate.instant('tool.sectors.sectorProperty.countOfTriesToInsertTileHint')" 
-                matTooltipPosition="left">
+                [matTooltip]="translate.instant('tool.sectors.sectorProperty.countOfTriesToInsertTileHint')"
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfTriesToInsertTile' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.countOfTriesToInsertTile" type="number">
+                <input matInput [formField]="form.populationParams.countOfTriesToInsertTile" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfTriesToInsertTile()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.countOfColorMatchingAttemptsHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.countOfColorMatchingAttempts' | translate }}</mat-label>
-                <input matInput [formField]="form.populationParams.countOfColorMatchingAttempts" type="number">
+                <input matInput [formField]="form.populationParams.countOfColorMatchingAttempts" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfColorMatchingAttempts()) }}</mat-error>
             </mat-form-field>
         </div>
@@ -8464,51 +8442,57 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.evaluationParams')" [shouldBeOpen]="false">
         <div class="form-group">
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.singleSectionPopulationHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.singleSectionPopulation' | translate }}</mat-label>
-                <input matInput [formField]="form.evaluationParams.singleSectionPopulation" type="number">
+                <input matInput [formField]="form.evaluationParams.singleSectionPopulation" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.evaluationParams.singleSectionPopulation()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.overlappingAreaOutsideSector' | translate }}</mat-label>
-                <input matInput [formField]="form.evaluationParams.overlappingAreaOutsideSector" type="number">
+                <input matInput [formField]="form.evaluationParams.overlappingAreaOutsideSector" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.evaluationParams.overlappingAreaOutsideSector()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.additionalPopulationOfNeighboringSectors' | translate }}</mat-label>
-                <input matInput [formField]="form.evaluationParams.additionalPopulationOfNeighboringSectors" type="number">
+                <input matInput [formField]="form.evaluationParams.additionalPopulationOfNeighboringSectors" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.evaluationParams.additionalPopulationOfNeighboringSectors()) }}</mat-error>
             </mat-form-field>
-            <mat-form-field 
+            <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingNotPopulatedSectionsHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.overlappingNotPopulatedSections' | translate }}</mat-label>
-                <input matInput [formField]="form.evaluationParams.overlappingNotPopulatedSections" type="number">
+                <input matInput [formField]="form.evaluationParams.overlappingNotPopulatedSections" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.evaluationParams.overlappingNotPopulatedSections()) }}</mat-error>
             </mat-form-field>
             <mat-form-field
                 class="density-3"
                 [matTooltip]="translate.instant('tool.sectors.sectorProperty.tileColorMismatchHint')"
-                matTooltipPosition="left">
+                matTooltipPosition="left"
+            >
                 <mat-label>{{ 'tool.sectors.sectorProperty.tileColorMismatch' | translate }}</mat-label>
-                <input matInput [formField]="form.evaluationParams.tileColorMismatch" type="number">
+                <input matInput [formField]="form.evaluationParams.tileColorMismatch" type="number" />
                 <mat-error>{{ getFieldErrorLabel(form.evaluationParams.tileColorMismatch()) }}</mat-error>
             </mat-form-field>
         </div>
     </app-extended-panel>
-</div>`},{name:`SectorsComponent`,id:`component-SectorsComponent-772e122cfcafc520f31bd2f65e039d569bed4f3b9d4417ff6b56fe345e2e0ee564e6ab261b44c55a641255e370bf5f4d79939391d3968069ca32bdf855463a95`,file:`projects/irrtirer/src/app/tool/sectors/sectors.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors`,styleUrls:[`./sectors.component.scss`],styles:[],templateUrl:[`./sectors.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:70,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]},{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:65,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:165,deprecated:!1,deprecationMessage:``,rawdescription:`
+</div>
+`},{name:`SectorsComponent`,id:`component-SectorsComponent-bb983fcee302dd1e3ddc63c15ca2c091f14a8ea92a243d6ada2959fcbd9dfd36e43854f4365ccba5f2c80399930dba3e02f33f6e6bb62d677c54e097b02f6d83`,file:`projects/irrtirer/src/app/tool/sectors/sectors.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors`,styleUrls:[`./sectors.component.scss`],styles:[],templateUrl:[`./sectors.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:72,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:67,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:155,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`RouterOutlet`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { AfterViewInit, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
@@ -8548,30 +8532,32 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     protected readonly sectorForContourEdition = toSignal<EditedSectorContour | null>(this.service.sectorForContourEdition$, { requireSync: true });
 
-    protected readonly sectorForPropertyEdition = toSignal<EditedSectorWithTriangulationMesh | null> (this.service.sectorForPropertyEdition$, { requireSync: true });
-    
+    protected readonly sectorForPropertyEdition = toSignal<EditedSectorWithTriangulationMesh | null>(this.service.sectorForPropertyEdition$, {
+        requireSync: true,
+    });
+
     private activeCanvas!: IActiveCanvas;
 
     private visualElements: CanvasObject[] = [];
-    
+
     private imageObject!: ImageObject;
 
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'crop',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();
-            } 
-        }
+            },
+        },
     ];
 
     public ngOnInit(): void {
@@ -8590,21 +8576,15 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private subscribeOnEditedSectorChange(): void {
-        this.service.sectorForContourEdition$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((s) => this.onEditedSectorChanged(s));
+        this.service.sectorForContourEdition$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((s) => this.onEditedSectorChanged(s));
     }
 
     private subscribeOnEditedSectorPropertiesChange(): void {
-        this.service.sectorForPropertyEdition$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.redrawSectors());
+        this.service.sectorForPropertyEdition$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.redrawSectors());
     }
 
     private subscribeOnSectorListChange(): void {
-        this.service.sectorListChange$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.redrawSectors());
+        this.service.sectorListChange$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.redrawSectors());
     }
 
     private onEditedSectorChanged(sector: EditedSectorContour | null): void {
@@ -8617,12 +8597,12 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private redrawSectors(): void {
-        this.visualElements.forEach(visualElem => visualElem.removeObject());
+        this.visualElements.forEach((visualElem) => visualElem.removeObject());
         this.visualElements = this.prepareSectorsContours();
 
         for (const object of this.visualElements) {
             this.activeCanvas.addCanvasObject(object);
-        } 
+        }
 
         this.activeCanvas.redraw();
     }
@@ -8634,17 +8614,11 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
         let sectors: SectorSchema[] = this.store.selectSignal(selectSectors)();
         if (editedSectorContour) {
-            sectors = ArrayHelpers.addOrUpdate(
-                [...sectors],
-                editedSectorContour.sector,
-                (x) => x.id === editedSectorContour.sector.id
-            );
+            sectors = ArrayHelpers.addOrUpdate([...sectors], editedSectorContour.sector, (x) => x.id === editedSectorContour.sector.id);
         } else {
-            this.service.sectorListChange$
-                .pipe(first())
-                .subscribe((event) => {
-                    selectedSectorOnList = event?.selectedSector;
-                });
+            this.service.sectorListChange$.pipe(first()).subscribe((event) => {
+                selectedSectorOnList = event?.selectedSector;
+            });
         }
 
         return this.mapSectorsToContours(sectors, editedSectorContour, sectorWithTriangulationMesh, selectedSectorOnList);
@@ -8654,21 +8628,21 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         sectors: SectorSchema[],
         editedSector: EditedSectorContour | null,
         sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh | null,
-        selectedSectorOnList?: SectorSchema
+        selectedSectorOnList?: SectorSchema,
     ): CanvasObject[] {
         return sectors.map((sector, index) => {
             if (sector.id === editedSector?.sector.id) {
                 return new OpenedContourObject(
                     [...editedSector.sector.vertices],
                     editedSector.sector.vertices.indexOf(editedSector.selectedVertex),
-                    editedSector.sector.color
+                    editedSector.sector.color,
                 );
             } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh.sector.id) {
                 const triangles = sectorWithTriangulationMesh.mesh;
                 const contour = sectorWithTriangulationMesh.contour!;
                 return new TriangulatedContourObject(triangles, contour, sectorWithTriangulationMesh.sector.color);
             } else {
-                const baseLineThickness = (sector.id === selectedSectorOnList?.id) ? 10 : 8;
+                const baseLineThickness = sector.id === selectedSectorOnList?.id ? 10 : 8;
                 return new ClosedContourObject([...sector.vertices], sector.color, 10 + index, baseLineThickness);
             }
         });
@@ -8678,10 +8652,10 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         this.activeCanvas = activeCanvas;
 
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
-        queueMicrotask( async () => {
+        queueMicrotask(async () => {
             this.imageObject = await ToolService.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(this.imageObject);
-            
+
             if (shouldFocusOnObject) {
                 this.focusOnImage();
             }
@@ -8700,7 +8674,9 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
 :host {
     @include tool-panel();
-}`,styleUrl:`./sectors.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`,`AfterViewInit`,`ToolView`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`OnInit`,type:`interface`},{name:`AfterViewInit`,type:`interface`},{name:`ToolView`,type:`interface`}]},templateData:`<router-outlet/>`},{name:`SectorsContoursListComponent`,id:`component-SectorsContoursListComponent-f5db32f46193747159dc18f5a05d7c965c5410d7c2cdb26303d7a91b7ad500742f8cf875e1636fcee75396492bdc06bb93ab630607c2ea69dc67b57567c93682`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours-list/sectors-contours-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors-contours-list`,styleUrls:[`./sectors-contours-list.component.scss`],styles:[],templateUrl:[`./sectors-contours-list.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+}
+`,styleUrl:`./sectors.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`,`AfterViewInit`,`ToolView`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`OnInit`,type:`interface`},{name:`AfterViewInit`,type:`interface`},{name:`ToolView`,type:`interface`}]},templateData:`<router-outlet />
+`},{name:`SectorsContoursListComponent`,id:`component-SectorsContoursListComponent-f5db32f46193747159dc18f5a05d7c965c5410d7c2cdb26303d7a91b7ad500742f8cf875e1636fcee75396492bdc06bb93ab630607c2ea69dc67b57567c93682`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours-list/sectors-contours-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors-contours-list`,styleUrls:[`./sectors-contours-list.component.scss`],styles:[],templateUrl:[`./sectors-contours-list.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
@@ -8857,42 +8833,43 @@ export class SectorsContoursListComponent {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 `,styleUrl:`./sectors-contours-list.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="actions">
-  <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
-    {{ 'tool.sectors.contourList.addSector' | translate }}
-  </button>
+    <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
+        {{ 'tool.sectors.contourList.addSector' | translate }}
+    </button>
 </div>
 
-@if(sectors().length) {
-  <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
-    @for (sector of sectors(); track sector) {
-      <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
-        <div class="list-item-box" [class.selected]="sector === selectedSector">
-          <span class="block-label">{{sector.name}}</span>
-          <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
-            <mat-icon matListIcon>more_vert</mat-icon>
-          </button>
+@if (sectors().length) {
+    <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
+        @for (sector of sectors(); track sector) {
+            <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
+                <div class="list-item-box" [class.selected]="sector === selectedSector">
+                    <span class="block-label">{{ sector.name }}</span>
+                    <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
+                        <mat-icon matListIcon>more_vert</mat-icon>
+                    </button>
 
-          <mat-menu #menu="matMenu" classList="paddingless">
-            <button mat-menu-item (click)="navigateToContourPanel(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
-              {{ 'tool.sectors.contourList.editContour' | translate }}
-            </button>
-            <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
-              {{ 'tool.sectors.contourList.editProperties' | translate }}
-            </button>
-            <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
-              {{ 'tool.sectors.contourList.removeSector' | translate }}
-            </button>
-          </mat-menu>
-        </div>
-      </div>
-    }
-  </div>
+                    <mat-menu #menu="matMenu" classList="paddingless">
+                        <button mat-menu-item (click)="navigateToContourPanel(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+                            {{ 'tool.sectors.contourList.editContour' | translate }}
+                        </button>
+                        <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
+                            {{ 'tool.sectors.contourList.editProperties' | translate }}
+                        </button>
+                        <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+                            {{ 'tool.sectors.contourList.removeSector' | translate }}
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+        }
+    </div>
 } @else {
-  <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
-}`},{name:`SnapshotOptionsDialogComponent`,id:`component-SnapshotOptionsDialogComponent-87f81e2b9ef48dda4a473315674e510530203df0eaa3bf35b2187d5ac524bf62fe151ac3e8788399e23b2f093bca63e6f747115873db2e6c900a56d3e39dfbf8`,file:`projects/irrtirer/src/app/tool/snapshot-options-dialog/snapshot-options-dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-snapshot-options-dialog`,styleUrls:[`./snapshot-options-dialog.component.scss`],styles:[],templateUrl:[`./snapshot-options-dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`MatSliderModule`,type:`module`},{name:`MatCheckboxModule`,type:`module`},{name:`FormField`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+    <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
+}
+`},{name:`SnapshotOptionsDialogComponent`,id:`component-SnapshotOptionsDialogComponent-87f81e2b9ef48dda4a473315674e510530203df0eaa3bf35b2187d5ac524bf62fe151ac3e8788399e23b2f093bca63e6f747115873db2e6c900a56d3e39dfbf8`,file:`projects/irrtirer/src/app/tool/snapshot-options-dialog/snapshot-options-dialog.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-snapshot-options-dialog`,styleUrls:[`./snapshot-options-dialog.component.scss`],styles:[],templateUrl:[`./snapshot-options-dialog.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatDialogModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`MatSliderModule`,type:`module`},{name:`MatCheckboxModule`,type:`module`},{name:`FormField`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
 import { MatButtonModule } from '@angular/material/button';
@@ -8942,26 +8919,18 @@ export class SnapshotOptionsDialogComponent {
     <h1 mat-dialog-title>{{ 'tool.snapshotDialog.title' | translate }}</h1>
     <div mat-dialog-content>
         <span>{{ 'tool.snapshotDialog.transparentBackgroundLabel' | translate }}</span>
-        <mat-checkbox 
-            color="accent" 
-            [formField]="form.transparentBackground" />
-        <span>{{ 'tool.snapshotDialog.scaleFactorLabel' | translate }}</span>  
-        <mat-slider
-            color="accent"
-            class="example-margin"
-            [max]="4"
-            [min]="1"
-            [step]="1"
-            [discrete]="true"
-            [showTickMarks]="true">
-            <input matSliderThumb [formField]="form.scaleFactor">
+        <mat-checkbox color="accent" [formField]="form.transparentBackground" />
+        <span>{{ 'tool.snapshotDialog.scaleFactorLabel' | translate }}</span>
+        <mat-slider color="accent" class="example-margin" [max]="4" [min]="1" [step]="1" [discrete]="true" [showTickMarks]="true">
+            <input matSliderThumb [formField]="form.scaleFactor" />
         </mat-slider>
     </div>
     <div mat-dialog-actions align="end">
         <button mat-button mat-dialog-close>{{ 'common.cancel' | translate }}</button>
         <button mat-button [mat-dialog-close]="data()">{{ 'common.save' | translate }}</button>
     </div>
-</div>`},{name:`TileDetailComponent`,id:`component-TileDetailComponent-9bd6e9cdf980394162233b4baca5a012c65e61551fe493e5a26e42a84d24b69a082d237bdb3626ec99099d439cdca99d1d1d96df0c30d0ca151ebb6297dd14da`,file:`projects/irrtirer/src/app/tool/tray/tile-detail/tile-detail.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tile-detail`,styleUrls:[],styles:[],templateUrl:[`./tile-detail.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
+</div>
+`},{name:`TileDetailComponent`,id:`component-TileDetailComponent-4a9e57e6542a4f13cb28b5f2f42e6054a02382281c2d2b1c95c49cabe8a9ec03ae7da03699765a2dc1f8707084d88dcd7bf8d2e6b077f4faa4f8b0937eda1096`,file:`projects/irrtirer/src/app/tool/tray/tile-detail/tile-detail.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tile-detail`,styleUrls:[],styles:[],templateUrl:[`./tile-detail.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`FormsModule`,type:`module`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8983,18 +8952,18 @@ export class TileDetailComponent implements OnInit {
     protected readonly tile = signal<TileModel | null>(null);
 
     private readonly route = inject(ActivatedRoute);
-    
+
     private readonly store = inject(Store);
-    
+
     private readonly router = inject(Router);
-    
+
     protected readonly translate = inject(TranslateService);
 
     public ngOnInit(): void {
         const tileId = this.route.snapshot.paramMap.get('id');
         if (tileId) {
             const tileModel = this.getTileModel(tileId);
-            if(tileModel) {
+            if (tileModel) {
                 this.tile.set(tileModel);
             }
         }
@@ -9019,17 +8988,14 @@ export class TileDetailComponent implements OnInit {
 </div>
 
 <div class="flex flex-1 flex-col gap-2">
-    @if(tile(); as tile) {
+    @if (tile(); as tile) {
         <div class="p-0.5 text-contrast-medium">
             <div class="font-medium">{{ 'tool.tiles.details.tileId' | translate }}:</div>
-            <div class="text-xs truncate">{{tile.id}}</div>
+            <div class="text-xs truncate">{{ tile.id }}</div>
         </div>
 
-        <app-color-picker 
-            [disabled]="true"
-            [ngModel]="tile.color"
-            [label]="translate.instant('tool.tiles.details.tileColor')"/>
-    } @else { 
+        <app-color-picker [disabled]="true" [ngModel]="tile.color" [label]="translate.instant('tool.tiles.details.tileColor')" />
+    } @else {
         <div class="m-auto text-contrast-medium">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
     }
 </div>
@@ -9063,20 +9029,17 @@ export class TileListElemComponent {
 </span>
 <div class="flex -m-1.5">
     <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon matListIcon>
-            more_vert
-        </mat-icon>
+        <mat-icon matListIcon> more_vert </mat-icon>
     </button>
 
     <mat-menu #menu="matMenu" classList="paddingless">
         <button mat-menu-item (click)="navigateToTileDetails()">
-            <mat-icon class="material-symbols-outlined" matListIcon>
-                page_info
-            </mat-icon>
+            <mat-icon class="material-symbols-outlined" matListIcon> page_info </mat-icon>
             {{ 'common.details' | translate }}
         </button>
     </mat-menu>
-</div>`},{name:`TilesSetListElemComponent`,id:`component-TilesSetListElemComponent-f216ca8b6fde72223e22772ca8e7f2b6814266437c03c112dfc8a1abedc02a07a6e68358c06ca22b6318b358743e3e59a9c8458706cd02b888dfb90bd6b1825a`,file:`projects/irrtirer/src/app/tool/tray/tiles-set-list-elem/tiles-set-list-elem.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-tiles-set-list-elem`,styleUrls:[],styles:[],templateUrl:[`./tiles-set-list-elem.component.html`],templateVariables:[{name:`tilesSetValue`,defaultValue:`tilesSet()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`tilesSet`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TilesSet`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
+</div>
+`},{name:`TilesSetListElemComponent`,id:`component-TilesSetListElemComponent-89ccb9991faeec8f807c071ca7d637c07a1ad2f31c27051e299a59ed6500f65609ebe6459fd7ad7a9f1ac128e805d6d02261374cd8d1569e0db4903bf5ac84ae`,file:`projects/irrtirer/src/app/tool/tray/tiles-set-list-elem/tiles-set-list-elem.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-tiles-set-list-elem`,styleUrls:[],styles:[],templateUrl:[`./tiles-set-list-elem.component.html`],templateVariables:[{name:`tilesSetValue`,defaultValue:`tilesSet()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`tilesSet`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TilesSet`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
 `,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`ExpandablePanelComponent`,type:`component`},{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`TileListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableListComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
@@ -9111,7 +9074,7 @@ export class TilesSetListElemComponent {
     private readonly dialog = inject(MatDialog);
 
     private readonly translate = inject(TranslateService);
-    
+
     private readonly destroyRef = inject(DestroyRef);
 
     private readonly router = inject(Router);
@@ -9121,11 +9084,13 @@ export class TilesSetListElemComponent {
     }
 
     protected removeTilesSet(): void {
-        this.showRemoveTilesSetWarning().pipe(takeUntilDestroyed(this.destroyRef)).subscribe((result) => {
-            if (result) {
-                this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet: this.tilesSet() }));
-            }
-        });
+        this.showRemoveTilesSetWarning()
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((result) => {
+                if (result) {
+                    this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet: this.tilesSet() }));
+                }
+            });
     }
 
     private showRemoveTilesSetWarning(): Observable<boolean> {
@@ -9146,41 +9111,34 @@ export class TilesSetListElemComponent {
     <span class="block-label">{{ tilesSetValue.name }}</span>
     <div class="flex -m-1.5">
         <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon matListIcon>
-                more_vert
-            </mat-icon>
+            <mat-icon matListIcon> more_vert </mat-icon>
         </button>
         <button class="button-size-small !text-contrast-medium" mat-icon-button (click)="toggleTilesList()">
-            <mat-icon class="chevron" [class.closed]="!isOpen()">
-                keyboard_arrow_up
-            </mat-icon>
+            <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
         </button>
 
         <mat-menu #menu="matMenu" classList="paddingless">
             @if (tilesSetValue.source === 'generated') {
                 <button mat-menu-item (click)="navigateToRandomSetAgain()">
-                    <mat-icon class="material-symbols-outlined" matListIcon>
-                        shuffle
-                    </mat-icon>
+                    <mat-icon class="material-symbols-outlined" matListIcon> shuffle </mat-icon>
                     {{ 'tool.tiles.menu.generateAgain' | translate }}
                 </button>
             }
             <button mat-menu-item (click)="removeTilesSet()">
-                <mat-icon class="material-symbols-outlined" matListIcon>
-                    delete
-                </mat-icon>
+                <mat-icon class="material-symbols-outlined" matListIcon> delete </mat-icon>
                 {{ 'tool.tiles.menu.removeTilesSet' | translate }}
             </button>
         </mat-menu>
     </div>
 </div>
 <app-expandable-panel [isOpen]="isOpen()">
-    <app-scrollable-list class="mt-1.5" [items]="tilesSetValue.tiles" >
+    <app-scrollable-list class="mt-1.5" [items]="tilesSetValue.tiles">
         <ng-template #element let-tile>
-            <app-tile-list-elem [tile]="tile"/>
+            <app-tile-list-elem [tile]="tile" />
         </ng-template>
     </app-scrollable-list>
-</app-expandable-panel>`},{name:`ToolbarComponent`,id:`component-ToolbarComponent-1f071ad502e7efdbdbc87f31c679cf9ea4e184dc3bbcf626217991003092088a654b665c2becd25e02dc35cf57642adf07c6fdfaa3492d01619e7ae0c0767bca`,file:`projects/irrtirer/src/app/toolbar/toolbar.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-toolbar`,styleUrls:[`./toolbar.component.scss`],styles:[],templateUrl:[`./toolbar.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:47,deprecated:!1,deprecationMessage:``,rawdescription:`
+</app-expandable-panel>
+`},{name:`ToolbarComponent`,id:`component-ToolbarComponent-d8b7bb5927b760b6294e8efe44d8374c1f33713162899065f93796fa61706316e32e54535f14c25330473697f7ff7fdfc729ad305574d5b3efd1df58c6eebd02`,file:`projects/irrtirer/src/app/toolbar/toolbar.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-toolbar`,styleUrls:[`./toolbar.component.scss`],styles:[],templateUrl:[`./toolbar.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:47,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatIconModule`,type:`module`},{name:`MatToolbarModule`,type:`module`},{name:`MatButtonModule`,type:`module`},{name:`RouterLink`},{name:`RouterLinkActive`},{name:`IconSvgModuleModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`MatRadioModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`TitleCasePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
@@ -9210,7 +9168,7 @@ import { TitleCasePipe } from '@angular/common';
         MatMenuModule,
         MatRadioModule,
         TranslatePipe,
-        TitleCasePipe
+        TitleCasePipe,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',
@@ -9243,7 +9201,8 @@ export class ToolbarComponent implements OnInit {
         const nextState = this.themeMode() === 'dark' ? 'light' : 'dark';
         this.themeService.changeTheme(nextState);
     }
-}`,styleUrl:`./toolbar.component.scss`,assetsDirs:[],styleUrlsData:[{data:`:host {
+}
+`,styleUrl:`./toolbar.component.scss`,assetsDirs:[],styleUrlsData:[{data:`:host {
     --mat-toolbar-standard-height: 55px;
     height: var(--mat-toolbar-standard-height);
 
@@ -9251,9 +9210,10 @@ export class ToolbarComponent implements OnInit {
         position: fixed;
         padding: 0 48px;
         z-index: 2;
-        box-shadow: 0 3px 5px -1px #0003,
-                    0 6px 10px #00000024,
-                    0 1px 18px #0000001f;
+        box-shadow:
+            0 3px 5px -1px #0003,
+            0 6px 10px #00000024,
+            0 1px 18px #0000001f;
         --mat-toolbar-container-background-color: var(--color-surface-toolbar);
         --mat-toolbar-standard-height: inherit;
 
@@ -9270,7 +9230,7 @@ export class ToolbarComponent implements OnInit {
             .mat-icon {
                 font-weight: 300;
             }
-            
+
             --irr-icon-button-size: 36px;
             --irr-icon-button-icon-size: 22px;
         }
@@ -9287,7 +9247,7 @@ export class ToolbarComponent implements OnInit {
         ::ng-deep {
             .mdc-form-field {
                 width: 100%;
-                
+
                 .mdc-label {
                     display: flex;
                     width: 100%;
@@ -9315,12 +9275,12 @@ export class ToolbarComponent implements OnInit {
     <span class="flex-1"></span>
 
     <button matIconButton class="toolbar-item mode" (click)="toggleTheme()">
-        <mat-icon class="material-symbols-outlined">{{themeMode() === 'dark' ? 'dark_mode' : 'light_mode'}}</mat-icon>
+        <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
     </button>
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
-        <span class="block min-w-5">{{selectedLanguage() | titlecase}}</span>
+        <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
     </button>
 
     <mat-menu #menu="matMenu">
@@ -9338,9 +9298,10 @@ export class ToolbarComponent implements OnInit {
 
     <a class="toolbar-item" mat-button href="https://github.com/TukanHan/irrtirer" target="_blank">
         <mat-icon svgIcon="github" />
-        {{'toolbar.github' | translate}}
+        {{ 'toolbar.github' | translate }}
     </a>
-</mat-toolbar>`},{name:`ToolComponent`,id:`component-ToolComponent-099055426884066cf633942b7061eb74c8e305b6ebb1115be037e61ccf976173fadfdf4e04b060fbde37dbfc9de427a939b5ef78c9e482e0e75fb30c9e51cdcf`,file:`projects/irrtirer/src/app/tool/tool.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}],selector:`app-tool`,styleUrls:[`./tool.component.scss`],styles:[],templateUrl:[`./tool.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`MatSidenavModule`,type:`module`},{name:`MatListModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`RouterOutlet`},{name:`RouterLink`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`}],description:``,rawdescription:`
+</mat-toolbar>
+`},{name:`ToolComponent`,id:`component-ToolComponent-7ee681fc7d6ee91a7847846a61b486d4b901830f5cff8fa666ab8dc5071846e25a1824b978bee909fc5cd6f72e9bc39e13f9b651a5992354861954a0fd8115b9`,file:`projects/irrtirer/src/app/tool/tool.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}],selector:`app-tool`,styleUrls:[`./tool.component.scss`],styles:[],templateUrl:[`./tool.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`MatSidenavModule`,type:`module`},{name:`MatListModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`RouterOutlet`},{name:`RouterLink`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -9373,7 +9334,7 @@ import { ProjectImportService } from '../core/services/project-import/project-im
         RouterLink,
         RouterModule,
         RibbonComponent,
-        ActiveCanvasComponent
+        ActiveCanvasComponent,
     ],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
@@ -9390,17 +9351,17 @@ export class ToolComponent {
 
     protected readonly tilesLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((mosaicProject) => !mosaicProject)
+        map((mosaicProject) => !mosaicProject),
     );
 
     protected readonly sectorsLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((mosaicProject) => !mosaicProject)
+        map((mosaicProject) => !mosaicProject),
     );
 
     protected readonly mosaicGeneratingLinkDisabled$ = this.store.select(selectSectors).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((sectors) => !sectors.length)
+        map((sectors) => !sectors.length),
     );
 
     protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');
@@ -9409,7 +9370,7 @@ export class ToolComponent {
 
     protected readonly ribbonActions = signal<RibbonAction[]>([]);
 
-    protected readonly canvasOptions = computed<CanvasOptions>(() =>({
+    protected readonly canvasOptions = computed<CanvasOptions>(() => ({
         canvasGridColor: this.toolService.canvasGridColor(),
     }));
 
@@ -9507,7 +9468,7 @@ mat-sidenav-content {
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.projectSettings')"
->
+            >
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
             <a
@@ -9519,8 +9480,7 @@ mat-sidenav-content {
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.tileTrey')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon
-                >
+                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
             </a>
             <a
                 mat-list-item
@@ -9542,34 +9502,23 @@ mat-sidenav-content {
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.generation')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon
-                >
+                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
             </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
-            <app-ribbon
-                [actions]="ribbonActions()"
-                [viewportSize]="viewportSize()"
-            />
+            <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
             <div class="main">
-                <ac-active-canvas
-                    #activeCanvas
-                    [options]="canvasOptions()"
-                    class="canvas"
-                />
+                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas" />
                 <div class="panel">
-                    <router-outlet
-                        (activate)="onActivate($event)"
-                        (deactivate)="onDeactivate()"
-                    />
+                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
                 </div>
             </div>
         </div>
     </mat-sidenav-content>
 </mat-sidenav-container>
-`},{name:`TrayComponent`,id:`component-TrayComponent-4f7ead63b5e4fb644fac6a3a0d0986165cc9ece2a597857e4094699b70258d6be5f0bff84137da04ddfd6ed6e9eb2b5cd349a3b5b9b9d60f09e1d288f7c6db9e`,file:`projects/irrtirer/src/app/tool/tray/tray.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-tray`,styleUrls:[`./tray.component.scss`],styles:[],templateUrl:[`./tray.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:30,deprecated:!1,deprecationMessage:``,rawdescription:`
+`},{name:`TrayComponent`,id:`component-TrayComponent-38bdfc776584bb399eda530b1a349ecd2d5868634194b4a061530715447046c8e91121882ad86a4405ef2df29f39e86409662066b736e9cd8e21821c0525148d`,file:`projects/irrtirer/src/app/tool/tray/tray.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-tray`,styleUrls:[`./tray.component.scss`],styles:[],templateUrl:[`./tray.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:30,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:40,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`RouterOutlet`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { AfterViewInit, Component, DestroyRef, inject, signal } from '@angular/core';
@@ -9618,7 +9567,7 @@ export class TrayComponent implements ToolView, AfterViewInit {
                 {
                     iconName: 'crop',
                     visibility: signal('on'),
-                    tooltipKey: "tool.ribbon.takeSnapshot",
+                    tooltipKey: 'tool.ribbon.takeSnapshot',
                     onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
                 },
             ],
@@ -9639,7 +9588,9 @@ export class TrayComponent implements ToolView, AfterViewInit {
 
 :host {
     @include tool-panel();
-}`,styleUrl:`./tray.component.scss`}],stylesData:``,extends:[],implements:[`ToolView`,`AfterViewInit`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`ToolView`,type:`interface`},{name:`AfterViewInit`,type:`interface`}]},templateData:`<router-outlet/>`},{name:`TrayMenuComponent`,id:`component-TrayMenuComponent-5067a2cb29c3038b7f5c9a414888db49a4580913fecf75784b8cc74c30b42fc2e5a47daa26960fbab317e561443da4fb03eed88db822c4b9c596914b027f31a8`,file:`projects/irrtirer/src/app/tool/tray/tray-menu/tray-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tray-menu`,styleUrls:[],styles:[],templateUrl:[`./tray-menu.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+}
+`,styleUrl:`./tray.component.scss`}],stylesData:``,extends:[],implements:[`ToolView`,`AfterViewInit`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`ToolView`,type:`interface`},{name:`AfterViewInit`,type:`interface`}]},templateData:`<router-outlet />
+`},{name:`TrayMenuComponent`,id:`component-TrayMenuComponent-59a3774b30a06e32831c41b766ede2b5e708793763f8e0cbfde3c5a27be1fc074194fa719ef64bc3f86f799f208dc02fba61b46d4940977353e9ce9f86d9f6b8`,file:`projects/irrtirer/src/app/tool/tray/tray-menu/tray-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tray-menu`,styleUrls:[],styles:[],templateUrl:[`./tray-menu.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
@@ -9653,7 +9604,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     selector: 'app-tray-menu',
     imports: [MatButtonModule, TilesSetListElemComponent, TranslatePipe],
     templateUrl: './tray-menu.component.html',
-    host: { class: 'flex flex-col gap-5' }
+    host: { class: 'flex flex-col gap-5' },
 })
 export class TrayMenuComponent {
     private readonly router = inject(Router);
@@ -9679,14 +9630,15 @@ export class TrayMenuComponent {
 </div>
 
 <div class="flex flex-col gap-1.5 flex-1">
-    @for(tilesSet of tilesSets(); track $index) {
-        <app-tiles-set-list-elem [tilesSet]="tilesSet"/>
+    @for (tilesSet of tilesSets(); track $index) {
+        <app-tiles-set-list-elem [tilesSet]="tilesSet" />
     } @empty {
         <span class="m-auto text-contrast-light">
             {{ 'tool.tiles.menu.noTiles' | translate }}
         </span>
     }
-</div>`}],GSe=[{name:`IconSvgModuleModule`,id:`module-IconSvgModuleModule-4e78a756c9748f8b95760ecb80b3d8fb8819aff5ff5fa92663724095058178be30b6cfa0c16e30db3d8d4153a63c218c310c814075459c76e987c5c31cef20b1`,description:``,deprecationMessage:``,deprecated:!1,file:`projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts`,methods:[],sourceCode:`import { NgModule } from '@angular/core';
+</div>
+`}],GSe=[{name:`IconSvgModuleModule`,id:`module-IconSvgModuleModule-4e78a756c9748f8b95760ecb80b3d8fb8819aff5ff5fa92663724095058178be30b6cfa0c16e30db3d8d4153a63c218c310c814075459c76e987c5c31cef20b1`,description:``,deprecationMessage:``,deprecated:!1,file:`projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts`,methods:[],sourceCode:`import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -9712,4 +9664,4 @@ export class IconSvgModuleModule {
         }
     }
 }
-`,children:[{type:`providers`,elements:[]},{type:`declarations`,elements:[]},{type:`imports`,elements:[]},{type:`exports`,elements:[]},{type:`bootstrap`,elements:[]},{type:`classes`,elements:[]}]}],KSe=JSON.parse(`{"variables":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        }\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"},{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"},{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"\\"irrtirer_project\\""},{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"},{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version\\n}"},{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: \\"#f2af3d\\",\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"},{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"},{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"},{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"},{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"},{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number, newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"},{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    }))\\n)"},{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"},{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: ToolComponent,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: ProjectComponent },\\n    { path: 'author', component: AuthorComponent },\\n]"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => !!state\\n)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel | undefined) => state?.config\\n)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.config.base64Image\\n)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.config.mosaicWidth\\n)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel | undefined) => state?.sectors ?? []\\n)"},{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.tilesSets\\n)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"},{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [\\n        new Vector( 7.5, 15.33 ),\\n        new Vector(21.16, 5.11),\\n        new Vector(4.68, -11.07),\\n        new Vector(-20.71, -16.44),\\n        new Vector(-6.59, 12.71)\\n    ],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59)\\n            ],\\n        },\\n    ],\\n}"},{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"},{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: ConfigurationComponent,\\n        children: [\\n            { path: '', component: ConfigMenuComponent },\\n            { path: 'project', component: ConfigProjectComponent },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: TrayComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenuComponent },\\n            { path: 'random', component: RandomTilesComponent },\\n            { path: 'random/:id', component: RandomTilesComponent },\\n            { path: 'tile/:id', component: TileDetailComponent },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: SectorsComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursListComponent },\\n            { path: ':id/property', component: SectorPropertyEditorComponent },\\n            { path: ':id/contour', component: SectorContourEditionComponent },\\n            { path: 'contour', component: SectorContourEditionComponent },\\n        ]\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGenerationComponent,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"},{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"},{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"},{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme }))\\n)"}],"functions":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}],"typealiases":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"enumerations":[],"groupedVariables":{"projects/irrtirer/src/test-data/active-canvas.data.ts":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        }\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"}],"projects/irrtirer/src/app/app.config.ts":[{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts":[{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"}],"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts":[{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"\\"irrtirer_project\\""}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"}],"projects/irrtirer/src/environment/environment.ts":[{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version\\n}"}],"projects/irrtirer/src/test-data/sector.data.ts":[{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: \\"#f2af3d\\",\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"}],"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts":[{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"}],"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts":[{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"}],"projects/irrtirer/src/test-data/image-object.data.ts":[{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"}],"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts":[{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts":[{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number, newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts":[{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => !!state\\n)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel | undefined) => state?.config\\n)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.config.base64Image\\n)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.config.mosaicWidth\\n)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel | undefined) => state?.sectors ?? []\\n)"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(\\n  selectMosaicProject,\\n  (state: MosaicProjectModel) => state.tilesSets\\n)"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts":[{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    }))\\n)"}],"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts":[{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"}],"projects/irrtirer/src/app/app.routes.ts":[{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: ToolComponent,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: ProjectComponent },\\n    { path: 'author', component: AuthorComponent },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts":[{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"}],"projects/irrtirer/src/test-data/tiles-set.data.ts":[{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [\\n        new Vector( 7.5, 15.33 ),\\n        new Vector(21.16, 5.11),\\n        new Vector(4.68, -11.07),\\n        new Vector(-20.71, -16.44),\\n        new Vector(-6.59, 12.71)\\n    ],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59)\\n            ],\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/core/constants/paths.ts":[{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"}],"projects/irrtirer/src/app/tool/tool.routes.ts":[{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: ConfigurationComponent,\\n        children: [\\n            { path: '', component: ConfigMenuComponent },\\n            { path: 'project', component: ConfigProjectComponent },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: TrayComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenuComponent },\\n            { path: 'random', component: RandomTilesComponent },\\n            { path: 'random/:id', component: RandomTilesComponent },\\n            { path: 'tile/:id', component: TileDetailComponent },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: SectorsComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursListComponent },\\n            { path: ':id/property', component: SectorPropertyEditorComponent },\\n            { path: ':id/contour', component: SectorContourEditionComponent },\\n            { path: 'contour', component: SectorContourEditionComponent },\\n        ]\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGenerationComponent,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"}],"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts":[{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts":[{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts":[{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme }))\\n)"}]},"groupedFunctions":{"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/validators/unique-value.validator.ts":[{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/download-helper.ts":[{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}]},"groupedEnumerations":{},"groupedTypeAliases":{"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts":[{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/user-preferences.interface.ts":[{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/mosaic-project.model.ts":[{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}]}}`),qSe={pipes:LSe,interfaces:RSe,injectables:zSe,guards:BSe,interceptors:VSe,classes:HSe,directives:USe,components:WSe,modules:GSe,miscellaneous:KSe}})))()}function M9(e){e||=O(Ee);let t=new xe(t=>{if(e.destroyed)t.next();else return e.onDestroy(t.next.bind(t))});return e=>e.pipe(tee(t))}function YSe(){return(YSe=n((()=>{re(),ree(),Ne()})))()}function XSe(e,t){let n={};for(let r of Object.keys(e))r!==t&&(n[r]=e[r]);return n}function N9(e,t){if(e===t)return!0;if(e===null||t===null)return!1;if(e!==e&&t!==t)return!0;let n=typeof e,r=typeof t,i;if(n==r&&n==`object`){if(Array.isArray(e)){if(!Array.isArray(t))return!1;if((i=e.length)==t.length){for(let n=0;n<i;n++)if(!N9(e[n],t[n]))return!1;return!0}}else{if(Array.isArray(t))return!1;if(F9(e)&&F9(t)){let n=Object.create(null);for(let r in e){if(!N9(e[r],t[r]))return!1;n[r]=!0}for(let e in t)if(!(e in n)&&t[e]!==void 0)return!1;return!0}}}return!1}function P9(e){return e!=null}function ZSe(e){return e!==void 0}function F9(e){return I9(e)&&!L9(e)&&e!==null}function I9(e){return typeof e==`object`&&!!e}function L9(e){return Array.isArray(e)}function R9(e){return typeof e==`string`}function QSe(e){return typeof e==`function`}function z9(e){if(L9(e))return e.map(e=>z9(e));if(F9(e)){let t={};return Object.keys(e).forEach(n=>{t[n]=z9(e[n])}),t}return e}function B9(e,t){if(!I9(e))return z9(t);let n=z9(e);return I9(n)&&I9(t)&&Object.keys(t).forEach(r=>{F9(t[r])&&r in e?n[r]=B9(e[r],t[r]):Object.assign(n,{[r]:t[r]})}),n}function $Se(e,t){let n=t.split(`.`);t=``;do{t+=n.shift();let r=!n.length;if(P9(e)){if(F9(e)&&ZSe(e[t])&&(F9(e[t])||L9(e[t])||r)){e=e[t],t=``;continue}if(L9(e)){if(t===`length`&&r){e=e.length,t=``;continue}if(/^\d+$/.test(t)){let n=parseInt(t,10);if(ZSe(e[n])&&(F9(e[n])||L9(e[n])||r)){e=e[n],t=``;continue}}}}r?e=void 0:t+=`.`}while(n.length);return e}function eCe(e,t,n){return B9(e,tCe(t,n))}function tCe(e,t){return e.split(`.`).reduceRight((e,t)=>({[t]:e}),t)}function nCe(e){return/^class\s/.test(Function.prototype.toString.call(e))}function rCe(e,t){return nCe(t)?{provide:e,useClass:t}:{provide:e,useFactory:t}}function iCe(e={}){return aCe({...e,isRoot:!0})}function V9(e,t,n,r,i){if(t===void 0)return rCe(e,n);if(typeof t==`function`){if(nCe(t)){let e=t.name||`YourClass`;console.warn(`@ngx-translate/core: "${r}" received a bare class (${e}); auto-wrapping with ${i}(). For clarity, prefer ${r}: ${i}(${e}).`)}return rCe(e,t)}return t}function aCe(e){let t=[],n=V9(W9,e.loader,lCe,`loader`,`provideTranslateLoader`),r=V9(U9,e.compiler,cCe,`compiler`,`provideTranslateCompiler`),i=V9(G9,e.parser,uCe,`parser`,`provideTranslateParser`),a=V9(H9,e.missingTranslationHandler,sCe,`missingTranslationHandler`,`provideMissingTranslationHandler`);t.push(n,r,i,a),t.push(K9);let o={fallbackLang:e.fallbackLang??null,lang:e.lang,isRoot:e.isRoot};return t.push({provide:q9,useValue:o}),t.push({provide:Y9,useClass:Y9}),t}var oCe,H9,sCe,U9,cCe,W9,lCe,G9,uCe,K9,q9,J9,Y9,dCe;function X9(){return(X9=n((()=>{Fe(),YSe(),mt(),y(),cee(),aee(),ot(),Oz(),Ez(),lt(),iee(),bz(),vt(),u(),eee(),see(),wz(),lee(),oCe=class{state=S({});hasAny=$e(()=>Object.keys(this.state()).length>0);isLoading(e){return this.state()[e]!==void 0}get(e){return this.state()[e]}set(e,t){this.state.update(n=>({...n,[e]:t}))}clear(e){this.state.update(t=>XSe(t,e))}clearIfOwner(e,t){this.state.update(n=>n[e]===t?XSe(n,e):n)}},H9=class{},sCe=(()=>{class e{handle(e){return e.key}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),U9=class{},cCe=(()=>{class e extends U9{compile(e,t){return e}compileTranslations(e,t){return e}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),W9=class{},lCe=(()=>{class e extends W9{getTranslation(e){return ct({})}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),G9=class{},uCe=(()=>{class e extends G9{templateMatcher=/{{\s?([^{}\s]*)\s?}}/g;interpolate(e,t){if(R9(e))return this.interpolateString(e,t);if(QSe(e))return this.interpolateFunction(e,t)}interpolateFunction(e,t){return e(t)}interpolateString(e,t){return t?e.replace(this.templateMatcher,(e,n)=>{let r=this.getInterpolationReplacement(t,n);return r===void 0?e:r}):e}getInterpolationReplacement(e,t){return this.formatValue($Se(e,t))}formatValue(e){if(R9(e))return e;if(typeof e==`number`||typeof e==`boolean`)return e.toString();if(e===null)return`null`;if(L9(e))return e.join(`, `);if(I9(e))return typeof e.toString==`function`&&e.toString!==Object.prototype.toString?e.toString():JSON.stringify(e)}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),K9=(()=>{class e{_translations=S({});translations=this._translations.asReadonly();_languages=S([]);languages=this._languages.asReadonly();_lastTranslationChange=S(null);lastTranslationChange=this._lastTranslationChange.asReadonly();_translationChange$=new me;translationChange$=this._translationChange$.asObservable();constructor(){O(Ee).onDestroy(()=>{this._translationChange$.complete()})}getTranslations(e){return this.translations()[e]}setTranslations(e,t,n){this._translations.update(r=>({...r,[e]:n&&this.hasTranslationFor(e)?B9(r[e],t):t})),this.addLanguages([e]);let r={lang:e,translations:this.getTranslations(e)};this._lastTranslationChange.set(r),this._translationChange$.next(r)}getLanguages(){return this.languages()}addLanguages(e){this._languages.update(t=>Array.from(new Set([...t,...e])))}hasTranslationFor(e){return this.translations()[e]!==void 0}deleteTranslations(e){this._translations.update(t=>{let{[e]:n,...r}=t;return r})}getTranslationValue(e,t){return $Se(this.getTranslations(e),t)}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),q9=new Ze(`TRANSLATE_CONFIG`),J9=e=>ht(e)?e:ct(e),Y9=(()=>{class e{loadingTranslations=new oCe;lastUseLanguage=null;currentLoader=O(W9);compiler=O(U9);parser=O(G9);missingTranslationHandler=O(H9);store=O(K9);destroyRef=O(Ee);parent;get isRoot(){return this.parent===null}_onLangChange=new me;_onFallbackLangChange=new me;_currentLang=S(null);_fallbackLang=S(null);_onTranslationRefresh=null;_isLoading=$e(()=>this.loadingTranslations.hasAny()||(this.parent?.isLoading()??!1));getRoot(){let e=this;for(;e.parent;)e=e.parent;return e}getParent(){return this.parent}getActiveRequestedLang(){return this.getRoot().lastUseLanguage}hasTranslationInChain(e){for(let t=this;t;t=t.parent)if(t.store.hasTranslationFor(e))return!0;return!1}chainTranslationChange$(){let e=[];for(let t=this;t;t=t.parent)e.push(t.store.translationChange$);return e.length===1?e[0]:_t(...e)}get onTranslationChange(){return this.store.translationChange$}get onLangChange(){return this.isRoot?this._onLangChange.asObservable():this.parent?this.parent.onLangChange:at}get onFallbackLangChange(){return this.isRoot?this._onFallbackLangChange.asObservable():this.parent?this.parent.onFallbackLangChange:at}get onTranslationRefresh(){if(!this._onTranslationRefresh){let e=_t(this.onTranslationChange.pipe(yt(e=>e.lang===this.getCurrentLang()||e.lang===this.getFallbackLang())),this.onLangChange,this.onFallbackLangChange).pipe(fe(()=>void 0));this._onTranslationRefresh=this.isRoot?e:this.parent?_t(e,this.parent.onTranslationRefresh):e}return this._onTranslationRefresh}constructor(){let t={isRoot:!0,fallbackLang:null,...O(q9,{optional:!0})};this.parent=t.isRoot?null:O(e,{optional:!0,skipSelf:!0});let n=O(Ee);if(this.isRoot)t.lang&&this.use(t.lang),t.fallbackLang&&this.setFallbackLang(t.fallbackLang);else{let e=this.getCurrentLang();e&&this.loadOrExtendLanguage(e)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e}". Cause:`,t)}});let t=this.getFallbackLang();t&&t!==e&&this.loadOrExtendLanguage(t)?.pipe(M9(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}this.onLangChange.pipe(M9(n)).subscribe(e=>{this.isRoot||this.loadOrExtendLanguage(e.lang)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),this.onFallbackLangChange.pipe(M9(n)).subscribe(e=>{this.isRoot||this.loadOrExtendLanguage(e.lang)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),n.onDestroy(()=>{this._onLangChange.complete(),this._onFallbackLangChange.complete()})}setFallbackLang(e){if(!this.isRoot)return this.parent.setFallbackLang(e);this._fallbackLang()||this._fallbackLang.set(e);let t=this.loadOrExtendLanguage(e);return ht(t)?(t.pipe(ft(1)).subscribe({next:()=>{this._fallbackLang.set(e),this._onFallbackLangChange.next({lang:e,translations:this.store.getTranslations(e)})},error:t=>{console.warn(`@ngx-translate/core: failed to load fallback "${e}". Cause:`,t)}}),t):(this._fallbackLang.set(e),this._onFallbackLangChange.next({lang:e,translations:this.store.getTranslations(e)}),ct(this.store.getTranslations(e)))}get isLoading(){return this._isLoading}use(e){if(!this.isRoot)return this.parent.use(e);let t=this._currentLang(),n=this.lastUseLanguage;this.lastUseLanguage=e,this._currentLang()||this._currentLang.set(e);let r=this.loadOrExtendLanguage(e);return ht(r)?(r.pipe(ft(1)).subscribe({next:()=>{this.changeLang(e)},error:r=>{this.lastUseLanguage===e&&(this._currentLang.set(t),this.lastUseLanguage=n),console.warn(`@ngx-translate/core: failed to load "${e}". currentLang was NOT changed; remains "${t??`null`}". Cause:`,r)}}),r):(this.changeLang(e),ct(this.store.getTranslations(e)))}loadOrExtendLanguage(e){return this.store.hasTranslationFor(e)?ct(this.store.getTranslations(e)):this.loadAndCompileTranslations(e)}getTranslations(e){return this.store.getTranslations(e)}changeLang(e){e===this.lastUseLanguage&&(this._currentLang.set(e),this._onLangChange.next({lang:e,translations:this.store.getTranslations(e)}))}getCurrentLang(){return this.isRoot?this._currentLang():this.parent?.getCurrentLang()??null}loadAndCompileTranslations(e){let t=this.loadingTranslations.get(e);if(t)return t;let n=this.currentLoader.getTranslation(e).pipe(fe(t=>this.compiler.compileTranslations(t,e)),Dz(t=>{this.store.setTranslations(e,t,!1),this.loadingTranslations.clearIfOwner(e,n)}),Tz(()=>this.loadingTranslations.clearIfOwner(e,n)),oee({bufferSize:1,refCount:!0}));return this.loadingTranslations.set(e,n),n.pipe(M9(this.destroyRef)).subscribe({error:()=>{}}),n}setTranslation(e,t,n=!1){let r=this.compiler.compileTranslations(t,e);this.store.setTranslations(e,r,n)}setCompiledTranslation(e,t,n=!1){this.store.setTranslations(e,t,n)}getLangs(){return this.store.getLanguages()}addLangs(e){this.store.addLanguages(e)}getParsedResultForKey(e,t,n){let r=this.getTextToInterpolate(e,n);if(P9(r))return this.runInterpolation(r,t);let i=this.getMissingTranslationHandler().handle({key:e,translateService:this,...t!==void 0&&{interpolateParams:t}});return i===void 0?e:i}getMissingTranslationHandler(){return this.missingTranslationHandler}getFallbackLang(){return this.isRoot?this._fallbackLang():this.parent?.getFallbackLang()??null}getTextToInterpolate(e,t){if(t){let n=this.store.getTranslationValue(t,e);return n===void 0?this.parent?.getTextToInterpolate(e,t):n}let n=this.getCurrentLang(),r=this.getFallbackLang(),i;return n&&(i=this.store.getTranslationValue(n,e)),!P9(i)&&r&&r!==n&&(i=this.store.getTranslationValue(r,e)),i===void 0?this.parent?.getTextToInterpolate(e):i}runInterpolation(e,t){if(P9(e))return L9(e)?this.runInterpolationOnArray(e,t):F9(e)?this.runInterpolationOnDict(e,t):this.parser.interpolate(e,t)}runInterpolationOnArray(e,t){return e.map(e=>this.runInterpolation(e,t))}runInterpolationOnDict(e,t){let n={};for(let r in e){let i=this.runInterpolation(e[r],t);i!==void 0&&(n[r]=i)}return n}getParsedResult(e,t,n){return e instanceof Array?this.getParsedResultForArray(e,t,n):this.getParsedResultForKey(e,t,n)}getParsedResultForArray(e,t,n){let r={},i=!1;for(let a of e)r[a]=this.getParsedResultForKey(a,t,n),i||=ht(r[a]);if(!i)return r;let a=e.map(e=>J9(r[e]));return pt(a).pipe(fe(t=>{let n={};return t.forEach((t,r)=>{n[e[r]]=t}),n}))}get(e,t,n){if(!P9(e)||!e.length)return ct(``);let r=n??this.getActiveRequestedLang()??this.getCurrentLang(),i=r?this.loadingTranslations.get(r):void 0;return i?i.pipe(Cz(()=>J9(this.getParsedResult(e,t,n)))):J9(this.getParsedResult(e,t,n))}getStreamOnTranslationChange(e,t,n){if(!P9(e)||!e.length)throw Error(`Parameter "key" is required and cannot be empty`);return ut(yz(()=>this.get(e,t,n)),this.onTranslationChange.pipe(gt(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}stream(e,t,n){if(!P9(e)||!e.length)throw Error(`Parameter "key" required`);let r=n?_t(this.onLangChange,this.chainTranslationChange$().pipe(yt(e=>e.lang===n))):this.onLangChange;return ut(yz(()=>this.get(e,t,n)),r.pipe(gt(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}instant(e,t,n){if(!P9(e)||e.length===0)return``;n&&!this.hasTranslationInChain(n)&&this.warnUnloadedInstantLang(n);let r=this.getParsedResult(e,t,n);return ht(r)?this.keyToObject(e):r}warnedUnloadedInstantLangs=new Set;warnUnloadedInstantLang(e){let t=this.getRoot();t===this?this.warnedUnloadedInstantLangs.has(e)||Qe(()=>{this.warnedUnloadedInstantLangs.add(e),console.warn(`@ngx-translate/core: instant() called with lang="${e}" but no translations are loaded for that language. Returning the key as fallback. Load with use("${e}") or setTranslation("${e}", ...) first.`)}):t.warnUnloadedInstantLang(e)}translate(e,t,n){return $e(()=>{let r=typeof e==`function`?e():e,i=typeof t==`function`?t():t,a=typeof n==`function`?n():n;return this.instant(r,i,a)})}keyToObject(e){return Array.isArray(e)?e.reduce((e,t)=>(e[t]=t,e),{}):e}set(e,t,n=this.getCurrentLang()){this.store.setTranslations(n,eCe(this.store.getTranslations(n),e,R9(t)?this.compiler.compile(t,n):this.compiler.compileTranslations(t,n)),!1)}reloadLang(e){return this.resetLang(e),this.loadAndCompileTranslations(e)}resetLang(e){this.loadingTranslations.clear(e),this.store.deleteTranslations(e)}static getBrowserLang(){if(typeof window>`u`||!window.navigator)return;let e=this.getBrowserCultureLang();return e?e.split(/[-_]/)[0]:void 0}static getBrowserCultureLang(){if(typeof window<`u`&&window.navigator!==void 0)return window.navigator.languages?window.navigator.languages[0]:window.navigator.language||window.navigator.browserLanguage||window.navigator.userLanguage}getBrowserLang(){return e.getBrowserLang()}getBrowserCultureLang(){return e.getBrowserCultureLang()}get currentLang(){return this.isRoot?this._currentLang.asReadonly():this.parent.currentLang}get fallbackLang(){return this.isRoot?this._fallbackLang.asReadonly():this.parent.fallbackLang}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),dCe=(()=>{class e{translateService=O(Y9);cachedSignal=null;lastKey=null;lastParams;transform(e,...t){if(!e||!e.length)return e;let n=this.parseArgs(t);return(e!==this.lastKey||!N9(n,this.lastParams))&&(this.cachedSignal=this.translateService.translate(e,n),this.lastKey=e,this.lastParams=n),this.cachedSignal()}parseArgs(e){if(P9(e[0])&&e.length){if(R9(e[0])&&e[0].length){let t=e[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g,`"$2":`).replace(/:(\s)?(')(.*?)(')/g,`:"$3"`);try{return JSON.parse(t)}catch{throw SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${e[0]}`)}}if(F9(e[0]))return e[0]}}static ɵfac=function(t){return new(t||e)};static ɵpipe=A({name:`translate`,type:e,pure:!1});static ɵprov=E({token:e,factory:e.ɵfac})}return e})()})))()}function fCe(e={}){if(`resources`in e&&e.resources)return pCe(e);let t=e;return pCe({enforceLoading:t.enforceLoading??!1,useHttpBackend:t.useHttpBackend??!1,failOnError:t.failOnError??!1,resources:[{prefix:t.prefix??`/assets/i18n/`,suffix:t.suffix??`.json`}]})}function pCe(e={}){return[{provide:Z9,useValue:{resources:[`/assets/i18n/`],...e}},{provide:W9,useClass:mCe}]}var Z9,mCe;function hCe(){return(hCe=n((()=>{_4(),Fe(),X9(),Sz(),mt(),lt(),u(),Z9=new Ze(`TRANSLATE_HTTP_LOADER_CONFIG`),mCe=(()=>{class e{http;config;constructor(){this.config={resources:[],enforceLoading:!1,useHttpBackend:!1,...O(Z9)},this.http=this.config.useHttpBackend?new g4(O(p4)):O(g4)}getTranslation(e){let t=this.config.enforceLoading?`?enforceLoading=${Date.now()}`:``,n=this.config.resources.map(n=>{let r=typeof n==`string`?`${n}${e}.json`:`${n.prefix}${e}${n.suffix??`.json`}`,i=this.http.get(`${r}${t}`);return this.config.failOnError?i:i.pipe(xz(t=>(console.warn(`@ngx-translate/http-loader: error loading translation for ${e}:`,t),ct({}))))});return n.length===0?ct({}):pt(n).pipe(fe(e=>e.reduce((e,t)=>B9(e,t),{})))}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})()})))()}var Q9;function gCe(){return(gCe=n((()=>{ce(),Fe(),X9(),Q9=class{translate=O(Y9);zone=O(we);constructor(){window.addEventListener(`language-changed`,e=>{this.zone.run(()=>{this.translate.use(e.detail.lang)})})}static ctorParameters=()=>[]},Q9=tt([Me()],Q9)})))()}var _Ce=r({default:()=>vCe}),$9,vCe;function yCe(){return(yCe=n((()=>{gSe(),k9(),CSe(),ISe(),JSe(),X9(),hCe(),_4(),gCe(),Fe(),SSe(qSe),$9=`pl`,vCe={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{codePanel:!0},backgrounds:{options:{gray0:{name:`gray-0`,value:`#ffffff`},gray10:{name:`gray-10`,value:`#e6e6e6`},gray20:{name:`gray-20`,value:`#cccccc`},gray30:{name:`gray-30`,value:`#b3b3b3`},gray46:{name:`gray-46`,value:`#898989`},gray60:{name:`gray-60`,value:`#666666`},gray75:{name:`gray-75`,value:`#3f3f3f`},gray80:{name:`gray-80`,value:`#333333`},gray84:{name:`gray-84`,value:`#292929`},gray87:{name:`gray-87`,value:`#212121`},gray92:{name:`gray-92`,value:`#141414`},gray100:{name:`gray-100`,value:`#000000`}}}},globalTypes:{locale:{description:`Język aplikacji`,defaultValue:`pl`,toolbar:{icon:`globe`,items:[{value:`en`,right:`🇬🇧`,title:`English`},{value:`pl`,right:`🇵🇱`,title:`Polski`}]}}},decorators:[NSe({themes:{light:`light-theme`,dark:`dark-theme`},defaultTheme:`dark`}),_Se({providers:[nbe(),iCe({loader:fCe({prefix:`./assets/i18n/`,suffix:`.json`}),fallbackLang:`pl`,lang:`pl`}),Q9,Ae(()=>{O(Q9);let e=new CustomEvent(`language-changed`,{detail:{lang:$9}});window.dispatchEvent(e)})]}),(e,t)=>{$9=t.globals.locale;let n=new CustomEvent(`language-changed`,{detail:{lang:$9}});return window.dispatchEvent(n),e()}]}})))()}function bCe(e=[]){let t=[e[0]??gde,e[1]??qbe,e[2]??Jbe,e[3]??yxe,e[4]??wxe,e[5]??Axe,e[6]??_Ce];return xCe(t)}var xCe;function SCe(){return(SCe=n((()=>{kz(),r7(),p7(),bxe(),Txe(),jxe(),yCe(),{composeConfigs:xCe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var CCe;function wCe(){return(wCe=n((()=>{fz(),gz(),vz(),SCe(),bp(),{PreviewWeb:CCe}=__STORYBOOK_MODULE_PREVIEW_API__,window.__STORYBOOK_PREVIEW__=window.__STORYBOOK_PREVIEW__||new CCe(hde,bCe),window.__STORYBOOK_STORY_STORE__=window.__STORYBOOK_STORY_STORE__||window.__STORYBOOK_PREVIEW__.storyStore})))()}function TCe(){return(TCe=n((()=>{Ot(),wCe()})))()}export{bz as C,yz as S,Dz as _,k9 as a,xz as b,v4 as c,_4 as d,C2 as f,Oz as g,f2 as h,X9 as i,b4 as l,s2 as m,dCe as n,O9 as o,w2 as p,Y9 as r,bSe as s,TCe as t,g4 as u,Tz as v,Sz as x,Ez as y};
+`,children:[{type:`providers`,elements:[]},{type:`declarations`,elements:[]},{type:`imports`,elements:[]},{type:`exports`,elements:[]},{type:`bootstrap`,elements:[]},{type:`classes`,elements:[]}]}],KSe=JSON.parse(`{"variables":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"},{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"},{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"},{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"},{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"},{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"},{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"},{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"},{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"},{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"},{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"},{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"},{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"},{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: ToolComponent,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: ProjectComponent },\\n    { path: 'author', component: AuthorComponent },\\n]"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"},{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"},{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"},{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: ConfigurationComponent,\\n        children: [\\n            { path: '', component: ConfigMenuComponent },\\n            { path: 'project', component: ConfigProjectComponent },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: TrayComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenuComponent },\\n            { path: 'random', component: RandomTilesComponent },\\n            { path: 'random/:id', component: RandomTilesComponent },\\n            { path: 'tile/:id', component: TileDetailComponent },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: SectorsComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursListComponent },\\n            { path: ':id/property', component: SectorPropertyEditorComponent },\\n            { path: ':id/contour', component: SectorContourEditionComponent },\\n            { path: 'contour', component: SectorContourEditionComponent },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGenerationComponent,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"},{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"},{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"},{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}],"functions":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}],"typealiases":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"enumerations":[],"groupedVariables":{"projects/irrtirer/src/test-data/active-canvas.data.ts":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"}],"projects/irrtirer/src/app/app.config.ts":[{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts":[{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"}],"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts":[{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"}],"projects/irrtirer/src/environment/environment.ts":[{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"}],"projects/irrtirer/src/test-data/sector.data.ts":[{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"}],"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts":[{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"}],"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts":[{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"}],"projects/irrtirer/src/test-data/image-object.data.ts":[{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"}],"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts":[{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts":[{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts":[{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts":[{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"}],"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts":[{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-import/project-import.service.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"}],"projects/irrtirer/src/app/app.routes.ts":[{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: ToolComponent,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: ProjectComponent },\\n    { path: 'author', component: AuthorComponent },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts":[{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"}],"projects/irrtirer/src/test-data/tiles-set.data.ts":[{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/core/constants/paths.ts":[{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"}],"projects/irrtirer/src/app/tool/tool.routes.ts":[{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: ConfigurationComponent,\\n        children: [\\n            { path: '', component: ConfigMenuComponent },\\n            { path: 'project', component: ConfigProjectComponent },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: TrayComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenuComponent },\\n            { path: 'random', component: RandomTilesComponent },\\n            { path: 'random/:id', component: RandomTilesComponent },\\n            { path: 'tile/:id', component: TileDetailComponent },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: SectorsComponent,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursListComponent },\\n            { path: ':id/property', component: SectorPropertyEditorComponent },\\n            { path: ':id/contour', component: SectorContourEditionComponent },\\n            { path: 'contour', component: SectorContourEditionComponent },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGenerationComponent,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"}],"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts":[{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts":[{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts":[{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}]},"groupedFunctions":{"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/validators/unique-value.validator.ts":[{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/download-helper.ts":[{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}]},"groupedEnumerations":{},"groupedTypeAliases":{"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts":[{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/user-preferences.interface.ts":[{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/mosaic-project.model.ts":[{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}]}}`),qSe={pipes:LSe,interfaces:RSe,injectables:zSe,guards:BSe,interceptors:VSe,classes:HSe,directives:USe,components:WSe,modules:GSe,miscellaneous:KSe}})))()}function M9(e){e||=O(Ee);let t=new xe(t=>{if(e.destroyed)t.next();else return e.onDestroy(t.next.bind(t))});return e=>e.pipe(tee(t))}function YSe(){return(YSe=n((()=>{re(),ree(),Ne()})))()}function XSe(e,t){let n={};for(let r of Object.keys(e))r!==t&&(n[r]=e[r]);return n}function N9(e,t){if(e===t)return!0;if(e===null||t===null)return!1;if(e!==e&&t!==t)return!0;let n=typeof e,r=typeof t,i;if(n==r&&n==`object`){if(Array.isArray(e)){if(!Array.isArray(t))return!1;if((i=e.length)==t.length){for(let n=0;n<i;n++)if(!N9(e[n],t[n]))return!1;return!0}}else{if(Array.isArray(t))return!1;if(F9(e)&&F9(t)){let n=Object.create(null);for(let r in e){if(!N9(e[r],t[r]))return!1;n[r]=!0}for(let e in t)if(!(e in n)&&t[e]!==void 0)return!1;return!0}}}return!1}function P9(e){return e!=null}function ZSe(e){return e!==void 0}function F9(e){return I9(e)&&!L9(e)&&e!==null}function I9(e){return typeof e==`object`&&!!e}function L9(e){return Array.isArray(e)}function R9(e){return typeof e==`string`}function QSe(e){return typeof e==`function`}function z9(e){if(L9(e))return e.map(e=>z9(e));if(F9(e)){let t={};return Object.keys(e).forEach(n=>{t[n]=z9(e[n])}),t}return e}function B9(e,t){if(!I9(e))return z9(t);let n=z9(e);return I9(n)&&I9(t)&&Object.keys(t).forEach(r=>{F9(t[r])&&r in e?n[r]=B9(e[r],t[r]):Object.assign(n,{[r]:t[r]})}),n}function $Se(e,t){let n=t.split(`.`);t=``;do{t+=n.shift();let r=!n.length;if(P9(e)){if(F9(e)&&ZSe(e[t])&&(F9(e[t])||L9(e[t])||r)){e=e[t],t=``;continue}if(L9(e)){if(t===`length`&&r){e=e.length,t=``;continue}if(/^\d+$/.test(t)){let n=parseInt(t,10);if(ZSe(e[n])&&(F9(e[n])||L9(e[n])||r)){e=e[n],t=``;continue}}}}r?e=void 0:t+=`.`}while(n.length);return e}function eCe(e,t,n){return B9(e,tCe(t,n))}function tCe(e,t){return e.split(`.`).reduceRight((e,t)=>({[t]:e}),t)}function nCe(e){return/^class\s/.test(Function.prototype.toString.call(e))}function rCe(e,t){return nCe(t)?{provide:e,useClass:t}:{provide:e,useFactory:t}}function iCe(e={}){return aCe({...e,isRoot:!0})}function V9(e,t,n,r,i){if(t===void 0)return rCe(e,n);if(typeof t==`function`){if(nCe(t)){let e=t.name||`YourClass`;console.warn(`@ngx-translate/core: "${r}" received a bare class (${e}); auto-wrapping with ${i}(). For clarity, prefer ${r}: ${i}(${e}).`)}return rCe(e,t)}return t}function aCe(e){let t=[],n=V9(W9,e.loader,lCe,`loader`,`provideTranslateLoader`),r=V9(U9,e.compiler,cCe,`compiler`,`provideTranslateCompiler`),i=V9(G9,e.parser,uCe,`parser`,`provideTranslateParser`),a=V9(H9,e.missingTranslationHandler,sCe,`missingTranslationHandler`,`provideMissingTranslationHandler`);t.push(n,r,i,a),t.push(K9);let o={fallbackLang:e.fallbackLang??null,lang:e.lang,isRoot:e.isRoot};return t.push({provide:q9,useValue:o}),t.push({provide:Y9,useClass:Y9}),t}var oCe,H9,sCe,U9,cCe,W9,lCe,G9,uCe,K9,q9,J9,Y9,dCe;function X9(){return(X9=n((()=>{Fe(),YSe(),mt(),y(),cee(),aee(),ot(),Oz(),Ez(),lt(),iee(),bz(),vt(),u(),eee(),see(),wz(),lee(),oCe=class{state=S({});hasAny=$e(()=>Object.keys(this.state()).length>0);isLoading(e){return this.state()[e]!==void 0}get(e){return this.state()[e]}set(e,t){this.state.update(n=>({...n,[e]:t}))}clear(e){this.state.update(t=>XSe(t,e))}clearIfOwner(e,t){this.state.update(n=>n[e]===t?XSe(n,e):n)}},H9=class{},sCe=(()=>{class e{handle(e){return e.key}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),U9=class{},cCe=(()=>{class e extends U9{compile(e,t){return e}compileTranslations(e,t){return e}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),W9=class{},lCe=(()=>{class e extends W9{getTranslation(e){return ct({})}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),G9=class{},uCe=(()=>{class e extends G9{templateMatcher=/{{\s?([^{}\s]*)\s?}}/g;interpolate(e,t){if(R9(e))return this.interpolateString(e,t);if(QSe(e))return this.interpolateFunction(e,t)}interpolateFunction(e,t){return e(t)}interpolateString(e,t){return t?e.replace(this.templateMatcher,(e,n)=>{let r=this.getInterpolationReplacement(t,n);return r===void 0?e:r}):e}getInterpolationReplacement(e,t){return this.formatValue($Se(e,t))}formatValue(e){if(R9(e))return e;if(typeof e==`number`||typeof e==`boolean`)return e.toString();if(e===null)return`null`;if(L9(e))return e.join(`, `);if(I9(e))return typeof e.toString==`function`&&e.toString!==Object.prototype.toString?e.toString():JSON.stringify(e)}static ɵfac=(()=>{let t;return function(n){return(t||=he(e))(n||e)}})();static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),K9=(()=>{class e{_translations=S({});translations=this._translations.asReadonly();_languages=S([]);languages=this._languages.asReadonly();_lastTranslationChange=S(null);lastTranslationChange=this._lastTranslationChange.asReadonly();_translationChange$=new me;translationChange$=this._translationChange$.asObservable();constructor(){O(Ee).onDestroy(()=>{this._translationChange$.complete()})}getTranslations(e){return this.translations()[e]}setTranslations(e,t,n){this._translations.update(r=>({...r,[e]:n&&this.hasTranslationFor(e)?B9(r[e],t):t})),this.addLanguages([e]);let r={lang:e,translations:this.getTranslations(e)};this._lastTranslationChange.set(r),this._translationChange$.next(r)}getLanguages(){return this.languages()}addLanguages(e){this._languages.update(t=>Array.from(new Set([...t,...e])))}hasTranslationFor(e){return this.translations()[e]!==void 0}deleteTranslations(e){this._translations.update(t=>{let{[e]:n,...r}=t;return r})}getTranslationValue(e,t){return $Se(this.getTranslations(e),t)}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),q9=new Ze(`TRANSLATE_CONFIG`),J9=e=>ht(e)?e:ct(e),Y9=(()=>{class e{loadingTranslations=new oCe;lastUseLanguage=null;currentLoader=O(W9);compiler=O(U9);parser=O(G9);missingTranslationHandler=O(H9);store=O(K9);destroyRef=O(Ee);parent;get isRoot(){return this.parent===null}_onLangChange=new me;_onFallbackLangChange=new me;_currentLang=S(null);_fallbackLang=S(null);_onTranslationRefresh=null;_isLoading=$e(()=>this.loadingTranslations.hasAny()||(this.parent?.isLoading()??!1));getRoot(){let e=this;for(;e.parent;)e=e.parent;return e}getParent(){return this.parent}getActiveRequestedLang(){return this.getRoot().lastUseLanguage}hasTranslationInChain(e){for(let t=this;t;t=t.parent)if(t.store.hasTranslationFor(e))return!0;return!1}chainTranslationChange$(){let e=[];for(let t=this;t;t=t.parent)e.push(t.store.translationChange$);return e.length===1?e[0]:_t(...e)}get onTranslationChange(){return this.store.translationChange$}get onLangChange(){return this.isRoot?this._onLangChange.asObservable():this.parent?this.parent.onLangChange:at}get onFallbackLangChange(){return this.isRoot?this._onFallbackLangChange.asObservable():this.parent?this.parent.onFallbackLangChange:at}get onTranslationRefresh(){if(!this._onTranslationRefresh){let e=_t(this.onTranslationChange.pipe(yt(e=>e.lang===this.getCurrentLang()||e.lang===this.getFallbackLang())),this.onLangChange,this.onFallbackLangChange).pipe(fe(()=>void 0));this._onTranslationRefresh=this.isRoot?e:this.parent?_t(e,this.parent.onTranslationRefresh):e}return this._onTranslationRefresh}constructor(){let t={isRoot:!0,fallbackLang:null,...O(q9,{optional:!0})};this.parent=t.isRoot?null:O(e,{optional:!0,skipSelf:!0});let n=O(Ee);if(this.isRoot)t.lang&&this.use(t.lang),t.fallbackLang&&this.setFallbackLang(t.fallbackLang);else{let e=this.getCurrentLang();e&&this.loadOrExtendLanguage(e)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e}". Cause:`,t)}});let t=this.getFallbackLang();t&&t!==e&&this.loadOrExtendLanguage(t)?.pipe(M9(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}this.onLangChange.pipe(M9(n)).subscribe(e=>{this.isRoot||this.loadOrExtendLanguage(e.lang)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),this.onFallbackLangChange.pipe(M9(n)).subscribe(e=>{this.isRoot||this.loadOrExtendLanguage(e.lang)?.pipe(M9(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),n.onDestroy(()=>{this._onLangChange.complete(),this._onFallbackLangChange.complete()})}setFallbackLang(e){if(!this.isRoot)return this.parent.setFallbackLang(e);this._fallbackLang()||this._fallbackLang.set(e);let t=this.loadOrExtendLanguage(e);return ht(t)?(t.pipe(ft(1)).subscribe({next:()=>{this._fallbackLang.set(e),this._onFallbackLangChange.next({lang:e,translations:this.store.getTranslations(e)})},error:t=>{console.warn(`@ngx-translate/core: failed to load fallback "${e}". Cause:`,t)}}),t):(this._fallbackLang.set(e),this._onFallbackLangChange.next({lang:e,translations:this.store.getTranslations(e)}),ct(this.store.getTranslations(e)))}get isLoading(){return this._isLoading}use(e){if(!this.isRoot)return this.parent.use(e);let t=this._currentLang(),n=this.lastUseLanguage;this.lastUseLanguage=e,this._currentLang()||this._currentLang.set(e);let r=this.loadOrExtendLanguage(e);return ht(r)?(r.pipe(ft(1)).subscribe({next:()=>{this.changeLang(e)},error:r=>{this.lastUseLanguage===e&&(this._currentLang.set(t),this.lastUseLanguage=n),console.warn(`@ngx-translate/core: failed to load "${e}". currentLang was NOT changed; remains "${t??`null`}". Cause:`,r)}}),r):(this.changeLang(e),ct(this.store.getTranslations(e)))}loadOrExtendLanguage(e){return this.store.hasTranslationFor(e)?ct(this.store.getTranslations(e)):this.loadAndCompileTranslations(e)}getTranslations(e){return this.store.getTranslations(e)}changeLang(e){e===this.lastUseLanguage&&(this._currentLang.set(e),this._onLangChange.next({lang:e,translations:this.store.getTranslations(e)}))}getCurrentLang(){return this.isRoot?this._currentLang():this.parent?.getCurrentLang()??null}loadAndCompileTranslations(e){let t=this.loadingTranslations.get(e);if(t)return t;let n=this.currentLoader.getTranslation(e).pipe(fe(t=>this.compiler.compileTranslations(t,e)),Dz(t=>{this.store.setTranslations(e,t,!1),this.loadingTranslations.clearIfOwner(e,n)}),Tz(()=>this.loadingTranslations.clearIfOwner(e,n)),oee({bufferSize:1,refCount:!0}));return this.loadingTranslations.set(e,n),n.pipe(M9(this.destroyRef)).subscribe({error:()=>{}}),n}setTranslation(e,t,n=!1){let r=this.compiler.compileTranslations(t,e);this.store.setTranslations(e,r,n)}setCompiledTranslation(e,t,n=!1){this.store.setTranslations(e,t,n)}getLangs(){return this.store.getLanguages()}addLangs(e){this.store.addLanguages(e)}getParsedResultForKey(e,t,n){let r=this.getTextToInterpolate(e,n);if(P9(r))return this.runInterpolation(r,t);let i=this.getMissingTranslationHandler().handle({key:e,translateService:this,...t!==void 0&&{interpolateParams:t}});return i===void 0?e:i}getMissingTranslationHandler(){return this.missingTranslationHandler}getFallbackLang(){return this.isRoot?this._fallbackLang():this.parent?.getFallbackLang()??null}getTextToInterpolate(e,t){if(t){let n=this.store.getTranslationValue(t,e);return n===void 0?this.parent?.getTextToInterpolate(e,t):n}let n=this.getCurrentLang(),r=this.getFallbackLang(),i;return n&&(i=this.store.getTranslationValue(n,e)),!P9(i)&&r&&r!==n&&(i=this.store.getTranslationValue(r,e)),i===void 0?this.parent?.getTextToInterpolate(e):i}runInterpolation(e,t){if(P9(e))return L9(e)?this.runInterpolationOnArray(e,t):F9(e)?this.runInterpolationOnDict(e,t):this.parser.interpolate(e,t)}runInterpolationOnArray(e,t){return e.map(e=>this.runInterpolation(e,t))}runInterpolationOnDict(e,t){let n={};for(let r in e){let i=this.runInterpolation(e[r],t);i!==void 0&&(n[r]=i)}return n}getParsedResult(e,t,n){return e instanceof Array?this.getParsedResultForArray(e,t,n):this.getParsedResultForKey(e,t,n)}getParsedResultForArray(e,t,n){let r={},i=!1;for(let a of e)r[a]=this.getParsedResultForKey(a,t,n),i||=ht(r[a]);if(!i)return r;let a=e.map(e=>J9(r[e]));return pt(a).pipe(fe(t=>{let n={};return t.forEach((t,r)=>{n[e[r]]=t}),n}))}get(e,t,n){if(!P9(e)||!e.length)return ct(``);let r=n??this.getActiveRequestedLang()??this.getCurrentLang(),i=r?this.loadingTranslations.get(r):void 0;return i?i.pipe(Cz(()=>J9(this.getParsedResult(e,t,n)))):J9(this.getParsedResult(e,t,n))}getStreamOnTranslationChange(e,t,n){if(!P9(e)||!e.length)throw Error(`Parameter "key" is required and cannot be empty`);return ut(yz(()=>this.get(e,t,n)),this.onTranslationChange.pipe(gt(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}stream(e,t,n){if(!P9(e)||!e.length)throw Error(`Parameter "key" required`);let r=n?_t(this.onLangChange,this.chainTranslationChange$().pipe(yt(e=>e.lang===n))):this.onLangChange;return ut(yz(()=>this.get(e,t,n)),r.pipe(gt(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}instant(e,t,n){if(!P9(e)||e.length===0)return``;n&&!this.hasTranslationInChain(n)&&this.warnUnloadedInstantLang(n);let r=this.getParsedResult(e,t,n);return ht(r)?this.keyToObject(e):r}warnedUnloadedInstantLangs=new Set;warnUnloadedInstantLang(e){let t=this.getRoot();t===this?this.warnedUnloadedInstantLangs.has(e)||Qe(()=>{this.warnedUnloadedInstantLangs.add(e),console.warn(`@ngx-translate/core: instant() called with lang="${e}" but no translations are loaded for that language. Returning the key as fallback. Load with use("${e}") or setTranslation("${e}", ...) first.`)}):t.warnUnloadedInstantLang(e)}translate(e,t,n){return $e(()=>{let r=typeof e==`function`?e():e,i=typeof t==`function`?t():t,a=typeof n==`function`?n():n;return this.instant(r,i,a)})}keyToObject(e){return Array.isArray(e)?e.reduce((e,t)=>(e[t]=t,e),{}):e}set(e,t,n=this.getCurrentLang()){this.store.setTranslations(n,eCe(this.store.getTranslations(n),e,R9(t)?this.compiler.compile(t,n):this.compiler.compileTranslations(t,n)),!1)}reloadLang(e){return this.resetLang(e),this.loadAndCompileTranslations(e)}resetLang(e){this.loadingTranslations.clear(e),this.store.deleteTranslations(e)}static getBrowserLang(){if(typeof window>`u`||!window.navigator)return;let e=this.getBrowserCultureLang();return e?e.split(/[-_]/)[0]:void 0}static getBrowserCultureLang(){if(typeof window<`u`&&window.navigator!==void 0)return window.navigator.languages?window.navigator.languages[0]:window.navigator.language||window.navigator.browserLanguage||window.navigator.userLanguage}getBrowserLang(){return e.getBrowserLang()}getBrowserCultureLang(){return e.getBrowserCultureLang()}get currentLang(){return this.isRoot?this._currentLang.asReadonly():this.parent.currentLang}get fallbackLang(){return this.isRoot?this._fallbackLang.asReadonly():this.parent.fallbackLang}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})(),dCe=(()=>{class e{translateService=O(Y9);cachedSignal=null;lastKey=null;lastParams;transform(e,...t){if(!e||!e.length)return e;let n=this.parseArgs(t);return(e!==this.lastKey||!N9(n,this.lastParams))&&(this.cachedSignal=this.translateService.translate(e,n),this.lastKey=e,this.lastParams=n),this.cachedSignal()}parseArgs(e){if(P9(e[0])&&e.length){if(R9(e[0])&&e[0].length){let t=e[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g,`"$2":`).replace(/:(\s)?(')(.*?)(')/g,`:"$3"`);try{return JSON.parse(t)}catch{throw SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${e[0]}`)}}if(F9(e[0]))return e[0]}}static ɵfac=function(t){return new(t||e)};static ɵpipe=A({name:`translate`,type:e,pure:!1});static ɵprov=E({token:e,factory:e.ɵfac})}return e})()})))()}function fCe(e={}){if(`resources`in e&&e.resources)return pCe(e);let t=e;return pCe({enforceLoading:t.enforceLoading??!1,useHttpBackend:t.useHttpBackend??!1,failOnError:t.failOnError??!1,resources:[{prefix:t.prefix??`/assets/i18n/`,suffix:t.suffix??`.json`}]})}function pCe(e={}){return[{provide:Z9,useValue:{resources:[`/assets/i18n/`],...e}},{provide:W9,useClass:mCe}]}var Z9,mCe;function hCe(){return(hCe=n((()=>{_4(),Fe(),X9(),Sz(),mt(),lt(),u(),Z9=new Ze(`TRANSLATE_HTTP_LOADER_CONFIG`),mCe=(()=>{class e{http;config;constructor(){this.config={resources:[],enforceLoading:!1,useHttpBackend:!1,...O(Z9)},this.http=this.config.useHttpBackend?new g4(O(p4)):O(g4)}getTranslation(e){let t=this.config.enforceLoading?`?enforceLoading=${Date.now()}`:``,n=this.config.resources.map(n=>{let r=typeof n==`string`?`${n}${e}.json`:`${n.prefix}${e}${n.suffix??`.json`}`,i=this.http.get(`${r}${t}`);return this.config.failOnError?i:i.pipe(xz(t=>(console.warn(`@ngx-translate/http-loader: error loading translation for ${e}:`,t),ct({}))))});return n.length===0?ct({}):pt(n).pipe(fe(e=>e.reduce((e,t)=>B9(e,t),{})))}static ɵfac=function(t){return new(t||e)};static ɵprov=E({token:e,factory:e.ɵfac})}return e})()})))()}var Q9;function gCe(){return(gCe=n((()=>{ce(),Fe(),X9(),Q9=class{translate=O(Y9);zone=O(we);constructor(){window.addEventListener(`language-changed`,e=>{this.zone.run(()=>{this.translate.use(e.detail.lang)})})}static ctorParameters=()=>[]},Q9=tt([Me()],Q9)})))()}var _Ce=r({default:()=>vCe}),$9,vCe;function yCe(){return(yCe=n((()=>{gSe(),k9(),CSe(),ISe(),JSe(),X9(),hCe(),_4(),gCe(),Fe(),SSe(qSe),$9=`pl`,vCe={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{codePanel:!0},backgrounds:{options:{gray0:{name:`gray-0`,value:`#ffffff`},gray10:{name:`gray-10`,value:`#e6e6e6`},gray20:{name:`gray-20`,value:`#cccccc`},gray30:{name:`gray-30`,value:`#b3b3b3`},gray46:{name:`gray-46`,value:`#898989`},gray60:{name:`gray-60`,value:`#666666`},gray75:{name:`gray-75`,value:`#3f3f3f`},gray80:{name:`gray-80`,value:`#333333`},gray84:{name:`gray-84`,value:`#292929`},gray87:{name:`gray-87`,value:`#212121`},gray92:{name:`gray-92`,value:`#141414`},gray100:{name:`gray-100`,value:`#000000`}}}},globalTypes:{locale:{description:`Język aplikacji`,defaultValue:`pl`,toolbar:{icon:`globe`,items:[{value:`en`,right:`🇬🇧`,title:`English`},{value:`pl`,right:`🇵🇱`,title:`Polski`}]}}},decorators:[NSe({themes:{light:`light-theme`,dark:`dark-theme`},defaultTheme:`dark`}),_Se({providers:[nbe(),iCe({loader:fCe({prefix:`./assets/i18n/`,suffix:`.json`}),fallbackLang:`pl`,lang:`pl`}),Q9,Ae(()=>{O(Q9);let e=new CustomEvent(`language-changed`,{detail:{lang:$9}});window.dispatchEvent(e)})]}),(e,t)=>{$9=t.globals.locale;let n=new CustomEvent(`language-changed`,{detail:{lang:$9}});return window.dispatchEvent(n),e()}]}})))()}function bCe(e=[]){let t=[e[0]??gde,e[1]??qbe,e[2]??Jbe,e[3]??yxe,e[4]??wxe,e[5]??Axe,e[6]??_Ce];return xCe(t)}var xCe;function SCe(){return(SCe=n((()=>{kz(),r7(),p7(),bxe(),Txe(),jxe(),yCe(),{composeConfigs:xCe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var CCe;function wCe(){return(wCe=n((()=>{fz(),gz(),vz(),SCe(),bp(),{PreviewWeb:CCe}=__STORYBOOK_MODULE_PREVIEW_API__,window.__STORYBOOK_PREVIEW__=window.__STORYBOOK_PREVIEW__||new CCe(hde,bCe),window.__STORYBOOK_STORY_STORE__=window.__STORYBOOK_STORY_STORE__||window.__STORYBOOK_PREVIEW__.storyStore})))()}function TCe(){return(TCe=n((()=>{Ot(),wCe()})))()}export{bz as C,yz as S,Dz as _,k9 as a,xz as b,v4 as c,_4 as d,C2 as f,Oz as g,f2 as h,X9 as i,b4 as l,s2 as m,dCe as n,O9 as o,w2 as p,Y9 as r,bSe as s,TCe as t,g4 as u,Tz as v,Sz as x,Ez as y};
