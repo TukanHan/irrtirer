@@ -1,4 +1,4 @@
-@use "tailwindcss";
+@use 'tailwindcss';
 
 @theme {
     --gray-10: #e6e6e6;
@@ -29,8 +29,8 @@
     --color-surface-panel-contrast: light-dark(var(--gray-80), #e5e5e5);
     --color-surface-toolbar: light-dark(#f3f3f3, var(--gray-80));
 
-    --font-sans: "Roboto", sans-serif;
-    --font-serif: "Monomakh", serif;
+    --font-sans: 'Roboto', sans-serif;
+    --font-serif: 'Monomakh', serif;
 }
 
 .force {

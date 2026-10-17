@@ -1,11 +1,9 @@
 <div class="label">
-    <span class="label-content">{{label()}}</span>
+    <span class="label-content">{{ label() }}</span>
     <button class="toggle-button" mat-icon-button (click)="toggle()">
-        <mat-icon class="chevron" [class.closed]="!isOpen()">
-            keyboard_arrow_up
-        </mat-icon>
+        <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
     </button>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    <ng-content/>
+    <ng-content />
 </app-expandable-panel>

@@ -12,7 +12,7 @@ describe('ToolbarComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ToolbarComponent, RouterModule.forRoot([])],
-            providers: [provideTranslateService({}), provideMockStore()]
+            providers: [provideTranslateService({}), provideMockStore()],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ToolbarComponent);

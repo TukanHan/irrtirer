@@ -1,16 +1,4 @@
-import {
-    AfterViewInit,
-    Component,
-    computed,
-    DestroyRef,
-    effect,
-    ElementRef,
-    inject,
-    input,
-    model,
-    output,
-    viewChild,
-} from '@angular/core';
+import { AfterViewInit, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, output, viewChild } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color, { ColorInstance } from 'color';
 

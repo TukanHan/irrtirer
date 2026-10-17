@@ -1,6 +1,6 @@
-import { Signal } from "@angular/core";
+import { Signal } from '@angular/core';
 
-export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden'
+export type ActionVisibility = 'on' | 'off' | 'disabled' | 'hidden';
 
 export interface RibbonAction {
     visibility: Signal<ActionVisibility>;

@@ -26,8 +26,8 @@ export function storageMetaReducer<S, A extends Action = Action>(reducer: Action
             onInit = false;
 
             const savedState = getSavedState(stateLocalStorageKey);
-            restoreStateModelObjects(savedState as { mosaicProject: MosaicProjectModel});
-            
+            restoreStateModelObjects(savedState as { mosaicProject: MosaicProjectModel });
+
             return { ...nextState, ...savedState };
         }
 

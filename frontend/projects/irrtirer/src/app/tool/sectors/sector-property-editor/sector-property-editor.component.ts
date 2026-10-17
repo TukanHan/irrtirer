@@ -91,7 +91,7 @@ export class SectorPropertyEditorComponent implements OnInit {
         min(schemaPath.sectionMinAngle, 10, { error: { kind: 'sectionMinAngleOutOfRange' } });
         max(schemaPath.sectionMinAngle, 90, { error: { kind: 'sectionMinAngleOutOfRange' } });
 
-        min(schemaPath.minTileRadius, 0.00, { error: { kind: 'valueCannotBeNegative' } });
+        min(schemaPath.minTileRadius, 0.0, { error: { kind: 'valueCannotBeNegative' } });
         min(schemaPath.maxTileRadius, 0.01, { error: { kind: 'valueToSmall' } });
         min(schemaPath.tilesMargin, 0.01, { error: { kind: 'valueToSmall' } });
         required(schemaPath.tilesMargin);

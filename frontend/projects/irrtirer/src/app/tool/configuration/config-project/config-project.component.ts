@@ -25,7 +25,7 @@ interface ProjectConfigForm {
     selector: 'app-config-project',
     imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
-    host: { class: 'flex flex-col gap-5' }
+    host: { class: 'flex flex-col gap-5' },
 })
 export class ConfigProjectComponent {
     private readonly snackBar = inject(MatSnackBar);

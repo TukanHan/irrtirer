@@ -25,11 +25,7 @@ describe('SectorContourEditionComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [SectorContourEditionComponent],
-            providers: [
-                provideMockStore({ initialState }),
-                provideTranslateService({}),
-                { provide: ActivatedRoute, useValue: mockActivatedRoute }
-            ],
+            providers: [provideMockStore({ initialState }), provideTranslateService({}), { provide: ActivatedRoute, useValue: mockActivatedRoute }],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorContourEditionComponent);

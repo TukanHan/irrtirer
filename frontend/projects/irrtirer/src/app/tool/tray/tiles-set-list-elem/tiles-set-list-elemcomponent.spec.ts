@@ -19,7 +19,7 @@ describe('TilesSetListElemComponent', () => {
         fixture = TestBed.createComponent(TilesSetListElemComponent, {
             bindings: [inputBinding('tilesSet', () => tilesSetMock)],
         });
-        
+
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -3,38 +3,30 @@
     <span class="block-label">{{ tilesSetValue.name }}</span>
     <div class="flex -m-1.5">
         <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon matListIcon>
-                more_vert
-            </mat-icon>
+            <mat-icon matListIcon> more_vert </mat-icon>
         </button>
         <button class="button-size-small !text-contrast-medium" mat-icon-button (click)="toggleTilesList()">
-            <mat-icon class="chevron" [class.closed]="!isOpen()">
-                keyboard_arrow_up
-            </mat-icon>
+            <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
         </button>
 
         <mat-menu #menu="matMenu" classList="paddingless">
             @if (tilesSetValue.source === 'generated') {
                 <button mat-menu-item (click)="navigateToRandomSetAgain()">
-                    <mat-icon class="material-symbols-outlined" matListIcon>
-                        shuffle
-                    </mat-icon>
+                    <mat-icon class="material-symbols-outlined" matListIcon> shuffle </mat-icon>
                     {{ 'tool.tiles.menu.generateAgain' | translate }}
                 </button>
             }
             <button mat-menu-item (click)="removeTilesSet()">
-                <mat-icon class="material-symbols-outlined" matListIcon>
-                    delete
-                </mat-icon>
+                <mat-icon class="material-symbols-outlined" matListIcon> delete </mat-icon>
                 {{ 'tool.tiles.menu.removeTilesSet' | translate }}
             </button>
         </mat-menu>
     </div>
 </div>
 <app-expandable-panel [isOpen]="isOpen()">
-    <app-scrollable-list class="mt-1.5" [items]="tilesSetValue.tiles" >
+    <app-scrollable-list class="mt-1.5" [items]="tilesSetValue.tiles">
         <ng-template #element let-tile>
-            <app-tile-list-elem [tile]="tile"/>
+            <app-tile-list-elem [tile]="tile" />
         </ng-template>
     </app-scrollable-list>
 </app-expandable-panel>

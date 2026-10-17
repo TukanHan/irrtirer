@@ -11,9 +11,5 @@ export function rotatePointAroundPoint(point: Vector, center: Vector, angle: num
 }
 
 export function transformPolygon(polygon: Vector[], position: Vector, angle: number = 0, scale: number = 1): Vector[] {
-    return polygon
-        .map((vertex: Vector) => rotatePointAroundPoint(vertex, Vector.zero, angle)
-            .multiply(scale)
-            .add(position)
-        );
+    return polygon.map((vertex: Vector) => rotatePointAroundPoint(vertex, Vector.zero, angle).multiply(scale).add(position));
 }

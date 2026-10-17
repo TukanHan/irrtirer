@@ -37,10 +37,13 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
 
     private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
 
-    private readonly currentOptions = computed<Required<CanvasOptions>>(() => ({
-        ...DEFAULT_CANVAS_OPTIONS,
-        ...this.options(),
-    } as Required<CanvasOptions>));
+    private readonly currentOptions = computed<Required<CanvasOptions>>(
+        () =>
+            ({
+                ...DEFAULT_CANVAS_OPTIONS,
+                ...this.options(),
+            }) as Required<CanvasOptions>,
+    );
 
     private readonly _viewport = signal<Viewport>(new Viewport(Vector.zero, 1, { width: 0, height: 0 }));
 
@@ -109,11 +112,12 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         const viewport = this._viewport();
         const cursorWorldPos: IVector = viewport.getWorldPosition(new Vector(event.offsetX, event.offsetY));
         const zoomDelta: number = viewport.zoom * (event.deltaY / 1000);
-        const zoomMultiplier = Math.max(Math.min(viewport.zoom + zoomDelta, this.currentOptions().maxZoom), this.currentOptions().minZoom) / viewport.zoom;
+        const zoomMultiplier =
+            Math.max(Math.min(viewport.zoom + zoomDelta, this.currentOptions().maxZoom), this.currentOptions().minZoom) / viewport.zoom;
 
         const newPosition: Vector = new Vector(
             cursorWorldPos.x - (cursorWorldPos.x - viewport.position.x) * zoomMultiplier,
-            cursorWorldPos.y - (cursorWorldPos.y - viewport.position.y) * zoomMultiplier
+            cursorWorldPos.y - (cursorWorldPos.y - viewport.position.y) * zoomMultiplier,
         );
 
         this._viewport.set(new Viewport(newPosition, viewport.zoom * zoomMultiplier, viewport.pxSize));
@@ -141,7 +145,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
             const viewport = this._viewport();
             const newPosition: Vector = new Vector(
                 viewport.position.x - UnitConverter.pxToCm(event.movementX) * viewport.zoom,
-                viewport.position.y - UnitConverter.pxToCm(event.movementY) * viewport.zoom
+                viewport.position.y - UnitConverter.pxToCm(event.movementY) * viewport.zoom,
             );
 
             this._viewport.set(new Viewport(newPosition, viewport.zoom, viewport.pxSize));
@@ -219,7 +223,7 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         const scaleFactor = options?.scaleFactor ?? 1.0;
         const pxSize = {
             width: viewport.pxSize.width * scaleFactor,
-            height: viewport.pxSize.height * scaleFactor
+            height: viewport.pxSize.height * scaleFactor,
         };
 
         const snapshotViewport = new Viewport(viewport.position, viewport.zoom / scaleFactor, pxSize, scaleFactor);

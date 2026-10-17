@@ -3,16 +3,16 @@ import { MosaicGenerationService } from './mosaic-generation.service';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('MosaicGenerationService', () => {
-  let service: MosaicGenerationService;
+    let service: MosaicGenerationService;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [MosaicGenerationService]
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            providers: [MosaicGenerationService],
+        });
+        service = TestBed.inject(MosaicGenerationService);
     });
-    service = TestBed.inject(MosaicGenerationService);
-  });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(service).toBeTruthy();
+    });
 });

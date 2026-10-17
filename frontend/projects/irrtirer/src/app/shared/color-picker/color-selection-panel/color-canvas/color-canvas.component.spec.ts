@@ -13,11 +13,7 @@ describe('ColorCanvasComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(ColorCanvasComponent, {
-            bindings: [
-                inputBinding('hValue', () => 0.5),
-                inputBinding('sValue', () => 0.87),
-                inputBinding('vValue', () => 0.72),
-            ],
+            bindings: [inputBinding('hValue', () => 0.5), inputBinding('sValue', () => 0.87), inputBinding('vValue', () => 0.72)],
         });
 
         component = fixture.componentInstance;

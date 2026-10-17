@@ -21,7 +21,7 @@ export class GeneratedSectorModel {
 
     public addSection(generatedSection: GeneratedSectionModel): void {
         this.sections.push(generatedSection);
-        generatedSection.tiles.forEach(tile => tile.tileObject.setVisibility(this.areTilesVisible));
+        generatedSection.tiles.forEach((tile) => tile.tileObject.setVisibility(this.areTilesVisible));
         this.tilesSub.next(this.sections.flatMap((section) => section.tiles));
     }
 

@@ -1,4 +1,4 @@
-import { BaseCanvasObject, CanvasObject, IVector, Viewport } from "../../../../../active-canvas/src/public-api";
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
 
 const BASE_LINE_THICKNESS: number = 10;
 const BASE_POINT_RADIUS: number = 10;
@@ -8,7 +8,7 @@ export class OpenedContourObject extends BaseCanvasObject implements CanvasObjec
         private readonly vertices: IVector[],
         private readonly selectedIndex: number,
         private readonly hexColor: string,
-        private readonly order: number = 100
+        private readonly order: number = 100,
     ) {
         super();
     }

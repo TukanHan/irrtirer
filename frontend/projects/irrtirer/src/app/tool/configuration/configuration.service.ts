@@ -8,7 +8,7 @@ export interface ImageChange {
 
 @Injectable()
 export class ConfigurationService {
-    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false});
+    private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false });
 
     public readonly imageChange = this._imageChange.asReadonly();
 

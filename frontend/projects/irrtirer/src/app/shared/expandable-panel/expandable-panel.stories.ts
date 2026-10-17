@@ -10,16 +10,14 @@ import { Component } from '@angular/core';
 class DummyItemComponent {}
 
 type ExpandablePanelStoryProps = ExpandablePanelComponent & {
-  count: number;
+    count: number;
 };
 
 const meta: Meta<ExpandablePanelStoryProps> = {
     title: 'Komponenty/Expandable Panel',
     component: ExpandablePanelComponent,
     tags: ['autodocs'],
-    decorators: [
-        moduleMetadata({ imports: [DummyItemComponent]}),
-    ],
+    decorators: [moduleMetadata({ imports: [DummyItemComponent] })],
 };
 
 export default meta;
@@ -39,12 +37,14 @@ export const Default: Story = {
                 }
             </app-expandable-panel>
         `,
-        styles: [`
+        styles: [
+            `
             .panel {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
             }
-        `],
-    })
+        `,
+        ],
+    }),
 };

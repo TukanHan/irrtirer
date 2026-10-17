@@ -31,7 +31,7 @@ export class TilesSetListElemComponent {
     private readonly dialog = inject(MatDialog);
 
     private readonly translate = inject(TranslateService);
-    
+
     private readonly destroyRef = inject(DestroyRef);
 
     private readonly router = inject(Router);
@@ -41,11 +41,13 @@ export class TilesSetListElemComponent {
     }
 
     protected removeTilesSet(): void {
-        this.showRemoveTilesSetWarning().pipe(takeUntilDestroyed(this.destroyRef)).subscribe((result) => {
-            if (result) {
-                this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet: this.tilesSet() }));
-            }
-        });
+        this.showRemoveTilesSetWarning()
+            .pipe(takeUntilDestroyed(this.destroyRef))
+            .subscribe((result) => {
+                if (result) {
+                    this.store.dispatch(MosaicProjectActions.tilesSetRemoved({ removedTilesSet: this.tilesSet() }));
+                }
+            });
     }
 
     private showRemoveTilesSetWarning(): Observable<boolean> {

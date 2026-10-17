@@ -58,7 +58,7 @@ export class TileGenerator {
 
     private randomColor(): ColorInstance {
         const pixelCount = this.imagePixelArray.length / 4;
-        const pixelIndex = RandomHelper.nextInt(0, pixelCount-1);
+        const pixelIndex = RandomHelper.nextInt(0, pixelCount - 1);
 
         return Color({
             r: this.imagePixelArray[pixelIndex * 4],
@@ -72,10 +72,7 @@ export class TileGenerator {
     }
 
     private roundVertexCoords(vertex: Vector): Vector {
-        return new Vector(
-            Math.round((vertex.x + Number.EPSILON) * 100) / 100,
-            Math.round((vertex.y + Number.EPSILON) * 100) / 100,
-        );
+        return new Vector(Math.round((vertex.x + Number.EPSILON) * 100) / 100, Math.round((vertex.y + Number.EPSILON) * 100) / 100);
     }
 
     private rotatePolygonToHorizontal(vertices: Vector[]): Vector[] {

@@ -10,7 +10,7 @@ export interface InitInfoState extends BaseInfoState {
 }
 
 interface BaseInfoState {
-    type: 'progress' | 'init'
+    type: 'progress' | 'init';
 }
 
 export type InfoState = ProgressInfoState | InitInfoState;

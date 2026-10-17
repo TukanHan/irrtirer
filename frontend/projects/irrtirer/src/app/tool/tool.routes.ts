@@ -44,7 +44,7 @@ export const toolRoutes: Routes = [
             { path: ':id/property', component: SectorPropertyEditorComponent },
             { path: ':id/contour', component: SectorContourEditionComponent },
             { path: 'contour', component: SectorContourEditionComponent },
-        ]
+        ],
     },
     {
         path: 'generating',

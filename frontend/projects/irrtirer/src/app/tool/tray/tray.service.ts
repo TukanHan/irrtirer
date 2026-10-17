@@ -52,7 +52,7 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.left.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.left.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
             this.drawChart(
                 tree.right,
@@ -62,13 +62,13 @@ export class TrayService {
                     width: frame.width * (tree.split === 'horizontal' ? tree.right.size.width / widthSum : 1),
                     height: frame.height * (tree.split === 'horizontal' ? 1 : tree.right.size.height / heightSum),
                 },
-                activeCanvas
+                activeCanvas,
             );
         } else {
             const worldTileVertices: Vector[] = transformPolygon(
                 tree.value.vertices,
                 new Vector(frame.x + frame.width / 2, frame.y + frame.height / 2),
-                0
+                0,
             );
             const tileObject: TileObject = new TileObject(worldTileVertices, tree.value.color);
             activeCanvas.addCanvasObject(tileObject);

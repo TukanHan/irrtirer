@@ -1,11 +1,11 @@
-@use "./components/button-theme" as button;
-@use "./components/input-theme" as input;
-@use "./components/menu-theme" as menu;
-@use "./components/tooltip-theme" as tooltip;
-@use "./components/icon-theme" as icon;
-@use "./components/dialog-theme" as dialog;
-@use "./components/autocomplete-theme" as autocomplete;
-@use "./components/sidenav-theme" as sidenav;
+@use './components/button-theme' as button;
+@use './components/input-theme' as input;
+@use './components/menu-theme' as menu;
+@use './components/tooltip-theme' as tooltip;
+@use './components/icon-theme' as icon;
+@use './components/dialog-theme' as dialog;
+@use './components/autocomplete-theme' as autocomplete;
+@use './components/sidenav-theme' as sidenav;
 
 :root {
     @include button.variables();

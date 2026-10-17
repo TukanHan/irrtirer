@@ -3,20 +3,23 @@
     <span class="text-sm text-contrast-medium">{{ value() }}</span>
 </div>
 
-<div role="presentation" 
+<div
+    role="presentation"
     class="color-preview"
     [class.disabled]="disabled()"
     [style.background-color]="value()"
     (click)="toggleColorPanel()"
-    cdkOverlayOrigin 
-    #trigger="cdkOverlayOrigin">
-</div>
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+></div>
 
-<ng-template cdkConnectedOverlay 
+<ng-template
+    cdkConnectedOverlay
     [cdkConnectedOverlayOrigin]="trigger"
-    [cdkConnectedOverlayOpen]="isOpen()" 
+    [cdkConnectedOverlayOpen]="isOpen()"
     [cdkConnectedOverlayHasBackdrop]="isOpen()"
     [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
-    (backdropClick)="toggleColorPanel()">
-    <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)"/>
+    (backdropClick)="toggleColorPanel()"
+>
+    <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)" />
 </ng-template>

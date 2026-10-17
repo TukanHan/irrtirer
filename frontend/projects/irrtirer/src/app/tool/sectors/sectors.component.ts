@@ -36,30 +36,32 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     protected readonly sectorForContourEdition = toSignal<EditedSectorContour | null>(this.service.sectorForContourEdition$, { requireSync: true });
 
-    protected readonly sectorForPropertyEdition = toSignal<EditedSectorWithTriangulationMesh | null> (this.service.sectorForPropertyEdition$, { requireSync: true });
-    
+    protected readonly sectorForPropertyEdition = toSignal<EditedSectorWithTriangulationMesh | null>(this.service.sectorForPropertyEdition$, {
+        requireSync: true,
+    });
+
     private activeCanvas!: IActiveCanvas;
 
     private visualElements: CanvasObject[] = [];
-    
+
     private imageObject!: ImageObject;
 
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'crop',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();
-            } 
-        }
+            },
+        },
     ];
 
     public ngOnInit(): void {
@@ -78,21 +80,15 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private subscribeOnEditedSectorChange(): void {
-        this.service.sectorForContourEdition$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((s) => this.onEditedSectorChanged(s));
+        this.service.sectorForContourEdition$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((s) => this.onEditedSectorChanged(s));
     }
 
     private subscribeOnEditedSectorPropertiesChange(): void {
-        this.service.sectorForPropertyEdition$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.redrawSectors());
+        this.service.sectorForPropertyEdition$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.redrawSectors());
     }
 
     private subscribeOnSectorListChange(): void {
-        this.service.sectorListChange$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe(() => this.redrawSectors());
+        this.service.sectorListChange$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => this.redrawSectors());
     }
 
     private onEditedSectorChanged(sector: EditedSectorContour | null): void {
@@ -105,12 +101,12 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private redrawSectors(): void {
-        this.visualElements.forEach(visualElem => visualElem.removeObject());
+        this.visualElements.forEach((visualElem) => visualElem.removeObject());
         this.visualElements = this.prepareSectorsContours();
 
         for (const object of this.visualElements) {
             this.activeCanvas.addCanvasObject(object);
-        } 
+        }
 
         this.activeCanvas.redraw();
     }
@@ -122,17 +118,11 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
         let sectors: SectorSchema[] = this.store.selectSignal(selectSectors)();
         if (editedSectorContour) {
-            sectors = ArrayHelpers.addOrUpdate(
-                [...sectors],
-                editedSectorContour.sector,
-                (x) => x.id === editedSectorContour.sector.id
-            );
+            sectors = ArrayHelpers.addOrUpdate([...sectors], editedSectorContour.sector, (x) => x.id === editedSectorContour.sector.id);
         } else {
-            this.service.sectorListChange$
-                .pipe(first())
-                .subscribe((event) => {
-                    selectedSectorOnList = event?.selectedSector;
-                });
+            this.service.sectorListChange$.pipe(first()).subscribe((event) => {
+                selectedSectorOnList = event?.selectedSector;
+            });
         }
 
         return this.mapSectorsToContours(sectors, editedSectorContour, sectorWithTriangulationMesh, selectedSectorOnList);
@@ -142,21 +132,21 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         sectors: SectorSchema[],
         editedSector: EditedSectorContour | null,
         sectorWithTriangulationMesh: EditedSectorWithTriangulationMesh | null,
-        selectedSectorOnList?: SectorSchema
+        selectedSectorOnList?: SectorSchema,
     ): CanvasObject[] {
         return sectors.map((sector, index) => {
             if (sector.id === editedSector?.sector.id) {
                 return new OpenedContourObject(
                     [...editedSector.sector.vertices],
                     editedSector.sector.vertices.indexOf(editedSector.selectedVertex),
-                    editedSector.sector.color
+                    editedSector.sector.color,
                 );
             } else if (sectorWithTriangulationMesh?.mesh && sector.id === sectorWithTriangulationMesh.sector.id) {
                 const triangles = sectorWithTriangulationMesh.mesh;
                 const contour = sectorWithTriangulationMesh.contour!;
                 return new TriangulatedContourObject(triangles, contour, sectorWithTriangulationMesh.sector.color);
             } else {
-                const baseLineThickness = (sector.id === selectedSectorOnList?.id) ? 10 : 8;
+                const baseLineThickness = sector.id === selectedSectorOnList?.id ? 10 : 8;
                 return new ClosedContourObject([...sector.vertices], sector.color, 10 + index, baseLineThickness);
             }
         });
@@ -166,10 +156,10 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
         this.activeCanvas = activeCanvas;
 
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
-        queueMicrotask( async () => {
+        queueMicrotask(async () => {
             this.imageObject = await ToolService.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(this.imageObject);
-            
+
             if (shouldFocusOnObject) {
                 this.focusOnImage();
             }

@@ -17,7 +17,7 @@ describe('SectorListElemComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorListElemComponent, {
-            bindings: [inputBinding('sector', () =>new GeneratedSectorModel(faceSector))],
+            bindings: [inputBinding('sector', () => new GeneratedSectorModel(faceSector))],
         });
 
         component = fixture.componentInstance;

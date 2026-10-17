@@ -52,7 +52,7 @@ const preview: Preview = {
                     { value: 'pl', right: '🇵🇱', title: 'Polski' },
                 ],
             },
-        }
+        },
     },
     decorators: [
         withThemeByClassName({

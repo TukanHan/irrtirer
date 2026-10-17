@@ -15,12 +15,9 @@ describe('RibbonComponent', () => {
         }).compileComponents();
 
         fixture = TestBed.createComponent(RibbonComponent, {
-            bindings: [
-                inputBinding('viewportSize', () => ({ with: 2.32, height: 1.23 })),
-                inputBinding('actions', () => []),
-            ],
+            bindings: [inputBinding('viewportSize', () => ({ with: 2.32, height: 1.23 })), inputBinding('actions', () => [])],
         });
-        
+
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -18,18 +18,18 @@ export class TileDetailComponent implements OnInit {
     protected readonly tile = signal<TileModel | null>(null);
 
     private readonly route = inject(ActivatedRoute);
-    
+
     private readonly store = inject(Store);
-    
+
     private readonly router = inject(Router);
-    
+
     protected readonly translate = inject(TranslateService);
 
     public ngOnInit(): void {
         const tileId = this.route.snapshot.paramMap.get('id');
         if (tileId) {
             const tileModel = this.getTileModel(tileId);
-            if(tileModel) {
+            if (tileModel) {
                 this.tile.set(tileModel);
             }
         }

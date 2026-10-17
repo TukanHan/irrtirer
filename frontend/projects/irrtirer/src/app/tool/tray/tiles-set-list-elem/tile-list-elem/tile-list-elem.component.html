@@ -3,16 +3,12 @@
 </span>
 <div class="flex -m-1.5">
     <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon matListIcon>
-            more_vert
-        </mat-icon>
+        <mat-icon matListIcon> more_vert </mat-icon>
     </button>
 
     <mat-menu #menu="matMenu" classList="paddingless">
         <button mat-menu-item (click)="navigateToTileDetails()">
-            <mat-icon class="material-symbols-outlined" matListIcon>
-                page_info
-            </mat-icon>
+            <mat-icon class="material-symbols-outlined" matListIcon> page_info </mat-icon>
             {{ 'common.details' | translate }}
         </button>
     </mat-menu>

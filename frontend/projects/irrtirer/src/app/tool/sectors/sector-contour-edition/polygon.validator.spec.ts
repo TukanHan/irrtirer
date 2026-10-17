@@ -8,16 +8,16 @@ describe('PolygonValidator', () => {
         const vertices: Vector[] = [new Vector(0, 0)];
         const result = polygonValidationFunc(signal(vertices));
 
-        expect(result?.kind).toEqual("tooFewVertices");
+        expect(result?.kind).toEqual('tooFewVertices');
     });
 
     it('should edges intersecting', () => {
         const vertices: Vector[] = [new Vector(0, 0), new Vector(2, 3), new Vector(1, -1), new Vector(3, 1)];
         const result = polygonValidationFunc(signal(vertices));
 
-        expect(result?.kind).toEqual("edgesIntersect");
+        expect(result?.kind).toEqual('edgesIntersect');
     });
-    
+
     it('should be valid', () => {
         const vertices: Vector[] = [new Vector(0, 0), new Vector(4, 0), new Vector(4, 3), new Vector(0, 3)];
         const result = polygonValidationFunc(signal(vertices));

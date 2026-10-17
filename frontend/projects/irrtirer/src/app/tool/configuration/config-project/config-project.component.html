@@ -8,22 +8,21 @@
 </div>
 
 <form class="flex flex-col gap-5">
-    <input #imageUploader
-        hidden type="file"
-        (change)="onImageSelected($event)"
-        accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*"/>
+    <input #imageUploader hidden type="file" (change)="onImageSelected($event)" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
 
-    <button mat-flat-button 
+    <button
+        mat-flat-button
         [color]="form.mosaicImage().valid() ? '' : 'accent'"
         (click)="imageUploader.click()"
         [hidden]="isReadOnlyMode()"
-        type="button">
-        {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage': 'tool.config.project.chooseImage') | translate }}
+        type="button"
+    >
+        {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage' : 'tool.config.project.chooseImage') | translate }}
     </button>
 
     <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
-        <input matInput type="number" [formField]="form.mosaicWidth">
+        <input matInput type="number" [formField]="form.mosaicWidth" />
         <span matTextSuffix>{{ 'common.cm' | translate }}</span>
         <mat-error>{{ getFieldErrorLabel(form.mosaicWidth()) }}</mat-error>
     </mat-form-field>

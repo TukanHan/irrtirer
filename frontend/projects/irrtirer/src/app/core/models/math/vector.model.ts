@@ -20,7 +20,7 @@ export class Vector {
     public sub(b: Vector): Vector {
         return new Vector(this.x - b.x, this.y - b.y);
     }
-    
+
     public magnitude(): number {
         return Math.hypot(this.x, this.y);
     }
@@ -41,7 +41,7 @@ export class Vector {
     public static dot(a: Vector, b: Vector): number {
         return a.x * b.x + a.y * b.y;
     }
-    
+
     public static areEqual(a: Vector, b: Vector): boolean {
         return a.x === b.x && a.y === b.y;
     }

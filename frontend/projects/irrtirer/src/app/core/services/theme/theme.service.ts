@@ -19,7 +19,7 @@ export class ThemeService {
         let selectedTheme = this.store.selectSignal<ThemeMode | undefined>(selectThemeMode)();
         if (!selectedTheme) {
             const browserLightPreference = window.matchMedia('(prefers-color-scheme: light)');
-            selectedTheme = browserLightPreference.matches ? 'light': 'dark';
+            selectedTheme = browserLightPreference.matches ? 'light' : 'dark';
         }
 
         this.setTheme(selectedTheme);

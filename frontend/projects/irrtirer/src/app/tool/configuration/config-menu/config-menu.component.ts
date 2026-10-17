@@ -15,13 +15,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
 
-const DEFAULT_PROJECT_NAME: string = "irrtirer_project";
+const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 
 @Component({
     selector: 'app-config-menu',
     imports: [MatButtonModule, TranslatePipe],
     templateUrl: './config-menu.component.html',
-    host: { class: 'flex flex-col gap-2.5' }
+    host: { class: 'flex flex-col gap-2.5' },
 })
 export class ConfigMenuComponent {
     private readonly store = inject(Store);
@@ -104,12 +104,14 @@ export class ConfigMenuComponent {
 
     private selectProjectToLoad(): void {
         const action = (file: File): void => {
-            this.projectImportService.loadProject(file)
+            this.projectImportService
+                .loadProject(file)
                 .then((project) => {
                     this.store.dispatch(MosaicProjectActions.projectCreated({ project }));
                     this.configService.emitImageChange(project.config, true);
-                }).catch(() => {
-                    this.snackBar.open(this.translate.instant('tool.config.menu.loadProjectError'),);
+                })
+                .catch(() => {
+                    this.snackBar.open(this.translate.instant('tool.config.menu.loadProjectError'));
                 });
         };
 

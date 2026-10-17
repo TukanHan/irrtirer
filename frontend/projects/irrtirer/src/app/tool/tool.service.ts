@@ -20,13 +20,9 @@ export class ToolService {
 
     private readonly themeMode = toSignal<ThemeMode>(inject(ThemeService).theme$);
 
-    public readonly canvasGridColor = computed<string>(() =>
-        this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'
-    );
+    public readonly canvasGridColor = computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'));
 
-    public readonly backgroundColor = computed<string>(() =>
-        this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'
-    );
+    public readonly backgroundColor = computed<string>(() => (this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'));
 
     public static async createImageObject(mosaicConfig: MosaicConfig): Promise<ImageObject> {
         const image = await ImageHelper.getImageObjectBySrc(mosaicConfig.base64Image);
@@ -41,15 +37,16 @@ export class ToolService {
 
     public static calculateZoomForImage(imageSize: Size, viewport: Viewport): number {
         const imageZoom: Size = {
-            height: (imageSize.height * 1.1) / viewport.cmSize.height * viewport.zoom,
-            width: (imageSize.width * 1.1) / viewport.cmSize.width * viewport.zoom,
+            height: ((imageSize.height * 1.1) / viewport.cmSize.height) * viewport.zoom,
+            width: ((imageSize.width * 1.1) / viewport.cmSize.width) * viewport.zoom,
         };
 
         return Math.max(imageZoom.height, imageZoom.width);
     }
 
     public openTakeSnapshotDialog(activeCanvas: IActiveCanvas, fileName: string): void {
-        this.matDialog.open<SnapshotOptionsDialogComponent, unknown, SnapshotOptions>(SnapshotOptionsDialogComponent)
+        this.matDialog
+            .open<SnapshotOptionsDialogComponent, unknown, SnapshotOptions>(SnapshotOptionsDialogComponent)
             .afterClosed()
             .subscribe((result) => {
                 if (!result) {

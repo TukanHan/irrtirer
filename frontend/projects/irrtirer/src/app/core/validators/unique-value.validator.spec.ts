@@ -15,6 +15,6 @@ describe('nonUniqueValueValidationFunc', () => {
 
     it('should be non unique', () => {
         const result = nonUniqueValueValidationFunc(signal(3), signal([1, 2, 3]));
-        expect(result?.kind).toEqual("nonUnique");
+        expect(result?.kind).toEqual('nonUnique');
     });
 });

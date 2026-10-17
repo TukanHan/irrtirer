@@ -4,8 +4,7 @@ import { projectExistGuard } from './project-exist.guard';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('projectExistGuard', () => {
-    const executeGuard: CanActivateFn = (...guardParameters) =>
-        TestBed.runInInjectionContext(() => projectExistGuard(...guardParameters));
+    const executeGuard: CanActivateFn = (...guardParameters) => TestBed.runInInjectionContext(() => projectExistGuard(...guardParameters));
 
     beforeEach(() => {
         TestBed.configureTestingModule({});

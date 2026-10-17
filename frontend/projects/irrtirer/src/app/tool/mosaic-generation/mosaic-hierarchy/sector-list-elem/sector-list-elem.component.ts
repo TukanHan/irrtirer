@@ -10,14 +10,7 @@ import { ScrollableListComponent } from '../../../../shared/scrollable-list/scro
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [
-        MatIconModule,
-        MatButtonModule,
-        AsyncPipe,
-        ExpandablePanelComponent,
-        TranslatePipe,
-        ScrollableListComponent
-    ],
+    imports: [MatIconModule, MatButtonModule, AsyncPipe, ExpandablePanelComponent, TranslatePipe, ScrollableListComponent],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
 })
@@ -26,7 +19,7 @@ export class SectorListElemComponent {
 
     protected readonly isOpen = signal<boolean>(false);
 
-    protected readonly items$ = computed<Observable<GeneratedTileModel[]>>(() => this.sector().tiles$ );
+    protected readonly items$ = computed<Observable<GeneratedTileModel[]>>(() => this.sector().tiles$);
 
     protected readonly areTilesVisible = signal<boolean>(true);
 

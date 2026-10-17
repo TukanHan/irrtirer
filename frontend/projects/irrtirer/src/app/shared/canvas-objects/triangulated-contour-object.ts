@@ -14,7 +14,7 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
         mesh: Triangle[],
         contour: Vector[],
         private readonly hexColor: string,
-        private readonly order: number = 100
+        private readonly order: number = 100,
     ) {
         super();
 

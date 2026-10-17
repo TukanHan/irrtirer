@@ -23,7 +23,7 @@ export class ProjectNameDialogComponent {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);
 
     private readonly value = signal<FileNameFormData>({
-        name: this.data.defaultName  
+        name: this.data.defaultName,
     });
 
     protected readonly form = form(this.value, (schemaPath) => {

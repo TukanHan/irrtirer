@@ -1,37 +1,37 @@
 <div class="actions">
-  <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
-    {{ 'tool.sectors.contourList.addSector' | translate }}
-  </button>
+    <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
+        {{ 'tool.sectors.contourList.addSector' | translate }}
+    </button>
 </div>
 
-@if(sectors().length) {
-  <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
-    @for (sector of sectors(); track sector) {
-      <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
-        <div class="list-item-box" [class.selected]="sector === selectedSector">
-          <span class="block-label">{{sector.name}}</span>
-          <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
-            <mat-icon matListIcon>more_vert</mat-icon>
-          </button>
+@if (sectors().length) {
+    <div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
+        @for (sector of sectors(); track sector) {
+            <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
+                <div class="list-item-box" [class.selected]="sector === selectedSector">
+                    <span class="block-label">{{ sector.name }}</span>
+                    <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
+                        <mat-icon matListIcon>more_vert</mat-icon>
+                    </button>
 
-          <mat-menu #menu="matMenu" classList="paddingless">
-            <button mat-menu-item (click)="navigateToContourPanel(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
-              {{ 'tool.sectors.contourList.editContour' | translate }}
-            </button>
-            <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
-              {{ 'tool.sectors.contourList.editProperties' | translate }}
-            </button>
-            <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
-              <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
-              {{ 'tool.sectors.contourList.removeSector' | translate }}
-            </button>
-          </mat-menu>
-        </div>
-      </div>
-    }
-  </div>
+                    <mat-menu #menu="matMenu" classList="paddingless">
+                        <button mat-menu-item (click)="navigateToContourPanel(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+                            {{ 'tool.sectors.contourList.editContour' | translate }}
+                        </button>
+                        <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
+                            {{ 'tool.sectors.contourList.editProperties' | translate }}
+                        </button>
+                        <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
+                            <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+                            {{ 'tool.sectors.contourList.removeSector' | translate }}
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+        }
+    </div>
 } @else {
-  <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
+    <div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
 }

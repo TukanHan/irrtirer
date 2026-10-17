@@ -14,12 +14,12 @@
     <span class="flex-1"></span>
 
     <button matIconButton class="toolbar-item mode" (click)="toggleTheme()">
-        <mat-icon class="material-symbols-outlined">{{themeMode() === 'dark' ? 'dark_mode' : 'light_mode'}}</mat-icon>
+        <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
     </button>
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>
-        <span class="block min-w-5">{{selectedLanguage() | titlecase}}</span>
+        <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
     </button>
 
     <mat-menu #menu="matMenu">
@@ -37,6 +37,6 @@
 
     <a class="toolbar-item" mat-button href="https://github.com/TukanHan/irrtirer" target="_blank">
         <mat-icon svgIcon="github" />
-        {{'toolbar.github' | translate}}
+        {{ 'toolbar.github' | translate }}
     </a>
 </mat-toolbar>

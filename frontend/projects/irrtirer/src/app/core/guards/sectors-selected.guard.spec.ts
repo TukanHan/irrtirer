@@ -4,14 +4,13 @@ import { sectorsSelectedGuard } from './sectors-selected.guard';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('sectorsSelectedGuard', () => {
-  const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => sectorsSelectedGuard(...guardParameters));
+    const executeGuard: CanActivateFn = (...guardParameters) => TestBed.runInInjectionContext(() => sectorsSelectedGuard(...guardParameters));
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-  });
+    beforeEach(() => {
+        TestBed.configureTestingModule({});
+    });
 
-  it('should be created', () => {
-    expect(executeGuard).toBeTruthy();
-  });
+    it('should be created', () => {
+        expect(executeGuard).toBeTruthy();
+    });
 });

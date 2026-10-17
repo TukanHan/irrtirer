@@ -11,7 +11,7 @@ import { TranslatePipe } from '@ngx-translate/core';
     selector: 'app-tray-menu',
     imports: [MatButtonModule, TilesSetListElemComponent, TranslatePipe],
     templateUrl: './tray-menu.component.html',
-    host: { class: 'flex flex-col gap-5' }
+    host: { class: 'flex flex-col gap-5' },
 })
 export class TrayMenuComponent {
     private readonly router = inject(Router);

@@ -1,23 +1,16 @@
 <div class="sv-preview">
-    <app-color-canvas 
-        [hValue]="hValue()"
-        [sValue]="sValue()"
-        [vValue]="vValue()"
-        (colorChange)="onColorCanvasChanged($event)" />
+    <app-color-canvas [hValue]="hValue()" [sValue]="sValue()" [vValue]="vValue()" (colorChange)="onColorCanvasChanged($event)" />
 </div>
 
 <div class="slider-container">
-    <app-color-slider [(value)]="hValue"/>
+    <app-color-slider [(value)]="hValue" />
 </div>
 
 <div class="result-wrapper">
-    <div role="presentation"
-        class="color-preview"
-        [style.background]="hexColor()">
-    </div>
+    <div role="presentation" class="color-preview" [style.background]="hexColor()"></div>
 
     <mat-form-field class="density-3 code-input" appearance="outline">
         <mat-label>Hex</mat-label>
-        <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)">
+        <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)" />
     </mat-form-field>
 </div>

@@ -32,5 +32,5 @@ export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
     on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({
         ...state!,
         tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),
-    }))
+    })),
 );

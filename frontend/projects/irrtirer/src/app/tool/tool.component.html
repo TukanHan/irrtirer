@@ -8,7 +8,7 @@
                 matTooltipPosition="right"
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.projectSettings')"
->
+            >
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
             </a>
             <a
@@ -20,8 +20,7 @@
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.tileTrey')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon
-                >
+                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
             </a>
             <a
                 mat-list-item
@@ -43,28 +42,17 @@
                 matTooltipClass="contrast"
                 [matTooltip]="translate.instant('tool.nav.generation')"
             >
-                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon
-                >
+                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
             </a>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <div class="content">
-            <app-ribbon
-                [actions]="ribbonActions()"
-                [viewportSize]="viewportSize()"
-            />
+            <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
             <div class="main">
-                <ac-active-canvas
-                    #activeCanvas
-                    [options]="canvasOptions()"
-                    class="canvas"
-                />
+                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas" />
                 <div class="panel">
-                    <router-outlet
-                        (activate)="onActivate($event)"
-                        (deactivate)="onDeactivate()"
-                    />
+                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
                 </div>
             </div>
         </div>

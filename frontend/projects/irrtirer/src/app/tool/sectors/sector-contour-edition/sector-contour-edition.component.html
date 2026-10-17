@@ -6,28 +6,26 @@
 <div class="info">
     <mat-form-field class="density-3" subscriptSizing="dynamic">
         <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
-        <input matInput [formField]="form.name">
+        <input matInput [formField]="form.name" />
         <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
     </mat-form-field>
 
-    <app-color-picker
-        [label]="translate.instant('tool.sectors.sectorContour.sectorColor')"
-        [formField]="form.color" />
+    <app-color-picker [label]="translate.instant('tool.sectors.sectorContour.sectorColor')" [formField]="form.color" />
 
-    @if(form.vertices().value().length) {
+    @if (form.vertices().value().length) {
         <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
             @for (vertex of form.vertices().value(); track vertex) {
                 <div cdkDrag class="vertex-box" (mousedown)="onBoxSelected(vertex)">
-                    <div class="list-item-box" [class.selected]="vertex === selectedVertex()" >
+                    <div class="list-item-box" [class.selected]="vertex === selectedVertex()">
                         <span class="block-label">{{ getVertexLabel(vertex) }}</span>
-                        <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation();">
+                        <button mat-icon-button class="vertex-remove" (click)="removeVertex(vertex)" (mousedown)="$event.stopPropagation()">
                             <mat-icon matListIcon>close</mat-icon>
                         </button>
                     </div>
                 </div>
             }
         </div>
-    } @else { 
+    } @else {
         <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
     }
 </div>

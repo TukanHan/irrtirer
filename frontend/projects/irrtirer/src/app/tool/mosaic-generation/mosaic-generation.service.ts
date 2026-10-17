@@ -10,7 +10,7 @@ export class MosaicGenerationService {
     private readonly sectorsInfo = new Map<string, GeneratedSectorModel>();
 
     private readonly sectorsSub = new Subject<GeneratedSectorModel[]>();
-    
+
     public readonly sectors$: Observable<GeneratedSectorModel[]> = this.sectorsSub.asObservable();
 
     public buildInitMosaicRequest(base64Image: string, mosaicSize: Size, sectorsSchemas: SectorSchema[]): InitMosaicGenerationRequestModel {
@@ -34,7 +34,7 @@ export class MosaicGenerationService {
     }
 
     public initGeneratedSectorsData(sectorsSchemas: SectorSchema[]): void {
-        for(const sectorSchema of sectorsSchemas) {
+        for (const sectorSchema of sectorsSchemas) {
             this.sectorsInfo.set(sectorSchema.id, new GeneratedSectorModel(sectorSchema));
         }
 
@@ -42,9 +42,9 @@ export class MosaicGenerationService {
     }
 
     public fillSectorsGenerationInfo(sectorsTriangulations: SectorTriangulationMeshPartsModel[]): void {
-        for(const sectorTriangulation of sectorsTriangulations) {
+        for (const sectorTriangulation of sectorsTriangulations) {
             const generatedSector = this.sectorsInfo.get(sectorTriangulation.sectorId)!;
-            generatedSector.countOfSections = sectorTriangulation.parts.flatMap(x => x.triangles).length;
+            generatedSector.countOfSections = sectorTriangulation.parts.flatMap((x) => x.triangles).length;
         }
 
         this.sectorsSub.next(Array.from(this.sectorsInfo.values()));

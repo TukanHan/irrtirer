@@ -1,5 +1,5 @@
-@use "./overrides/inputs-overrides";
-@use "./overrides/scrollbar";
+@use './overrides/inputs-overrides';
+@use './overrides/scrollbar';
 
 @layer base {
     @include inputs-overrides.render();

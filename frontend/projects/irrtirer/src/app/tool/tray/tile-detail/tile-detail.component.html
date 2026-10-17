@@ -8,17 +8,14 @@
 </div>
 
 <div class="flex flex-1 flex-col gap-2">
-    @if(tile(); as tile) {
+    @if (tile(); as tile) {
         <div class="p-0.5 text-contrast-medium">
             <div class="font-medium">{{ 'tool.tiles.details.tileId' | translate }}:</div>
-            <div class="text-xs truncate">{{tile.id}}</div>
+            <div class="text-xs truncate">{{ tile.id }}</div>
         </div>
 
-        <app-color-picker 
-            [disabled]="true"
-            [ngModel]="tile.color"
-            [label]="translate.instant('tool.tiles.details.tileColor')"/>
-    } @else { 
+        <app-color-picker [disabled]="true" [ngModel]="tile.color" [label]="translate.instant('tool.tiles.details.tileColor')" />
+    } @else {
         <div class="m-auto text-contrast-medium">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
     }
 </div>

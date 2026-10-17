@@ -1,12 +1,12 @@
-import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from "../../../../../active-canvas/src/public-api";
-import { Vector } from "../../core/models/math/vector.model";
+import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from '../../../../../active-canvas/src/public-api';
+import { Vector } from '../../core/models/math/vector.model';
 
 export class ImageObject extends BaseCanvasObject implements CanvasObject {
     constructor(
         private readonly image: HTMLImageElement,
         private readonly position: IVector,
         public readonly size: Size,
-        private readonly order: number = 0
+        private readonly order: number = 0,
     ) {
         super();
     }

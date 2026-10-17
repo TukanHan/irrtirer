@@ -26,7 +26,7 @@ import { TitleCasePipe } from '@angular/common';
         MatMenuModule,
         MatRadioModule,
         TranslatePipe,
-        TitleCasePipe
+        TitleCasePipe,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',

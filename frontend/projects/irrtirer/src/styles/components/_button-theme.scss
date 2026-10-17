@@ -6,7 +6,8 @@
 }
 
 @mixin theme {
-    button, a {
+    button,
+    a {
         &.mat-mdc-button-base {
             &.mdc-button {
                 --mat-button-filled-label-text-tracking: normal;

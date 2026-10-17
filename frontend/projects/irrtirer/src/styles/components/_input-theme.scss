@@ -2,7 +2,7 @@
 @use '@angular/material' as mat;
 
 @mixin theme() {
-    .density-3{
+    .density-3 {
         @include mat.form-field-density(-3);
     }
 

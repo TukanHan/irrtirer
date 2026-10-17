@@ -1,12 +1,15 @@
-@for(action of actions(); track action.iconName) {
-    <button mat-icon-button class="action"
+@for (action of actions(); track action.iconName) {
+    <button
+        mat-icon-button
+        class="action"
         [hidden]="action.visibility() === 'hidden'"
         [disabled]="action.visibility() === 'disabled'"
         [class.active]="action.visibility() === 'on'"
         (click)="onClick(action)"
         [matTooltip]="translate.instant(action.tooltipKey)"
-        matTooltipPosition="below">
-        <mat-icon class="material-symbols-outlined">{{action.iconName}}</mat-icon>
+        matTooltipPosition="below"
+    >
+        <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
     </button>
 }
 

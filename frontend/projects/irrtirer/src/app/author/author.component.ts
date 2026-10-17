@@ -1,4 +1,4 @@
-import {  Component, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
 

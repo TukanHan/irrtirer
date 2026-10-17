@@ -10,7 +10,7 @@ export const MosaicProjectActions = createActionGroup({
 
         'Sector Modified': props<{ modifiedSector: SectorSchema }>(),
         'Sector Removed': props<{ sector: SectorSchema }>(),
-        'Sector Shifted': props<{ prevIndex: number, newIndex: number }>(),
+        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),
 
         'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),
         'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),

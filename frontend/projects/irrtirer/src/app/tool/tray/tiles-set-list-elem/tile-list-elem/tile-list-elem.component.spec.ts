@@ -18,7 +18,7 @@ describe('TileListElemComponent', () => {
         fixture = TestBed.createComponent(TileListElemComponent, {
             bindings: [inputBinding('tile', () => tileMock)],
         });
-        
+
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

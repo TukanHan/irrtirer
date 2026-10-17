@@ -2,19 +2,10 @@
     <h1 mat-dialog-title>{{ 'tool.snapshotDialog.title' | translate }}</h1>
     <div mat-dialog-content>
         <span>{{ 'tool.snapshotDialog.transparentBackgroundLabel' | translate }}</span>
-        <mat-checkbox 
-            color="accent" 
-            [formField]="form.transparentBackground" />
-        <span>{{ 'tool.snapshotDialog.scaleFactorLabel' | translate }}</span>  
-        <mat-slider
-            color="accent"
-            class="example-margin"
-            [max]="4"
-            [min]="1"
-            [step]="1"
-            [discrete]="true"
-            [showTickMarks]="true">
-            <input matSliderThumb [formField]="form.scaleFactor">
+        <mat-checkbox color="accent" [formField]="form.transparentBackground" />
+        <span>{{ 'tool.snapshotDialog.scaleFactorLabel' | translate }}</span>
+        <mat-slider color="accent" class="example-margin" [max]="4" [min]="1" [step]="1" [discrete]="true" [showTickMarks]="true">
+            <input matSliderThumb [formField]="form.scaleFactor" />
         </mat-slider>
     </div>
     <div mat-dialog-actions align="end">

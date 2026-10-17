@@ -1,14 +1,14 @@
-import { EvaluationParams } from "./evaluation-params.interface";
-import { PopulationParams } from "./population-params.interface";
-import { Vector } from "../math/vector.model";
-import { Triangle } from "../math/triangle.model";
+import { EvaluationParams } from './evaluation-params.interface';
+import { PopulationParams } from './population-params.interface';
+import { Vector } from '../math/vector.model';
+import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;
     public readonly parts!: SectorTriangulationMeshModel[];
 
     public static restore(obj: SectorTriangulationMeshPartsModel): void {
-        obj.parts.forEach(part => SectorTriangulationMeshModel.restore(part));
+        obj.parts.forEach((part) => SectorTriangulationMeshModel.restore(part));
     }
 }
 
@@ -47,7 +47,7 @@ export interface SectorTriangulationRequestModel {
 export interface TileRequestModel {
     id: string;
     color: string;
-    vertices: Vector[]
+    vertices: Vector[];
 }
 
 export class SectionGenerationResult {
@@ -56,7 +56,7 @@ export class SectionGenerationResult {
 
     public static restore(obj: SectionGenerationResult): void {
         Object.setPrototypeOf(obj, SectionGenerationResult);
-        obj.tilesTransforms.forEach(tileTransform => TileTransformResult.restore(tileTransform));
+        obj.tilesTransforms.forEach((tileTransform) => TileTransformResult.restore(tileTransform));
     }
 }
 

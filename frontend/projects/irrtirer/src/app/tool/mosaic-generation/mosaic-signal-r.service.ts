@@ -65,21 +65,19 @@ export class MosaicSignalRService {
     }
 
     public startLongRunningTask(tiles: TileRequestModel[]): Promise<void> {
-        return this.hubConnection.invoke('StartMosaicGeneration', tiles)
-            .catch((error) => {
-                if(!this.isClosed) {
-                    throw error;
-                }
-            });
+        return this.hubConnection.invoke('StartMosaicGeneration', tiles).catch((error) => {
+            if (!this.isClosed) {
+                throw error;
+            }
+        });
     }
 
     public initMosaicTriangulation(initMosaicGenerationRequest: InitMosaicGenerationRequestModel): Promise<void> {
-        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest)
-            .catch((error) => {
-                if(!this.isClosed) {
-                    throw error;
-                }
-            });
+        return this.hubConnection.invoke('InitMosaicTriangulation', initMosaicGenerationRequest).catch((error) => {
+            if (!this.isClosed) {
+                throw error;
+            }
+        });
     }
 
     public startConnection(): Promise<void> {

@@ -39,13 +39,13 @@ export class ConfigurationComponent implements ToolView {
     protected readonly ribbonActions: RibbonAction[] = [
         {
             iconName: 'crop',
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             visibility: signal('on'),
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'configuration_snapshot.png'),
         },
         {
             iconName: 'recenter',
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             visibility: computed(() => (this.imageObject() ? 'on' : 'disabled')),
             onClick: () => {
                 this.focusOnImage(this.imageObject()!);
@@ -59,12 +59,10 @@ export class ConfigurationComponent implements ToolView {
     public sectionEntered(activeCanvas: IActiveCanvas, shouldFocusOnObject: boolean): ToolViewInitSetting {
         this.activeCanvas = activeCanvas;
 
-        this.imageChanged$
-            .pipe(takeUntilDestroyed(this.destroyRef), skip(1))
-            .subscribe((imageChange) => {
-                const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
-                this.drawImage(imageChange.mosaicConfig, shouldFocus);
-            });
+        this.imageChanged$.pipe(takeUntilDestroyed(this.destroyRef), skip(1)).subscribe((imageChange) => {
+            const shouldFocus = imageChange.shouldFocus || shouldFocusOnObject;
+            this.drawImage(imageChange.mosaicConfig, shouldFocus);
+        });
 
         return { ribbon: this.ribbonActions };
     }

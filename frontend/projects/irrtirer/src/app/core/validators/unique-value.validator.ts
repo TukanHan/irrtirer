@@ -9,6 +9,6 @@ export function nonUniqueValueValidationFunc<T>(value: Signal<T>, array: Signal<
     if (array().includes(value())) {
         return { kind: 'nonUnique' };
     }
-    
+
     return null;
 }

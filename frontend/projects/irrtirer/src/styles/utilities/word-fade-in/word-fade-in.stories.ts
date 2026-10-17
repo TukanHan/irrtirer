@@ -5,7 +5,7 @@ interface WordFadeInStoryProps {
     phrase: string;
     wordFadeInDelay: number;
     wordFadeInDuration: number;
-};
+}
 
 const meta: Meta<WordFadeInStoryProps> = {
     title: 'Style/Animacje/Word Fade In',
@@ -20,7 +20,7 @@ const meta: Meta<WordFadeInStoryProps> = {
             description: 'Zdanie do rozbicia na słowa i animacji',
             table: {
                 category: 'Content',
-            }
+            },
         },
         wordFadeInDelay: {
             control: 'number',
@@ -28,7 +28,7 @@ const meta: Meta<WordFadeInStoryProps> = {
             table: {
                 defaultValue: { summary: '0.75s' },
                 category: 'Content',
-            }
+            },
         },
         wordFadeInDuration: {
             name: '--word-fade-in-duration',
@@ -37,7 +37,7 @@ const meta: Meta<WordFadeInStoryProps> = {
             table: {
                 defaultValue: { summary: '5s' },
                 category: 'CSS Variable',
-            }
+            },
         },
     },
     parameters: { backgrounds: { disable: true } },

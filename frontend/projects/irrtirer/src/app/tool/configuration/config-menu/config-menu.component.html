@@ -1,6 +1,6 @@
 @let isMosaicSet = !!mosaicConfig();
 
-@if(isMosaicSet) {
+@if (isMosaicSet) {
     <button mat-flat-button (click)="navigateToProjectConfiguration()">
         {{ 'tool.config.menu.projectSettings' | translate }}
     </button>
@@ -20,7 +20,7 @@
     {{ 'tool.config.menu.loadProject' | translate }}
 </button>
 
-@if(isMosaicSet) {
+@if (isMosaicSet) {
     <button mat-flat-button color="warn" (click)="rejectProject()">
         {{ 'tool.config.menu.rejectProject' | translate }}
     </button>

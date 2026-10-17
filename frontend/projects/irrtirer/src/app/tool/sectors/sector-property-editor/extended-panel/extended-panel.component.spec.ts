@@ -15,7 +15,7 @@ describe('ExtendedPanelComponent', () => {
         fixture = TestBed.createComponent(ExtendedPanelComponent, {
             bindings: [inputBinding('label', () => 'section')],
         });
-        
+
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

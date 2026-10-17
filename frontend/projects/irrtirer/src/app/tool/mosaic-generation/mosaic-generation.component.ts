@@ -28,10 +28,7 @@ import { ToolService } from '../tool.service';
 
 @Component({
     selector: 'app-mosaic-generation',
-    imports: [
-        MosaicHierarchyComponent,
-        ProgressInfoComponent
-    ],
+    imports: [MosaicHierarchyComponent, ProgressInfoComponent],
     providers: [MosaicGenerationService],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
@@ -55,30 +52,30 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         {
             iconName: 'crop',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.takeSnapshot",
+            tooltipKey: 'tool.ribbon.takeSnapshot',
             onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'generating_snapshot.png'),
         },
         {
             iconName: 'recenter',
             visibility: signal('on'),
-            tooltipKey: "tool.ribbon.focusOnImage",
+            tooltipKey: 'tool.ribbon.focusOnImage',
             onClick: () => {
                 this.focusOnImage();
                 this.activeCanvas.redraw();
-            } 
+            },
         },
         {
             iconName: 'graph_3',
-            tooltipKey: "tool.ribbon.toggleMeshVisibility",
+            tooltipKey: 'tool.ribbon.toggleMeshVisibility',
             onClick: () => this.toggleMeshVisibility(),
-            visibility: computed(() =>  this.isMeshVisible() ? 'on' : 'off'),
+            visibility: computed(() => (this.isMeshVisible() ? 'on' : 'off')),
         },
         {
             iconName: 'image',
-            tooltipKey: "tool.ribbon.toggleImageVisibility",
+            tooltipKey: 'tool.ribbon.toggleImageVisibility',
             onClick: () => this.toggleImageVisibility(),
-            visibility: computed(() => this.isImageVisible() ? 'on' : 'off'), 
-        }
+            visibility: computed(() => (this.isImageVisible() ? 'on' : 'off')),
+        },
     ];
 
     private activeCanvas!: IActiveCanvas;
@@ -105,7 +102,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
-        
+
         this.imageObject = await ToolService.createImageObject(mosaicConfig);
         this.imageObject.setVisibility(this.isImageVisible());
         this.activeCanvas.addCanvasObject(this.imageObject);
@@ -139,34 +136,32 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnGenerationProgress(): void {
-        this.signalRService.sectionGenerated$
-            .pipe(takeUntilDestroyed(this.destroyRef))
-            .subscribe((sectionGenerationResult) => {
-                const sectionTileObjects: GeneratedTileModel[] = [];
+        this.signalRService.sectionGenerated$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((sectionGenerationResult) => {
+            const sectionTileObjects: GeneratedTileModel[] = [];
 
-                for (const tileTransform of sectionGenerationResult.tilesTransforms) {
-                    const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId)!;
-                    const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
-                    const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
-                    this.activeCanvas.addCanvasObject(tileObject);
-                    sectionTileObjects.push({ tileObject, tileTransform });
-                }
+            for (const tileTransform of sectionGenerationResult.tilesTransforms) {
+                const tile: TileModel = this.availableTiles.find((t) => t.id === tileTransform.tileId)!;
+                const worldTileVertices: Vector[] = transformPolygon(tile.vertices, tileTransform.position, tileTransform.angle);
+                const tileObject: TileObject = new TileObject(worldTileVertices, tile.color);
+                this.activeCanvas.addCanvasObject(tileObject);
+                sectionTileObjects.push({ tileObject, tileTransform });
+            }
 
-                const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
-                this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
+            const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
+            this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
 
-                this.progressState.set({
-                    type: 'progress',
-                    sector: sectorInfo.schema.name,
-                    percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
-                });
-
-                this.activeCanvas.redraw();
+            this.progressState.set({
+                type: 'progress',
+                sector: sectorInfo.schema.name,
+                percent: Math.floor((sectorInfo.sections.length / sectorInfo.countOfSections) * 100),
             });
+
+            this.activeCanvas.redraw();
+        });
     }
 
     private subscribeOnSectorsMeshReceived(): void {
-       this.signalRService.sectionsMeshReceived$
+        this.signalRService.sectionsMeshReceived$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
@@ -186,24 +181,20 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnMeshGenerationFinished(): void {
-        this.signalRService.generationFinished$
-            .pipe(takeUntilDestroyed(this.destroyRef))    
-            .subscribe(() => {
-                this.progressState.set(null);
-                this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
-            });
+        this.signalRService.generationFinished$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
+            this.progressState.set(null);
+            this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
+        });
     }
 
     private subscribeOnMeshVisibilityChange(): void {
-        this.showMesh$
-            .pipe(takeUntilDestroyed(this.destroyRef))    
-            .subscribe((shouldShowMesh) => {
-                for (const sector of this.service.getSectors()) {
-                    sector.setSectorMeshVisibility(shouldShowMesh);
-                }
+        this.showMesh$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((shouldShowMesh) => {
+            for (const sector of this.service.getSectors()) {
+                sector.setSectorMeshVisibility(shouldShowMesh);
+            }
 
-                this.activeCanvas.redraw();
-            });
+            this.activeCanvas.redraw();
+        });
     }
 
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {

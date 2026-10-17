@@ -30,7 +30,7 @@ import { ProjectImportService } from '../core/services/project-import/project-im
         RouterLink,
         RouterModule,
         RibbonComponent,
-        ActiveCanvasComponent
+        ActiveCanvasComponent,
     ],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
@@ -47,17 +47,17 @@ export class ToolComponent {
 
     protected readonly tilesLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((mosaicProject) => !mosaicProject)
+        map((mosaicProject) => !mosaicProject),
     );
 
     protected readonly sectorsLinkDisabled$ = this.store.select(selectMosaicProject).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((mosaicProject) => !mosaicProject)
+        map((mosaicProject) => !mosaicProject),
     );
 
     protected readonly mosaicGeneratingLinkDisabled$ = this.store.select(selectSectors).pipe(
         takeUntilDestroyed(this.destroyRef),
-        map((sectors) => !sectors.length)
+        map((sectors) => !sectors.length),
     );
 
     protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');
@@ -66,7 +66,7 @@ export class ToolComponent {
 
     protected readonly ribbonActions = signal<RibbonAction[]>([]);
 
-    protected readonly canvasOptions = computed<CanvasOptions>(() =>({
+    protected readonly canvasOptions = computed<CanvasOptions>(() => ({
         canvasGridColor: this.toolService.canvasGridColor(),
     }));
 

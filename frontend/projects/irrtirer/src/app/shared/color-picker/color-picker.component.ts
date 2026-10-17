@@ -18,7 +18,7 @@ import { FormValueControl } from '@angular/forms/signals';
     templateUrl: './color-picker.component.html',
     styleUrl: './color-picker.component.scss',
 })
-export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string>  {
+export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string> {
     public readonly label = input.required<string>();
 
     public readonly value = model<string>('#000000');
@@ -40,7 +40,7 @@ export class ColorPickerComponent implements ControlValueAccessor, FormValueCont
     });
 
     protected toggleColorPanel(): void {
-        if(!this.disabled()) {
+        if (!this.disabled()) {
             this.isOpen.update((value) => !value);
         }
     }

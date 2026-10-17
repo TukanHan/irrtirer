@@ -13,9 +13,7 @@ const meta: Meta<ScrollableListComponent<string>> = {
     title: 'Komponenty/Scrollable List',
     component: ScrollableListComponent,
     tags: ['autodocs'],
-    decorators: [
-        moduleMetadata({ imports: [DummyItemComponent]}),
-    ],
+    decorators: [moduleMetadata({ imports: [DummyItemComponent] })],
 };
 
 export default meta;
@@ -24,7 +22,7 @@ type Story = StoryObj<ScrollableListComponent<string>>;
 export const Default: Story = {
     args: {
         items: Array.from({ length: 20 }, (_, i) => `Item ${i + 1}`),
-        pageSize: 5
+        pageSize: 5,
     },
     render: (args) => ({
         props: args,
@@ -35,5 +33,5 @@ export const Default: Story = {
                 </ng-template>
             </app-scrollable-list>
         `,
-    })
+    }),
 };

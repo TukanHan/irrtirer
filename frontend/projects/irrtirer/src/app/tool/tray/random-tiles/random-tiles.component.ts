@@ -88,8 +88,7 @@ export class RandomTilesComponent implements OnInit {
         });
         validate(schemaPath.name, ({ value }) => {
             if (this.editedTilesSet) {
-                const nameAlreadyUsed = this.existingSeriesNames()
-                    .some((name) => name === value() && name !== this.editedTilesSet!.name);
+                const nameAlreadyUsed = this.existingSeriesNames().some((name) => name === value() && name !== this.editedTilesSet!.name);
 
                 if (nameAlreadyUsed) {
                     return { kind: 'cannotNowOverrideOtherTilesSet' };
@@ -175,16 +174,18 @@ export class RandomTilesComponent implements OnInit {
         this.snackBar.open(this.translate.instant('tool.tiles.random.tilesSeriesGenerated'), this.translate.instant('common.ok'), {
             duration: 3000,
         });
-        this.store.dispatch(MosaicProjectActions.tilesSetCommitted({
-            tilesSet: await this.buildTileSet(originalId) 
-        }));
-        
+        this.store.dispatch(
+            MosaicProjectActions.tilesSetCommitted({
+                tilesSet: await this.buildTileSet(originalId),
+            }),
+        );
+
         this.navigateToMenu();
     }
 
     private async buildTileSet(originalId: string | null): Promise<GeneratedTilesSet> {
         const { name, minRadius, maxRadius, count } = this.formData();
-            
+
         const min = Number(minRadius);
         const max = Number(maxRadius);
         const tileGenerator = new TileGenerator(await this.getImagePixelArray());

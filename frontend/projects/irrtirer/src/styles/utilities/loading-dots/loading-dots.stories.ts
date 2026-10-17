@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 interface LoadingDotsStoryProps {
     phrase: string;
     loadingDotsDuration: number;
-};
+}
 
 const meta: Meta<LoadingDotsStoryProps> = {
     title: 'Style/Animacje/Loading Dots',
@@ -11,7 +11,7 @@ const meta: Meta<LoadingDotsStoryProps> = {
         phrase: {
             control: 'text',
             description: 'Tekst, po którym będą pojawiać się kropki',
-            table: { 
+            table: {
                 category: 'Content',
             },
         },
@@ -42,5 +42,5 @@ export const Example: Story = {
         template: `
             <span class="loading-dots" style="--loading-dots-duration: ${args.loadingDotsDuration}s">${args.phrase}</span>
         `,
-    })
+    }),
 };

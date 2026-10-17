@@ -1,4 +1,3 @@
-
 import { Component, inject, input } from '@angular/core';
 import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';

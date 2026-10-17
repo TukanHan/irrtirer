@@ -22,7 +22,17 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 
 @Component({
     selector: 'app-sector-contour-edition',
-    imports: [MatButtonModule, CdkDropList, CdkDrag, MatFormFieldModule, MatInputModule, MatIconModule, ColorPickerComponent, TranslatePipe, FormField],
+    imports: [
+        MatButtonModule,
+        CdkDropList,
+        CdkDrag,
+        MatFormFieldModule,
+        MatInputModule,
+        MatIconModule,
+        ColorPickerComponent,
+        TranslatePipe,
+        FormField,
+    ],
     templateUrl: './sector-contour-edition.component.html',
     styleUrl: './sector-contour-edition.component.scss',
 })

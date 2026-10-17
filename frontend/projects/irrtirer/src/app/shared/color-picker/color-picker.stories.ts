@@ -19,6 +19,6 @@ export const Default: Story = {
     args: {
         disabled: false,
         label: 'Wybierz kolor',
-        value: '#2c96d3'
+        value: '#2c96d3',
     },
 };
