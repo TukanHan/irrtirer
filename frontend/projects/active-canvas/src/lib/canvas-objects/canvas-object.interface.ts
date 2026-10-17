@@ -19,7 +19,7 @@ export interface CanvasObject {
      * Method for internal use to attach object to canvas
      */
     setParent(activeCanvas: IActiveCanvas): void;
-    
+
     /**
      * Method for removing object from canvas
      */

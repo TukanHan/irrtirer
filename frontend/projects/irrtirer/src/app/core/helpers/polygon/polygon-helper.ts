@@ -38,7 +38,8 @@ export class PolygonHelper {
     }
 
     public static calculatePolygonCentroid(vertices: Vector[]): Vector {
-        let x = 0, y = 0;
+        let x = 0,
+            y = 0;
         let area = 0;
         let b: Vector = vertices.at(-1)!;
 

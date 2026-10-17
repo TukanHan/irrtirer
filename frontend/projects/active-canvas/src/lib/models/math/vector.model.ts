@@ -1,4 +1,4 @@
-import { IVector } from "./vector.interface";
+import { IVector } from './vector.interface';
 
 export class Vector implements IVector {
     public readonly x: number = 0;

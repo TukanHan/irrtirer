@@ -1,7 +1,6 @@
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
 import angular from "angular-eslint";
-import eslintConfigPrettier from "eslint-config-prettier";
 import storybook from "eslint-plugin-storybook";
 
 export default defineConfig([
@@ -98,5 +97,4 @@ export default defineConfig([
         },
     },
     ...storybook.configs["flat/recommended"],
-    eslintConfigPrettier,
 ]);

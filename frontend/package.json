@@ -11,7 +11,9 @@
     "lint": "ng lint",
     "api": "cd ../backend/Irrtirer/Irrtirer && dotnet run --urls=https://localhost:7113",
     "sb": "ng run irrtirer:storybook",
-    "build-storybook": "ng run irrtirer:build-storybook"
+    "build-storybook": "ng run irrtirer:build-storybook",
+    "format": "oxfmt .",
+    "format:check": "oxfmt --check ."
   },
   "private": true,
   "dependencies": {
@@ -56,11 +58,10 @@
     "angular-eslint": "^22.0.0",
     "baseline-browser-mapping": "^2.10.0",
     "eslint": "^10.5.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.6",
     "eslint-plugin-storybook": "^10.4.4",
     "jsdom": "^30.1.3",
     "ng-packagr": "^22.0.0",
+    "oxfmt": "^0.73.0",
     "postcss": "^8.5.15",
     "storybook": "^10.4.4",
     "tailwindcss": "^4.3.1",

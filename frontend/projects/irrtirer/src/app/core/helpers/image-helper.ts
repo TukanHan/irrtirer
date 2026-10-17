@@ -26,11 +26,11 @@ export class ImageHelper {
 
     public static base64ToUint8Array(base64: string): Uint8Array<ArrayBuffer> {
         const base64Data = base64.split(',')[1] || base64;
-        
+
         const binaryString = atob(base64Data);
         const len = binaryString.length;
         const bytes = new Uint8Array(len);
-        
+
         for (let i = 0; i < len; i++) {
             bytes[i] = binaryString.charCodeAt(i);
         }

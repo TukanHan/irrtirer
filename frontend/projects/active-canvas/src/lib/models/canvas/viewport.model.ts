@@ -27,7 +27,7 @@ export class Viewport {
          * adjusted appropriately when the output is generated at a
          * higher scale (not because of viewport zoom).
          */
-        public readonly scaleFactor: number = 1
+        public readonly scaleFactor: number = 1,
     ) {
         this.cmSize = this.calculateCmSize();
         this.startWorldPos = this.calculateStartWorldPos();
@@ -42,24 +42,15 @@ export class Viewport {
     }
 
     private calculateStartWorldPos(): IVector {
-        return new Vector(
-            this.position.x - this.cmSize.width / 2,
-            this.position.y - this.cmSize.height / 2,
-        );
+        return new Vector(this.position.x - this.cmSize.width / 2, this.position.y - this.cmSize.height / 2);
     }
 
     private calculateEndWorldPos(): IVector {
-        return new Vector(
-            this.position.x + this.cmSize.width / 2,
-            this.position.y + this.cmSize.height / 2,
-        );
+        return new Vector(this.position.x + this.cmSize.width / 2, this.position.y + this.cmSize.height / 2);
     }
 
     public getViewportPosition(worldPos: IVector): IVector {
-        return new Vector(
-            this.getViewportXPosition(worldPos.x),
-            this.getViewportYPosition(worldPos.y),
-        );
+        return new Vector(this.getViewportXPosition(worldPos.x), this.getViewportYPosition(worldPos.y));
     }
 
     public getViewportXPosition(worldXPos: number): number {
@@ -71,10 +62,7 @@ export class Viewport {
     }
 
     public getWorldPosition(viewportPos: IVector): IVector {
-        return new Vector(
-            this.getWorldXPosition(viewportPos.x),
-            this.getWorldYPosition(viewportPos.y),
-        );
+        return new Vector(this.getWorldXPosition(viewportPos.x), this.getWorldYPosition(viewportPos.y));
     }
 
     public getWorldXPosition(viewportXPos: number): number {

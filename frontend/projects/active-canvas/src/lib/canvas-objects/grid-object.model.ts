@@ -41,13 +41,13 @@ export class GridObject extends BaseCanvasObject implements CanvasObject {
         }
 
         ctx.lineWidth = viewport.scaleFactor;
-        
+
         lines
             .sort((a, b) => b.depthLevel - a.depthLevel)
             .forEach((line) => {
                 this.drawLine(ctx, line.start, line.end, GridObject.getLineColorForDepth(line.depthLevel, currentZoomGridColors));
             });
-        
+
         ctx.lineWidth = 1;
     }
 

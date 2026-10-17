@@ -11,7 +11,7 @@ export const activeCanvas: IActiveCanvas = {
         cmSize: {
             width: 0,
             height: 0,
-        }
+        },
     })),
     clicked: new EventEmitter<IVector>(),
     canvasLoaded: new EventEmitter<void>(),

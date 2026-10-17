@@ -5,11 +5,11 @@ export const tileMock: TileModel = {
     id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',
     color: '#80626E',
     vertices: [
-        new Vector( 7.5, 15.33 ),
+        new Vector(7.5, 15.33),
         new Vector(21.16, 5.11),
         new Vector(4.68, -11.07),
         new Vector(-20.71, -16.44),
-        new Vector(-6.59, 12.71)
+        new Vector(-6.59, 12.71),
     ],
 };
 
@@ -29,7 +29,7 @@ export const tilesSetMock: GeneratedTilesSet = {
                 new Vector(22.68, 10.79),
                 new Vector(7.88, -23.65),
                 new Vector(-16.64, -10.85),
-                new Vector(-20.76, 11.59)
+                new Vector(-20.76, 11.59),
             ],
         },
     ],

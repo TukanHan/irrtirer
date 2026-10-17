@@ -1,4 +1,3 @@
-
 export const BackendAddress: string = 'https://localhost:7113';
 export const address: string = 'https://localhost:7113/api';
 
