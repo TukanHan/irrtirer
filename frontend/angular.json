@@ -79,7 +79,7 @@
                 "test": {
                     "builder": "@angular/build:unit-test",
                     "options": {
-                        "runnerConfig": "projects/irrtirer/vite.config.ts"
+                        "runnerConfig": "projects/irrtirer/vite.config.mts"
                     }
                 },
                 "lint": {
@@ -132,7 +132,7 @@
                 "test": {
                     "builder": "@angular/build:unit-test",
                     "options": {
-                        "runnerConfig": "projects/active-canvas/vite.config.ts"
+                        "runnerConfig": "projects/active-canvas/vite.config.mts"
                     }
                 },
                 "lint": {
