@@ -3,7 +3,8 @@
     "compileOnSave": false,
     "compilerOptions": {
         "paths": {
-            "active-canvas": ["./dist/active-canvas"]
+            "active-canvas": ["./dist/active-canvas"],
+            "irr-design-system": ["./dist/irr-design-system"]
         },
         "outDir": "./dist/out-tsc",
         "strict": true,
@@ -29,5 +30,13 @@
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
         "strictTemplates": true
-    }
+    },
+    "references": [
+        {
+            "path": "./projects/irr-design-system/tsconfig.lib.json"
+        },
+        {
+            "path": "./projects/irr-design-system/tsconfig.spec.json"
+        }
+    ]
 }

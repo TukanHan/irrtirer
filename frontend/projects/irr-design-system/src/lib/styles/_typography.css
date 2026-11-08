@@ -1,0 +1,6 @@
+.ids-button-label {
+    font-family: inherit;
+    color: var(--ids-btn-text, #f8fafc);
+    font-size: 0.95rem;
+    font-weight: 500;
+}

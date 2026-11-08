@@ -142,6 +142,39 @@
                     }
                 }
             }
+        },
+        "irr-design-system": {
+            "projectType": "library",
+            "root": "projects/irr-design-system",
+            "sourceRoot": "projects/irr-design-system/src",
+            "prefix": "ids",
+            "architect": {
+                "build": {
+                    "builder": "@angular/build:ng-packagr",
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/irr-design-system/tsconfig.lib.prod.json"
+                        },
+                        "development": {
+                            "tsConfig": "projects/irr-design-system/tsconfig.lib.json"
+                        }
+                    },
+                    "defaultConfiguration": "production"
+                },
+                "test": {
+                    "builder": "@angular/build:unit-test",
+                    "options": {
+                        "tsConfig": "projects/irr-design-system/tsconfig.spec.json"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": ["projects/irr-design-system/**/*.ts", "projects/irr-design-system/**/*.html"],
+                        "eslintConfig": "projects/irr-design-system/eslint.config.mjs"
+                    }
+                }
+            }
         }
     },
     "cli": {

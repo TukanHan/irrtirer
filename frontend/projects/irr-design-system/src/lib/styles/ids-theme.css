@@ -1,0 +1,9 @@
+@import './_typography.css';
+
+:root {
+    --ids-primary: light-dark(#026ad1, #026ad1);
+    --ids-secondary: light-dark(#d58100, #d58100);
+    --ids-danger: light-dark(#d52400, #d52400);
+    --ids-border-color: light-dark(#bfbfbf, #5e5e5e);
+    --ids-solid-control-color: light-dark(#3c3c43, #18181b);
+}

@@ -6,6 +6,6 @@
         "resolveJsonModule": true
     },
     "exclude": ["../src/test.ts", "../src/**/*.spec.ts"],
-    "include": ["../src/**/*.stories.*", "./*.ts"],
+    "include": ["../src/**/*.stories.*", "../../irr-design-system/src/**/*.stories.*", "./*.ts"],
     "files": ["./typings.d.ts"]
 }
