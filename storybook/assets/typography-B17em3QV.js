@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-D35jsK0Y.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{a as l,i as u,n as d,o as f,r as p,s as m,t as h}from"./typography.stories-C8mzPWQP.js";var g;function _(){return(_=e((()=>{g=`@utility heading-hero {
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-AYbjI_Je.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{a as l,i as u,n as d,o as f,r as p,s as m,t as h}from"./typography.stories-C8mzPWQP.js";var g;function _(){return(_=e((()=>{g=`@utility heading-hero {
     @apply text-2xl font-serif text-contrast-medium tracking-wider;
 }
 

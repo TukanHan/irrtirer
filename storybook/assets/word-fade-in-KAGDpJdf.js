@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-D35jsK0Y.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{n as l,r as u,t as d}from"./word-fade-in.stories-CNbAPeEC.js";var f;function p(){return(p=e((()=>{f=`@keyframes fadeIn {
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-AYbjI_Je.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{n as l,r as u,t as d}from"./word-fade-in.stories-7R1-JKCk.js";var f;function p(){return(p=e((()=>{f=`@keyframes fadeIn {
     from {
         opacity: 0;
     }

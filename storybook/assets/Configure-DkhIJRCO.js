@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{l as t,s as n}from"./blocks-D35jsK0Y.js";import{i as r,r as i}from"./react-DITjJg24.js";import{a}from"./chunk-W22LQPXL-UcXBRgVI.js";function o(e){let t={h1:`h1`,h2:`h2`,li:`li`,p:`p`,strong:`strong`,ul:`ul`,...r(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(n,{title:`Biblioteka kontrolek irrtirer`}),`
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{l as t,s as n}from"./blocks-AYbjI_Je.js";import{i as r,r as i}from"./react-DITjJg24.js";import{a}from"./chunk-W22LQPXL-UcXBRgVI.js";function o(e){let t={h1:`h1`,h2:`h2`,li:`li`,p:`p`,strong:`strong`,ul:`ul`,...r(),...e.components};return(0,c.jsxs)(c.Fragment,{children:[(0,c.jsx)(n,{title:`Biblioteka kontrolek irrtirer`}),`
 `,(0,c.jsx)(t.h1,{id:`biblioteka-kontrolek-irrtirer`,children:`Biblioteka kontrolek Irrtirer`}),`
 `,(0,c.jsxs)(t.p,{children:[`Witaj w dokumentacji biblioteki kontrolek projektu `,(0,c.jsx)(t.strong,{children:`Irrtirer`}),`.`]}),`
 `,(0,c.jsx)(t.h2,{id:`stack-techniczny`,children:`Stack Techniczny:`}),`

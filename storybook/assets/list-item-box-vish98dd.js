@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-D35jsK0Y.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{n as l,r as u,t as d}from"./list-item-box.stories-DRqTijSF.js";var f;function p(){return(p=e((()=>{f=`@utility list-item-box {
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{c as t,i as n,l as r,n as i,s as a}from"./blocks-AYbjI_Je.js";import{i as o,r as s}from"./react-DITjJg24.js";import{a as c}from"./chunk-W22LQPXL-UcXBRgVI.js";import{n as l,r as u,t as d}from"./list-item-box.stories-DRqTijSF.js";var f;function p(){return(p=e((()=>{f=`@utility list-item-box {
     @apply flex flex-row items-center justify-between rounded-sm bg-contrast-lightest px-4 py-2.5;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
 
