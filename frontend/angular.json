@@ -170,8 +170,7 @@
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {
-                        "lintFilePatterns": ["projects/irr-design-system/**/*.ts", "projects/irr-design-system/**/*.html"],
-                        "eslintConfig": "projects/irr-design-system/eslint.config.mjs"
+                        "lintFilePatterns": ["projects/irr-design-system/**/*.ts", "projects/irr-design-system/**/*.html"]
                     }
                 }
             }

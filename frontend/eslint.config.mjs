@@ -83,6 +83,27 @@ export default defineConfig([
         },
     },
     {
+        files: ['projects/irr-design-system/**/*.ts'],
+        rules: {
+            '@angular-eslint/directive-selector': [
+                'error',
+                {
+                    type: 'attribute',
+                    prefix: 'ids',
+                    style: 'camelCase',
+                },
+            ],
+            '@angular-eslint/component-selector': [
+                'error',
+                {
+                    type: 'element',
+                    prefix: 'ids',
+                    style: 'kebab-case',
+                },
+            ],
+        },
+    },
+    {
         files: ['**/*.html'],
         extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
         rules: {

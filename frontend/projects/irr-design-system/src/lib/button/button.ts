@@ -5,7 +5,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'danger';
 @Component({
     selector: 'ids-button',
     template: `
-        <button class="ids-button ids-button--{{ variant() }}" [disabled]="disabled()" (click)="clicked.emit($event)">
+        <button class="ids-button ids-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
             <span class="button-content ids-button-label">
                 <ng-content />
             </span>
