@@ -1,27 +1,27 @@
 @let isMosaicSet = !!mosaicConfig();
 
 @if (isMosaicSet) {
-    <button mat-flat-button (click)="navigateToProjectConfiguration()">
-        {{ 'tool.config.menu.projectSettings' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="saveProject()">
+    <ids-button variant="accent" (clicked)="navigateToProjectConfiguration()">
+         {{ 'tool.config.menu.projectSettings' | translate }}
+    </ids-button>
+    <ids-button (clicked)="saveProject()">
         {{ 'tool.config.menu.saveProject' | translate }}
-    </button>
+    </ids-button>
 } @else {
-    <button mat-flat-button color="accent" (click)="navigateToProjectConfiguration()">
+    <ids-button (clicked)="navigateToProjectConfiguration()">
         {{ 'tool.config.menu.newProject' | translate }}
-    </button>
-    <button mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button disabled>
         {{ 'tool.config.menu.exampleProjects' | translate }}
-    </button>
+    </ids-button>
 }
 
-<button mat-flat-button color="accent" (click)="loadNewProject()">
+<ids-button (clicked)="loadNewProject()">
     {{ 'tool.config.menu.loadProject' | translate }}
-</button>
+</ids-button>
 
 @if (isMosaicSet) {
-    <button mat-flat-button color="warn" (click)="rejectProject()">
+    <ids-button variant="danger" (clicked)="rejectProject()">
         {{ 'tool.config.menu.rejectProject' | translate }}
-    </button>
+    </ids-button>
 }

@@ -1,5 +1,4 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -14,12 +13,13 @@ import { ProjectImportService } from '../../../core/services/project-import/proj
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
+import { IdsButton } from 'irr-design-system';
 
 const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 
 @Component({
     selector: 'app-config-menu',
-    imports: [MatButtonModule, TranslatePipe],
+    imports: [TranslatePipe, IdsButton],
     templateUrl: './config-menu.component.html',
     host: { class: 'flex flex-col gap-2.5' },
 })

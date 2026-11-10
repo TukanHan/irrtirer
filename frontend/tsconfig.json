@@ -4,7 +4,7 @@
     "compilerOptions": {
         "paths": {
             "active-canvas": ["./dist/active-canvas"],
-            "irr-design-system": ["./dist/irr-design-system"]
+            "irr-design-system": ["./projects/irr-design-system/src/public-api.ts"]
         },
         "outDir": "./dist/out-tsc",
         "strict": true,

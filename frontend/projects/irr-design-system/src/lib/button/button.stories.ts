@@ -10,7 +10,7 @@ const meta: Meta<IdsButton> = {
         clicked: { action: 'clicked' },
         variant: {
             control: { type: 'select' },
-            options: ['primary', 'secondary', 'danger'],
+            options: ['accent', 'neutral', 'danger'],
         },
         type: {
             control: { type: 'select' },
@@ -25,7 +25,7 @@ type Story = StoryObj<IdsButton>;
 export const Default: Story = {
     args: {
         disabled: false,
-        variant: 'primary',
+        variant: 'neutral',
     },
     render: (args) => ({
         props: args,

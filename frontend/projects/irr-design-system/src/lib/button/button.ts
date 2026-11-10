@@ -1,6 +1,6 @@
-import { Component, input, output } from '@angular/core';
+import { booleanAttribute, Component, input, output } from '@angular/core';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'danger';
+export type ButtonVariant = 'accent' | 'neutral' | 'danger';
 
 @Component({
     selector: 'ids-button',
@@ -15,7 +15,7 @@ export type ButtonVariant = 'primary' | 'secondary' | 'danger';
 })
 export class IdsButton {
     public readonly clicked = output<MouseEvent>();
-    public readonly disabled = input<boolean>(false);
-    public readonly variant = input<ButtonVariant>('primary');
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+    public readonly variant = input<ButtonVariant>('neutral');
     public readonly type = input<'button' | 'submit' | 'reset'>('button');
 }

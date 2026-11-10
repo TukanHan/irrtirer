@@ -9,12 +9,14 @@
     position: relative;
 
     --ids-radius: 9999px;
-    --ids-glow-color: var(--ids-primary);
+    --ids-glow-color: var(--ids-accent);
+    --ids-button-text-color: var(--ids-text-color);
 
     .ids-button {
         display: block;
+        width: 100%;
         border-radius: var(--ids-radius);
-        border: 1px solid var(--ids-border-color);
+        border: 1px solid var(--ids-button-border-color);
         cursor: pointer;
         padding: 0;
         outline: none;
@@ -24,12 +26,20 @@
             transform 0.1s,
             border-color 0.3s ease;
 
-        &.ids-button--secondary {
-            --ids-glow-color: var(--ids-secondary);
+        &.ids-button--neutral {
+            --ids-glow-color: var(--ids-neutral);
+            --ids-button-border-color: var(--ids-border-color);
+        }
+
+        &.ids-button--accent {
+            --ids-glow-color: var(--ids-accent);
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 40%, var(--ids-glow-color));
         }
 
         &.ids-button--danger {
             --ids-glow-color: var(--ids-danger);
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 40%, var(--ids-glow-color));
+            --ids-button-text-color: color-mix(in srgb, var(--ids-text-color) 10%, var(--ids-glow-color));
         }
 
         &::before,
@@ -101,6 +111,7 @@
             background-color: var(--ids-solid-control-color);
             border-radius: inherit;
             padding: 0.5rem 1.5rem;
+            color: var(--ids-button-text-color);
         }
     }
 }
