@@ -1,7 +1,7 @@
 <div class="actions">
-    <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
+    <ids-button variant="accent" (clicked)="navigateToNewSectorPanel()">
         {{ 'tool.sectors.contourList.addSector' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 @if (sectors().length) {

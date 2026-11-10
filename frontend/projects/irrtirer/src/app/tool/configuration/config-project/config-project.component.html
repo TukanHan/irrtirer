@@ -1,24 +1,27 @@
 <div class="flex flex-row gap-2.5">
-    <button class="flex-1" mat-flat-button (click)="navigateToConfiguration()">
+    <ids-button class="flex-1" (clicked)="navigateToConfiguration()">
         {{ 'common.return' | translate }}
-    </button>
-    <button class="flex-1" mat-flat-button color="accent" (click)="trySave()" [hidden]="isReadOnlyMode()">
+    </ids-button>
+    <ids-button class="flex-1" 
+        (clicked)="trySave()"
+        [hidden]="isReadOnlyMode()"
+        [variant]="this.form().valid() ? 'accent': 'neutral'"
+    >
         {{ 'common.confirm' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <form class="flex flex-col gap-5">
     <input #imageUploader hidden type="file" (change)="onImageSelected($event)" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
 
-    <button
-        mat-flat-button
-        [color]="form.mosaicImage().valid() ? '' : 'accent'"
-        (click)="imageUploader.click()"
+    <ids-button
+        [variant]="form.mosaicImage().valid() ? 'neutral' : 'accent'"
+        (clicked)="imageUploader.click()"
         [hidden]="isReadOnlyMode()"
         type="button"
     >
         {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage' : 'tool.config.project.chooseImage') | translate }}
-    </button>
+    </ids-button>
 
     <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>

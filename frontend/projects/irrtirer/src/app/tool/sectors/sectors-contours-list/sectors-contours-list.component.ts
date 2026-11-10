@@ -1,5 +1,5 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { IdsButton } from 'irr-design-system';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -14,10 +14,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe],
+    imports: [IdsButton, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe, MatIconButton],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
 })

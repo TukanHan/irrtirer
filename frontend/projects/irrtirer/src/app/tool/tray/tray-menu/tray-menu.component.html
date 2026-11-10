@@ -1,13 +1,13 @@
 <div class="flex flex-col gap-2.5">
-    <button mat-flat-button color="accent" disabled>
+    <ids-button disabled>
         {{ 'tool.tiles.menu.loadFromFile' | translate }}
-    </button>
-    <button mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button  disabled>
         {{ 'tool.tiles.menu.createTile' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="navigateToRandomTiles()">
+    </ids-button >
+    <ids-button variant="accent" (clicked)="navigateToRandomTiles()">
         {{ 'tool.tiles.menu.randomTiles' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <div class="flex flex-col gap-1.5 flex-1">

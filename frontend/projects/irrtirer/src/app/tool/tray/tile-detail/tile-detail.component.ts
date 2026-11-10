@@ -4,13 +4,13 @@ import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TileModel } from '../../../core/models/mosaic-project.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MatButtonModule } from '@angular/material/button';
 import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
 import { FormsModule } from '@angular/forms';
+import { IdsButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-tile-detail',
-    imports: [TranslatePipe, MatButtonModule, ColorPickerComponent, FormsModule],
+    imports: [TranslatePipe, IdsButton, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
     host: { class: 'flex flex-col gap-3 h-full' },
 })

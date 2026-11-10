@@ -1,10 +1,10 @@
 <div class="actions">
-    <button mat-flat-button (click)="navigateToMenu()">
+    <ids-button class="flex-1" (clicked)="navigateToMenu()">
         {{ 'common.return' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="trySaveTileSet()">
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" (clicked)="trySaveTileSet()">
         {{ 'tool.tiles.random.randomTiles' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <form class="form">

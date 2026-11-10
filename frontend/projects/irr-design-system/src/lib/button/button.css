@@ -110,7 +110,7 @@
             z-index: 1;
             background-color: var(--ids-solid-control-color);
             border-radius: inherit;
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1rem;
             color: var(--ids-button-text-color);
         }
     }

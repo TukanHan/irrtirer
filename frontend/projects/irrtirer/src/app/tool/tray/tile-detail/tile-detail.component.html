@@ -1,10 +1,10 @@
 <div class="flex flex-row gap-3">
-    <button class="flex-1" mat-flat-button (click)="navigateToMenu()">
+    <ids-button class="flex-1" (clicked)="navigateToMenu()">
         {{ 'common.return' | translate }}
-    </button>
-    <button class="flex-1" mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" disabled>
         {{ 'common.edit' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <div class="flex flex-1 flex-col gap-2">

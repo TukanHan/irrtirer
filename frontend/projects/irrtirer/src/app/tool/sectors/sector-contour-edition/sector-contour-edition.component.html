@@ -1,6 +1,10 @@
 <div class="actions">
-    <button mat-flat-button (click)="cancel()">{{ 'common.cancel' | translate }}</button>
-    <button mat-flat-button color="accent" (click)="save()">{{ 'common.confirm' | translate }}</button>
+    <ids-button class="flex-1" (clicked)="cancel()">
+        {{ 'common.cancel' | translate }}
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" (clicked)="save()">
+        {{ 'common.confirm' | translate }}
+    </ids-button>
 </div>
 
 <div class="info">

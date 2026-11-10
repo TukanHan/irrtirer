@@ -1,10 +1,10 @@
 @let isMosaicSet = !!mosaicConfig();
 
 @if (isMosaicSet) {
-    <ids-button variant="accent" (clicked)="navigateToProjectConfiguration()">
+    <ids-button (clicked)="navigateToProjectConfiguration()">
          {{ 'tool.config.menu.projectSettings' | translate }}
     </ids-button>
-    <ids-button (clicked)="saveProject()">
+    <ids-button variant="accent" (clicked)="saveProject()">
         {{ 'tool.config.menu.saveProject' | translate }}
     </ids-button>
 } @else {

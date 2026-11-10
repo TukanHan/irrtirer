@@ -1,6 +1,5 @@
 import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
-import { MatButtonModule } from '@angular/material/button';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -17,6 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { IdsButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -30,7 +30,7 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
+    imports: [IdsButton, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
 })
