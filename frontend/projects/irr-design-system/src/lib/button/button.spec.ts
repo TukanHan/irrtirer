@@ -25,18 +25,18 @@ describe('IdsButton', () => {
         const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
 
         expect(fixture.componentInstance).toBeTruthy();
-        expect(button.classList).toContain('ids-button--primary');
+        expect(button.classList).toContain('ids-button--neutral');
         expect(button.disabled).toBe(false);
         expect(button.type).toBe('button');
     });
 
-    it('should apply the selected variant', () => {
-        fixture.componentRef.setInput('variant', 'danger');
+    it.each(['accent', 'danger'] as const)('should apply the selected %s variant', (variant) => {
+        fixture.componentRef.setInput('variant', variant);
         fixture.detectChanges();
 
         const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
 
-        expect(button.classList).toContain('ids-button--danger');
+        expect(button.classList).toContain(`ids-button--${variant}`);
     });
 
     it('should disable the native button when disabled', () => {

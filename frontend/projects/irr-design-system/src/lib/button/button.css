@@ -22,9 +22,7 @@
         outline: none;
         position: relative;
         isolation: isolate;
-        transition:
-            transform 0.1s,
-            border-color 0.3s ease;
+        transition: transform 0.1s;
 
         &.ids-button--neutral {
             --ids-glow-color: var(--ids-neutral);
@@ -79,13 +77,12 @@
         }
 
         &:active:not(:disabled) {
-            &::after {
-                opacity: 1;
-                transform: scale(1.1);
+            .button-content {
+                background-color: color-mix(in srgb, var(--ids-solid-control-color) 90%, var(--ids-glow-color));
             }
         }
 
-        &:hover:not(:disabled):not(:focus-visible):not(:active) {
+        &:hover:not(:disabled):not(:focus-visible) {
             &::after {
                 opacity: 1;
                 transform: scale(1);
@@ -112,6 +109,7 @@
             border-radius: inherit;
             padding: 0.5rem 1rem;
             color: var(--ids-button-text-color);
+            transition: background-color 0.15s ease-out;
         }
     }
 }

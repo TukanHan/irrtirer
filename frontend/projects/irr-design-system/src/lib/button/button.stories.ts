@@ -57,6 +57,10 @@ export const Default: Story = {
                     resize: horizontal;
                     align-items: flex-start;
                     border: 2px dashed #7777;
+
+                    > * {
+                        flex: 1 1 auto;
+                    }
                 }
             `,
             ],
