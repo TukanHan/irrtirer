@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-CygVx623.js","./rolldown-runtime-sJBDdmOt.js","./blocks-CP06YaYM.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./components-Bf0cILJn.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chunk-W22LQPXL-UcXBRgVI.js","./theming-CPNpTh4X.js","./chunk-242VQQM5-CQUR7y2g.js","./react-DITjJg24.js","./chunk-QQBDHPVZ-DGKYZDIn.js","./chevron-Xu21D-Yn.js","./chevron.stories-gRlsrhNG.js","./core-DuXJM8ZX.js","./takeUntil-Bg64lQKS.js","./tap-XLE3Tiwu.js","./button-3TP_hRwW.js","./_animation-chunk-BOuh4U68.js","./skip-Bpxo1-Q6.js","./common-v8LuiA6R.js","./list-item-box-CoRaMjpk.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-DRbozoqw.js","./loading-dots.stories-DbZVp0Jk.js","./typography-rbdCGBVE.js","./typography.stories-C8mzPWQP.js","./word-fade-in-cWmJIQyG.js","./word-fade-in.stories-Di9ydV_h.js","./color-picker.stories-ByHxMzs8.js","./observers-BkwIIiT1.js","./switchMap-JjP4gE6J.js","./dialog.stories-CNv5mmrI.js","./expandable-panel.stories-CFBbp9s_.js","./scrollable-list.stories-Ba7AgJfC.js","./button.stories-lWUCqWl6.js","./animations-BatAem-a.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-Crw4d4Lu.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-CygVx623.js","./rolldown-runtime-sJBDdmOt.js","./blocks-CP06YaYM.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./components-Bf0cILJn.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chunk-W22LQPXL-UcXBRgVI.js","./theming-CPNpTh4X.js","./chunk-242VQQM5-CQUR7y2g.js","./react-DITjJg24.js","./chunk-QQBDHPVZ-DGKYZDIn.js","./chevron-CNBhkB4z.js","./chevron.stories-Lw6oedXP.js","./core-DuXJM8ZX.js","./takeUntil-Bg64lQKS.js","./tap-XLE3Tiwu.js","./button-3TP_hRwW.js","./_animation-chunk-BOuh4U68.js","./skip-Bpxo1-Q6.js","./common-v8LuiA6R.js","./list-item-box-CoRaMjpk.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-DRbozoqw.js","./loading-dots.stories-DbZVp0Jk.js","./typography-rbdCGBVE.js","./typography.stories-C8mzPWQP.js","./word-fade-in-B8x5Ofz9.js","./word-fade-in.stories-DhkhXNLI.js","./color-picker.stories-ByHxMzs8.js","./observers-BkwIIiT1.js","./switchMap-JjP4gE6J.js","./dialog.stories-Dvs4IlWQ.js","./expandable-panel.stories-YnLH7ge1.js","./scrollable-list.stories-BZwD0UZw.js","./button.stories-BLB9EsFs.js","./animations-B8ZEFnud.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-Crw4d4Lu.js"])))=>i.map(i=>d[i]);
 import{a as e,i as t,n,r}from"./rolldown-runtime-sJBDdmOt.js";import{n as i,t as a}from"./preload-helper-Dt5pTa-y.js";import{$ as o,$n as s,A as c,An as l,Bn as u,Cn as d,Dn as f,Dr as p,E as m,En as h,F as g,Fn as _,Ft as v,G as y,Gn as b,H as x,Hn as S,In as C,J as w,Kn as T,L as ee,Ln as E,M as D,Mn as O,Nt as k,O as te,Pn as A,Pt as ne,Q as re,Qn as ie,R as ae,Rn as oe,Sn as se,Tn as ce,U as le,Un as ue,V as de,Vn as fe,W as pe,Wn as me,Wt as he,X as ge,Xn as _e,Y as ve,Yn as ye,Z as be,Zn as xe,_t as Se,at as Ce,bn as we,dn as Te,fn as Ee,g as De,gn as Oe,gt as ke,ht as Ae,ir as je,it as Me,j as Ne,jn as Pe,ln as Fe,m as Ie,mn as Le,n as Re,nt as ze,ot as Be,p as Ve,pn as He,pr as Ue,q as We,qn as Ge,rr as Ke,rt as qe,s as Je,st as Ye,t as Xe,tt as Ze,un as Qe,vn as j,w as $e,wn as et,x as tt,xn as nt,xr as rt,z as it,zn as at}from"./core-DuXJM8ZX.js";import{D as ot,F as st,I as ct,O as lt,S as ut,a as eee,c as dt,i as tee,l as ft,n as pt,o as mt,r as nee,s as ht,t as gt,u as ree,x as _t}from"./takeUntil-Bg64lQKS.js";import{a as vt,c as yt,i as bt,l as xt,n as St,o as Ct,r as iee,s as aee,t as oee,u as see}from"./switchMap-JjP4gE6J.js";import{a as wt,c as Tt,i as Et,l as Dt,n as Ot,o as kt,r as At,s as jt,t as cee,u as Mt}from"./tap-XLE3Tiwu.js";import{i as Nt,n as lee,r as Pt,t as uee}from"./skip-Bpxo1-Q6.js";import{a as Ft,d as dee,f as fee,h as pee,i as mee,m as hee,n as It,o as Lt,p as Rt,t as gee}from"./common-v8LuiA6R.js";import{a as zt,i as _ee,l as Bt,n as Vt,u as Ht}from"./chunk-RDNWKK3U-U0neV263.js";import{i as vee,n as yee}from"./chunk-UAWMPV5J-BrGPyIDv.js";import{t as bee}from"./react-DlPsW1c0.js";function Ut(){return(Ut=n((()=>{(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})()})))()}function Wt(e){var t=[...arguments].slice(1),n=Array.from(typeof e==`string`?[e]:e);n[n.length-1]=n[n.length-1].replace(/\r?\n([\t ]*)$/,``);var r=n.reduce(function(e,t){var n=t.match(/\n([\t ]+|(?!\s).)/g);return n?e.concat(n.map(function(e){return e.match(/[\t ]/g)?.length??0})):e},[]);if(r.length){var i=RegExp(`
 [	 ]{`+Math.min.apply(Math,r)+`}`,`g`);n=n.map(function(e){return e.replace(i,`
 `)})}n[0]=n[0].replace(/^\r?\n/,``);var a=n[0];return t.forEach(function(e,t){var r=a.match(/(?:^|\n)( *)$/),i=r?r[1]:``,o=e;typeof e==`string`&&e.includes(`
@@ -1023,7 +1023,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
       font-weight: bold;
       color: hsl(212 100 46);
     }
-  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},jz=Wp(m_(),1),Pp()})))()}var Pz,Fz,Iz;function Lz(){return(Lz=n((()=>{({createBrowserChannel:Pz}=__STORYBOOK_MODULE_CHANNELS__),{addons:Fz}=__STORYBOOK_MODULE_PREVIEW_API__,Iz=Pz({page:`preview`}),Fz.setChannel(Iz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Iz)})))()}async function cde(e){return await Rz[e]()}var Rz;function zz(){return(zz=n((()=>{i(),Rz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-CygVx623.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-Xu21D-Yn.js`),__vite__mapDeps([15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-CoRaMjpk.js`),__vite__mapDeps([24,1,2,3,4,5,6,7,8,9,10,11,12,13,14,25]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-DRbozoqw.js`),__vite__mapDeps([26,1,2,3,4,5,6,7,8,9,10,11,12,13,14,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-rbdCGBVE.js`),__vite__mapDeps([28,1,2,3,4,5,6,7,8,9,10,11,12,13,14,29]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-cWmJIQyG.js`),__vite__mapDeps([30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,31,17]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-ByHxMzs8.js`),__vite__mapDeps([32,1,17,33,18,34,21,22,23]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-CNv5mmrI.js`),__vite__mapDeps([35,1,17,33,18,34,21,22,23,20]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-CFBbp9s_.js`),__vite__mapDeps([36,1,17]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-Ba7AgJfC.js`),__vite__mapDeps([37,1,17,23,20,18,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-gRlsrhNG.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([16,1,17,18,19,20,21,22,23]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([25,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([27,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([29,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-Di9ydV_h.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([31,1,17]),import.meta.url),"./projects/irr-design-system/src/lib/button/button.stories.ts":()=>a(()=>import(`./button.stories-lWUCqWl6.js`),__vite__mapDeps([38,1,17]),import.meta.url)}})))()}var Bz;function Vz(){return(Vz=n((()=>{Bz=Ue(function(e){return function(){e(this),this.name=`EmptyError`,this.message=`no elements in sequence`}})})))()}function lde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new Ke({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new Bz)}});e.subscribe(a)})}function Hz(){return(Hz=n((()=>{Vz(),je()})))()}function Uz(e){return new xe(function(t){lt(e()).subscribe(t)})}function Wz(){return(Wz=n((()=>{ie(),ot()})))()}function ude(e){return _e(function(t,n){var r=!1;t.subscribe(T(n,function(e){r=!0,n.next(e)},function(){r||n.next(e),n.complete()}))})}function Gz(){return(Gz=n((()=>{ye(),Ge()})))()}function dde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?s:_e(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(T(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?Ct(i):lt(i(e,n)),u=T(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function Kz(){return(Kz=n((()=>{ye(),Ge(),vt(),ot()})))()}var fde=r({});function qz(){return(qz=n((()=>{Ie(),Ve()})))()}function pde(){return tG||(tG=oG(),Jz(eG.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Jz(eG.STYLE,void 0,[[`*`,[`style`]]]),Jz(eG.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Jz(eG.URL,rG,[[`*`,[`href`,`xlink:href`]]]),Jz(eG.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Jz(eG.URL,nG,[[`a`,[`href`,`xlink:href`]]]),Jz(eG.ATTRIBUTE_NO_BINDING,nG,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Jz(eG.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),tG)}function Jz(e,t,n){let r=t??iG;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=tG[i]??=oG(),o=a[r]??=oG();o[n]=e}}}function mde(e,t,n){let r=pde()[t.toLowerCase()];if(!r)return eG.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[aG])}if(a===void 0){let e=r[iG];e&&(a=e[i]??e[aG])}if(a===void 0&&(!n||n===iG)){let e=r[nG];e&&(a=e[i])}return a??eG.NONE}function hde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function gde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function _de(e){let t=hde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>gde(e)):[];return t.concat(...n)}function Yz(e){return e?YW.parse(e).map(_de):[]}function vde(e){return xde(bde(e.nodes).join(``)+`[${e.meaning}]`)}function yde(e){return e.id||Xz(e)}function Xz(e){let t=new gG;return $z(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function bde(e){return e.map(e=>e.visit(hG,null))}function xde(e){pG??=new TextEncoder;let t=[...pG.encode(e)],n=wde(t,_G.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=rB(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Sde(t,o,s,c),u=r[0],d=r[1],f=[rB(a,5),u,l,d,i[t]].reduce(nB);l=c,c=s,s=rB(o,30),o=a,a=f}a=nB(a,t),o=nB(o,r),s=nB(s,u),c=nB(c,d),l=nB(l,f)}return Zz(a)+Zz(o)+Zz(s)+Zz(c)+Zz(l)}function Zz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Sde(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Qz(e){pG??=new TextEncoder;let t=pG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=eB(n,t.length,0),i=eB(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function $z(e,t=``){let n=Qz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Qz(t)),BigInt.asUintN(63,n).toString()}function eB(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=tB(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),tB(r,i,n)[2]}function tB(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function nB(e,t){return Cde(e,t)[1]}function Cde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function rB(e,t){return e<<t|e>>>32-t}function wde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=Tde(e,i*4,t);return r}function iB(e,t){return t>=e.length?0:e[t]}function Tde(e,t,n){let r=0;if(n===_G.Big)for(let n=0;n<4;n++)r+=iB(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=iB(e,t+n)<<8*n;return r}function Ede(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function aB(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function oB(e,t){return aB(e,t,(e,t)=>e.isEquivalent(t))}function sB(e,t,n){return e===``?{cooked:t,raw:ZG(YG(JG(t))),range:n}:{cooked:`:${e}:${t}`,raw:ZG(`:${XG(JG(e))}:${JG(t)}`),range:n}}function Dde(e,t=!1,n=!0){return new vK(e,t,n)}function Ode(e=[]){return new yK(e)}function cB(e,t,n,r){return new jG(e,t,n,r)}function R(e,t=null,n){return new QG(e,null,t,n)}function lB(e,t,n){return new SG(e,t,n)}function uB(e){return new MG(e)}function dB(e,t,n){return new lK(e,t,n)}function fB(e,t=null){return new fK(e.map(e=>new uK(e.key,e.value,e.quoted)),t,null)}function kde(e,t){return new eK(e,t)}function pB(e,t,n,r,i){return new nK(e,t,n,r,i)}function mB(e,t,n,r){return new rK(e,t,n,r)}function hB(e,t,n,r,i){return new TK(e,t,n,r,i)}function Ade(e,t,n,r){return new IG(e,t,n,r)}function z(e,t,n){return new zG(e,t,n)}function jde(e,t,n,r,i){return new qG(e,t,n,r,i)}function gB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Mde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${gB(e[0])} `;let t=`*
+  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},jz=Wp(m_(),1),Pp()})))()}var Pz,Fz,Iz;function Lz(){return(Lz=n((()=>{({createBrowserChannel:Pz}=__STORYBOOK_MODULE_CHANNELS__),{addons:Fz}=__STORYBOOK_MODULE_PREVIEW_API__,Iz=Pz({page:`preview`}),Fz.setChannel(Iz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Iz)})))()}async function cde(e){return await Rz[e]()}var Rz;function zz(){return(zz=n((()=>{i(),Rz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-CygVx623.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-CNBhkB4z.js`),__vite__mapDeps([15,1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22,23]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-CoRaMjpk.js`),__vite__mapDeps([24,1,2,3,4,5,6,7,8,9,10,11,12,13,14,25]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-DRbozoqw.js`),__vite__mapDeps([26,1,2,3,4,5,6,7,8,9,10,11,12,13,14,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-rbdCGBVE.js`),__vite__mapDeps([28,1,2,3,4,5,6,7,8,9,10,11,12,13,14,29]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-B8x5Ofz9.js`),__vite__mapDeps([30,1,2,3,4,5,6,7,8,9,10,11,12,13,14,31,17]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-ByHxMzs8.js`),__vite__mapDeps([32,1,17,33,18,34,21,22,23]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-Dvs4IlWQ.js`),__vite__mapDeps([35,1,17,33,18,34,21,22,23,20]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-YnLH7ge1.js`),__vite__mapDeps([36,1,17]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-BZwD0UZw.js`),__vite__mapDeps([37,1,17,23,20,18,21,22]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-Lw6oedXP.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([16,1,17,18,19,20,21,22,23]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([25,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([27,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([29,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-DhkhXNLI.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([31,1,17]),import.meta.url),"./projects/irr-design-system/src/lib/button/button.stories.ts":()=>a(()=>import(`./button.stories-BLB9EsFs.js`),__vite__mapDeps([38,1,17]),import.meta.url)}})))()}var Bz;function Vz(){return(Vz=n((()=>{Bz=Ue(function(e){return function(){e(this),this.name=`EmptyError`,this.message=`no elements in sequence`}})})))()}function lde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new Ke({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new Bz)}});e.subscribe(a)})}function Hz(){return(Hz=n((()=>{Vz(),je()})))()}function Uz(e){return new xe(function(t){lt(e()).subscribe(t)})}function Wz(){return(Wz=n((()=>{ie(),ot()})))()}function ude(e){return _e(function(t,n){var r=!1;t.subscribe(T(n,function(e){r=!0,n.next(e)},function(){r||n.next(e),n.complete()}))})}function Gz(){return(Gz=n((()=>{ye(),Ge()})))()}function dde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?s:_e(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(T(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?Ct(i):lt(i(e,n)),u=T(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function Kz(){return(Kz=n((()=>{ye(),Ge(),vt(),ot()})))()}var fde=r({});function qz(){return(qz=n((()=>{Ie(),Ve()})))()}function pde(){return tG||(tG=oG(),Jz(eG.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Jz(eG.STYLE,void 0,[[`*`,[`style`]]]),Jz(eG.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Jz(eG.URL,rG,[[`*`,[`href`,`xlink:href`]]]),Jz(eG.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Jz(eG.URL,nG,[[`a`,[`href`,`xlink:href`]]]),Jz(eG.ATTRIBUTE_NO_BINDING,nG,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Jz(eG.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),tG)}function Jz(e,t,n){let r=t??iG;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=tG[i]??=oG(),o=a[r]??=oG();o[n]=e}}}function mde(e,t,n){let r=pde()[t.toLowerCase()];if(!r)return eG.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[aG])}if(a===void 0){let e=r[iG];e&&(a=e[i]??e[aG])}if(a===void 0&&(!n||n===iG)){let e=r[nG];e&&(a=e[i])}return a??eG.NONE}function hde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function gde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function _de(e){let t=hde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>gde(e)):[];return t.concat(...n)}function Yz(e){return e?YW.parse(e).map(_de):[]}function vde(e){return xde(bde(e.nodes).join(``)+`[${e.meaning}]`)}function yde(e){return e.id||Xz(e)}function Xz(e){let t=new gG;return $z(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function bde(e){return e.map(e=>e.visit(hG,null))}function xde(e){pG??=new TextEncoder;let t=[...pG.encode(e)],n=wde(t,_G.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=rB(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Sde(t,o,s,c),u=r[0],d=r[1],f=[rB(a,5),u,l,d,i[t]].reduce(nB);l=c,c=s,s=rB(o,30),o=a,a=f}a=nB(a,t),o=nB(o,r),s=nB(s,u),c=nB(c,d),l=nB(l,f)}return Zz(a)+Zz(o)+Zz(s)+Zz(c)+Zz(l)}function Zz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Sde(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Qz(e){pG??=new TextEncoder;let t=pG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=eB(n,t.length,0),i=eB(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function $z(e,t=``){let n=Qz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Qz(t)),BigInt.asUintN(63,n).toString()}function eB(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=tB(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),tB(r,i,n)[2]}function tB(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function nB(e,t){return Cde(e,t)[1]}function Cde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function rB(e,t){return e<<t|e>>>32-t}function wde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=Tde(e,i*4,t);return r}function iB(e,t){return t>=e.length?0:e[t]}function Tde(e,t,n){let r=0;if(n===_G.Big)for(let n=0;n<4;n++)r+=iB(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=iB(e,t+n)<<8*n;return r}function Ede(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function aB(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function oB(e,t){return aB(e,t,(e,t)=>e.isEquivalent(t))}function sB(e,t,n){return e===``?{cooked:t,raw:ZG(YG(JG(t))),range:n}:{cooked:`:${e}:${t}`,raw:ZG(`:${XG(JG(e))}:${JG(t)}`),range:n}}function Dde(e,t=!1,n=!0){return new vK(e,t,n)}function Ode(e=[]){return new yK(e)}function cB(e,t,n,r){return new jG(e,t,n,r)}function R(e,t=null,n){return new QG(e,null,t,n)}function lB(e,t,n){return new SG(e,t,n)}function uB(e){return new MG(e)}function dB(e,t,n){return new lK(e,t,n)}function fB(e,t=null){return new fK(e.map(e=>new uK(e.key,e.value,e.quoted)),t,null)}function kde(e,t){return new eK(e,t)}function pB(e,t,n,r,i){return new nK(e,t,n,r,i)}function mB(e,t,n,r){return new rK(e,t,n,r)}function hB(e,t,n,r,i){return new TK(e,t,n,r,i)}function Ade(e,t,n,r){return new IG(e,t,n,r)}function z(e,t,n){return new zG(e,t,n)}function jde(e,t,n,r,i){return new qG(e,t,n,r,i)}function gB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Mde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${gB(e[0])} `;let t=`*
 `;for(let n of e)t+=` *`,t+=gB(n).replace(/\n/g,`
  * `),t+=`
 `;return t+=` `,t}function _B(e){return e instanceof zG&&typeof e.value==`string`&&e.value.length>=OK}function Nde(e){return e.replace(MK,(...e)=>e[1].toUpperCase())}function Pde(e,t){return vB(e,`:`,t)}function Fde(e,t){return vB(e,`.`,t)}function vB(e,t,n){let r=e.indexOf(t);return r==-1?n:[e.slice(0,r).trim(),e.slice(r+1).trim()]}function Ide(e){let t=[];for(let n=0;n<e.length;n++){let r=e.charCodeAt(n);if(r>=55296&&r<=56319&&e.length>n+1){let t=e.charCodeAt(n+1);t>=56320&&t<=57343&&(n++,r=(r-55296<<10)+t-56320+65536)}r<=127?t.push(r):r<=2047?t.push(r>>6&31|192,r&63|128):r<=65535?t.push(r>>12|224,r>>6&63|128,r&63|128):r<=2097151&&t.push(r>>18&7|240,r>>12&63|128,r>>6&63|128,r&63|128)}return t}function yB(e){if(typeof e==`string`)return e;if(Array.isArray(e))return`[${e.map(yB).join(`, `)}]`;if(e==null)return``+e;let t=e.overriddenName||e.name;if(t)return`${t}`;if(!e.toString)return`object`;let n=e.toString();if(n==null)return``+n;let r=n.indexOf(`
@@ -1064,7 +1064,7 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
           In Storybook v7.0 we are using Angular's new bootstrapApplication API to mount an Angular application to the DOM.
           Note that the BrowserModule providers are automatically included when starting an application with bootstrapApplication()
           Please remove the "BrowserModule" from the list of imports in your moduleMetadata definition to remove this warning.
-        `),[!0];try{let t=await a(()=>import(`./animations-BatAem-a.js`),__vite__mapDeps([39,1,17,23]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Bt`
+        `),[!0];try{let t=await a(()=>import(`./animations-B8ZEFnud.js`),__vite__mapDeps([39,1,17,23]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Bt`
             Storybook Warning:
             You have added the "BrowserAnimationsModule" to the list of "imports" in your moduleMetadata definition of your Story.
             In Storybook 7.0 we use Angular's new 'bootstrapApplication' API to mount the component to the DOM, which accepts a list of providers to set up application-wide providers.
@@ -2475,8 +2475,7 @@ export type InfoState = ProgressInfoState | InitInfoState;
 `,displayName:`ProgressInfoState`,properties:[{name:`percent`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`number`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
 `},{name:`sector`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:3,rawdescription:`
 `},{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:2,rawdescription:`
-`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`ProjectConfigForm`,id:`interface-ProjectConfigForm-2f878296bb35642ceba006836b84271e2b15c414af8b0efd539f07810ed6d210359f22aa9f7180c293784e71a640bb86c987b961d7bd16cbd895acf8079d85c9`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+`,inheritance:{file:`BaseInfoState`}}],indexSignatures:[],kind:172,methods:[],extends:[`BaseInfoState`],relationships:{incoming:[],outgoing:[{name:`BaseInfoState`,type:`interface`}]}},{name:`ProjectConfigForm`,id:`interface-ProjectConfigForm-ed136065deeed53a06b33376779f4397e198bca97e7fd3ae88cdf7520594bbad8e0fcee75277799c4466d1bc5dc76be78e4d44c99aaaec33e6a638ca974ead82`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -2489,6 +2488,7 @@ import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
+import { IdsButton } from 'irr-design-system';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
@@ -2500,7 +2500,7 @@ interface ProjectConfigForm {
 
 @Component({
     selector: 'app-config-project',
-    imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
+    imports: [TranslatePipe, IdsButton, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
     host: { class: 'flex flex-col gap-5' },
 })
@@ -2652,8 +2652,7 @@ export class ProjectNameDialogComponent {
     });
 }
 `,displayName:`ProjectNameDialogData`,properties:[{name:`defaultName`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:10,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RandomTileSetModel`,id:`interface-RandomTileSetModel-680fb3514963d338d737771c8d3702ca40fade55f5b78c86623c64984301ecaefe11139daff5e51be1d1b2f4fa63ccd3f56e4bbef5fdbb3d6fa7b5951c05d54b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`RandomTileSetModel`,id:`interface-RandomTileSetModel-506a33e9fe75081ee54d5303c21e25b0a9d365c5567ce1a2485314a07fd694b24c0b98e37adfbe605f95d22799914c0e635ac89ce7d722e4ee050dc960da8d1d`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -2672,6 +2671,7 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+import { IdsButton } from 'irr-design-system';
 
 interface RandomTileSetModel {
     name: string;
@@ -2682,7 +2682,7 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, MatButtonModule, MatAutocompleteModule, FormField],
+    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsButton, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
 })
@@ -6296,9 +6296,8 @@ export class ColorSliderComponent implements AfterViewInit {
 
 @let cursor = cursorData();
 <div class="cursor" [style.left]="cursor.horizontalOffset" [style.background-color]="cursor.color"></div>
-`},{name:`ConfigMenuComponent`,id:`component-ConfigMenuComponent-dbe4215e3721bacbe034d02acd33b5139bf5646ef9fb022e2190fffb322589d02a2e51939cb8d6e841f8e259b8f383ef768c343ae60eb424f613c5fdcb803a3e`,file:`projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-menu`,styleUrls:[],styles:[],templateUrl:[`./config-menu.component.html`],templateVariables:[{name:`isMosaicSet`,defaultValue:`!!mosaicConfig()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+`},{name:`ConfigMenuComponent`,id:`component-ConfigMenuComponent-6333def0ee83b2124a2e09b4a4d0f57895f0cb3c2887269097d111da0be74ffe7f4775f2373ae9d54b6fca0190e4cf64ce6610a480d4c0a01b4403a105ba6053`,file:`projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-menu`,styleUrls:[],styles:[],templateUrl:[`./config-menu.component.html`],templateVariables:[{name:`isMosaicSet`,defaultValue:`!!mosaicConfig()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -6313,12 +6312,13 @@ import { ProjectImportService } from '../../../core/services/project-import/proj
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
+import { IdsButton } from 'irr-design-system';
 
 const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 
 @Component({
     selector: 'app-config-menu',
-    imports: [MatButtonModule, TranslatePipe],
+    imports: [TranslatePipe, IdsButton],
     templateUrl: './config-menu.component.html',
     host: { class: 'flex flex-col gap-2.5' },
 })
@@ -6417,36 +6417,35 @@ export class ConfigMenuComponent {
         openFilePicker('.irr', action);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@let isMosaicSet = !!mosaicConfig();
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`,type:`module`}]},templateData:`@let isMosaicSet = !!mosaicConfig();
 
 @if (isMosaicSet) {
-    <button mat-flat-button (click)="navigateToProjectConfiguration()">
-        {{ 'tool.config.menu.projectSettings' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="saveProject()">
+    <ids-button (clicked)="navigateToProjectConfiguration()">
+         {{ 'tool.config.menu.projectSettings' | translate }}
+    </ids-button>
+    <ids-button variant="accent" (clicked)="saveProject()">
         {{ 'tool.config.menu.saveProject' | translate }}
-    </button>
+    </ids-button>
 } @else {
-    <button mat-flat-button color="accent" (click)="navigateToProjectConfiguration()">
+    <ids-button (clicked)="navigateToProjectConfiguration()">
         {{ 'tool.config.menu.newProject' | translate }}
-    </button>
-    <button mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button disabled>
         {{ 'tool.config.menu.exampleProjects' | translate }}
-    </button>
+    </ids-button>
 }
 
-<button mat-flat-button color="accent" (click)="loadNewProject()">
+<ids-button (clicked)="loadNewProject()">
     {{ 'tool.config.menu.loadProject' | translate }}
-</button>
+</ids-button>
 
 @if (isMosaicSet) {
-    <button mat-flat-button color="warn" (click)="rejectProject()">
+    <ids-button variant="danger" (clicked)="rejectProject()">
         {{ 'tool.config.menu.rejectProject' | translate }}
-    </button>
+    </ids-button>
 }
-`},{name:`ConfigProjectComponent`,id:`component-ConfigProjectComponent-2f878296bb35642ceba006836b84271e2b15c414af8b0efd539f07810ed6d210359f22aa9f7180c293784e71a640bb86c987b961d7bd16cbd895acf8079d85c9`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-project`,styleUrls:[],styles:[],templateUrl:[`./config-project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
+`},{name:`ConfigProjectComponent`,id:`component-ConfigProjectComponent-ed136065deeed53a06b33376779f4397e198bca97e7fd3ae88cdf7520594bbad8e0fcee75277799c4466d1bc5dc76be78e4d44c99aaaec33e6a638ca974ead82`,file:`projects/irrtirer/src/app/tool/configuration/config-project/config-project.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-config-project`,styleUrls:[],styles:[],templateUrl:[`./config-project.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, effect, inject, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -6459,6 +6458,7 @@ import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
+import { IdsButton } from 'irr-design-system';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;
@@ -6470,7 +6470,7 @@ interface ProjectConfigForm {
 
 @Component({
     selector: 'app-config-project',
-    imports: [TranslatePipe, MatButtonModule, MatFormFieldModule, MatInputModule, FormField],
+    imports: [TranslatePipe, IdsButton, MatFormFieldModule, MatInputModule, FormField],
     templateUrl: './config-project.component.html',
     host: { class: 'flex flex-col gap-5' },
 })
@@ -6586,27 +6586,30 @@ export class ConfigProjectComponent {
         this.formData.update((state) => ({ ...state, mosaicImage: file }));
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`,type:`module`}]},templateData:`<div class="flex flex-row gap-2.5">
-    <button class="flex-1" mat-flat-button (click)="navigateToConfiguration()">
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`,type:`module`}]},templateData:`<div class="flex flex-row gap-2.5">
+    <ids-button class="flex-1" (clicked)="navigateToConfiguration()">
         {{ 'common.return' | translate }}
-    </button>
-    <button class="flex-1" mat-flat-button color="accent" (click)="trySave()" [hidden]="isReadOnlyMode()">
+    </ids-button>
+    <ids-button class="flex-1" 
+        (clicked)="trySave()"
+        [hidden]="isReadOnlyMode()"
+        [variant]="this.form().valid() ? 'accent': 'neutral'"
+    >
         {{ 'common.confirm' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <form class="flex flex-col gap-5">
     <input #imageUploader hidden type="file" (change)="onImageSelected($event)" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
 
-    <button
-        mat-flat-button
-        [color]="form.mosaicImage().valid() ? '' : 'accent'"
-        (click)="imageUploader.click()"
+    <ids-button
+        [variant]="form.mosaicImage().valid() ? 'neutral' : 'accent'"
+        (clicked)="imageUploader.click()"
         [hidden]="isReadOnlyMode()"
         type="button"
     >
         {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage' : 'tool.config.project.chooseImage') | translate }}
-    </button>
+    </ids-button>
 
     <mat-form-field class="density-3">
         <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
@@ -7279,10 +7282,9 @@ export class ProjectNameDialogComponent {
         {{ 'common.save' | translate }}
     </button>
 </div>
-`},{name:`RandomTilesComponent`,id:`component-RandomTilesComponent-680fb3514963d338d737771c8d3702ca40fade55f5b78c86623c64984301ecaefe11139daff5e51be1d1b2f4fa63ccd3f56e4bbef5fdbb3d6fa7b5951c05d54b`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-random-tiles`,styleUrls:[`./random-tiles.component.scss`],styles:[],templateUrl:[`./random-tiles.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:119,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
+`},{name:`RandomTilesComponent`,id:`component-RandomTilesComponent-506a33e9fe75081ee54d5303c21e25b0a9d365c5567ce1a2485314a07fd694b24c0b98e37adfbe605f95d22799914c0e635ac89ce7d722e4ee050dc960da8d1d`,file:`projects/irrtirer/src/app/tool/tray/random-tiles/random-tiles.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-random-tiles`,styleUrls:[`./random-tiles.component.scss`],styles:[],templateUrl:[`./random-tiles.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:119,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, inject, OnInit, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
@@ -7301,6 +7303,7 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
+import { IdsButton } from 'irr-design-system';
 
 interface RandomTileSetModel {
     name: string;
@@ -7311,7 +7314,7 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, MatButtonModule, MatAutocompleteModule, FormField],
+    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsButton, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
 })
@@ -7510,10 +7513,6 @@ export class RandomTilesComponent implements OnInit {
         display: flex;
         flex-direction: row;
         gap: 10px;
-
-        button {
-            flex: 1 1 0;
-        }
     }
 
     .form {
@@ -7523,13 +7522,13 @@ export class RandomTilesComponent implements OnInit {
         gap: 18px;
     }
 }
-`,styleUrl:`./random-tiles.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
-    <button mat-flat-button (click)="navigateToMenu()">
+`,styleUrl:`./random-tiles.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
+    <ids-button class="flex-1" (clicked)="navigateToMenu()">
         {{ 'common.return' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="trySaveTileSet()">
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" (clicked)="trySaveTileSet()">
         {{ 'tool.tiles.random.randomTiles' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <form class="form">
@@ -7726,11 +7725,11 @@ export class ScrollableListComponent<T> {
         {{ 'common.nextElements' | translate }} {{ nextPages.from }}-{{ nextPages.to }}
     </button>
 }
-`},{name:`SectorContourEditionComponent`,id:`component-SectorContourEditionComponent-4e57504caafd899df2012c1e4d767f3d539d6f9d52b94563405281be285ca8c4dba2fb8f8667934403aa653760c5a55e6cde4adfeb57d9688df8200702b341d6`,file:`projects/irrtirer/src/app/tool/sectors/sector-contour-edition/sector-contour-edition.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-contour-edition`,styleUrls:[`./sector-contour-edition.component.scss`],styles:[],templateUrl:[`./sector-contour-edition.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:82,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]},{name:`removeVertex`,coverageIgnore:!1,args:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:115,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
+`},{name:`SectorContourEditionComponent`,id:`component-SectorContourEditionComponent-b8fd155f472b9774273cbc1c3a6dab02d361797518aeac1d998462f9781739b218b352908d24e2e8b309f5bdd5520a7ca399b33c1916ec16b0664ce7af40bb7f`,file:`projects/irrtirer/src/app/tool/sectors/sector-contour-edition/sector-contour-edition.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sector-contour-edition`,styleUrls:[`./sector-contour-edition.component.scss`],styles:[],templateUrl:[`./sector-contour-edition.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:84,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`removeVertex`,coverageIgnore:!1,args:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:117,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125],jsdoctags:[{name:`vertex`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsButton`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatIconButton`},{name:`ColorPickerComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { IdsButton } from 'irr-design-system';
 import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -7750,16 +7749,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FieldState, form, FormField, required } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-sector-contour-edition',
     imports: [
-        MatButtonModule,
+        IdsButton,
         CdkDropList,
         CdkDrag,
         MatFormFieldModule,
         MatInputModule,
         MatIconModule,
+        MatIconButton,
         ColorPickerComponent,
         TranslatePipe,
         FormField,
@@ -7922,16 +7923,6 @@ export class SectorContourEditionComponent implements OnInit {
     gap: 20px;
     height: 100%;
 
-    .actions {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-
-        button {
-            flex: 1 1 0;
-        }
-    }
-
     .info {
         display: flex;
         flex-direction: column;
@@ -7984,9 +7975,13 @@ export class SectorContourEditionComponent implements OnInit {
 .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-`,styleUrl:`./sector-contour-edition.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
-    <button mat-flat-button (click)="cancel()">{{ 'common.cancel' | translate }}</button>
-    <button mat-flat-button color="accent" (click)="save()">{{ 'common.confirm' | translate }}</button>
+`,styleUrl:`./sector-contour-edition.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsButton`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatIconButton`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
+    <ids-button class="flex-1" (clicked)="cancel()">
+        {{ 'common.cancel' | translate }}
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" (clicked)="save()">
+        {{ 'common.confirm' | translate }}
+    </ids-button>
 </div>
 
 <div class="info">
@@ -8121,11 +8116,10 @@ export class SectorListElemComponent {
         <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }
 </app-expandable-panel>
-`},{name:`SectorPropertyEditorComponent`,id:`component-SectorPropertyEditorComponent-1d43fad8471639f673afed2edebbdad0f8b1380bd669b6b96f5b56476377bd41826d78d0570e51536da72725d687e4fdd4f213b2d616032b0a57ca8d6b88d86f`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/sector-property-editor.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-sector-property-editor`,styleUrls:[`./sector-property-editor.component.scss`],styles:[],templateUrl:[`./sector-property-editor.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:113,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
+`},{name:`SectorPropertyEditorComponent`,id:`component-SectorPropertyEditorComponent-4f22bdcefbca55ef392d2084ff201a3b60cf995c8132a44aa8479830d25851aa535b83f64da6b9bfe8c1f29cf76ce4c05f1d116bf14232672622aec8d48a5db0`,file:`projects/irrtirer/src/app/tool/sectors/sector-property-editor/sector-property-editor.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`)`}],selector:`app-sector-property-editor`,styleUrls:[`./sector-property-editor.component.scss`],styles:[],templateUrl:[`./sector-property-editor.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:113,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsButton`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
 import { SectorsContoursService } from '../sectors-contours.service';
-import { MatButtonModule } from '@angular/material/button';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -8142,6 +8136,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { IdsButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -8155,7 +8150,7 @@ import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [MatButtonModule, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
+    imports: [IdsButton, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
 })
@@ -8312,16 +8307,6 @@ export class SectorPropertyEditorComponent implements OnInit {
     flex-direction: column;
     gap: 20px;
 
-    .actions {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-
-        button {
-            flex: 1 1 0;
-        }
-    }
-
     .sector-property-form {
         display: flex;
         flex-direction: column;
@@ -8336,13 +8321,13 @@ export class SectorPropertyEditorComponent implements OnInit {
         }
     }
 }
-`,styleUrl:`./sector-property-editor.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
-    <button mat-flat-button (click)="cancel()">
+`,styleUrl:`./sector-property-editor.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsButton`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatTooltipModule`,type:`module`},{name:`ExtendedPanelComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
+    <ids-button class="flex-1" (clicked)="cancel()">
         {{ 'common.cancel' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="save()">
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" (clicked)="save()">
         {{ 'common.confirm' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <div class="sector-property-form">
@@ -8676,9 +8661,9 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     @include tool-panel();
 }
 `,styleUrl:`./sectors.component.scss`}],stylesData:``,extends:[],implements:[`OnInit`,`AfterViewInit`,`ToolView`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`OnInit`,type:`interface`},{name:`AfterViewInit`,type:`interface`},{name:`ToolView`,type:`interface`}]},templateData:`<router-outlet />
-`},{name:`SectorsContoursListComponent`,id:`component-SectorsContoursListComponent-f5db32f46193747159dc18f5a05d7c965c5410d7c2cdb26303d7a91b7ad500742f8cf875e1636fcee75396492bdc06bb93ab630607c2ea69dc67b57567c93682`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours-list/sectors-contours-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors-contours-list`,styleUrls:[`./sectors-contours-list.component.scss`],styles:[],templateUrl:[`./sectors-contours-list.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+`},{name:`SectorsContoursListComponent`,id:`component-SectorsContoursListComponent-127c4771eec57c37dd2bda9ede5b1de5f9a1341a5d7f6cf5a9723e0a50a2c6dc4c06ee14e1b0554bcc7bac9aaa0c61539155318341f1a9684775cdd07e6be60a`,file:`projects/irrtirer/src/app/tool/sectors/sectors-contours-list/sectors-contours-list.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-sectors-contours-list`,styleUrls:[`./sectors-contours-list.component.scss`],styles:[],templateUrl:[`./sectors-contours-list.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsButton`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`},{name:`CdkDrag`},{name:`TranslatePipe`,type:`pipe`},{name:`MatIconButton`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, DestroyRef, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { IdsButton } from 'irr-design-system';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -8693,10 +8678,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatIconButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [MatButtonModule, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe],
+    imports: [IdsButton, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe, MatIconButton],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
 })
@@ -8832,10 +8818,10 @@ export class SectorsContoursListComponent {
 .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-`,styleUrl:`./sectors-contours-list.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="actions">
-    <button mat-flat-button color="accent" (click)="navigateToNewSectorPanel()">
+`,styleUrl:`./sectors-contours-list.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsButton`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`MatMenuModule`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`MatIconButton`,type:`module`}]},templateData:`<div class="actions">
+    <ids-button variant="accent" (clicked)="navigateToNewSectorPanel()">
         {{ 'tool.sectors.contourList.addSector' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 @if (sectors().length) {
@@ -8930,21 +8916,21 @@ export class SnapshotOptionsDialogComponent {
         <button mat-button [mat-dialog-close]="data()">{{ 'common.save' | translate }}</button>
     </div>
 </div>
-`},{name:`TileDetailComponent`,id:`component-TileDetailComponent-4a9e57e6542a4f13cb28b5f2f42e6054a02382281c2d2b1c95c49cabe8a9ec03ae7da03699765a2dc1f8707084d88dcd7bf8d2e6b077f4faa4f8b0937eda1096`,file:`projects/irrtirer/src/app/tool/tray/tile-detail/tile-detail.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tile-detail`,styleUrls:[],styles:[],templateUrl:[`./tile-detail.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`FormsModule`,type:`module`}],description:``,rawdescription:`
+`},{name:`TileDetailComponent`,id:`component-TileDetailComponent-274567004949d1336909fbcf27fb0d6d2ae502f57246d8d2a110ac15a56f085e6731ea8e5882bb3b07be6710d6a64c4175436cc3984e9c59529a84a31599aa54`,file:`projects/irrtirer/src/app/tool/tray/tile-detail/tile-detail.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tile-detail`,styleUrls:[],styles:[],templateUrl:[`./tile-detail.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:28,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`},{name:`ColorPickerComponent`,type:`component`},{name:`FormsModule`,type:`module`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TileModel } from '../../../core/models/mosaic-project.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MatButtonModule } from '@angular/material/button';
 import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
 import { FormsModule } from '@angular/forms';
+import { IdsButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-tile-detail',
-    imports: [TranslatePipe, MatButtonModule, ColorPickerComponent, FormsModule],
+    imports: [TranslatePipe, IdsButton, ColorPickerComponent, FormsModule],
     templateUrl: './tile-detail.component.html',
     host: { class: 'flex flex-col gap-3 h-full' },
 })
@@ -8978,13 +8964,13 @@ export class TileDetailComponent implements OnInit {
         this.router.navigate(['/tool/tray']);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`MatButtonModule`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`FormsModule`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-3">
-    <button class="flex-1" mat-flat-button (click)="navigateToMenu()">
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsButton`,type:`module`},{name:`ColorPickerComponent`,type:`component`},{name:`FormsModule`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-3">
+    <ids-button class="flex-1" (clicked)="navigateToMenu()">
         {{ 'common.return' | translate }}
-    </button>
-    <button class="flex-1" mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button class="flex-1" variant="accent" disabled>
         {{ 'common.edit' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <div class="flex flex-1 flex-col gap-2">
@@ -9590,19 +9576,19 @@ export class TrayComponent implements ToolView, AfterViewInit {
     @include tool-panel();
 }
 `,styleUrl:`./tray.component.scss`}],stylesData:``,extends:[],implements:[`ToolView`,`AfterViewInit`],relationships:{incoming:[],outgoing:[{name:`RouterOutlet`,type:`module`},{name:`ToolView`,type:`interface`},{name:`AfterViewInit`,type:`interface`}]},templateData:`<router-outlet />
-`},{name:`TrayMenuComponent`,id:`component-TrayMenuComponent-59a3774b30a06e32831c41b766ede2b5e708793763f8e0cbfde3c5a27be1fc074194fa719ef64bc3f86f799f208dc02fba61b46d4940977353e9ce9f86d9f6b8`,file:`projects/irrtirer/src/app/tool/tray/tray-menu/tray-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tray-menu`,styleUrls:[],styles:[],templateUrl:[`./tray-menu.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MatButtonModule`,type:`module`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
+`},{name:`TrayMenuComponent`,id:`component-TrayMenuComponent-79f15eaec6cd49e33ae45be7ef37292947623db72b8d6a4743800eea6f473e95fca7a15aee268cf593412d27997808d62bc252e0faa9f3641b6d7bd6334db8d5`,file:`projects/irrtirer/src/app/tool/tray/tray-menu/tray-menu.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-tray-menu`,styleUrls:[],styles:[],templateUrl:[`./tray-menu.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsButton`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TilesSetListElemComponent } from './../tiles-set-list-elem/tiles-set-list-elem.component';
 import { TranslatePipe } from '@ngx-translate/core';
+import { IdsButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-tray-menu',
-    imports: [MatButtonModule, TilesSetListElemComponent, TranslatePipe],
+    imports: [IdsButton, TilesSetListElemComponent, TranslatePipe],
     templateUrl: './tray-menu.component.html',
     host: { class: 'flex flex-col gap-5' },
 })
@@ -9617,16 +9603,16 @@ export class TrayMenuComponent {
         this.router.navigate(['/tool/tray/random']);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatButtonModule`,type:`module`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="flex flex-col gap-2.5">
-    <button mat-flat-button color="accent" disabled>
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsButton`,type:`module`},{name:`TilesSetListElemComponent`,type:`component`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="flex flex-col gap-2.5">
+    <ids-button disabled>
         {{ 'tool.tiles.menu.loadFromFile' | translate }}
-    </button>
-    <button mat-flat-button color="accent" disabled>
+    </ids-button>
+    <ids-button  disabled>
         {{ 'tool.tiles.menu.createTile' | translate }}
-    </button>
-    <button mat-flat-button color="accent" (click)="navigateToRandomTiles()">
+    </ids-button >
+    <ids-button variant="accent" (clicked)="navigateToRandomTiles()">
         {{ 'tool.tiles.menu.randomTiles' | translate }}
-    </button>
+    </ids-button>
 </div>
 
 <div class="flex flex-col gap-1.5 flex-1">
