@@ -1,13 +1,13 @@
 <div class="flex flex-col gap-2.5">
-    <ids-button disabled>
+    <ids-framed-button disabled>
         {{ 'tool.tiles.menu.loadFromFile' | translate }}
-    </ids-button>
-    <ids-button  disabled>
+    </ids-framed-button>
+    <ids-framed-button disabled>
         {{ 'tool.tiles.menu.createTile' | translate }}
-    </ids-button >
-    <ids-button variant="accent" (clicked)="navigateToRandomTiles()">
+    </ids-framed-button>
+    <ids-framed-button variant="accent" (clicked)="navigateToRandomTiles()">
         {{ 'tool.tiles.menu.randomTiles' | translate }}
-    </ids-button>
+    </ids-framed-button>
 </div>
 
 <div class="flex flex-col gap-1.5 flex-1">

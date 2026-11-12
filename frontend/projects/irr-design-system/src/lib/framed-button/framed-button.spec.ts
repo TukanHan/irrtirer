@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { IdsButton } from './button';
+import { IdsFramedButton } from './framed-button';
 
 @Component({
-    imports: [IdsButton],
-    template: '<ids-button>Save changes</ids-button>',
+    imports: [IdsFramedButton],
+    template: '<ids-framed-button>Save changes</ids-framed-button>',
 })
-class ButtonHost {}
+class FramedButtonHost {}
 
-describe('IdsButton', () => {
-    let fixture: ComponentFixture<IdsButton>;
+describe('IdsFramedButton', () => {
+    let fixture: ComponentFixture<IdsFramedButton>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ButtonHost, IdsButton],
+            imports: [FramedButtonHost, IdsFramedButton],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(IdsButton);
+        fixture = TestBed.createComponent(IdsFramedButton);
         fixture.detectChanges();
     });
 
@@ -25,7 +25,7 @@ describe('IdsButton', () => {
         const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
 
         expect(fixture.componentInstance).toBeTruthy();
-        expect(button.classList).toContain('ids-button--neutral');
+        expect(button.classList).toContain('ids-framed-button--neutral');
         expect(button.disabled).toBe(false);
         expect(button.type).toBe('button');
     });
@@ -36,7 +36,7 @@ describe('IdsButton', () => {
 
         const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
 
-        expect(button.classList).toContain(`ids-button--${variant}`);
+        expect(button.classList).toContain(`ids-framed-button--${variant}`);
     });
 
     it('should disable the native button when disabled', () => {
@@ -58,7 +58,7 @@ describe('IdsButton', () => {
     });
 
     it('should project its content into the button label', () => {
-        const hostFixture = TestBed.createComponent(ButtonHost);
+        const hostFixture = TestBed.createComponent(FramedButtonHost);
         hostFixture.detectChanges();
 
         const label = hostFixture.nativeElement.querySelector('.ids-button-label');

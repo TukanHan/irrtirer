@@ -17,7 +17,7 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { IdsButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system';
 
 interface RandomTileSetModel {
     name: string;
@@ -28,7 +28,7 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsButton, MatAutocompleteModule, FormField],
+    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsFramedButton, MatAutocompleteModule, FormField],
     templateUrl: './random-tiles.component.html',
     styleUrl: './random-tiles.component.scss',
 })

@@ -3,13 +3,13 @@
     --ids-glow-color: var(--ids-neutral);
     --ids-button-content-color: var(--ids-text-highlight-color);
 
-    .ids-icon-button {
+    .ids-flat-button {
         display: flex;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
         cursor: pointer;
-        padding: max(0px, calc((var(--ids-icon-button-size, 36px) - var(--ids-icon-button-icon-size, 24px)) / 2));
+        padding: max(0px, calc((var(--ids-flat-button-size, 36px) - var(--ids-flat-button-icon-size, 24px)) / 2));
         border: 0;
         outline: none;
         position: relative;
@@ -19,17 +19,17 @@
         --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-button-glow-shadow-mix), transparent);
         --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
 
-        &.ids-icon-button--neutral {
+        &.ids-flat-button--neutral {
             --ids-glow-color: var(--ids-text-color);
             --ids-button-content-color: var(--ids-text-color);
         }
 
-        &.ids-icon-button--accent {
+        &.ids-flat-button--accent {
             --ids-glow-color: var(--ids-neutral);
             --ids-button-content-color: var(--ids-text-highlight-color);
         }
 
-        &.ids-icon-button--danger {
+        &.ids-flat-button--danger {
             --ids-glow-color: var(--ids-danger);
             --ids-button-content-color: var(--ids-text-danger-color);
         }
@@ -61,7 +61,7 @@
             --ids-button-text-shadow: none;
         }
 
-        .ids-icon-button-content {
+        .ids-flat-button-content {
             display: flex;
             align-items: center;
             justify-content: center;

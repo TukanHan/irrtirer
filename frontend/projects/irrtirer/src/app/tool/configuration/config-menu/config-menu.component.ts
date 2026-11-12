@@ -13,13 +13,13 @@ import { ProjectImportService } from '../../../core/services/project-import/proj
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
-import { IdsButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system';
 
 const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 
 @Component({
     selector: 'app-config-menu',
-    imports: [TranslatePipe, IdsButton],
+    imports: [TranslatePipe, IdsFramedButton],
     templateUrl: './config-menu.component.html',
     host: { class: 'flex flex-col gap-2.5' },
 })

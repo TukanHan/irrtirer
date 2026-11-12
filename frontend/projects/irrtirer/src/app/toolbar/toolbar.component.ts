@@ -13,7 +13,7 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 import { ThemeService } from '../core/services/theme/theme.service';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { TitleCasePipe } from '@angular/common';
-import { IdsIconButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-toolbar',
@@ -28,7 +28,7 @@ import { IdsIconButton } from 'irr-design-system';
         MatRadioModule,
         TranslatePipe,
         TitleCasePipe,
-        IdsIconButton,
+        IdsFlatButton,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',

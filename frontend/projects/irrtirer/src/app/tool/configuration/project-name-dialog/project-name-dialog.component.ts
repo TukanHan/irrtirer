@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsIconButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system';
 
 export interface ProjectNameDialogData {
     defaultName: string;
@@ -16,7 +16,7 @@ interface FileNameFormData {
 
 @Component({
     selector: 'app-project-name-dialog',
-    imports: [MatFormFieldModule, MatInputModule, MatDialogModule, TranslatePipe, FormField, IdsIconButton],
+    imports: [MatFormFieldModule, MatInputModule, MatDialogModule, TranslatePipe, FormField, IdsFlatButton],
     templateUrl: './project-name-dialog.component.html',
 })
 export class ProjectNameDialogComponent {

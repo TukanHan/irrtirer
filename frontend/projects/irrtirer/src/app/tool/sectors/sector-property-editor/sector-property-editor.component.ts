@@ -16,7 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { IdsButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -30,7 +30,7 @@ import { IdsButton } from 'irr-design-system';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [IdsButton, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
+    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
 })

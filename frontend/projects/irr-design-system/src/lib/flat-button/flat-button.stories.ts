@@ -1,13 +1,13 @@
 import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
-import { IdsIconButton } from './icon-button';
+import { IdsFlatButton } from './flat-button';
 
-type IconButtonLayout = 'Icon' | 'Text' | 'Icon & Text';
-type IdsIconButtonStoryArgs = IdsIconButton & { layout: IconButtonLayout; iconName: string; text: string };
+type FlatButtonLayout = 'Icon' | 'Text' | 'Icon & Text';
+type IdsFlatButtonStoryArgs = IdsFlatButton & { layout: FlatButtonLayout; iconName: string; text: string };
 
-const meta: Meta<IdsIconButtonStoryArgs> = {
-    title: 'Design System/Buttons/Icon',
-    component: IdsIconButton,
+const meta: Meta<IdsFlatButtonStoryArgs> = {
+    title: 'Design System/Buttons/Flat Button',
+    component: IdsFlatButton,
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
@@ -46,7 +46,7 @@ const meta: Meta<IdsIconButtonStoryArgs> = {
 };
 
 export default meta;
-type Story = StoryObj<IdsIconButtonStoryArgs>;
+type Story = StoryObj<IdsFlatButtonStoryArgs>;
 
 export const Default: Story = {
     args: {
@@ -60,14 +60,14 @@ export const Default: Story = {
     render: (args) => ({
         props: args,
         template: `
-            <ids-icon-button [disabled]="disabled" [variant]="variant" [type]="type" (clicked)="clicked($event)">
+            <ids-flat-button [disabled]="disabled" [variant]="variant" [type]="type" (clicked)="clicked($event)">
                 @if (layout !== 'Text') {
                     <mat-icon class="material-symbols-outlined">{{ iconName }}</mat-icon>
                 }
                 @if (layout !== 'Icon') {
                     {{ text }}
                 }
-            </ids-icon-button>
+            </ids-flat-button>
         `,
     }),
 };

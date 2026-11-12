@@ -5,11 +5,11 @@ import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TilesSetListElemComponent } from './../tiles-set-list-elem/tiles-set-list-elem.component';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-tray-menu',
-    imports: [IdsButton, TilesSetListElemComponent, TranslatePipe],
+    imports: [IdsFramedButton, TilesSetListElemComponent, TranslatePipe],
     templateUrl: './tray-menu.component.html',
     host: { class: 'flex flex-col gap-5' },
 })

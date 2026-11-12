@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { IdsButton } from './button';
+import { IdsFramedButton } from './framed-button';
 
-type IdsButtonArgs = IdsButton & { text: string; hostDisplay: 'flex' | 'block' };
+type IdsFramedButtonArgs = IdsFramedButton & { text: string; hostDisplay: 'flex' | 'block' };
 
-const meta: Meta<IdsButtonArgs> = {
-    title: 'Design System/Buttons/Flat',
-    component: IdsButton,
+const meta: Meta<IdsFramedButtonArgs> = {
+    title: 'Design System/Buttons/Framed Button',
+    component: IdsFramedButton,
     tags: ['autodocs'],
     argTypes: {
         disabled: { control: 'boolean', table: { category: 'Inputs' } },
@@ -30,7 +30,7 @@ const meta: Meta<IdsButtonArgs> = {
 };
 
 export default meta;
-type Story = StoryObj<IdsButtonArgs>;
+type Story = StoryObj<IdsFramedButtonArgs>;
 
 export const Default: Story = {
     args: {
@@ -41,7 +41,7 @@ export const Default: Story = {
         hostDisplay: 'block',
     },
     render: (args) => {
-        const button = `<ids-button [disabled]="disabled" [variant]="variant" (clicked)="clicked($event)">{{ text }}</ids-button>`;
+        const button = `<ids-framed-button [disabled]="disabled" [variant]="variant" (clicked)="clicked($event)">{{ text }}</ids-framed-button>`;
         const template = args.hostDisplay === 'flex' ? `<div class="resizable-container" style="display: flex;">${button}</div>` : button;
 
         return {
