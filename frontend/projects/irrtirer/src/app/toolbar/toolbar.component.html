@@ -13,9 +13,9 @@
 
     <span class="flex-1"></span>
 
-    <button matIconButton class="toolbar-item mode" (click)="toggleTheme()">
+    <ids-icon-button variant="accent" class="toolbar-item mode" (clicked)="toggleTheme()">
         <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
-    </button>
+    </ids-icon-button>
 
     <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
         <mat-icon>language</mat-icon>

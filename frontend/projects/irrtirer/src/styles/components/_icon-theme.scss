@@ -1,5 +1,5 @@
 @mixin theme {
     .material-icons {
-        font-weight: 200;
+        font-weight: var(--irr-icon-font-weight, 200);
     }
 }

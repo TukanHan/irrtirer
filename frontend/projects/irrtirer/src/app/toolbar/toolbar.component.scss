@@ -23,10 +23,7 @@
         }
 
         .mode {
-            .mat-icon {
-                font-weight: 300;
-            }
-
+            --irr-icon-font-weight: 300;
             --irr-icon-button-size: 36px;
             --irr-icon-button-icon-size: 22px;
         }

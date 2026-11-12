@@ -9,8 +9,8 @@
     position: relative;
 
     --ids-radius: 9999px;
-    --ids-glow-color: var(--ids-accent);
-    --ids-button-text-color: var(--ids-text-color);
+    --ids-glow-color: var(--ids-neutral);
+    --ids-button-content-color: var(--ids-text-color);
 
     .ids-button {
         display: block;
@@ -24,6 +24,10 @@
         isolation: isolate;
         transition: transform 0.1s;
 
+        --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-button-content-shadow-mix), transparent);
+        --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-button-glow-shadow-mix), transparent);
+        --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
+
         &.ids-button--neutral {
             --ids-glow-color: var(--ids-neutral);
             --ids-button-border-color: var(--ids-border-color);
@@ -31,13 +35,13 @@
 
         &.ids-button--accent {
             --ids-glow-color: var(--ids-accent);
-            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 40%, var(--ids-glow-color));
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
         }
 
         &.ids-button--danger {
             --ids-glow-color: var(--ids-danger);
-            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 40%, var(--ids-glow-color));
-            --ids-button-text-color: color-mix(in srgb, var(--ids-text-color) 10%, var(--ids-glow-color));
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
+            --ids-button-content-color: var(--ids-text-danger-color);
         }
 
         &::before,
@@ -77,9 +81,14 @@
         }
 
         &:active:not(:disabled) {
-            .button-content {
-                background-color: color-mix(in srgb, var(--ids-solid-control-color) 90%, var(--ids-glow-color));
+            .ids-button-content {
+                background-color: color-mix(in srgb, var(--ids-solid-control-color) 95%, var(--ids-glow-color));
             }
+        }
+
+        &:hover:not(:disabled),
+        &:focus-visible:not(:disabled) {
+            --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
         }
 
         &:hover:not(:disabled):not(:focus-visible) {
@@ -99,17 +108,21 @@
         &:disabled {
             opacity: 0.5;
             cursor: unset;
+            --ids-button-text-shadow: none;
         }
 
-        .button-content {
+        .ids-button-content {
             display: block;
             position: relative;
             z-index: 1;
             background-color: var(--ids-solid-control-color);
             border-radius: inherit;
             padding: 0.5rem 1rem;
-            color: var(--ids-button-text-color);
-            transition: background-color 0.15s ease-out;
+            color: var(--ids-button-content-color);
+            text-shadow: var(--ids-button-text-shadow);
+            transition:
+                background-color 0.2s ease-out,
+                text-shadow 0.2s ease-out;
         }
     }
 }

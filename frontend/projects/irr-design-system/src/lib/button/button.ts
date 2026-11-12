@@ -6,7 +6,7 @@ export type ButtonVariant = 'accent' | 'neutral' | 'danger';
     selector: 'ids-button',
     template: `
         <button class="ids-button ids-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
-            <span class="button-content ids-button-label">
+            <span class="ids-button-content ids-button-label">
                 <ng-content />
             </span>
         </button>

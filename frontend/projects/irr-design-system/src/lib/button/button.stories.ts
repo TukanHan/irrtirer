@@ -4,7 +4,7 @@ import { IdsButton } from './button';
 type IdsButtonArgs = IdsButton & { text: string; hostDisplay: 'flex' | 'block' };
 
 const meta: Meta<IdsButtonArgs> = {
-    title: 'Design System/Button',
+    title: 'Design System/Buttons/Flat',
     component: IdsButton,
     tags: ['autodocs'],
     argTypes: {
