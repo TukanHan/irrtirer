@@ -8,14 +8,13 @@
     display: inline-block;
     position: relative;
 
-    --ids-radius: 9999px;
     --ids-glow-color: var(--ids-neutral);
     --ids-button-content-color: var(--ids-text-color);
 
     .ids-framed-button {
         display: block;
         width: 100%;
-        border-radius: var(--ids-radius);
+        border-radius: var(--ids-action-radius);
         border: 1px solid var(--ids-button-border-color);
         cursor: pointer;
         padding: 0;

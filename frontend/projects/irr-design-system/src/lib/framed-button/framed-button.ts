@@ -11,7 +11,7 @@ export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
             </span>
         </button>
     `,
-    styleUrl: './framed-button.css',
+    styleUrls: ['./framed-button.css', './../styles/shared/ids-action.css'],
 })
 export class IdsFramedButton {
     public readonly clicked = output<MouseEvent>();

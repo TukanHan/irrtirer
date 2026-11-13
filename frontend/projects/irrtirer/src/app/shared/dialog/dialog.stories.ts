@@ -3,12 +3,16 @@ import { DialogComponent } from './dialog.component';
 import { DialogData } from './dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, inject, input } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
+import { IdsFramedButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-dialog-host',
-    imports: [MatButtonModule],
-    template: `<button mat-raised-button (click)="openDialog()">Otwórz Dialog</button>`,
+    imports: [IdsFramedButton],
+    template: `
+        <ids-framed-button (clicked)="openDialog()">
+            Otwórz Dialog
+        </ids-framed-button>
+    `,
 })
 class DialogHostComponent {
     public readonly dialogData = input.required<DialogData>();

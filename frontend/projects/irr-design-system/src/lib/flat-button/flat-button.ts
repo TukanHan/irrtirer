@@ -5,13 +5,13 @@ export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
 @Component({
     selector: 'ids-flat-button',
     template: `
-        <button class="ids-flat-button ids-flat-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
-            <span class="ids-flat-button-content ids-button-label">
+        <button class="ids-flat-action ids-flat-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
+            <span class="ids-flat-action-content ids-button-label">
                 <ng-content />
             </span>
         </button>
     `,
-    styleUrl: './flat-button.css',
+    styleUrls: ['./flat-button.css', './../styles/shared/ids-flat-action.css', './../styles/shared/ids-action.css'],
 })
 export class IdsFlatButton {
     public readonly clicked = output<MouseEvent>();
