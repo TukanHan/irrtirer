@@ -9,7 +9,8 @@ export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
             <span class="ids-flat-button-content ids-button-label">
                 <ng-content />
             </span>
-        </button>`,
+        </button>
+    `,
     styleUrl: './flat-button.css',
 })
 export class IdsFlatButton {

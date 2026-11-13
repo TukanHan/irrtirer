@@ -11,7 +11,7 @@
     --ids-text-color: light-dark(#383838, #e6e6e6);
     --ids-text-highlight-color: light-dark(#212121, #2592ff);
     --ids-text-danger-color: #fc2727;
-    
+
     --ids-button-content-shadow-mix: 40%;
     --ids-button-glow-shadow-mix: 60%;
 }

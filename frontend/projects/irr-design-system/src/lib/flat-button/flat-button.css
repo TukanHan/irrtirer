@@ -15,7 +15,8 @@
         position: relative;
         border-radius: 9999px;
 
-        --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-button-content-shadow-mix), transparent);
+        --ids-button-text-shadow-layer-1: 0 0 4px
+            color-mix(in srgb, var(--ids-button-content-color) var(--ids-button-content-shadow-mix), transparent);
         --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-button-glow-shadow-mix), transparent);
         --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
 
@@ -65,7 +66,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 8px;
+            padding: 0 6px;
             position: relative;
             z-index: 1;
             color: var(--ids-button-content-color);
@@ -73,6 +75,9 @@
             transition:
                 color 0.2s ease,
                 text-shadow 0.2s ease;
+
+            --irr-icon-margin-left: -6px;
+            --irr-icon-margin-right: -6px;
         }
     }
 }

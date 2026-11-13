@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectNameDialogComponent } from './project-name-dialog.component';
-import { beforeEach, describe, expect, it } from 'vitest';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { provideTranslateService } from '@ngx-translate/core';
 
 describe('ProjectNameDialogComponent', () => {
@@ -11,7 +11,11 @@ describe('ProjectNameDialogComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ProjectNameDialogComponent],
-            providers: [{ provide: MAT_DIALOG_DATA, useValue: { defaultName: 'irr_project' } }, provideTranslateService({})],
+            providers: [
+                { provide: MAT_DIALOG_DATA, useValue: { defaultName: 'irr_project' } },
+                { provide: MatDialogRef, useValue: { close: vi.fn() } },
+                provideTranslateService({}),
+            ],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ProjectNameDialogComponent);

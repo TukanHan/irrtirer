@@ -2,11 +2,7 @@
     <ids-framed-button class="flex-1" (clicked)="navigateToConfiguration()">
         {{ 'common.return' | translate }}
     </ids-framed-button>
-    <ids-framed-button class="flex-1" 
-        (clicked)="trySave()"
-        [hidden]="isReadOnlyMode()"
-        [variant]="this.form().valid() ? 'accent': 'neutral'"
-    >
+    <ids-framed-button class="flex-1" (clicked)="trySave()" [hidden]="isReadOnlyMode()" [variant]="this.form().valid() ? 'accent' : 'neutral'">
         {{ 'common.confirm' | translate }}
     </ids-framed-button>
 </div>

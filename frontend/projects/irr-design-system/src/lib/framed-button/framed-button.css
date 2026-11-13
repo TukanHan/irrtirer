@@ -24,7 +24,8 @@
         isolation: isolate;
         transition: transform 0.1s;
 
-        --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-button-content-shadow-mix), transparent);
+        --ids-button-text-shadow-layer-1: 0 0 4px
+            color-mix(in srgb, var(--ids-button-content-color) var(--ids-button-content-shadow-mix), transparent);
         --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-button-glow-shadow-mix), transparent);
         --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
 
