@@ -5,9 +5,6 @@
 }
 
 :host {
-    display: inline-block;
-    position: relative;
-
     --ids-glow-color: var(--ids-neutral);
     --ids-button-content-color: var(--ids-text-color);
 

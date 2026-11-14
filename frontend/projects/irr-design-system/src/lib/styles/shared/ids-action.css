@@ -1,3 +1,5 @@
 :host {
+    display: inline-block;
+
     --ids-action-radius: 9999px;
 }

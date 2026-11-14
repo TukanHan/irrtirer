@@ -21,18 +21,30 @@
         background-color: color-mix(in srgb, var(--ids-glow-color) 10%, transparent);
         border-radius: inherit;
         opacity: 0;
+        filter: blur(1);
         pointer-events: none;
-        transition: opacity 0.2s ease;
-        filter: blur(1px);
+        transition:
+            opacity 0.4s ease,
+            filter 0.4s ease,
+            background-color 0.4s ease;
     }
 
-    &.ids-active-link,
+    &:active:not(:disabled)
     &:focus-visible:not(:disabled),
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled):not(:focus-visible) {
         --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+    }
 
+    &:active:not(:disabled),
+    &:focus-visible:not(:disabled) {
         &::before {
             opacity: 1;
+        }
+    }
+
+    &:active:not(:disabled) {
+        &::before {
+            filter: blur(2px);
         }
     }
 

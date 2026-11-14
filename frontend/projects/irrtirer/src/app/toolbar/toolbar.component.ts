@@ -2,7 +2,6 @@ import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
@@ -21,8 +20,6 @@ import { IdsFlatButton, IdsFlatLink } from 'irr-design-system';
         MatIconModule,
         MatToolbarModule,
         MatButtonModule,
-        RouterLink,
-        RouterLinkActive,
         IconSvgModuleModule,
         MatMenuModule,
         MatRadioModule,

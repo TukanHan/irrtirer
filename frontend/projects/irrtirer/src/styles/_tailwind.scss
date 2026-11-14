@@ -27,7 +27,9 @@
     --color-surface-side: light-dark(var(--gray-10), var(--gray-75));
     --color-surface-panel: light-dark(var(--color-white), var(--gray-80));
     --color-surface-panel-contrast: light-dark(var(--gray-80), #e5e5e5);
-    --color-surface-toolbar: light-dark(#f3f3f3, var(--gray-80));
+    
+    --color-surface-toolbar: light-dark(#f3f3f3, var(--gray-84));
+    --color-toolbar-border: light-dark(var(--gray-10), var(--gray-87));
 
     --font-sans: 'Roboto', sans-serif;
     --font-serif: 'Monomakh', serif;
@@ -40,4 +42,5 @@
     @apply text-contrast-max;
 
     @apply bg-surface-toolbar;
+    @apply bg-toolbar-border;
 }

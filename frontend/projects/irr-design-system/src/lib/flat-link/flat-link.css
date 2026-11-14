@@ -1,6 +1,13 @@
 :host {
-    display: inline-block;
-
     --ids-glow-color: var(--ids-neutral);
     --ids-button-content-color: var(--ids-text-highlight-color);
+
+    .ids-flat-action.ids-active-link {
+        &::before {
+            opacity: 1;
+        }
+        .ids-flat-action-content {
+            font-weight: 700;
+        }
+    }
 }
