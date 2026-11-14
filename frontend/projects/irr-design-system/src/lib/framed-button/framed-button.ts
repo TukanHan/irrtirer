@@ -1,4 +1,5 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
+import { Clickable } from '../core/clickable';
 
 export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
@@ -13,7 +14,7 @@ export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
     `,
     styleUrls: ['./framed-button.css', './../styles/shared/ids-action.css'],
 })
-export class IdsFramedButton {
+export class IdsFramedButton implements Clickable {
     public readonly clicked = output<MouseEvent>();
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
     public readonly variant = input<FramedButtonVariant>('neutral');

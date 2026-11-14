@@ -1,9 +1,7 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
@@ -12,21 +10,21 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 import { ThemeService } from '../core/services/theme/theme.service';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { TitleCasePipe } from '@angular/common';
-import { IdsFlatButton, IdsFlatLink } from 'irr-design-system';
+import { IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger } from 'irr-design-system';
 
 @Component({
     selector: 'app-toolbar',
     imports: [
         MatIconModule,
         MatToolbarModule,
-        MatButtonModule,
         IconSvgModuleModule,
-        MatMenuModule,
         MatRadioModule,
         TranslatePipe,
         TitleCasePipe,
         IdsFlatButton,
         IdsFlatLink,
+        IdsMenu,
+        IdsMenuTrigger
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',

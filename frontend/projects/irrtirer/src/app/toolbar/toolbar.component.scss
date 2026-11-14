@@ -30,8 +30,9 @@
 .lang-radio-group {
     display: flex;
     flex-direction: column;
-    min-width: 170px;
-    padding: 0 10px;
+    min-width: 150px;
+    margin-left: -6px;
+    --mat-radio-state-layer-size: 36px;
 
     .lang-radio {
         ::ng-deep {

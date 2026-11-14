@@ -17,12 +17,12 @@
         <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
     </ids-flat-button>
 
-    <button mat-button class="toolbar-item" [matMenuTriggerFor]="menu">
+    <ids-flat-button variant="accent" class="toolbar-item" idsMenuTrigger [menu]="menu">
         <mat-icon>language</mat-icon>
         <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
-    </button>
+    </ids-flat-button>
 
-    <mat-menu #menu="matMenu">
+    <ids-menu #menu>
         <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
             <mat-radio-button value="pl" class="lang-radio">
                 {{ 'toolbar.languages.polish' | translate }}
@@ -33,7 +33,7 @@
                 <mat-icon svgIcon="gb" />
             </mat-radio-button>
         </mat-radio-group>
-    </mat-menu>
+    </ids-menu>
 
     <ids-flat-link link="https://github.com/TukanHan/irrtirer" linkType="external">
         <mat-icon svgIcon="github" />

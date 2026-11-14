@@ -5,3 +5,4 @@
 export * from './lib/framed-button/framed-button';
 export * from './lib/flat-button/flat-button';
 export * from './lib/flat-link/flat-link';
+export * from './lib/menu';

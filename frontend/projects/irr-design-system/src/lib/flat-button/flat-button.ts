@@ -1,4 +1,5 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
+import { Clickable } from '../core/clickable';
 
 export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
 
@@ -13,7 +14,7 @@ export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
     `,
     styleUrls: ['./flat-button.css', './../styles/shared/ids-flat-action.css', './../styles/shared/ids-action.css'],
 })
-export class IdsFlatButton {
+export class IdsFlatButton implements Clickable {
     public readonly clicked = output<MouseEvent>();
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
     public readonly variant = input<FlatButtonVariant>('neutral');

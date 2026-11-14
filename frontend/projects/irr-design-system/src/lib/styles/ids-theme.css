@@ -8,15 +8,17 @@
     --ids-border-color: light-dark(#c9c9c9, #353535);
     --ids-solid-control-color: light-dark(#eeeeee, #18181b);
 
+    --ids-panel-color: light-dark(#eeeeee, #323232);
+
     --ids-text-color: light-dark(#383838, #e6e6e6);
     --ids-text-highlight-color: light-dark(#212121, #2592ff);
     --ids-text-danger-color: #fc2727;
 
-    --ids-button-content-shadow-mix: 40%;
-    --ids-button-glow-shadow-mix: 60%;
+    --ids-shadow-layer-1-transparent-mix: 40%;
+    --ids-shadow-layer-2-transparent-mix: 60%;
 }
 
 .light-theme {
-    --ids-button-content-shadow-mix: 20%;
-    --ids-button-glow-shadow-mix: 30%;
+    --ids-shadow-layer-1-transparent-mix: 20%;
+    --ids-shadow-layer-2-transparent-mix: 30%;
 }
