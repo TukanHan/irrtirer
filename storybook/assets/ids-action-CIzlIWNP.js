@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";var t;function n(){return(n=e((()=>{t=`:host{--ids-action-radius:9999px}`})))()}export{n,t};
