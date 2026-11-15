@@ -8,17 +8,25 @@
     --ids-border-color: light-dark(#c9c9c9, #353535);
     --ids-solid-control-color: light-dark(#eeeeee, #18181b);
 
-    --ids-panel-color: light-dark(#eeeeee, #323232);
+    --ids-panel-surface-color: light-dark(#eeeeee, #222222);
+    --ids-panel-border-color: light-dark(#dbdbdb, #2b2b2b);
+    --ids-panel-border-radius: 6px;
 
+    --ids-element-surface-hover-color: light-dark(#0000001e, #ffffff0d);
+
+    --ids-text-muted-color: light-dark(#5d5d5d, #b8b8b8);
+    --ids-text-muted-hover-color: light-dark(#000000, #ffffff);
     --ids-text-color: light-dark(#383838, #e6e6e6);
     --ids-text-highlight-color: light-dark(#212121, #2592ff);
     --ids-text-danger-color: #fc2727;
 
-    --ids-shadow-layer-1-transparent-mix: 40%;
-    --ids-shadow-layer-2-transparent-mix: 60%;
+    --ids-shadow-strength-faint: 20%;
+    --ids-shadow-strength-subtle: 40%;
+    --ids-shadow-strength-strong: 60%;
 }
 
 .light-theme {
-    --ids-shadow-layer-1-transparent-mix: 20%;
-    --ids-shadow-layer-2-transparent-mix: 30%;
+    --ids-shadow-strength-faint: 10%;
+    --ids-shadow-strength-subtle: 20%;
+    --ids-shadow-strength-strong: 30%;
 }

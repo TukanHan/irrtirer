@@ -1,5 +1,5 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton, IdsMenu, IdsMenuItem, IdsFlatButton, IdsMenuTrigger } from 'irr-design-system';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -10,15 +10,13 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { MatIconButton } from '@angular/material/button';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [IdsFramedButton, MatIconModule, MatMenuModule, CdkDropList, CdkDrag, TranslatePipe, MatIconButton],
+    imports: [IdsFramedButton, MatIconModule, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton],
     templateUrl: './sectors-contours-list.component.html',
     styleUrl: './sectors-contours-list.component.scss',
 })

@@ -27,10 +27,15 @@
     }
 }
 
+::ng-deep {
+    .language-panel {
+        --ids-panel-padding: 0.5rem 1rem !important;
+    }
+}
+
 .lang-radio-group {
     display: flex;
     flex-direction: column;
-    min-width: 150px;
     margin-left: -6px;
     --mat-radio-state-layer-size: 36px;
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject, signal } from '@angular/core';
+import { Component, ElementRef, inject, input, signal } from '@angular/core';
 import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
 
 @Component({
@@ -11,9 +11,10 @@ import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
             [cdkConnectedOverlayOpen]="isOpen()"
             [cdkConnectedOverlayPositions]="positions"
             [cdkConnectedOverlayPush]="true"
+            [cdkConnectedOverlayViewportMargin]="8"
             (overlayOutsideClick)="close()"
         >
-            <div class="ids-panel">
+            <div class="ids-panel ids-menu-panel" [class]="panelClass()">
                 <ng-content />
             </div>
         </ng-template>
@@ -21,6 +22,8 @@ import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
     styleUrl: './menu.css',
 })
 export class IdsMenu {
+    public readonly panelClass = input<string>();
+
     private readonly host = inject(ElementRef<HTMLElement>);
 
     protected readonly isOpen = signal<boolean>(false);

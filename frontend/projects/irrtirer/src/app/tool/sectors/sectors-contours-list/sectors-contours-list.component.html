@@ -10,24 +10,25 @@
             <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
                 <div class="list-item-box" [class.selected]="sector === selectedSector">
                     <span class="block-label">{{ sector.name }}</span>
-                    <button mat-icon-button class="sector-actions" (mousedown)="$event.stopPropagation()" [matMenuTriggerFor]="menu">
-                        <mat-icon matListIcon>more_vert</mat-icon>
-                    </button>
 
-                    <mat-menu #menu="matMenu" classList="paddingless">
-                        <button mat-menu-item (click)="navigateToContourPanel(sector)">
+                    <ids-flat-button class="sector-actions" (mousedown)="$event.stopPropagation()" [idsMenuTriggerFor]="menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </ids-flat-button>
+
+                    <ids-menu #menu>
+                        <ids-menu-item (clicked)="navigateToContourPanel(sector)">
                             <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
                             {{ 'tool.sectors.contourList.editContour' | translate }}
-                        </button>
-                        <button mat-menu-item (click)="navigateToPropertyPanel(sector)">
+                        </ids-menu-item>
+                        <ids-menu-item (clicked)="navigateToPropertyPanel(sector)">
                             <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
                             {{ 'tool.sectors.contourList.editProperties' | translate }}
-                        </button>
-                        <button mat-menu-item (click)="openRemoveSectorDialog(sector)">
+                        </ids-menu-item>
+                        <ids-menu-item (clicked)="openRemoveSectorDialog(sector)">
                             <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
                             {{ 'tool.sectors.contourList.removeSector' | translate }}
-                        </button>
-                    </mat-menu>
+                        </ids-menu-item>
+                    </ids-menu>
                 </div>
             </div>
         }

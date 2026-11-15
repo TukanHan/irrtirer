@@ -1,0 +1,25 @@
+:host {
+    display: block;
+
+    .ids-menu-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        border-radius: var(--ids-panel-border-radius);
+        padding: 0.25rem 0.75rem;
+        cursor: pointer;
+        color: var(--ids-text-muted-color);
+        white-space: nowrap;
+
+        &:hover:not(:disabled) {
+            background-color: var(--ids-element-surface-hover-color);
+            color: var(--ids-text-muted-hover-color);
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+}
