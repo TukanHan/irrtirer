@@ -10,9 +10,13 @@
     position: relative;
     border-radius: var(--ids-action-radius);
 
-    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
-    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-shadow-strength-strong), transparent);
-    --ids-button-text-shadow: unset;
+    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-faint), transparent);
+    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
+
+    --ids-button-text-shadow-idle: none;
+    --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1);
+
+    --ids-button-text-shadow: var(--ids-button-text-shadow-idle);
 
     &::before {
         content: '';
@@ -23,13 +27,14 @@
         opacity: 0;
         pointer-events: none;
         transition:
-            opacity 0.4s ease,
-            background-color 0.4s ease;
+            opacity 0.2s ease,
+            background-color 0.2s ease;
     }
 
-    &:active:not(:disabled) &:focus-visible:not(:disabled),
+    &:active:not(:disabled),
+    &:focus-visible:not(:disabled),
     &:hover:not(:disabled):not(:focus-visible) {
-        --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+        --ids-button-text-shadow: var(--ids-button-text-shadow-hover);
     }
 
     &:hover:not(:disabled):not(:focus-visible) {
@@ -59,7 +64,7 @@
         padding: 0 6px;
         position: relative;
         z-index: 1;
-        color: var(--ids-button-content-color);
+        color: var(--ids-overridden-button-content-color, var(--ids-button-content-color));
         text-shadow: var(--ids-button-text-shadow);
         transition:
             color 0.2s ease,

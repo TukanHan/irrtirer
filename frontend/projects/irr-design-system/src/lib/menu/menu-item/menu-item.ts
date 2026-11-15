@@ -4,12 +4,7 @@ import { Clickable } from '../../core/clickable';
 @Component({
     selector: 'ids-menu-item',
     template: `
-        <button
-            class="ids-menu-item ids-menu-item-label"
-            type="button"
-            [disabled]="disabled()"
-            (click)="clicked.emit($event)"
-        >
+        <button class="ids-menu-item ids-menu-item-label" type="button" [disabled]="disabled()" (click)="clicked.emit($event)">
             <ng-content />
         </button>
     `,

@@ -8,11 +8,7 @@ import { IdsFramedButton } from 'irr-design-system';
 @Component({
     selector: 'app-dialog-host',
     imports: [IdsFramedButton],
-    template: `
-        <ids-framed-button (clicked)="openDialog()">
-            Otwórz Dialog
-        </ids-framed-button>
-    `,
+    template: ` <ids-framed-button (clicked)="openDialog()"> Otwórz Dialog </ids-framed-button> `,
 })
 class DialogHostComponent {
     public readonly dialogData = input.required<DialogData>();

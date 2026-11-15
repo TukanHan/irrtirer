@@ -24,7 +24,7 @@ import { IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger } from 'irr-design-
         IdsFlatButton,
         IdsFlatLink,
         IdsMenu,
-        IdsMenuTrigger
+        IdsMenuTrigger,
     ],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',

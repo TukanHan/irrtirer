@@ -12,7 +12,7 @@
     --ids-panel-border-color: light-dark(#dbdbdb, #2b2b2b);
     --ids-panel-border-radius: 6px;
 
-    --ids-element-surface-hover-color: light-dark(#0000001e, #ffffff0d);
+    --ids-element-surface-contrast-color: light-dark(#000000, #ffffff);
 
     --ids-text-muted-color: light-dark(#5d5d5d, #b8b8b8);
     --ids-text-muted-hover-color: light-dark(#000000, #ffffff);

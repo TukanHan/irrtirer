@@ -3,6 +3,12 @@
     --ids-button-content-color: var(--ids-text-highlight-color);
 
     .ids-flat-action {
+        &.ids-flat-button--accent,
+        &.ids-flat-button--danger {
+            --ids-button-text-shadow-idle: var(--ids-button-text-shadow-layer-1);
+            --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+        }
+
         &.ids-flat-button--neutral {
             --ids-glow-color: var(--ids-text-color);
             --ids-button-content-color: var(--ids-text-color);
@@ -11,7 +17,6 @@
         &.ids-flat-button--accent {
             --ids-glow-color: var(--ids-neutral);
             --ids-button-content-color: var(--ids-text-highlight-color);
-            --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
         }
 
         &.ids-flat-button--danger {
@@ -22,8 +27,6 @@
         &:disabled {
             opacity: 0.5;
             cursor: unset;
-
-            --ids-button-text-shadow: none;
         }
     }
 }
