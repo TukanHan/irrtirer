@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{ar as t,or as n}from"./core-_WelOpXh.js";import{C as r,E as i}from"./share-DeSbScMh.js";import{i as a,r as o}from"./takeUntil-WrutcKMq.js";function s(){var e=[...arguments],t=i(e);return n(function(n,r){(t?o(e,n,t):o(e,n)).subscribe(r)})}function c(){return(c=e((()=>{a(),r(),t()})))()}export{s as n,c as t};
