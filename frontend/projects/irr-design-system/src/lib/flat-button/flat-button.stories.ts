@@ -3,7 +3,12 @@ import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsFlatButton } from './flat-button';
 
 type FlatButtonLayout = 'Icon' | 'Text' | 'Icon & Text';
-type IdsFlatButtonStoryArgs = IdsFlatButton & { layout: FlatButtonLayout; iconName: string; text: string };
+type IdsFlatButtonStoryArgs = IdsFlatButton & {
+    layout: FlatButtonLayout;
+    iconName: string;
+    className: null | 'ids-flat-button--size-small';
+    text: string;
+};
 
 const meta: Meta<IdsFlatButtonStoryArgs> = {
     title: 'Design System/Buttons/Flat Button',
@@ -42,6 +47,17 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
             options: ['button', 'submit', 'reset'],
             table: { category: 'Inputs' },
         },
+        className: {
+            control: {
+                type: 'select',
+                labels: {
+                    'null': 'Brak klasy',
+                    'ids-flat-button--size-small': 'Mały (32px)',
+                },
+            },
+            options: [null, 'ids-flat-button--size-small'],
+            table: { category: 'Class' },
+        },
     },
 };
 
@@ -56,11 +72,18 @@ export const Default: Story = {
         text: 'Edytuj',
         variant: 'neutral',
         type: 'button',
+        className: null,
     },
     render: (args) => ({
         props: args,
         template: `
-            <ids-flat-button [disabled]="disabled" [variant]="variant" [type]="type" (clicked)="clicked($event)">
+            <ids-flat-button
+                [class]="className"
+                [disabled]="disabled"
+                [variant]="variant"
+                [type]="type"
+                (clicked)="clicked($event)"
+            >
                 @if (layout !== 'Text') {
                     <mat-icon class="material-symbols-outlined">{{ iconName }}</mat-icon>
                 }

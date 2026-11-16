@@ -1,0 +1,3 @@
+@utility button-content-* {
+    --ids-overridden-button-content-color: --value(--color-*);
+}

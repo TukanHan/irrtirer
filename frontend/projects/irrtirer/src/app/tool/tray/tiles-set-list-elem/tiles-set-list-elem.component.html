@@ -2,25 +2,25 @@
 <div class="list-elem list-item-box">
     <span class="block-label">{{ tilesSetValue.name }}</span>
     <div class="flex -m-1.5">
-        <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
+        <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
             <mat-icon matListIcon> more_vert </mat-icon>
-        </button>
+        </ids-flat-button>
         <button class="button-size-small !text-contrast-medium" mat-icon-button (click)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
         </button>
 
-        <mat-menu #menu="matMenu" classList="paddingless">
+        <ids-menu #menu>
             @if (tilesSetValue.source === 'generated') {
-                <button mat-menu-item (click)="navigateToRandomSetAgain()">
+                <ids-menu-item (clicked)="navigateToRandomSetAgain()">
                     <mat-icon class="material-symbols-outlined" matListIcon> shuffle </mat-icon>
                     {{ 'tool.tiles.menu.generateAgain' | translate }}
-                </button>
+                </ids-menu-item>
             }
-            <button mat-menu-item (click)="removeTilesSet()">
+            <ids-menu-item  (clicked)="removeTilesSet()">
                 <mat-icon class="material-symbols-outlined" matListIcon> delete </mat-icon>
                 {{ 'tool.tiles.menu.removeTilesSet' | translate }}
-            </button>
-        </mat-menu>
+            </ids-menu-item>
+        </ids-menu>
     </div>
 </div>
 <app-expandable-panel [isOpen]="isOpen()">

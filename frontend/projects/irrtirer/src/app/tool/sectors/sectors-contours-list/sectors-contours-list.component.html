@@ -11,7 +11,11 @@
                 <div class="list-item-box" [class.selected]="sector === selectedSector">
                     <span class="block-label">{{ sector.name }}</span>
 
-                    <ids-flat-button class="sector-actions" (mousedown)="$event.stopPropagation()" [idsMenuTriggerFor]="menu">
+                    <ids-flat-button
+                        class="sector-actions ids-flat-button--size-small button-content-contrast-medium"
+                        (mousedown)="$event.stopPropagation()"
+                        [idsMenuTriggerFor]="menu"
+                    >
                         <mat-icon>more_vert</mat-icon>
                     </ids-flat-button>
 

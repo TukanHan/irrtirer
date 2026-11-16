@@ -3,7 +3,6 @@ import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { Observable } from 'rxjs';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -15,10 +14,11 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ScrollableListComponent } from '../../../shared/scrollable-list/scrollable-list.component';
+import { IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanelComponent, MatButtonModule, MatIconModule, MatMenuModule, TileListElemComponent, TranslatePipe, ScrollableListComponent],
+    imports: [ExpandablePanelComponent, MatButtonModule, IdsFlatButton, MatIconModule, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElemComponent, TranslatePipe, ScrollableListComponent],
     templateUrl: './tiles-set-list-elem.component.html',
 })
 export class TilesSetListElemComponent {

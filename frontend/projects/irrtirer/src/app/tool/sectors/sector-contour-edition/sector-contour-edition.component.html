@@ -22,7 +22,11 @@
                 <div cdkDrag class="vertex-box" (mousedown)="onBoxSelected(vertex)">
                     <div class="list-item-box" [class.selected]="vertex === selectedVertex()">
                         <span class="block-label">{{ getVertexLabel(vertex) }}</span>
-                        <ids-flat-button class="vertex-remove" (clicked)="removeVertex(vertex)" (mousedown)="$event.stopPropagation()">
+                        <ids-flat-button
+                            class="vertex-remove ids-flat-button--size-small button-content-contrast-medium"
+                            (clicked)="removeVertex(vertex)"
+                            (mousedown)="$event.stopPropagation()"
+                        >
                             <mat-icon matListIcon>close</mat-icon>
                         </ids-flat-button>
                     </div>

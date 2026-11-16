@@ -30,9 +30,7 @@
         cursor: move;
 
         .vertex-remove {
-            --ids-flat-button-size: 32px;
             margin: -6px;
-            --ids-overridden-button-content-color: var(--color-contrast-medium);
         }
 
         &.cdk-drag-placeholder {

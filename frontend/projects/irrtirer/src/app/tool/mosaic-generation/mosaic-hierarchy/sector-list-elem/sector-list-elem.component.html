@@ -1,12 +1,18 @@
 <div class="parent-elem list-item-box">
     <span class="block-label">{{ sector().schema.name }}</span>
     <div class="sector-actions">
-        <ids-flat-button class="sector-action visibility-icon" (clicked)="toggleTilesVisibility()">
+        <ids-flat-button
+            class="sector-action visibility-icon ids-flat-button--size-small button-content-contrast-medium"
+            (clicked)="toggleTilesVisibility()"
+        >
             <mat-icon class="material-symbols-outlined">
                 {{ areTilesVisible() ? 'visibility' : 'visibility_off' }}
             </mat-icon>
         </ids-flat-button>
-        <ids-flat-button class="sector-action toggle-action" (clicked)="toggleTilesList()">
+        <ids-flat-button
+            class="sector-action ids-flat-button--size-small button-content-contrast-medium"
+            (clicked)="toggleTilesList()"
+        >
             <mat-icon class="chevron" [class.closed]="!isOpen()">keyboard_arrow_up</mat-icon>
         </ids-flat-button>
     </div>

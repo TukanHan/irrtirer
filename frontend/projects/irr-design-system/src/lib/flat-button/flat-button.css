@@ -30,3 +30,7 @@
         }
     }
 }
+
+:host(.ids-flat-button--size-small) {
+    --ids-flat-button-size: 32px;
+}
