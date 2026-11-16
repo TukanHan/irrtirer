@@ -6,17 +6,20 @@
             gap: 12px;
 
             .visibility-icon {
-                font-weight: 300;
-                color: var(--color-contrast-medium);
+                --ids-overridden-button-content-color: var(--color-contrast-medium);
+                
+                mat-icon {
+                    font-weight: 300;
+                }
             }
 
             .sector-action {
-                --irr-icon-button-size: 32px;
+                --ids-flat-button-size: 32px;
                 margin: -6px;
             }
 
             .toggle-action {
-                color: var(--color-contrast-medium);
+                --ids-overridden-button-content-color: var(--color-contrast-medium);
             }
         }
     }

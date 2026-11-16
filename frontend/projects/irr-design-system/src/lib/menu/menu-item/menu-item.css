@@ -2,6 +2,7 @@
     display: block;
 
     .ids-menu-item {
+        --ids-menu-action-overlay-opacity: 0;
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -24,32 +25,26 @@
             z-index: -1;
             border-radius: inherit;
             background-color: var(--ids-element-surface-contrast-color);
-            opacity: 0;
+            opacity: var(--ids-menu-action-overlay-opacity);
             pointer-events: none;
             transition: opacity 0.2s ease;
         }
 
         &:hover:not(:disabled),
-        &:focus:not(:disabled) {
+        &:focus-visible:not(:disabled) {
             color: var(--ids-text-muted-hover-color);
         }
 
         &:hover:not(:disabled) {
-            &::before {
-                opacity: 0.05;
-            }
+            --ids-menu-action-overlay-opacity: 0.05;
         }
 
-        &:focus:not(:disabled) {
-            &::before {
-                opacity: 0.1;
-            }
+        &:focus-visible:not(:disabled) {
+            --ids-menu-action-overlay-opacity: 0.1;
         }
 
         &:active:not(:disabled) {
-            &::before {
-                opacity: 0.15;
-            }
+            --ids-menu-action-overlay-opacity: 0.15;
         }
 
         &:disabled {

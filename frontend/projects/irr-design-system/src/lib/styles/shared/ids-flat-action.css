@@ -9,6 +9,7 @@
     outline: none;
     position: relative;
     border-radius: var(--ids-action-radius);
+    --ids-flat-action-overlay-opacity: 0;
 
     --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-faint), transparent);
     --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
@@ -22,9 +23,9 @@
         content: '';
         position: absolute;
         inset: 0;
-        background-color: color-mix(in srgb, var(--ids-glow-color) 10%, transparent);
+        background-color: var(--ids-glow-color);
         border-radius: inherit;
-        opacity: 0;
+        opacity: var(--ids-flat-action-overlay-opacity);
         pointer-events: none;
         transition:
             opacity 0.2s ease,
@@ -37,23 +38,16 @@
         --ids-button-text-shadow: var(--ids-button-text-shadow-hover);
     }
 
-    &:hover:not(:disabled):not(:focus-visible) {
-        &::before {
-            opacity: 0.75;
-        }
+    &:hover:not(:disabled):not(:focus-visible):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.05;
     }
 
-    &:active:not(:disabled),
-    &:focus-visible:not(:disabled) {
-        &::before {
-            opacity: 1;
-        }
+    &:focus-visible:not(:disabled):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.1;
     }
 
     &:active:not(:disabled) {
-        &::before {
-            opacity: 1;
-        }
+        --ids-flat-action-overlay-opacity: 0.15;
     }
 
     .ids-flat-action-content {

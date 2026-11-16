@@ -9,7 +9,7 @@
         </mat-slider>
     </div>
     <div mat-dialog-actions align="end">
-        <button mat-button mat-dialog-close>{{ 'common.cancel' | translate }}</button>
-        <button mat-button [mat-dialog-close]="data()">{{ 'common.save' | translate }}</button>
+        <ids-flat-button (clicked)="cancel()">{{ 'common.cancel' | translate }}</ids-flat-button>
+        <ids-flat-button (clicked)="confirm()">{{ 'common.save' | translate }}</ids-flat-button>
     </div>
 </div>

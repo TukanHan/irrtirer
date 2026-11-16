@@ -16,11 +16,11 @@
     }
 
     .action {
-        --irr-icon-button-size: 32px;
-        color: var(--color-contrast-medium);
+        --ids-flat-button-size: 32px;
+        --ids-overridden-button-content-color: var(--color-contrast-medium);
 
         &.active {
-            color: var(--color-contrast-highest);
+            --ids-overridden-button-content-color: var(--color-contrast-highest);
         }
     }
 }

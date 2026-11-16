@@ -7,9 +7,7 @@
         --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
 
         &.ids-active-link {
-            &::before {
-                opacity: 1;
-            }
+            --ids-flat-action-overlay-opacity: 0.15;
 
             .ids-flat-action-content {
                 font-weight: 700;

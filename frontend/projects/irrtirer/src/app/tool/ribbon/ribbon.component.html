@@ -1,6 +1,5 @@
 @for (action of actions(); track action.iconName) {
-    <button
-        mat-icon-button
+    <ids-flat-button
         class="action"
         [hidden]="action.visibility() === 'hidden'"
         [disabled]="action.visibility() === 'disabled'"
@@ -10,7 +9,7 @@
         matTooltipPosition="below"
     >
         <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
-    </button>
+    </ids-flat-button>
 }
 
 <span class="size-display">{{ viewportSize() | sizeDisplay }}</span>

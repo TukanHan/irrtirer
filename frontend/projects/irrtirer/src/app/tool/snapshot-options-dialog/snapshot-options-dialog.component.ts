@@ -1,20 +1,22 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SnapshotOptions } from './snapshot-options.interface';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { IdsFlatButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-snapshot-options-dialog',
-    imports: [MatDialogModule, MatButtonModule, MatSliderModule, MatCheckboxModule, FormField, TranslatePipe],
+    imports: [MatDialogModule, IdsFlatButton, MatSliderModule, MatCheckboxModule, FormField, TranslatePipe],
     templateUrl: './snapshot-options-dialog.component.html',
     styleUrl: './snapshot-options-dialog.component.scss',
 })
 export class SnapshotOptionsDialogComponent {
     protected readonly translate = inject<TranslateService>(TranslateService);
+
+    private readonly dialogRef = inject(MatDialogRef);
 
     protected readonly data = signal<SnapshotOptions>({
         scaleFactor: 2,
@@ -22,4 +24,12 @@ export class SnapshotOptionsDialogComponent {
     });
 
     protected readonly form = form<SnapshotOptions>(this.data);
+
+    protected cancel(): void {
+        this.dialogRef.close();
+    }
+
+    protected confirm(): void {
+        this.dialogRef.close(this.data());
+    }
 }
