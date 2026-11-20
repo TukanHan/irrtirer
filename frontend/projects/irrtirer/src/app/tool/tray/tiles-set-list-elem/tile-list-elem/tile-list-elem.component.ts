@@ -1,14 +1,13 @@
 import { Component, inject, input } from '@angular/core';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
+import { IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system';
 
 @Component({
     selector: 'app-tile-list-elem',
-    imports: [MatIconModule, MatButtonModule, MatMenuModule, TranslatePipe],
+    imports: [MatIconModule, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe],
     templateUrl: './tile-list-elem.component.html',
     host: { class: 'list-item-box gap-3' },
 })

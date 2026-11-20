@@ -11,7 +11,7 @@
         --mat-toolbar-standard-height: inherit;
 
         .toolbar-item {
-            --irr-icon-button-icon-size: 22px;
+            --irr-icon-size: 22px;
             color: var(--color-primary-label);
 
             &.active-button {
@@ -22,7 +22,6 @@
         .mode {
             --irr-icon-font-weight: 300;
             --irr-icon-button-size: 36px;
-            --irr-icon-button-icon-size: 22px;
         }
     }
 }

@@ -1,11 +1,11 @@
 import { NgTemplateOutlet } from '@angular/common';
 import { Component, computed, contentChild, input, signal, TemplateRef } from '@angular/core';
-import { MatButton } from '@angular/material/button';
 import { TranslatePipe } from '@ngx-translate/core';
+import { IdsFlatButton } from 'irr-design-system';
 
 @Component({
     selector: 'app-scrollable-list',
-    imports: [NgTemplateOutlet, MatButton, TranslatePipe],
+    imports: [NgTemplateOutlet, IdsFlatButton, TranslatePipe],
     templateUrl: './scrollable-list.component.html',
     styleUrl: './scrollable-list.component.scss',
 })

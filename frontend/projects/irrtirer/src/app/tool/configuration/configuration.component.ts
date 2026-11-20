@@ -2,7 +2,6 @@ import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Store } from '@ngrx/store';
-import { MatButtonModule } from '@angular/material/button';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { ToolService } from '../tool.service';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
@@ -16,7 +15,7 @@ import { skip } from 'rxjs';
 
 @Component({
     selector: 'app-configuration',
-    imports: [MatButtonModule, RouterOutlet],
+    imports: [RouterOutlet],
     providers: [ConfigurationService],
     templateUrl: './configuration.component.html',
     styleUrl: './configuration.component.scss',

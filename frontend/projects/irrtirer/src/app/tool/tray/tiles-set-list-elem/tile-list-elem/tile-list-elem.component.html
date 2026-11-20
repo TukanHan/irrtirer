@@ -2,14 +2,14 @@
     {{ tile().id }}
 </span>
 <div class="flex -m-1.5">
-    <button class="button-size-small !text-contrast-medium" mat-icon-button [matMenuTriggerFor]="menu">
+    <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
         <mat-icon matListIcon> more_vert </mat-icon>
-    </button>
+    </ids-flat-button>
 
-    <mat-menu #menu="matMenu" classList="paddingless">
-        <button mat-menu-item (click)="navigateToTileDetails()">
+    <ids-menu #menu>
+        <ids-menu-item (clicked)="navigateToTileDetails()">
             <mat-icon class="material-symbols-outlined" matListIcon> page_info </mat-icon>
             {{ 'common.details' | translate }}
-        </button>
-    </mat-menu>
+        </ids-menu-item>
+    </ids-menu>
 </div>

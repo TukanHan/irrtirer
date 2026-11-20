@@ -1,9 +1,0 @@
-@mixin theme() {
-    .mat-mdc-menu-panel {
-        &.paddingless {
-            .mat-mdc-menu-content {
-                @apply p-0;
-            }
-        }
-    }
-}

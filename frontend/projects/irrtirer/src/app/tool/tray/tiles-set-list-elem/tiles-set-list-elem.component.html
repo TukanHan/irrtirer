@@ -5,9 +5,9 @@
         <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
             <mat-icon matListIcon> more_vert </mat-icon>
         </ids-flat-button>
-        <button class="button-size-small !text-contrast-medium" mat-icon-button (click)="toggleTilesList()">
+        <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" (clicked)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
-        </button>
+        </ids-flat-button>
 
         <ids-menu #menu>
             @if (tilesSetValue.source === 'generated') {

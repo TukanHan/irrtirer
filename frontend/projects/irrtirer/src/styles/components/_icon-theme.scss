@@ -3,9 +3,9 @@
         font-weight: var(--irr-icon-font-weight, 200);
         margin-left: var(--irr-icon-margin-left, unset);
         margin-right: var(--irr-icon-margin-right, unset);
-        width: var(--irr-icon-button-icon-size);
-        height: var(--irr-icon-button-icon-size);
-        font-size: var(--irr-icon-button-icon-size);
+        width: var(--irr-icon-size, 24px);
+        height: var(--irr-icon-size, 24px);
+        font-size: var(--irr-icon-size, 24px);
         overflow: unset;
     }
 }
