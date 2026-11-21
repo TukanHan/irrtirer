@@ -21,15 +21,15 @@
 
                     <ids-menu #menu>
                         <ids-menu-item (clicked)="navigateToContourPanel(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+                            <mat-icon class="material-symbols-outlined">draw</mat-icon>
                             {{ 'tool.sectors.contourList.editContour' | translate }}
                         </ids-menu-item>
                         <ids-menu-item (clicked)="navigateToPropertyPanel(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
+                            <mat-icon class="material-symbols-outlined">settings_input_composite</mat-icon>
                             {{ 'tool.sectors.contourList.editProperties' | translate }}
                         </ids-menu-item>
                         <ids-menu-item (clicked)="openRemoveSectorDialog(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+                            <mat-icon class="material-symbols-outlined">delete</mat-icon>
                             {{ 'tool.sectors.contourList.removeSector' | translate }}
                         </ids-menu-item>
                     </ids-menu>

@@ -3,12 +3,12 @@
 </span>
 <div class="flex -m-1.5">
     <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
-        <mat-icon matListIcon> more_vert </mat-icon>
+        <mat-icon> more_vert </mat-icon>
     </ids-flat-button>
 
     <ids-menu #menu>
         <ids-menu-item (clicked)="navigateToTileDetails()">
-            <mat-icon class="material-symbols-outlined" matListIcon> page_info </mat-icon>
+            <mat-icon class="material-symbols-outlined"> page_info </mat-icon>
             {{ 'common.details' | translate }}
         </ids-menu-item>
     </ids-menu>
