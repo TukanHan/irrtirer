@@ -16,7 +16,7 @@ export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
         '(window:resize)': 'onViewportResize()',
     },
 })
-export class IdsTooltipDirective {
+export class IdsTooltip {
     public readonly idsTooltip = input.required<string>();
     public readonly idsTooltipPosition = input<IdsTooltipPosition>('auto');
 
@@ -52,7 +52,7 @@ export class IdsTooltipDirective {
     }
 
     private openPanel(): void {
-        if (this.overlayRef) {
+        if (this.overlayRef || !this.idsTooltip().trim()) {
             return;
         }
 

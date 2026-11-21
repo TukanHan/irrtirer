@@ -8,3 +8,8 @@
     font-size: 0.9rem;
     --irr-icon-size: 1.15rem;
 }
+
+.ids-tooltip-label {
+    font-size: 0.8125rem;
+    line-height: 1.25;
+}

@@ -1,1 +1,1 @@
-export { IdsTooltipDirective, type IdsTooltipPosition } from './tooltip.directive';
+export { IdsTooltip, type IdsTooltipPosition } from './tooltip.directive';

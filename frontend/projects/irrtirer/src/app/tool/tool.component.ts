@@ -1,9 +1,8 @@
 import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatListModule } from '@angular/material/list';
-import { RouterLink, RouterOutlet, RouterModule } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
 import { map } from 'rxjs';
@@ -17,6 +16,7 @@ import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
 import { ProjectImportService } from '../core/services/project-import/project-import.service';
+import { IdsSideNavItem } from 'irr-design-system';
 
 @Component({
     selector: 'app-tool',
@@ -25,9 +25,8 @@ import { ProjectImportService } from '../core/services/project-import/project-im
         MatIconModule,
         MatSidenavModule,
         MatListModule,
-        MatTooltipModule,
+        IdsSideNavItem,
         RouterOutlet,
-        RouterLink,
         RouterModule,
         RibbonComponent,
         ActiveCanvasComponent,

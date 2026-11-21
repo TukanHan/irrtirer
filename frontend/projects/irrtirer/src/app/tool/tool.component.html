@@ -1,49 +1,22 @@
 <mat-sidenav-container class="tool-sidenav-container">
     <mat-sidenav mode="side" opened>
         <mat-nav-list>
-            <a
-                mat-list-item
-                routerLink="config"
-                routerLinkActive="active"
-                matTooltipPosition="right"
-                matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.projectSettings')"
-            >
+            <ids-side-nav-item link="config" [label]="translate.instant('tool.nav.projectSettings')">
                 <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
-            </a>
-            <a
-                mat-list-item
-                routerLink="tray"
-                routerLinkActive="active"
-                [disabled]="tilesLinkDisabled$ | async"
-                matTooltipPosition="right"
-                matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.tileTrey')"
-            >
+            </ids-side-nav-item>
+            <ids-side-nav-item link="tray" [label]="translate.instant('tool.nav.projectSettings')" [disabled]="tilesLinkDisabled$ | async">
                 <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
-            </a>
-            <a
-                mat-list-item
-                routerLink="sectors"
-                routerLinkActive="active"
-                [disabled]="sectorsLinkDisabled$ | async"
-                matTooltipPosition="right"
-                matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.sectors')"
-            >
+            </ids-side-nav-item>
+            <ids-side-nav-item link="sectors" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async">
                 <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
-            </a>
-            <a
-                mat-list-item
-                routerLink="generating"
-                routerLinkActive="active"
+            </ids-side-nav-item>
+            <ids-side-nav-item
+                link="generating"
+                [label]="translate.instant('tool.nav.generation')"
                 [disabled]="mosaicGeneratingLinkDisabled$ | async"
-                matTooltipPosition="right"
-                matTooltipClass="contrast"
-                [matTooltip]="translate.instant('tool.nav.generation')"
             >
                 <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
-            </a>
+            </ids-side-nav-item>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

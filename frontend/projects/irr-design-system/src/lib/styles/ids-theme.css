@@ -15,8 +15,9 @@
 
     --ids-element-surface-contrast-color: light-dark(#000000, #ffffff);
 
-    --ids-text-muted-color: light-dark(#5d5d5d, #b8b8b8);
     --ids-text-muted-hover-color: light-dark(#000000, #ffffff);
+    --ids-text-muted-color: light-dark(#5d5d5d, #b8b8b8);
+    --ids-text-low-emphasis-color: light-dark(#292929, #cccccc);
     --ids-text-color: light-dark(#383838, #e6e6e6);
     --ids-text-highlight-color: light-dark(#212121, #2592ff);
     --ids-text-danger-color: #fc2727;

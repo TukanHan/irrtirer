@@ -4,9 +4,8 @@
     .ids-tooltip-panel {
         --ids-panel-padding: 0.375rem 0.5rem;
 
-        max-width: 20rem;
-        color: var(--ids-content-color);
-        font-size: 0.875rem;
-        line-height: 1.25;
+        max-width: 15rem;
+        color: var(--ids-text-low-emphasis-color);
+        text-align: center;
     }
 }

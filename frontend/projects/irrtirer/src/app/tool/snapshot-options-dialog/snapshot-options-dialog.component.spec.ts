@@ -11,10 +11,7 @@ describe('SnapshotOptionsDialogComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [SnapshotOptionsDialogComponent],
-            providers: [
-                provideTranslateService({}),
-                { provide: MatDialogRef, useValue: { close: vi.fn() } },
-            ],
+            providers: [provideTranslateService({}), { provide: MatDialogRef, useValue: { close: vi.fn() } }],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SnapshotOptionsDialogComponent);

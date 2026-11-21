@@ -53,16 +53,16 @@ export const Default: Story = {
             <div class="side-nav-story">
                 <ids-side-nav>
                     <nav aria-label="Przykładowa nawigacja">
-                        <ids-side-nav-item link="/project">
+                        <ids-side-nav-item link="/project" label="Projekt">
                             <mat-icon class="material-symbols-outlined">folder</mat-icon>
                         </ids-side-nav-item>
-                        <ids-side-nav-item link="/layers">
+                        <ids-side-nav-item link="/layers" label="Warstwy">
                             <mat-icon class="material-symbols-outlined">dashboard</mat-icon>
                         </ids-side-nav-item>
-                        <ids-side-nav-item link="/generating">
+                        <ids-side-nav-item link="/generating" label="Generowanie">
                             <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
                         </ids-side-nav-item>
-                        <ids-side-nav-item link="/disabled" [disabled]="true">
+                        <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true">
                             <mat-icon class="material-symbols-outlined">block</mat-icon>
                         </ids-side-nav-item>
                     </nav>

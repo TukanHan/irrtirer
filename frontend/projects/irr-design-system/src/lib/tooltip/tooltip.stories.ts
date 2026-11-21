@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsFlatButton } from '../flat-button/flat-button';
-import { IdsTooltipDirective, type IdsTooltipPosition } from './tooltip.directive';
+import { IdsTooltip, type IdsTooltipPosition } from './tooltip.directive';
 import { IdsTooltipPanel } from './tooltip-panel';
 
 type TooltipPlaygroundArgs = {
@@ -11,11 +11,11 @@ type TooltipPlaygroundArgs = {
 
 const meta: Meta<TooltipPlaygroundArgs> = {
     title: 'Design System/Tooltip',
-    component: IdsTooltipDirective,
+    component: IdsTooltip,
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
-            imports: [IdsFlatButton, IdsTooltipDirective, IdsTooltipPanel],
+            imports: [IdsFlatButton, IdsTooltip, IdsTooltipPanel],
         }),
     ],
     argTypes: {

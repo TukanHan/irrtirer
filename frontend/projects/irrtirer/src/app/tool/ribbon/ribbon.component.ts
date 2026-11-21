@@ -3,13 +3,12 @@ import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';
 import { SizeDisplayPipe } from '../../core/pipes/size-display.pipe';
 import { Size } from '../../core/models/math/size.interface';
-import { MatTooltip } from '@angular/material/tooltip';
 import { TranslateService } from '@ngx-translate/core';
-import { IdsFlatButton } from 'irr-design-system';
+import { IdsFlatButton, IdsTooltip } from 'irr-design-system';
 
 @Component({
     selector: 'app-ribbon',
-    imports: [MatIconModule, IdsFlatButton, SizeDisplayPipe, MatTooltip],
+    imports: [MatIconModule, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
     templateUrl: './ribbon.component.html',
     styleUrl: './ribbon.component.scss',
 })

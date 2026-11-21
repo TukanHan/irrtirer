@@ -2,7 +2,6 @@ import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSe
 import { SectorsContoursService } from '../sectors-contours.service';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -16,7 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton, IdsTooltip } from 'irr-design-system';
 
 @Component({
     selector: 'app-sector-property-editor',
@@ -30,7 +29,7 @@ import { IdsFramedButton } from 'irr-design-system';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, MatTooltipModule, ExtendedPanelComponent, TranslatePipe, FormField],
+    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, IdsTooltip, ExtendedPanelComponent, TranslatePipe, FormField],
     templateUrl: './sector-property-editor.component.html',
     styleUrl: './sector-property-editor.component.scss',
 })

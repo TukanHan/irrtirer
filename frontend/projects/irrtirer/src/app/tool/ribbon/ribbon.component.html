@@ -5,8 +5,8 @@
         [disabled]="action.visibility() === 'disabled'"
         [class.active]="action.visibility() === 'on'"
         (click)="onClick(action)"
-        [matTooltip]="translate.instant(action.tooltipKey)"
-        matTooltipPosition="below"
+        [idsTooltip]="translate.instant(action.tooltipKey)"
+        idsTooltipPosition="bottom"
     >
         <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
     </ids-flat-button>

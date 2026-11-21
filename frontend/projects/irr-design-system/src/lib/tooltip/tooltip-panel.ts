@@ -3,7 +3,7 @@ import { Component, input } from '@angular/core';
 @Component({
     selector: 'ids-tooltip-panel',
     template: `
-        <div class="ids-panel ids-tooltip-panel" role="tooltip">
+        <div class="ids-panel ids-tooltip-panel ids-tooltip-label" role="tooltip">
             {{ text() }}
         </div>
     `,
