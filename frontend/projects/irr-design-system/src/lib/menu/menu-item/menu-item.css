@@ -7,7 +7,7 @@
         align-items: center;
         gap: 0.5rem;
         width: 100%;
-        border-radius: var(--ids-panel-border-radius);
+        border-radius: var(--ids-radius-medium);
         outline: 0;
         position: relative;
         isolation: isolate;

@@ -10,7 +10,8 @@
 
     --ids-panel-surface-color: light-dark(#eeeeee, #222222);
     --ids-panel-border-color: light-dark(#dbdbdb, #2b2b2b);
-    --ids-panel-border-radius: 6px;
+
+    --ids-sidenav-surface-color: light-dark(#eeeeee, #333333);
 
     --ids-element-surface-contrast-color: light-dark(#000000, #ffffff);
 
@@ -19,6 +20,9 @@
     --ids-text-color: light-dark(#383838, #e6e6e6);
     --ids-text-highlight-color: light-dark(#212121, #2592ff);
     --ids-text-danger-color: #fc2727;
+
+    --ids-radius-medium: 6px;
+    --ids-radius-none: 0;
 
     --ids-shadow-strength-faint: 20%;
     --ids-shadow-strength-subtle: 40%;

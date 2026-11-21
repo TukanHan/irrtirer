@@ -9,7 +9,7 @@
     padding: var(--ids-panel-padding, unset);
     min-width: 200px;
     border: 1px solid var(--ids-panel-border-color);
-    border-radius: var(--ids-panel-border-radius);
+    border-radius: var(--ids-radius-medium);
     background-color: color-mix(in srgb, var(--ids-panel-surface-color) 50%, transparent);
 
     backdrop-filter: blur(6px);
