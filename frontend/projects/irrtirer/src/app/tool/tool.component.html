@@ -1,31 +1,29 @@
-<div class="tool-sidenav-container">
-    <ids-side-nav>
-        <nav>
-            <ids-side-nav-item link="config" [label]="translate.instant('tool.nav.projectSettings')">
-                <mat-icon class="material-symbols-outlined">flowsheet</mat-icon>
-            </ids-side-nav-item>
-            <ids-side-nav-item link="tray" [label]="translate.instant('tool.nav.projectSettings')" [disabled]="tilesLinkDisabled$ | async">
-                <mat-icon class="material-symbols-outlined">dashboard</mat-icon>
-            </ids-side-nav-item>
-            <ids-side-nav-item link="sectors" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async">
-                <mat-icon class="material-symbols-outlined">view_in_ar</mat-icon>
-            </ids-side-nav-item>
-            <ids-side-nav-item
-                link="generating"
-                [label]="translate.instant('tool.nav.generation')"
-                [disabled]="mosaicGeneratingLinkDisabled$ | async"
-            >
-                <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
-            </ids-side-nav-item>
-        </nav>
-    </ids-side-nav>
-    <div class="content">
-        <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
-        <div class="main">
-            <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas" />
-            <div class="panel">
-                <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
-            </div>
+<ids-side-nav>
+    <nav>
+        <ids-side-nav-item link="config" [label]="translate.instant('tool.nav.projectSettings')">
+            <mat-icon class="material-symbols-outlined">flowsheet</mat-icon>
+        </ids-side-nav-item>
+        <ids-side-nav-item link="tray" [label]="translate.instant('tool.nav.projectSettings')" [disabled]="tilesLinkDisabled$ | async">
+            <mat-icon class="material-symbols-outlined">dashboard</mat-icon>
+        </ids-side-nav-item>
+        <ids-side-nav-item link="sectors" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async">
+            <mat-icon class="material-symbols-outlined">view_in_ar</mat-icon>
+        </ids-side-nav-item>
+        <ids-side-nav-item
+            link="generating"
+            [label]="translate.instant('tool.nav.generation')"
+            [disabled]="mosaicGeneratingLinkDisabled$ | async"
+        >
+            <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
+        </ids-side-nav-item>
+    </nav>
+</ids-side-nav>
+<div class="flex flex-col w-full bg-surface">
+    <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
+    <div class="flex flex-row w-full flex-1 overflow-hidden">
+        <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="flex flex-1" />
+        <div class="w-[250px] border-l border-contrast-light">
+            <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
         </div>
     </div>
 </div>

@@ -30,7 +30,7 @@ import { IdsSideNav, IdsSideNavItem } from 'irr-design-system';
     ],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
-    styleUrl: './tool.component.scss',
+    host: { class: 'flex h-full' },
 })
 export class ToolComponent {
     private readonly store = inject(Store);

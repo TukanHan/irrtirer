@@ -1,28 +1,26 @@
 :host {
-    --mat-toolbar-standard-height: 55px;
-    height: var(--mat-toolbar-standard-height);
+    display: flex;
+    height: 55px;
+    width: 100%;
+    align-items: center;
 
-    .toolbar {
-        position: fixed;
-        padding: 0 48px;
-        z-index: 2;
-        border-bottom: 1px solid var(--color-toolbar-border);
-        --mat-toolbar-container-background-color: var(--color-surface-toolbar);
-        --mat-toolbar-standard-height: inherit;
+    padding: 0 48px;
+    z-index: 1;
+    border-bottom: 1px solid var(--color-toolbar-border);
+    background-color: var(--color-surface-toolbar);
 
-        .toolbar-item {
-            --irr-icon-size: 22px;
-            color: var(--color-primary-label);
+    .toolbar-item {
+        --irr-icon-size: 22px;
+        color: var(--color-primary-label);
 
-            &.active-button {
-                background: color-mix(in srgb, var(--color-primary), transparent 90%);
-            }
+        &.active-button {
+            background: color-mix(in srgb, var(--color-primary), transparent 90%);
         }
+    }
 
-        .mode {
-            --irr-icon-font-weight: 300;
-            --irr-icon-button-size: 36px;
-        }
+    .mode {
+        --irr-icon-font-weight: 300;
+        --irr-icon-button-size: 36px;
     }
 }
 

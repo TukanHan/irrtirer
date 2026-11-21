@@ -1,6 +1,5 @@
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
 import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -16,7 +15,6 @@ import { IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger } from 'irr-design-
     selector: 'app-toolbar',
     imports: [
         MatIconModule,
-        MatToolbarModule,
         IconSvgModuleModule,
         MatRadioModule,
         TranslatePipe,
