@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DjOLFfbZ.js","./rolldown-runtime-sJBDdmOt.js","./blocks-D7ZcmVga.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chevron-CDQuttFP.js","./chevron.stories-CsB22gNX.js","./core-_WelOpXh.js","./_animation-chunk-Td1p7rKA.js","./async-D2DQO3yS.js","./take-COP-dNaV.js","./share-CPHuw8PM.js","./combineLatest-S9zdCvmP.js","./takeUntil-BRYf5TVG.js","./skip-B24Hjqnn.js","./_element-chunk-DnWviNE5.js","./common-BG1WE-39.js","./startWith-BHU78Y0c.js","./_style-loader-chunk-CNMHjo3g.js","./private-BrS1mFSq.js","./icon-Dz57rg1_.js","./tap-BU9rSxko.js","./_focus-monitor-chunk-BUAHJq-h.js","./platform-BKIq22lp.js","./list-item-box-B228mGDA.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-Cc7WTJFd.js","./loading-dots.stories-DbZVp0Jk.js","./typography-Bw1Z5y4N.js","./typography.stories-C8mzPWQP.js","./word-fade-in-CS-VTTtc.js","./word-fade-in.stories-rbXIxn2F.js","./color-picker.stories-DllltKvk.js","./_overlay-module-chunk-C6S_l1Ke.js","./timer-CkhI1erV.js","./switchMap-DcSDnGA8.js","./observers-Cioeiz1E.js","./dialog.stories-D70oFrZP.js","./rxjs-interop-CluD5p7h.js","./flat-button-DKx5TrF-.js","./ids-flat-action-HVvxSQNw.js","./ids-action-DeEUlF3S.js","./framed-button-Dc_dwfO4.js","./expandable-panel.stories-DU4z7PbN.js","./scrollable-list.stories-DsYwiJeX.js","./flat-button.stories-Cnfh2Giz.js","./flat-link.stories-DX2CPFS3.js","./_router_module-chunk-DAVF4fk4.js","./framed-button.stories-CX-vQ6xT.js","./menu.stories-DcKob57i.js","./ids-panel-BUaGBXz6.js","./side-nav.stories-DgMpncWi.js","./tooltip.directive-Dx_Bw_wx.js","./tooltip.stories-CL58zU20.js","./animations-DNc2q2f1.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-BT1EIg-i.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DjOLFfbZ.js","./rolldown-runtime-sJBDdmOt.js","./blocks-D7ZcmVga.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chevron-Cd6szRn4.js","./chevron.stories-_ua5QS3O.js","./core-_WelOpXh.js","./_animation-chunk-Td1p7rKA.js","./async-D2DQO3yS.js","./take-COP-dNaV.js","./share-CPHuw8PM.js","./combineLatest-S9zdCvmP.js","./takeUntil-BRYf5TVG.js","./skip-B24Hjqnn.js","./_element-chunk-DnWviNE5.js","./common-BG1WE-39.js","./startWith-BHU78Y0c.js","./_style-loader-chunk-CNMHjo3g.js","./private-BrS1mFSq.js","./icon-CxmhiBrR.js","./tap-BU9rSxko.js","./_focus-monitor-chunk-BUAHJq-h.js","./platform-BKIq22lp.js","./list-item-box-B228mGDA.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-Cc7WTJFd.js","./loading-dots.stories-DbZVp0Jk.js","./typography-Bw1Z5y4N.js","./typography.stories-C8mzPWQP.js","./word-fade-in-19m-Z1fP.js","./word-fade-in.stories-7riZUyBk.js","./color-picker.stories-CqB6-3ch.js","./_overlay-module-chunk-C6S_l1Ke.js","./timer-CkhI1erV.js","./switchMap-DcSDnGA8.js","./observers-Cioeiz1E.js","./dialog.stories-Dk9ekdrf.js","./rxjs-interop-CluD5p7h.js","./flat-button-DKx5TrF-.js","./ids-flat-action-HVvxSQNw.js","./ids-action-DeEUlF3S.js","./framed-button-Dc_dwfO4.js","./expandable-panel.stories-C0MALuNH.js","./scrollable-list.stories-p4MGtx6u.js","./flat-button.stories-C9KvwVk0.js","./flat-link.stories-C_1FuYB0.js","./_router_module-chunk-B5Rzog2D.js","./framed-button.stories-CX-vQ6xT.js","./menu.stories-B5hvHot6.js","./ids-panel-BUaGBXz6.js","./side-nav.stories-DxuEDDYA.js","./tooltip.directive-Dx_Bw_wx.js","./tooltip.stories-wLK3W5p0.js","./animations-Br-JdpLA.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-BT1EIg-i.js"])))=>i.map(i=>d[i]);
 import{a as e,i as t,n,r}from"./rolldown-runtime-sJBDdmOt.js";import{n as i,t as a}from"./preload-helper-Dt5pTa-y.js";import{$ as o,$n as s,An as c,Bt as l,Cn as u,Ct as d,Dn as f,F as p,Fn as m,Gn as h,H as g,I as _,J as v,Jn as y,K as b,Kn as x,M as S,Mn as C,Nn as w,Nr as T,On as ee,P as E,Pn as D,Q as te,Qn as O,S as ne,St as k,T as re,Tn as A,U as ie,Vn as j,Vt as ae,W as oe,Wn as se,X as ce,Xn as le,Xt as ue,Y as de,Yn as fe,Zn as pe,_n as me,ar as he,bn as ge,cr as _e,ct as ve,dr as ye,dt as be,er as xe,et as Se,ft as Ce,g as we,gn as Te,gr as Ee,hr as De,it as Oe,k as ke,kn as Ae,lt as je,m as Me,n as Ne,nr as Pe,nt as Fe,or as Ie,ot as Le,p as Re,q as ze,qn as Be,rr as Ve,rt as He,s as Ue,sr as We,st as Ge,t as Ke,tr as qe,tt as Je,ut as Ye,vn as Xe,xn as Ze,xt as M,yn as Qe,z as $e,zn as et,zr as tt,zt as nt}from"./core-_WelOpXh.js";import{i as eee,n as rt,r as it,t as at}from"./timer-CkhI1erV.js";import{d as ot,f as st,i as ct,n as lt,r as ut,t as tee}from"./take-COP-dNaV.js";import{a as dt,c as nee,d as ft,f as pt,g as ree,m as iee,n as aee,o as mt,p as oee,s as see,t as cee}from"./share-CPHuw8PM.js";import{a as ht,c as gt,i as _t,l as vt,n as yt,o as bt,r as xt,s as St,t as lee,u as Ct}from"./tap-BU9rSxko.js";import{i as wt,n as Tt,r as uee,t as dee}from"./switchMap-DcSDnGA8.js";import{a as fee,c as pee,i as mee,l as hee,n as Et,o as Dt,s as gee,t as _ee}from"./rxjs-interop-CluD5p7h.js";import{a as vee,i as yee,n as bee,o as xee,r as Ot,t as See}from"./takeUntil-BRYf5TVG.js";import{i as kt,n as Cee,r as At,t as wee}from"./skip-B24Hjqnn.js";import{_ as Tee,a as jt,g as Eee,h as Mt,i as Dee,m as Oee,n as Nt,o as Pt,p as kee,t as Aee}from"./common-BG1WE-39.js";import{a as Ft,i as jee,l as It,n as Lt,u as Rt}from"./chunk-RDNWKK3U-U0neV263.js";import{i as Mee,n as Nee}from"./chunk-UAWMPV5J-BrGPyIDv.js";import{t as Pee}from"./react-DlPsW1c0.js";function zt(){return(zt=n((()=>{(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})()})))()}function Bt(e){var t=[...arguments].slice(1),n=Array.from(typeof e==`string`?[e]:e);n[n.length-1]=n[n.length-1].replace(/\r?\n([\t ]*)$/,``);var r=n.reduce(function(e,t){var n=t.match(/\n([\t ]+|(?!\s).)/g);return n?e.concat(n.map(function(e){return e.match(/[\t ]/g)?.length??0})):e},[]);if(r.length){var i=RegExp(`
 [	 ]{`+Math.min.apply(Math,r)+`}`,`g`);n=n.map(function(e){return e.replace(i,`
 `)})}n[0]=n[0].replace(/^\r?\n/,``);var a=n[0];return t.forEach(function(e,t){var r=a.match(/(?:^|\n)( *)$/),i=r?r[1]:``,o=e;typeof e==`string`&&e.includes(`
@@ -1023,7 +1023,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
       font-weight: bold;
       color: hsl(212 100 46);
     }
-  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},Dz=Bp(l_(),1),Ap()})))()}var Az,jz,Mz;function Nz(){return(Nz=n((()=>{({createBrowserChannel:Az}=__STORYBOOK_MODULE_CHANNELS__),{addons:jz}=__STORYBOOK_MODULE_PREVIEW_API__,Mz=Az({page:`preview`}),jz.setChannel(Mz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Mz)})))()}async function Sde(e){return await Pz[e]()}var Pz;function Fz(){return(Fz=n((()=>{i(),Pz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DjOLFfbZ.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-CDQuttFP.js`),__vite__mapDeps([9,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-B228mGDA.js`),__vite__mapDeps([28,1,2,3,4,5,6,7,8,29]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-Cc7WTJFd.js`),__vite__mapDeps([30,1,2,3,4,5,6,7,8,31]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-Bw1Z5y4N.js`),__vite__mapDeps([32,1,2,3,4,5,6,7,8,33]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-CS-VTTtc.js`),__vite__mapDeps([34,1,2,3,4,5,6,7,8,35,11]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-DllltKvk.js`),__vite__mapDeps([36,1,11,37,13,38,15,39,17,18,19,20,21,22,14,12,16,27,40]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-D70oFrZP.js`),__vite__mapDeps([41,1,11,37,13,38,15,39,17,18,19,20,21,22,14,42,12,16,23,43,44,45,46,26,40]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-DU4z7PbN.js`),__vite__mapDeps([47,1,11]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-DsYwiJeX.js`),__vite__mapDeps([48,1,11,20,43,44,45]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-CsB22gNX.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([10,1,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([29,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([31,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([33,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-rbXIxn2F.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([35,1,11]),import.meta.url),"./projects/irr-design-system/src/lib/flat-button/flat-button.stories.ts":()=>a(()=>import(`./flat-button.stories-Cnfh2Giz.js`),__vite__mapDeps([49,1,24,11,14,15,25,23,22,43,44,45]),import.meta.url),"./projects/irr-design-system/src/lib/flat-link/flat-link.stories.ts":()=>a(()=>import(`./flat-link.stories-DX2CPFS3.js`),__vite__mapDeps([50,1,11,42,15,17,18,51,14,25,39,16,21,20,24,23,22,44,45]),import.meta.url),"./projects/irr-design-system/src/lib/framed-button/framed-button.stories.ts":()=>a(()=>import(`./framed-button.stories-CX-vQ6xT.js`),__vite__mapDeps([52,1,46,11,45]),import.meta.url),"./projects/irr-design-system/src/lib/menu/menu.stories.ts":()=>a(()=>import(`./menu.stories-DcKob57i.js`),__vite__mapDeps([53,1,11,37,13,38,15,39,17,18,19,20,21,22,24,14,25,23,46,45,54]),import.meta.url),"./projects/irr-design-system/src/lib/side-nav/side-nav.stories.ts":()=>a(()=>import(`./side-nav.stories-DgMpncWi.js`),__vite__mapDeps([55,1,11,42,15,17,18,51,14,25,39,16,21,20,24,23,22,56,37,13,38,19,54]),import.meta.url),"./projects/irr-design-system/src/lib/tooltip/tooltip.stories.ts":()=>a(()=>import(`./tooltip.stories-CL58zU20.js`),__vite__mapDeps([57,1,43,11,44,45,56,37,13,38,15,39,17,18,19,20,21,22,54]),import.meta.url)}})))()}function Cde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new De({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new pee)}});e.subscribe(a)})}function Iz(){return(Iz=n((()=>{hee(),Ee()})))()}function Lz(){var e=[...arguments],t=ree(e),n=iee(e,1/0),r=e;return r.length?r.length===1?pt(r[0]):xee(n)(see(r,t)):ot}function Rz(){return(Rz=n((()=>{vee(),ft(),st(),oee(),nee()})))()}function wde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?ye:Ie(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(Pe(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?rt(i):pt(i(e,n)),u=Pe(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function zz(){return(zz=n((()=>{he(),Ve(),at(),ft()})))()}var Tde=r({});function Bz(){return(Bz=n((()=>{Me(),Re()})))()}function Ede(){return YW||(YW=eG(),Vz(JW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Vz(JW.STYLE,void 0,[[`*`,[`style`]]]),Vz(JW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Vz(JW.URL,ZW,[[`*`,[`href`,`xlink:href`]]]),Vz(JW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Vz(JW.URL,XW,[[`a`,[`href`,`xlink:href`]]]),Vz(JW.ATTRIBUTE_NO_BINDING,XW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Vz(JW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),YW)}function Vz(e,t,n){let r=t??QW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=YW[i]??=eG(),o=a[r]??=eG();o[n]=e}}}function Dde(e,t,n){let r=Ede()[t.toLowerCase()];if(!r)return JW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[$W])}if(a===void 0){let e=r[QW];e&&(a=e[i]??e[$W])}if(a===void 0&&(!n||n===QW)){let e=r[XW];e&&(a=e[i])}return a??JW.NONE}function Ode(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function kde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function Ade(e){let t=Ode(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>kde(e)):[];return t.concat(...n)}function Hz(e){return e?UW.parse(e).map(Ade):[]}function jde(e){return Pde(Nde(e.nodes).join(``)+`[${e.meaning}]`)}function Mde(e){return e.id||Uz(e)}function Uz(e){let t=new uG;return Kz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function Nde(e){return e.map(e=>e.visit(lG,null))}function Pde(e){sG??=new TextEncoder;let t=[...sG.encode(e)],n=Lde(t,dG.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=Xz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Fde(t,o,s,c),u=r[0],d=r[1],f=[Xz(a,5),u,l,d,i[t]].reduce(Yz);l=c,c=s,s=Xz(o,30),o=a,a=f}a=Yz(a,t),o=Yz(o,r),s=Yz(s,u),c=Yz(c,d),l=Yz(l,f)}return Wz(a)+Wz(o)+Wz(s)+Wz(c)+Wz(l)}function Wz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Fde(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Gz(e){sG??=new TextEncoder;let t=sG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=qz(n,t.length,0),i=qz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Kz(e,t=``){let n=Gz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Gz(t)),BigInt.asUintN(63,n).toString()}function qz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Jz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Jz(r,i,n)[2]}function Jz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Yz(e,t){return Ide(e,t)[1]}function Ide(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function Xz(e,t){return e<<t|e>>>32-t}function Lde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=Rde(e,i*4,t);return r}function Zz(e,t){return t>=e.length?0:e[t]}function Rde(e,t,n){let r=0;if(n===dG.Big)for(let n=0;n<4;n++)r+=Zz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Zz(e,t+n)<<8*n;return r}function zde(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Qz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function $z(e,t){return Qz(e,t,(e,t)=>e.isEquivalent(t))}function eB(e,t,n){return e===``?{cooked:t,raw:GG(UG(HG(t))),range:n}:{cooked:`:${e}:${t}`,raw:GG(`:${WG(HG(e))}:${HG(t)}`),range:n}}function Bde(e,t=!1,n=!0){return new fK(e,t,n)}function Vde(e=[]){return new pK(e)}function tB(e,t,n,r){return new TG(e,t,n,r)}function z(e,t=null,n){return new KG(e,null,t,n)}function nB(e,t,n){return new gG(e,t,n)}function rB(e){return new EG(e)}function iB(e,t,n){return new rK(e,t,n)}function aB(e,t=null){return new oK(e.map(e=>new iK(e.key,e.value,e.quoted)),t,null)}function Hde(e,t){return new JG(e,t)}function oB(e,t,n,r,i){return new XG(e,t,n,r,i)}function sB(e,t,n,r){return new ZG(e,t,n,r)}function cB(e,t,n,r,i){return new yK(e,t,n,r,i)}function Ude(e,t,n,r){return new AG(e,t,n,r)}function B(e,t,n){return new NG(e,t,n)}function Wde(e,t,n,r,i){return new VG(e,t,n,r,i)}function lB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Gde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${lB(e[0])} `;let t=`*
+  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},Dz=Bp(l_(),1),Ap()})))()}var Az,jz,Mz;function Nz(){return(Nz=n((()=>{({createBrowserChannel:Az}=__STORYBOOK_MODULE_CHANNELS__),{addons:jz}=__STORYBOOK_MODULE_PREVIEW_API__,Mz=Az({page:`preview`}),jz.setChannel(Mz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Mz)})))()}async function Sde(e){return await Pz[e]()}var Pz;function Fz(){return(Fz=n((()=>{i(),Pz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DjOLFfbZ.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-Cd6szRn4.js`),__vite__mapDeps([9,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-B228mGDA.js`),__vite__mapDeps([28,1,2,3,4,5,6,7,8,29]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-Cc7WTJFd.js`),__vite__mapDeps([30,1,2,3,4,5,6,7,8,31]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-Bw1Z5y4N.js`),__vite__mapDeps([32,1,2,3,4,5,6,7,8,33]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-19m-Z1fP.js`),__vite__mapDeps([34,1,2,3,4,5,6,7,8,35,11]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-CqB6-3ch.js`),__vite__mapDeps([36,1,11,37,13,38,15,39,17,18,19,20,21,22,14,12,16,27,40]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-Dk9ekdrf.js`),__vite__mapDeps([41,1,11,37,13,38,15,39,17,18,19,20,21,22,14,42,12,16,23,43,44,45,46,26,40]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-C0MALuNH.js`),__vite__mapDeps([47,1,11]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-p4MGtx6u.js`),__vite__mapDeps([48,1,11,20,43,44,45]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-_ua5QS3O.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([10,1,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([29,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([31,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([33,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-7riZUyBk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([35,1,11]),import.meta.url),"./projects/irr-design-system/src/lib/flat-button/flat-button.stories.ts":()=>a(()=>import(`./flat-button.stories-C9KvwVk0.js`),__vite__mapDeps([49,1,24,11,14,15,25,23,22,43,44,45]),import.meta.url),"./projects/irr-design-system/src/lib/flat-link/flat-link.stories.ts":()=>a(()=>import(`./flat-link.stories-C_1FuYB0.js`),__vite__mapDeps([50,1,11,42,15,17,18,51,14,25,39,16,21,20,24,23,22,44,45]),import.meta.url),"./projects/irr-design-system/src/lib/framed-button/framed-button.stories.ts":()=>a(()=>import(`./framed-button.stories-CX-vQ6xT.js`),__vite__mapDeps([52,1,46,11,45]),import.meta.url),"./projects/irr-design-system/src/lib/menu/menu.stories.ts":()=>a(()=>import(`./menu.stories-B5hvHot6.js`),__vite__mapDeps([53,1,11,37,13,38,15,39,17,18,19,20,21,22,24,14,25,23,46,45,54]),import.meta.url),"./projects/irr-design-system/src/lib/side-nav/side-nav.stories.ts":()=>a(()=>import(`./side-nav.stories-DxuEDDYA.js`),__vite__mapDeps([55,1,11,42,15,17,18,51,14,25,39,16,21,20,24,23,22,56,37,13,38,19,54]),import.meta.url),"./projects/irr-design-system/src/lib/tooltip/tooltip.stories.ts":()=>a(()=>import(`./tooltip.stories-wLK3W5p0.js`),__vite__mapDeps([57,1,43,11,44,45,56,37,13,38,15,39,17,18,19,20,21,22,54]),import.meta.url)}})))()}function Cde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new De({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new pee)}});e.subscribe(a)})}function Iz(){return(Iz=n((()=>{hee(),Ee()})))()}function Lz(){var e=[...arguments],t=ree(e),n=iee(e,1/0),r=e;return r.length?r.length===1?pt(r[0]):xee(n)(see(r,t)):ot}function Rz(){return(Rz=n((()=>{vee(),ft(),st(),oee(),nee()})))()}function wde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?ye:Ie(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(Pe(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?rt(i):pt(i(e,n)),u=Pe(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function zz(){return(zz=n((()=>{he(),Ve(),at(),ft()})))()}var Tde=r({});function Bz(){return(Bz=n((()=>{Me(),Re()})))()}function Ede(){return YW||(YW=eG(),Vz(JW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Vz(JW.STYLE,void 0,[[`*`,[`style`]]]),Vz(JW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Vz(JW.URL,ZW,[[`*`,[`href`,`xlink:href`]]]),Vz(JW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Vz(JW.URL,XW,[[`a`,[`href`,`xlink:href`]]]),Vz(JW.ATTRIBUTE_NO_BINDING,XW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Vz(JW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),YW)}function Vz(e,t,n){let r=t??QW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=YW[i]??=eG(),o=a[r]??=eG();o[n]=e}}}function Dde(e,t,n){let r=Ede()[t.toLowerCase()];if(!r)return JW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[$W])}if(a===void 0){let e=r[QW];e&&(a=e[i]??e[$W])}if(a===void 0&&(!n||n===QW)){let e=r[XW];e&&(a=e[i])}return a??JW.NONE}function Ode(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function kde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function Ade(e){let t=Ode(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>kde(e)):[];return t.concat(...n)}function Hz(e){return e?UW.parse(e).map(Ade):[]}function jde(e){return Pde(Nde(e.nodes).join(``)+`[${e.meaning}]`)}function Mde(e){return e.id||Uz(e)}function Uz(e){let t=new uG;return Kz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function Nde(e){return e.map(e=>e.visit(lG,null))}function Pde(e){sG??=new TextEncoder;let t=[...sG.encode(e)],n=Lde(t,dG.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=Xz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Fde(t,o,s,c),u=r[0],d=r[1],f=[Xz(a,5),u,l,d,i[t]].reduce(Yz);l=c,c=s,s=Xz(o,30),o=a,a=f}a=Yz(a,t),o=Yz(o,r),s=Yz(s,u),c=Yz(c,d),l=Yz(l,f)}return Wz(a)+Wz(o)+Wz(s)+Wz(c)+Wz(l)}function Wz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Fde(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Gz(e){sG??=new TextEncoder;let t=sG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=qz(n,t.length,0),i=qz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Kz(e,t=``){let n=Gz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Gz(t)),BigInt.asUintN(63,n).toString()}function qz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Jz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Jz(r,i,n)[2]}function Jz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Yz(e,t){return Ide(e,t)[1]}function Ide(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function Xz(e,t){return e<<t|e>>>32-t}function Lde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=Rde(e,i*4,t);return r}function Zz(e,t){return t>=e.length?0:e[t]}function Rde(e,t,n){let r=0;if(n===dG.Big)for(let n=0;n<4;n++)r+=Zz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Zz(e,t+n)<<8*n;return r}function zde(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Qz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function $z(e,t){return Qz(e,t,(e,t)=>e.isEquivalent(t))}function eB(e,t,n){return e===``?{cooked:t,raw:GG(UG(HG(t))),range:n}:{cooked:`:${e}:${t}`,raw:GG(`:${WG(HG(e))}:${HG(t)}`),range:n}}function Bde(e,t=!1,n=!0){return new fK(e,t,n)}function Vde(e=[]){return new pK(e)}function tB(e,t,n,r){return new TG(e,t,n,r)}function z(e,t=null,n){return new KG(e,null,t,n)}function nB(e,t,n){return new gG(e,t,n)}function rB(e){return new EG(e)}function iB(e,t,n){return new rK(e,t,n)}function aB(e,t=null){return new oK(e.map(e=>new iK(e.key,e.value,e.quoted)),t,null)}function Hde(e,t){return new JG(e,t)}function oB(e,t,n,r,i){return new XG(e,t,n,r,i)}function sB(e,t,n,r){return new ZG(e,t,n,r)}function cB(e,t,n,r,i){return new yK(e,t,n,r,i)}function Ude(e,t,n,r){return new AG(e,t,n,r)}function B(e,t,n){return new NG(e,t,n)}function Wde(e,t,n,r,i){return new VG(e,t,n,r,i)}function lB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Gde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${lB(e[0])} `;let t=`*
 `;for(let n of e)t+=` *`,t+=lB(n).replace(/\n/g,`
  * `),t+=`
 `;return t+=` `,t}function uB(e){return e instanceof NG&&typeof e.value==`string`&&e.value.length>=SK}function Kde(e){return e.replace(EK,(...e)=>e[1].toUpperCase())}function qde(e,t){return dB(e,`:`,t)}function Jde(e,t){return dB(e,`.`,t)}function dB(e,t,n){let r=e.indexOf(t);return r==-1?n:[e.slice(0,r).trim(),e.slice(r+1).trim()]}function Yde(e){let t=[];for(let n=0;n<e.length;n++){let r=e.charCodeAt(n);if(r>=55296&&r<=56319&&e.length>n+1){let t=e.charCodeAt(n+1);t>=56320&&t<=57343&&(n++,r=(r-55296<<10)+t-56320+65536)}r<=127?t.push(r):r<=2047?t.push(r>>6&31|192,r&63|128):r<=65535?t.push(r>>12|224,r>>6&63|128,r&63|128):r<=2097151&&t.push(r>>18&7|240,r>>12&63|128,r>>6&63|128,r&63|128)}return t}function fB(e){if(typeof e==`string`)return e;if(Array.isArray(e))return`[${e.map(fB).join(`, `)}]`;if(e==null)return``+e;let t=e.overriddenName||e.name;if(t)return`${t}`;if(!e.toString)return`object`;let n=e.toString();if(n==null)return``+n;let r=n.indexOf(`
@@ -1064,7 +1064,7 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
           In Storybook v7.0 we are using Angular's new bootstrapApplication API to mount an Angular application to the DOM.
           Note that the BrowserModule providers are automatically included when starting an application with bootstrapApplication()
           Please remove the "BrowserModule" from the list of imports in your moduleMetadata definition to remove this warning.
-        `),[!0];try{let t=await a(()=>import(`./animations-DNc2q2f1.js`),__vite__mapDeps([58,1,11,20]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(It`
+        `),[!0];try{let t=await a(()=>import(`./animations-Br-JdpLA.js`),__vite__mapDeps([58,1,11,20]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(It`
             Storybook Warning:
             You have added the "BrowserAnimationsModule" to the list of "imports" in your moduleMetadata definition of your Story.
             In Storybook 7.0 we use Angular's new 'bootstrapApplication' API to mount the component to the DOM, which accepts a list of providers to set up application-wide providers.
@@ -8033,7 +8033,7 @@ export class SectorContourEditionComponent implements OnInit {
                             (clicked)="removeVertex(vertex)"
                             (mousedown)="$event.stopPropagation()"
                         >
-                            <mat-icon matListIcon>close</mat-icon>
+                            <mat-icon>close</mat-icon>
                         </ids-flat-button>
                     </div>
                 </div>
@@ -8868,15 +8868,15 @@ export class SectorsContoursListComponent {
 
                     <ids-menu #menu>
                         <ids-menu-item (clicked)="navigateToContourPanel(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>draw</mat-icon>
+                            <mat-icon class="material-symbols-outlined">draw</mat-icon>
                             {{ 'tool.sectors.contourList.editContour' | translate }}
                         </ids-menu-item>
                         <ids-menu-item (clicked)="navigateToPropertyPanel(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>settings_input_composite</mat-icon>
+                            <mat-icon class="material-symbols-outlined">settings_input_composite</mat-icon>
                             {{ 'tool.sectors.contourList.editProperties' | translate }}
                         </ids-menu-item>
                         <ids-menu-item (clicked)="openRemoveSectorDialog(sector)">
-                            <mat-icon class="material-symbols-outlined" matListIcon>delete</mat-icon>
+                            <mat-icon class="material-symbols-outlined">delete</mat-icon>
                             {{ 'tool.sectors.contourList.removeSector' | translate }}
                         </ids-menu-item>
                     </ids-menu>
@@ -9056,12 +9056,12 @@ export class TileListElemComponent {
 </span>
 <div class="flex -m-1.5">
     <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
-        <mat-icon matListIcon> more_vert </mat-icon>
+        <mat-icon> more_vert </mat-icon>
     </ids-flat-button>
 
     <ids-menu #menu>
         <ids-menu-item (clicked)="navigateToTileDetails()">
-            <mat-icon class="material-symbols-outlined" matListIcon> page_info </mat-icon>
+            <mat-icon class="material-symbols-outlined"> page_info </mat-icon>
             {{ 'common.details' | translate }}
         </ids-menu-item>
     </ids-menu>
@@ -9147,7 +9147,7 @@ export class TilesSetListElemComponent {
     <span class="block-label">{{ tilesSetValue.name }}</span>
     <div class="flex -m-1.5">
         <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" [idsMenuTriggerFor]="menu">
-            <mat-icon matListIcon> more_vert </mat-icon>
+            <mat-icon>more_vert</mat-icon>
         </ids-flat-button>
         <ids-flat-button class="ids-flat-button--size-small button-content-contrast-medium" (clicked)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
@@ -9156,12 +9156,12 @@ export class TilesSetListElemComponent {
         <ids-menu #menu>
             @if (tilesSetValue.source === 'generated') {
                 <ids-menu-item (clicked)="navigateToRandomSetAgain()">
-                    <mat-icon class="material-symbols-outlined" matListIcon> shuffle </mat-icon>
+                    <mat-icon class="material-symbols-outlined"> shuffle </mat-icon>
                     {{ 'tool.tiles.menu.generateAgain' | translate }}
                 </ids-menu-item>
             }
             <ids-menu-item (clicked)="removeTilesSet()">
-                <mat-icon class="material-symbols-outlined" matListIcon> delete </mat-icon>
+                <mat-icon class="material-symbols-outlined"> delete </mat-icon>
                 {{ 'tool.tiles.menu.removeTilesSet' | translate }}
             </ids-menu-item>
         </ids-menu>
@@ -9334,11 +9334,9 @@ export class ToolbarComponent implements OnInit {
         {{ 'toolbar.github' | translate }}
     </ids-flat-link>
 </mat-toolbar>
-`},{name:`ToolComponent`,id:`component-ToolComponent-b262ac534975e29c1ef3065eadbba0d495142465ce7087243e1c5e32a99b69c064264b1facd32a96d780bde3bffb9daa0b9ce3bca92ccc79f825684e48035114`,file:`projects/irrtirer/src/app/tool/tool.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}],selector:`app-tool`,styleUrls:[`./tool.component.scss`],styles:[],templateUrl:[`./tool.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`MatSidenavModule`,type:`module`},{name:`MatListModule`,type:`module`},{name:`IdsSideNavItem`},{name:`RouterOutlet`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`}],description:``,rawdescription:`
+`},{name:`ToolComponent`,id:`component-ToolComponent-42fad223ba43cc8d1a36a70156eddac4fd61713d63a68d8ce5e733c88b93cd8875f36988731379b50e987c310576d52bf588d78ba4d64faf15e0c953fa0e01a1`,file:`projects/irrtirer/src/app/tool/tool.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}],selector:`app-tool`,styleUrls:[`./tool.component.scss`],styles:[],templateUrl:[`./tool.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`IdsSideNav`},{name:`IdsSideNavItem`},{name:`RouterOutlet`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
@@ -9353,15 +9351,14 @@ import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
 import { ProjectImportService } from '../core/services/project-import/project-import.service';
-import { IdsSideNavItem } from 'irr-design-system';
+import { IdsSideNav, IdsSideNavItem } from 'irr-design-system';
 
 @Component({
     selector: 'app-tool',
     imports: [
         AsyncPipe,
         MatIconModule,
-        MatSidenavModule,
-        MatListModule,
+        IdsSideNav,
         IdsSideNavItem,
         RouterOutlet,
         RouterModule,
@@ -9420,109 +9417,72 @@ export class ToolComponent {
     }
 }
 `,styleUrl:`./tool.component.scss`,assetsDirs:[],styleUrlsData:[{data:`.tool-sidenav-container {
+    display: flex;
+    flex-direction: row;
     position: absolute;
     top: 55px;
     bottom: 0;
     left: 0;
     right: 0;
-
-    mat-sidenav {
-        border-right: none;
-    }
 }
 
-.mdc-list {
-    padding-top: 12px;
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-surface);
 
-    .mat-mdc-list-item {
-        height: 52px !important;
-        --mat-list-list-item-label-text-color: var(--color-contrast-high);
-
-        &.active {
-            background-color: color-mix(in srgb, var(--color-primary), transparent 90%);
-            mat-icon {
-                color: var(--color-primary);
-                font-weight: 300;
-            }
-        }
-
-        &:focus {
-            --mat-list-list-item-focus-state-layer-opacity: 0;
-        }
-
-        ::ng-deep {
-            .mat-mdc-list-item-unscoped-content {
-                display: flex;
-                mat-icon {
-                    height: 30px;
-                    width: 30px;
-                    font-size: 30px;
-                }
-            }
-        }
-    }
-}
-
-mat-sidenav-content {
-    .content {
+    .main {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 100%;
-        height: 100%;
+        height: calc(100% - 40px);
 
-        .main {
+        .canvas {
             display: flex;
-            flex-direction: row;
-            width: 100%;
-            height: calc(100% - 40px);
+            flex: 1 1 0;
+        }
 
-            .canvas {
-                display: flex;
-                flex: 1 1 0;
-            }
-
-            .panel {
-                position: relative;
-                width: 250px;
-                box-sizing: border-box;
-                border-left: 1px solid var(--color-contrast-light);
-            }
+        .panel {
+            position: relative;
+            width: 250px;
+            box-sizing: border-box;
+            border-left: 1px solid var(--color-contrast-light);
         }
     }
 }
-`,styleUrl:`./tool.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`MatSidenavModule`,type:`module`},{name:`MatListModule`,type:`module`},{name:`IdsSideNavItem`,type:`module`},{name:`RouterOutlet`,type:`module`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`},{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}]},templateData:`<mat-sidenav-container class="tool-sidenav-container">
-    <mat-sidenav mode="side" opened>
-        <mat-nav-list>
+`,styleUrl:`./tool.component.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`AsyncPipe`,type:`pipe`},{name:`MatIconModule`,type:`module`},{name:`IdsSideNav`,type:`module`},{name:`IdsSideNavItem`,type:`module`},{name:`RouterOutlet`,type:`module`},{name:`RouterModule`,type:`module`},{name:`RibbonComponent`,type:`component`},{name:`ActiveCanvasComponent`,type:`component`},{name:`ToolService`,type:`injectable`},{name:`ProjectImportService`,type:`injectable`}]},templateData:`<div class="tool-sidenav-container">
+    <ids-side-nav>
+        <nav>
             <ids-side-nav-item link="config" [label]="translate.instant('tool.nav.projectSettings')">
-                <mat-icon matListIcon class="material-symbols-outlined">flowsheet</mat-icon>
+                <mat-icon class="material-symbols-outlined">flowsheet</mat-icon>
             </ids-side-nav-item>
             <ids-side-nav-item link="tray" [label]="translate.instant('tool.nav.projectSettings')" [disabled]="tilesLinkDisabled$ | async">
-                <mat-icon matListIcon class="material-symbols-outlined">dashboard</mat-icon>
+                <mat-icon class="material-symbols-outlined">dashboard</mat-icon>
             </ids-side-nav-item>
             <ids-side-nav-item link="sectors" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async">
-                <mat-icon matListIcon class="material-symbols-outlined">view_in_ar</mat-icon>
+                <mat-icon class="material-symbols-outlined">view_in_ar</mat-icon>
             </ids-side-nav-item>
             <ids-side-nav-item
                 link="generating"
                 [label]="translate.instant('tool.nav.generation')"
                 [disabled]="mosaicGeneratingLinkDisabled$ | async"
             >
-                <mat-icon matListIcon class="material-symbols-outlined">rocket_launch</mat-icon>
+                <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
             </ids-side-nav-item>
-        </mat-nav-list>
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <div class="content">
-            <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
-            <div class="main">
-                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas" />
-                <div class="panel">
-                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
-                </div>
+        </nav>
+    </ids-side-nav>
+    <div class="content">
+        <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
+        <div class="main">
+            <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="canvas" />
+            <div class="panel">
+                <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
             </div>
         </div>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    </div>
+</div>
 `},{name:`TrayComponent`,id:`component-TrayComponent-38bdfc776584bb399eda530b1a349ecd2d5868634194b4a061530715447046c8e91121882ad86a4405ef2df29f39e86409662066b736e9cd8e21821c0525148d`,file:`projects/irrtirer/src/app/tool/tray/tray.component.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`app-tray`,styleUrls:[`./tray.component.scss`],styles:[],templateUrl:[`./tray.component.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngAfterViewInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:30,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:40,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`RouterOutlet`}],description:``,rawdescription:`
