@@ -51,7 +51,7 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
             control: {
                 type: 'select',
                 labels: {
-                    'null': 'Brak klasy',
+                    null: 'Brak klasy',
                     'ids-flat-button--size-small': 'Mały (32px)',
                 },
             },

@@ -1,5 +1,6 @@
 import { Component, ElementRef, inject, input, signal } from '@angular/core';
 import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
+import { OVERLAY_SPACING } from '../core/spacing';
 
 @Component({
     selector: 'ids-menu',
@@ -11,7 +12,7 @@ import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
             [cdkConnectedOverlayOpen]="isOpen()"
             [cdkConnectedOverlayPositions]="positions"
             [cdkConnectedOverlayPush]="true"
-            [cdkConnectedOverlayViewportMargin]="8"
+            [cdkConnectedOverlayViewportMargin]="viewportMargin"
             (overlayOutsideClick)="close()"
         >
             <div class="ids-panel ids-menu-panel" [class]="panelClass()">
@@ -19,10 +20,12 @@ import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
             </div>
         </ng-template>
     `,
-    styleUrl: './menu.css',
+    styleUrls: ['./menu.css', './../styles/shared/ids-panel.css'],
 })
 export class IdsMenu {
     public readonly panelClass = input<string>();
+
+    protected readonly viewportMargin = OVERLAY_SPACING;
 
     private readonly host = inject(ElementRef<HTMLElement>);
 

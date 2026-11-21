@@ -42,7 +42,7 @@ describe('ScrollableListComponent', () => {
     });
 
     it('should go to next page and render next items', () => {
-        const buttonNext = fixture.nativeElement.querySelectorAll('.next');
+        const buttonNext = fixture.nativeElement.querySelectorAll('.page-button button');
         expect(buttonNext.length).toBe(1);
         buttonNext[0].click();
         fixture.detectChanges();

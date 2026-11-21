@@ -17,7 +17,17 @@ import { IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanelComponent, IdsFlatButton, MatIconModule, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElemComponent, TranslatePipe, ScrollableListComponent],
+    imports: [
+        ExpandablePanelComponent,
+        IdsFlatButton,
+        MatIconModule,
+        IdsMenu,
+        IdsMenuTrigger,
+        IdsMenuItem,
+        TileListElemComponent,
+        TranslatePipe,
+        ScrollableListComponent,
+    ],
     templateUrl: './tiles-set-list-elem.component.html',
 })
 export class TilesSetListElemComponent {

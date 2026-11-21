@@ -9,10 +9,7 @@
                 {{ areTilesVisible() ? 'visibility' : 'visibility_off' }}
             </mat-icon>
         </ids-flat-button>
-        <ids-flat-button
-            class="sector-action ids-flat-button--size-small button-content-contrast-medium"
-            (clicked)="toggleTilesList()"
-        >
+        <ids-flat-button class="sector-action ids-flat-button--size-small button-content-contrast-medium" (clicked)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()">keyboard_arrow_up</mat-icon>
         </ids-flat-button>
     </div>

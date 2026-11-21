@@ -2,20 +2,11 @@
     display: none;
 }
 
-.ids-panel {
+.ids-menu-panel {
+    --ids-panel-padding: 0.25rem 0.25rem;
+
     display: flex;
     flex-direction: column;
 
-    padding: var(--ids-panel-padding, unset);
     min-width: 200px;
-    border: 1px solid var(--ids-panel-border-color);
-    border-radius: var(--ids-radius-medium);
-    background-color: color-mix(in srgb, var(--ids-panel-surface-color) 50%, transparent);
-
-    backdrop-filter: blur(6px);
-    box-shadow: 0 10px 30px color-mix(in srgb, black var(--ids-shadow-strength-faint), transparent);
-}
-
-.ids-menu-panel {
-    --ids-panel-padding: 0.25rem 0.25rem;
 }
