@@ -16,6 +16,10 @@
             color 0.2s ease,
             text-shadow 0.2s ease;
 
+        .ids-side-nav-item-icon {
+            transition: font-weight 0.2s ease;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -43,11 +47,12 @@
         }
 
         &:active:not([aria-disabled='true']) {
+            --irr-icon-font-weight: 300;
             --ids-side-nav-overlay-opacity: 0.15;
         }
 
         &.ids-side-nav-item--active {
-            --irr-icon-font-weight: 300px;
+            --irr-icon-font-weight: 300;
             color: var(--ids-text-highlight-color);
             background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
             text-shadow:

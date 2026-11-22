@@ -1,5 +1,4 @@
 import { applicationConfig, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { MatIcon } from '@angular/material/icon';
 import { Component, inject } from '@angular/core';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -39,7 +38,7 @@ const meta: Meta<IdsSideNav> = {
             providers: [provideRouter([{ path: '**', component: SideNavDestinationStory }], withHashLocation())],
         }),
         moduleMetadata({
-            imports: [IdsSideNavItem, MatIcon, SideNavDestinationStory, RouterOutlet],
+            imports: [IdsSideNavItem, SideNavDestinationStory, RouterOutlet],
         }),
     ],
 };
@@ -53,18 +52,10 @@ export const Default: Story = {
             <div class="side-nav-story">
                 <ids-side-nav>
                     <nav aria-label="Przykładowa nawigacja">
-                        <ids-side-nav-item link="/project" label="Projekt">
-                            <mat-icon class="material-symbols-outlined">folder</mat-icon>
-                        </ids-side-nav-item>
-                        <ids-side-nav-item link="/layers" label="Warstwy">
-                            <mat-icon class="material-symbols-outlined">dashboard</mat-icon>
-                        </ids-side-nav-item>
-                        <ids-side-nav-item link="/generating" label="Generowanie">
-                            <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
-                        </ids-side-nav-item>
-                        <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true">
-                            <mat-icon class="material-symbols-outlined">block</mat-icon>
-                        </ids-side-nav-item>
+                        <ids-side-nav-item link="/project" label="Projekt" icon="folder" />
+                        <ids-side-nav-item link="/layers" label="Warstwy" icon="dashboard" />
+                        <ids-side-nav-item link="/generating" label="Generowanie" icon="rocket_launch" />
+                        <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true" icon="block" />
                     </nav>
                 </ids-side-nav>
                 <router-outlet />

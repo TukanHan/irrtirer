@@ -1,5 +1,4 @@
 import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
@@ -18,7 +17,7 @@ import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
 
 @Component({
     selector: 'app-tool',
-    imports: [AsyncPipe, MatIconModule, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvasComponent],
+    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvasComponent],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
     host: { class: 'flex h-full' },

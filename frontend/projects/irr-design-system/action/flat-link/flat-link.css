@@ -5,7 +5,7 @@
     .ids-flat-action {
         --ids-button-text-shadow-idle: var(--ids-button-text-shadow-layer-1);
         --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
-
+        
         &.ids-active-link {
             --ids-flat-action-overlay-opacity: 0.15;
 

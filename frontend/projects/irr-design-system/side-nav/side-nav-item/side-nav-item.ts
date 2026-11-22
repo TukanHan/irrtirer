@@ -1,10 +1,11 @@
 import { booleanAttribute, Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IdsTooltip } from 'irr-design-system/tooltip';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
     selector: 'ids-side-nav-item',
-    imports: [RouterLink, RouterLinkActive, IdsTooltip],
+    imports: [RouterLink, RouterLinkActive, IdsTooltip, MatIcon],
     template: `
         <a
             class="ids-side-nav-item"
@@ -16,7 +17,7 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
             [idsTooltip]="label()"
             idsTooltipPosition="right"
         >
-            <ng-content />
+             <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{icon()}}</mat-icon>
         </a>
     `,
     styleUrl: './side-nav-item.css',
@@ -24,5 +25,6 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
 export class IdsSideNavItem {
     public readonly link = input.required<string>();
     public readonly label = input<string>('');
+    public readonly icon = input.required<string>();
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
 }
