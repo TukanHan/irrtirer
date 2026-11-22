@@ -1,25 +1,35 @@
 @import './_typography.css';
 
 :root {
-    --ids-accent: light-dark(#ffa825, #d58100);
-    --ids-neutral: light-dark(#2592ff, #026ad1);
-    --ids-danger: light-dark(#ff4d29, #d52400);
+    --ids-color-accent: light-dark(#ffa825, #d58100);
+    --ids-color-highlight: light-dark(#2592ff, #026ad1);
+    --ids-color-danger: light-dark(#ff4d29, #d52400);
+    --ids-color-white: #ffffff;
+    --ids-color-gray-10: #e6e6e6;
+    --ids-color-gray-20: #cccccc;
+    --ids-color-gray-30: #b3b3b3;
+    --ids-color-gray-75: #3f3f3f;
+    --ids-color-gray-80: #333333;
+    --ids-color-gray-83: #2b2b2b;
+    --ids-color-gray-87: #212121;
+    --ids-color-black: #000000;
 
-    --ids-border-color: light-dark(#c9c9c9, #353535);
+    --ids-border-color: light-dark(#c9c9c9, var(--ids-color-gray-80));
     --ids-solid-control-color: light-dark(#eeeeee, #18181b);
 
-    --ids-panel-surface-color: light-dark(#eeeeee, #222222);
-    --ids-panel-border-color: light-dark(#dbdbdb, #2b2b2b);
+    --ids-panel-surface-color: light-dark(#eeeeee, var(--ids-color-gray-87));
+    --ids-panel-border-color: light-dark(#dbdbdb, var(--ids-color-gray-83));
+    --ids-tooltip-surface-color: light-dark(var(--ids-color-gray-20), var(--ids-color-gray-75));
 
-    --ids-sidenav-surface-color: light-dark(#eeeeee, #333333);
+    --ids-sidenav-surface-color: light-dark(#eeeeee, var(--ids-color-gray-80));
 
-    --ids-element-surface-contrast-color: light-dark(#000000, #ffffff);
+    --ids-element-surface-contrast-color: light-dark(var(--ids-color-black), var(--ids-color-white));
 
-    --ids-text-muted-hover-color: light-dark(#000000, #ffffff);
-    --ids-text-muted-color: light-dark(#5d5d5d, #b8b8b8);
-    --ids-text-low-emphasis-color: light-dark(#292929, #cccccc);
-    --ids-text-color: light-dark(#383838, #e6e6e6);
-    --ids-text-highlight-color: light-dark(#212121, #2592ff);
+    --ids-text-muted-hover-color: light-dark(var(--ids-color-black), var(--ids-color-white));
+    --ids-text-muted-color: light-dark(#5d5d5d, var(--ids-color-gray-30));
+    --ids-text-low-emphasis-color: light-dark(#292929, var(--ids-color-gray-20));
+    --ids-text-color: light-dark(#383838, var(--ids-color-gray-10));
+    --ids-text-highlight-color: light-dark(#272b2f, #2592ff);
     --ids-text-danger-color: #fc2727;
 
     --ids-radius-medium: 6px;

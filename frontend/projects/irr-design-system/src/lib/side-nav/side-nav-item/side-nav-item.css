@@ -21,7 +21,7 @@
             position: absolute;
             inset: 0;
             z-index: -1;
-            background-color: var(--ids-neutral);
+            background-color: var(--ids-color-highlight);
             opacity: var(--ids-side-nav-overlay-opacity);
             pointer-events: none;
             transition:
@@ -47,11 +47,12 @@
         }
 
         &.ids-side-nav-item--active {
-            color: var(--ids-neutral);
-            background-color: color-mix(in srgb, var(--ids-neutral) 10%, transparent);
+            --irr-icon-font-weight: 300px;
+            color: var(--ids-text-highlight-color);
+            background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
             text-shadow:
-                0 0 4px color-mix(in srgb, var(--ids-neutral) var(--ids-shadow-strength-faint), transparent),
-                0 0 8px color-mix(in srgb, var(--ids-neutral) var(--ids-shadow-strength-subtle), transparent);
+                0 0 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent),
+                0 0 8px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
         }
 
         &[aria-disabled='true'] {

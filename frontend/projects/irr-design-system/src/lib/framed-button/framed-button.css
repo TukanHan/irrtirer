@@ -5,7 +5,7 @@
 }
 
 :host {
-    --ids-glow-color: var(--ids-neutral);
+    --ids-glow-color: var(--ids-color-highlight);
     --ids-button-content-color: var(--ids-text-color);
 
     .ids-framed-button {
@@ -26,17 +26,17 @@
         --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
 
         &.ids-framed-button--neutral {
-            --ids-glow-color: var(--ids-neutral);
+            --ids-glow-color: var(--ids-color-highlight);
             --ids-button-border-color: var(--ids-border-color);
         }
 
         &.ids-framed-button--accent {
-            --ids-glow-color: var(--ids-accent);
+            --ids-glow-color: var(--ids-color-accent);
             --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
         }
 
         &.ids-framed-button--danger {
-            --ids-glow-color: var(--ids-danger);
+            --ids-glow-color: var(--ids-color-danger);
             --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
             --ids-button-content-color: var(--ids-text-danger-color);
         }

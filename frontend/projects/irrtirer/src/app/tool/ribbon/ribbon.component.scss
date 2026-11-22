@@ -5,7 +5,7 @@
     align-items: center;
     height: 40px;
     position: sticky;
-    box-shadow: 0px 0px 10px 2px #000000a8;
+    box-shadow: 0 0 10px 2px color-mix(in srgb, var(--ids-color-black) var(--ids-shadow-strength-subtle), transparent);
     padding: 0 20px;
     gap: 6px;
 
