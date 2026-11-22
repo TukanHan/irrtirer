@@ -3,7 +3,8 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-tile-list-elem',

@@ -15,7 +15,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { IdsFramedButton, IdsTooltip } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
+import { IdsTooltip } from 'irr-design-system/tooltip';
 
 @Component({
     selector: 'app-sector-property-editor',

@@ -9,21 +9,12 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 import { ThemeService } from '../core/services/theme/theme.service';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { TitleCasePipe } from '@angular/common';
-import { IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger } from 'irr-design-system';
+import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
+import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-toolbar',
-    imports: [
-        MatIconModule,
-        IconSvgModuleModule,
-        MatRadioModule,
-        TranslatePipe,
-        TitleCasePipe,
-        IdsFlatButton,
-        IdsFlatLink,
-        IdsMenu,
-        IdsMenuTrigger,
-    ],
+    imports: [MatIconModule, IconSvgModuleModule, MatRadioModule, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
     templateUrl: './toolbar.component.html',
     styleUrl: './toolbar.component.scss',
 })

@@ -13,7 +13,7 @@ import { ProjectImportService } from '../../../core/services/project-import/proj
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 

@@ -1,5 +1,4 @@
 import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
-import { IdsFlatButton, IdsFramedButton } from 'irr-design-system';
 import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,6 +18,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FieldState, form, FormField, required } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-sector-contour-edition',

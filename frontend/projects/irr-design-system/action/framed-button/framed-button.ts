@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
-import { Clickable } from '../core/clickable';
+import { Clickable } from 'irr-design-system/core';
 
 export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
@@ -12,7 +12,7 @@ export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
             </span>
         </button>
     `,
-    styleUrls: ['./framed-button.css', './../styles/shared/ids-action.css'],
+    styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css'],
 })
 export class IdsFramedButton implements Clickable {
     public readonly clicked = output<MouseEvent>();

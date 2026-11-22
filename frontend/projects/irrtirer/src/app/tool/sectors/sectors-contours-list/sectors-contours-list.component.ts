@@ -1,5 +1,5 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { IdsFramedButton, IdsMenu, IdsMenuItem, IdsFlatButton, IdsMenuTrigger } from 'irr-design-system';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
@@ -13,6 +13,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-sectors-contours-list',

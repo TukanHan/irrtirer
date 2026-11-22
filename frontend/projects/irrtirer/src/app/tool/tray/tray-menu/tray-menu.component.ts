@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { TilesSetListElemComponent } from './../tiles-set-list-elem/tiles-set-list-elem.component';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-tray-menu',

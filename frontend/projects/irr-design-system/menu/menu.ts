@@ -1,6 +1,6 @@
 import { Component, ElementRef, inject, input, signal } from '@angular/core';
 import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
-import { OVERLAY_SPACING } from '../core/spacing';
+import { OVERLAY_SPACING } from 'irr-design-system/core';
 
 @Component({
     selector: 'ids-menu',
@@ -20,7 +20,7 @@ import { OVERLAY_SPACING } from '../core/spacing';
             </div>
         </ng-template>
     `,
-    styleUrls: ['./menu.css', './../styles/shared/ids-panel.css'],
+    styleUrls: ['./menu.css', '../styles/shared/ids-panel.css'],
 })
 export class IdsMenu {
     public readonly panelClass = input<string>();

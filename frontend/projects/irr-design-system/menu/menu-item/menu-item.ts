@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
-import { Clickable } from '../../core/clickable';
+import { Clickable } from 'irr-design-system/core';
 
 @Component({
     selector: 'ids-menu-item',

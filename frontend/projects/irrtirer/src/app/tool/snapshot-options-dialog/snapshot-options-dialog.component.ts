@@ -5,7 +5,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SnapshotOptions } from './snapshot-options.interface';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { IdsFlatButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-snapshot-options-dialog',

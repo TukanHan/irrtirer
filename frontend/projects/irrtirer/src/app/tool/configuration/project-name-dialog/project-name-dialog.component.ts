@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/materia
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsFlatButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system/action';
 
 export interface ProjectNameDialogData {
     defaultName: string;

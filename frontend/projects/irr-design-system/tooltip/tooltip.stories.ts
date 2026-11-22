@@ -1,7 +1,6 @@
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
-import { IdsFlatButton } from '../flat-button/flat-button';
+import { IdsFlatButton } from 'irr-design-system/action';
 import { IdsTooltip, type IdsTooltipPosition } from './tooltip.directive';
-import { IdsTooltipPanel } from './tooltip-panel';
 
 type TooltipPlaygroundArgs = {
     idsTooltip: string;
@@ -15,7 +14,7 @@ const meta: Meta<TooltipPlaygroundArgs> = {
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
-            imports: [IdsFlatButton, IdsTooltip, IdsTooltipPanel],
+            imports: [IdsFlatButton, IdsTooltip],
         }),
     ],
     argTypes: {

@@ -13,7 +13,8 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
 import { ScrollableListComponent } from '../../../shared/scrollable-list/scrollable-list.component';
-import { IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-tiles-set-list-elem',

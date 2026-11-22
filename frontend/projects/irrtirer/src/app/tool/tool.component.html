@@ -9,11 +9,7 @@
         <ids-side-nav-item link="sectors" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async">
             <mat-icon class="material-symbols-outlined">view_in_ar</mat-icon>
         </ids-side-nav-item>
-        <ids-side-nav-item
-            link="generating"
-            [label]="translate.instant('tool.nav.generation')"
-            [disabled]="mosaicGeneratingLinkDisabled$ | async"
-        >
+        <ids-side-nav-item link="generating" [label]="translate.instant('tool.nav.generation')" [disabled]="mosaicGeneratingLinkDisabled$ | async">
             <mat-icon class="material-symbols-outlined">rocket_launch</mat-icon>
         </ids-side-nav-item>
     </nav>

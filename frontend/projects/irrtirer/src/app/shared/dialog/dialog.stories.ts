@@ -3,7 +3,7 @@ import { DialogComponent } from './dialog.component';
 import { DialogData } from './dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, inject, input } from '@angular/core';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-dialog-host',

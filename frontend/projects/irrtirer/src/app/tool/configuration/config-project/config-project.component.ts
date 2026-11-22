@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 import { ConfigurationService } from '../configuration.service';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;

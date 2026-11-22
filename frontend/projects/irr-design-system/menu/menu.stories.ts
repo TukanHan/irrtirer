@@ -1,5 +1,5 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { IdsFramedButton } from '../framed-button/framed-button';
+import { IdsFramedButton } from 'irr-design-system/action';
 import { IdsMenuTrigger } from './menu-trigger';
 import { IdsMenu } from './menu';
 import { IdsMenuItem } from './menu-item/menu-item';

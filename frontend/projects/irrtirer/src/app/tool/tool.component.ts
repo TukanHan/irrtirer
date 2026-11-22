@@ -14,20 +14,11 @@ import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
 import { ProjectImportService } from '../core/services/project-import/project-import.service';
-import { IdsSideNav, IdsSideNavItem } from 'irr-design-system';
+import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
 
 @Component({
     selector: 'app-tool',
-    imports: [
-        AsyncPipe,
-        MatIconModule,
-        IdsSideNav,
-        IdsSideNavItem,
-        RouterOutlet,
-        RouterModule,
-        RibbonComponent,
-        ActiveCanvasComponent,
-    ],
+    imports: [AsyncPipe, MatIconModule, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvasComponent],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
     host: { class: 'flex h-full' },

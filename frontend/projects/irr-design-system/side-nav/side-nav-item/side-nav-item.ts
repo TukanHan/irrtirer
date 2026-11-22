@@ -1,6 +1,6 @@
 import { booleanAttribute, Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { IdsTooltip } from '../../tooltip/tooltip.directive';
+import { IdsTooltip } from 'irr-design-system/tooltip';
 
 @Component({
     selector: 'ids-side-nav-item',

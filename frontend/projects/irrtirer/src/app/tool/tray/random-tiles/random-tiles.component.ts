@@ -17,7 +17,7 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 interface RandomTileSetModel {
     name: string;

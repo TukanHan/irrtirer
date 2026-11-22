@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { ExpandablePanelComponent } from '../../../../shared/expandable-panel/expandable-panel.component';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ScrollableListComponent } from '../../../../shared/scrollable-list/scrollable-list.component';
-import { IdsFlatButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-sector-list-elem',

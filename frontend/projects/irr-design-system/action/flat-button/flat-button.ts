@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
-import { Clickable } from '../core/clickable';
+import { Clickable } from 'irr-design-system/core';
 
 export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
 
@@ -12,7 +12,7 @@ export type FlatButtonVariant = 'accent' | 'neutral' | 'danger';
             </span>
         </button>
     `,
-    styleUrls: ['./flat-button.css', './../styles/shared/ids-flat-action.css', './../styles/shared/ids-action.css'],
+    styleUrls: ['./flat-button.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
 })
 export class IdsFlatButton implements Clickable {
     public readonly clicked = output<MouseEvent>();

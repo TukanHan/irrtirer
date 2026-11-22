@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { IdsFlatButton } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system/action';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { DialogData } from './dialog-data.interface';
 import { TranslateService } from '@ngx-translate/core';

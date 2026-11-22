@@ -6,7 +6,7 @@ import { TileModel } from '../../../core/models/mosaic-project.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
 import { FormsModule } from '@angular/forms';
-import { IdsFramedButton } from 'irr-design-system';
+import { IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-tile-detail',

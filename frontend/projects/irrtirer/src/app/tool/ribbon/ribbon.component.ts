@@ -4,7 +4,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { SizeDisplayPipe } from '../../core/pipes/size-display.pipe';
 import { Size } from '../../core/models/math/size.interface';
 import { TranslateService } from '@ngx-translate/core';
-import { IdsFlatButton, IdsTooltip } from 'irr-design-system';
+import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsTooltip } from 'irr-design-system/tooltip';
 
 @Component({
     selector: 'app-ribbon',

@@ -22,7 +22,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </a>
         }
     `,
-    styleUrls: ['./flat-link.css', './../styles/shared/ids-flat-action.css', './../styles/shared/ids-action.css'],
+    styleUrls: ['./flat-link.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
 })
 export class IdsFlatLink {
     public readonly link = input.required<string>();
