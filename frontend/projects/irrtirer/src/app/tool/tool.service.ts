@@ -20,7 +20,7 @@ export class ToolService {
 
     private readonly themeMode = toSignal<ThemeMode>(inject(ThemeService).theme$);
 
-    public readonly canvasGridColor = computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#b3b3b3'));
+    public readonly canvasGridColor = computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#d0d0d0'));
 
     public readonly backgroundColor = computed<string>(() => (this.themeMode() === 'dark' ? '#1e2023' : '#ffffff'));
 

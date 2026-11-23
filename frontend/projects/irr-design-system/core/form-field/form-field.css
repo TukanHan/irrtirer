@@ -1,0 +1,66 @@
+:host {
+    .ids-form-field-label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        pointer-events: none;
+
+        &[data-required]::after {
+            content: '*';
+            margin-inline-start: 0.125rem;
+        }
+    }
+
+    .ids-form-field-frame {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        height: calc(1.5rem + 2 * 0.5rem);
+
+        border: 1px solid var(--ids-form-control-border-color);
+        box-shadow: var(--ids-form-field-shadow);
+        background-color: var(--ids-form-control-surface-color);
+        border-radius: var(--ids-radius-medium);
+        padding: 0.5rem 1rem;
+        transition: box-shadow 0.25s ease;
+
+        .ids-form-field-placeholder {
+            opacity: 0.5;
+            pointer-events: none;
+            text-wrap: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .ids-form-field-control {
+            display: grid;
+            flex: 1 1 auto;
+            min-width: 0;
+
+            > * {
+                grid-area: 1 / 1;
+            }
+        }
+    }
+}
+
+:host:has(.input:disabled) {
+    .ids-form-field-frame {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+:host:has(.input:hover:not(:disabled):not(:focus)) .ids-form-field-frame {
+    --ids-form-field-shadow:
+        0 0 0 1px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-strong), transparent),
+        0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent);
+}
+
+:host:has(.input:focus:not(:disabled)) .ids-form-field-frame {
+    --ids-form-field-shadow:
+        0 0 0 1px var(--ids-color-highlight),
+        0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
+}

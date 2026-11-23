@@ -1,2 +1,2 @@
-export * from './clickable';
-export * from './spacing';
+export * from './interfaces/clickable';
+export * from './consts/spacing';

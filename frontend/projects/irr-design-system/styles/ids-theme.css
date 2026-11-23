@@ -17,6 +17,9 @@
     --ids-border-color: light-dark(#c9c9c9, var(--ids-color-gray-80));
     --ids-solid-control-color: light-dark(#eeeeee, #18181b);
 
+    --ids-form-control-border-color: light-dark(var(--ids-color-gray-20), var(--ids-color-gray-75));
+    --ids-form-control-surface-color: light-dark(var(--ids-color-gray-10), var(--ids-color-gray-80));
+
     --ids-panel-surface-color: light-dark(#eeeeee, var(--ids-color-gray-87));
     --ids-panel-border-color: light-dark(#dbdbdb, var(--ids-color-gray-83));
     --ids-tooltip-surface-color: light-dark(var(--ids-color-gray-20), var(--ids-color-gray-75));
