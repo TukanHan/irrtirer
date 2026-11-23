@@ -17,8 +17,17 @@ import { Component, input } from '@angular/core';
             </div>
             <ng-content select="[idsSuffix]" />
         </div>
+
+        @if (showError()) {
+            <div class="ids-form-field-errors">
+                <ng-content select="ids-error" />
+            </div>
+        }
     `,
     styleUrl: './form-field.css',
+    host: {
+        '[class.ids-text-input--invalid]': 'showError()',
+    }
 })
 export class IdsFormField {
     public readonly label = input.required<string>();
@@ -26,4 +35,5 @@ export class IdsFormField {
     public readonly placeholder = input.required<string>();
     public readonly id = input.required<string>();
     public readonly isEmpty = input.required<boolean>();
+    public readonly showError = input.required<boolean>();
 }

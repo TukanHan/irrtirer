@@ -1,0 +1,6 @@
+:host {
+    display: block;
+    color: var(--ids-text-danger-color);
+    font-size: 12px;
+    font-weight: 500;
+}

@@ -3,7 +3,7 @@
 :root {
     --ids-color-accent: light-dark(#ffa825, #d58100);
     --ids-color-highlight: light-dark(#2592ff, #026ad1);
-    --ids-color-danger: light-dark(#ff4d29, #d52400);
+    --ids-color-danger: light-dark(#ff302b, #ff302b);
     --ids-color-white: #ffffff;
     --ids-color-gray-10: #e6e6e6;
     --ids-color-gray-20: #cccccc;

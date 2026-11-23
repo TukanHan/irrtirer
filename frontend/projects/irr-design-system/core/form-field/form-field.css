@@ -26,23 +26,27 @@
         padding: 0.5rem 1rem;
         transition: box-shadow 0.25s ease;
 
-        .ids-form-field-placeholder {
-            opacity: 0.5;
-            pointer-events: none;
-            text-wrap: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
         .ids-form-field-control {
             display: grid;
             flex: 1 1 auto;
             min-width: 0;
 
+            .ids-form-field-placeholder {
+                opacity: 0.5;
+                pointer-events: none;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
             > * {
                 grid-area: 1 / 1;
             }
         }
+    }
+
+    .ids-form-field-errors {
+        margin-top: 8px;
     }
 }
 
@@ -53,14 +57,33 @@
     }
 }
 
-:host:has(.input:hover:not(:disabled):not(:focus)) .ids-form-field-frame {
+:host(.ids-text-input--invalid) {
     --ids-form-field-shadow:
-        0 0 0 1px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-strong), transparent),
-        0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent);
+        0 0 0 1px color-mix(in srgb, var(--ids-color-danger) 60%, transparent),
+        0 2px 6px 2px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-faint), transparent);
+
+    :has(.input:hover:not(:disabled):not(:focus)) {
+        --ids-form-field-shadow:
+            0 0 0 1px color-mix(in srgb, var(--ids-color-danger) 80%, transparent),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-faint), transparent);
+    }
+    :has(.input:focus:not(:disabled)) {
+        --ids-form-field-shadow:
+            0 0 0 1px var(--ids-color-danger),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-subtle), transparent);
+    }
 }
 
-:host:has(.input:focus:not(:disabled)) .ids-form-field-frame {
-    --ids-form-field-shadow:
-        0 0 0 1px var(--ids-color-highlight),
-        0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
+:host:not(.ids-text-input--invalid) {
+    :has(.input:hover:not(:disabled):not(:focus)) {
+        --ids-form-field-shadow:
+            0 0 0 1px color-mix(in srgb, var(--ids-color-highlight) 60%, transparent),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent);
+    }
+
+    :has(.input:focus:not(:disabled)) {
+        --ids-form-field-shadow:
+            0 0 0 1px var(--ids-color-highlight),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
+    }
 }
