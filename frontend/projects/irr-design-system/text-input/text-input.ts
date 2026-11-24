@@ -1,7 +1,7 @@
 import { Component, input, model, output } from '@angular/core';
-import { IdsFormField } from '../form-field/form-field';
 import { FormValueControl } from '@angular/forms/signals';
-import { IdentityGenerator, injectControlId } from '../tools/identity-generation/identity-generator';
+import { IdentityGenerator, injectControlId } from 'irr-design-system/core';
+import { IdsFormField } from 'irr-design-system/form';
 
 @Component({
     selector: 'ids-text-input',

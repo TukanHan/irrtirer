@@ -27,7 +27,7 @@ import { Component, input } from '@angular/core';
     styleUrl: './form-field.css',
     host: {
         '[class.ids-text-input--invalid]': 'showError()',
-    }
+    },
 })
 export class IdsFormField {
     public readonly label = input.required<string>();

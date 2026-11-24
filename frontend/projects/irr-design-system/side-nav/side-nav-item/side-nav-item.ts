@@ -17,7 +17,7 @@ import { MatIcon } from '@angular/material/icon';
             [idsTooltip]="label()"
             idsTooltipPosition="right"
         >
-             <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{icon()}}</mat-icon>
+            <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{ icon() }}</mat-icon>
         </a>
     `,
     styleUrl: './side-nav-item.css',

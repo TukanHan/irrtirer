@@ -1,10 +1,10 @@
 import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
-import { IdsFlatButton } from 'irr-design-system/action';
-import { IdsTextInput } from './text-input';
 import { Component, effect, input, signal } from '@angular/core';
 import { form, FormField, required } from '@angular/forms/signals';
-import { IdsError } from '../form-field/ids-error/ids-error';
+import { IdsError } from 'irr-design-system/form';
+import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsTextInput } from './text-input';
 
 type TextInputStoryArgs = IdsTextInput & {
     showPrefix: boolean;
@@ -28,7 +28,7 @@ type TextInputStoryArgs = IdsTextInput & {
                 @for (err of form.value().errors(); track err.kind) {
                     {{ err.message }}
                 }
-            </ids-error> 
+            </ids-error>
         </ids-text-input>
     `,
 })
