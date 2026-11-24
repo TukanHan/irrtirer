@@ -14,6 +14,12 @@ The root `CLAUDE.md` only imports the `AGENTS.md` files - edit `AGENTS.md`, neve
 - Markdown documentation: English.
 - Storybook: descriptions and docs in English; sample content in stories language-agnostic (lorem ipsum, made-up names).
 
+## Code comments
+
+- Prefer self-explanatory code over comments: extract a well-named method or variable instead of describing what code does.
+- Comment only the non-obvious _why_ (workaround, external constraint, link to an issue).
+- Doc comments (JSDoc/TSDoc, XML doc comments) only where they add information the signature does not.
+
 ## Writing docs and instructions
 
 - Minimal: write only what is necessary, no filler.
