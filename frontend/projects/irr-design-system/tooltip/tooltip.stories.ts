@@ -1,6 +1,6 @@
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsFlatButton } from 'irr-design-system/action';
-import { IdsTooltip, type IdsTooltipPosition } from './tooltip.directive';
+import { IdsTooltip, type IdsTooltipPosition } from './tooltip';
 
 type TooltipPlaygroundArgs = {
     idsTooltip: string;

@@ -2,7 +2,7 @@
  * Public API Surface of active-canvas
  */
 
-export * from './lib/active-canvas.component';
+export * from './lib/active-canvas';
 
 //Models
 export * from './lib/models/canvas/viewport.model';

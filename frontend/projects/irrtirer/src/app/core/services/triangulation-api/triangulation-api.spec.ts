@@ -2,19 +2,19 @@ import { TestBed } from '@angular/core/testing';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { DataService } from './data.service';
+import { TriangulationApi } from './triangulation-api';
 
-describe('DataService', () => {
-    let service: DataService;
+describe('TriangulationApi', () => {
+    let triangulationApi: TriangulationApi;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [provideHttpClient(), provideHttpClientTesting()],
         });
-        service = TestBed.inject(DataService);
+        triangulationApi = TestBed.inject(TriangulationApi);
     });
 
     it('should be created', () => {
-        expect(service).toBeTruthy();
+        expect(triangulationApi).toBeTruthy();
     });
 });

@@ -6,7 +6,7 @@ import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
 import { BehaviorSubject } from 'rxjs';
-import { MosaicSignalRService } from './mosaic-signal-r.service';
+import { MosaicGenerationHub } from './mosaic-generation-hub';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationService } from './mosaic-generation.service';
 import { MosaicHierarchyComponent } from './mosaic-hierarchy/mosaic-hierarchy.component';
@@ -88,7 +88,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private readonly snackBar = inject(MatSnackBar);
 
-    private readonly signalRService = inject(MosaicSignalRService);
+    private readonly generationHub = inject(MosaicGenerationHub);
 
     private readonly service = inject(MosaicGenerationService);
 
@@ -97,7 +97,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
         this.subscribeOnSectorsMeshReceived();
         this.subscribeOnMeshGenerationFinished();
         this.subscribeOnMeshVisibilityChange();
-        this.destroyRef.onDestroy(() => this.signalRService.stopConnection());
+        this.destroyRef.onDestroy(() => this.generationHub.stopConnection());
     }
 
     private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
@@ -117,7 +117,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private initGeneration(base64Image: string, imageSize: Size): void {
-        this.signalRService
+        this.generationHub
             .startConnection()
             .then(() => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
@@ -128,7 +128,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
                 this.progressState.set({ type: 'init', message: this.translate.instant('tool.generation.message.sectorsMeshGeneration') });
 
-                this.signalRService
+                this.generationHub
                     .initMosaicTriangulation(initMosaicGenerationRequest)
                     .catch(() => this.setError(this.translate.instant('tool.generation.message.errorOnSectorsMeshGeneration')));
             })
@@ -136,7 +136,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnGenerationProgress(): void {
-        this.signalRService.sectionGenerated$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((sectionGenerationResult) => {
+        this.generationHub.sectionGenerated$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((sectionGenerationResult) => {
             const sectionTileObjects: GeneratedTileModel[] = [];
 
             for (const tileTransform of sectionGenerationResult.tilesTransforms) {
@@ -161,7 +161,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private subscribeOnSectorsMeshReceived(): void {
-        this.signalRService.sectionsMeshReceived$
+        this.generationHub.sectionsMeshReceived$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
@@ -174,14 +174,14 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
                     vertices: tile.vertices,
                 }));
 
-                this.signalRService
+                this.generationHub
                     .startLongRunningTask(tiles)
                     .catch(() => this.showMessage(this.translate.instant('tool.generation.message.errorOnStartingMosaicGeneration')));
             });
     }
 
     private subscribeOnMeshGenerationFinished(): void {
-        this.signalRService.generationFinished$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
+        this.generationHub.generationFinished$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe(() => {
             this.progressState.set(null);
             this.showMessage(this.translate.instant('tool.generation.message.generationCompleted'));
         });

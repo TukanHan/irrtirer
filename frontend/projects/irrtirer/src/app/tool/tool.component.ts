@@ -7,7 +7,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { RibbonComponent } from './ribbon/ribbon.component';
 import { ToolService } from './tool.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ActiveCanvasComponent } from '../../../../active-canvas/src/public-api';
+import { ActiveCanvas } from '../../../../active-canvas/src/public-api';
 import { ToolView } from './tool-view.interface';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
@@ -17,7 +17,7 @@ import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
 
 @Component({
     selector: 'app-tool',
-    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvasComponent],
+    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvas],
     providers: [ToolService, ProjectImportService],
     templateUrl: './tool.component.html',
     host: { class: 'flex h-full' },
@@ -46,7 +46,7 @@ export class ToolComponent {
         map((sectors) => !sectors.length),
     );
 
-    protected readonly activeCanvas = viewChild.required<ActiveCanvasComponent>('activeCanvas');
+    protected readonly activeCanvas = viewChild.required<ActiveCanvas>('activeCanvas');
 
     protected readonly viewportSize = computed(() => this.activeCanvas().viewport().cmSize);
 

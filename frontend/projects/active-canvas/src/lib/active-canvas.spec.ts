@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActiveCanvasComponent } from './active-canvas.component';
+import { ActiveCanvas } from './active-canvas';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('ActiveCanvasComponent', () => {
-    let component: ActiveCanvasComponent;
-    let fixture: ComponentFixture<ActiveCanvasComponent>;
+describe('ActiveCanvas', () => {
+    let component: ActiveCanvas;
+    let fixture: ComponentFixture<ActiveCanvas>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ActiveCanvasComponent],
+            imports: [ActiveCanvas],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ActiveCanvasComponent);
+        fixture = TestBed.createComponent(ActiveCanvas);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

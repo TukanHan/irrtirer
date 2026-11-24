@@ -6,7 +6,7 @@ import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosai
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
-import { DataService } from '../../../core/services/data/data.service';
+import { TriangulationApi } from '../../../core/services/triangulation-api/triangulation-api';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -39,7 +39,7 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     private readonly store = inject(Store);
 
-    private readonly dataService = inject(DataService);
+    private readonly triangulationApi = inject(TriangulationApi);
 
     private readonly snackBar = inject(MatSnackBar);
 
@@ -121,7 +121,7 @@ export class SectorPropertyEditorComponent implements OnInit {
             sectionMinAngle: this.form.sectionMinAngle().value(),
         };
 
-        this.dataService
+        this.triangulationApi
             .getPolygonTriangulationMesh(sectorTriangulationRequestData)
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe({

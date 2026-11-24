@@ -27,10 +27,10 @@ import { CanvasToImageOptions } from './models/canvas/canvas-to-image-options';
 
 @Component({
     selector: 'ac-active-canvas',
-    templateUrl: 'active-canvas.component.html',
-    styleUrl: 'active-canvas.component.scss',
+    templateUrl: 'active-canvas.html',
+    styleUrl: 'active-canvas.scss',
 })
-export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
+export class ActiveCanvas implements IActiveCanvas, OnInit, OnDestroy {
     public readonly clicked = output<IVector>();
 
     public readonly options = model<CanvasOptions>({});
@@ -212,8 +212,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
     public redraw(): void {
         const canvasContext = this.ctx();
         const viewport = this._viewport();
-        ActiveCanvasComponent.drawBackground(canvasContext, viewport.pxSize, this.currentOptions().backgroundColor);
-        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, viewport);
+        ActiveCanvas.drawBackground(canvasContext, viewport.pxSize, this.currentOptions().backgroundColor);
+        ActiveCanvas.drawObjects(canvasContext, this.canvasObjects, viewport);
 
         this.cd.markForCheck();
     }
@@ -232,8 +232,8 @@ export class ActiveCanvasComponent implements IActiveCanvas, OnInit, OnDestroy {
         const canvasContext = offscreenCanvas.getContext('2d')!;
 
         const backgroundColor = options?.backgroundColor ?? this.currentOptions().backgroundColor;
-        ActiveCanvasComponent.drawBackground(canvasContext, pxSize, backgroundColor);
-        ActiveCanvasComponent.drawObjects(canvasContext, this.canvasObjects, snapshotViewport);
+        ActiveCanvas.drawBackground(canvasContext, pxSize, backgroundColor);
+        ActiveCanvas.drawObjects(canvasContext, this.canvasObjects, snapshotViewport);
 
         return offscreenCanvas.convertToBlob({ type: 'image/png' });
     }

@@ -10,7 +10,7 @@ import {
 } from '../../core/models/api/api.models';
 
 @Injectable({ providedIn: 'root' })
-export class MosaicSignalRService {
+export class MosaicGenerationHub {
     private readonly hubConnection: signalR.HubConnection;
 
     private readonly sectionsMeshReceivedSub = new Subject<SectorTriangulationMeshPartsModel[]>();

@@ -7,7 +7,7 @@ import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '.
 @Injectable({
     providedIn: 'root',
 })
-export class DataService {
+export class TriangulationApi {
     private readonly http = inject(HttpClient);
 
     public getPolygonTriangulationMesh(sectorTriangulationData: SectorTriangulationRequestModel): Observable<SectorTriangulationMeshModel> {
