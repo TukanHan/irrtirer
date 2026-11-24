@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{$n as t,Hr as n,Ir as r,R as i,Wn as a,er as o,h as s,j as c,l,m as u}from"./core-CEfZiV_p.js";import{r as d,t as f}from"./rxjs-interop-BQElpU-U.js";import{i as p,r as m}from"./skip-D6PVup-l.js";import{a as h,c as g,i as _,l as v,n as y,o as b,r as x,s as S,t as C}from"./_router_module-chunk-S52QQMg8.js";import{a as w,c as T,o as E}from"./iframe-CcuyKnyp.js";import{n as D,t as O}from"./icon-D3vzWDKc.js";import{n as k,t as A}from"./tooltip.directive-nfbF2ReG.js";var j;function M(){return(M=e((()=>{j=`
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{$n as t,Hr as n,Ir as r,R as i,Wn as a,er as o,h as s,j as c,l,m as u}from"./core-CEfZiV_p.js";import{r as d,t as f}from"./rxjs-interop-BQElpU-U.js";import{i as p,r as m}from"./skip-D6PVup-l.js";import{a as h,c as g,i as _,l as v,n as y,o as b,r as x,s as S,t as C}from"./_router_module-chunk-C6nz5Me2.js";import{a as w,c as T,o as E}from"./iframe-B37EbMy4.js";import{n as D,t as O}from"./icon-DLwdSA2D.js";import{n as k,t as A}from"./tooltip.directive-nfbF2ReG.js";var j;function M(){return(M=e((()=>{j=`
         :host {
             display: flex;
             width: 100%;
@@ -16,7 +16,7 @@ import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{$n as t,Hr as n,Ir as 
             [idsTooltip]="label()"
             idsTooltipPosition="right"
         >
-             <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{icon()}}</mat-icon>
+            <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{ icon() }}</mat-icon>
         </a>
     `,styles:[L]})],z)})))()}var V,H,U,W;function G(){return(G=e((()=>{n(),M(),w(),u(),v(),x(),f(),p(),t(),I(),B(),V=class{router=a(S);currentUrl=d(this.router.events.pipe(m(e=>e instanceof b),o(e=>e.urlAfterRedirects)),{initialValue:this.router.url})},V=r([c({template:`{{ currentUrl() }}`,styles:[j]})],V),H={title:`Design System/Side Nav`,component:F,tags:[`autodocs`],decorators:[E({providers:[_([{path:`**`,component:V}],h())]}),T({imports:[z,V,g]})]},U={render:()=>({template:`
             <div class="side-nav-story">
