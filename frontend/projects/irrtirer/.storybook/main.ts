@@ -1,10 +1,5 @@
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import type { StorybookConfig } from '@analogjs/storybook-angular';
 import { mergeConfig } from 'vite';
-
-const storybookDirectory = dirname(fileURLToPath(import.meta.url));
-const designSystemDirectory = resolve(storybookDirectory, '../../irr-design-system');
 
 const config: StorybookConfig = {
     stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)', '../../irr-design-system/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -14,19 +9,6 @@ const config: StorybookConfig = {
         options: {},
     },
     staticDirs: [{ from: '../src/assets/i18n', to: 'assets/i18n' }],
-    viteFinal: async (viteConfig) =>
-        mergeConfig(viteConfig, {
-            resolve: {
-                alias: {
-                    'irr-design-system/core': resolve(designSystemDirectory, 'core/public-api.ts'),
-                    'irr-design-system/action': resolve(designSystemDirectory, 'action/public-api.ts'),
-                    'irr-design-system/tooltip': resolve(designSystemDirectory, 'tooltip/public-api.ts'),
-                    'irr-design-system/form': resolve(designSystemDirectory, 'form/public-api.ts'),
-                    'irr-design-system/text-input': resolve(designSystemDirectory, 'text-input/public-api.ts'),
-                    'irr-design-system/number-input': resolve(designSystemDirectory, 'number-input/public-api.ts'),
-                    'irr-design-system': resolve(designSystemDirectory, 'src/public-api.ts'),
-                },
-            },
-        }),
+    viteFinal: async (viteConfig) => mergeConfig(viteConfig, { resolve: { tsconfigPaths: true } }),
 };
 export default config;
