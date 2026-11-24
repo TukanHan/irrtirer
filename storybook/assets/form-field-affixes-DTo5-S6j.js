@@ -19,4 +19,4 @@ import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{Hr as t,Ir as n,P as r
                 <ng-content select="ids-error" />
             </div>
         }
-    `,host:{"[class.ids-text-input--invalid]":`showError()`},styles:[y]})],x)})))()}export{p as a,v as i,S as n,m as o,_ as r,f as s,x as t};
+    `,host:{"[class.ids-text-input--invalid]":`showError()`},styles:[y]})],x)})))()}var C,w;function T(){return(T=e((()=>{t(),l(),C=class{},C=n([r({selector:`[idsPrefix]`})],C),w=class{},w=n([r({selector:`[idsSuffix]`})],w)})))()}export{S as a,p as c,x as i,m as l,w as n,_ as o,T as r,v as s,C as t,f as u};
