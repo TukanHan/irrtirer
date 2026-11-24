@@ -7,7 +7,7 @@ import { selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.
 import { Observable } from 'rxjs';
 import { TileModel, TilesSet } from '../../core/models/mosaic-project.model';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { TrayService } from './tray.service';
+import { TileTreemap } from './tile-treemap';
 import { ToolService } from '../tool.service';
 
 @Component({
@@ -55,7 +55,7 @@ export class TrayComponent implements ToolView, AfterViewInit {
         this.activeCanvas.removeObjects();
 
         if (tiles.length) {
-            TrayService.drawTiles(tiles, this.activeCanvas);
+            TileTreemap.drawTiles(tiles, this.activeCanvas);
         }
 
         this.activeCanvas.redraw();

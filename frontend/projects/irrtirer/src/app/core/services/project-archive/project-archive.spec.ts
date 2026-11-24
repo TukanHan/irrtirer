@@ -1,18 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-import { ThemeService } from './theme.service';
+import { ProjectArchive } from './project-archive';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { provideMockStore } from '@ngrx/store/testing';
 
-const initialState = {};
-
-describe('ThemeService', () => {
-    let service: ThemeService;
+describe('ProjectArchive', () => {
+    let service: ProjectArchive;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [provideMockStore({ initialState })],
+            providers: [provideMockStore({}), ProjectArchive],
         });
-        service = TestBed.inject(ThemeService);
+        service = TestBed.inject(ProjectArchive);
     });
 
     it('should be created', () => {

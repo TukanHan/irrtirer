@@ -7,7 +7,7 @@ import { Viewport } from '../../../../active-canvas/src/public-api';
 import { MosaicConfig } from '../core/models/mosaic-project.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ThemeMode } from '../core/models/user-preferences.interface';
-import { ThemeService } from '../core/services/theme/theme.service';
+import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
 import { MatDialog } from '@angular/material/dialog';
 import { SnapshotOptionsDialogComponent } from './snapshot-options-dialog/snapshot-options-dialog.component';
 import { SnapshotOptions } from './snapshot-options-dialog/snapshot-options.interface';
@@ -18,7 +18,7 @@ import { saveAs } from '../core/helpers/download-helper';
 export class ToolService {
     private readonly matDialog = inject(MatDialog);
 
-    private readonly themeMode = toSignal<ThemeMode>(inject(ThemeService).theme$);
+    private readonly themeMode = toSignal<ThemeMode>(inject(ThemeSwitcher).theme$);
 
     public readonly canvasGridColor = computed<string>(() => (this.themeMode() === 'dark' ? '#3f3f3f' : '#d0d0d0'));
 

@@ -31,7 +31,7 @@ interface NodeLeaf extends Node {
 }
 
 @Injectable()
-export class TrayService {
+export class TileTreemap {
     public static drawTiles(tiles: TileModel[], activeCanvas: IActiveCanvas): void {
         const tilesWithSize: TileWithSize[] = this.sortAndMapTilesBySize(tiles);
         const tree = this.getTreeMapChartArray(tilesWithSize);

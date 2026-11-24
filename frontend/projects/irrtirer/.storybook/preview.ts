@@ -5,7 +5,7 @@ import docJson from '../documentation.json';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideHttpClient } from '@angular/common/http';
-import { StorybookI18nService } from './storybook-I18n.service';
+import { StorybookLanguageSync } from './storybook-language-sync';
 import { inject, provideAppInitializer } from '@angular/core';
 import '../src/styles.scss';
 
@@ -73,9 +73,9 @@ const preview: Preview = {
                     fallbackLang: 'pl',
                     lang: 'pl',
                 }),
-                StorybookI18nService,
+                StorybookLanguageSync,
                 provideAppInitializer(() => {
-                    inject(StorybookI18nService);
+                    inject(StorybookLanguageSync);
                     const event = new CustomEvent('language-changed', { detail: { lang: CURRENT_LANG } });
                     window.dispatchEvent(event);
                 }),

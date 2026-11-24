@@ -1,16 +1,18 @@
 import { TestBed } from '@angular/core/testing';
-import { ProjectImportService } from './project-import.service';
+import { ThemeSwitcher } from './theme-switcher';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { provideMockStore } from '@ngrx/store/testing';
 
-describe('ProjectImportService', () => {
-    let service: ProjectImportService;
+const initialState = {};
+
+describe('ThemeSwitcher', () => {
+    let service: ThemeSwitcher;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [provideMockStore({}), ProjectImportService],
+            providers: [provideMockStore({ initialState })],
         });
-        service = TestBed.inject(ProjectImportService);
+        service = TestBed.inject(ThemeSwitcher);
     });
 
     it('should be created', () => {

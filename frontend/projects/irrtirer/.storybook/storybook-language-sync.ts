@@ -2,7 +2,7 @@ import { Injectable, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable()
-export class StorybookI18nService {
+export class StorybookLanguageSync {
     private readonly translate = inject(TranslateService);
 
     constructor() {

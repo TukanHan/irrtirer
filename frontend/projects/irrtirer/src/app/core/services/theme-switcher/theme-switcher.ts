@@ -8,7 +8,7 @@ import { UserPreferencesActions } from '../../state/user-preferences/user-prefer
 @Injectable({
     providedIn: 'root',
 })
-export class ThemeService {
+export class ThemeSwitcher {
     private readonly store = inject(Store);
 
     private readonly theme = new BehaviorSubject<ThemeMode>('dark');

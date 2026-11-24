@@ -4,7 +4,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { TranslateService } from '@ngx-translate/core';
 import { Store } from '@ngrx/store';
 import { selectUserLang } from './core/state/user-preferences/user-preferences.selectors';
-import { ThemeService } from './core/services/theme/theme.service';
+import { ThemeSwitcher } from './core/services/theme-switcher/theme-switcher';
 
 @Component({
     selector: 'app-root',
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
 
     protected readonly translate = inject(TranslateService);
 
-    private readonly themeService = inject(ThemeService);
+    private readonly themeSwitcher = inject(ThemeSwitcher);
 
     public ngOnInit(): void {
         this.initLanguage();
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     }
 
     private initTheme(): void {
-        this.themeService.init();
+        this.themeSwitcher.init();
     }
 
     private getLanguage(): string {

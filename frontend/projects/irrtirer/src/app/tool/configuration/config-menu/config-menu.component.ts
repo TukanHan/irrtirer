@@ -9,7 +9,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ConfigurationService } from '../configuration.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ProjectImportService } from '../../../core/services/project-import/project-import.service';
+import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
 import { openFilePicker } from '../../../core/helpers/download-helper';
@@ -36,7 +36,7 @@ export class ConfigMenuComponent {
 
     private readonly configService = inject(ConfigurationService);
 
-    private readonly projectImportService = inject(ProjectImportService);
+    private readonly projectArchive = inject(ProjectArchive);
 
     private readonly destroyRef = inject(DestroyRef);
 
@@ -70,7 +70,7 @@ export class ConfigMenuComponent {
         });
         dialogRef.afterClosed().subscribe((projectName: string | undefined) => {
             if (projectName) {
-                this.projectImportService.saveProject(projectName);
+                this.projectArchive.saveProject(projectName);
                 const message = this.translate.instant('tool.config.menu.projectSavedMessage', { projectName });
                 this.snackBar.open(message, this.translate.instant('common.ok'), { duration: 3000 });
             }
@@ -104,7 +104,7 @@ export class ConfigMenuComponent {
 
     private selectProjectToLoad(): void {
         const action = (file: File): void => {
-            this.projectImportService
+            this.projectArchive
                 .loadProject(file)
                 .then((project) => {
                     this.store.dispatch(MosaicProjectActions.projectCreated({ project }));

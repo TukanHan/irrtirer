@@ -6,7 +6,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
 import { Store } from '@ngrx/store';
 import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
-import { ThemeService } from '../core/services/theme/theme.service';
+import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { TitleCasePipe } from '@angular/common';
 import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
@@ -21,7 +21,7 @@ import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
 export class ToolbarComponent implements OnInit {
     private readonly translate = inject(TranslateService);
 
-    private readonly themeService = inject(ThemeService);
+    private readonly themeSwitcher = inject(ThemeSwitcher);
 
     private readonly destroyRef = inject(DestroyRef);
 
@@ -29,7 +29,7 @@ export class ToolbarComponent implements OnInit {
 
     protected readonly selectedLanguage = signal<string>(this.translate.getCurrentLang() ?? 'pl');
 
-    protected readonly themeMode = toSignal<ThemeMode>(this.themeService.theme$);
+    protected readonly themeMode = toSignal<ThemeMode>(this.themeSwitcher.theme$);
 
     public ngOnInit(): void {
         this.translate.onLangChange
@@ -44,6 +44,6 @@ export class ToolbarComponent implements OnInit {
 
     protected toggleTheme(): void {
         const nextState = this.themeMode() === 'dark' ? 'light' : 'dark';
-        this.themeService.changeTheme(nextState);
+        this.themeSwitcher.changeTheme(nextState);
     }
 }

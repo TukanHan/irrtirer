@@ -10,7 +10,7 @@ import { MosaicProjectModel } from '../../models/mosaic-project.model';
 const PROJECT_FORMAT: string = 'irr';
 
 @Injectable()
-export class ProjectImportService {
+export class ProjectArchive {
     private readonly store = inject(Store);
 
     private readonly project = this.store.selectSignal(selectMosaicProject);

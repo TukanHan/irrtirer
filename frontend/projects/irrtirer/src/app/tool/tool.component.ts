@@ -12,13 +12,13 @@ import { ToolView } from './tool-view.interface';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
 import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
 import { AsyncPipe } from '@angular/common';
-import { ProjectImportService } from '../core/services/project-import/project-import.service';
+import { ProjectArchive } from '../core/services/project-archive/project-archive';
 import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
 
 @Component({
     selector: 'app-tool',
     imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvas],
-    providers: [ToolService, ProjectImportService],
+    providers: [ToolService, ProjectArchive],
     templateUrl: './tool.component.html',
     host: { class: 'flex h-full' },
 })

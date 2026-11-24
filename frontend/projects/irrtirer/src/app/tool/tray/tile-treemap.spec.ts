@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { TrayService } from './tray.service';
+import { TileTreemap } from './tile-treemap';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('TrayService', () => {
-    let service: TrayService;
+describe('TileTreemap', () => {
+    let service: TileTreemap;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [TrayService],
+            providers: [TileTreemap],
         });
-        service = TestBed.inject(TrayService);
+        service = TestBed.inject(TileTreemap);
     });
 
     it('should be created', () => {
