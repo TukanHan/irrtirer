@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MosaicHierarchyComponent } from './mosaic-hierarchy.component';
-import { MosaicGenerationService } from '../mosaic-generation.service';
+import { MosaicGenerationState } from '../mosaic-generation-state';
 import { describe, beforeEach, it, expect } from 'vitest';
 
 describe('MosaicHierarchyComponent', () => {
@@ -10,7 +10,7 @@ describe('MosaicHierarchyComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [MosaicHierarchyComponent],
-            providers: [MosaicGenerationService],
+            providers: [MosaicGenerationState],
         }).compileComponents();
 
         fixture = TestBed.createComponent(MosaicHierarchyComponent);

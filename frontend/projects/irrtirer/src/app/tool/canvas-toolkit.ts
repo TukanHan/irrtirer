@@ -15,7 +15,7 @@ import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/a
 import { saveAs } from '../core/helpers/download-helper';
 
 @Injectable()
-export class ToolService {
+export class CanvasToolkit {
     private readonly matDialog = inject(MatDialog);
 
     private readonly themeMode = toSignal<ThemeMode>(inject(ThemeSwitcher).theme$);

@@ -3,7 +3,7 @@ import { SectorsComponent } from './sectors.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../test-data/sector.data';
-import { ToolService } from '../tool.service';
+import { CanvasToolkit } from '../canvas-toolkit';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { imageObjectMock } from '../../../test-data/image-object.data';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
@@ -19,10 +19,10 @@ describe('SectorsComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [SectorsComponent],
-            providers: [provideMockStore({ initialState }), { provide: ToolService, useValue: {} }, provideTranslateService({})],
+            providers: [provideMockStore({ initialState }), { provide: CanvasToolkit, useValue: {} }, provideTranslateService({})],
         }).compileComponents();
 
-        vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
+        vi.spyOn(CanvasToolkit, 'createImageObject').mockResolvedValue(imageObjectMock);
 
         fixture = TestBed.createComponent(SectorsComponent);
         component = fixture.componentInstance;

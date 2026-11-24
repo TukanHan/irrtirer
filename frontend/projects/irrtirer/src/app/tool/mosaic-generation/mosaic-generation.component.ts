@@ -8,7 +8,7 @@ import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRe
 import { BehaviorSubject } from 'rxjs';
 import { MosaicGenerationHub } from './mosaic-generation-hub';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MosaicGenerationService } from './mosaic-generation.service';
+import { MosaicGenerationState } from './mosaic-generation-state';
 import { MosaicHierarchyComponent } from './mosaic-hierarchy/mosaic-hierarchy.component';
 import { ProgressInfoComponent } from './progress-info/progress-info.component';
 import { InfoState } from './progress-info/progress-info.interface';
@@ -24,17 +24,17 @@ import { TranslateService } from '@ngx-translate/core';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { ToolService } from '../tool.service';
+import { CanvasToolkit } from '../canvas-toolkit';
 
 @Component({
     selector: 'app-mosaic-generation',
     imports: [MosaicHierarchyComponent, ProgressInfoComponent],
-    providers: [MosaicGenerationService],
+    providers: [MosaicGenerationState],
     templateUrl: './mosaic-generation.component.html',
     styleUrl: './mosaic-generation.component.scss',
 })
 export class MosaicGenerationComponent implements OnInit, ToolView {
-    private readonly toolService = inject(ToolService);
+    private readonly canvasToolkit = inject(CanvasToolkit);
 
     protected readonly isImageVisible = signal<boolean>(false);
 
@@ -53,7 +53,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
             iconName: 'crop',
             visibility: signal('on'),
             tooltipKey: 'tool.ribbon.takeSnapshot',
-            onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'generating_snapshot.png'),
+            onClick: () => this.canvasToolkit.openTakeSnapshotDialog(this.activeCanvas, 'generating_snapshot.png'),
         },
         {
             iconName: 'recenter',
@@ -90,7 +90,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private readonly generationHub = inject(MosaicGenerationHub);
 
-    private readonly service = inject(MosaicGenerationService);
+    private readonly generationState = inject(MosaicGenerationState);
 
     public ngOnInit(): void {
         this.subscribeOnGenerationProgress();
@@ -103,7 +103,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     private async onCanvasReady(shouldFocusOnObject: boolean): Promise<void> {
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
 
-        this.imageObject = await ToolService.createImageObject(mosaicConfig);
+        this.imageObject = await CanvasToolkit.createImageObject(mosaicConfig);
         this.imageObject.setVisibility(this.isImageVisible());
         this.activeCanvas.addCanvasObject(this.imageObject);
         if (shouldFocusOnObject) {
@@ -122,7 +122,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
             .then(() => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
 
-                const initMosaicGenerationRequest = this.service.buildInitMosaicRequest(base64Image, imageSize, sectorsSchemas);
+                const initMosaicGenerationRequest = this.generationState.buildInitMosaicRequest(base64Image, imageSize, sectorsSchemas);
 
                 this.availableTiles = this.getAvailableTiles();
 
@@ -147,8 +147,8 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
                 sectionTileObjects.push({ tileObject, tileTransform });
             }
 
-            const sectorInfo = this.service.getSectorById(sectionGenerationResult.sectorId);
-            this.service.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
+            const sectorInfo = this.generationState.getSectorById(sectionGenerationResult.sectorId);
+            this.generationState.addSectionTilesObjects(sectionGenerationResult.sectorId, sectionTileObjects);
 
             this.progressState.set({
                 type: 'progress',
@@ -166,7 +166,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
             .subscribe((sectorsTriangulations: SectorTriangulationMeshPartsModel[]) => {
                 const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
                 this.createSectorsMeshCanvasObjects(sectorsTriangulations, sectorsSchemas);
-                this.service.fillSectorsGenerationInfo(sectorsTriangulations);
+                this.generationState.fillSectorsGenerationInfo(sectorsTriangulations);
 
                 const tiles: TileRequestModel[] = this.availableTiles.map((tile) => ({
                     color: tile.color,
@@ -189,7 +189,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private subscribeOnMeshVisibilityChange(): void {
         this.showMesh$.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((shouldShowMesh) => {
-            for (const sector of this.service.getSectors()) {
+            for (const sector of this.generationState.getSectors()) {
                 sector.setSectorMeshVisibility(shouldShowMesh);
             }
 
@@ -200,7 +200,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     private createSectorsMeshCanvasObjects(sectorsTriangulations: SectorTriangulationMeshPartsModel[], sectors: SectorSchema[]): void {
         for (let i = 0; i < sectors.length; ++i) {
             const sectorSchema: SectorSchema = sectors[i];
-            const sectorInfo = this.service.getSectorById(sectorSchema.id);
+            const sectorInfo = this.generationState.getSectorById(sectorSchema.id);
             const sectorPartsCanvasObjects: CanvasObject[] = [];
 
             for (const sectorPart of sectorsTriangulations[i].parts) {
@@ -217,13 +217,13 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
 
     private initSectors(): void {
         const sectorsSchemas: SectorSchema[] = this.store.selectSignal(selectSectors)();
-        this.service.initGeneratedSectorsData(sectorsSchemas);
+        this.generationState.initGeneratedSectorsData(sectorsSchemas);
         this.initSectorsMeshes(sectorsSchemas);
     }
 
     private initSectorsMeshes(sectorsSchemas: SectorSchema[]): void {
         for (let i = 0; i < sectorsSchemas.length; ++i) {
-            const sectorInfo = this.service.getSectorById(sectorsSchemas[i].id);
+            const sectorInfo = this.generationState.getSectorById(sectorsSchemas[i].id);
             const canvasObject = this.createSectorContourObject(sectorsSchemas[i], i);
             this.activeCanvas.addCanvasObject(canvasObject);
             sectorInfo.visualObjects.push(canvasObject);
@@ -276,7 +276,7 @@ export class MosaicGenerationComponent implements OnInit, ToolView {
     }
 
     private focusOnImage(): void {
-        const zoom = ToolService.calculateZoomForImage(this.imageObject!.size, this.activeCanvas.viewport());
+        const zoom = CanvasToolkit.calculateZoomForImage(this.imageObject!.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }

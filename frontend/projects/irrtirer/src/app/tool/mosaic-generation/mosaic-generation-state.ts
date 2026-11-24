@@ -6,7 +6,7 @@ import { GeneratedSectorModel, GeneratedTileModel } from './mosaic-generation.in
 import { Observable, Subject } from 'rxjs';
 
 @Injectable()
-export class MosaicGenerationService {
+export class MosaicGenerationState {
     private readonly sectorsInfo = new Map<string, GeneratedSectorModel>();
 
     private readonly sectorsSub = new Subject<GeneratedSectorModel[]>();

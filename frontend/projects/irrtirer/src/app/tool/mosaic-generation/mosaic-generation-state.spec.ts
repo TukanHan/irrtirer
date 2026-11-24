@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { MosaicGenerationService } from './mosaic-generation.service';
+import { MosaicGenerationState } from './mosaic-generation-state';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('MosaicGenerationService', () => {
-    let service: MosaicGenerationService;
+describe('MosaicGenerationState', () => {
+    let service: MosaicGenerationState;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [MosaicGenerationService],
+            providers: [MosaicGenerationState],
         });
-        service = TestBed.inject(MosaicGenerationService);
+        service = TestBed.inject(MosaicGenerationState);
     });
 
     it('should be created', () => {

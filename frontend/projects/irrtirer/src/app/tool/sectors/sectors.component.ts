@@ -14,7 +14,7 @@ import { TriangulatedContourObject } from '../../shared/canvas-objects/triangula
 import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { ToolService } from '../tool.service';
+import { CanvasToolkit } from '../canvas-toolkit';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { RouterOutlet } from '@angular/router';
@@ -32,7 +32,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
     private readonly destroyRef = inject(DestroyRef);
 
-    private readonly toolService = inject(ToolService);
+    private readonly canvasToolkit = inject(CanvasToolkit);
 
     protected readonly sectorForContourEdition = toSignal<EditedSectorContour | null>(this.service.sectorForContourEdition$, { requireSync: true });
 
@@ -51,7 +51,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
             iconName: 'crop',
             visibility: signal('on'),
             tooltipKey: 'tool.ribbon.takeSnapshot',
-            onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
+            onClick: () => this.canvasToolkit.openTakeSnapshotDialog(this.activeCanvas, 'sectors_snapshot.png'),
         },
         {
             iconName: 'recenter',
@@ -157,7 +157,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
 
         const mosaicConfig = this.store.selectSignal(selectMosaicConfig)()!;
         queueMicrotask(async () => {
-            this.imageObject = await ToolService.createImageObject(mosaicConfig);
+            this.imageObject = await CanvasToolkit.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(this.imageObject);
 
             if (shouldFocusOnObject) {
@@ -170,7 +170,7 @@ export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     }
 
     private focusOnImage(): void {
-        const zoom = ToolService.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport());
+        const zoom = CanvasToolkit.calculateZoomForImage(this.imageObject.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 }

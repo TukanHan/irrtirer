@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MosaicGenerationComponent } from './mosaic-generation.component';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { ToolService } from '../tool.service';
+import { CanvasToolkit } from '../canvas-toolkit';
 import { imageObjectMock } from '../../../test-data/image-object.data';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { faceSector } from '../../../test-data/sector.data';
@@ -32,11 +32,11 @@ describe('MosaicGenerationComponent', () => {
                 provideMockStore({ initialState }),
                 provideTranslateService({}),
                 { provide: MatSnackBar, useValue: mockMatSnackBar },
-                { provide: ToolService, useValue: {} },
+                { provide: CanvasToolkit, useValue: {} },
             ],
         }).compileComponents();
 
-        vi.spyOn(ToolService, 'createImageObject').mockResolvedValue(imageObjectMock);
+        vi.spyOn(CanvasToolkit, 'createImageObject').mockResolvedValue(imageObjectMock);
 
         fixture = TestBed.createComponent(MosaicGenerationComponent);
         component = fixture.componentInstance;

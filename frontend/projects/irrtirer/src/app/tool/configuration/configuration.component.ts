@@ -3,7 +3,7 @@ import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Store } from '@ngrx/store';
 import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { ToolService } from '../tool.service';
+import { CanvasToolkit } from '../canvas-toolkit';
 import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { Vector } from '../../core/models/math/vector.model';
@@ -27,7 +27,7 @@ export class ConfigurationComponent implements ToolView {
 
     private readonly configEventBus = inject(ConfigurationEventBus);
 
-    private readonly toolService = inject(ToolService);
+    private readonly canvasToolkit = inject(CanvasToolkit);
 
     protected readonly mosaicConfig = this.store.selectSignal(selectMosaicConfig);
 
@@ -40,7 +40,7 @@ export class ConfigurationComponent implements ToolView {
             iconName: 'crop',
             tooltipKey: 'tool.ribbon.takeSnapshot',
             visibility: signal('on'),
-            onClick: () => this.toolService.openTakeSnapshotDialog(this.activeCanvas, 'configuration_snapshot.png'),
+            onClick: () => this.canvasToolkit.openTakeSnapshotDialog(this.activeCanvas, 'configuration_snapshot.png'),
         },
         {
             iconName: 'recenter',
@@ -72,7 +72,7 @@ export class ConfigurationComponent implements ToolView {
         imageObject = null;
 
         if (mosaicConfig) {
-            imageObject = await ToolService.createImageObject(mosaicConfig);
+            imageObject = await CanvasToolkit.createImageObject(mosaicConfig);
             this.activeCanvas.addCanvasObject(imageObject, false);
 
             if (focusOn) {
@@ -85,7 +85,7 @@ export class ConfigurationComponent implements ToolView {
     }
 
     private focusOnImage(imageObject: ImageObject): void {
-        const zoom = ToolService.calculateZoomForImage(imageObject.size, this.activeCanvas.viewport());
+        const zoom = CanvasToolkit.calculateZoomForImage(imageObject.size, this.activeCanvas.viewport());
         this.activeCanvas.setViewport(zoom, Vector.zero);
     }
 
