@@ -24,6 +24,10 @@ Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; loc
 - NgRx files follow NgRx conventions (`.actions.ts`, `.reducer.ts`, `.selectors.ts`).
 - Test and story files: `<name>.spec.ts`, `<name>.stories.ts` next to the source.
 
+## Collaboration
+
+- A component exported from a library's public API always gets a `*.stories.ts`. For any other component, ask whether it needs one; never create it unasked.
+
 ## Commands (run from `frontend/`)
 
 - Lint one project: `npx ng lint <project>`

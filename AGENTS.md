@@ -24,3 +24,4 @@ The root `CLAUDE.md` only imports the `AGENTS.md` files - edit `AGENTS.md`, neve
 
 - `AGENTS.md` (this file and nested ones): short, always-relevant rules and facts. Nested files add local rules for their folder.
 - Longer, repeatable procedures (e.g. "migrate a Material component to ids") belong in skills/prompt files, not here, so they are loaded only when needed.
+- Skills live in `.claude/skills/<name>/SKILL.md` (Agent Skills format). If your tool does not load them automatically, check their descriptions and read the matching `SKILL.md` before such a task.
