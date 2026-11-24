@@ -8,7 +8,7 @@ import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canva
 import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { Vector } from '../../core/models/math/vector.model';
 import { RouterOutlet } from '@angular/router';
-import { ConfigurationService } from './configuration.service';
+import { ConfigurationEventBus } from './configuration-event-bus';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { skip } from 'rxjs';
@@ -16,7 +16,7 @@ import { skip } from 'rxjs';
 @Component({
     selector: 'app-configuration',
     imports: [RouterOutlet],
-    providers: [ConfigurationService],
+    providers: [ConfigurationEventBus],
     templateUrl: './configuration.component.html',
     styleUrl: './configuration.component.scss',
 })
@@ -25,7 +25,7 @@ export class ConfigurationComponent implements ToolView {
 
     private readonly destroyRef = inject(DestroyRef);
 
-    private readonly configService = inject(ConfigurationService);
+    private readonly configEventBus = inject(ConfigurationEventBus);
 
     private readonly toolService = inject(ToolService);
 
@@ -33,7 +33,7 @@ export class ConfigurationComponent implements ToolView {
 
     private readonly imageObject = signal<ImageObject | null>(null);
 
-    private readonly imageChanged$ = toObservable(this.configService.imageChange);
+    private readonly imageChanged$ = toObservable(this.configEventBus.imageChange);
 
     protected readonly ribbonActions: RibbonAction[] = [
         {
@@ -90,6 +90,6 @@ export class ConfigurationComponent implements ToolView {
     }
 
     protected onRouterChange(): void {
-        this.configService.emitImageChange(this.mosaicConfig()!, false);
+        this.configEventBus.emitImageChange(this.mosaicConfig()!, false);
     }
 }

@@ -4,7 +4,7 @@ import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-proje
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { first } from 'rxjs';
-import { SectorsContoursService } from './sectors-contours.service';
+import { SectorsEventBus } from './sectors-event-bus';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
 import { outputToObservable, takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
@@ -28,7 +28,7 @@ import { RouterOutlet } from '@angular/router';
 export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
     private readonly store = inject(Store);
 
-    private readonly service = inject(SectorsContoursService);
+    private readonly service = inject(SectorsEventBus);
 
     private readonly destroyRef = inject(DestroyRef);
 

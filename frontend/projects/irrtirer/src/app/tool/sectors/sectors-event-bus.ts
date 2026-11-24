@@ -9,7 +9,7 @@ import { IVector } from '../../../../../active-canvas/src/public-api';
 @Injectable({
     providedIn: 'root',
 })
-export class SectorsContoursService {
+export class SectorsEventBus {
     private readonly sectorForContourEditionChanged = new BehaviorSubject<EditedSectorContour | null>(null);
 
     public readonly sectorForContourEdition$ = this.sectorForContourEditionChanged.asObservable();

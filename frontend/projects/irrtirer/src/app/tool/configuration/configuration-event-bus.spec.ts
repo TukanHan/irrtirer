@@ -1,15 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { ConfigurationService } from './configuration.service';
+import { ConfigurationEventBus } from './configuration-event-bus';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('ConfigurationService', () => {
-    let service: ConfigurationService;
+describe('ConfigurationEventBus', () => {
+    let service: ConfigurationEventBus;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            providers: [ConfigurationService],
+            providers: [ConfigurationEventBus],
         });
-        service = TestBed.inject(ConfigurationService);
+        service = TestBed.inject(ConfigurationEventBus);
     });
 
     it('should be created', () => {

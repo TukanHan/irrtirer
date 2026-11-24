@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { Router } from '@angular/router';
-import { ConfigurationService } from '../configuration.service';
+import { ConfigurationEventBus } from '../configuration-event-bus';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
 import { IdsFramedButton } from 'irr-design-system/action';
@@ -32,7 +32,7 @@ export class ConfigProjectComponent {
 
     private readonly router = inject(Router);
 
-    private readonly configService = inject(ConfigurationService);
+    private readonly configEventBus = inject(ConfigurationEventBus);
 
     private readonly store = inject(Store);
 
@@ -67,7 +67,7 @@ export class ConfigProjectComponent {
             const reader = new FileReader();
             reader.readAsDataURL(this.form.mosaicImage().value()!);
             reader.onload = (readingEvent: ProgressEvent<FileReader>) => {
-                this.configService.emitImageChange(
+                this.configEventBus.emitImageChange(
                     {
                         base64Image: readingEvent.target?.result as string,
                         mosaicWidth: this.form.mosaicWidth().value(),
@@ -76,7 +76,7 @@ export class ConfigProjectComponent {
                 );
             };
         } else {
-            this.configService.emitImageChange(null, false);
+            this.configEventBus.emitImageChange(null, false);
         }
     });
 

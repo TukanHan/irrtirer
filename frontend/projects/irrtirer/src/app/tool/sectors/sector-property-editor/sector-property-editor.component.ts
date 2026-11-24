@@ -1,5 +1,5 @@
 import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
-import { SectorsContoursService } from '../sectors-contours.service';
+import { SectorsEventBus } from '../sectors-event-bus';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosaic-project.model';
@@ -43,7 +43,7 @@ export class SectorPropertyEditorComponent implements OnInit {
 
     private readonly snackBar = inject(MatSnackBar);
 
-    private readonly service = inject(SectorsContoursService);
+    private readonly service = inject(SectorsEventBus);
 
     protected readonly translate = inject(TranslateService);
 

@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { MatIconModule } from '@angular/material/icon';
 import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
-import { SectorsContoursService } from '../sectors-contours.service';
+import { SectorsEventBus } from '../sectors-event-bus';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
@@ -44,7 +44,7 @@ export class SectorContourEditionComponent implements OnInit {
 
     private readonly snackbarService = inject(MatSnackBar);
 
-    private readonly sectorsContoursService = inject(SectorsContoursService);
+    private readonly sectorsEventBus = inject(SectorsEventBus);
 
     protected readonly translate = inject(TranslateService);
 
@@ -63,7 +63,7 @@ export class SectorContourEditionComponent implements OnInit {
         required: () => this.translate.instant('tool.sectors.sectorContour.nameRequired'),
     };
 
-    private readonly formData = signal<SectorSchema>(SectorsContoursService.createNewSector());
+    private readonly formData = signal<SectorSchema>(SectorsEventBus.createNewSector());
 
     private readonly usedSectorNames = computed<string[]>(() =>
         this.existingSectors()
@@ -86,7 +86,7 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     private subscribeOnCanvasClicked(): void {
-        this.sectorsContoursService.canvasClicked$
+        this.sectorsEventBus.canvasClicked$
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((vector) => this.addVertex(new Vector(vector.x, vector.y)));
     }
@@ -130,14 +130,14 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     protected cancel(): void {
-        this.sectorsContoursService.emitEditedSectorContour(null);
+        this.sectorsEventBus.emitEditedSectorContour(null);
         this.navigateToSectorList();
     }
 
     protected save(): void {
         if (this.form().valid()) {
             this.store.dispatch(MosaicProjectActions.sectorModified({ modifiedSector: this.formData() }));
-            this.sectorsContoursService.emitEditedSectorContour(null);
+            this.sectorsEventBus.emitEditedSectorContour(null);
             this.navigateToSectorList();
         } else {
             const errorMessage = this.showValidationError();
@@ -180,7 +180,7 @@ export class SectorContourEditionComponent implements OnInit {
     }
 
     protected readonly onContourChangeEffect = effect(() => {
-        this.sectorsContoursService.emitEditedSectorContour({
+        this.sectorsEventBus.emitEditedSectorContour({
             sector: this.formData(),
             selectedVertex: this.selectedVertex()!,
         });

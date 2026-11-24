@@ -8,7 +8,7 @@ import { Store } from '@ngrx/store';
 import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
-import { SectorsContoursService } from '../sectors-contours.service';
+import { SectorsEventBus } from '../sectors-event-bus';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
@@ -36,7 +36,7 @@ export class SectorsContoursListComponent {
 
     protected readonly sectors = this.store.selectSignal<SectorSchema[]>(selectSectors);
 
-    private readonly sectorsContoursService = inject(SectorsContoursService);
+    private readonly sectorsEventBus = inject(SectorsEventBus);
 
     protected openRemoveSectorDialog(sector: SectorSchema): void {
         const dialogData: DialogData = {
@@ -54,13 +54,13 @@ export class SectorsContoursListComponent {
                     if (this.selectedSector === sector) {
                         this.resetSelectedSector();
                     }
-                    this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
+                    this.sectorsEventBus.emitSectorListChanged({ selectedSector: this.selectedSector! });
                 }
             });
     }
 
     protected emitSectorToEditContour(sector: SectorSchema): void {
-        this.sectorsContoursService.emitEditedSectorContour({
+        this.sectorsEventBus.emitEditedSectorContour({
             sector: { ...sector, vertices: [...sector.vertices] },
             selectedVertex: sector.vertices.at(-1)!,
         });
@@ -79,7 +79,7 @@ export class SectorsContoursListComponent {
     }
 
     protected emitSectorToEditProperty(sector: SectorSchema): void {
-        this.sectorsContoursService.emitEditedSectorProperty({
+        this.sectorsEventBus.emitEditedSectorProperty({
             sector: sector,
             mesh: null,
             contour: null,
@@ -88,12 +88,12 @@ export class SectorsContoursListComponent {
 
     protected onSectorSelected(sector: SectorSchema): void {
         this.selectedSector = sector;
-        this.sectorsContoursService.emitSectorListChanged({ selectedSector: sector });
+        this.sectorsEventBus.emitSectorListChanged({ selectedSector: sector });
     }
 
     protected dropSectorBox(event: CdkDragDrop<string[]>): void {
         this.store.dispatch(MosaicProjectActions.sectorShifted({ prevIndex: event.previousIndex, newIndex: event.currentIndex }));
-        this.sectorsContoursService.emitSectorListChanged({ selectedSector: this.selectedSector! });
+        this.sectorsEventBus.emitSectorListChanged({ selectedSector: this.selectedSector! });
     }
 
     private resetSelectedSector(): void {

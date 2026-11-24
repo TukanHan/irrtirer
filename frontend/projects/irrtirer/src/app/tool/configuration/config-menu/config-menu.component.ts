@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { ConfigurationService } from '../configuration.service';
+import { ConfigurationEventBus } from '../configuration-event-bus';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -34,7 +34,7 @@ export class ConfigMenuComponent {
 
     private readonly router = inject(Router);
 
-    private readonly configService = inject(ConfigurationService);
+    private readonly configEventBus = inject(ConfigurationEventBus);
 
     private readonly projectArchive = inject(ProjectArchive);
 
@@ -59,7 +59,7 @@ export class ConfigMenuComponent {
             .subscribe((result) => {
                 if (result) {
                     this.store.dispatch(MosaicProjectActions.projectCanceled());
-                    this.configService.emitImageChange(null, false);
+                    this.configEventBus.emitImageChange(null, false);
                 }
             });
     }
@@ -108,7 +108,7 @@ export class ConfigMenuComponent {
                 .loadProject(file)
                 .then((project) => {
                     this.store.dispatch(MosaicProjectActions.projectCreated({ project }));
-                    this.configService.emitImageChange(project.config, true);
+                    this.configEventBus.emitImageChange(project.config, true);
                 })
                 .catch(() => {
                     this.snackBar.open(this.translate.instant('tool.config.menu.loadProjectError'));

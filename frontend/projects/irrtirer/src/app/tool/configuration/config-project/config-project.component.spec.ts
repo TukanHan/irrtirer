@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ConfigProjectComponent } from './config-project.component';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
-import { ConfigurationService } from '../configuration.service';
+import { ConfigurationEventBus } from '../configuration-event-bus';
 import { beforeEach, describe, expect, it } from 'vitest';
 
 const initialState = {
@@ -23,7 +23,7 @@ describe('ConfigProjectComponent', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [ConfigProjectComponent],
-            providers: [provideMockStore({ initialState }), provideTranslateService({}), ConfigurationService],
+            providers: [provideMockStore({ initialState }), provideTranslateService({}), ConfigurationEventBus],
         }).compileComponents();
 
         fixture = TestBed.createComponent(ConfigProjectComponent);

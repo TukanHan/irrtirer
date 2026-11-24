@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
-import { SectorsContoursService } from './sectors-contours.service';
+import { SectorsEventBus } from './sectors-event-bus';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('SectorsContoursService', () => {
-    let service: SectorsContoursService;
+describe('SectorsEventBus', () => {
+    let service: SectorsEventBus;
 
     beforeEach(() => {
         TestBed.configureTestingModule({});
-        service = TestBed.inject(SectorsContoursService);
+        service = TestBed.inject(SectorsEventBus);
     });
 
     it('should be created', () => {
