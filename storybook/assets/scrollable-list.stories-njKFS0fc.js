@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{Hr as t,Ir as n,R as r,S as i,Yn as a,h as o,j as s,m as c,r as l,u}from"./core-CEfZiV_p.js";import{c as d,n as f}from"./common-BWOsREVD.js";import{a as p,c as m,i as h,n as g}from"./iframe-BsM_08D6.js";import{n as _,t as v}from"./flat-button-Dcu53z3_.js";var y;function b(){return(b=e((()=>{y=`@if (hasPreviousPage()) {
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{Hr as t,Ir as n,R as r,S as i,Yn as a,h as o,j as s,m as c,r as l,u}from"./core-CEfZiV_p.js";import{c as d,n as f}from"./common-BWOsREVD.js";import{a as p,c as m,i as h,n as g}from"./iframe-DIxxcwrA.js";import{n as _,t as v}from"./flat-button-Dcu53z3_.js";var y;function b(){return(b=e((()=>{y=`@if (hasPreviousPage()) {
     @let previousPages = previousPageNumbers();
     <ids-flat-button class="page-button" (clicked)="goToPreviousPage()">
         {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
