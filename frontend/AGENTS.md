@@ -1,23 +1,45 @@
-# Frontend AI Guidelines (Global)
+# Frontend - AI guidelines
 
-This workspace uses **Angular 22** and is designed with a **Zoneless** architecture.
+Angular workspace.
 
-## Global Technical Standards
+Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; local rules win on conflict.
 
-- **Angular Version:** 22.x
-- **Zoneless Architecture:** The application does not use Zone.js.
-    - Always use `ChangeDetectionStrategy.OnPush`.
-    - Use **Signals** (`signal`, `computed`, `effect`) for state management and data flow.
+## Projects
 
-## Project Structure
+| Project             | Type    | Selector prefix | Purpose                                                   |
+| ------------------- | ------- | --------------- | --------------------------------------------------------- |
+| `irrtirer`          | app     | `app`           | Main app: mosaic generation, sector management, UI        |
+| `irr-design-system` | library | `ids`           | Own UI kit replacing Angular Material, plus design tokens |
+| `active-canvas`     | library | `ac`            | Interactive canvas, drawing, geometry                     |
 
-This frontend is divided into several projects located in the `projects/` directory. Each project has its own specific `AGENTS.md` file with local rules.
+## Technical standards
 
-- **irrtirer**: The main application for mosaic generation and sector management. See `projects/irrtirer/AGENTS.md`.
-- **irr-design-system**: The shared UI Kit and design tokens. See `projects/irr-design-system/AGENTS.md`.
-- **active-canvas**: Core logic for canvas manipulation and interactive drawing. See `projects/active-canvas/AGENTS.md`.
+- **Zoneless** (no Zone.js). `OnPush` is the default change detection - do not set `changeDetection` explicitly and never use `ChangeDetectionStrategy.Eager`.
+- State and data flow via **Signals** (`signal`, `computed`, `effect`, `linkedSignal`); signal-based `input()`, `model()`, `output()`. No `@Input`/`@Output` decorators.
 
-## Workflow
+## Naming
 
-- Before editing any file, check if there is a local `AGENTS.md` in its parent project directory.
-- Prioritize local rules over global rules if a conflict exists.
+- Components, directives, services: no type suffix in file or class name (`text-input.ts`, `TextInput`).
+- Pipes, guards, interceptors, resolvers keep the type: `size-display.pipe.ts`, `SizeDisplayPipe`.
+- NgRx files follow NgRx conventions (`.actions.ts`, `.reducer.ts`, `.selectors.ts`).
+- Test and story files: `<name>.spec.ts`, `<name>.stories.ts` next to the source.
+
+## Commands (run from `frontend/`)
+
+- Lint one project: `npx ng lint <project>`
+- Test one project (Vitest): `npx ng test <project> --watch=false`
+- Format: `npm run format` / check: `npm run format:check`
+- Build: `npx ng build <project>`
+- Storybook (hosts stories from `irrtirer` and `irr-design-system`): `npm run sb`
+
+## Definition of done
+
+A change is done when, for every project it touches:
+
+1. `ng lint <project>` passes,
+2. changed files are formatted with oxfmt,
+3. `ng test <project> --watch=false` passes.
+
+Also run `ng build` for a library when its public API (any `public-api.ts`) changed. Do not run the whole test suite or Storybook build when a single project is enough.
+
+When the owner asks for a review before committing, run these checks for the changed projects and report the results.

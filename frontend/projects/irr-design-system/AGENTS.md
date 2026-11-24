@@ -1,14 +1,20 @@
-# irr-design-system - local AI guidelines:
+# irr-design-system (ids) - local AI guidelines
 
-This project is the shared Design System (UI Kit) containing reusable components and design tokens.
+Shared UI kit and design tokens, replacing Angular Material.
 
-## Important Note
+Extends `../../AGENTS.md`.
 
-- **Base Rules:** Always refer to the global guidelines in `../../AGENTS.md` for general Angular patterns.
+## Structure
 
-## Local Context
+- Built from **secondary entry points**, one folder per area (`action`, `core`, `form`, `menu`, `number-input`, `side-nav`, `text-input`, `tooltip`, ...). Each has its own `ng-package.json` and `public-api.ts`.
+- Import via the entry point: `import { IdsTextInput } from 'irr-design-system/text-input'`. The root `src/public-api.ts` is intentionally empty.
+- Inside the library, import other entry points by their package path (`irr-design-system/core`), never by relative path across entry points.
+- Shared styles and tokens: `styles/` (`ids-theme.css`, `_typography.css`, `shared/`).
 
-- **Tokens:** Design tokens (colors, spacing, typography) are the source of truth here. Check existing theme files before adding new values.
-- **Purity:** Components here should be "dumb" (presentational). They should not depend on application-specific services or state.
-- **Exporting:** Ensure every public component, directive, or pipe is exported in `public-api.ts`.
-- **Storybook:** Components should have `*.stories.ts` files for documentation and testing.
+## Conventions
+
+- Selector prefix `ids-`, class prefix `Ids` (`ids-text-input`, `IdsTextInput`).
+- **Presentational only:** no app services, NgRx, or translations - text comes in through inputs or content projection.
+- Form controls implement Signal Forms interfaces (`FormValueControl`) and compose `IdsFormField`.
+- **Tokens are the source of truth:** check `styles/` before adding a color, spacing, or font value; never hardcode one in a component.
+- Every public component gets a `*.stories.ts` (title `Design System/<Name>`) and is exported from its entry point's `public-api.ts`.

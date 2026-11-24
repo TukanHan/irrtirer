@@ -3,8 +3,7 @@
     "compileOnSave": false,
     "compilerOptions": {
         "paths": {
-            "active-canvas": ["./dist/active-canvas"],
-            "irr-design-system": ["./projects/irr-design-system/src/public-api.ts"],
+            "active-canvas": ["./projects/active-canvas/src/public-api.ts"],
             "irr-design-system/*": ["./projects/irr-design-system/*/public-api.ts"]
         },
         "outDir": "./dist/out-tsc",

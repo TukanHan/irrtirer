@@ -6,7 +6,9 @@ A project for creating mosaics based on a given set of tiles and a target image.
 
 ## Motivation and development approach
 
-This project is both a personal challenge and a learning playground. I strive to set my own challenges and find solutions independently. For specific algorithms, especially geometric ones, I sometimes refer to solutions found online. I also collaborate with Copilot, mainly in a reviewer role, to help refine and review my ideas.
+This project is both a personal challenge and a learning playground. I work on it alone and dig into the topics that interest me, at my own pace. For specific algorithms, especially geometric ones, I sometimes refer to solutions found online.
+
+The project is also my playground for AI-assisted development. I work with AI coding agents (Claude Code, GitHub Copilot) to understand how these tools work, learn to use them well for my own goals, and build something more interesting than I could alone. The instructions agents follow live in `AGENTS.md` files across the repository.
 
 I chose this topic because it is complex and allows me to tackle interesting technical problems. Irrtirer serves as a space where I experiment with programming techniques and solutions that I have observed and want to master, all at my own pace.
 
