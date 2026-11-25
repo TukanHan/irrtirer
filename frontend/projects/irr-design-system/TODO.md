@@ -2,10 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## states/aria-state
-
-- [ ] `form-field` sets `ids-text-input--invalid` on itself → `aria-invalid` on the native `<input>` (reflecting `showError()`), styled via `:has()`
-
 ## accessibility/apg-pattern, accessibility/keyboard
 
 - [ ] `menu`: implement APG Menu Button - roles `menu`/`menuitem`, `aria-haspopup` + `aria-expanded` on the trigger, arrow keys, `Escape`, focus return

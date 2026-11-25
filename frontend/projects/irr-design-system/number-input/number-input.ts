@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, input, model, output } from '@angular/core';
+import { booleanAttribute, Component, computed, input, model, output } from '@angular/core';
 import { FormValueControl } from '@angular/forms/signals';
 import { IdentityGenerator, injectControlId } from 'irr-design-system/core';
 import { IdsFormField } from 'irr-design-system/form';
@@ -12,7 +12,7 @@ import { IdsFormField } from 'irr-design-system/form';
         [required]="required()"
         [placeholder]="placeholder()"
         [isEmpty]="!value()"
-        [showError]="invalid() && touched() && !disabled()"
+        [showError]="showError()"
         [id]="identifier"
     >
         <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
@@ -21,6 +21,7 @@ import { IdsFormField } from 'irr-design-system/form';
             (input)="value.set($any($event.target).value)"
             (blur)="touch.emit()"
             [disabled]="disabled()"
+            [attr.aria-invalid]="showError() ? 'true' : null"
             type="number"
             class="input"
             [id]="identifier"
@@ -46,6 +47,8 @@ export class IdsNumberInput implements FormValueControl<number> {
     public readonly invalid = input<boolean>(false, { transform: booleanAttribute });
 
     public readonly touched = input<boolean>(false, { transform: booleanAttribute });
+
+    protected readonly showError = computed(() => this.invalid() && this.touched() && !this.disabled());
 
     protected readonly identifier = injectControlId((id) => `ids-number-input-${id}`);
 }

@@ -57,7 +57,7 @@
     }
 }
 
-:host(.ids-text-input--invalid) {
+:host:has(input[aria-invalid='true']) {
     --ids-form-field-shadow:
         0 0 0 1px color-mix(in srgb, var(--ids-color-danger) 60%, transparent),
         0 2px 6px 2px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-faint), transparent);
@@ -74,7 +74,7 @@
     }
 }
 
-:host:not(.ids-text-input--invalid) {
+:host:not(:has(input[aria-invalid='true'])) {
     :has(.input:hover:not(:disabled):not(:focus)) {
         --ids-form-field-shadow:
             0 0 0 1px color-mix(in srgb, var(--ids-color-highlight) 60%, transparent),
