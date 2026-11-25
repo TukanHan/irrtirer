@@ -1,79 +1,71 @@
-import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { render, screen } from '@testing-library/angular';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, it, vi } from 'vitest';
 import { IdsFramedButton } from './framed-button';
 
-@Component({
-    imports: [IdsFramedButton],
-    template: '<ids-framed-button>Save changes</ids-framed-button>',
-})
-class FramedButtonHost {}
-
 describe('IdsFramedButton', () => {
-    let fixture: ComponentFixture<IdsFramedButton>;
+    it('uses the projected content as its accessible name', async () => {
+        await render('<ids-framed-button>Lorem ipsum</ids-framed-button>', { imports: [IdsFramedButton] });
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [FramedButtonHost, IdsFramedButton],
-        }).compileComponents();
-
-        fixture = TestBed.createComponent(IdsFramedButton);
-        fixture.detectChanges();
+        expect(screen.queryByRole('button', { name: 'Lorem ipsum' })).not.toBeNull();
     });
 
-    it('should create a button with its default inputs', () => {
-        const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
+    it('emits clicked with the mouse event when clicked', async () => {
+        const user = userEvent.setup();
+        const onClick = vi.fn();
+        await render('<ids-framed-button (clicked)="onClick($event)">Lorem ipsum</ids-framed-button>', {
+            imports: [IdsFramedButton],
+            componentProperties: { onClick },
+        });
 
-        expect(fixture.componentInstance).toBeTruthy();
-        expect(button.classList).toContain('ids-framed-button--neutral');
-        expect(button.disabled).toBe(false);
-        expect(button.type).toBe('button');
+        await user.click(screen.getByRole('button'));
+
+        expect(onClick).toHaveBeenCalledExactlyOnceWith(expect.any(MouseEvent));
     });
 
-    it.each(['accent', 'danger'] as const)('should apply the selected %s variant', (variant) => {
-        fixture.componentRef.setInput('variant', variant);
-        fixture.detectChanges();
+    it('is disabled and does not emit clicked when disabled', async () => {
+        const user = userEvent.setup();
+        const onClick = vi.fn();
+        await render('<ids-framed-button disabled (clicked)="onClick($event)">Lorem ipsum</ids-framed-button>', {
+            imports: [IdsFramedButton],
+            componentProperties: { onClick },
+        });
+        const button = screen.getByRole<HTMLButtonElement>('button');
 
-        const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
-
-        expect(button.classList).toContain(`ids-framed-button--${variant}`);
-    });
-
-    it('should disable the native button when disabled', () => {
-        fixture.componentRef.setInput('disabled', true);
-        fixture.detectChanges();
-
-        const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
+        await user.click(button);
 
         expect(button.disabled).toBe(true);
+        expect(onClick).not.toHaveBeenCalled();
     });
 
-    it('should apply the selected native button type', () => {
-        fixture.componentRef.setInput('type', 'submit');
-        fixture.detectChanges();
+    it('defaults to type button', async () => {
+        await render('<ids-framed-button>Lorem ipsum</ids-framed-button>', { imports: [IdsFramedButton] });
 
-        const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
-
-        expect(button.type).toBe('submit');
+        expect(screen.getByRole<HTMLButtonElement>('button').type).toBe('button');
     });
 
-    it('should project its content into the button label', () => {
-        const hostFixture = TestBed.createComponent(FramedButtonHost);
-        hostFixture.detectChanges();
+    it.each(['submit', 'reset'] as const)('applies type %s', async (type) => {
+        await render('<ids-framed-button [type]="type">Lorem ipsum</ids-framed-button>', {
+            imports: [IdsFramedButton],
+            componentProperties: { type },
+        });
 
-        const label = hostFixture.nativeElement.querySelector('.ids-button-label');
-
-        expect(label.textContent.trim()).toBe('Save changes');
+        expect(screen.getByRole<HTMLButtonElement>('button').type).toBe(type);
     });
 
-    it('should emit the click event when clicked', () => {
-        const clicked = vi.fn();
-        fixture.componentInstance.clicked.subscribe(clicked);
+    // Variants are purely visual - the modifier class is the only observable effect in the DOM.
+    it('defaults to the neutral variant', async () => {
+        await render('<ids-framed-button>Lorem ipsum</ids-framed-button>', { imports: [IdsFramedButton] });
 
-        const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
-        button.click();
+        expect(screen.getByRole('button').classList).toContain('ids-framed-button--neutral');
+    });
 
-        expect(clicked).toHaveBeenCalledOnce();
-        expect(clicked).toHaveBeenCalledWith(expect.any(MouseEvent));
+    it.each(['accent', 'danger'] as const)('applies the %s variant', async (variant) => {
+        await render('<ids-framed-button [variant]="variant">Lorem ipsum</ids-framed-button>', {
+            imports: [IdsFramedButton],
+            componentProperties: { variant },
+        });
+
+        expect(screen.getByRole('button').classList).toContain(`ids-framed-button--${variant}`);
     });
 });
