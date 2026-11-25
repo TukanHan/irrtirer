@@ -2,29 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## structure/named-exports
-
-- [ ] `action/public-api.ts` uses `export *`
-- [ ] `core/public-api.ts` uses `export *`
-- [ ] `form/public-api.ts` uses `export *`
-
-## structure/public-symbol-prefix
-
-- [ ] `action`: `FlatButtonVariant` → `IdsFlatButtonVariant`
-- [ ] `action`: `FramedButtonVariant` → `IdsFramedButtonVariant`
-
-## structure/file-name-matches-selector
-
-- [ ] `form/ids-error/ids-error.ts` → `form/error/error.ts` (with `.css`)
-
-## structure/one-declaration-per-file
-
-- [ ] `form/form-field/form-field-affixes.ts` declares `IdsPrefix` and `IdsSuffix` - split into `prefix.ts` and `suffix.ts`
-
-## structure/no-stray-entry-files
-
-- [ ] `menu/index.ts` duplicates `menu/public-api.ts`
-
 ## api/boolean-attribute
 
 - [ ] `text-input`: `disabled`, `required`, `invalid`, `touched`

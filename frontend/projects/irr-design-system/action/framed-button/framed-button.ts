@@ -1,7 +1,7 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
 import { Clickable } from 'irr-design-system/core';
 
-export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
+export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
 @Component({
     selector: 'ids-framed-button',
@@ -17,6 +17,6 @@ export type FramedButtonVariant = 'accent' | 'neutral' | 'danger';
 export class IdsFramedButton implements Clickable {
     public readonly clicked = output<MouseEvent>();
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
-    public readonly variant = input<FramedButtonVariant>('neutral');
+    public readonly variant = input<IdsFramedButtonVariant>('neutral');
     public readonly type = input<'button' | 'submit' | 'reset'>('button');
 }
