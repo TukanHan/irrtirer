@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{g as t,jn as n}from"./core-CXH6MCZn.js";var r;function i(){return(i=e((()=>{t(),r=new n(`IdsNativeControlHost`)})))()}export{i as n,r as t};
