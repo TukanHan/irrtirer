@@ -1,5 +1,7 @@
 :host {
     display: block;
+    /* Transparent gap: the panel touches its host, so the pointer can move onto it (WCAG 1.4.13). */
+    padding: 0.5rem;
 
     .ids-tooltip-panel {
         --ids-panel-padding: 0.375rem 0.5rem;

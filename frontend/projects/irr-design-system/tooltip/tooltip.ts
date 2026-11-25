@@ -1,18 +1,20 @@
 import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
 import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { OVERLAY_SPACING } from 'irr-design-system/core';
+import { IdentityCounter } from 'irr-design-system/core';
 import { IdsTooltipPanel } from './tooltip-panel';
 
 export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
 
+/** Shows a text hint on hover and focus. */
 @Directive({
     selector: '[idsTooltip]',
     host: {
         '(mouseenter)': 'onMouseEnter()',
-        '(mouseleave)': 'onMouseLeave()',
-        '(focusin)': 'onFocusIn()',
+        '(mouseleave)': 'onMouseLeave($event)',
+        '(focusin)': 'onFocusIn($event)',
         '(focusout)': 'onFocusOut()',
+        '(document:keydown.escape)': 'onEscape()',
         '(window:resize)': 'onViewportResize()',
     },
 })
@@ -23,9 +25,11 @@ export class IdsTooltip {
     private readonly host = inject(ElementRef<HTMLElement>);
     private readonly overlay = inject(Overlay);
     private readonly destroyRef = inject(DestroyRef);
+    private readonly panelId = `ids-tooltip-${inject(IdentityCounter).getNextIdNumber()}`;
 
     private overlayRef: OverlayRef | undefined;
     private positionStrategy: FlexibleConnectedPositionStrategy | undefined;
+    private describedElement: Element | undefined;
 
     constructor() {
         this.destroyRef.onDestroy(() => this.closePanel());
@@ -35,15 +39,20 @@ export class IdsTooltip {
         this.openPanel();
     }
 
-    protected onMouseLeave(): void {
-        this.closePanel();
+    protected onMouseLeave(event: MouseEvent): void {
+        this.closeUnlessPointerStays(event.relatedTarget);
     }
 
-    protected onFocusIn(): void {
+    protected onFocusIn(event: FocusEvent): void {
         this.openPanel();
+        this.describe(event.target as Element);
     }
 
     protected onFocusOut(): void {
+        this.closePanel();
+    }
+
+    protected onEscape(): void {
         this.closePanel();
     }
 
@@ -56,12 +65,7 @@ export class IdsTooltip {
             return;
         }
 
-        this.positionStrategy = this.overlay
-            .position()
-            .flexibleConnectedTo(this.host)
-            .withPositions(this.getPositions())
-            .withPush(true)
-            .withViewportMargin(OVERLAY_SPACING);
+        this.positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
 
         this.overlayRef = this.overlay.create({
             positionStrategy: this.positionStrategy,
@@ -71,13 +75,54 @@ export class IdsTooltip {
 
         const portal = new ComponentPortal(IdsTooltipPanel);
         const panel = this.overlayRef.attach(portal);
+        panel.setInput('panelId', this.panelId);
         panel.setInput('text', this.idsTooltip());
+
+        this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
+    }
+
+    private closeUnlessPointerStays(pointerTarget: EventTarget | null): void {
+        const staysOnHost = pointerTarget instanceof Node && this.host.nativeElement.contains(pointerTarget);
+        const staysOnPanel = pointerTarget instanceof Node && !!this.overlayRef?.overlayElement.contains(pointerTarget);
+        if (!staysOnHost && !staysOnPanel) {
+            this.closePanel();
+        }
     }
 
     private closePanel(): void {
+        this.removeDescription();
         this.overlayRef?.dispose();
         this.overlayRef = undefined;
         this.positionStrategy = undefined;
+    }
+
+    private describe(element: Element): void {
+        const alreadyNamedByText = element.getAttribute('aria-label') === this.idsTooltip();
+        if (!this.overlayRef || alreadyNamedByText) {
+            return;
+        }
+
+        element.setAttribute('aria-describedby', [...this.getForeignDescribedByIds(element), this.panelId].join(' '));
+        this.describedElement = element;
+    }
+
+    private removeDescription(): void {
+        if (!this.describedElement) {
+            return;
+        }
+
+        const ids = this.getForeignDescribedByIds(this.describedElement);
+        if (ids.length) {
+            this.describedElement.setAttribute('aria-describedby', ids.join(' '));
+        } else {
+            this.describedElement.removeAttribute('aria-describedby');
+        }
+        this.describedElement = undefined;
+    }
+
+    private getForeignDescribedByIds(element: Element): string[] {
+        const ids = element.getAttribute('aria-describedby')?.split(' ') ?? [];
+        return ids.filter((id) => id && id !== this.panelId);
     }
 
     private updatePositions(): void {
@@ -137,15 +182,15 @@ export class IdsTooltip {
     private getPosition(position: Exclude<IdsTooltipPosition, 'auto'>): ConnectedPosition {
         switch (position) {
             case 'top':
-                return { originX: 'center', originY: 'top', overlayX: 'center', overlayY: 'bottom', offsetY: -OVERLAY_SPACING };
+                return { originX: 'center', originY: 'top', overlayX: 'center', overlayY: 'bottom' };
             case 'right':
-                return { originX: 'end', originY: 'center', overlayX: 'start', overlayY: 'center', offsetX: OVERLAY_SPACING };
+                return { originX: 'end', originY: 'center', overlayX: 'start', overlayY: 'center' };
             case 'left':
-                return { originX: 'start', originY: 'center', overlayX: 'end', overlayY: 'center', offsetX: -OVERLAY_SPACING };
+                return { originX: 'start', originY: 'center', overlayX: 'end', overlayY: 'center' };
             case 'bottom':
-                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top', offsetY: OVERLAY_SPACING };
+                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
             default:
-                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top', offsetY: OVERLAY_SPACING };
+                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
         }
     }
 }

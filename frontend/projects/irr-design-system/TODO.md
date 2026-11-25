@@ -5,7 +5,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## accessibility/apg-pattern, accessibility/keyboard
 
 - [ ] `menu`: implement APG Menu Button - roles `menu`/`menuitem`, `aria-haspopup` + `aria-expanded` on the trigger, arrow keys, `Escape`, focus return
-- [ ] `tooltip`: link host and panel with `aria-describedby`; dismiss on `Escape` (WCAG 1.4.13)
 
 ## testing
 

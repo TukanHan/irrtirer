@@ -206,9 +206,9 @@ Use the native element when one exists (`<button>`, `<a>`, `<input>`, `<label>`)
 
 ### apg-pattern · MUST
 
-A composite component (menu, tooltip, tabs, dialog...) implements a named APG pattern: its roles, keyboard support and focus management. The pattern name is stated in the component's JSDoc.
+A component with an overlay or several cooperating parts (menu, tooltip, tabs, dialog...) implements its APG pattern: roles, keyboard support and focus management.
 
-**Check:** compare the component with the APG pattern page.
+**Check:** the spec covers the roles and keyboard interactions of the pattern.
 
 ### accessible-name · MUST
 
