@@ -10,10 +10,10 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
 @Component({
     selector: 'app-ribbon',
     imports: [MatIconModule, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
-    templateUrl: './ribbon.component.html',
-    styleUrl: './ribbon.component.scss',
+    templateUrl: './ribbon.html',
+    styleUrl: './ribbon.scss',
 })
-export class RibbonComponent {
+export class Ribbon {
     public readonly viewportSize = input.required<Size>();
 
     public readonly actions = input.required<RibbonAction[]>();

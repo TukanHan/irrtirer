@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RibbonComponent } from './ribbon.component';
+import { Ribbon } from './ribbon';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { provideTranslateService } from '@ngx-translate/core';
 import { inputBinding } from '@angular/core';
 
-describe('RibbonComponent', () => {
-    let component: RibbonComponent;
-    let fixture: ComponentFixture<RibbonComponent>;
+describe('Ribbon', () => {
+    let component: Ribbon;
+    let fixture: ComponentFixture<Ribbon>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RibbonComponent],
+            imports: [Ribbon],
             providers: [provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(RibbonComponent, {
+        fixture = TestBed.createComponent(Ribbon, {
             bindings: [inputBinding('viewportSize', () => ({ with: 2.32, height: 1.23 })), inputBinding('actions', () => [])],
         });
 

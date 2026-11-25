@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorsComponent } from './sectors.component';
+import { Sectors } from './sectors';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../test-data/sector.data';
@@ -12,19 +12,19 @@ const initialState = {
     mosaicProject: { sectors: [faceSector] },
 };
 
-describe('SectorsComponent', () => {
-    let component: SectorsComponent;
-    let fixture: ComponentFixture<SectorsComponent>;
+describe('Sectors', () => {
+    let component: Sectors;
+    let fixture: ComponentFixture<Sectors>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorsComponent],
+            imports: [Sectors],
             providers: [provideMockStore({ initialState }), { provide: CanvasToolkit, useValue: {} }, provideTranslateService({})],
         }).compileComponents();
 
         vi.spyOn(CanvasToolkit, 'createImageObject').mockResolvedValue(imageObjectMock);
 
-        fixture = TestBed.createComponent(SectorsComponent);
+        fixture = TestBed.createComponent(Sectors);
         component = fixture.componentInstance;
         component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();

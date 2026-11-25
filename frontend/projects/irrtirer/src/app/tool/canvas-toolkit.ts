@@ -9,7 +9,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
 import { MatDialog } from '@angular/material/dialog';
-import { SnapshotOptionsDialogComponent } from './snapshot-options-dialog/snapshot-options-dialog.component';
+import { SnapshotOptionsDialog } from './snapshot-options-dialog/snapshot-options-dialog';
 import { SnapshotOptions } from './snapshot-options-dialog/snapshot-options.interface';
 import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { saveAs } from '../core/helpers/download-helper';
@@ -46,7 +46,7 @@ export class CanvasToolkit {
 
     public openTakeSnapshotDialog(activeCanvas: IActiveCanvas, fileName: string): void {
         this.matDialog
-            .open<SnapshotOptionsDialogComponent, unknown, SnapshotOptions>(SnapshotOptionsDialogComponent)
+            .open<SnapshotOptionsDialog, unknown, SnapshotOptions>(SnapshotOptionsDialog)
             .afterClosed()
             .subscribe((result) => {
                 if (!result) {

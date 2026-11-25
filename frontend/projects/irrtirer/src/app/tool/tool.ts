@@ -4,7 +4,7 @@ import { Store } from '@ngrx/store';
 import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
 import { map } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { RibbonComponent } from './ribbon/ribbon.component';
+import { Ribbon } from './ribbon/ribbon';
 import { CanvasToolkit } from './canvas-toolkit';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActiveCanvas } from '../../../../active-canvas/src/public-api';
@@ -17,12 +17,12 @@ import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
 
 @Component({
     selector: 'app-tool',
-    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, RibbonComponent, ActiveCanvas],
+    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, Ribbon, ActiveCanvas],
     providers: [CanvasToolkit, ProjectArchive],
-    templateUrl: './tool.component.html',
+    templateUrl: './tool.html',
     host: { class: 'flex h-full' },
 })
-export class ToolComponent {
+export class Tool {
     private readonly store = inject(Store);
 
     protected readonly translate = inject(TranslateService);

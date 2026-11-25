@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ToolComponent } from './tool.component';
+import { Tool } from './tool';
 import { provideMockStore } from '@ngrx/store/testing';
 import { RouterModule } from '@angular/router';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('ToolComponent', () => {
-    let component: ToolComponent;
-    let fixture: ComponentFixture<ToolComponent>;
+describe('Tool', () => {
+    let component: Tool;
+    let fixture: ComponentFixture<Tool>;
     const initialState = {
         mosaicProject: {
             config: {
@@ -21,11 +21,11 @@ describe('ToolComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ToolComponent, RouterModule.forRoot([])],
+            imports: [Tool, RouterModule.forRoot([])],
             providers: [provideMockStore({ initialState }), provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ToolComponent);
+        fixture = TestBed.createComponent(Tool);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

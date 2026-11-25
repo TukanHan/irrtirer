@@ -22,10 +22,10 @@ import { RouterOutlet } from '@angular/router';
 @Component({
     selector: 'app-sectors',
     imports: [RouterOutlet],
-    templateUrl: './sectors.component.html',
-    styleUrl: './sectors.component.scss',
+    templateUrl: './sectors.html',
+    styleUrl: './sectors.scss',
 })
-export class SectorsComponent implements OnInit, AfterViewInit, ToolView {
+export class Sectors implements OnInit, AfterViewInit, ToolView {
     private readonly store = inject(Store);
 
     private readonly service = inject(SectorsEventBus);

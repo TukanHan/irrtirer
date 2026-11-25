@@ -7,7 +7,7 @@ import { projectExistGuard } from '../core/guards/project-exist.guard';
 import { RandomTiles } from './tray/random-tiles/random-tiles';
 import { TrayMenu } from './tray/tray-menu/tray-menu';
 import { TileDetail } from './tray/tile-detail/tile-detail';
-import { SectorsComponent } from './sectors/sectors.component';
+import { Sectors } from './sectors/sectors';
 import { MosaicGeneration } from './mosaic-generation/mosaic-generation';
 import { sectorsSelectedGuard } from '../core/guards/sectors-selected.guard';
 import { SectorsContoursList } from './sectors/sectors-contours-list/sectors-contours-list';
@@ -37,7 +37,7 @@ export const toolRoutes: Routes = [
     },
     {
         path: 'sectors',
-        component: SectorsComponent,
+        component: Sectors,
         canActivate: [projectExistGuard],
         children: [
             { path: '', component: SectorsContoursList },

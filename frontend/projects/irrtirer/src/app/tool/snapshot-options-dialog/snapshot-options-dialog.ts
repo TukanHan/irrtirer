@@ -10,10 +10,10 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-snapshot-options-dialog',
     imports: [MatDialogModule, IdsFlatButton, MatSliderModule, MatCheckboxModule, FormField, TranslatePipe],
-    templateUrl: './snapshot-options-dialog.component.html',
-    styleUrl: './snapshot-options-dialog.component.scss',
+    templateUrl: './snapshot-options-dialog.html',
+    styleUrl: './snapshot-options-dialog.scss',
 })
-export class SnapshotOptionsDialogComponent {
+export class SnapshotOptionsDialog {
     protected readonly translate = inject<TranslateService>(TranslateService);
 
     private readonly dialogRef = inject(MatDialogRef);
