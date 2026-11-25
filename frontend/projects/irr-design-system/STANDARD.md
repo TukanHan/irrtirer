@@ -123,7 +123,7 @@ Every boolean input uses `transform: booleanAttribute`, so a bare attribute (`<i
 
 ### capability-interfaces · MUST
 
-A behavior shared by several components, or relied on by another part of the library (a trigger, a key manager), is a capability interface in the internal entry point, named with `-able` (`Clickable`, later e.g. `Focusable`, `Openable`). Every component with that behavior implements it; cooperating parts depend on the interface, not on concrete components. Prefer an existing `@angular/cdk` interface when one fits (e.g. `FocusableOption`).
+What several components share, or what another part of the library relies on (e.g. a menu trigger), is an interface in the internal entry point. Components implement it; the cooperating part depends on the interface, not on concrete components. Prefer an existing `@angular/cdk` interface when one fits.
 
 **Check:** components with a `clicked` output declare `implements Clickable`; same for every other capability interface.
 

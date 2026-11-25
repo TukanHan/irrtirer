@@ -4,7 +4,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## accessibility/apg-pattern, accessibility/keyboard
 
-- [ ] `menu`: implement APG Menu Button - roles `menu`/`menuitem`, `aria-haspopup` + `aria-expanded` on the trigger, arrow keys, `Escape`, focus return
+- [ ] `toolbar` (app): `mat-radio-group` inside `ids-menu` breaks `role="menu"` (only menu items allowed, arrow keys find nothing) - deferred until the library has its own radio; then `menuitemradio` items in `ids-menu` (preferred) or a separate popover
 
 ## testing
 

@@ -1,9 +1,25 @@
+import { afterNextRender, Directive, inject } from '@angular/core';
 import { render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
+import { IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
 import { describe, expect, it, vi } from 'vitest';
 import { IdsFramedButton } from './framed-button';
 
+@Directive({ selector: '[idsFocusNativeControl]' })
+class FocusNativeControl {
+    constructor() {
+        const host = inject(IDS_NATIVE_CONTROL_HOST, { self: true });
+        afterNextRender(() => host.nativeControl().nativeElement.focus());
+    }
+}
+
 describe('IdsFramedButton', () => {
+    it('exposes the native button to library directives', async () => {
+        await render('<ids-framed-button idsFocusNativeControl>Lorem ipsum</ids-framed-button>', { imports: [IdsFramedButton, FocusNativeControl] });
+
+        expect(document.activeElement).toBe(screen.getByRole('button', { name: 'Lorem ipsum' }));
+    });
+
     it('uses the projected content as its accessible name', async () => {
         await render('<ids-framed-button>Lorem ipsum</ids-framed-button>', { imports: [IdsFramedButton] });
 

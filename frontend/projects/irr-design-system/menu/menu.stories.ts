@@ -26,8 +26,8 @@ export const Default: Story = {
                 Open menu
             </ids-framed-button>
             <ids-menu #menu>
-                <ids-menu-item (clicked)="menu.close()">View details</ids-menu-item>
-                <ids-menu-item (clicked)="menu.close()"><mat-icon class="material-symbols-outlined">draw</mat-icon>Rename</ids-menu-item>
+                <ids-menu-item>View details</ids-menu-item>
+                <ids-menu-item><mat-icon class="material-symbols-outlined">draw</mat-icon>Rename</ids-menu-item>
                 <ids-menu-item [disabled]="true">Archive</ids-menu-item>
             </ids-menu>
         `,
