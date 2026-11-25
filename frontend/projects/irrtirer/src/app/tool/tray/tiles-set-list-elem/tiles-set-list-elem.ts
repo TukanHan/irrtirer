@@ -8,30 +8,20 @@ import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { Dialog } from '../../../shared/dialog/dialog';
 import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
-import { TileListElemComponent } from './tile-list-elem/tile-list-elem.component';
+import { TileListElem } from './tile-list-elem/tile-list-elem';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
-import { ScrollableListComponent } from '../../../shared/scrollable-list/scrollable-list.component';
+import { ScrollableList } from '../../../shared/scrollable-list/scrollable-list';
 import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [
-        ExpandablePanel,
-        IdsFlatButton,
-        MatIconModule,
-        IdsMenu,
-        IdsMenuTrigger,
-        IdsMenuItem,
-        TileListElemComponent,
-        TranslatePipe,
-        ScrollableListComponent,
-    ],
-    templateUrl: './tiles-set-list-elem.component.html',
+    imports: [ExpandablePanel, IdsFlatButton, MatIconModule, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList],
+    templateUrl: './tiles-set-list-elem.html',
 })
-export class TilesSetListElemComponent {
+export class TilesSetListElem {
     public readonly tilesSet = input.required<TilesSet>();
 
     protected readonly isOpen = signal<boolean>(false);

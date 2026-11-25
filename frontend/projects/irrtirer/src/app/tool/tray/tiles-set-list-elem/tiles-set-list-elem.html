@@ -11,10 +11,10 @@
 
         <ids-menu #menu>
             @if (tilesSetValue.source === 'generated') {
-                <ids-menu-item (clicked)="navigateToRandomSetAgain()">
-                    <mat-icon class="material-symbols-outlined"> shuffle </mat-icon>
-                    {{ 'tool.tiles.menu.generateAgain' | translate }}
-                </ids-menu-item>
+            <ids-menu-item (clicked)="navigateToRandomSetAgain()">
+                <mat-icon class="material-symbols-outlined"> shuffle </mat-icon>
+                {{ 'tool.tiles.menu.generateAgain' | translate }}
+            </ids-menu-item>
             }
             <ids-menu-item (clicked)="removeTilesSet()">
                 <mat-icon class="material-symbols-outlined"> delete </mat-icon>

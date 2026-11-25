@@ -11,10 +11,10 @@ import { IdsFramedButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-tile-detail',
     imports: [TranslatePipe, IdsFramedButton, ColorPicker, FormsModule],
-    templateUrl: './tile-detail.component.html',
+    templateUrl: './tile-detail.html',
     host: { class: 'flex flex-col gap-3 h-full' },
 })
-export class TileDetailComponent implements OnInit {
+export class TileDetail implements OnInit {
     protected readonly tile = signal<TileModel | null>(null);
 
     private readonly route = inject(ActivatedRoute);

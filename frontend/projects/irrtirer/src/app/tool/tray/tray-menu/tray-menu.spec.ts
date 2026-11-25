@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TrayMenuComponent } from './tray-menu.component';
+import { TrayMenu } from './tray-menu';
 import { provideMockStore } from '@ngrx/store/testing';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
 import { beforeEach, describe, expect, it } from 'vitest';
@@ -11,17 +11,17 @@ const initialState = {
     },
 };
 
-describe('TrayMenuComponent', () => {
-    let component: TrayMenuComponent;
-    let fixture: ComponentFixture<TrayMenuComponent>;
+describe('TrayMenu', () => {
+    let component: TrayMenu;
+    let fixture: ComponentFixture<TrayMenu>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TrayMenuComponent],
+            imports: [TrayMenu],
             providers: [provideTranslateService({}), provideMockStore({ initialState })],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(TrayMenuComponent);
+        fixture = TestBed.createComponent(TrayMenu);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

@@ -5,12 +5,12 @@ import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { ScrollableListComponent } from '../../../../shared/scrollable-list/scrollable-list.component';
+import { ScrollableList } from '../../../../shared/scrollable-list/scrollable-list';
 import { IdsFlatButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [MatIconModule, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableListComponent],
+    imports: [MatIconModule, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
     templateUrl: './sector-list-elem.component.html',
     styleUrl: './sector-list-elem.component.scss',
 })

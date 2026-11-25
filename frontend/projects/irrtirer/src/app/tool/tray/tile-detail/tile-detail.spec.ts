@@ -1,25 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TilesSetListElemComponent } from './tiles-set-list-elem.component';
+import { TileDetail } from './tile-detail';
+import { RouterModule } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { tilesSetMock } from '../../../../test-data/tiles-set.data';
-import { inputBinding } from '@angular/core';
 
-describe('TilesSetListElemComponent', () => {
-    let component: TilesSetListElemComponent;
-    let fixture: ComponentFixture<TilesSetListElemComponent>;
+describe('TileDetail', () => {
+    let component: TileDetail;
+    let fixture: ComponentFixture<TileDetail>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TilesSetListElemComponent],
+            imports: [TileDetail, RouterModule.forRoot([])],
             providers: [provideMockStore(), provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(TilesSetListElemComponent, {
-            bindings: [inputBinding('tilesSet', () => tilesSetMock)],
-        });
-
+        fixture = TestBed.createComponent(TileDetail);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

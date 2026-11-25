@@ -1,5 +1,5 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { ScrollableListComponent } from './scrollable-list.component';
+import { ScrollableList } from './scrollable-list';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,15 +9,15 @@ import { Component } from '@angular/core';
 })
 class DummyItemComponent {}
 
-const meta: Meta<ScrollableListComponent<string>> = {
+const meta: Meta<ScrollableList<string>> = {
     title: 'Komponenty/Scrollable List',
-    component: ScrollableListComponent,
+    component: ScrollableList,
     tags: ['autodocs'],
     decorators: [moduleMetadata({ imports: [DummyItemComponent] })],
 };
 
 export default meta;
-type Story = StoryObj<ScrollableListComponent<string>>;
+type Story = StoryObj<ScrollableList<string>>;
 
 export const Default: Story = {
     args: {

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ScrollableListComponent } from './scrollable-list.component';
+import { ScrollableList } from './scrollable-list';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { Component } from '@angular/core';
 import { provideTranslateService } from '@ngx-translate/core';
@@ -14,14 +14,14 @@ const ITEMS_COUNT = 10;
             </ng-template>
         </app-scrollable-list>
     `,
-    imports: [ScrollableListComponent],
+    imports: [ScrollableList],
 })
 class HostComponent {
     protected readonly count = ITEMS_COUNT;
     protected readonly items = Array.from({ length: 120 }, (_, i) => `Item ${i + 1}`);
 }
 
-describe('ScrollableListComponent', () => {
+describe('ScrollableList', () => {
     let fixture: ComponentFixture<HostComponent>;
 
     beforeEach(async () => {

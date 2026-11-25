@@ -6,10 +6,10 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-scrollable-list',
     imports: [NgTemplateOutlet, IdsFlatButton, TranslatePipe],
-    templateUrl: './scrollable-list.component.html',
-    styleUrl: './scrollable-list.component.scss',
+    templateUrl: './scrollable-list.html',
+    styleUrl: './scrollable-list.scss',
 })
-export class ScrollableListComponent<T> {
+export class ScrollableList<T> {
     public readonly template = contentChild.required<TemplateRef<unknown>>('element');
 
     public readonly pageSize = input<number>(50);

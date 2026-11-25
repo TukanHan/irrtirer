@@ -5,8 +5,8 @@ import { ConfigProjectComponent } from './configuration/config-project/config-pr
 import { TrayComponent } from './tray/tray.component';
 import { projectExistGuard } from '../core/guards/project-exist.guard';
 import { RandomTilesComponent } from './tray/random-tiles/random-tiles.component';
-import { TrayMenuComponent } from './tray/tray-menu/tray-menu.component';
-import { TileDetailComponent } from './tray/tile-detail/tile-detail.component';
+import { TrayMenu } from './tray/tray-menu/tray-menu';
+import { TileDetail } from './tray/tile-detail/tile-detail';
 import { SectorsComponent } from './sectors/sectors.component';
 import { MosaicGenerationComponent } from './mosaic-generation/mosaic-generation.component';
 import { sectorsSelectedGuard } from '../core/guards/sectors-selected.guard';
@@ -29,10 +29,10 @@ export const toolRoutes: Routes = [
         component: TrayComponent,
         canActivate: [projectExistGuard],
         children: [
-            { path: '', component: TrayMenuComponent },
+            { path: '', component: TrayMenu },
             { path: 'random', component: RandomTilesComponent },
             { path: 'random/:id', component: RandomTilesComponent },
-            { path: 'tile/:id', component: TileDetailComponent },
+            { path: 'tile/:id', component: TileDetail },
         ],
     },
     {
