@@ -47,16 +47,21 @@ export default meta;
 type Story = StoryObj<IdsSideNav>;
 
 export const Default: Story = {
-    render: () => ({
+    argTypes: {
+        label: { control: 'text', table: { category: 'Inputs' } },
+    },
+    args: {
+        label: 'Lorem ipsum',
+    },
+    render: (args) => ({
+        props: args,
         template: `
             <div class="side-nav-story">
-                <ids-side-nav>
-                    <nav aria-label="Przykładowa nawigacja">
-                        <ids-side-nav-item link="/project" label="Projekt" icon="folder" />
-                        <ids-side-nav-item link="/layers" label="Warstwy" icon="dashboard" />
-                        <ids-side-nav-item link="/generating" label="Generowanie" icon="rocket_launch" />
-                        <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true" icon="block" />
-                    </nav>
+                <ids-side-nav [label]="label">
+                    <ids-side-nav-item link="/project" label="Projekt" icon="folder" />
+                    <ids-side-nav-item link="/layers" label="Warstwy" icon="dashboard" />
+                    <ids-side-nav-item link="/generating" label="Generowanie" icon="rocket_launch" />
+                    <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true" icon="block" />
                 </ids-side-nav>
                 <router-outlet />
             </div>
@@ -66,11 +71,6 @@ export const Default: Story = {
             .side-nav-story {
                 display: flex;
                 height: 320px;
-            }
-
-            nav {
-                display: flex;
-                flex-direction: column;
             }
             `,
         ],

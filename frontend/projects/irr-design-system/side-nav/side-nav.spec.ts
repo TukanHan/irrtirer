@@ -1,0 +1,18 @@
+import { provideRouter } from '@angular/router';
+import { render, screen } from '@testing-library/angular';
+import { describe, expect, it } from 'vitest';
+import { IdsSideNavItem } from './side-nav-item/side-nav-item';
+import { IdsSideNav } from './side-nav';
+
+describe('IdsSideNav', () => {
+    it('renders a navigation landmark named by the label', async () => {
+        await render('<ids-side-nav label="Lorem"><ids-side-nav-item link="/ipsum" label="Ipsum" icon="folder" /></ids-side-nav>', {
+            imports: [IdsSideNav, IdsSideNavItem],
+            providers: [provideRouter([])],
+        });
+
+        const navigation = screen.getByRole('navigation', { name: 'Lorem' });
+
+        expect(navigation.contains(screen.getByRole('link', { name: 'Ipsum' }))).toBe(true);
+    });
+});

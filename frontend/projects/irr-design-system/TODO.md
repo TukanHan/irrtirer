@@ -11,10 +11,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `flat-button`, `framed-button`: no way to name an icon-only button (`label` → `aria-label`)
 
-## accessibility/native-first
-
-- [ ] `side-nav`: not a `<nav>` landmark
-
 ## testing
 
 - [ ] `action/flat-link/flat-link.spec.ts` does not follow the `unit-tests` skill (raw `TestBed`, `detectChanges()`, queries by tag)
