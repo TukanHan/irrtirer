@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{On as t,m as n}from"./core-CEfZiV_p.js";var r;function i(){return(i=e((()=>{n(),r=new t(`IdsClickable`)})))()}export{i as n,r as t};
