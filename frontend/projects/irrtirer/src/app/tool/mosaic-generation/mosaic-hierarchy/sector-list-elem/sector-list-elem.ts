@@ -11,10 +11,10 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-sector-list-elem',
     imports: [MatIconModule, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
-    templateUrl: './sector-list-elem.component.html',
-    styleUrl: './sector-list-elem.component.scss',
+    templateUrl: './sector-list-elem.html',
+    styleUrl: './sector-list-elem.scss',
 })
-export class SectorListElemComponent {
+export class SectorListElem {
     public readonly sector = input.required<GeneratedSectorModel>();
 
     protected readonly isOpen = signal<boolean>(false);

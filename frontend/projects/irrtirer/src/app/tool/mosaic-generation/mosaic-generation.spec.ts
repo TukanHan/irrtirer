@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MosaicGenerationComponent } from './mosaic-generation.component';
+import { MosaicGeneration } from './mosaic-generation';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { CanvasToolkit } from '../canvas-toolkit';
@@ -21,13 +21,13 @@ export const mockMatSnackBar = {
     dismiss: vi.fn(),
 };
 
-describe('MosaicGenerationComponent', () => {
-    let component: MosaicGenerationComponent;
-    let fixture: ComponentFixture<MosaicGenerationComponent>;
+describe('MosaicGeneration', () => {
+    let component: MosaicGeneration;
+    let fixture: ComponentFixture<MosaicGeneration>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [MosaicGenerationComponent],
+            imports: [MosaicGeneration],
             providers: [
                 provideMockStore({ initialState }),
                 provideTranslateService({}),
@@ -38,7 +38,7 @@ describe('MosaicGenerationComponent', () => {
 
         vi.spyOn(CanvasToolkit, 'createImageObject').mockResolvedValue(imageObjectMock);
 
-        fixture = TestBed.createComponent(MosaicGenerationComponent);
+        fixture = TestBed.createComponent(MosaicGeneration);
         component = fixture.componentInstance;
         component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();

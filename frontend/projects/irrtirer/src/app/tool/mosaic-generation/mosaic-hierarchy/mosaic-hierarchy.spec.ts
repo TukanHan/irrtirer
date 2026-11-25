@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MosaicHierarchyComponent } from './mosaic-hierarchy.component';
+import { MosaicHierarchy } from './mosaic-hierarchy';
 import { MosaicGenerationState } from '../mosaic-generation-state';
 import { describe, beforeEach, it, expect } from 'vitest';
 
-describe('MosaicHierarchyComponent', () => {
-    let component: MosaicHierarchyComponent;
-    let fixture: ComponentFixture<MosaicHierarchyComponent>;
+describe('MosaicHierarchy', () => {
+    let component: MosaicHierarchy;
+    let fixture: ComponentFixture<MosaicHierarchy>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [MosaicHierarchyComponent],
+            imports: [MosaicHierarchy],
             providers: [MosaicGenerationState],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(MosaicHierarchyComponent);
+        fixture = TestBed.createComponent(MosaicHierarchy);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

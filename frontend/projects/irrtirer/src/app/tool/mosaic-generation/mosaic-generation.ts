@@ -9,8 +9,8 @@ import { BehaviorSubject } from 'rxjs';
 import { MosaicGenerationHub } from './mosaic-generation-hub';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationState } from './mosaic-generation-state';
-import { MosaicHierarchyComponent } from './mosaic-hierarchy/mosaic-hierarchy.component';
-import { ProgressInfoComponent } from './progress-info/progress-info.component';
+import { MosaicHierarchy } from './mosaic-hierarchy/mosaic-hierarchy';
+import { ProgressInfo } from './progress-info/progress-info';
 import { InfoState } from './progress-info/progress-info.interface';
 import { GeneratedTileModel } from './mosaic-generation.interface';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
@@ -28,12 +28,12 @@ import { CanvasToolkit } from '../canvas-toolkit';
 
 @Component({
     selector: 'app-mosaic-generation',
-    imports: [MosaicHierarchyComponent, ProgressInfoComponent],
+    imports: [MosaicHierarchy, ProgressInfo],
     providers: [MosaicGenerationState],
-    templateUrl: './mosaic-generation.component.html',
-    styleUrl: './mosaic-generation.component.scss',
+    templateUrl: './mosaic-generation.html',
+    styleUrl: './mosaic-generation.scss',
 })
-export class MosaicGenerationComponent implements OnInit, ToolView {
+export class MosaicGeneration implements OnInit, ToolView {
     private readonly canvasToolkit = inject(CanvasToolkit);
 
     protected readonly isImageVisible = signal<boolean>(false);

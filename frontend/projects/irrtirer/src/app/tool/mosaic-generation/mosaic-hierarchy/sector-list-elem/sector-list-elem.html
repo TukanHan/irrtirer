@@ -5,9 +5,7 @@
             class="sector-action visibility-icon ids-flat-button--size-small button-content-contrast-medium"
             (clicked)="toggleTilesVisibility()"
         >
-            <mat-icon class="material-symbols-outlined">
-                {{ areTilesVisible() ? 'visibility' : 'visibility_off' }}
-            </mat-icon>
+            <mat-icon class="material-symbols-outlined"> {{ areTilesVisible() ? 'visibility' : 'visibility_off' }} </mat-icon>
         </ids-flat-button>
         <ids-flat-button class="sector-action ids-flat-button--size-small button-content-contrast-medium" (clicked)="toggleTilesList()">
             <mat-icon class="chevron" [class.closed]="!isOpen()">keyboard_arrow_up</mat-icon>
@@ -15,18 +13,15 @@
     </div>
 </div>
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
-    @let items = items$() | async;
-    @if (items && items.length) {
-        <app-scrollable-list [items]="items">
-            <ng-template #element let-tile>
-                <div class="list-item-box">
-                    <span class="block-label-sm">
-                        {{ tile.tileTransform.tileId }}
-                    </span>
-                </div>
-            </ng-template>
-        </app-scrollable-list>
+    @let items = items$() | async; @if (items && items.length) {
+    <app-scrollable-list [items]="items">
+        <ng-template #element let-tile>
+            <div class="list-item-box">
+                <span class="block-label-sm"> {{ tile.tileTransform.tileId }} </span>
+            </div>
+        </ng-template>
+    </app-scrollable-list>
     } @else {
-        <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
+    <span class="empty">{{ 'tool.generation.sectorList.noTiles' | translate }}</span>
     }
 </app-expandable-panel>

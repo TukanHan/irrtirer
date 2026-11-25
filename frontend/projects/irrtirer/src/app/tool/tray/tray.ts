@@ -13,10 +13,10 @@ import { CanvasToolkit } from '../canvas-toolkit';
 @Component({
     selector: 'app-tray',
     imports: [RouterOutlet],
-    templateUrl: './tray.component.html',
-    styleUrl: './tray.component.scss',
+    templateUrl: './tray.html',
+    styleUrl: './tray.scss',
 })
-export class TrayComponent implements ToolView, AfterViewInit {
+export class Tray implements ToolView, AfterViewInit {
     private readonly store = inject(Store);
 
     private readonly destroyRef = inject(DestroyRef);

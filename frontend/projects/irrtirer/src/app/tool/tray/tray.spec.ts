@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TrayComponent } from './tray.component';
+import { Tray } from './tray';
 import { provideMockStore } from '@ngrx/store/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tilesSetMock } from '../../../test-data/tiles-set.data';
@@ -12,17 +12,17 @@ const initialState = {
     },
 };
 
-describe('TrayComponent', () => {
-    let component: TrayComponent;
-    let fixture: ComponentFixture<TrayComponent>;
+describe('Tray', () => {
+    let component: Tray;
+    let fixture: ComponentFixture<Tray>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [TrayComponent],
+            imports: [Tray],
             providers: [provideMockStore({ initialState }), { provide: CanvasToolkit, useValue: {} }],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(TrayComponent);
+        fixture = TestBed.createComponent(Tray);
         component = fixture.componentInstance;
         component.sectionEntered(activeCanvas);
         fixture.detectChanges();

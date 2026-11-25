@@ -3,10 +3,10 @@ import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.int
 
 @Component({
     selector: 'app-progress-info',
-    templateUrl: './progress-info.component.html',
-    styleUrl: './progress-info.component.scss',
+    templateUrl: './progress-info.html',
+    styleUrl: './progress-info.scss',
 })
-export class ProgressInfoComponent {
+export class ProgressInfo {
     public readonly infoState = input.required<InfoState>();
 
     protected isProgressInfo(state: InfoState): state is ProgressInfoState {
