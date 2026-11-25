@@ -2,10 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## states/cursor
-
-- [ ] `flat-button`, `framed-button`: disabled uses `cursor: unset`
-
 ## states/current-not-active
 
 - [ ] `flat-link`: `ids-active-link` → `aria-current` only

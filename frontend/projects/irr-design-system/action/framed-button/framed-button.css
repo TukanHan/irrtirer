@@ -104,7 +104,7 @@
 
         &:disabled {
             opacity: 0.5;
-            cursor: unset;
+            cursor: default;
             --ids-button-text-shadow: none;
         }
 
