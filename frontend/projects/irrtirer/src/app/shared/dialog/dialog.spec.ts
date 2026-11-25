@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { DialogComponent } from './dialog.component';
+import { Dialog } from './dialog';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-describe('DialogComponent', () => {
-    let component: DialogComponent;
-    let fixture: ComponentFixture<DialogComponent>;
+describe('Dialog', () => {
+    let component: Dialog;
+    let fixture: ComponentFixture<Dialog>;
     let closeDialog: ReturnType<typeof vi.fn>;
 
     beforeEach(async () => {
         closeDialog = vi.fn();
 
         await TestBed.configureTestingModule({
-            imports: [DialogComponent],
+            imports: [Dialog],
             providers: [
                 provideTranslateService({}),
                 { provide: MAT_DIALOG_DATA, useValue: {} },
@@ -21,7 +21,7 @@ describe('DialogComponent', () => {
             ],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(DialogComponent);
+        fixture = TestBed.createComponent(Dialog);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

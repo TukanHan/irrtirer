@@ -14,7 +14,7 @@ import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-
 import { form, max, min, required, validate, FieldState, submit, FormField } from '@angular/forms/signals';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { DialogComponent } from '../../../shared/dialog/dialog.component';
+import { Dialog } from '../../../shared/dialog/dialog';
 import { MatDialog } from '@angular/material/dialog';
 import { Observable } from 'rxjs';
 import { IdsFramedButton } from 'irr-design-system/action';
@@ -219,6 +219,6 @@ export class RandomTilesComponent implements OnInit {
             message: this.translate.instant('tool.tiles.random.overrideTileSetWarning'),
         };
 
-        return this.dialog.open(DialogComponent, { data: dialogData }).afterClosed();
+        return this.dialog.open(Dialog, { data: dialogData }).afterClosed();
     }
 }

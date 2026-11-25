@@ -4,7 +4,7 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../../../shared/dialog/dialog.component';
+import { Dialog } from '../../../shared/dialog/dialog';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { ConfigurationEventBus } from '../configuration-event-bus';
@@ -53,7 +53,7 @@ export class ConfigMenuComponent {
         };
 
         this.dialog
-            .open(DialogComponent, { data: dialogData })
+            .open(Dialog, { data: dialogData })
             .afterClosed()
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((result) => {
@@ -92,7 +92,7 @@ export class ConfigMenuComponent {
         };
 
         this.dialog
-            .open(DialogComponent, { data: dialogData })
+            .open(Dialog, { data: dialogData })
             .afterClosed()
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((result) => {

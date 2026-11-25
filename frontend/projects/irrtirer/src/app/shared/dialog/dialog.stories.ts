@@ -1,5 +1,5 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { DialogComponent } from './dialog.component';
+import { Dialog } from './dialog';
 import { DialogData } from './dialog-data.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { Component, inject, input } from '@angular/core';
@@ -16,13 +16,13 @@ class DialogHostComponent {
     private readonly dialog = inject(MatDialog);
 
     public openDialog(): void {
-        this.dialog.open(DialogComponent, { data: this.dialogData() }).afterClosed();
+        this.dialog.open(Dialog, { data: this.dialogData() }).afterClosed();
     }
 }
 
-const meta: Meta<DialogComponent> = {
+const meta: Meta<Dialog> = {
     title: 'Komponenty/Dialog',
-    component: DialogComponent,
+    component: Dialog,
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
@@ -32,7 +32,7 @@ const meta: Meta<DialogComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<DialogComponent>;
+type Story = StoryObj<Dialog>;
 
 export const Default: Story = {
     args: {

@@ -1,11 +1,11 @@
 import { Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
-import { ExpandablePanelComponent } from '../../../shared/expandable-panel/expandable-panel.component';
+import { ExpandablePanel } from '../../../shared/expandable-panel/expandable-panel';
 import { MatIconModule } from '@angular/material/icon';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { Observable } from 'rxjs';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { DialogComponent } from '../../../shared/dialog/dialog.component';
+import { Dialog } from '../../../shared/dialog/dialog';
 import { Store } from '@ngrx/store';
 import { MatDialog } from '@angular/material/dialog';
 import { TileListElemComponent } from './tile-list-elem/tile-list-elem.component';
@@ -19,7 +19,7 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-tiles-set-list-elem',
     imports: [
-        ExpandablePanelComponent,
+        ExpandablePanel,
         IdsFlatButton,
         MatIconModule,
         IdsMenu,
@@ -66,7 +66,7 @@ export class TilesSetListElemComponent {
             message: this.translate.instant('tool.tiles.menu.removeTilesSetQuery', { name: this.tilesSet().name }),
         };
 
-        return this.dialog.open(DialogComponent, { data: dialogData }).afterClosed();
+        return this.dialog.open(Dialog, { data: dialogData }).afterClosed();
     }
 
     protected navigateToRandomSetAgain(): void {

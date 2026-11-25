@@ -2,14 +2,14 @@ import { Component, computed, ElementRef, inject, input } from '@angular/core';
 
 @Component({
     selector: 'app-expandable-panel',
-    templateUrl: './expandable-panel.component.html',
-    styleUrl: 'expandable-panel.component.scss',
+    templateUrl: './expandable-panel.html',
+    styleUrl: 'expandable-panel.scss',
     host: {
         '[class.open]': 'isOpen()',
         '[style.--expand-duration]': 'expandDuration() + "ms"',
     },
 })
-export class ExpandablePanelComponent {
+export class ExpandablePanel {
     public readonly isOpen = input.required<boolean>();
 
     private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);

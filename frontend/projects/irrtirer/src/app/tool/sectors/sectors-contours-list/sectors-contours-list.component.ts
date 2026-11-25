@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject } from '@angular/core';
 import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogComponent } from '../../../shared/dialog/dialog.component';
+import { Dialog } from '../../../shared/dialog/dialog';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
@@ -45,7 +45,7 @@ export class SectorsContoursListComponent {
         };
 
         this.dialog
-            .open<DialogComponent, DialogData, boolean>(DialogComponent, { data: dialogData })
+            .open<Dialog, DialogData, boolean>(Dialog, { data: dialogData })
             .afterClosed()
             .pipe(takeUntilDestroyed(this.destroyRef))
             .subscribe((result) => {

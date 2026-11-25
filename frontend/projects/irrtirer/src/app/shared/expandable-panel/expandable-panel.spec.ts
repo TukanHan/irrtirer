@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExpandablePanelComponent } from './expandable-panel.component';
+import { ExpandablePanel } from './expandable-panel';
 import { inputBinding } from '@angular/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('ExpandablePanelComponent', () => {
-    let component: ExpandablePanelComponent;
-    let fixture: ComponentFixture<ExpandablePanelComponent>;
+describe('ExpandablePanel', () => {
+    let component: ExpandablePanel;
+    let fixture: ComponentFixture<ExpandablePanel>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ExpandablePanelComponent],
+            imports: [ExpandablePanel],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ExpandablePanelComponent, {
+        fixture = TestBed.createComponent(ExpandablePanel, {
             bindings: [inputBinding('isOpen', () => true)],
         });
 

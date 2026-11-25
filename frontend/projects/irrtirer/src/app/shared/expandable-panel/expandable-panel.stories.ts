@@ -1,5 +1,5 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { ExpandablePanelComponent } from './expandable-panel.component';
+import { ExpandablePanel } from './expandable-panel';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,13 +9,13 @@ import { Component } from '@angular/core';
 })
 class DummyItemComponent {}
 
-type ExpandablePanelStoryProps = ExpandablePanelComponent & {
+type ExpandablePanelStoryProps = ExpandablePanel & {
     count: number;
 };
 
 const meta: Meta<ExpandablePanelStoryProps> = {
     title: 'Komponenty/Expandable Panel',
-    component: ExpandablePanelComponent,
+    component: ExpandablePanel,
     tags: ['autodocs'],
     decorators: [moduleMetadata({ imports: [DummyItemComponent] })],
 };
