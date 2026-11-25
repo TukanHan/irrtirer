@@ -7,10 +7,6 @@
     </mat-form-field>
 </div>
 <div mat-dialog-actions align="end">
-    <ids-flat-button (clicked)="cancel()">
-        {{ 'common.cancel' | translate }}
-    </ids-flat-button>
-    <ids-flat-button (clicked)="confirm()" [disabled]="!form().valid()">
-        {{ 'common.save' | translate }}
-    </ids-flat-button>
+    <ids-flat-button (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-flat-button>
+    <ids-flat-button (clicked)="confirm()" [disabled]="!form().valid()"> {{ 'common.save' | translate }} </ids-flat-button>
 </div>

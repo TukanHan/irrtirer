@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RandomTilesComponent } from './random-tiles.component';
+import { RandomTiles } from './random-tiles';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
@@ -20,17 +20,17 @@ const mockActivatedRoute = {
     },
 };
 
-describe('RandomTilesComponent', () => {
-    let component: RandomTilesComponent;
-    let fixture: ComponentFixture<RandomTilesComponent>;
+describe('RandomTiles', () => {
+    let component: RandomTiles;
+    let fixture: ComponentFixture<RandomTiles>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [RandomTilesComponent],
+            imports: [RandomTiles],
             providers: [provideMockStore({ initialState }), { provide: ActivatedRoute, useValue: mockActivatedRoute }, provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(RandomTilesComponent);
+        fixture = TestBed.createComponent(RandomTiles);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

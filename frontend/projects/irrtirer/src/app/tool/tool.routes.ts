@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { ConfigurationComponent } from './configuration/configuration.component';
-import { ConfigMenuComponent } from './configuration/config-menu/config-menu.component';
-import { ConfigProjectComponent } from './configuration/config-project/config-project.component';
+import { Configuration } from './configuration/configuration';
+import { ConfigMenu } from './configuration/config-menu/config-menu';
+import { ConfigProject } from './configuration/config-project/config-project';
 import { Tray } from './tray/tray';
 import { projectExistGuard } from '../core/guards/project-exist.guard';
-import { RandomTilesComponent } from './tray/random-tiles/random-tiles.component';
+import { RandomTiles } from './tray/random-tiles/random-tiles';
 import { TrayMenu } from './tray/tray-menu/tray-menu';
 import { TileDetail } from './tray/tile-detail/tile-detail';
 import { SectorsComponent } from './sectors/sectors.component';
@@ -18,10 +18,10 @@ export const toolRoutes: Routes = [
     { path: '', redirectTo: 'config', pathMatch: 'full' },
     {
         path: 'config',
-        component: ConfigurationComponent,
+        component: Configuration,
         children: [
-            { path: '', component: ConfigMenuComponent },
-            { path: 'project', component: ConfigProjectComponent },
+            { path: '', component: ConfigMenu },
+            { path: 'project', component: ConfigProject },
         ],
     },
     {
@@ -30,8 +30,8 @@ export const toolRoutes: Routes = [
         canActivate: [projectExistGuard],
         children: [
             { path: '', component: TrayMenu },
-            { path: 'random', component: RandomTilesComponent },
-            { path: 'random/:id', component: RandomTilesComponent },
+            { path: 'random', component: RandomTiles },
+            { path: 'random/:id', component: RandomTiles },
             { path: 'tile/:id', component: TileDetail },
         ],
     },

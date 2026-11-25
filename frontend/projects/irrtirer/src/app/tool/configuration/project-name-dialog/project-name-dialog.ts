@@ -17,9 +17,9 @@ interface FileNameFormData {
 @Component({
     selector: 'app-project-name-dialog',
     imports: [MatFormFieldModule, MatInputModule, MatDialogModule, TranslatePipe, FormField, IdsFlatButton],
-    templateUrl: './project-name-dialog.component.html',
+    templateUrl: './project-name-dialog.html',
 })
-export class ProjectNameDialogComponent {
+export class ProjectNameDialog {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);
 
     private readonly dialogRef = inject(MatDialogRef);

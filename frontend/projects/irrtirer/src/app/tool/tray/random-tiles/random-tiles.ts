@@ -29,10 +29,10 @@ interface RandomTileSetModel {
 @Component({
     selector: 'app-random-tiles',
     imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsFramedButton, MatAutocompleteModule, FormField],
-    templateUrl: './random-tiles.component.html',
-    styleUrl: './random-tiles.component.scss',
+    templateUrl: './random-tiles.html',
+    styleUrl: './random-tiles.scss',
 })
-export class RandomTilesComponent implements OnInit {
+export class RandomTiles implements OnInit {
     private readonly router = inject(Router);
 
     private readonly route = inject(ActivatedRoute);

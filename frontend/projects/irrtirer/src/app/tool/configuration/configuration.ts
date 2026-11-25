@@ -17,10 +17,10 @@ import { skip } from 'rxjs';
     selector: 'app-configuration',
     imports: [RouterOutlet],
     providers: [ConfigurationEventBus],
-    templateUrl: './configuration.component.html',
-    styleUrl: './configuration.component.scss',
+    templateUrl: './configuration.html',
+    styleUrl: './configuration.scss',
 })
-export class ConfigurationComponent implements ToolView {
+export class Configuration implements ToolView {
     private readonly store = inject(Store);
 
     private readonly destroyRef = inject(DestroyRef);

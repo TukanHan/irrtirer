@@ -1,7 +1,5 @@
 <div class="actions">
-    <ids-framed-button class="flex-1" (clicked)="navigateToMenu()">
-        {{ 'common.return' | translate }}
-    </ids-framed-button>
+    <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" variant="accent" (clicked)="trySaveTileSet()">
         {{ 'tool.tiles.random.randomTiles' | translate }}
     </ids-framed-button>
@@ -13,9 +11,7 @@
         <input matInput type="text" [formField]="form.name" [matAutocomplete]="auto" />
         <mat-autocomplete #auto="matAutocomplete">
             @for (option of existingSeriesNames(); track option) {
-                <mat-option [value]="option" [disabled]="immutableSeriesNames().includes(option)">
-                    {{ option }}
-                </mat-option>
+            <mat-option [value]="option" [disabled]="immutableSeriesNames().includes(option)"> {{ option }} </mat-option>
             }
         </mat-autocomplete>
         <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>

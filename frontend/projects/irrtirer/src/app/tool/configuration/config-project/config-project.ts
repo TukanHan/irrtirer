@@ -24,10 +24,10 @@ interface ProjectConfigForm {
 @Component({
     selector: 'app-config-project',
     imports: [TranslatePipe, IdsFramedButton, MatFormFieldModule, MatInputModule, FormField],
-    templateUrl: './config-project.component.html',
+    templateUrl: './config-project.html',
     host: { class: 'flex flex-col gap-5' },
 })
-export class ConfigProjectComponent {
+export class ConfigProject {
     private readonly snackBar = inject(MatSnackBar);
 
     private readonly router = inject(Router);

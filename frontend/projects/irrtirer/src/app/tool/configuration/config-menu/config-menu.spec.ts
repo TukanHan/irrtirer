@@ -1,9 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ConfigProjectComponent } from './config-project.component';
+import { ConfigMenu } from './config-menu';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
 import { ConfigurationEventBus } from '../configuration-event-bus';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
 
 const initialState = {
     mosaicProject: {
@@ -16,17 +17,17 @@ const initialState = {
     },
 };
 
-describe('ConfigProjectComponent', () => {
-    let component: ConfigProjectComponent;
-    let fixture: ComponentFixture<ConfigProjectComponent>;
+describe('ConfigMenu', () => {
+    let component: ConfigMenu;
+    let fixture: ComponentFixture<ConfigMenu>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ConfigProjectComponent],
-            providers: [provideMockStore({ initialState }), provideTranslateService({}), ConfigurationEventBus],
+            imports: [ConfigMenu],
+            providers: [provideMockStore({ initialState }), provideTranslateService({}), ConfigurationEventBus, ProjectArchive],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ConfigProjectComponent);
+        fixture = TestBed.createComponent(ConfigMenu);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

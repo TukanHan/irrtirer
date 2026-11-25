@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ConfigurationComponent } from './configuration.component';
+import { Configuration } from './configuration';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { CanvasToolkit } from '../canvas-toolkit';
 
-describe('ConfigurationComponent', () => {
-    let component: ConfigurationComponent;
-    let fixture: ComponentFixture<ConfigurationComponent>;
+describe('Configuration', () => {
+    let component: Configuration;
+    let fixture: ComponentFixture<Configuration>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ConfigurationComponent],
+            imports: [Configuration],
             providers: [provideMockStore(), provideTranslateService({}), { provide: CanvasToolkit, useValue: {} }],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ConfigurationComponent);
+        fixture = TestBed.createComponent(Configuration);
         component = fixture.componentInstance;
         component.sectionEntered(activeCanvas, true);
         fixture.detectChanges();

@@ -11,7 +11,7 @@ import { ConfigurationEventBus } from '../configuration-event-bus';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ProjectNameDialogComponent, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog.component';
+import { ProjectNameDialog, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog';
 import { openFilePicker } from '../../../core/helpers/download-helper';
 import { IdsFramedButton } from 'irr-design-system/action';
 
@@ -20,10 +20,10 @@ const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 @Component({
     selector: 'app-config-menu',
     imports: [TranslatePipe, IdsFramedButton],
-    templateUrl: './config-menu.component.html',
+    templateUrl: './config-menu.html',
     host: { class: 'flex flex-col gap-2.5' },
 })
-export class ConfigMenuComponent {
+export class ConfigMenu {
     private readonly store = inject(Store);
 
     protected readonly translate = inject(TranslateService);
@@ -65,7 +65,7 @@ export class ConfigMenuComponent {
     }
 
     protected saveProject(): void {
-        const dialogRef = this.dialog.open<ProjectNameDialogComponent, ProjectNameDialogData, string>(ProjectNameDialogComponent, {
+        const dialogRef = this.dialog.open<ProjectNameDialog, ProjectNameDialogData, string>(ProjectNameDialog, {
             data: { defaultName: DEFAULT_PROJECT_NAME },
         });
         dialogRef.afterClosed().subscribe((projectName: string | undefined) => {
