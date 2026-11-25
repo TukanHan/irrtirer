@@ -34,10 +34,10 @@ import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
         TranslatePipe,
         FormField,
     ],
-    templateUrl: './sector-contour-edition.component.html',
-    styleUrl: './sector-contour-edition.component.scss',
+    templateUrl: './sector-contour-edition.html',
+    styleUrl: './sector-contour-edition.scss',
 })
-export class SectorContourEditionComponent implements OnInit {
+export class SectorContourEdition implements OnInit {
     protected readonly selectedVertex = signal<Vector | null>(null);
 
     private readonly store = inject(Store);

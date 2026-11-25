@@ -1,14 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorContourEditionComponent } from './sector-contour-edition.component';
+import { SectorPropertyEditor } from './sector-property-editor';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideMockStore } from '@ngrx/store/testing';
-import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../../test-data/sector.data';
+import { provideTranslateService } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('SectorContourEditionComponent', () => {
-    let component: SectorContourEditionComponent;
-    let fixture: ComponentFixture<SectorContourEditionComponent>;
+describe('SectorPropertyEditor', () => {
+    let component: SectorPropertyEditor;
+    let fixture: ComponentFixture<SectorPropertyEditor>;
 
     const initialState = {
         mosaicProject: { sectors: [faceSector] },
@@ -24,12 +26,19 @@ describe('SectorContourEditionComponent', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorContourEditionComponent],
-            providers: [provideMockStore({ initialState }), provideTranslateService({}), { provide: ActivatedRoute, useValue: mockActivatedRoute }],
+            imports: [SectorPropertyEditor],
+            providers: [
+                provideMockStore({ initialState }),
+                provideHttpClient(),
+                provideHttpClientTesting(),
+                provideTranslateService({}),
+                { provide: ActivatedRoute, useValue: mockActivatedRoute },
+            ],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(SectorContourEditionComponent);
+        fixture = TestBed.createComponent(SectorPropertyEditor);
         component = fixture.componentInstance;
+
         fixture.detectChanges();
     });
 

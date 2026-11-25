@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosaic-project.model';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { ExtendedPanelComponent } from './extended-panel/extended-panel.component';
+import { ExtendedPanel } from './extended-panel/extended-panel';
 import { TriangulationApi } from '../../../core/services/triangulation-api/triangulation-api';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
@@ -30,11 +30,11 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, IdsTooltip, ExtendedPanelComponent, TranslatePipe, FormField],
-    templateUrl: './sector-property-editor.component.html',
-    styleUrl: './sector-property-editor.component.scss',
+    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, IdsTooltip, ExtendedPanel, TranslatePipe, FormField],
+    templateUrl: './sector-property-editor.html',
+    styleUrl: './sector-property-editor.scss',
 })
-export class SectorPropertyEditorComponent implements OnInit {
+export class SectorPropertyEditor implements OnInit {
     private sector!: SectorSchema;
 
     private readonly store = inject(Store);

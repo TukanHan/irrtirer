@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorsContoursListComponent } from './sectors-contours-list.component';
+import { SectorsContoursList } from './sectors-contours-list';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { faceSector } from '../../../../test-data/sector.data';
@@ -9,17 +9,17 @@ const initialState = {
     mosaicProject: { sectors: [faceSector] },
 };
 
-describe('SectorsContoursListComponent', () => {
-    let component: SectorsContoursListComponent;
-    let fixture: ComponentFixture<SectorsContoursListComponent>;
+describe('SectorsContoursList', () => {
+    let component: SectorsContoursList;
+    let fixture: ComponentFixture<SectorsContoursList>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [SectorsContoursListComponent],
+            imports: [SectorsContoursList],
             providers: [provideMockStore({ initialState }), provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(SectorsContoursListComponent);
+        fixture = TestBed.createComponent(SectorsContoursList);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

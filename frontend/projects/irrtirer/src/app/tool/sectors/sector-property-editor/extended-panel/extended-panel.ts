@@ -6,10 +6,10 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-extended-panel',
     imports: [MatIconModule, IdsFlatButton, ExpandablePanel],
-    templateUrl: './extended-panel.component.html',
-    styleUrl: './extended-panel.component.scss',
+    templateUrl: './extended-panel.html',
+    styleUrl: './extended-panel.scss',
 })
-export class ExtendedPanelComponent implements OnInit {
+export class ExtendedPanel implements OnInit {
     public readonly label = input.required<string>();
 
     public readonly shouldBeOpen = input<boolean>(true);

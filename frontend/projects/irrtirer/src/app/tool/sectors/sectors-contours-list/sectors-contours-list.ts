@@ -18,10 +18,10 @@ import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-sectors-contours-list',
     imports: [IdsFramedButton, MatIconModule, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton],
-    templateUrl: './sectors-contours-list.component.html',
-    styleUrl: './sectors-contours-list.component.scss',
+    templateUrl: './sectors-contours-list.html',
+    styleUrl: './sectors-contours-list.scss',
 })
-export class SectorsContoursListComponent {
+export class SectorsContoursList {
     private readonly store = inject(Store);
 
     protected readonly translate = inject(TranslateService);

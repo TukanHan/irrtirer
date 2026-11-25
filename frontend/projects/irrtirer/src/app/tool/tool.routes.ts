@@ -10,9 +10,9 @@ import { TileDetail } from './tray/tile-detail/tile-detail';
 import { SectorsComponent } from './sectors/sectors.component';
 import { MosaicGeneration } from './mosaic-generation/mosaic-generation';
 import { sectorsSelectedGuard } from '../core/guards/sectors-selected.guard';
-import { SectorsContoursListComponent } from './sectors/sectors-contours-list/sectors-contours-list.component';
-import { SectorPropertyEditorComponent } from './sectors/sector-property-editor/sector-property-editor.component';
-import { SectorContourEditionComponent } from './sectors/sector-contour-edition/sector-contour-edition.component';
+import { SectorsContoursList } from './sectors/sectors-contours-list/sectors-contours-list';
+import { SectorPropertyEditor } from './sectors/sector-property-editor/sector-property-editor';
+import { SectorContourEdition } from './sectors/sector-contour-edition/sector-contour-edition';
 
 export const toolRoutes: Routes = [
     { path: '', redirectTo: 'config', pathMatch: 'full' },
@@ -40,10 +40,10 @@ export const toolRoutes: Routes = [
         component: SectorsComponent,
         canActivate: [projectExistGuard],
         children: [
-            { path: '', component: SectorsContoursListComponent },
-            { path: ':id/property', component: SectorPropertyEditorComponent },
-            { path: ':id/contour', component: SectorContourEditionComponent },
-            { path: 'contour', component: SectorContourEditionComponent },
+            { path: '', component: SectorsContoursList },
+            { path: ':id/property', component: SectorPropertyEditor },
+            { path: ':id/contour', component: SectorContourEdition },
+            { path: 'contour', component: SectorContourEdition },
         ],
     },
     {

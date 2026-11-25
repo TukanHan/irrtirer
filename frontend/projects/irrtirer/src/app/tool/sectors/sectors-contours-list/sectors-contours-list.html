@@ -1,0 +1,42 @@
+<div class="actions">
+    <ids-framed-button variant="accent" (clicked)="navigateToNewSectorPanel()">
+        {{ 'tool.sectors.contourList.addSector' | translate }}
+    </ids-framed-button>
+</div>
+
+@if (sectors().length) {
+<div cdkDropList class="sectors-list" (cdkDropListDropped)="dropSectorBox($event)">
+    @for (sector of sectors(); track sector) {
+    <div class="sector-box" cdkDrag (mousedown)="onSectorSelected(sector)">
+        <div class="list-item-box" [class.selected]="sector === selectedSector">
+            <span class="block-label">{{ sector.name }}</span>
+
+            <ids-flat-button
+                class="sector-actions ids-flat-button--size-small button-content-contrast-medium"
+                (mousedown)="$event.stopPropagation()"
+                [idsMenuTriggerFor]="menu"
+            >
+                <mat-icon>more_vert</mat-icon>
+            </ids-flat-button>
+
+            <ids-menu #menu>
+                <ids-menu-item (clicked)="navigateToContourPanel(sector)">
+                    <mat-icon class="material-symbols-outlined">draw</mat-icon>
+                    {{ 'tool.sectors.contourList.editContour' | translate }}
+                </ids-menu-item>
+                <ids-menu-item (clicked)="navigateToPropertyPanel(sector)">
+                    <mat-icon class="material-symbols-outlined">settings_input_composite</mat-icon>
+                    {{ 'tool.sectors.contourList.editProperties' | translate }}
+                </ids-menu-item>
+                <ids-menu-item (clicked)="openRemoveSectorDialog(sector)">
+                    <mat-icon class="material-symbols-outlined">delete</mat-icon>
+                    {{ 'tool.sectors.contourList.removeSector' | translate }}
+                </ids-menu-item>
+            </ids-menu>
+        </div>
+    </div>
+    }
+</div>
+} @else {
+<div class="no-sectors">{{ 'tool.sectors.contourList.noSectors' | translate }}</div>
+}
