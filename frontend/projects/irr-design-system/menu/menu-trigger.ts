@@ -1,18 +1,16 @@
 import { Directive, ElementRef, inject, input } from '@angular/core';
+import { IDS_CLICKABLE } from 'irr-design-system/core';
 import { IdsMenu } from './menu';
 
 @Directive({
-    selector: 'ids-flat-button[idsMenuTriggerFor], ids-framed-button[idsMenuTriggerFor]',
-    host: {
-        '(clicked)': 'onClicked()',
-    },
+    selector: '[idsMenuTriggerFor]',
 })
 export class IdsMenuTrigger {
     public readonly idsMenuTriggerFor = input.required<IdsMenu>();
 
     private readonly host = inject(ElementRef<HTMLElement>);
 
-    protected onClicked(): void {
-        this.idsMenuTriggerFor().toggle(this.host.nativeElement);
+    constructor() {
+        inject(IDS_CLICKABLE, { self: true }).clicked.subscribe(() => this.idsMenuTriggerFor().toggle(this.host.nativeElement));
     }
 }

@@ -1,10 +1,11 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
-import { Clickable } from 'irr-design-system/core';
+import { Clickable, IDS_CLICKABLE } from 'irr-design-system/core';
 
 export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
 @Component({
     selector: 'ids-framed-button',
+    providers: [{ provide: IDS_CLICKABLE, useExisting: IdsFramedButton }],
     template: `
         <button class="ids-framed-button ids-framed-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
             <span class="ids-framed-button-content ids-button-label">

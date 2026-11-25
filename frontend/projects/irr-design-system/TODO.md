@@ -2,10 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## api/capability-interfaces
-
-- [ ] `menu/menu-trigger.ts`: selector lists concrete buttons instead of relying on `Clickable` - investigate (e.g. inject `Clickable` via token)
-
 ## states/cursor
 
 - [ ] `flat-button`, `framed-button`: disabled uses `cursor: unset`

@@ -1,10 +1,11 @@
 import { booleanAttribute, Component, input, output } from '@angular/core';
-import { Clickable } from 'irr-design-system/core';
+import { Clickable, IDS_CLICKABLE } from 'irr-design-system/core';
 
 export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
 
 @Component({
     selector: 'ids-flat-button',
+    providers: [{ provide: IDS_CLICKABLE, useExisting: IdsFlatButton }],
     template: `
         <button class="ids-flat-action ids-flat-button--{{ variant() }}" [disabled]="disabled()" [type]="type()" (click)="clicked.emit($event)">
             <span class="ids-flat-action-content ids-button-label">
