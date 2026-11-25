@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{Hr as t,Ir as n,Z as r,m as i}from"./core-CEfZiV_p.js";var a;function o(){return(o=e((()=>{t(),i(),a=class{counter=0;getNextIdNumber(){return this.counter+=1,this.counter}},a=n([r()],a)})))()}export{o as n,a as t};

@@ -14,14 +14,21 @@
         "warning": "Warning",
         "fieldRequired": "Field required",
         "nextElements": "Next",
-        "previousElements": "Previous"
+        "previousElements": "Previous",
+        "expand": "Expand",
+        "collapse": "Collapse",
+        "moreActions": "More actions"
     },
     "toolbar": {
         "languages": {
             "polish": "Polish",
             "english": "English"
         },
-        "github": "GitHub"
+        "github": "GitHub",
+        "theme": {
+            "toLight": "Switch to light mode",
+            "toDark": "Switch to dark mode"
+        }
     },
     "aboutProject": {
         "header": "About project",
@@ -154,12 +161,15 @@
                 "nameRequired": "Sector must have a name.",
                 "nameAlreadyInUse": "Sector with this name exists, choose another.",
                 "tooFewVertices": "Sector must have at least 3 vertices.",
-                "linesCannotIntersecting": "Sector lines cannot intersect"
+                "linesCannotIntersecting": "Sector lines cannot intersect",
+                "removeVertex": "Remove vertex"
             }
         },
         "generation": {
             "sectorList": {
-                "noTiles": "There are no tiles"
+                "noTiles": "There are no tiles",
+                "showTiles": "Show tiles",
+                "hideTiles": "Hide tiles"
             },
             "message": {
                 "sectorsMeshGeneration": "Generating sector mesh",

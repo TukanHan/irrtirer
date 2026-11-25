@@ -14,14 +14,21 @@
         "warning": "Uwaga",
         "fieldRequired": "Pole wymagane",
         "nextElements": "Następne",
-        "previousElements": "Poprzednie"
+        "previousElements": "Poprzednie",
+        "expand": "Rozwiń",
+        "collapse": "Zwiń",
+        "moreActions": "Więcej akcji"
     },
     "toolbar": {
         "languages": {
             "polish": "Polski",
             "english": "Angielski"
         },
-        "github": "GitHub"
+        "github": "GitHub",
+        "theme": {
+            "toLight": "Włącz jasny motyw",
+            "toDark": "Włącz ciemny motyw"
+        }
     },
     "aboutProject": {
         "header": "O projekcie",
@@ -154,12 +161,15 @@
                 "nameRequired": "Sektor musi mieć nazwę.",
                 "nameAlreadyInUse": "Sektor o tej nazwie istnieje, wybierz inną.",
                 "tooFewVertices": "Sektor musi mieć co najmniej 3 wierzchołki.",
-                "linesCannotIntersecting": "Linie sektora nie mogą się przecinać"
+                "linesCannotIntersecting": "Linie sektora nie mogą się przecinać",
+                "removeVertex": "Usuń wierzchołek"
             }
         },
         "generation": {
             "sectorList": {
-                "noTiles": "Nie ma kafelków"
+                "noTiles": "Nie ma kafelków",
+                "showTiles": "Pokaż kafelki",
+                "hideTiles": "Ukryj kafelki"
             },
             "message": {
                 "sectorsMeshGeneration": "Generowanie siatki sektorów",
