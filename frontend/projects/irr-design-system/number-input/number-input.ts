@@ -11,14 +11,14 @@ import { IdsFormField } from 'irr-design-system/form';
         [label]="label()"
         [required]="required()"
         [placeholder]="placeholder()"
-        [isEmpty]="!value()"
+        [isEmpty]="value() === null"
         [showError]="showError()"
         [id]="identifier"
     >
         <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
         <input
             [value]="value()"
-            (input)="value.set($any($event.target).value)"
+            (input)="onInput($event)"
             (blur)="touch.emit()"
             [disabled]="disabled()"
             [attr.aria-invalid]="showError() ? 'true' : null"
@@ -31,10 +31,10 @@ import { IdsFormField } from 'irr-design-system/form';
     </ids-form-field>`,
     styleUrl: './number-input.css',
 })
-export class IdsNumberInput implements FormValueControl<number> {
+export class IdsNumberInput implements FormValueControl<number | null> {
     public readonly touch = output();
 
-    public readonly value = model<number>(0);
+    public readonly value = model<number | null>(null);
 
     public readonly label = input<string>('');
 
@@ -51,4 +51,9 @@ export class IdsNumberInput implements FormValueControl<number> {
     protected readonly showError = computed(() => this.invalid() && this.touched() && !this.disabled());
 
     protected readonly identifier = injectControlId((id) => `ids-number-input-${id}`);
+
+    protected onInput(event: Event): void {
+        const number = (event.target as HTMLInputElement).valueAsNumber;
+        this.value.set(Number.isNaN(number) ? null : number);
+    }
 }

@@ -101,6 +101,3 @@ Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point e
 - [ ] `storybook-addon-pseudo-states` - force `:hover`, `:focus-visible`, `:active` to show the `states/state-model` matrix in one story
 - [ ] Story template builder - args in, only the resulting usage code out (check `argsToTemplate` from `@storybook/angular` first)
 
-## Bugs
-
-- [ ] `number-input`: `value.set($any($event.target).value)` writes a string into a `number` model
