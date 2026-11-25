@@ -17,7 +17,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
                 <ng-container [ngTemplateOutlet]="linkContent" />
             </a>
         } @else {
-            <a class="ids-flat-action ids-flat-link" [routerLink]="link()" routerLinkActive="ids-active-link">
+            <a class="ids-flat-action ids-flat-link" [routerLink]="link()" routerLinkActive ariaCurrentWhenActive="page">
                 <ng-container [ngTemplateOutlet]="linkContent" />
             </a>
         }

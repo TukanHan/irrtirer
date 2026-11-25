@@ -2,11 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## states/current-not-active
-
-- [ ] `flat-link`: `ids-active-link` → `aria-current` only
-- [ ] `side-nav-item`: `ids-side-nav-item--active` → `aria-current` only
-
 ## states/aria-state
 
 - [ ] `form-field` sets `ids-text-input--invalid` on itself → `aria-invalid` on the native `<input>` (reflecting `showError()`), styled via `:has()`

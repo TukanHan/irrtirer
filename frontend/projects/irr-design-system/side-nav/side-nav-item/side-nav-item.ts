@@ -10,7 +10,8 @@ import { MatIcon } from '@angular/material/icon';
         <a
             class="ids-side-nav-item"
             [routerLink]="disabled() ? null : link()"
-            routerLinkActive="ids-side-nav-item--active"
+            routerLinkActive
+            ariaCurrentWhenActive="page"
             [attr.aria-disabled]="disabled() ? 'true' : null"
             [attr.aria-label]="label() || null"
             [attr.tabindex]="disabled() ? -1 : null"

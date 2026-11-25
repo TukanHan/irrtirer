@@ -51,7 +51,7 @@
             --ids-side-nav-overlay-opacity: 0.15;
         }
 
-        &.ids-side-nav-item--active {
+        &[aria-current='page'] {
             --irr-icon-font-weight: 300;
             color: var(--ids-text-highlight-color);
             background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
