@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
+import { formFieldErrorsId } from 'irr-design-system/core';
 
 @Component({
     selector: 'ids-form-field',
@@ -19,7 +20,7 @@ import { Component, input } from '@angular/core';
         </div>
 
         @if (showError()) {
-            <div class="ids-form-field-errors">
+            <div class="ids-form-field-errors" [id]="errorsId()">
                 <ng-content select="ids-error" />
             </div>
         }
@@ -33,4 +34,6 @@ export class IdsFormField {
     public readonly id = input.required<string>();
     public readonly isEmpty = input.required<boolean>();
     public readonly showError = input.required<boolean>();
+
+    protected readonly errorsId = computed(() => formFieldErrorsId(this.id()));
 }

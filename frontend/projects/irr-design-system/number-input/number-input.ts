@@ -1,6 +1,6 @@
 import { booleanAttribute, Component, computed, input, model, output } from '@angular/core';
 import { FormValueControl } from '@angular/forms/signals';
-import { IdentityGenerator, injectControlId } from 'irr-design-system/core';
+import { formFieldErrorsId, IdentityGenerator, injectControlId } from 'irr-design-system/core';
 import { IdsFormField } from 'irr-design-system/form';
 
 @Component({
@@ -21,7 +21,9 @@ import { IdsFormField } from 'irr-design-system/form';
             (input)="onInput($event)"
             (blur)="touch.emit()"
             [disabled]="disabled()"
+            [required]="required()"
             [attr.aria-invalid]="showError() ? 'true' : null"
+            [attr.aria-describedby]="showError() ? errorsId : null"
             type="number"
             class="input"
             [id]="identifier"
@@ -51,6 +53,8 @@ export class IdsNumberInput implements FormValueControl<number | null> {
     protected readonly showError = computed(() => this.invalid() && this.touched() && !this.disabled());
 
     protected readonly identifier = injectControlId((id) => `ids-number-input-${id}`);
+
+    protected readonly errorsId = formFieldErrorsId(this.identifier);
 
     protected onInput(event: Event): void {
         const number = (event.target as HTMLInputElement).valueAsNumber;

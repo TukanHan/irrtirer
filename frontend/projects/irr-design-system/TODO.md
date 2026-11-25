@@ -7,11 +7,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `menu`: implement APG Menu Button - roles `menu`/`menuitem`, `aria-haspopup` + `aria-expanded` on the trigger, arrow keys, `Escape`, focus return
 - [ ] `tooltip`: link host and panel with `aria-describedby`; dismiss on `Escape` (WCAG 1.4.13)
 
-## accessibility/form-control-a11y
-
-- [ ] `text-input`, `number-input`: link `ids-error` to the input via `aria-describedby`
-- [ ] `text-input`, `number-input`: pass `required` to the native input
-
 ## accessibility/accessible-name
 
 - [ ] `flat-button`, `framed-button`: no way to name an icon-only button (`label` → `aria-label`)

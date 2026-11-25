@@ -7,7 +7,7 @@
         pointer-events: none;
 
         &[data-required]::after {
-            content: '*';
+            content: '*' / '';
             margin-inline-start: 0.125rem;
         }
     }
