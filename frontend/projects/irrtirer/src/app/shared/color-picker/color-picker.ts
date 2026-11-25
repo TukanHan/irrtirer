@@ -1,24 +1,24 @@
 import { Component, effect, forwardRef, input, model, signal } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { ColorSelectionPanelComponent } from './color-selection-panel/color-selection-panel.component';
+import { ColorSelectionPanel } from './color-selection-panel/color-selection-panel';
 import { ColorInstance } from 'color';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FormValueControl } from '@angular/forms/signals';
 
 @Component({
     selector: 'app-color-picker',
-    imports: [OverlayModule, ColorSelectionPanelComponent],
+    imports: [OverlayModule, ColorSelectionPanel],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => ColorPickerComponent),
+            useExisting: forwardRef(() => ColorPicker),
             multi: true,
         },
     ],
-    templateUrl: './color-picker.component.html',
-    styleUrl: './color-picker.component.scss',
+    templateUrl: './color-picker.html',
+    styleUrl: './color-picker.scss',
 })
-export class ColorPickerComponent implements ControlValueAccessor, FormValueControl<string> {
+export class ColorPicker implements ControlValueAccessor, FormValueControl<string> {
     public readonly label = input.required<string>();
 
     public readonly value = model<string>('#000000');

@@ -1,21 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ColorSelectionPanelComponent } from './color-selection-panel.component';
+import { ColorSlider } from './color-slider';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { inputBinding } from '@angular/core';
 
-describe('ColorSelectionPanelComponent', () => {
-    let component: ColorSelectionPanelComponent;
-    let fixture: ComponentFixture<ColorSelectionPanelComponent>;
+describe('ColorSlider', () => {
+    let component: ColorSlider;
+    let fixture: ComponentFixture<ColorSlider>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ColorSelectionPanelComponent],
+            imports: [ColorSlider],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ColorSelectionPanelComponent, {
-            bindings: [inputBinding('color', () => '#ff0000')],
+        fixture = TestBed.createComponent(ColorSlider, {
+            bindings: [inputBinding('value', () => 0)],
         });
-
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

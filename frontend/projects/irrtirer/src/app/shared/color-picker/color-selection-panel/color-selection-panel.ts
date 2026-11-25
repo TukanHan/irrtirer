@@ -1,19 +1,19 @@
 import { Component, computed, input, linkedSignal, OnDestroy, output } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { ColorSliderComponent } from './color-slider/color-slider.component';
-import { ColorCanvasComponent } from './color-canvas/color-canvas.component';
+import { ColorSlider } from './color-slider/color-slider';
+import { ColorCanvas } from './color-canvas/color-canvas';
 import Color, { ColorInstance } from 'color';
 
 const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 
 @Component({
     selector: 'app-color-selection-panel',
-    imports: [MatInputModule, FormsModule, ColorSliderComponent, ColorCanvasComponent],
-    templateUrl: './color-selection-panel.component.html',
-    styleUrl: './color-selection-panel.component.scss',
+    imports: [MatInputModule, FormsModule, ColorSlider, ColorCanvas],
+    templateUrl: './color-selection-panel.html',
+    styleUrl: './color-selection-panel.scss',
 })
-export class ColorSelectionPanelComponent implements OnDestroy {
+export class ColorSelectionPanel implements OnDestroy {
     public readonly color = input.required<ColorInstance, string>({
         transform: (value: string) => Color(value),
     });

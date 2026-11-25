@@ -6,7 +6,7 @@ import { MatInputModule } from '@angular/material/input';
 import { Store } from '@ngrx/store';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { MatIconModule } from '@angular/material/icon';
-import { ColorPickerComponent } from '../../../shared/color-picker/color-picker.component';
+import { ColorPicker } from '../../../shared/color-picker/color-picker';
 import { SectorsEventBus } from '../sectors-event-bus';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -30,7 +30,7 @@ import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
         MatFormFieldModule,
         MatInputModule,
         MatIconModule,
-        ColorPickerComponent,
+        ColorPicker,
         TranslatePipe,
         FormField,
     ],

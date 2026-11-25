@@ -1,23 +1,21 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ColorCanvasComponent } from './color-canvas.component';
+import { ColorPicker } from './color-picker';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { inputBinding } from '@angular/core';
 
-describe('ColorCanvasComponent', () => {
-    let component: ColorCanvasComponent;
-    let fixture: ComponentFixture<ColorCanvasComponent>;
+describe('ColorPicker', () => {
+    let component: ColorPicker;
+    let fixture: ComponentFixture<ColorPicker>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ColorCanvasComponent],
+            imports: [ColorPicker],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ColorCanvasComponent, {
-            bindings: [inputBinding('hValue', () => 0.5), inputBinding('sValue', () => 0.87), inputBinding('vValue', () => 0.72)],
+        fixture = TestBed.createComponent(ColorPicker, {
+            bindings: [inputBinding('label', () => 'Color')],
         });
-
         component = fixture.componentInstance;
-
         fixture.detectChanges();
     });
 

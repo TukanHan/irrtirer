@@ -9,10 +9,10 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-slider',
-    templateUrl: './color-slider.component.html',
-    styleUrl: './color-slider.component.scss',
+    templateUrl: './color-slider.html',
+    styleUrl: './color-slider.scss',
 })
-export class ColorSliderComponent implements AfterViewInit {
+export class ColorSlider implements AfterViewInit {
     public readonly value = model<number>(0);
 
     protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');

@@ -10,10 +10,10 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-canvas',
-    templateUrl: './color-canvas.component.html',
-    styleUrl: './color-canvas.component.scss',
+    templateUrl: './color-canvas.html',
+    styleUrl: './color-canvas.scss',
 })
-export class ColorCanvasComponent implements AfterViewInit {
+export class ColorCanvas implements AfterViewInit {
     public readonly hValue = input.required<number>();
 
     public readonly sValue = model.required<number>();
