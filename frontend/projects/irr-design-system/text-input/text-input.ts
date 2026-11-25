@@ -1,4 +1,4 @@
-import { Component, input, model, output } from '@angular/core';
+import { booleanAttribute, Component, input, model, output } from '@angular/core';
 import { FormValueControl } from '@angular/forms/signals';
 import { IdentityGenerator, injectControlId } from 'irr-design-system/core';
 import { IdsFormField } from 'irr-design-system/form';
@@ -39,15 +39,15 @@ export class IdsTextInput implements FormValueControl<string> {
 
     public readonly label = input<string>('');
 
-    public readonly disabled = input<boolean>(false);
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
 
-    public readonly required = input<boolean>(false);
+    public readonly required = input<boolean>(false, { transform: booleanAttribute });
 
     public readonly placeholder = input<string>('');
 
-    public readonly invalid = input<boolean>(false);
+    public readonly invalid = input<boolean>(false, { transform: booleanAttribute });
 
-    public readonly touched = input<boolean>(false);
+    public readonly touched = input<boolean>(false, { transform: booleanAttribute });
 
     protected readonly identifier = injectControlId((id) => `ids-text-input-${id}`);
 }

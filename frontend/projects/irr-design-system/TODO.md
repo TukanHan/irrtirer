@@ -2,11 +2,6 @@
 
 Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
-## api/boolean-attribute
-
-- [ ] `text-input`: `disabled`, `required`, `invalid`, `touched`
-- [ ] `number-input`: `disabled`, `required`, `invalid`, `touched`
-
 ## api/capability-interfaces
 
 - [ ] `menu/menu-trigger.ts`: selector lists concrete buttons instead of relying on `Clickable` - investigate (e.g. inject `Clickable` via token)
