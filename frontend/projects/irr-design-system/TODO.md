@@ -7,10 +7,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `menu`: implement APG Menu Button - roles `menu`/`menuitem`, `aria-haspopup` + `aria-expanded` on the trigger, arrow keys, `Escape`, focus return
 - [ ] `tooltip`: link host and panel with `aria-describedby`; dismiss on `Escape` (WCAG 1.4.13)
 
-## accessibility/accessible-name
-
-- [ ] `flat-button`, `framed-button`: no way to name an icon-only button (`label` → `aria-label`)
-
 ## testing
 
 - [ ] `action/flat-link/flat-link.spec.ts` does not follow the `unit-tests` skill (raw `TestBed`, `detectChanges()`, queries by tag)
@@ -56,6 +52,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
     - `reduced-motion`: animations respect `prefers-reduced-motion` (`framed-button` border animation does not)
 - [ ] `color-scheme`: `light-dark()` needs it, the library never sets it (relies on the app) - set it on the theme classes or document it as the app's duty
 
+## Open: Accessibility
+
+- [ ] Toggle state on buttons: `flat-button` cannot expose `aria-expanded` (disclosure) or `aria-pressed` (toggle), so app toggles (chevrons, tile visibility, theme) swap their `label` instead - consider state inputs with a stable label
+
 ## Design decisions to make (UX sessions)
 
 - [ ] Overlay intensity per state (currently hover 0.05, focus 0.1, active 0.15)
@@ -91,4 +91,3 @@ Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point e
 
 - [ ] `storybook-addon-pseudo-states` - force `:hover`, `:focus-visible`, `:active` to show the `states/state-model` matrix in one story
 - [ ] Story template builder - args in, only the resulting usage code out (check `argsToTemplate` from `@storybook/angular` first)
-

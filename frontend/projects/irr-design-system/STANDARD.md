@@ -212,7 +212,7 @@ A composite component (menu, tooltip, tabs, dialog...) implements a named APG pa
 
 ### accessible-name · MUST
 
-Every interactive component has an accessible name. When its content is not text (e.g. icon only), the `label` input is rendered as `aria-label`.
+Every interactive component has an accessible name. When its content is not text (e.g. icon only), the `ariaLabel` input is rendered as `aria-label`. The `label` input is reserved for visible text.
 
 **Check:** review templates; icon-only stories.
 

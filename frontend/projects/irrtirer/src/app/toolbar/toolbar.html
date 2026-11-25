@@ -8,7 +8,12 @@
 
 <span class="flex-1"></span>
 
-<ids-flat-button variant="accent" class="toolbar-item mode" (clicked)="toggleTheme()">
+<ids-flat-button
+    variant="accent"
+    class="toolbar-item mode"
+    [ariaLabel]="(themeMode() === 'dark' ? 'toolbar.theme.toLight' : 'toolbar.theme.toDark') | translate"
+    (clicked)="toggleTheme()"
+>
     <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
 </ids-flat-button>
 

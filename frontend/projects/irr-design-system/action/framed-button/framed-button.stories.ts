@@ -9,6 +9,7 @@ const meta: Meta<IdsFramedButtonArgs> = {
     tags: ['autodocs'],
     argTypes: {
         disabled: { control: 'boolean', table: { category: 'Inputs' } },
+        ariaLabel: { control: 'text', table: { category: 'Inputs' } },
         clicked: { action: 'clicked', table: { category: 'Outputs' } },
         variant: {
             control: 'inline-radio',
@@ -35,13 +36,14 @@ type Story = StoryObj<IdsFramedButtonArgs>;
 export const Default: Story = {
     args: {
         text: 'Click me',
+        ariaLabel: '',
         disabled: false,
         variant: 'neutral',
         type: 'button',
         hostDisplay: 'block',
     },
     render: (args) => {
-        const button = `<ids-framed-button [disabled]="disabled" [variant]="variant" (clicked)="clicked($event)">{{ text }}</ids-framed-button>`;
+        const button = `<ids-framed-button [ariaLabel]="ariaLabel" [disabled]="disabled" [variant]="variant" (clicked)="clicked($event)">{{ text }}</ids-framed-button>`;
         const template = args.hostDisplay === 'flex' ? `<div class="resizable-container" style="display: flex;">${button}</div>` : button;
 
         return {

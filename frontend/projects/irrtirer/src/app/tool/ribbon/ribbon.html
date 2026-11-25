@@ -5,6 +5,7 @@
     [disabled]="action.visibility() === 'disabled'"
     [class.active]="action.visibility() === 'on'"
     (click)="onClick(action)"
+    [ariaLabel]="translate.instant(action.tooltipKey)"
     [idsTooltip]="translate.instant(action.tooltipKey)"
     idsTooltipPosition="bottom"
 >

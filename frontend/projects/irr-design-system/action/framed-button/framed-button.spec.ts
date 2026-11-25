@@ -10,6 +10,12 @@ describe('IdsFramedButton', () => {
         expect(screen.queryByRole('button', { name: 'Lorem ipsum' })).not.toBeNull();
     });
 
+    it('uses ariaLabel as its accessible name', async () => {
+        await render('<ids-framed-button ariaLabel="Dolor"><span aria-hidden="true">sit</span></ids-framed-button>', { imports: [IdsFramedButton] });
+
+        expect(screen.queryByRole('button', { name: 'Dolor' })).not.toBeNull();
+    });
+
     it('emits clicked with the mouse event when clicked', async () => {
         const user = userEvent.setup();
         const onClick = vi.fn();

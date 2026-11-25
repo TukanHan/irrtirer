@@ -1,6 +1,10 @@
 <div class="label">
     <span class="label-content">{{ label() }}</span>
-    <ids-flat-button class="toggle-button ids-flat-button--size-small" (clicked)="toggle()">
+    <ids-flat-button
+        class="toggle-button ids-flat-button--size-small"
+        [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
+        (clicked)="toggle()"
+    >
         <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
     </ids-flat-button>
 </div>

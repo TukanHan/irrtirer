@@ -1,26 +1,19 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideTranslateService } from '@ngx-translate/core';
+import { render, screen } from '@testing-library/angular';
+import userEvent from '@testing-library/user-event';
+import { describe, expect, it } from 'vitest';
 import { ExtendedPanel } from './extended-panel';
-import { inputBinding } from '@angular/core';
-import { beforeEach, describe, expect, it } from 'vitest';
 
 describe('ExtendedPanel', () => {
-    let component: ExtendedPanel;
-    let fixture: ComponentFixture<ExtendedPanel>;
-
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
+    it('labels the toggle button with the action it performs', async () => {
+        const user = userEvent.setup();
+        await render('<app-extended-panel label="Lorem">Ipsum</app-extended-panel>', {
             imports: [ExtendedPanel],
-        }).compileComponents();
-
-        fixture = TestBed.createComponent(ExtendedPanel, {
-            bindings: [inputBinding('label', () => 'section')],
+            providers: [provideTranslateService({})],
         });
 
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+        await user.click(screen.getByRole('button', { name: 'common.collapse' }));
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
+        expect(screen.queryByRole('button', { name: 'common.expand' })).not.toBeNull();
     });
 });

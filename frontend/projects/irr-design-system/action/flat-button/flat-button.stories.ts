@@ -21,6 +21,7 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
     ],
     argTypes: {
         disabled: { control: 'boolean', table: { category: 'Inputs' } },
+        ariaLabel: { control: 'text', table: { category: 'Inputs' } },
         clicked: { action: 'clicked', table: { category: 'Outputs' } },
         variant: {
             control: 'inline-radio',
@@ -67,6 +68,7 @@ type Story = StoryObj<IdsFlatButtonStoryArgs>;
 export const Default: Story = {
     args: {
         layout: 'Icon',
+        ariaLabel: 'Lorem ipsum',
         disabled: false,
         iconName: 'edit',
         text: 'Edytuj',
@@ -79,6 +81,7 @@ export const Default: Story = {
         template: `
             <ids-flat-button
                 [class]="className"
+                [ariaLabel]="ariaLabel"
                 [disabled]="disabled"
                 [variant]="variant"
                 [type]="type"

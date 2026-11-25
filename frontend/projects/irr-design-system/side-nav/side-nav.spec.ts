@@ -5,8 +5,8 @@ import { IdsSideNavItem } from './side-nav-item/side-nav-item';
 import { IdsSideNav } from './side-nav';
 
 describe('IdsSideNav', () => {
-    it('renders a navigation landmark named by the label', async () => {
-        await render('<ids-side-nav label="Lorem"><ids-side-nav-item link="/ipsum" label="Ipsum" icon="folder" /></ids-side-nav>', {
+    it('renders a navigation landmark named by ariaLabel', async () => {
+        await render('<ids-side-nav ariaLabel="Lorem"><ids-side-nav-item link="/ipsum" label="Ipsum" icon="folder" /></ids-side-nav>', {
             imports: [IdsSideNav, IdsSideNavItem],
             providers: [provideRouter([])],
         });

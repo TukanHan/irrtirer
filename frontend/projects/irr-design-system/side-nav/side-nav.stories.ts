@@ -48,16 +48,16 @@ type Story = StoryObj<IdsSideNav>;
 
 export const Default: Story = {
     argTypes: {
-        label: { control: 'text', table: { category: 'Inputs' } },
+        ariaLabel: { control: 'text', table: { category: 'Inputs' } },
     },
     args: {
-        label: 'Lorem ipsum',
+        ariaLabel: 'Lorem ipsum',
     },
     render: (args) => ({
         props: args,
         template: `
             <div class="side-nav-story">
-                <ids-side-nav [label]="label">
+                <ids-side-nav [ariaLabel]="ariaLabel">
                     <ids-side-nav-item link="/project" label="Projekt" icon="folder" />
                     <ids-side-nav-item link="/layers" label="Warstwy" icon="dashboard" />
                     <ids-side-nav-item link="/generating" label="Generowanie" icon="rocket_launch" />
