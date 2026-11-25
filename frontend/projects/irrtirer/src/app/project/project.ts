@@ -4,7 +4,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 @Component({
     selector: 'app-project',
     imports: [TranslatePipe],
-    templateUrl: './project.component.html',
+    templateUrl: './project.html',
     host: { class: 'flex h-full items-center justify-center bg-surface' },
 })
-export class ProjectComponent {}
+export class Project {}

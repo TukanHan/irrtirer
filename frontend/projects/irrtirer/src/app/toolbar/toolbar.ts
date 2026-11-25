@@ -15,10 +15,10 @@ import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
 @Component({
     selector: 'app-toolbar',
     imports: [MatIconModule, IconSvgModuleModule, MatRadioModule, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
-    templateUrl: './toolbar.component.html',
-    styleUrl: './toolbar.component.scss',
+    templateUrl: './toolbar.html',
+    styleUrl: './toolbar.scss',
 })
-export class ToolbarComponent implements OnInit {
+export class Toolbar implements OnInit {
     private readonly translate = inject(TranslateService);
 
     private readonly themeSwitcher = inject(ThemeSwitcher);

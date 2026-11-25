@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { AuthorComponent } from './author/author.component';
-import { ProjectComponent } from './project/project.component';
+import { Author } from './author/author';
+import { Project } from './project/project';
 import { Tool } from './tool/tool';
 
 export const routes: Routes = [
@@ -10,6 +10,6 @@ export const routes: Routes = [
         component: Tool,
         loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),
     },
-    { path: 'project', component: ProjectComponent },
-    { path: 'author', component: AuthorComponent },
+    { path: 'project', component: Project },
+    { path: 'author', component: Author },
 ];

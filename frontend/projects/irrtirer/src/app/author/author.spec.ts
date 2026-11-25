@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { AuthorComponent } from './author.component';
+import { Author } from './author';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-describe('AuthorComponent', () => {
-    let component: AuthorComponent;
-    let fixture: ComponentFixture<AuthorComponent>;
+describe('Author', () => {
+    let component: Author;
+    let fixture: ComponentFixture<Author>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [AuthorComponent],
+            imports: [Author],
             providers: [provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(AuthorComponent);
+        fixture = TestBed.createComponent(Author);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

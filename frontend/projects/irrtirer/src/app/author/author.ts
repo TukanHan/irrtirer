@@ -5,9 +5,9 @@ import { SentenceToWordPipe } from '../core/pipes/sentence-to-word.pipe';
 @Component({
     selector: 'app-author',
     imports: [TranslatePipe, SentenceToWordPipe],
-    templateUrl: './author.component.html',
+    templateUrl: './author.html',
     host: { class: 'flex h-full items-center justify-center bg-surface' },
 })
-export class AuthorComponent {
+export class Author {
     protected readonly translate = inject(TranslateService);
 }

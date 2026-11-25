@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProjectComponent } from './project.component';
+import { Project } from './project';
 import { provideTranslateService } from '@ngx-translate/core';
 import { describe, beforeEach, it, expect } from 'vitest';
 
-describe('ProjectComponent', () => {
-    let component: ProjectComponent;
-    let fixture: ComponentFixture<ProjectComponent>;
+describe('Project', () => {
+    let component: Project;
+    let fixture: ComponentFixture<Project>;
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [ProjectComponent],
+            imports: [Project],
             providers: [provideTranslateService({})],
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ProjectComponent);
+        fixture = TestBed.createComponent(Project);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
