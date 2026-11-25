@@ -27,7 +27,7 @@ Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; loc
 
 ## Collaboration
 
-- A component exported from a library's public API always gets a `*.stories.ts`. For any other component, ask whether it needs one; never create it unasked.
+- Which library components get a `*.stories.ts` is decided by the library's own rules (`irr-design-system`: `STANDARD.md`). For any other component, ask whether it needs one; never create it unasked.
 
 ## Commands (run from `frontend/`)
 
