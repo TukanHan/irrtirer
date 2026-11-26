@@ -206,9 +206,9 @@ Use the native element when one exists (`<button>`, `<a>`, `<input>`, `<label>`)
 
 ### apg-pattern · MUST
 
-A component with an overlay or several cooperating parts (menu, tooltip, tabs, dialog...) implements its APG pattern: roles, keyboard support and focus management.
+A component with an overlay or several cooperating parts (menu, tooltip, tabs, dialog...) implements its APG pattern: roles, keyboard support and focus management. Its class JSDoc links the pattern: `Implements the [APG <Name> pattern](<url>).` A component without an APG pattern has no such line.
 
-**Check:** the spec covers the roles and keyboard interactions of the pattern.
+**Check:** the spec covers the roles and keyboard interactions of the pattern; the class JSDoc links it.
 
 ### accessible-name · MUST
 
@@ -237,6 +237,22 @@ How to write tests: the `unit-tests` skill. The library ships no CDK component h
 A component that is created or changed gets its spec created or updated. The spec MUST cover data in and out (inputs, outputs, form `value`) and SHOULD cover states from `states/state-model`, the accessible name and keyboard support.
 
 **Check:** changed components have a changed or new `*.spec.ts`.
+
+## Documentation
+
+JSDoc of the public API is what Storybook shows in the docs page and the args table.
+
+### class-doc · MUST
+
+Every public component and directive has a JSDoc saying in one or two sentences what it is. It stands above the decorator.
+
+**Check:** grep `@Component(`/`@Directive(` in public entry points without a JSDoc right above.
+
+### member-doc · SHOULD
+
+A public input, model or output has a JSDoc when it tells more than its name and type: what changes on screen, when it is emitted. Members set by Signal Forms are documented like any other and add `Set by the form when bound with [formField].` The JSDoc of a model also reads well as the description of its `<name>Change` event.
+
+**Check:** the args table in the component's docs page.
 
 ## Storybook
 

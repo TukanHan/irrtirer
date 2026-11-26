@@ -23,6 +23,7 @@ The project is small, so docs stay lightweight:
 - One story per component: `Default`, a playground with all controls.
 - Add another story only for a state the controls cannot reach, or a `States` story (below) where the library's rules ask for one.
 - The code snippet under the story should show real usage for the chosen args. Build the `render` template with `elem()` from `storybook-doc/template-builder`: hard-code values with `withInput` (pass the component default to omit it), bind only what must stay live (`withBinding`), keep `Playground` args out of the bindings.
+- Bind every output of the component in `Default` with `withOutput`, so its events show in the Actions panel.
 - Markup that only sets up the story (layout wrappers, router outlets) goes to `componentWrapperDecorator`, with `parameters.docs.source.excludeDecorators: true`, so the snippet shows the component alone.
 - Use a story-only wrapper component only when unavoidable (e.g. Signal Forms setup), because it hides the usage.
 
@@ -44,19 +45,24 @@ Shows the component in each of its states at once, including pointer and keyboar
 
 ## argTypes
 
-Every `argTypes` entry sets `table.category`. Use only these categories, declared in this order:
+Use only these categories, in this order:
 
 | Category     | Contains                                                                                    |
 | ------------ | ------------------------------------------------------------------------------------------- |
-| `Playground` | story-only args: initial value, projected content, prefix/suffix toggles, layout variants   |
-| `Inputs`     | `input()` and `model()`                                                                     |
-| `Outputs`    | `output()`, as `action`                                                                     |
-| `Class`      | host modifier classes: `className` arg, `select` with a `null` option, bound with `[class]` |
+| `playground` | story-only args: projected content, prefix/suffix toggles, layout variants                  |
+| `inputs`     | `input()` and `model()`                                                                     |
+| `outputs`    | `output()`, as `action`                                                                     |
+| `class`      | host modifier classes: `className` arg, `select` with a `null` option, bound with `[class]` |
 
-Not every member needs an entry - add one when it helps to try out or understand the component.
-Hide args that do not apply with `if`.
-Type the args as the component plus story-only args: `type XStoryArgs = X & { ... }`.
-Every arg in `argTypes` gets a value in the `Default` story's `args`.
+Compodoc fills `inputs` and `outputs` from the component: type, default, control and the JSDoc description. Don't repeat that in `argTypes`.
+
+- Story-only args (`playground`, `class`) get an entry with `table.category` and `description`; declare `playground` entries first.
+- Component members get an entry only to override Compodoc, e.g. a better-suited control. Describe them in the component's JSDoc, not here.
+- Members the story drives itself (e.g. through `[formField]`) and outputs get `control: false`.
+- A `model()` stays in `inputs`, also when the story only uses it as the initial value of a form.
+- Hide args that do not apply with `if`.
+- Type the args as the component plus story-only args: `type XStoryArgs = X & { ... }`.
+- Every arg with a control gets a value in the `Default` story's `args`.
 
 ## Language
 

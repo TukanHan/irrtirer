@@ -28,13 +28,12 @@ const meta: Meta<TextInputStoryArgs> = {
         }),
     ],
     argTypes: {
-        value: { control: 'text', table: { category: 'Playground' } },
-        showPrefix: { control: 'boolean', table: { category: 'Playground' } },
-        showSuffix: { control: 'boolean', table: { category: 'Playground' } },
-        label: { control: 'text', table: { category: 'Inputs' } },
-        placeholder: { control: 'text', table: { category: 'Inputs' } },
-        disabled: { control: 'boolean', table: { category: 'Inputs' } },
-        required: { control: 'boolean', table: { category: 'Inputs' } },
+        showPrefix: { description: 'Projects a search icon into the `idsPrefix` slot.', control: 'boolean', table: { category: 'playground' } },
+        showSuffix: { description: 'Projects a clear button into the `idsSuffix` slot.', control: 'boolean', table: { category: 'playground' } },
+        invalid: { control: false },
+        touched: { control: false },
+        valueChange: { control: false },
+        touch: { control: false },
     },
 };
 
@@ -67,6 +66,8 @@ export const Default: Story = {
             // `disabled` and `required` come from the form, so they are not bound on the element.
             template: elem('ids-text-input')
                 .withBinding('formField', 'searchForm.query')
+                .withOutput('valueChange')
+                .withOutput('touch')
                 .withInput('label', args.label, '')
                 .withInput('placeholder', args.placeholder, '')
                 .withContent(
