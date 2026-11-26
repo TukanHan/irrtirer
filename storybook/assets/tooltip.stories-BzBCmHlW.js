@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{a as t,l as n,s as r}from"./iframe-DdLu5LbV.js";import{n as i,t as a}from"./elem-builder-B342_OgR.js";import{n as o,t as s}from"./flat-button-CYZCOWOu.js";import{n as c,t as l}from"./tooltip-BdtEwExZ.js";var u,d,f;function init_tooltip_stories(){return(init_tooltip_stories=e((()=>{t(),o(),i(),c(),u={title:`Design System/Tooltip`,component:l,tags:[`autodocs`],decorators:[n({imports:[s,l]}),r(e=>`
+import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{a as t,l as n,s as r}from"./iframe-DXJSi4si.js";import{n as i,t as a}from"./elem-builder-B342_OgR.js";import{n as o,t as s}from"./flat-button-CYZCOWOu.js";import{n as c,t as l}from"./tooltip-BdtEwExZ.js";var u,d,f;function init_tooltip_stories(){return(init_tooltip_stories=e((()=>{t(),o(),i(),c(),u={title:`Design System/Tooltip`,component:l,tags:[`autodocs`],decorators:[n({imports:[s,l]}),r(e=>`
                 <div
                     class="tooltip-playground"
                     [class.tooltip-playground--left]="buttonPosition === 'left'"
@@ -6,7 +6,7 @@ import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{a as t,l as n,s as r}f
                 >
                     ${e}
                 </div>
-            `)],parameters:{docs:{source:{excludeDecorators:!0}}},argTypes:{idsTooltip:{control:`text`,description:`Treść wyświetlana w panelu tooltipa.`,table:{category:`Inputs`}},idsTooltipPosition:{control:`inline-radio`,options:[`auto`,`top`,`right`,`bottom`,`left`],description:`Preferowana pozycja tooltipa. W trybie auto pozycja jest dobrana względem krawędzi viewportu.`,table:{category:`Inputs`}},buttonPosition:{control:`inline-radio`,options:[`left`,`center`,`right`],description:`Położenie przycisku, które pozwala przetestować zachowanie trybu auto.`,table:{category:`Playground`}}}},d={args:{buttonPosition:`center`,idsTooltip:`Przykładowy tooltip`,idsTooltipPosition:`auto`},render:e=>({props:e,template:a(`ids-flat-button`).withInput(`idsTooltip`,e.idsTooltip).withInput(`idsTooltipPosition`,e.idsTooltipPosition,`auto`).withContent(`Lorem Ipsum`).build(),styles:[`
+            `)],parameters:{docs:{source:{excludeDecorators:!0}}},argTypes:{buttonPosition:{description:"Moves the host to a viewport edge to show where `auto` places the tooltip.",control:`inline-radio`,options:[`left`,`center`,`right`],table:{category:`playground`}},idsTooltipPosition:{control:`inline-radio`,options:[`auto`,`top`,`right`,`bottom`,`left`]}}},d={args:{buttonPosition:`center`,idsTooltip:`Lorem ipsum dolor`,idsTooltipPosition:`auto`},render:e=>({props:e,template:a(`ids-flat-button`).withInput(`idsTooltip`,e.idsTooltip).withInput(`idsTooltipPosition`,e.idsTooltipPosition,`auto`).withContent(`Lorem Ipsum`).build(),styles:[`
                 .tooltip-playground {
                     display: flex;
                     min-height: 240px;
@@ -24,7 +24,7 @@ import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{a as t,l as n,s as r}f
             `]})},f=[`Default`],d.parameters={...d.parameters,docs:{...d.parameters?.docs,source:{originalSource:`{
   args: {
     buttonPosition: 'center',
-    idsTooltip: 'Przykładowy tooltip',
+    idsTooltip: 'Lorem ipsum dolor',
     idsTooltipPosition: 'auto'
   },
   render: args => ({

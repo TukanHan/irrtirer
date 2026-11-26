@@ -1,0 +1,1 @@
+import{t as e}from"./iframe-DXJSi4si.js";e();
