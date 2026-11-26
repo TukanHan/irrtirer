@@ -8,6 +8,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { StorybookLanguageSync } from './storybook-language-sync';
 import { inject, provideAppInitializer } from '@angular/core';
 import '../../irrtirer/src/styles.scss';
+import './theme-backgrounds.css';
 
 setCompodocJson(docJson);
 

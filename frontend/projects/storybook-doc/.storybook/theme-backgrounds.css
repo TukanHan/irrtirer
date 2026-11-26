@@ -1,0 +1,8 @@
+/* Default canvas per theme (gray-87 / gray-0, as in manager.ts); a background picked in the toolbar overrides it with !important. */
+.dark-theme :is(.sb-show-main, .docs-story) {
+    background: #212121;
+}
+
+.light-theme :is(.sb-show-main, .docs-story) {
+    background: #ffffff;
+}
