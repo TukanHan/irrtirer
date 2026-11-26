@@ -99,7 +99,7 @@
                     "options": {
                         "configDir": "projects/storybook-doc/.storybook",
                         "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected"],
+                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected", "--disableInternal", "--disableSourceCode"],
                         "port": 6006
                     }
                 },
@@ -108,7 +108,7 @@
                     "options": {
                         "configDir": "projects/storybook-doc/.storybook",
                         "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected"],
+                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected", "--disableInternal", "--disableSourceCode"],
                         "outputDir": "dist/irrtirer/browser/storybook"
                     }
                 },
