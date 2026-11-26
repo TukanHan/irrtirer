@@ -4,7 +4,7 @@ import { IdsFramedButton } from 'irr-design-system/action';
 import { describe, expect, it } from 'vitest';
 import { IdsMenu } from './menu';
 import { IdsMenuItem } from './menu-item/menu-item';
-import { IdsMenuTrigger } from './menu-trigger';
+import { IdsMenuTrigger } from './menu-trigger/menu-trigger';
 
 const imports = [IdsFramedButton, IdsMenu, IdsMenuItem, IdsMenuTrigger];
 

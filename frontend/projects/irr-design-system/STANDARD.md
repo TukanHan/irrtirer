@@ -40,13 +40,13 @@ Each component family (a component with its variants and parts) lives in its own
 
 `src/public-api.ts` exports nothing; consumers import entry points only.
 
-**Check:** read the file.
+**Check:** ESLint (`no-restricted-syntax`).
 
 ### cross-entry-imports-by-package · MUST
 
 Code in one entry point imports another by package path (`irr-design-system/core`), never by a relative path.
 
-**Check:** grep `.ts` imports starting with `../` that leave the entry point folder.
+**Check:** `ng build irr-design-system` (fails with TS6059).
 
 ### internal-entry-point · MUST
 
@@ -58,7 +58,7 @@ Shared library internals live in an internal entry point (currently `core`). Onl
 
 `public-api.ts` uses named exports only.
 
-**Check:** grep `export *` in `public-api.ts` files.
+**Check:** ESLint (`no-restricted-syntax`).
 
 ### no-internal-exports · MUST
 
@@ -70,19 +70,19 @@ Parts used only inside the library (e.g. an overlay panel, a counter) are not ex
 
 Every symbol exported from a consumer-facing entry point starts with `Ids` (constants: `IDS_`), including types used by component inputs.
 
-**Check:** review each `public-api.ts` and the files it exports from.
+**Check:** ESLint (`no-restricted-syntax`); review input types.
 
-### file-name-matches-selector · MUST
+### file-name-matches-class · MUST
 
-A component's file and folder are named after its selector without the prefix (`ids-text-input` → `text-input/text-input.ts`).
+A component's file and folder are named after its class without the `Ids` prefix, in kebab-case (`IdsTextInput` → `text-input/text-input.ts`).
 
-**Check:** compare `selector:` with the file path.
+**Check:** compare the class name with the file path.
 
 ### one-declaration-per-file · MUST
 
 A file declares one component, directive or pipe.
 
-**Check:** grep for more than one `@Component`/`@Directive`/`@Pipe` per file.
+**Check:** ESLint (`max-classes-per-file`).
 
 ### folder-layout · MUST
 

@@ -1,6 +1,6 @@
 import { afterNextRender, afterRenderEffect, DestroyRef, Directive, ElementRef, inject, input, Renderer2 } from '@angular/core';
 import { IdentityCounter, IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
-import { IdsMenu } from './menu';
+import { IdsMenu } from '../menu';
 
 @Directive({
     selector: '[idsMenuTriggerFor]',

@@ -40,6 +40,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `_typography.css` - tied to the tolerated `MatIcon`
 
+## Open: Structure
+
+- [ ] Rename the `core` entry point to `internal`: in Angular `core` reads as public (`@angular/material/core`), `internal` matches `structure/internal-entry-point`
+
 ## Open: Styles (continue later)
 
 - [ ] Token naming pattern: category first (`--ids-color-text-danger`, DTCG style, recommended) or property last (`--ids-text-danger-color`, current majority)
@@ -65,13 +69,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point each rule's `Check:` to the ESLint rule.
 
-- [ ] `structure/named-exports`: `no-restricted-syntax` (`ExportAllDeclaration`) for `public-api.ts`
-- [ ] `structure/cross-entry-imports-by-package`: `no-restricted-imports` with relative path patterns
-- [ ] `structure/internal-entry-point`: `no-restricted-imports` of `irr-design-system/core` in the app
-- [ ] `structure/presentational-only`: `no-restricted-imports` of `@ngrx/*`, `@ngx-translate/*`
-- [ ] `structure/one-declaration-per-file`: `max-classes-per-file`
-- [ ] `structure/public-symbol-prefix`: `@typescript-eslint/naming-convention` (`exported`), excluding `core`
-- [ ] `structure/file-name-matches-selector`, `no-stray-entry-files`: evaluate `eslint-plugin-check-file`
 - [ ] `accessibility/*`: `templateAccessibility` runs only on `*.html`; library templates are inline - enable angular-eslint inline template processing
 
 ## Tooling idea: automated a11y checks (axe)
