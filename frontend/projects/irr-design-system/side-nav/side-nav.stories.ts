@@ -1,8 +1,9 @@
-import { applicationConfig, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
+import { applicationConfig, componentWrapperDecorator, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { Component, inject } from '@angular/core';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { filter, map } from 'rxjs';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsSideNav } from './side-nav';
 import { IdsSideNavItem } from './side-nav-item/side-nav-item';
 
@@ -40,7 +41,19 @@ const meta: Meta<IdsSideNav> = {
         moduleMetadata({
             imports: [IdsSideNavItem, SideNavDestinationStory, RouterOutlet],
         }),
+        // The layout and router outlet only show where an item navigates, so they stay out of the code snippet.
+        componentWrapperDecorator(
+            (story) => `
+                <div class="side-nav-story">
+                    ${story}
+                    <router-outlet />
+                </div>
+            `,
+        ),
     ],
+    parameters: {
+        docs: { source: { excludeDecorators: true } },
+    },
 };
 
 export default meta;
@@ -55,17 +68,19 @@ export const Default: Story = {
     },
     render: (args) => ({
         props: args,
-        template: `
-            <div class="side-nav-story">
-                <ids-side-nav [ariaLabel]="ariaLabel">
-                    <ids-side-nav-item link="/project" label="Projekt" icon="folder" />
-                    <ids-side-nav-item link="/layers" label="Warstwy" icon="dashboard" />
-                    <ids-side-nav-item link="/generating" label="Generowanie" icon="rocket_launch" />
-                    <ids-side-nav-item link="/disabled" label="Zablokowane" [disabled]="true" icon="block" />
-                </ids-side-nav>
-                <router-outlet />
-            </div>
-        `,
+        template: elem('ids-side-nav')
+            .withInput('ariaLabel', args.ariaLabel, '')
+            .withContent(
+                elem('ids-side-nav-item').withInput('link', '/project').withInput('label', 'Projekt').withInput('icon', 'folder'),
+                elem('ids-side-nav-item').withInput('link', '/layers').withInput('label', 'Warstwy').withInput('icon', 'dashboard'),
+                elem('ids-side-nav-item').withInput('link', '/generating').withInput('label', 'Generowanie').withInput('icon', 'rocket_launch'),
+                elem('ids-side-nav-item')
+                    .withInput('link', '/disabled')
+                    .withInput('label', 'Zablokowane')
+                    .withInput('disabled', true)
+                    .withInput('icon', 'block'),
+            )
+            .build(),
         styles: [
             `
             .side-nav-story {

@@ -5,6 +5,7 @@ import { disabled, form, FormField, required } from '@angular/forms/signals';
 import { createApplication } from '@angular/platform-browser';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsTextInput } from './text-input';
 
 type TextInputStoryArgs = IdsTextInput & {
@@ -62,23 +63,27 @@ export const Default: Story = {
 
         return {
             props: { ...args, searchForm },
-            template: `
-                <ids-text-input [formField]="searchForm.query" [label]="label" [placeholder]="placeholder">
-                    @if (showPrefix) {
-                        <mat-icon idsPrefix class="material-symbols-outlined" aria-hidden="true">search</mat-icon>
-                    }
-                    @if (showSuffix) {
-                        <ids-flat-button idsSuffix class="ids-flat-button--size-small" (clicked)="searchForm.query().value.set('')">
-                            <mat-icon class="material-symbols-outlined">close</mat-icon>
-                        </ids-flat-button>
-                    }
-                    <ids-error>
-                        @for (error of searchForm.query().errors(); track error.kind) {
-                            {{ error.message }}
-                        }
-                    </ids-error>
-                </ids-text-input>
-            `,
+            // `disabled` and `required` come from the form, so they are not bound on the element.
+            template: elem('ids-text-input')
+                .withBinding('formField', 'searchForm.query')
+                .withInput('label', args.label, '')
+                .withInput('placeholder', args.placeholder, '')
+                .withContent(
+                    args.showPrefix &&
+                        elem('mat-icon')
+                            .withAttribute('idsPrefix')
+                            .withClass('material-symbols-outlined')
+                            .withAttribute('aria-hidden', 'true')
+                            .withContent('search'),
+                    args.showSuffix &&
+                        elem('ids-flat-button')
+                            .withAttribute('idsSuffix')
+                            .withClass('ids-flat-button--size-small')
+                            .withOutput('clicked', "searchForm.query().value.set('')")
+                            .withContent(elem('mat-icon').withClass('material-symbols-outlined').withContent('close')),
+                    elem('ids-error').withContent('@for (error of searchForm.query().errors(); track error.kind) {\n    {{ error.message }}\n}'),
+                )
+                .build(),
         };
     },
 };

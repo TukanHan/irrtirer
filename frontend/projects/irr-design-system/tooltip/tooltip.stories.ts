@@ -1,5 +1,6 @@
-import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { type Meta, type StoryObj, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsTooltip, type IdsTooltipPosition } from './tooltip';
 
 type TooltipPlaygroundArgs = {
@@ -16,7 +17,22 @@ const meta: Meta<TooltipPlaygroundArgs> = {
         moduleMetadata({
             imports: [IdsFlatButton, IdsTooltip],
         }),
+        // The wrapper only moves the button around to test the auto position, so it stays out of the code snippet.
+        componentWrapperDecorator(
+            (story) => `
+                <div
+                    class="tooltip-playground"
+                    [class.tooltip-playground--left]="buttonPosition === 'left'"
+                    [class.tooltip-playground--right]="buttonPosition === 'right'"
+                >
+                    ${story}
+                </div>
+            `,
+        ),
     ],
+    parameters: {
+        docs: { source: { excludeDecorators: true } },
+    },
     argTypes: {
         idsTooltip: {
             control: 'text',
@@ -49,20 +65,11 @@ export const Default: Story = {
     },
     render: (args) => ({
         props: args,
-        template: `
-            <div
-                class="tooltip-playground"
-                [class.tooltip-playground--left]="buttonPosition === 'left'"
-                [class.tooltip-playground--right]="buttonPosition === 'right'"
-            >
-                <ids-flat-button
-                    [idsTooltip]="idsTooltip"
-                    [idsTooltipPosition]="idsTooltipPosition"
-                >
-                    Lorem Ipsum
-                </ids-flat-button>
-            </div>
-        `,
+        template: elem('ids-flat-button')
+            .withInput('idsTooltip', args.idsTooltip)
+            .withInput('idsTooltipPosition', args.idsTooltipPosition, 'auto')
+            .withContent('Lorem Ipsum')
+            .build(),
         styles: [
             `
                 .tooltip-playground {

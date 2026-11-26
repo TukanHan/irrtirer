@@ -4,6 +4,7 @@ import { type Injector, signal } from '@angular/core';
 import { disabled, form, FormField, required } from '@angular/forms/signals';
 import { createApplication } from '@angular/platform-browser';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsNumberInput } from './number-input';
 
 type NumberInputStoryArgs = IdsNumberInput & {
@@ -61,21 +62,24 @@ export const Default: Story = {
 
         return {
             props: { ...args, temperatureForm },
-            template: `
-                <ids-number-input [formField]="temperatureForm.temperature" [label]="label" [placeholder]="placeholder">
-                    @if (showPrefix) {
-                        <mat-icon idsPrefix class="material-symbols-outlined" aria-hidden="true">thermostat</mat-icon>
-                    }
-                    @if (showSuffix) {
-                        <span idsSuffix>℃</span>
-                    }
-                    <ids-error>
-                        @for (error of temperatureForm.temperature().errors(); track error.kind) {
-                            {{ error.message }}
-                        }
-                    </ids-error>
-                </ids-number-input>
-            `,
+            // `disabled` and `required` come from the form, so they are not bound on the element.
+            template: elem('ids-number-input')
+                .withBinding('formField', 'temperatureForm.temperature')
+                .withInput('label', args.label, '')
+                .withInput('placeholder', args.placeholder, '')
+                .withContent(
+                    args.showPrefix &&
+                        elem('mat-icon')
+                            .withAttribute('idsPrefix')
+                            .withClass('material-symbols-outlined')
+                            .withAttribute('aria-hidden', 'true')
+                            .withContent('thermostat'),
+                    args.showSuffix && elem('span').withAttribute('idsSuffix').withContent('℃'),
+                    elem('ids-error').withContent(
+                        '@for (error of temperatureForm.temperature().errors(); track error.kind) {\n    {{ error.message }}\n}',
+                    ),
+                )
+                .build(),
         };
     },
 };

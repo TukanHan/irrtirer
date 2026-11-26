@@ -83,6 +83,24 @@ export default defineConfig([
         },
     },
     {
+        // Patterns start with `**` because project configs (e.g. irr-design-system) spread this config and resolve paths from their own folder.
+        files: ['**/*.ts'],
+        ignores: ['**/*.stories.ts', '**/storybook-doc/**'],
+        rules: {
+            'no-restricted-imports': [
+                'error',
+                {
+                    patterns: [
+                        {
+                            group: ['storybook-doc', 'storybook-doc/*'],
+                            message: 'storybook-doc helpers are for *.stories.ts only.',
+                        },
+                    ],
+                },
+            ],
+        },
+    },
+    {
         files: ['**/*.html'],
         extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
         rules: {

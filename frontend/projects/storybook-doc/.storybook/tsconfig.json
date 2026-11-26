@@ -5,5 +5,6 @@
         // preview.ts imports the app's global styles.scss, which has no type declarations.
         "noUncheckedSideEffectImports": false
     },
-    "include": ["../../irrtirer/src/**/*.stories.ts", "../../irr-design-system/**/*.stories.ts", "./*.ts"]
+    "include": ["../../irrtirer/src/**/*.stories.ts", "../../irr-design-system/**/*.stories.ts", "./*.ts", "../src/**/*.ts"],
+    "exclude": ["../src/**/*.spec.ts"]
 }

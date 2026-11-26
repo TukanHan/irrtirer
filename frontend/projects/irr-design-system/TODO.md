@@ -54,9 +54,14 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] Toggle state on buttons: `flat-button` cannot expose `aria-expanded` (disclosure) or `aria-pressed` (toggle), so app toggles (chevrons, tile visibility, theme) swap their `label` instead - consider state inputs with a stable label
 
+## Open: Translations
+
+- [ ] Built-in texts: once a component renders its own text (e.g. a close button label), decide how the library gets translations without depending on ngx-translate (e.g. an injection token / provider the app fills)
+
 ## Open: Storybook
 
 - [ ] Inputs without JSDoc (e.g. `text-input`) show empty descriptions in Docs - add JSDoc, or a rule requiring it on public inputs
+- [ ] Compodoc adds members the story does not declare to the args table (e.g. `nativeControl` under "Properties" in `framed-button`) - find a way to show only the curated `argTypes`
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)
@@ -86,4 +91,3 @@ Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point e
 ## Tooling idea: Storybook
 
 - [ ] `storybook-addon-pseudo-states` - force `:hover`, `:focus-visible`, `:active` to show the `states/state-model` matrix in one story
-- [ ] Story template builder - args in, only the resulting usage code out (check `argsToTemplate` from `@storybook/angular` first)

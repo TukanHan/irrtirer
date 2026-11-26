@@ -22,7 +22,16 @@ The project is small, so docs stay lightweight:
 - No MDX pages. Documentation comes from autodocs (`tags: ['autodocs']`).
 - One story per component: `Default`, a playground with all controls.
 - Add another story only for a state the controls cannot reach.
-- The code snippet under the story should show real usage of the component. Render it directly in the `render` template; use a story-only wrapper component only when unavoidable (e.g. Signal Forms setup), because it hides the usage.
+- The code snippet under the story should show real usage for the chosen args. Build the `render` template with `elem()` from `storybook-doc/template-builder`: hard-code values with `withInput` (pass the component default to omit it), bind only what must stay live (`withBinding`), keep `Playground` args out of the bindings.
+- Markup that only sets up the story (layout wrappers, router outlets) goes to `componentWrapperDecorator`, with `parameters.docs.source.excludeDecorators: true`, so the snippet shows the component alone.
+- Use a story-only wrapper component only when unavoidable (e.g. Signal Forms setup), because it hides the usage.
+
+```ts
+render: (args) => ({
+    props: args,
+    template: elem('ids-x').withInput('variant', args.variant, 'neutral').withOutput('clicked').withContent(args.text).build(),
+}),
+```
 
 ## argTypes
 

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/angular';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsFramedButton } from './framed-button';
 
 type IdsFramedButtonArgs = IdsFramedButton & { text: string; hostDisplay: 'flex' | 'block' };
@@ -43,12 +44,18 @@ export const Default: Story = {
         hostDisplay: 'block',
     },
     render: (args) => {
-        const button = `<ids-framed-button [ariaLabel]="ariaLabel" [disabled]="disabled" [variant]="variant" (clicked)="clicked($event)">{{ text }}</ids-framed-button>`;
-        const template = args.hostDisplay === 'flex' ? `<div class="resizable-container" style="display: flex;">${button}</div>` : button;
+        const button = elem('ids-framed-button')
+            .withInput('ariaLabel', args.ariaLabel, '')
+            .withInput('variant', args.variant, 'neutral')
+            .withInput('type', args.type, 'button')
+            .withInput('disabled', args.disabled)
+            .withOutput('clicked')
+            .withContent(args.text);
+        const root = args.hostDisplay === 'flex' ? elem('div').withClass('resizable-container').withContent(button) : button;
 
         return {
             props: args,
-            template,
+            template: root.build(),
             styles: [
                 `
                 .resizable-container {

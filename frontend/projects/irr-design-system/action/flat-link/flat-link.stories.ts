@@ -2,8 +2,9 @@ import { MatIcon } from '@angular/material/icon';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
-import { type Meta, type StoryObj, applicationConfig, moduleMetadata } from '@storybook/angular';
+import { type Meta, type StoryObj, applicationConfig, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { filter, map } from 'rxjs';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatLink } from './flat-link';
 
 type FlatLinkLayout = 'Icon' | 'Text' | 'Icon & Text';
@@ -39,7 +40,20 @@ const meta: Meta<IdsFlatLinkStoryArgs> = {
         moduleMetadata({
             imports: [MatIcon, FlatLinkDestinationStory, RouterOutlet],
         }),
+        // The router outlet only shows where an internal link navigates, so it stays out of the code snippet.
+        componentWrapperDecorator(
+            (story) => `
+                ${story}
+                @if (linkType === 'internal') {
+                    <br />
+                    <router-outlet />
+                }
+            `,
+        ),
     ],
+    parameters: {
+        docs: { source: { excludeDecorators: true } },
+    },
     argTypes: {
         link: { control: 'text', table: { category: 'Inputs' } },
         linkType: {
@@ -78,20 +92,13 @@ export const Default: Story = {
     },
     render: (args) => ({
         props: args,
-        template: `
-            <ids-flat-link [link]="link" [linkType]="linkType">
-                @if (layout !== 'Text') {
-                    <mat-icon class="material-symbols-outlined">{{ iconName }}</mat-icon>
-                }
-                @if (layout !== 'Icon') {
-                    {{ text }}
-                }
-            </ids-flat-link>
-
-            @if(linkType === 'internal') {
-                <br/>
-                <router-outlet />
-            }
-        `,
+        template: elem('ids-flat-link')
+            .withInput('link', args.link)
+            .withInput('linkType', args.linkType, 'internal')
+            .withContent(
+                args.layout !== 'Text' && elem('mat-icon').withClass('material-symbols-outlined').withContent(args.iconName),
+                args.layout !== 'Icon' && args.text,
+            )
+            .build(),
     }),
 };

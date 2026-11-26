@@ -112,6 +112,13 @@
                         "outputDir": "dist/irrtirer/browser/storybook"
                     }
                 },
+                "test": {
+                    "builder": "@angular/build:unit-test",
+                    "options": {
+                        "buildTarget": "irrtirer:build:development",
+                        "tsConfig": "projects/storybook-doc/tsconfig.spec.json"
+                    }
+                },
                 "lint": {
                     "builder": "@angular-eslint/builder:lint",
                     "options": {

@@ -1,5 +1,6 @@
 import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatButton } from './flat-button';
 
 type FlatButtonLayout = 'Icon' | 'Text' | 'Icon & Text';
@@ -78,22 +79,17 @@ export const Default: Story = {
     },
     render: (args) => ({
         props: args,
-        template: `
-            <ids-flat-button
-                [class]="className"
-                [ariaLabel]="ariaLabel"
-                [disabled]="disabled"
-                [variant]="variant"
-                [type]="type"
-                (clicked)="clicked($event)"
-            >
-                @if (layout !== 'Text') {
-                    <mat-icon class="material-symbols-outlined">{{ iconName }}</mat-icon>
-                }
-                @if (layout !== 'Icon') {
-                    {{ text }}
-                }
-            </ids-flat-button>
-        `,
+        template: elem('ids-flat-button')
+            .withClass(args.className)
+            .withInput('ariaLabel', args.ariaLabel, '')
+            .withInput('variant', args.variant, 'neutral')
+            .withInput('type', args.type, 'button')
+            .withInput('disabled', args.disabled)
+            .withOutput('clicked')
+            .withContent(
+                args.layout !== 'Text' && elem('mat-icon').withClass('material-symbols-outlined').withContent(args.iconName),
+                args.layout !== 'Icon' && args.text,
+            )
+            .build(),
     }),
 };
