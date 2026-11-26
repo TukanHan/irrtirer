@@ -7,6 +7,7 @@ The root `CLAUDE.md` only imports the `AGENTS.md` files - edit `AGENTS.md`, neve
 
 - **The owner commits.** Agents edit files but never commit, push, or rewrite git history.
 - Prefer small, reviewable changes. If the intended change is unclear, ask before editing.
+- If a rule (AGENTS.md, STANDARD.md, a skill) cannot be followed, conflicts with another, or no longer fits the code, say so and propose changing the rule - never work around it silently.
 
 ## Language
 

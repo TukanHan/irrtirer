@@ -3,6 +3,7 @@ import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-desig
 
 export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
 
+/** Borderless button whose surface shows only on hover, focus and press. Fits icon-only actions and actions inside other controls. */
 @Component({
     selector: 'ids-flat-button',
     providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFlatButton }],
@@ -23,12 +24,21 @@ export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
     styleUrls: ['./flat-button.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
 })
 export class IdsFlatButton implements Clickable, NativeControlHost {
+    /** Emitted when the button is activated by click, `Enter` or `Space`; never while disabled. */
     public readonly clicked = output<MouseEvent>();
+
+    /** Blocks the button and dims it. */
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+
+    /** Color of the content and of the hover, focus and press surface. */
     public readonly variant = input<IdsFlatButtonVariant>('neutral');
+
+    /** Native `type` of the inner button; `submit` and `reset` act on the enclosing form. */
     public readonly type = input<'button' | 'submit' | 'reset'>('button');
+
     /** Accessible name; required when the content is not text (e.g. icon only). */
     public readonly ariaLabel = input<string>('');
 
+    /** @internal */
     public readonly nativeControl = viewChild.required<ElementRef<HTMLButtonElement>>('control');
 }

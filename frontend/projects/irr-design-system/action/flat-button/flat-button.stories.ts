@@ -8,8 +8,8 @@ type FlatButtonLayout = 'Icon' | 'Text' | 'Icon & Text';
 type IdsFlatButtonStoryArgs = IdsFlatButton & {
     layout: FlatButtonLayout;
     iconName: string;
-    className: null | 'ids-flat-button--size-small';
     text: string;
+    size: null | 'ids-flat-button--size-small';
 };
 
 const meta: Meta<IdsFlatButtonStoryArgs> = {
@@ -22,45 +22,31 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
         }),
     ],
     argTypes: {
-        disabled: { control: 'boolean', table: { category: 'Inputs' } },
-        ariaLabel: { control: 'text', table: { category: 'Inputs' } },
-        clicked: { action: 'clicked', table: { category: 'Outputs' } },
-        variant: {
-            control: 'inline-radio',
-            options: ['accent', 'neutral', 'danger'],
-            table: { category: 'Inputs' },
-        },
         layout: {
+            description: 'What the button content holds: an icon, text, or both.',
             control: 'inline-radio',
             options: ['Icon', 'Text', 'Icon & Text'],
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
         iconName: {
+            description: 'Material Symbols name of the projected `mat-icon`.',
             control: 'text',
             if: { arg: 'layout', neq: 'Text' },
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
         text: {
+            description: 'Projected text.',
             control: 'text',
             if: { arg: 'layout', neq: 'Icon' },
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
-        type: {
-            control: 'inline-radio',
-            options: ['button', 'submit', 'reset'],
-            table: { category: 'Inputs' },
-        },
-        className: {
-            control: {
-                type: 'select',
-                labels: {
-                    null: 'Brak klasy',
-                    'ids-flat-button--size-small': 'Mały (32px)',
-                },
-            },
+        size: {
+            description: 'Size modifier class on the host; without it the button is 36px.',
+            control: { type: 'inline-radio', labels: { null: 'none' } },
             options: [null, 'ids-flat-button--size-small'],
-            table: { category: 'Class' },
+            table: { category: 'class', type: { summary: 'string' } },
         },
+        clicked: { control: false },
     },
 };
 
@@ -70,18 +56,18 @@ type Story = StoryObj<IdsFlatButtonStoryArgs>;
 export const Default: Story = {
     args: {
         layout: 'Icon',
+        iconName: 'edit',
+        text: 'Lorem',
+        size: null,
         ariaLabel: 'Lorem ipsum',
         disabled: false,
-        iconName: 'edit',
-        text: 'Edytuj',
         variant: 'neutral',
         type: 'button',
-        className: null,
     },
     render: (args) => ({
         props: args,
         template: elem('ids-flat-button')
-            .withClass(args.className)
+            .withClass(args.size)
             .withInput('ariaLabel', args.ariaLabel, '')
             .withInput('variant', args.variant, 'neutral')
             .withInput('type', args.type, 'button')
