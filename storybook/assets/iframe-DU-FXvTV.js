@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DjOLFfbZ.js","./rolldown-runtime-sJBDdmOt.js","./blocks-D7ZcmVga.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chevron-2qMCq9ji.js","./chevron.stories-BxRhl_kJ.js","./core-CXH6MCZn.js","./_array-chunk-D_lYvjN5.js","./common-BoAak_CD.js","./_style-loader-chunk-DtZ4Lc7V.js","./private-C3-QNPcx.js","./icon-ebGpF6Ci.js","./take-C6rPF2aJ.js","./share-Z8VaU_hA.js","./tap-CzzpCDFY.js","./_focus-monitor-chunk-PprtyYVj.js","./takeUntil-C7aivPiJ.js","./skip-BqJjzV02.js","./_animation-chunk-DcPjn2d1.js","./combineLatest-DjZtnxrw.js","./debounceTime-DiaezPnq.js","./async-BtjINSh-.js","./startWith-CYjpHPR9.js","./platform-BRKWP1kY.js","./list-item-box-B228mGDA.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-Cc7WTJFd.js","./loading-dots.stories-DbZVp0Jk.js","./typography-Bw1Z5y4N.js","./typography.stories-C8mzPWQP.js","./word-fade-in-DyDPnP7x.js","./word-fade-in.stories-Bo25shYG.js","./color-picker.stories-kkJYzXvN.js","./_overlay-module-chunk-VVoGVRXP.js","./timer-GjxfC_IT.js","./switchMap-B8S8rVC5.js","./observers-isx-nfGH.js","./signals-BkxG1n1K.js","./dialog.stories-In7Bd6Jp.js","./rxjs-interop-Dkt4YFkn.js","./flat-button-B1UCJ9K5.js","./ids-flat-action-BilS4kDM.js","./ids-action-DeEUlF3S.js","./native-control-host-8opjO8t-.js","./framed-button-E2m6OZKJ.js","./expandable-panel.stories-Boava04P.js","./scrollable-list.stories-DK-V7q0B.js","./flat-button.stories-B3S0KPKh.js","./flat-link.stories-BPGUa1tq.js","./_router_module-chunk-Bfin86KW.js","./framed-button.stories-BTTwy0PC.js","./menu.stories-hNLwcxfN.js","./identity-counter-BeHObAr3.js","./ids-panel-BUaGBXz6.js","./number-input.stories-BSeebor4.js","./suffix-mzqr8psp.js","./side-nav.stories-ClmVGqUP.js","./tooltip-5zPpHMCP.js","./text-input.stories-CzivkZIv.js","./tooltip.stories-DwJ9DdfG.js","./animations-DCM_5Stb.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-BT1EIg-i.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./Configure-DjOLFfbZ.js","./rolldown-runtime-sJBDdmOt.js","./blocks-D7ZcmVga.js","./preload-helper-Dt5pTa-y.js","./chunk-RDNWKK3U-U0neV263.js","./chunk-7PIQR4A3-DUuI6D6u.js","./chunk-IMSF75WX-CjLAjAi6.js","./chunk-DRQKCCAG-BesIColZ.js","./react-DlPsW1c0.js","./chevron-DOIt6dLg.js","./chevron.stories-BzSg5GiZ.js","./core-CXH6MCZn.js","./_array-chunk-D_lYvjN5.js","./common-BoAak_CD.js","./_style-loader-chunk-DtZ4Lc7V.js","./private-C3-QNPcx.js","./icon-DoaIjl_g.js","./take-C6rPF2aJ.js","./share-Z8VaU_hA.js","./tap-CzzpCDFY.js","./_focus-monitor-chunk-PprtyYVj.js","./takeUntil-C7aivPiJ.js","./skip-BqJjzV02.js","./_animation-chunk-DcPjn2d1.js","./combineLatest-DjZtnxrw.js","./debounceTime-DiaezPnq.js","./async-BtjINSh-.js","./startWith-CYjpHPR9.js","./platform-BRKWP1kY.js","./list-item-box-B228mGDA.js","./list-item-box.stories-DRqTijSF.js","./loading-dots-Cc7WTJFd.js","./loading-dots.stories-DbZVp0Jk.js","./typography-Bw1Z5y4N.js","./typography.stories-C8mzPWQP.js","./word-fade-in-Sl9K75z5.js","./word-fade-in.stories-khXdYU8F.js","./color-picker.stories-BhKMWUvx.js","./_overlay-module-chunk-VVoGVRXP.js","./timer-GjxfC_IT.js","./switchMap-B8S8rVC5.js","./observers-isx-nfGH.js","./signals-BkxG1n1K.js","./dialog.stories-CJP4AwX3.js","./rxjs-interop-Dkt4YFkn.js","./flat-button-B1UCJ9K5.js","./ids-flat-action-BilS4kDM.js","./ids-action-DeEUlF3S.js","./native-control-host-8opjO8t-.js","./framed-button-E2m6OZKJ.js","./expandable-panel.stories-fsc6hSiQ.js","./scrollable-list.stories-ChNAMj8C.js","./flat-button.stories-gNKQ9QtZ.js","./flat-link.stories-CazYFW38.js","./_router_module-chunk-Cvqx1BJO.js","./framed-button.stories-7UTxB0ck.js","./menu.stories-DHfuAnGY.js","./identity-counter-BeHObAr3.js","./ids-panel-BUaGBXz6.js","./number-input.stories-Hs6XiuBh.js","./suffix-mzqr8psp.js","./side-nav.stories-DQpLSdnS.js","./tooltip-5zPpHMCP.js","./text-input.stories-C_p1ghfw.js","./tooltip.stories-51ylQCJ1.js","./animations-PC_tKPhS.js","./axe-B_PhqGaV.js","./matchers-JIUQ3HVY-DLBmcvP1.js","./DocsRenderer-JROSPFPF-BT1EIg-i.js"])))=>i.map(i=>d[i]);
 import{a as e,i as t,n,r}from"./rolldown-runtime-sJBDdmOt.js";import{n as i,t as a}from"./preload-helper-Dt5pTa-y.js";import{$ as o,$n as s,B as c,Bn as l,Cn as u,Dn as d,Dt as f,En as p,Fn as m,Gn as h,Gr as g,Gt as _,I as v,In as y,K as b,Kt as x,N as S,Nn as C,Ot as w,Pn as T,Q as ee,Qn as E,R as D,Rn as O,Sn as k,Sr as te,Tn as A,U as ne,Vn as re,Xn as ie,Y as ae,Z as oe,Zn as se,_r as ce,_t as le,ar as ue,at as de,c as fe,cr as pe,ct as me,dr as he,er as ge,fr as _e,ft as ve,g as ye,gt as be,h as xe,ht as Se,ir as Ce,it as we,jn as Te,k as Ee,kn as De,kt as Oe,lr as ke,lt as Ae,mr as je,mt as Me,n as Ne,nn as Pe,nr as Fe,nt as Ie,or as Le,ot as Re,pr as ze,pt as Be,q as Ve,qn as He,qt as Ue,rr as We,sr as Ge,st as Ke,t as qe,tr as Je,tt as Ye,ut as Xe,v as Ze,vt as Qe,w as j,wn as $e,xr as et,z as tt,zn as nt,zr as rt}from"./core-CXH6MCZn.js";import{i as it,n as at,r as ot,t as st}from"./timer-GjxfC_IT.js";import{d as ct,f as eee,i as lt,n as ut,r as dt,t as tee}from"./take-C6rPF2aJ.js";import{a as ft,c as nee,d as pt,f as mt,g as ree,m as iee,n as aee,o as ht,p as oee,s as see,t as cee}from"./share-Z8VaU_hA.js";import{a as gt,c as _t,i as vt,l as yt,n as bt,o as xt,r as St,s as Ct,t as lee,u as wt}from"./tap-CzzpCDFY.js";import{i as Tt,n as Et,r as uee,t as dee}from"./switchMap-B8S8rVC5.js";import{a as fee,c as pee,i as mee,l as hee,n as Dt,o as Ot,s as gee,t as _ee}from"./rxjs-interop-Dkt4YFkn.js";import{a as vee,i as yee,n as bee,o as xee,r as kt,t as See}from"./takeUntil-C7aivPiJ.js";import{i as At,n as Cee,r as jt,t as wee}from"./skip-BqJjzV02.js";import{_ as Tee,a as Mt,g as Eee,h as Nt,i as Dee,m as Oee,n as Pt,o as Ft,p as kee,t as Aee}from"./common-BoAak_CD.js";import{a as It,i as jee,l as Lt,n as Rt,u as zt}from"./chunk-RDNWKK3U-U0neV263.js";import{i as Mee,n as Nee}from"./chunk-UAWMPV5J-BrGPyIDv.js";import{t as Pee}from"./react-DlPsW1c0.js";function Bt(){return(Bt=n((()=>{(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})()})))()}function Vt(e){var t=[...arguments].slice(1),n=Array.from(typeof e==`string`?[e]:e);n[n.length-1]=n[n.length-1].replace(/\r?\n([\t ]*)$/,``);var r=n.reduce(function(e,t){var n=t.match(/\n([\t ]+|(?!\s).)/g);return n?e.concat(n.map(function(e){return e.match(/[\t ]/g)?.length??0})):e},[]);if(r.length){var i=RegExp(`
 [	 ]{`+Math.min.apply(Math,r)+`}`,`g`);n=n.map(function(e){return e.replace(i,`
 `)})}n[0]=n[0].replace(/^\r?\n/,``);var a=n[0];return t.forEach(function(e,t){var r=a.match(/(?:^|\n)( *)$/),i=r?r[1]:``,o=e;typeof e==`string`&&e.includes(`
@@ -1023,7 +1023,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
       font-weight: bold;
       color: hsl(212 100 46);
     }
-  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},Dz=Bp(u_(),1),Ap()})))()}var Az,jz,Mz;function Nz(){return(Nz=n((()=>{({createBrowserChannel:Az}=__STORYBOOK_MODULE_CHANNELS__),{addons:jz}=__STORYBOOK_MODULE_PREVIEW_API__,Mz=Az({page:`preview`}),jz.setChannel(Mz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Mz)})))()}async function Cde(e){return await Pz[e]()}var Pz;function Fz(){return(Fz=n((()=>{i(),Pz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DjOLFfbZ.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-2qMCq9ji.js`),__vite__mapDeps([9,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-B228mGDA.js`),__vite__mapDeps([29,1,2,3,4,5,6,7,8,30]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-Cc7WTJFd.js`),__vite__mapDeps([31,1,2,3,4,5,6,7,8,32]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-Bw1Z5y4N.js`),__vite__mapDeps([33,1,2,3,4,5,6,7,8,34]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-DyDPnP7x.js`),__vite__mapDeps([35,1,2,3,4,5,6,7,8,36,11]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-kkJYzXvN.js`),__vite__mapDeps([37,1,11,38,26,39,18,40,21,22,12,13,27,14,17,23,24,25,41,42,28]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-In7Bd6Jp.js`),__vite__mapDeps([43,1,11,38,26,39,18,40,21,22,12,13,27,14,17,44,15,45,46,47,48,49,20,23,24,25,41]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-Boava04P.js`),__vite__mapDeps([50,1,11]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-DK-V7q0B.js`),__vite__mapDeps([51,1,11,13,45,46,47,48]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-BxRhl_kJ.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([10,1,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([30,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([32,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([34,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-Bo25shYG.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([36,1,11]),import.meta.url),"./projects/irr-design-system/action/flat-button/flat-button.stories.ts":()=>a(()=>import(`./flat-button.stories-B3S0KPKh.js`),__vite__mapDeps([52,1,16,11,17,18,19,15,14,45,46,47,48]),import.meta.url),"./projects/irr-design-system/action/flat-link/flat-link.stories.ts":()=>a(()=>import(`./flat-link.stories-BPGUa1tq.js`),__vite__mapDeps([53,1,11,44,18,21,22,54,17,19,40,24,27,13,16,15,14,46,47]),import.meta.url),"./projects/irr-design-system/action/framed-button/framed-button.stories.ts":()=>a(()=>import(`./framed-button.stories-BTTwy0PC.js`),__vite__mapDeps([55,1,49,11,47,48]),import.meta.url),"./projects/irr-design-system/menu/menu.stories.ts":()=>a(()=>import(`./menu.stories-hNLwcxfN.js`),__vite__mapDeps([56,1,11,38,26,39,18,40,21,22,12,13,27,14,19,25,16,17,15,48,57,49,47,58]),import.meta.url),"./projects/irr-design-system/number-input/number-input.stories.ts":()=>a(()=>import(`./number-input.stories-BSeebor4.js`),__vite__mapDeps([59,1,11,16,17,18,19,15,14,60,57,42,13]),import.meta.url),"./projects/irr-design-system/side-nav/side-nav.stories.ts":()=>a(()=>import(`./side-nav.stories-ClmVGqUP.js`),__vite__mapDeps([61,1,11,44,18,21,22,54,17,19,40,24,27,13,16,15,14,62,38,26,39,12,57,58]),import.meta.url),"./projects/irr-design-system/text-input/text-input.stories.ts":()=>a(()=>import(`./text-input.stories-CzivkZIv.js`),__vite__mapDeps([63,1,11,16,17,18,19,15,14,45,46,47,48,60,57,42,13]),import.meta.url),"./projects/irr-design-system/tooltip/tooltip.stories.ts":()=>a(()=>import(`./tooltip.stories-DwJ9DdfG.js`),__vite__mapDeps([64,1,45,11,46,47,48,62,38,26,39,18,40,21,22,12,13,27,14,57,58]),import.meta.url)}})))()}function wde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new et({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new pee)}});e.subscribe(a)})}function Iz(){return(Iz=n((()=>{hee(),te()})))()}function Lz(){var e=[...arguments],t=ree(e),n=iee(e,1/0),r=e;return r.length?r.length===1?mt(r[0]):xee(n)(see(r,t)):ct}function Rz(){return(Rz=n((()=>{vee(),pt(),eee(),oee(),nee()})))()}function Tde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?ce:_e(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(pe(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?at(i):mt(i(e,n)),u=pe(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function zz(){return(zz=n((()=>{he(),ke(),st(),pt()})))()}var Ede=r({});function Bz(){return(Bz=n((()=>{ye(),xe()})))()}function Dde(){return JW||(JW=$W(),Vz(qW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Vz(qW.STYLE,void 0,[[`*`,[`style`]]]),Vz(qW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Vz(qW.URL,XW,[[`*`,[`href`,`xlink:href`]]]),Vz(qW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Vz(qW.URL,YW,[[`a`,[`href`,`xlink:href`]]]),Vz(qW.ATTRIBUTE_NO_BINDING,YW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Vz(qW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),JW)}function Vz(e,t,n){let r=t??ZW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=JW[i]??=$W(),o=a[r]??=$W();o[n]=e}}}function Ode(e,t,n){let r=Dde()[t.toLowerCase()];if(!r)return qW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[QW])}if(a===void 0){let e=r[ZW];e&&(a=e[i]??e[QW])}if(a===void 0&&(!n||n===ZW)){let e=r[YW];e&&(a=e[i])}return a??qW.NONE}function kde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function Ade(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function jde(e){let t=kde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>Ade(e)):[];return t.concat(...n)}function Hz(e){return e?HW.parse(e).map(jde):[]}function Mde(e){return Fde(Pde(e.nodes).join(``)+`[${e.meaning}]`)}function Nde(e){return e.id||Uz(e)}function Uz(e){let t=new lG;return Kz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function Pde(e){return e.map(e=>e.visit(cG,null))}function Fde(e){oG??=new TextEncoder;let t=[...oG.encode(e)],n=Rde(t,uG.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=Xz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Ide(t,o,s,c),u=r[0],d=r[1],f=[Xz(a,5),u,l,d,i[t]].reduce(Yz);l=c,c=s,s=Xz(o,30),o=a,a=f}a=Yz(a,t),o=Yz(o,r),s=Yz(s,u),c=Yz(c,d),l=Yz(l,f)}return Wz(a)+Wz(o)+Wz(s)+Wz(c)+Wz(l)}function Wz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Ide(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Gz(e){oG??=new TextEncoder;let t=oG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=qz(n,t.length,0),i=qz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Kz(e,t=``){let n=Gz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Gz(t)),BigInt.asUintN(63,n).toString()}function qz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Jz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Jz(r,i,n)[2]}function Jz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Yz(e,t){return Lde(e,t)[1]}function Lde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function Xz(e,t){return e<<t|e>>>32-t}function Rde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=zde(e,i*4,t);return r}function Zz(e,t){return t>=e.length?0:e[t]}function zde(e,t,n){let r=0;if(n===uG.Big)for(let n=0;n<4;n++)r+=Zz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Zz(e,t+n)<<8*n;return r}function Bde(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Qz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function $z(e,t){return Qz(e,t,(e,t)=>e.isEquivalent(t))}function eB(e,t,n){return e===``?{cooked:t,raw:WG(HG(VG(t))),range:n}:{cooked:`:${e}:${t}`,raw:WG(`:${UG(VG(e))}:${VG(t)}`),range:n}}function Vde(e,t=!1,n=!0){return new dK(e,t,n)}function Hde(e=[]){return new fK(e)}function tB(e,t,n,r){return new wG(e,t,n,r)}function R(e,t=null,n){return new GG(e,null,t,n)}function nB(e,t,n){return new hG(e,t,n)}function rB(e){return new TG(e)}function iB(e,t,n){return new nK(e,t,n)}function aB(e,t=null){return new aK(e.map(e=>new rK(e.key,e.value,e.quoted)),t,null)}function Ude(e,t){return new qG(e,t)}function oB(e,t,n,r,i){return new YG(e,t,n,r,i)}function sB(e,t,n,r){return new XG(e,t,n,r)}function cB(e,t,n,r,i){return new vK(e,t,n,r,i)}function Wde(e,t,n,r){return new kG(e,t,n,r)}function z(e,t,n){return new MG(e,t,n)}function Gde(e,t,n,r,i){return new BG(e,t,n,r,i)}function lB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Kde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${lB(e[0])} `;let t=`*
+  `,document.head.appendChild(o),a.querySelector(`.sb-navigator-story-link.active`)?.closest(`details`)?.scrollIntoView({block:`center`})},Dz=Bp(u_(),1),Ap()})))()}var Az,jz,Mz;function Nz(){return(Nz=n((()=>{({createBrowserChannel:Az}=__STORYBOOK_MODULE_CHANNELS__),{addons:jz}=__STORYBOOK_MODULE_PREVIEW_API__,Mz=Az({page:`preview`}),jz.setChannel(Mz),window.CONFIG_TYPE===`DEVELOPMENT`&&(window.__STORYBOOK_SERVER_CHANNEL__=Mz)})))()}async function Cde(e){return await Pz[e]()}var Pz;function Fz(){return(Fz=n((()=>{i(),Pz={"./projects/irrtirer/src/stories/Configure.mdx":()=>a(()=>import(`./Configure-DjOLFfbZ.js`),__vite__mapDeps([0,1,2,3,4,5,6,7,8]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.mdx":()=>a(()=>import(`./chevron-DOIt6dLg.js`),__vite__mapDeps([9,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.mdx":()=>a(()=>import(`./list-item-box-B228mGDA.js`),__vite__mapDeps([29,1,2,3,4,5,6,7,8,30]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.mdx":()=>a(()=>import(`./loading-dots-Cc7WTJFd.js`),__vite__mapDeps([31,1,2,3,4,5,6,7,8,32]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.mdx":()=>a(()=>import(`./typography-Bw1Z5y4N.js`),__vite__mapDeps([33,1,2,3,4,5,6,7,8,34]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.mdx":()=>a(()=>import(`./word-fade-in-Sl9K75z5.js`),__vite__mapDeps([35,1,2,3,4,5,6,7,8,36,11]),import.meta.url),"./projects/irrtirer/src/app/shared/color-picker/color-picker.stories.ts":()=>a(()=>import(`./color-picker.stories-BhKMWUvx.js`),__vite__mapDeps([37,1,11,38,26,39,18,40,21,22,12,13,27,14,17,23,24,25,41,42,28]),import.meta.url),"./projects/irrtirer/src/app/shared/dialog/dialog.stories.ts":()=>a(()=>import(`./dialog.stories-CJP4AwX3.js`),__vite__mapDeps([43,1,11,38,26,39,18,40,21,22,12,13,27,14,17,44,15,45,46,47,48,49,20,23,24,25,41]),import.meta.url),"./projects/irrtirer/src/app/shared/expandable-panel/expandable-panel.stories.ts":()=>a(()=>import(`./expandable-panel.stories-fsc6hSiQ.js`),__vite__mapDeps([50,1,11]),import.meta.url),"./projects/irrtirer/src/app/shared/scrollable-list/scrollable-list.stories.ts":()=>a(()=>import(`./scrollable-list.stories-ChNAMj8C.js`),__vite__mapDeps([51,1,11,13,45,46,47,48]),import.meta.url),"./projects/irrtirer/src/styles/utilities/chevron/chevron.stories.ts":()=>a(()=>import(`./chevron.stories-BzSg5GiZ.js`).then(e=>(e.r(),e.n)),__vite__mapDeps([10,1,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]),import.meta.url),"./projects/irrtirer/src/styles/utilities/list-item-box/list-item-box.stories.ts":()=>a(()=>import(`./list-item-box.stories-DRqTijSF.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([30,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/loading-dots/loading-dots.stories.ts":()=>a(()=>import(`./loading-dots.stories-DbZVp0Jk.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([32,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/typography/typography.stories.ts":()=>a(()=>import(`./typography.stories-C8mzPWQP.js`).then(e=>(e.o(),e.s)),__vite__mapDeps([34,1]),import.meta.url),"./projects/irrtirer/src/styles/utilities/word-fade-in/word-fade-in.stories.ts":()=>a(()=>import(`./word-fade-in.stories-khXdYU8F.js`).then(e=>(e.n(),e.r)),__vite__mapDeps([36,1,11]),import.meta.url),"./projects/irr-design-system/action/flat-button/flat-button.stories.ts":()=>a(()=>import(`./flat-button.stories-gNKQ9QtZ.js`),__vite__mapDeps([52,1,16,11,17,18,19,15,14,45,46,47,48]),import.meta.url),"./projects/irr-design-system/action/flat-link/flat-link.stories.ts":()=>a(()=>import(`./flat-link.stories-CazYFW38.js`),__vite__mapDeps([53,1,11,44,18,21,22,54,17,19,40,24,27,13,16,15,14,46,47]),import.meta.url),"./projects/irr-design-system/action/framed-button/framed-button.stories.ts":()=>a(()=>import(`./framed-button.stories-7UTxB0ck.js`),__vite__mapDeps([55,1,49,11,47,48]),import.meta.url),"./projects/irr-design-system/menu/menu.stories.ts":()=>a(()=>import(`./menu.stories-DHfuAnGY.js`),__vite__mapDeps([56,1,11,38,26,39,18,40,21,22,12,13,27,14,19,25,16,17,15,48,57,49,47,58]),import.meta.url),"./projects/irr-design-system/number-input/number-input.stories.ts":()=>a(()=>import(`./number-input.stories-Hs6XiuBh.js`),__vite__mapDeps([59,1,11,16,17,18,19,15,14,60,57,42,13]),import.meta.url),"./projects/irr-design-system/side-nav/side-nav.stories.ts":()=>a(()=>import(`./side-nav.stories-DQpLSdnS.js`),__vite__mapDeps([61,1,11,44,18,21,22,54,17,19,40,24,27,13,16,15,14,62,38,26,39,12,57,58]),import.meta.url),"./projects/irr-design-system/text-input/text-input.stories.ts":()=>a(()=>import(`./text-input.stories-C_p1ghfw.js`),__vite__mapDeps([63,1,11,16,17,18,19,15,14,45,46,47,48,60,57,42,13]),import.meta.url),"./projects/irr-design-system/tooltip/tooltip.stories.ts":()=>a(()=>import(`./tooltip.stories-51ylQCJ1.js`),__vite__mapDeps([64,1,45,11,46,47,48,62,38,26,39,18,40,21,22,12,13,27,14,57,58]),import.meta.url)}})))()}function wde(e,t){var n=typeof t==`object`;return new Promise(function(r,i){var a=new et({next:function(e){r(e),a.unsubscribe()},error:i,complete:function(){n?r(t.defaultValue):i(new pee)}});e.subscribe(a)})}function Iz(){return(Iz=n((()=>{hee(),te()})))()}function Lz(){var e=[...arguments],t=ree(e),n=iee(e,1/0),r=e;return r.length?r.length===1?mt(r[0]):xee(n)(see(r,t)):ct}function Rz(){return(Rz=n((()=>{vee(),pt(),eee(),oee(),nee()})))()}function Tde(e){e===void 0&&(e=1/0);var t=e&&typeof e==`object`?e:{count:e},n=t.count,r=n===void 0?1/0:n,i=t.delay,a=t.resetOnSuccess,o=a!==void 0&&a;return r<=0?ce:_e(function(e,t){var n=0,a,s=function(){var c=!1;a=e.subscribe(pe(t,function(e){o&&(n=0),t.next(e)},void 0,function(e){if(n++<r){var o=function(){a?(a.unsubscribe(),a=null,s()):c=!0};if(i!=null){var l=typeof i==`number`?at(i):mt(i(e,n)),u=pe(t,function(){u.unsubscribe(),o()},function(){t.complete()});l.subscribe(u)}else o()}else t.error(e)})),c&&(a.unsubscribe(),a=null,s())};s()})}function zz(){return(zz=n((()=>{he(),ke(),st(),pt()})))()}var Ede=r({});function Bz(){return(Bz=n((()=>{ye(),xe()})))()}function Dde(){return JW||(JW=$W(),Vz(qW.HTML,void 0,[[`iframe`,[`srcdoc`]],[`*`,[`innerHTML`,`outerHTML`]]]),Vz(qW.STYLE,void 0,[[`*`,[`style`]]]),Vz(qW.URL,void 0,[[`*`,[`formAction`]],[`area`,[`href`]],[`a`,[`href`,`xlink:href`]],[`form`,[`action`]]]),Vz(qW.URL,XW,[[`*`,[`href`,`xlink:href`]]]),Vz(qW.RESOURCE_URL,void 0,[[`base`,[`href`]],[`embed`,[`src`]],[`frame`,[`src`]],[`iframe`,[`src`]],[`link`,[`href`]],[`object`,[`codebase`,`data`]]]),Vz(qW.URL,YW,[[`a`,[`href`,`xlink:href`]]]),Vz(qW.ATTRIBUTE_NO_BINDING,YW,[[`animate`,[`attributeName`,`values`,`to`,`from`]],[`set`,[`to`,`attributeName`]],[`animateMotion`,[`attributeName`]],[`animateTransform`,[`attributeName`]]]),Vz(qW.ATTRIBUTE_NO_BINDING,void 0,[[`unknown`,[`attributeName`,`values`,`to`,`from`,`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]],[`iframe`,[`sandbox`,`allow`,`allowFullscreen`,`referrerPolicy`,`csp`,`fetchPriority`,`credentialless`]]]),JW)}function Vz(e,t,n){let r=t??ZW;for(let[t,i]of n){let n=t.toLowerCase();for(let t of i){let i=t.toLowerCase(),a=JW[i]??=$W(),o=a[r]??=$W();o[n]=e}}}function Ode(e,t,n){let r=Dde()[t.toLowerCase()];if(!r)return qW.NONE;let i=e.toLowerCase(),a;if(n){let e=r[n];e&&(a=e[i]??e[QW])}if(a===void 0){let e=r[ZW];e&&(a=e[i]??e[QW])}if(a===void 0&&(!n||n===ZW)){let e=r[YW];e&&(a=e[i])}return a??qW.NONE}function kde(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return[e.element&&e.element!==`*`?e.element:``,...e.attrs,...t]}function Ade(e){let t=e.classNames&&e.classNames.length?[8,...e.classNames]:[];return e.element?[5,e.element,...e.attrs,...t]:e.attrs.length?[3,...e.attrs,...t]:e.classNames&&e.classNames.length?[9,...e.classNames]:[]}function jde(e){let t=kde(e),n=e.notSelectors&&e.notSelectors.length?e.notSelectors.map(e=>Ade(e)):[];return t.concat(...n)}function Hz(e){return e?HW.parse(e).map(jde):[]}function Mde(e){return Fde(Pde(e.nodes).join(``)+`[${e.meaning}]`)}function Nde(e){return e.id||Uz(e)}function Uz(e){let t=new lG;return Kz(e.nodes.map(e=>e.visit(t,null)).join(``),e.meaning)}function Pde(e){return e.map(e=>e.visit(cG,null))}function Fde(e){oG??=new TextEncoder;let t=[...oG.encode(e)],n=Rde(t,uG.Big),r=t.length*8,i=new Uint32Array(80),a=1732584193,o=4023233417,s=2562383102,c=271733878,l=3285377520;n[r>>5]|=128<<24-r%32,n[(r+64>>9<<4)+15]=r;for(let e=0;e<n.length;e+=16){let t=a,r=o,u=s,d=c,f=l;for(let t=0;t<80;t++){t<16?i[t]=n[e+t]:i[t]=Xz(i[t-3]^i[t-8]^i[t-14]^i[t-16],1);let r=Ide(t,o,s,c),u=r[0],d=r[1],f=[Xz(a,5),u,l,d,i[t]].reduce(Yz);l=c,c=s,s=Xz(o,30),o=a,a=f}a=Yz(a,t),o=Yz(o,r),s=Yz(s,u),c=Yz(c,d),l=Yz(l,f)}return Wz(a)+Wz(o)+Wz(s)+Wz(c)+Wz(l)}function Wz(e){return(e>>>0).toString(16).padStart(8,`0`)}function Ide(e,t,n,r){return e<20?[t&n|~t&r,1518500249]:e<40?[t^n^r,1859775393]:e<60?[t&n|t&r|n&r,2400959708]:[t^n^r,3395469782]}function Gz(e){oG??=new TextEncoder;let t=oG.encode(e),n=new DataView(t.buffer,t.byteOffset,t.byteLength),r=qz(n,t.length,0),i=qz(n,t.length,102072);return r==0&&(i==0||i==1)&&(r^=319790063,i^=-1801410264),BigInt.asUintN(32,BigInt(r))<<BigInt(32)|BigInt.asUintN(32,BigInt(i))}function Kz(e,t=``){let n=Gz(e);return t&&(n=BigInt.asUintN(64,n<<BigInt(1))|n>>BigInt(63)&BigInt(1),n+=Gz(t)),BigInt.asUintN(63,n).toString()}function qz(e,t,n){let r=2654435769,i=2654435769,a=0,o=t-12;for(;a<=o;a+=12){r+=e.getUint32(a,!0),i+=e.getUint32(a+4,!0),n+=e.getUint32(a+8,!0);let t=Jz(r,i,n);r=t[0],i=t[1],n=t[2]}let s=t-a;return n+=t,s>=4?(r+=e.getUint32(a,!0),a+=4,s>=8?(i+=e.getUint32(a,!0),a+=4,s>=9&&(n+=e.getUint8(a++)<<8),s>=10&&(n+=e.getUint8(a++)<<16),s===11&&(n+=e.getUint8(a++)<<24)):(s>=5&&(i+=e.getUint8(a++)),s>=6&&(i+=e.getUint8(a++)<<8),s===7&&(i+=e.getUint8(a++)<<16))):(s>=1&&(r+=e.getUint8(a++)),s>=2&&(r+=e.getUint8(a++)<<8),s===3&&(r+=e.getUint8(a++)<<16)),Jz(r,i,n)[2]}function Jz(e,t,n){return e-=t,e-=n,e^=n>>>13,t-=n,t-=e,t^=e<<8,n-=e,n-=t,n^=t>>>13,e-=t,e-=n,e^=n>>>12,t-=n,t-=e,t^=e<<16,n-=e,n-=t,n^=t>>>5,e-=t,e-=n,e^=n>>>3,t-=n,t-=e,t^=e<<10,n-=e,n-=t,n^=t>>>15,[e,t,n]}function Yz(e,t){return Lde(e,t)[1]}function Lde(e,t){let n=(e&65535)+(t&65535),r=(e>>>16)+(t>>>16)+(n>>>16);return[r>>>16,r<<16|n&65535]}function Xz(e,t){return e<<t|e>>>32-t}function Rde(e,t){let n=e.length+3>>>2,r=[];for(let i=0;i<n;i++)r[i]=zde(e,i*4,t);return r}function Zz(e,t){return t>=e.length?0:e[t]}function zde(e,t,n){let r=0;if(n===uG.Big)for(let n=0;n<4;n++)r+=Zz(e,t+n)<<24-8*n;else for(let n=0;n<4;n++)r+=Zz(e,t+n)<<8*n;return r}function Bde(e,t){return e==null||t==null?e==t:e.isEquivalent(t)}function Qz(e,t,n){let r=e.length;if(r!==t.length)return!1;for(let i=0;i<r;i++)if(!n(e[i],t[i]))return!1;return!0}function $z(e,t){return Qz(e,t,(e,t)=>e.isEquivalent(t))}function eB(e,t,n){return e===``?{cooked:t,raw:WG(HG(VG(t))),range:n}:{cooked:`:${e}:${t}`,raw:WG(`:${UG(VG(e))}:${VG(t)}`),range:n}}function Vde(e,t=!1,n=!0){return new dK(e,t,n)}function Hde(e=[]){return new fK(e)}function tB(e,t,n,r){return new wG(e,t,n,r)}function R(e,t=null,n){return new GG(e,null,t,n)}function nB(e,t,n){return new hG(e,t,n)}function rB(e){return new TG(e)}function iB(e,t,n){return new nK(e,t,n)}function aB(e,t=null){return new aK(e.map(e=>new rK(e.key,e.value,e.quoted)),t,null)}function Ude(e,t){return new qG(e,t)}function oB(e,t,n,r,i){return new YG(e,t,n,r,i)}function sB(e,t,n,r){return new XG(e,t,n,r)}function cB(e,t,n,r,i){return new vK(e,t,n,r,i)}function Wde(e,t,n,r){return new kG(e,t,n,r)}function z(e,t,n){return new MG(e,t,n)}function Gde(e,t,n,r,i){return new BG(e,t,n,r,i)}function lB(e){let t=``;if(e.tagName&&(t+=` @${e.tagName}`),e.text){if(e.text.match(/\/\*|\*\//))throw Error(`JSDoc text cannot contain "/*" and "*/"`);t+=` `+e.text.replace(/@/g,`\\@`)}return t}function Kde(e){if(e.length===0)return``;if(e.length===1&&e[0].tagName&&!e[0].text)return`*${lB(e[0])} `;let t=`*
 `;for(let n of e)t+=` *`,t+=lB(n).replace(/\n/g,`
  * `),t+=`
 `;return t+=` `,t}function uB(e){return e instanceof MG&&typeof e.value==`string`&&e.value.length>=xK}function qde(e){return e.replace(TK,(...e)=>e[1].toUpperCase())}function Jde(e,t){return dB(e,`:`,t)}function Yde(e,t){return dB(e,`.`,t)}function dB(e,t,n){let r=e.indexOf(t);return r==-1?n:[e.slice(0,r).trim(),e.slice(r+1).trim()]}function Xde(e){let t=[];for(let n=0;n<e.length;n++){let r=e.charCodeAt(n);if(r>=55296&&r<=56319&&e.length>n+1){let t=e.charCodeAt(n+1);t>=56320&&t<=57343&&(n++,r=(r-55296<<10)+t-56320+65536)}r<=127?t.push(r):r<=2047?t.push(r>>6&31|192,r&63|128):r<=65535?t.push(r>>12|224,r>>6&63|128,r&63|128):r<=2097151&&t.push(r>>18&7|240,r>>12&63|128,r>>6&63|128,r&63|128)}return t}function fB(e){if(typeof e==`string`)return e;if(Array.isArray(e))return`[${e.map(fB).join(`, `)}]`;if(e==null)return``+e;let t=e.overriddenName||e.name;if(t)return`${t}`;if(!e.toString)return`object`;let n=e.toString();if(n==null)return``+n;let r=n.indexOf(`
@@ -1064,7 +1064,7 @@ ${t.map(e=>`"${e.sourceSpan.toString()}"`).join(`
           In Storybook v7.0 we are using Angular's new bootstrapApplication API to mount an Angular application to the DOM.
           Note that the BrowserModule providers are automatically included when starting an application with bootstrapApplication()
           Please remove the "BrowserModule" from the list of imports in your moduleMetadata definition to remove this warning.
-        `),[!0];try{let t=await a(()=>import(`./animations-DCM_5Stb.js`),__vite__mapDeps([65,1,11,13]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Lt`
+        `),[!0];try{let t=await a(()=>import(`./animations-PC_tKPhS.js`),__vite__mapDeps([65,1,11,13]),import.meta.url);if(e===t.BrowserAnimationsModule)return console.warn(Lt`
             Storybook Warning:
             You have added the "BrowserAnimationsModule" to the list of "imports" in your moduleMetadata definition of your Story.
             In Storybook 7.0 we use Angular's new 'bootstrapApplication' API to mount the component to the DOM, which accepts a list of providers to set up application-wide providers.
@@ -1234,104 +1234,13 @@ interface BaseInfoState {
 
 export type InfoState = ProgressInfoState | InitInfoState;
 `,displayName:`BaseInfoState`,properties:[{name:`type`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`"progress" | "init"`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`InitInfoState`,type:`interface`},{name:`ProgressInfoState`,type:`interface`}],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-daf4d3d68a16d289c811cbcace1cd515613b0342c9949733b0cea7bd2f85e15f4449825c83c7813c63358b26e4ea5868ba8efa854a0cf9037f33f1ef53c2f3e8`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, ElementRef, inject, viewChild, model } from '@angular/core';
-import { Size } from '../../../../core/models/math/size.interface';
-import Color from 'color';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`InitInfoState`,type:`interface`},{name:`ProgressInfoState`,type:`interface`}],outgoing:[]}},{name:`Clickable`,id:`interface-Clickable-f44d2c105b14c3f5c5ae7a1f98d36d0c58c35d4bf2e74b4b9723ef49a8a21c056c0f435d36001b93b5a4225da46dd9f4a01b96119838ca61de00c34fc024e9c2`,file:`projects/irr-design-system/core/interfaces/clickable.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { OutputRef } from '@angular/core';
 
-export interface CursorDataModel {
-    horizontalOffset: string;
-    color: string;
+export interface Clickable {
+    clicked: OutputRef<MouseEvent>;
 }
-
-@Component({
-    selector: 'app-color-slider',
-    templateUrl: './color-slider.html',
-    styleUrl: './color-slider.scss',
-})
-export class ColorSlider implements AfterViewInit {
-    public readonly value = model<number>(0);
-
-    protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
-
-    protected readonly cursorData = computed<CursorDataModel>(() => {
-        const sliderWidth: number = this.canvas().nativeElement.getBoundingClientRect().width;
-        return this.computeCursorData(this.value(), sliderWidth);
-    });
-
-    private readonly destroyRef = inject(DestroyRef);
-
-    private isDragging: boolean = false;
-
-    private readonly onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
-        this.isDragging = true;
-        document.body.style.cursor = 'pointer';
-        this.onSliderMouseInteraction(evt);
-    };
-
-    private readonly onMouseUp: (evt: MouseEvent) => void = () => {
-        this.isDragging = false;
-        document.body.style.cursor = '';
-    };
-
-    private readonly onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
-        if (this.isDragging) {
-            this.onSliderMouseInteraction(evt);
-        }
-    };
-
-    private onSliderMouseInteraction(evt: MouseEvent): void {
-        const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
-
-        const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
-        this.value.set(Math.max(0, Math.min(1, rawValue)));
-    }
-
-    public ngAfterViewInit(): void {
-        this.drawSliderCanvas();
-
-        this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
-        window.addEventListener('mouseup', this.onMouseUp);
-        window.addEventListener('mousemove', this.onMouseMove);
-
-        this.destroyRef.onDestroy(() => {
-            this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
-            window.removeEventListener('mouseup', this.onMouseUp);
-            window.removeEventListener('mousemove', this.onMouseMove);
-        });
-    }
-
-    private drawSliderCanvas(): void {
-        const ctx: CanvasRenderingContext2D = this.canvas().nativeElement.getContext('2d')!;
-        const pixelSize: Size = {
-            height: this.canvas().nativeElement.height,
-            width: this.canvas().nativeElement.width,
-        };
-
-        const gradient = ctx.createLinearGradient(0, 0, pixelSize.width, 0);
-
-        const thresholdCount: number = 20;
-        for (let i = 0; i <= thresholdCount; ++i) {
-            const h = i * (1 / thresholdCount);
-            gradient.addColorStop(h, Color({ h: h * 360, s: 100, v: 100 }).hex());
-        }
-
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
-    }
-
-    private computeCursorData(value: number, sliderWidth: number): CursorDataModel {
-        const horizontalPosition: number = sliderWidth * value - 8;
-        const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
-
-        return {
-            horizontalOffset: \`\${horizontalPosition}px\`,
-            color: hexCodeColor,
-        };
-    }
-}
-`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
-`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-3933a1151912e677b0d88deabce11044ab94948e76463359434839e159b6c381c4470ae611310b1e89cab980c4df63c5405a1df685d8339f564da128f967ffa6-1`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, output, viewChild } from '@angular/core';
+`,displayName:`Clickable`,properties:[{name:`clicked`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`OutputRef<MouseEvent>`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[{name:`IdsFlatButton`,type:`component`},{name:`IdsFramedButton`,type:`component`},{name:`IdsMenuItem`,type:`component`}],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-3933a1151912e677b0d88deabce11044ab94948e76463359434839e159b6c381c4470ae611310b1e89cab980c4df63c5405a1df685d8339f564da128f967ffa6`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-canvas/color-canvas.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, effect, ElementRef, inject, input, model, output, viewChild } from '@angular/core';
 import { Size } from '../../../../core/models/math/size.interface';
 import Color, { ColorInstance } from 'color';
 
@@ -1448,6 +1357,103 @@ export class ColorCanvas implements AfterViewInit {
 `,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:8,rawdescription:`
 `},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `},{name:`verticalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`CursorDataModel`,id:`interface-CursorDataModel-daf4d3d68a16d289c811cbcace1cd515613b0342c9949733b0cea7bd2f85e15f4449825c83c7813c63358b26e4ea5868ba8efa854a0cf9037f33f1ef53c2f3e8-1`,file:`projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-slider/color-slider.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { AfterViewInit, Component, computed, DestroyRef, ElementRef, inject, viewChild, model } from '@angular/core';
+import { Size } from '../../../../core/models/math/size.interface';
+import Color from 'color';
+
+export interface CursorDataModel {
+    horizontalOffset: string;
+    color: string;
+}
+
+@Component({
+    selector: 'app-color-slider',
+    templateUrl: './color-slider.html',
+    styleUrl: './color-slider.scss',
+})
+export class ColorSlider implements AfterViewInit {
+    public readonly value = model<number>(0);
+
+    protected readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('canvas');
+
+    protected readonly cursorData = computed<CursorDataModel>(() => {
+        const sliderWidth: number = this.canvas().nativeElement.getBoundingClientRect().width;
+        return this.computeCursorData(this.value(), sliderWidth);
+    });
+
+    private readonly destroyRef = inject(DestroyRef);
+
+    private isDragging: boolean = false;
+
+    private readonly onMouseDown: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+        this.isDragging = true;
+        document.body.style.cursor = 'pointer';
+        this.onSliderMouseInteraction(evt);
+    };
+
+    private readonly onMouseUp: (evt: MouseEvent) => void = () => {
+        this.isDragging = false;
+        document.body.style.cursor = '';
+    };
+
+    private readonly onMouseMove: (evt: MouseEvent) => void = (evt: MouseEvent) => {
+        if (this.isDragging) {
+            this.onSliderMouseInteraction(evt);
+        }
+    };
+
+    private onSliderMouseInteraction(evt: MouseEvent): void {
+        const canvasRect: DOMRect = this.canvas().nativeElement.getBoundingClientRect();
+
+        const rawValue = (evt.clientX - canvasRect.x) / canvasRect.width;
+        this.value.set(Math.max(0, Math.min(1, rawValue)));
+    }
+
+    public ngAfterViewInit(): void {
+        this.drawSliderCanvas();
+
+        this.canvas().nativeElement.addEventListener('mousedown', this.onMouseDown);
+        window.addEventListener('mouseup', this.onMouseUp);
+        window.addEventListener('mousemove', this.onMouseMove);
+
+        this.destroyRef.onDestroy(() => {
+            this.canvas().nativeElement.removeEventListener('mousedown', this.onMouseDown);
+            window.removeEventListener('mouseup', this.onMouseUp);
+            window.removeEventListener('mousemove', this.onMouseMove);
+        });
+    }
+
+    private drawSliderCanvas(): void {
+        const ctx: CanvasRenderingContext2D = this.canvas().nativeElement.getContext('2d')!;
+        const pixelSize: Size = {
+            height: this.canvas().nativeElement.height,
+            width: this.canvas().nativeElement.width,
+        };
+
+        const gradient = ctx.createLinearGradient(0, 0, pixelSize.width, 0);
+
+        const thresholdCount: number = 20;
+        for (let i = 0; i <= thresholdCount; ++i) {
+            const h = i * (1 / thresholdCount);
+            gradient.addColorStop(h, Color({ h: h * 360, s: 100, v: 100 }).hex());
+        }
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, pixelSize.width, pixelSize.height);
+    }
+
+    private computeCursorData(value: number, sliderWidth: number): CursorDataModel {
+        const horizontalPosition: number = sliderWidth * value - 8;
+        const hexCodeColor: string = Color({ h: value * 360, s: 100, v: 100 }).hex();
+
+        return {
+            horizontalOffset: \`\${horizontalPosition}px\`,
+            color: hexCodeColor,
+        };
+    }
+}
+`,displayName:`CursorDataModel`,properties:[{name:`color`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:7,rawdescription:`
+`},{name:`horizontalOffset`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `}],indexSignatures:[],kind:172,methods:[],extends:[],isDuplicate:!0,duplicateId:1,duplicateName:`CursorDataModel-1`,relationships:{incoming:[],outgoing:[]}},{name:`DialogData`,id:`interface-DialogData-aa76a6555adcf24db07ac994550f53e155aa90b0ba7ea313082e73cdf114508a96dc92d0c4621de0495cdf50ced7b50622717008d434fc99d37fbb578ab9a038`,file:`projects/irrtirer/src/app/shared/dialog/dialog-data.interface.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`export interface DialogData {
     title: string;
     message: string;
@@ -1995,7 +2001,18 @@ export interface SectorSchemaPopulationParams {
 `,displayName:`MosaicProjectModel`,properties:[{name:`config`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MosaicConfig`,indexKey:``,optional:!1,description:``,line:4,rawdescription:`
 `},{name:`sectors`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`SectorSchema[]`,indexKey:``,optional:!1,description:``,line:6,rawdescription:`
 `},{name:`tilesSets`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`TilesSet[]`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
-`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`Node`,id:`interface-Node-a07d98dc3005f8ea0857bd37a2c4572eedc47aa07f433b8fa28c8687aed4b3e6614186427f27372b8a13126f55c8e599fda43ee559309a3bee74e8e7899c5e30`,file:`projects/irrtirer/src/app/tool/tray/tile-treemap.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
+`}],indexSignatures:[],kind:172,methods:[],extends:[],relationships:{incoming:[],outgoing:[]}},{name:`NativeControlHost`,id:`interface-NativeControlHost-b76f8e0ba2b05c16a3af36d2285b6a26cdc08e06a92ec40ea59f341af7a1c9524ca08b9a625074a61ff9de9c74f596d2f5ad84fe2dc49d3fbf81402146286ab7`,file:`projects/irr-design-system/core/interfaces/native-control-host.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { ElementRef, InjectionToken, Signal } from '@angular/core';
+
+/** Gives library directives the native control inside a component, for ARIA, focus and events only. */
+export interface NativeControlHost {
+    nativeControl: Signal<ElementRef<HTMLElement>>;
+}
+
+export const IDS_NATIVE_CONTROL_HOST = new InjectionToken<NativeControlHost>('IdsNativeControlHost');
+`,displayName:`NativeControlHost`,properties:[{name:`nativeControl`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`Signal<ElementRef<HTMLElement>>`,indexKey:``,optional:!1,description:``,line:5,rawdescription:`
+`}],indexSignatures:[],kind:172,description:`<p>Gives library directives the native control inside a component, for ARIA, focus and events only.</p>
+`,rawdescription:`
+Gives library directives the native control inside a component, for ARIA, focus and events only.`,methods:[],extends:[],relationships:{incoming:[{name:`IdsFlatButton`,type:`component`},{name:`IdsFramedButton`,type:`component`},{name:`IdsMenuItem`,type:`component`}],outgoing:[]}},{name:`Node`,id:`interface-Node-a07d98dc3005f8ea0857bd37a2c4572eedc47aa07f433b8fa28c8687aed4b3e6614186427f27372b8a13126f55c8e599fda43ee559309a3bee74e8e7899c5e30`,file:`projects/irrtirer/src/app/tool/tray/tile-treemap.ts`,deprecated:!1,deprecationMessage:``,type:`interface`,sourceCode:`import { Injectable } from '@angular/core';
 import { TileModel } from '../../core/models/mosaic-project.model';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';
@@ -3964,7 +3981,20 @@ export class ConfigurationEventBus {
         this._imageChange.set({ mosaicConfig, shouldFocus });
     }
 }
-`,extends:[],type:`injectable`,relationships:{incoming:[{name:`Configuration`,type:`component`}],outgoing:[]}},{name:`MosaicGenerationHub`,id:`injectable-MosaicGenerationHub-1d2e5bedc7ec9634918bfe8bd45c2437fb56788c39a0cf9398da5d14f86751d27080047930cf77d2193a1b7d3412aadafcd80bf9a1ae67504ee89fb4c4d71fb9`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation-hub.ts`,coverageIgnore:!1,properties:[{name:`generationAbortedWithError$`,coverageIgnore:!1,defaultValue:`this.generationAbortedWithErrorSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
+`,extends:[],type:`injectable`,relationships:{incoming:[{name:`Configuration`,type:`component`}],outgoing:[]}},{name:`IdentityCounter`,id:`injectable-IdentityCounter-573ca45768972eb9bf4680fdb779a391d925d15bdbe451c3c0ee86098edfbffd8486b52aec12561ca493ab450dbb67447a8cb5d75a15781bda2bd8cb135f92b5`,file:`projects/irr-design-system/core/tools/identity-generation/identity-counter.ts`,coverageIgnore:!1,properties:[],methods:[{name:`getNextIdNumber`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:7,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]}],deprecated:!1,deprecationMessage:``,description:``,rawdescription:`
+`,sourceCode:`import { Service } from '@angular/core';
+
+@Service()
+export class IdentityCounter {
+    private counter = 0;
+
+    public getNextIdNumber(): number {
+        this.counter += 1;
+        return this.counter;
+    }
+}
+`,extends:[],type:`injectable`,relationships:{incoming:[],outgoing:[]}},{name:`MosaicGenerationHub`,id:`injectable-MosaicGenerationHub-1d2e5bedc7ec9634918bfe8bd45c2437fb56788c39a0cf9398da5d14f86751d27080047930cf77d2193a1b7d3412aadafcd80bf9a1ae67504ee89fb4c4d71fb9`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation-hub.ts`,coverageIgnore:!1,properties:[{name:`generationAbortedWithError$`,coverageIgnore:!1,defaultValue:`this.generationAbortedWithErrorSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
 `,modifierKind:[125,148]},{name:`generationFinished$`,coverageIgnore:!1,defaultValue:`this.generationFinishedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<void>`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
 `,modifierKind:[125,148]},{name:`sectionGenerated$`,coverageIgnore:!1,defaultValue:`this.sectionGeneratedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<SectionGenerationResult>`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
 `,modifierKind:[125,148]},{name:`sectionsMeshReceived$`,coverageIgnore:!1,defaultValue:`this.sectionsMeshReceivedSub.asObservable()`,deprecated:!1,deprecationMessage:``,type:`Observable<SectorTriangulationMeshPartsModel[]>`,indexKey:``,optional:!1,description:``,line:18,rawdescription:`
@@ -5720,7 +5750,294 @@ export class TriangulatedContourObject extends BaseCanvasObject implements Canva
 `,description:``,modifierKind:[125]},{name:`restore`,coverageIgnore:!1,args:[{name:`obj`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:49,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[126],jsdoctags:[{name:`obj`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]},{name:`sqrMagnitude`,coverageIgnore:!1,args:[],optional:!1,returnType:`number`,typeParameters:[],line:33,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`sub`,coverageIgnore:!1,args:[{name:`b`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`Vector`,typeParameters:[],line:20,deprecated:!1,deprecationMessage:``,rawdescription:`
-`,description:``,modifierKind:[125],jsdoctags:[{name:`b`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}}],mCe=[],hCe=[{name:`App`,id:`component-App-27b3aaddcfec23fe5471362481f9fa98fde7dabfc8d8e877c5faa1d4301c5828595fabb94c9613f64cd91f194da246724855a66961318176cc5ce054a008c9f8`,file:`projects/irrtirer/src/app/app.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-root`,styleUrls:[],styles:[],templateUrl:[`./app.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[{name:`title`,coverageIgnore:!1,defaultValue:`'Irrtirer'`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
+`,description:``,modifierKind:[125],jsdoctags:[{name:`b`,type:`Vector`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],indexSignatures:[],extends:[],hostBindings:[],hostListeners:[],relationships:{incoming:[],outgoing:[]}}],mCe=[{name:`IdentityGenerator`,id:`directive-IdentityGenerator-f3f8627bf2174b83ed003a7f02d76cd90eb2f2ef19aa558839750e9ea479ca7f066d83803779c14dbc0e578fdc08ffe045eca973ae918bf18ac74aad3d00aafb`,file:`projects/irr-design-system/core/tools/identity-generation/identity-generator.ts`,type:`directive`,description:``,rawdescription:`
+`,sourceCode:`import { Directive, inject, input } from '@angular/core';
+import { IdentityCounter } from './identity-counter';
+
+@Directive({
+    selector: '[idsIdentityGenerator]',
+})
+export class IdentityGenerator {
+    private readonly counterService = inject(IdentityCounter);
+
+    protected readonly id = input<string | undefined>(undefined);
+
+    public getIdentifier(fallback: (id: number) => string): string {
+        const explicitId = this.id();
+        if (explicitId) {
+            return explicitId;
+        }
+
+        const generatedId = this.counterService.getNextIdNumber();
+        return fallback(generatedId);
+    }
+}
+
+export function injectControlId(fallback: (id: number) => string): string {
+    const identityGenerator = inject(IdentityGenerator);
+    return identityGenerator.getIdentifier(fallback);
+}
+`,selector:`[idsIdentityGenerator]`,providers:[],hostDirectives:[],standalone:!0,inputsClass:[],outputsClass:[],deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],propertiesClass:[],methodsClass:[{name:`getIdentifier`,coverageIgnore:!1,args:[{name:`fallback`,type:`function`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,function:[{name:`id`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}]}],optional:!1,returnType:`string`,typeParameters:[],line:12,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125],jsdoctags:[{name:`fallback`,type:`function`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,function:[{name:`id`,type:`number`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],tagName:{text:`param`}}]}],coverageIgnore:!1,extends:[],relationships:{incoming:[{name:`IdsNumberInput`,type:`component`},{name:`IdsTextInput`,type:`component`}],outgoing:[]}},{name:`IdsMenuTrigger`,id:`directive-IdsMenuTrigger-b359ec6d7141b161c1d4e8ca78d2c5bfa9d4fc6f06b5651094e46049bdea4141060f7d7200112bcc0844cd184068035de79d138ae864b18cd9ccb2fb5b1435e9`,file:`projects/irr-design-system/menu/menu-trigger/menu-trigger.ts`,type:`directive`,description:``,rawdescription:`
+`,sourceCode:`import { afterNextRender, afterRenderEffect, DestroyRef, Directive, ElementRef, inject, input, Renderer2 } from '@angular/core';
+import { IdentityCounter, IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
+import { IdsMenu } from '../menu';
+
+@Directive({
+    selector: '[idsMenuTriggerFor]',
+})
+export class IdsMenuTrigger {
+    public readonly idsMenuTriggerFor = input.required<IdsMenu>();
+
+    private readonly host = inject(ElementRef<HTMLElement>);
+    private readonly renderer = inject(Renderer2);
+    private readonly destroyRef = inject(DestroyRef);
+    private readonly nativeControl = inject(IDS_NATIVE_CONTROL_HOST, { self: true }).nativeControl;
+    private readonly fallbackControlId = \`ids-menu-trigger-\${inject(IdentityCounter).getNextIdNumber()}\`;
+
+    constructor() {
+        afterNextRender(() => this.connectToControl());
+        afterRenderEffect(() => this.reflectMenuState());
+    }
+
+    private connectToControl(): void {
+        const control = this.nativeControl().nativeElement;
+        control.id ||= this.fallbackControlId;
+        const unlisten = this.renderer.listen(control, 'click', () => this.idsMenuTriggerFor().toggle(this.host.nativeElement, control));
+        this.destroyRef.onDestroy(unlisten);
+    }
+
+    private reflectMenuState(): void {
+        const control = this.nativeControl().nativeElement;
+        const menu = this.idsMenuTriggerFor();
+        control.setAttribute('aria-haspopup', 'menu');
+        control.setAttribute('aria-expanded', String(menu.isOpen()));
+        // The panel exists in the DOM only while open.
+        if (menu.isOpen()) {
+            control.setAttribute('aria-controls', menu.panelId);
+        } else {
+            control.removeAttribute('aria-controls');
+        }
+    }
+}
+`,selector:`[idsMenuTriggerFor]`,providers:[],hostDirectives:[],standalone:!0,inputsClass:[{name:`idsMenuTriggerFor`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`IdsMenu`,indexKey:``,optional:!1,description:``,line:9,rawdescription:`
+`,modifierKind:[125,148],required:!0}],outputsClass:[],deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,extends:[],constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[],line:15,rawdescription:`
+`},relationships:{incoming:[{name:`SectorsContoursList`,type:`component`},{name:`TileListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`},{name:`Toolbar`,type:`component`}],outgoing:[]}},{name:`IdsPrefix`,id:`directive-IdsPrefix-23c5f112c020459b4ff553395c4f1cd78db1fad85eae1de53edb8434e37a6a925a2dbf2d0766e05ea8cb3d73b8bc99692f849675ef2ddfdc78334813a50b5adb`,file:`projects/irr-design-system/form/prefix/prefix.ts`,type:`directive`,description:``,rawdescription:`
+`,sourceCode:`import { Directive } from '@angular/core';
+
+@Directive({
+    selector: '[idsPrefix]',
+})
+export class IdsPrefix {}
+`,selector:`[idsPrefix]`,providers:[],hostDirectives:[],standalone:!0,inputsClass:[],outputsClass:[],deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,extends:[],relationships:{incoming:[],outgoing:[]}},{name:`IdsSuffix`,id:`directive-IdsSuffix-dec64ebbadcd36e937ed130393078eccce38d9f1252e438a143d7cc1f7085946fcf3757133b662ec520e99737269a78179edbee5735e89cfa34e51193655a8b4`,file:`projects/irr-design-system/form/suffix/suffix.ts`,type:`directive`,description:``,rawdescription:`
+`,sourceCode:`import { Directive } from '@angular/core';
+
+@Directive({
+    selector: '[idsSuffix]',
+})
+export class IdsSuffix {}
+`,selector:`[idsSuffix]`,providers:[],hostDirectives:[],standalone:!0,inputsClass:[],outputsClass:[],deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,extends:[],relationships:{incoming:[],outgoing:[]}},{name:`IdsTooltip`,id:`directive-IdsTooltip-9d4de159d85dd02d5b921fd0b8e82bef4f76c706fb33dc659a5e9bc9c65f915890f42f0deaa8ee9fdd022b5ab8b25bc0b98fb85eac7d42b8ff854dad9c8f6403`,file:`projects/irr-design-system/tooltip/tooltip.ts`,type:`directive`,description:`<p>Shows a text hint on hover and focus.</p>
+`,rawdescription:`
+Shows a text hint on hover and focus.`,sourceCode:`import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
+import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { IdentityCounter } from 'irr-design-system/core';
+import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
+
+export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
+
+/** Shows a text hint on hover and focus. */
+@Directive({
+    selector: '[idsTooltip]',
+    host: {
+        '(mouseenter)': 'onMouseEnter()',
+        '(mouseleave)': 'onMouseLeave($event)',
+        '(focusin)': 'onFocusIn($event)',
+        '(focusout)': 'onFocusOut()',
+        '(document:keydown.escape)': 'onEscape()',
+        '(window:resize)': 'onViewportResize()',
+    },
+})
+export class IdsTooltip {
+    public readonly idsTooltip = input.required<string>();
+    public readonly idsTooltipPosition = input<IdsTooltipPosition>('auto');
+
+    private readonly host = inject(ElementRef<HTMLElement>);
+    private readonly overlay = inject(Overlay);
+    private readonly destroyRef = inject(DestroyRef);
+    private readonly panelId = \`ids-tooltip-\${inject(IdentityCounter).getNextIdNumber()}\`;
+
+    private overlayRef: OverlayRef | undefined;
+    private positionStrategy: FlexibleConnectedPositionStrategy | undefined;
+    private describedElement: Element | undefined;
+
+    constructor() {
+        this.destroyRef.onDestroy(() => this.closePanel());
+    }
+
+    protected onMouseEnter(): void {
+        this.openPanel();
+    }
+
+    protected onMouseLeave(event: MouseEvent): void {
+        this.closeUnlessPointerStays(event.relatedTarget);
+    }
+
+    protected onFocusIn(event: FocusEvent): void {
+        this.openPanel();
+        this.describe(event.target as Element);
+    }
+
+    protected onFocusOut(): void {
+        this.closePanel();
+    }
+
+    protected onEscape(): void {
+        this.closePanel();
+    }
+
+    protected onViewportResize(): void {
+        this.updatePositions();
+    }
+
+    private openPanel(): void {
+        if (this.overlayRef || !this.idsTooltip().trim()) {
+            return;
+        }
+
+        this.positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
+
+        this.overlayRef = this.overlay.create({
+            positionStrategy: this.positionStrategy,
+            scrollStrategy: this.overlay.scrollStrategies.reposition(),
+            hasBackdrop: false,
+        });
+
+        const portal = new ComponentPortal(IdsTooltipPanel);
+        const panel = this.overlayRef.attach(portal);
+        panel.setInput('panelId', this.panelId);
+        panel.setInput('text', this.idsTooltip());
+
+        this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
+    }
+
+    private closeUnlessPointerStays(pointerTarget: EventTarget | null): void {
+        const staysOnHost = pointerTarget instanceof Node && this.host.nativeElement.contains(pointerTarget);
+        const staysOnPanel = pointerTarget instanceof Node && !!this.overlayRef?.overlayElement.contains(pointerTarget);
+        if (!staysOnHost && !staysOnPanel) {
+            this.closePanel();
+        }
+    }
+
+    private closePanel(): void {
+        this.removeDescription();
+        this.overlayRef?.dispose();
+        this.overlayRef = undefined;
+        this.positionStrategy = undefined;
+    }
+
+    private describe(element: Element): void {
+        const alreadyNamedByText = element.getAttribute('aria-label') === this.idsTooltip();
+        if (!this.overlayRef || alreadyNamedByText) {
+            return;
+        }
+
+        element.setAttribute('aria-describedby', [...this.getForeignDescribedByIds(element), this.panelId].join(' '));
+        this.describedElement = element;
+    }
+
+    private removeDescription(): void {
+        if (!this.describedElement) {
+            return;
+        }
+
+        const ids = this.getForeignDescribedByIds(this.describedElement);
+        if (ids.length) {
+            this.describedElement.setAttribute('aria-describedby', ids.join(' '));
+        } else {
+            this.describedElement.removeAttribute('aria-describedby');
+        }
+        this.describedElement = undefined;
+    }
+
+    private getForeignDescribedByIds(element: Element): string[] {
+        const ids = element.getAttribute('aria-describedby')?.split(' ') ?? [];
+        return ids.filter((id) => id && id !== this.panelId);
+    }
+
+    private updatePositions(): void {
+        if (!this.overlayRef || !this.positionStrategy) {
+            return;
+        }
+
+        this.positionStrategy.withPositions(this.getPositions());
+        this.overlayRef.updatePosition();
+    }
+
+    private getPositions(): ConnectedPosition[] {
+        const position = this.idsTooltipPosition();
+        if (position !== 'auto') {
+            return this.getPositionsFor(position);
+        }
+
+        const hostRect = this.host.nativeElement.getBoundingClientRect();
+        const edgeSpace = 32;
+
+        if (hostRect.top <= edgeSpace) {
+            return this.getPositionsFor('bottom');
+        }
+
+        if (hostRect.left <= edgeSpace) {
+            return this.getPositionsFor('right');
+        }
+
+        if (hostRect.right >= window.innerWidth - edgeSpace) {
+            return this.getPositionsFor('left');
+        }
+
+        return this.getPositionsFor('bottom');
+    }
+
+    private getPositionsFor(position: Exclude<IdsTooltipPosition, 'auto'>): ConnectedPosition[] {
+        const preferred = this.getPosition(position);
+        const fallbacks: ConnectedPosition[] = [
+            this.getPosition('bottom'),
+            this.getPosition('top'),
+            this.getPosition('right'),
+            this.getPosition('left'),
+        ];
+
+        return [
+            preferred,
+            ...fallbacks.filter(
+                (fallback) =>
+                    fallback.originX !== preferred.originX ||
+                    fallback.originY !== preferred.originY ||
+                    fallback.overlayX !== preferred.overlayX ||
+                    fallback.overlayY !== preferred.overlayY,
+            ),
+        ];
+    }
+
+    private getPosition(position: Exclude<IdsTooltipPosition, 'auto'>): ConnectedPosition {
+        switch (position) {
+            case 'top':
+                return { originX: 'center', originY: 'top', overlayX: 'center', overlayY: 'bottom' };
+            case 'right':
+                return { originX: 'end', originY: 'center', overlayX: 'start', overlayY: 'center' };
+            case 'left':
+                return { originX: 'start', originY: 'center', overlayX: 'end', overlayY: 'center' };
+            case 'bottom':
+                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
+            default:
+                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
+        }
+    }
+}
+`,selector:`[idsTooltip]`,providers:[],hostDirectives:[],standalone:!0,inputsClass:[{name:`idsTooltip`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`idsTooltipPosition`,coverageIgnore:!1,defaultValue:`'auto'`,deprecated:!1,deprecationMessage:``,type:`IdsTooltipPosition`,indexKey:``,optional:!1,description:``,line:23,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[],deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,jsdoctags:[{pos:455,end:499,kind:321,id:0,flags:16777216,modifierFlagsCache:0,transformFlags:0,comment:`Shows a text hint on hover and focus.`}],extends:[],constructorObj:{name:`constructor`,description:``,deprecated:!1,deprecationMessage:``,args:[],line:32,rawdescription:`
+`},relationships:{incoming:[{name:`IdsSideNavItem`,type:`component`},{name:`Ribbon`,type:`component`},{name:`SectorPropertyEditor`,type:`component`}],outgoing:[]}}],hCe=[{name:`App`,id:`component-App-27b3aaddcfec23fe5471362481f9fa98fde7dabfc8d8e877c5faa1d4301c5828595fabb94c9613f64cd91f194da246724855a66961318176cc5ce054a008c9f8`,file:`projects/irrtirer/src/app/app.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],host:{},inputs:[],outputs:[],providers:[],selector:`app-root`,styleUrls:[],styles:[],templateUrl:[`./app.html`],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[{name:`title`,coverageIgnore:!1,defaultValue:`'Irrtirer'`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:16,rawdescription:`
 `,modifierKind:[125,148]}],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:24,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`RouterOutlet`},{name:`Toolbar`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, inject, OnInit } from '@angular/core';
@@ -6427,7 +6744,7 @@ export class ConfigMenu {
         openFilePicker('.irr', action);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`module`}]},templateData:`@let isMosaicSet = !!mosaicConfig(); @if (isMosaicSet) {
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`component`}]},templateData:`@let isMosaicSet = !!mosaicConfig(); @if (isMosaicSet) {
 <ids-framed-button (clicked)="navigateToProjectConfiguration()"> {{ 'tool.config.menu.projectSettings' | translate }} </ids-framed-button>
 <ids-framed-button variant="accent" (clicked)="saveProject()"> {{ 'tool.config.menu.saveProject' | translate }} </ids-framed-button>
 } @else {
@@ -6582,7 +6899,7 @@ export class ConfigProject {
         this.formData.update((state) => ({ ...state, mosaicImage: file }));
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`,type:`module`}]},templateData:`<div class="flex flex-row gap-2.5">
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`component`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`FormField`,type:`module`}]},templateData:`<div class="flex flex-row gap-2.5">
     <ids-framed-button class="flex-1" (clicked)="navigateToConfiguration()"> {{ 'common.return' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" (clicked)="trySave()" [hidden]="isReadOnlyMode()" [variant]="this.form().valid() ? 'accent' : 'neutral'">
         {{ 'common.confirm' | translate }}
@@ -6750,7 +7067,7 @@ export class Dialog {
         padding-bottom: 0;
     }
 }
-`,styleUrl:`./dialog.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`IdsFlatButton`,type:`module`}]},templateData:`<div class="dialog-content">
+`,styleUrl:`./dialog.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`IdsFlatButton`,type:`component`}]},templateData:`<div class="dialog-content">
     <h1 mat-dialog-title>{{ data.title }}</h1>
     <div mat-dialog-content>{{ data.message }}</div>
     <div mat-dialog-actions align="end">
@@ -6843,7 +7160,7 @@ export class ExtendedPanel implements OnInit {
         }
     }
 }
-`,styleUrl:`./extended-panel.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`SectorPropertyEditor`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`ExpandablePanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="label">
+`,styleUrl:`./extended-panel.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`SectorPropertyEditor`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`ExpandablePanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="label">
     <span class="label-content">{{ label() }}</span>
     <ids-flat-button
         class="toggle-button ids-flat-button--size-small"
@@ -6856,7 +7173,1320 @@ export class ExtendedPanel implements OnInit {
 <app-expandable-panel class="panel" [isOpen]="isOpen()">
     <ng-content />
 </app-expandable-panel>
-`},{name:`MosaicGeneration`,id:`component-MosaicGeneration-a767fee7646306822087c664652640c4084a8836885d94447ab2dfe3107f6339cfe03cd25b7be4d325009390dcdaf900597d8f3307c868a2317a38fbb3c029b8`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`MosaicGenerationState`}],selector:`app-mosaic-generation`,styleUrls:[`./mosaic-generation.scss`],styles:[],templateUrl:[`./mosaic-generation.html`],templateVariables:[{name:`progress`,defaultValue:`progressState()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:95,deprecated:!1,deprecationMessage:``,rawdescription:`
+`},{name:`IdsError`,id:`component-IdsError-52494513ad0d84b40ea9ada64ceef17187cf990f51cf9591c94db6e81b8eb62e83a16daec674c38420a0a04a365aaa01399c06102e1d98d2afcce19c9ee2f9e9`,file:`projects/irr-design-system/form/error/error.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-error`,styleUrls:[`./error.css`],styles:[],template:`<ng-content />`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component } from '@angular/core';
+
+@Component({
+    selector: 'ids-error',
+    template: \`<ng-content />\`,
+    styleUrl: './error.css',
+})
+export class IdsError {}
+`,styleUrl:`./error.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+    color: var(--ids-text-danger-color);
+    font-size: 12px;
+    font-weight: 500;
+}
+`,styleUrl:`./error.css`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[]}},{name:`IdsFlatButton`,id:`component-IdsFlatButton-41cf22cd6396cc967035a2516b54df6407f9330a02f833b6810963ed3080740bed45ddaff551670b6cbcf93c6c6b8d21a3d00d534c11086a871209001e91c706`,file:`projects/irr-design-system/action/flat-button/flat-button.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`IdsFlatButton`}],selector:`ids-flat-button`,styleUrls:[`./flat-button.css`,`../../styles/shared/ids-flat-action.css`,`../../styles/shared/ids-action.css`],styles:[],template:`<button
+    #control
+    class="ids-flat-action ids-flat-button--{{ variant() }}"
+    [disabled]="disabled()"
+    [type]="type()"
+    [attr.aria-label]="ariaLabel() || null"
+    (click)="clicked.emit($event)"
+>
+    <span class="ids-flat-action-content ids-button-label">
+        <ng-content />
+    </span>
+</button>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`ariaLabel`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:`<p>Accessible name; required when the content is not text (e.g. icon only).</p>
+`,line:31,rawdescription:`
+Accessible name; required when the content is not text (e.g. icon only).`,modifierKind:[125,148],required:!1},{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`type`,coverageIgnore:!1,defaultValue:`'button'`,deprecated:!1,deprecationMessage:``,type:`"button" | "submit" | "reset"`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`variant`,coverageIgnore:!1,defaultValue:`'neutral'`,deprecated:!1,deprecationMessage:``,type:`IdsFlatButtonVariant`,indexKey:``,optional:!1,description:``,line:28,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`clicked`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MouseEvent`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[{name:`nativeControl`,coverageIgnore:!1,defaultValue:`viewChild.required<ElementRef<HTMLButtonElement>>('control')`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
+`,modifierKind:[125,148]}],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, ElementRef, input, output, viewChild } from '@angular/core';
+import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-design-system/core';
+
+export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
+
+@Component({
+    selector: 'ids-flat-button',
+    providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFlatButton }],
+    template: \`
+        <button
+            #control
+            class="ids-flat-action ids-flat-button--{{ variant() }}"
+            [disabled]="disabled()"
+            [type]="type()"
+            [attr.aria-label]="ariaLabel() || null"
+            (click)="clicked.emit($event)"
+        >
+            <span class="ids-flat-action-content ids-button-label">
+                <ng-content />
+            </span>
+        </button>
+    \`,
+    styleUrls: ['./flat-button.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
+})
+export class IdsFlatButton implements Clickable, NativeControlHost {
+    public readonly clicked = output<MouseEvent>();
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+    public readonly variant = input<IdsFlatButtonVariant>('neutral');
+    public readonly type = input<'button' | 'submit' | 'reset'>('button');
+    /** Accessible name; required when the content is not text (e.g. icon only). */
+    public readonly ariaLabel = input<string>('');
+
+    public readonly nativeControl = viewChild.required<ElementRef<HTMLButtonElement>>('control');
+}
+`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    --ids-glow-color: var(--ids-color-highlight);
+    --ids-button-content-color: var(--ids-text-highlight-color);
+
+    .ids-flat-action {
+        &.ids-flat-button--accent,
+        &.ids-flat-button--danger {
+            --ids-button-text-shadow-idle: var(--ids-button-text-shadow-layer-1);
+            --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+        }
+
+        &.ids-flat-button--neutral {
+            --ids-glow-color: var(--ids-text-color);
+            --ids-button-content-color: var(--ids-text-color);
+        }
+
+        &.ids-flat-button--accent {
+            --ids-glow-color: var(--ids-color-highlight);
+            --ids-button-content-color: var(--ids-text-highlight-color);
+        }
+
+        &.ids-flat-button--danger {
+            --ids-glow-color: var(--ids-color-danger);
+            --ids-button-content-color: var(--ids-text-danger-color);
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+        }
+    }
+}
+
+:host(.ids-flat-button--size-small) {
+    --ids-flat-button-size: 32px;
+}
+`,styleUrl:`./flat-button.css`},{data:`.ids-flat-action {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: max(0px, calc((var(--ids-flat-button-size, 36px) - var(--ids-flat-button-icon-size, 24px)) / 2));
+    border: 0;
+    outline: none;
+    position: relative;
+    border-radius: var(--ids-action-radius);
+    --ids-flat-action-overlay-opacity: 0;
+
+    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-faint), transparent);
+    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
+
+    --ids-button-text-shadow-idle: none;
+    --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1);
+
+    --ids-button-text-shadow: var(--ids-button-text-shadow-idle);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--ids-glow-color);
+        border-radius: inherit;
+        opacity: var(--ids-flat-action-overlay-opacity);
+        pointer-events: none;
+        transition:
+            opacity 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+    &:active:not(:disabled),
+    &:focus-visible:not(:disabled),
+    &:hover:not(:disabled):not(:focus-visible) {
+        --ids-button-text-shadow: var(--ids-button-text-shadow-hover);
+    }
+
+    &:hover:not(:disabled):not(:focus-visible):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.05;
+    }
+
+    &:focus-visible:not(:disabled):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.1;
+    }
+
+    &:active:not(:disabled) {
+        --ids-flat-action-overlay-opacity: 0.15;
+        .ids-flat-action-content {
+            font-weight: 700;
+        }
+    }
+
+    .ids-flat-action-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 6px;
+        position: relative;
+        z-index: 1;
+        color: var(--ids-overridden-button-content-color, var(--ids-button-content-color));
+        text-shadow: var(--ids-button-text-shadow);
+        transition:
+            color 0.2s ease,
+            font-weight 0.2s ease,
+            text-shadow 0.2s ease;
+
+        --irr-icon-margin-left: -6px;
+        --irr-icon-margin-right: -6px;
+    }
+}
+`,styleUrl:`../../styles/shared/ids-flat-action.css`},{data:`:host {
+    display: inline-block;
+
+    --ids-action-radius: 9999px;
+}
+`,styleUrl:`../../styles/shared/ids-action.css`}],stylesData:``,extends:[],implements:[`Clickable`,`NativeControlHost`],relationships:{incoming:[{name:`Dialog`,type:`component`},{name:`ExtendedPanel`,type:`component`},{name:`ProjectNameDialog`,type:`component`},{name:`Ribbon`,type:`component`},{name:`ScrollableList`,type:`component`},{name:`SectorContourEdition`,type:`component`},{name:`SectorListElem`,type:`component`},{name:`SectorsContoursList`,type:`component`},{name:`SnapshotOptionsDialog`,type:`component`},{name:`TileListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`},{name:`Toolbar`,type:`component`}],outgoing:[{name:`Clickable`,type:`interface`},{name:`NativeControlHost`,type:`interface`,description:`Gives library directives the native control inside a component, for ARIA, focus and events only.`}]}},{name:`IdsFlatLink`,id:`component-IdsFlatLink-707759996351bb3c96c6d323543e99874657f6abb066ba28ef947320ae3af9c5cda278998121d6e68e15351d0516dc55065141d5e844c3309b7c2ed5244ea46a`,file:`projects/irr-design-system/action/flat-link/flat-link.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-flat-link`,styleUrls:[`./flat-link.css`,`../../styles/shared/ids-flat-action.css`,`../../styles/shared/ids-action.css`],styles:[],template:`<ng-template #linkContent>
+    <span class="ids-flat-action-content ids-button-label">
+        <ng-content />
+    </span>
+</ng-template>
+
+@if (linkType() === 'external') {
+    <a class="ids-flat-action ids-flat-link" [href]="link()" target="_blank" rel="noopener noreferrer">
+        <ng-container [ngTemplateOutlet]="linkContent" />
+    </a>
+} @else {
+    <a class="ids-flat-action ids-flat-link" [routerLink]="link()" routerLinkActive ariaCurrentWhenActive="page">
+        <ng-container [ngTemplateOutlet]="linkContent" />
+    </a>
+}
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`link`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:28,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`linkType`,coverageIgnore:!1,defaultValue:`'internal'`,deprecated:!1,deprecationMessage:``,type:`"internal" | "external"`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`NgTemplateOutlet`},{name:`RouterLink`},{name:`RouterLinkActive`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { NgTemplateOutlet } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
+@Component({
+    selector: 'ids-flat-link',
+    imports: [NgTemplateOutlet, RouterLink, RouterLinkActive],
+    template: \`
+        <ng-template #linkContent>
+            <span class="ids-flat-action-content ids-button-label">
+                <ng-content />
+            </span>
+        </ng-template>
+
+        @if (linkType() === 'external') {
+            <a class="ids-flat-action ids-flat-link" [href]="link()" target="_blank" rel="noopener noreferrer">
+                <ng-container [ngTemplateOutlet]="linkContent" />
+            </a>
+        } @else {
+            <a class="ids-flat-action ids-flat-link" [routerLink]="link()" routerLinkActive ariaCurrentWhenActive="page">
+                <ng-container [ngTemplateOutlet]="linkContent" />
+            </a>
+        }
+    \`,
+    styleUrls: ['./flat-link.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
+})
+export class IdsFlatLink {
+    public readonly link = input.required<string>();
+    public readonly linkType = input<'internal' | 'external'>('internal');
+}
+`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    --ids-glow-color: var(--ids-color-highlight);
+    --ids-button-content-color: var(--ids-text-highlight-color);
+
+    .ids-flat-action {
+        --ids-button-text-shadow-idle: var(--ids-button-text-shadow-layer-1);
+        --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+
+        &[aria-current='page'] {
+            --ids-flat-action-overlay-opacity: 0.15;
+
+            .ids-flat-action-content {
+                font-weight: 700;
+            }
+        }
+    }
+}
+`,styleUrl:`./flat-link.css`},{data:`.ids-flat-action {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: max(0px, calc((var(--ids-flat-button-size, 36px) - var(--ids-flat-button-icon-size, 24px)) / 2));
+    border: 0;
+    outline: none;
+    position: relative;
+    border-radius: var(--ids-action-radius);
+    --ids-flat-action-overlay-opacity: 0;
+
+    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-faint), transparent);
+    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
+
+    --ids-button-text-shadow-idle: none;
+    --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1);
+
+    --ids-button-text-shadow: var(--ids-button-text-shadow-idle);
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--ids-glow-color);
+        border-radius: inherit;
+        opacity: var(--ids-flat-action-overlay-opacity);
+        pointer-events: none;
+        transition:
+            opacity 0.2s ease,
+            background-color 0.2s ease;
+    }
+
+    &:active:not(:disabled),
+    &:focus-visible:not(:disabled),
+    &:hover:not(:disabled):not(:focus-visible) {
+        --ids-button-text-shadow: var(--ids-button-text-shadow-hover);
+    }
+
+    &:hover:not(:disabled):not(:focus-visible):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.05;
+    }
+
+    &:focus-visible:not(:disabled):not(:active) {
+        --ids-flat-action-overlay-opacity: 0.1;
+    }
+
+    &:active:not(:disabled) {
+        --ids-flat-action-overlay-opacity: 0.15;
+        .ids-flat-action-content {
+            font-weight: 700;
+        }
+    }
+
+    .ids-flat-action-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 6px;
+        position: relative;
+        z-index: 1;
+        color: var(--ids-overridden-button-content-color, var(--ids-button-content-color));
+        text-shadow: var(--ids-button-text-shadow);
+        transition:
+            color 0.2s ease,
+            font-weight 0.2s ease,
+            text-shadow 0.2s ease;
+
+        --irr-icon-margin-left: -6px;
+        --irr-icon-margin-right: -6px;
+    }
+}
+`,styleUrl:`../../styles/shared/ids-flat-action.css`},{data:`:host {
+    display: inline-block;
+
+    --ids-action-radius: 9999px;
+}
+`,styleUrl:`../../styles/shared/ids-action.css`}],stylesData:``,extends:[],relationships:{incoming:[{name:`Toolbar`,type:`component`}],outgoing:[{name:`NgTemplateOutlet`,type:`module`},{name:`RouterLink`,type:`module`},{name:`RouterLinkActive`,type:`module`}]}},{name:`IdsFormField`,id:`component-IdsFormField-88601c009225053fa096e3b5ed5218b3ca35fdd471646964fa05a9f2cd80d09c43508ca874ad28ae9b47a0d0e5e75d8ce67d1498c1d4a9d9c32da0cc24c7009c`,file:`projects/irr-design-system/form/form-field/form-field.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-form-field`,styleUrls:[`./form-field.css`],styles:[],template:`@let labelValue = label();
+@if (labelValue) {
+    <label class="ids-form-field-label" [for]="id()" [attr.data-required]="required() ? '' : null">{{ labelValue }}</label>
+}
+<div class="ids-form-field-frame">
+    <ng-content select="[idsPrefix]" />
+    <div class="ids-form-field-control">
+        @if (isEmpty()) {
+            <span class="ids-form-field-placeholder">{{ placeholder() }}</span>
+        }
+        <span class="ids-form-field-input"><ng-content /></span>
+    </div>
+    <ng-content select="[idsSuffix]" />
+</div>
+
+@if (showError()) {
+    <div class="ids-form-field-errors" [id]="errorsId()">
+        <ng-content select="ids-error" />
+    </div>
+}
+`,templateUrl:[],templateVariables:[{name:`labelValue`,defaultValue:`label()`}],viewProviders:[],hostDirectives:[],inputsClass:[{name:`id`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:34,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`isEmpty`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:35,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`label`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:31,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`placeholder`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`required`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:32,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`showError`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:36,rawdescription:`
+`,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component, computed, input } from '@angular/core';
+import { formFieldErrorsId } from 'irr-design-system/core';
+
+@Component({
+    selector: 'ids-form-field',
+    template: \`
+        @let labelValue = label();
+        @if (labelValue) {
+            <label class="ids-form-field-label" [for]="id()" [attr.data-required]="required() ? '' : null">{{ labelValue }}</label>
+        }
+        <div class="ids-form-field-frame">
+            <ng-content select="[idsPrefix]" />
+            <div class="ids-form-field-control">
+                @if (isEmpty()) {
+                    <span class="ids-form-field-placeholder">{{ placeholder() }}</span>
+                }
+                <span class="ids-form-field-input"><ng-content /></span>
+            </div>
+            <ng-content select="[idsSuffix]" />
+        </div>
+
+        @if (showError()) {
+            <div class="ids-form-field-errors" [id]="errorsId()">
+                <ng-content select="ids-error" />
+            </div>
+        }
+    \`,
+    styleUrl: './form-field.css',
+})
+export class IdsFormField {
+    public readonly label = input.required<string>();
+    public readonly required = input.required<boolean>();
+    public readonly placeholder = input.required<string>();
+    public readonly id = input.required<string>();
+    public readonly isEmpty = input.required<boolean>();
+    public readonly showError = input.required<boolean>();
+
+    protected readonly errorsId = computed(() => formFieldErrorsId(this.id()));
+}
+`,styleUrl:`./form-field.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    .ids-form-field-label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        pointer-events: none;
+
+        &[data-required]::after {
+            content: '*' / '';
+            margin-inline-start: 0.125rem;
+        }
+    }
+
+    .ids-form-field-frame {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        height: calc(1.5rem + 2 * 0.5rem);
+
+        border: 1px solid var(--ids-form-control-border-color);
+        box-shadow: var(--ids-form-field-shadow);
+        background-color: var(--ids-form-control-surface-color);
+        border-radius: var(--ids-radius-medium);
+        padding: 0.5rem 1rem;
+        transition: box-shadow 0.25s ease;
+
+        .ids-form-field-control {
+            display: grid;
+            flex: 1 1 auto;
+            min-width: 0;
+
+            .ids-form-field-placeholder {
+                opacity: 0.5;
+                pointer-events: none;
+                text-wrap: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            > * {
+                grid-area: 1 / 1;
+            }
+        }
+    }
+
+    .ids-form-field-errors {
+        margin-top: 8px;
+    }
+}
+
+:host:has(.input:disabled) {
+    .ids-form-field-frame {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+:host:has(input[aria-invalid='true']) {
+    --ids-form-field-shadow:
+        0 0 0 1px color-mix(in srgb, var(--ids-color-danger) 60%, transparent),
+        0 2px 6px 2px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-faint), transparent);
+
+    :has(.input:hover:not(:disabled):not(:focus)) {
+        --ids-form-field-shadow:
+            0 0 0 1px color-mix(in srgb, var(--ids-color-danger) 80%, transparent),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-faint), transparent);
+    }
+    :has(.input:focus:not(:disabled)) {
+        --ids-form-field-shadow:
+            0 0 0 1px var(--ids-color-danger),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-danger) var(--ids-shadow-strength-subtle), transparent);
+    }
+}
+
+:host:not(:has(input[aria-invalid='true'])) {
+    :has(.input:hover:not(:disabled):not(:focus)) {
+        --ids-form-field-shadow:
+            0 0 0 1px color-mix(in srgb, var(--ids-color-highlight) 60%, transparent),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent);
+    }
+
+    :has(.input:focus:not(:disabled)) {
+        --ids-form-field-shadow:
+            0 0 0 1px var(--ids-color-highlight),
+            0 2px 6px 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
+    }
+}
+`,styleUrl:`./form-field.css`}],stylesData:``,extends:[],relationships:{incoming:[{name:`IdsNumberInput`,type:`component`},{name:`IdsTextInput`,type:`component`}],outgoing:[]}},{name:`IdsFramedButton`,id:`component-IdsFramedButton-1856716abbccec9a027f1d33903513d5445537ea477b459803023aaec2e1f9e5b65ea09d67e482284ab397a9bccebfe4e65c0809cb2c05449da6ddee0cc16018`,file:`projects/irr-design-system/action/framed-button/framed-button.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`IdsFramedButton`}],selector:`ids-framed-button`,styleUrls:[`./framed-button.css`,`../../styles/shared/ids-action.css`],styles:[],template:`<button
+    #control
+    class="ids-framed-button ids-framed-button--{{ variant() }}"
+    [disabled]="disabled()"
+    [type]="type()"
+    [attr.aria-label]="ariaLabel() || null"
+    (click)="clicked.emit($event)"
+>
+    <span class="ids-framed-button-content ids-button-label">
+        <ng-content />
+    </span>
+</button>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`ariaLabel`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:`<p>Accessible name; required when the content is not text (e.g. icon only).</p>
+`,line:31,rawdescription:`
+Accessible name; required when the content is not text (e.g. icon only).`,modifierKind:[125,148],required:!1},{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`type`,coverageIgnore:!1,defaultValue:`'button'`,deprecated:!1,deprecationMessage:``,type:`"button" | "submit" | "reset"`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`variant`,coverageIgnore:!1,defaultValue:`'neutral'`,deprecated:!1,deprecationMessage:``,type:`IdsFramedButtonVariant`,indexKey:``,optional:!1,description:``,line:28,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`clicked`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MouseEvent`,indexKey:``,optional:!1,description:``,line:26,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[{name:`nativeControl`,coverageIgnore:!1,defaultValue:`viewChild.required<ElementRef<HTMLButtonElement>>('control')`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:33,rawdescription:`
+`,modifierKind:[125,148]}],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, ElementRef, input, output, viewChild } from '@angular/core';
+import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-design-system/core';
+
+export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
+
+@Component({
+    selector: 'ids-framed-button',
+    providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFramedButton }],
+    template: \`
+        <button
+            #control
+            class="ids-framed-button ids-framed-button--{{ variant() }}"
+            [disabled]="disabled()"
+            [type]="type()"
+            [attr.aria-label]="ariaLabel() || null"
+            (click)="clicked.emit($event)"
+        >
+            <span class="ids-framed-button-content ids-button-label">
+                <ng-content />
+            </span>
+        </button>
+    \`,
+    styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css'],
+})
+export class IdsFramedButton implements Clickable, NativeControlHost {
+    public readonly clicked = output<MouseEvent>();
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+    public readonly variant = input<IdsFramedButtonVariant>('neutral');
+    public readonly type = input<'button' | 'submit' | 'reset'>('button');
+    /** Accessible name; required when the content is not text (e.g. icon only). */
+    public readonly ariaLabel = input<string>('');
+
+    public readonly nativeControl = viewChild.required<ElementRef<HTMLButtonElement>>('control');
+}
+`,assetsDirs:[],styleUrlsData:[{data:`@property --ids-button-bg-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:host {
+    --ids-glow-color: var(--ids-color-highlight);
+    --ids-button-content-color: var(--ids-text-color);
+
+    .ids-framed-button {
+        display: block;
+        width: 100%;
+        border-radius: var(--ids-action-radius);
+        border: 1px solid var(--ids-button-border-color);
+        cursor: pointer;
+        padding: 0;
+        outline: none;
+        position: relative;
+        isolation: isolate;
+        transition: transform 0.1s;
+
+        --ids-button-text-shadow-layer-1: 0 0 4px
+            color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-layer-1-transparent-mix), transparent);
+        --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-glow-color) var(--ids-shadow-layer-2-transparent-mix), transparent);
+        --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1);
+
+        &.ids-framed-button--neutral {
+            --ids-glow-color: var(--ids-color-highlight);
+            --ids-button-border-color: var(--ids-border-color);
+        }
+
+        &.ids-framed-button--accent {
+            --ids-glow-color: var(--ids-color-accent);
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
+        }
+
+        &.ids-framed-button--danger {
+            --ids-glow-color: var(--ids-color-danger);
+            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
+            --ids-button-content-color: var(--ids-text-danger-color);
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            z-index: -1;
+            filter: blur(4px);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &::before {
+            background: conic-gradient(
+                from var(--ids-button-bg-angle, 0deg),
+                var(--ids-glow-color),
+                color-mix(in srgb, var(--ids-glow-color) 30%, transparent),
+                var(--ids-glow-color),
+                color-mix(in srgb, var(--ids-glow-color) 30%, transparent),
+                var(--ids-glow-color)
+            );
+            animation: AnimateBorder 3s linear infinite;
+            animation-play-state: paused;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        &::after {
+            background: var(--ids-glow-color);
+            transform: scale(0.75);
+            transform-origin: center;
+            transition:
+                opacity 0.3s ease-in-out,
+                transform 0.75s ease-out,
+                background-color 0.2s ease-in-out;
+        }
+
+        &:active:not(:disabled) {
+            .ids-framed-button-content {
+                background-color: color-mix(in srgb, var(--ids-solid-control-color) 95%, var(--ids-glow-color));
+            }
+        }
+
+        &:hover:not(:disabled),
+        &:focus-visible:not(:disabled) {
+            --ids-button-text-shadow: var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2);
+        }
+
+        &:hover:not(:disabled):not(:focus-visible) {
+            &::after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        &:focus-visible {
+            &::before {
+                opacity: 1;
+                animation-play-state: running;
+            }
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: default;
+            --ids-button-text-shadow: none;
+        }
+
+        .ids-framed-button-content {
+            display: block;
+            position: relative;
+            z-index: 1;
+            background-color: var(--ids-solid-control-color);
+            border-radius: inherit;
+            padding: 0.5rem 1rem;
+            color: var(--ids-button-content-color);
+            text-shadow: var(--ids-button-text-shadow);
+            transition:
+                background-color 0.2s ease-out,
+                text-shadow 0.2s ease-out;
+        }
+    }
+}
+
+@keyframes AnimateBorder {
+    to {
+        --ids-button-bg-angle: 360deg;
+    }
+}
+`,styleUrl:`./framed-button.css`},{data:`:host {
+    display: inline-block;
+
+    --ids-action-radius: 9999px;
+}
+`,styleUrl:`../../styles/shared/ids-action.css`}],stylesData:``,extends:[],implements:[`Clickable`,`NativeControlHost`],relationships:{incoming:[{name:`ConfigMenu`,type:`component`},{name:`ConfigProject`,type:`component`},{name:`RandomTiles`,type:`component`},{name:`SectorContourEdition`,type:`component`},{name:`SectorPropertyEditor`,type:`component`},{name:`SectorsContoursList`,type:`component`},{name:`TileDetail`,type:`component`},{name:`TrayMenu`,type:`component`}],outgoing:[{name:`Clickable`,type:`interface`},{name:`NativeControlHost`,type:`interface`,description:`Gives library directives the native control inside a component, for ARIA, focus and events only.`}]}},{name:`IdsMenu`,id:`component-IdsMenu-53fca11f4e6ac26be2cbc16c94bb064a7ae90b944b24574bd73089b2f840f644143093388ca2e47cda19b4283051cde1ca3eb4a77a2447976c154b5d74ba490a`,file:`projects/irr-design-system/menu/menu.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-menu`,styleUrls:[`./menu.css`,`../styles/shared/ids-panel.css`],styles:[],template:`<ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="origin()"
+    [cdkConnectedOverlayOpen]="isOpen()"
+    [cdkConnectedOverlayPositions]="positions"
+    [cdkConnectedOverlayPush]="true"
+    [cdkConnectedOverlayViewportMargin]="viewportMargin"
+    (overlayOutsideClick)="close()"
+    (attach)="onOpened()"
+    (detach)="onClosed()"
+>
+    <div
+        role="menu"
+        class="ids-panel ids-menu-panel"
+        [class]="panelClass()"
+        [id]="panelId"
+        [attr.aria-labelledby]="labelledBy()"
+        (keydown)="onKeydown($event)"
+    >
+        <ng-content />
+    </div>
+</ng-template>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`panelClass`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:37,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[],propertiesClass:[{name:`isOpen`,coverageIgnore:!1,defaultValue:`this.openState.asReadonly()`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:49,rawdescription:`
+`,modifierKind:[125,148]},{name:`panelId`,coverageIgnore:!1,defaultValue:"`ids-menu-${inject(IdentityCounter).getNextIdNumber()}`",deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:39,rawdescription:`
+`,modifierKind:[125,148]}],methodsClass:[{name:`close`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:72,deprecated:!1,deprecationMessage:``,rawdescription:`
+`,description:``,modifierKind:[125]},{name:`toggle`,coverageIgnore:!1,args:[{name:`origin`,type:`HTMLElement`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`triggerControl`,type:`HTMLElement`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`void`,typeParameters:[],line:65,deprecated:!1,deprecationMessage:``,rawdescription:"\nOpens the menu below `origin`, or closes it. `triggerControl` names the menu and gets focus back on close.",description:`<p>Opens the menu below <code>origin</code>, or closes it. <code>triggerControl</code> names the menu and gets focus back on close.</p>
+`,modifierKind:[125],jsdoctags:[{name:`origin`,type:`HTMLElement`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`triggerControl`,type:`HTMLElement`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`CdkConnectedOverlay`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component, contentChildren, ElementRef, inject, input, OutputRefSubscription, signal } from '@angular/core';
+import { ListKeyManager } from '@angular/cdk/a11y';
+import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
+import { IdentityCounter, OVERLAY_SPACING } from 'irr-design-system/core';
+import { IdsMenuItem } from './menu-item/menu-item';
+
+@Component({
+    selector: 'ids-menu',
+    imports: [CdkConnectedOverlay],
+    template: \`
+        <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOrigin]="origin()"
+            [cdkConnectedOverlayOpen]="isOpen()"
+            [cdkConnectedOverlayPositions]="positions"
+            [cdkConnectedOverlayPush]="true"
+            [cdkConnectedOverlayViewportMargin]="viewportMargin"
+            (overlayOutsideClick)="close()"
+            (attach)="onOpened()"
+            (detach)="onClosed()"
+        >
+            <div
+                role="menu"
+                class="ids-panel ids-menu-panel"
+                [class]="panelClass()"
+                [id]="panelId"
+                [attr.aria-labelledby]="labelledBy()"
+                (keydown)="onKeydown($event)"
+            >
+                <ng-content />
+            </div>
+        </ng-template>
+    \`,
+    styleUrls: ['./menu.css', '../styles/shared/ids-panel.css'],
+})
+export class IdsMenu {
+    public readonly panelClass = input<string>();
+
+    public readonly panelId = \`ids-menu-\${inject(IdentityCounter).getNextIdNumber()}\`;
+
+    protected readonly viewportMargin = OVERLAY_SPACING;
+
+    private readonly host = inject(ElementRef<HTMLElement>);
+
+    private readonly items = contentChildren(IdsMenuItem, { descendants: true });
+
+    private readonly openState = signal<boolean>(false);
+
+    public readonly isOpen = this.openState.asReadonly();
+
+    protected readonly origin = signal<HTMLElement>(this.host.nativeElement);
+
+    protected readonly labelledBy = signal<string | null>(null);
+
+    protected readonly positions: ConnectedPosition[] = [
+        { originX: 'start', originY: 'bottom', overlayX: 'start', overlayY: 'top' },
+        { originX: 'start', originY: 'top', overlayX: 'start', overlayY: 'bottom' },
+    ];
+
+    private triggerControl: HTMLElement | undefined;
+    private keyManager: ListKeyManager<HTMLButtonElement> | undefined;
+    private itemClicks: OutputRefSubscription[] = [];
+
+    /** Opens the menu below \`origin\`, or closes it. \`triggerControl\` names the menu and gets focus back on close. */
+    public toggle(origin: HTMLElement, triggerControl: HTMLElement): void {
+        this.origin.set(origin);
+        this.triggerControl = triggerControl;
+        this.labelledBy.set(triggerControl.id);
+        this.openState.update((isOpen) => !isOpen);
+    }
+
+    public close(): void {
+        this.openState.set(false);
+    }
+
+    protected onOpened(): void {
+        // Native buttons, not items: a signal \`disabled\` breaks ListKeyManagerOption; native focus() breaks FocusableOption.
+        const controls = this.items().map((item) => item.nativeControl().nativeElement);
+        this.keyManager = new ListKeyManager(controls).withWrap().withHomeAndEnd();
+        this.keyManager.setFirstItemActive();
+        this.keyManager.activeItem?.focus();
+
+        this.itemClicks = this.items().map((item) => item.clicked.subscribe(() => this.closeAndReturnFocus()));
+    }
+
+    protected onClosed(): void {
+        this.keyManager?.destroy();
+        this.keyManager = undefined;
+        this.itemClicks.forEach((subscription) => subscription.unsubscribe());
+        this.itemClicks = [];
+    }
+
+    protected onKeydown(event: KeyboardEvent): void {
+        if (event.key === 'Escape' || event.key === 'Tab') {
+            this.closeAndReturnFocus();
+            return;
+        }
+
+        this.keyManager?.onKeydown(event);
+        this.keyManager?.activeItem?.focus();
+    }
+
+    private closeAndReturnFocus(): void {
+        this.close();
+        this.triggerControl?.focus();
+    }
+}
+`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: none;
+}
+
+.ids-menu-panel {
+    --ids-panel-padding: 0.25rem 0.25rem;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 200px;
+}
+`,styleUrl:`./menu.css`},{data:`.ids-panel {
+    padding: var(--ids-panel-padding, unset);
+    border: 1px solid color-mix(in srgb, var(--ids-panel-border-color) 70%, transparent);
+    border-radius: var(--ids-radius-medium);
+    background-color: color-mix(in srgb, var(--ids-panel-surface-color) 70%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px color-mix(in srgb, black var(--ids-shadow-strength-faint), transparent);
+}
+`,styleUrl:`../styles/shared/ids-panel.css`}],stylesData:``,extends:[],relationships:{incoming:[{name:`SectorsContoursList`,type:`component`},{name:`TileListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`},{name:`Toolbar`,type:`component`}],outgoing:[{name:`CdkConnectedOverlay`,type:`module`}]}},{name:`IdsMenuItem`,id:`component-IdsMenuItem-b8b624f7437b4e8967233f73ae6dea84becea24f818948b5428f052293b38398858c07663bd2dce446dfdada78a3977ed28133200ba69682e63b7e605987adde`,file:`projects/irr-design-system/menu/menu-item/menu-item.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-menu-item`,styleUrls:[`./menu-item.css`],styles:[],template:`<button
+    #control
+    role="menuitem"
+    tabindex="-1"
+    class="ids-menu-item ids-menu-item-label"
+    type="button"
+    [disabled]="disabled()"
+    (click)="clicked.emit($event)"
+>
+    <ng-content />
+</button>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:23,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`clicked`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`MouseEvent`,indexKey:``,optional:!1,description:``,line:22,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[{name:`nativeControl`,coverageIgnore:!1,defaultValue:`viewChild.required<ElementRef<HTMLButtonElement>>('control')`,deprecated:!1,deprecationMessage:``,type:`unknown`,indexKey:``,optional:!1,description:``,line:25,rawdescription:`
+`,modifierKind:[125,148]}],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, ElementRef, input, output, viewChild } from '@angular/core';
+import { Clickable, NativeControlHost } from 'irr-design-system/core';
+
+@Component({
+    selector: 'ids-menu-item',
+    template: \`
+        <button
+            #control
+            role="menuitem"
+            tabindex="-1"
+            class="ids-menu-item ids-menu-item-label"
+            type="button"
+            [disabled]="disabled()"
+            (click)="clicked.emit($event)"
+        >
+            <ng-content />
+        </button>
+    \`,
+    styleUrl: './menu-item.css',
+})
+export class IdsMenuItem implements Clickable, NativeControlHost {
+    public readonly clicked = output<MouseEvent>();
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly nativeControl = viewChild.required<ElementRef<HTMLButtonElement>>('control');
+}
+`,styleUrl:`./menu-item.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+
+    .ids-menu-item {
+        --ids-menu-action-overlay-opacity: 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        border-radius: var(--ids-radius-medium);
+        outline: 0;
+        position: relative;
+        isolation: isolate;
+        padding: 0.25rem 0.75rem;
+        cursor: pointer;
+        color: var(--ids-text-muted-color);
+        white-space: nowrap;
+        text-shadow: 0px 0px 6px color-mix(in srgb, var(--ids-text-muted-color) var(--ids-shadow-strength-faint), transparent);
+        transition: color 0.2s ease;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            border-radius: inherit;
+            background-color: var(--ids-element-surface-contrast-color);
+            opacity: var(--ids-menu-action-overlay-opacity);
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        &:hover:not(:disabled),
+        &:focus-visible:not(:disabled) {
+            color: var(--ids-text-muted-hover-color);
+        }
+
+        &:hover:not(:disabled) {
+            --ids-menu-action-overlay-opacity: 0.05;
+        }
+
+        &:focus-visible:not(:disabled) {
+            --ids-menu-action-overlay-opacity: 0.1;
+        }
+
+        &:active:not(:disabled) {
+            --ids-menu-action-overlay-opacity: 0.15;
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+}
+`,styleUrl:`./menu-item.css`}],stylesData:``,extends:[],implements:[`Clickable`,`NativeControlHost`],relationships:{incoming:[{name:`SectorsContoursList`,type:`component`},{name:`TileListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`}],outgoing:[{name:`Clickable`,type:`interface`},{name:`NativeControlHost`,type:`interface`,description:`Gives library directives the native control inside a component, for ARIA, focus and events only.`}]}},{name:`IdsNumberInput`,id:`component-IdsNumberInput-acc8b62f0b98c340abd95981dc33342df900ed9a0dc780a8b0fee36d2a9c74ad06b1ca7ee99aef376283494c004b34d9337f0807187879a10d1af48255d2852c`,file:`projects/irr-design-system/number-input/number-input.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-number-input`,styleUrls:[`./number-input.css`],styles:[],template:`<ids-form-field       [label]="label()"
+       [required]="required()"
+       [placeholder]="placeholder()"
+       [isEmpty]="value() === null"
+       [showError]="showError()"
+       [id]="identifier"
+   >
+       <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
+       <input
+           [value]="value()"
+           (input)="onInput($event)"
+           (blur)="touch.emit()"
+           [disabled]="disabled()"
+           [required]="required()"
+           [attr.aria-invalid]="showError() ? 'true' : null"
+           [attr.aria-describedby]="showError() ? errorsId : null"
+           type="number"
+           class="input"
+           [id]="identifier"
+       />
+       <ng-content select="[idsSuffix]" ngProjectAs="[idsSuffix]" />
+       <ng-content select="ids-error" ngProjectAs="ids-error" />
+   </ids-form-field>`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[{name:`IdentityGenerator`}],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:43,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`invalid`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:49,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`label`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:41,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`placeholder`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:47,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`required`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:45,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`touched`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:51,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`value`,coverageIgnore:!1,defaultValue:`null`,deprecated:!1,deprecationMessage:``,type:`number | null`,indexKey:``,optional:!1,description:``,line:39,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`touch`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,indexKey:``,optional:!1,description:``,line:37,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`value`,coverageIgnore:!1,defaultValue:`null`,deprecated:!1,deprecationMessage:``,type:`number | null`,indexKey:``,optional:!1,description:``,line:39,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsFormField`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, computed, input, model, output } from '@angular/core';
+import { FormValueControl } from '@angular/forms/signals';
+import { formFieldErrorsId, IdentityGenerator, injectControlId } from 'irr-design-system/core';
+import { IdsFormField } from 'irr-design-system/form';
+
+@Component({
+    selector: 'ids-number-input',
+    imports: [IdsFormField],
+    hostDirectives: [IdentityGenerator],
+    template: \` <ids-form-field
+        [label]="label()"
+        [required]="required()"
+        [placeholder]="placeholder()"
+        [isEmpty]="value() === null"
+        [showError]="showError()"
+        [id]="identifier"
+    >
+        <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
+        <input
+            [value]="value()"
+            (input)="onInput($event)"
+            (blur)="touch.emit()"
+            [disabled]="disabled()"
+            [required]="required()"
+            [attr.aria-invalid]="showError() ? 'true' : null"
+            [attr.aria-describedby]="showError() ? errorsId : null"
+            type="number"
+            class="input"
+            [id]="identifier"
+        />
+        <ng-content select="[idsSuffix]" ngProjectAs="[idsSuffix]" />
+        <ng-content select="ids-error" ngProjectAs="ids-error" />
+    </ids-form-field>\`,
+    styleUrl: './number-input.css',
+})
+export class IdsNumberInput implements FormValueControl<number | null> {
+    public readonly touch = output();
+
+    public readonly value = model<number | null>(null);
+
+    public readonly label = input<string>('');
+
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly required = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly placeholder = input<string>('');
+
+    public readonly invalid = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly touched = input<boolean>(false, { transform: booleanAttribute });
+
+    protected readonly showError = computed(() => this.invalid() && this.touched() && !this.disabled());
+
+    protected readonly identifier = injectControlId((id) => \`ids-number-input-\${id}\`);
+
+    protected readonly errorsId = formFieldErrorsId(this.identifier);
+
+    protected onInput(event: Event): void {
+        const number = (event.target as HTMLInputElement).valueAsNumber;
+        this.value.set(Number.isNaN(number) ? null : number);
+    }
+}
+`,styleUrl:`./number-input.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+
+    .input {
+        width: 100%;
+        outline: none;
+    }
+}
+`,styleUrl:`./number-input.css`}],stylesData:``,extends:[],implements:[`FormValueControl`],relationships:{incoming:[],outgoing:[{name:`IdsFormField`,type:`component`},{name:`IdentityGenerator`,type:`directive`},{name:`FormValueControl`,type:`interface`}]}},{name:`IdsSideNav`,id:`component-IdsSideNav-5fbabd5edd207c846c9e435138cc3a1bbcaa293164f0e2a2a1fd21efa0bd76fe092f0588ff40e06ae1ed36ff2364c50be5b59ca07c433b64f136f72a8bfac836`,file:`projects/irr-design-system/side-nav/side-nav.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-side-nav`,styleUrls:[`./side-nav.css`],styles:[],template:`<nav [attr.aria-label]="ariaLabel() || null"><ng-content /></nav>`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`ariaLabel`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:`<p>Accessible name of the navigation landmark; needed when the page has more than one.</p>
+`,line:10,rawdescription:`
+Accessible name of the navigation landmark; needed when the page has more than one.`,modifierKind:[125,148],required:!1}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component, input } from '@angular/core';
+
+@Component({
+    selector: 'ids-side-nav',
+    template: \`<nav [attr.aria-label]="ariaLabel() || null"><ng-content /></nav>\`,
+    styleUrl: './side-nav.css',
+})
+export class IdsSideNav {
+    /** Accessible name of the navigation landmark; needed when the page has more than one. */
+    public readonly ariaLabel = input<string>('');
+}
+`,styleUrl:`./side-nav.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+    z-index: 1;
+    height: 100%;
+    padding: 8px 0;
+    background-color: var(--ids-sidenav-surface-color);
+}
+`,styleUrl:`./side-nav.css`}],stylesData:``,extends:[],relationships:{incoming:[{name:`Tool`,type:`component`}],outgoing:[]}},{name:`IdsSideNavItem`,id:`component-IdsSideNavItem-26cb36dd70c1efe27aa72869a997fb439636c177e1a0cd7add5ffda69a78e949da590175cbbaee4aebfc2cc2f2e42ef053d492ae9fe293ce726db06ca4f93ff9`,file:`projects/irr-design-system/side-nav/side-nav-item/side-nav-item.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-side-nav-item`,styleUrls:[`./side-nav-item.css`],styles:[],template:`<a
+    class="ids-side-nav-item"
+    [routerLink]="disabled() ? null : link()"
+    routerLinkActive
+    ariaCurrentWhenActive="page"
+    [attr.aria-disabled]="disabled() ? 'true' : null"
+    [attr.aria-label]="label() || null"
+    [attr.tabindex]="disabled() ? -1 : null"
+    [idsTooltip]="label()"
+    idsTooltipPosition="right"
+>
+    <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{ icon() }}</mat-icon>
+</a>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:30,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`icon`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:29,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`label`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:28,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`link`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:27,rawdescription:`
+`,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`RouterLink`},{name:`RouterLinkActive`},{name:`IdsTooltip`},{name:`MatIcon`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, input } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { IdsTooltip } from 'irr-design-system/tooltip';
+import { MatIcon } from '@angular/material/icon';
+
+@Component({
+    selector: 'ids-side-nav-item',
+    imports: [RouterLink, RouterLinkActive, IdsTooltip, MatIcon],
+    template: \`
+        <a
+            class="ids-side-nav-item"
+            [routerLink]="disabled() ? null : link()"
+            routerLinkActive
+            ariaCurrentWhenActive="page"
+            [attr.aria-disabled]="disabled() ? 'true' : null"
+            [attr.aria-label]="label() || null"
+            [attr.tabindex]="disabled() ? -1 : null"
+            [idsTooltip]="label()"
+            idsTooltipPosition="right"
+        >
+            <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{ icon() }}</mat-icon>
+        </a>
+    \`,
+    styleUrl: './side-nav-item.css',
+})
+export class IdsSideNavItem {
+    public readonly link = input.required<string>();
+    public readonly label = input<string>('');
+    public readonly icon = input.required<string>();
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+}
+`,styleUrl:`./side-nav-item.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+
+    .ids-side-nav-item {
+        --ids-side-nav-overlay-opacity: 0;
+        --irr-icon-size: 32px;
+        display: flex;
+        padding: 12px;
+        border-radius: var(--ids-radius-none);
+        outline: 0;
+        position: relative;
+        isolation: isolate;
+        color: var(--ids-text-muted-color);
+        cursor: pointer;
+        transition:
+            color 0.2s ease,
+            text-shadow 0.2s ease;
+
+        .ids-side-nav-item-icon {
+            transition: font-weight 0.2s ease;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background-color: var(--ids-color-highlight);
+            opacity: var(--ids-side-nav-overlay-opacity);
+            pointer-events: none;
+            transition:
+                opacity 0.2s ease,
+                background-color 0.2s ease;
+        }
+
+        &:hover:not([aria-disabled='true']),
+        &:focus-visible:not([aria-disabled='true']) {
+            color: var(--ids-text-muted-hover-color);
+        }
+
+        &:hover:not([aria-disabled='true']):not(:active) {
+            --ids-side-nav-overlay-opacity: 0.05;
+        }
+
+        &:focus-visible:not([aria-disabled='true']) {
+            --ids-side-nav-overlay-opacity: 0.1;
+        }
+
+        &:active:not([aria-disabled='true']) {
+            --irr-icon-font-weight: 300;
+            --ids-side-nav-overlay-opacity: 0.15;
+        }
+
+        &[aria-current='page'] {
+            --irr-icon-font-weight: 300;
+            color: var(--ids-text-highlight-color);
+            background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
+            text-shadow:
+                0 0 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent),
+                0 0 8px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-subtle), transparent);
+        }
+
+        &[aria-disabled='true'] {
+            cursor: default;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+`,styleUrl:`./side-nav-item.css`}],stylesData:``,extends:[],relationships:{incoming:[{name:`Tool`,type:`component`}],outgoing:[{name:`RouterLink`,type:`module`},{name:`RouterLinkActive`,type:`module`},{name:`IdsTooltip`,type:`directive`,description:`Shows a text hint on hover and focus.`},{name:`MatIcon`,type:`module`}]}},{name:`IdsTextInput`,id:`component-IdsTextInput-0a171fc93a771ef53582b2597951a5529d61afdedf052cdb24cafb2cfdcb96a6c858cc99229194d59eb11a7b4b0b17b3216ea38062461569aaed4c087be508ae`,file:`projects/irr-design-system/text-input/text-input.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-text-input`,styleUrls:[`./text-input.css`],styles:[],template:`<ids-form-field
+    [label]="label()"
+    [required]="required()"
+    [placeholder]="placeholder()"
+    [isEmpty]="!value()"
+    [showError]="showError()"
+    [id]="identifier"
+>
+    <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
+    <input
+        [value]="value()"
+        (input)="value.set($any($event.target).value)"
+        (blur)="touch.emit()"
+        [disabled]="disabled()"
+        [required]="required()"
+        [attr.aria-invalid]="showError() ? 'true' : null"
+        [attr.aria-describedby]="showError() ? errorsId : null"
+        type="text"
+        class="input"
+        [id]="identifier"
+    />
+    <ng-content select="[idsSuffix]" ngProjectAs="[idsSuffix]" />
+    <ng-content select="ids-error" ngProjectAs="ids-error" />
+</ids-form-field>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[{name:`IdentityGenerator`}],inputsClass:[{name:`disabled`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:45,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`invalid`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:51,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`label`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:43,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`placeholder`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:49,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`required`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:47,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`touched`,coverageIgnore:!1,defaultValue:`false`,deprecated:!1,deprecationMessage:``,type:`boolean`,indexKey:``,optional:!1,description:``,line:53,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`value`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:41,rawdescription:`
+`,modifierKind:[125,148],required:!1}],outputsClass:[{name:`touch`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,indexKey:``,optional:!1,description:``,line:39,rawdescription:`
+`,modifierKind:[125,148],required:!1},{name:`value`,coverageIgnore:!1,defaultValue:`''`,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:41,rawdescription:`
+`,modifierKind:[125,148],required:!1}],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`IdsFormField`}],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { booleanAttribute, Component, computed, input, model, output } from '@angular/core';
+import { FormValueControl } from '@angular/forms/signals';
+import { formFieldErrorsId, IdentityGenerator, injectControlId } from 'irr-design-system/core';
+import { IdsFormField } from 'irr-design-system/form';
+
+@Component({
+    selector: 'ids-text-input',
+    imports: [IdsFormField],
+    hostDirectives: [IdentityGenerator],
+    template: \`
+        <ids-form-field
+            [label]="label()"
+            [required]="required()"
+            [placeholder]="placeholder()"
+            [isEmpty]="!value()"
+            [showError]="showError()"
+            [id]="identifier"
+        >
+            <ng-content select="[idsPrefix]" ngProjectAs="[idsPrefix]" />
+            <input
+                [value]="value()"
+                (input)="value.set($any($event.target).value)"
+                (blur)="touch.emit()"
+                [disabled]="disabled()"
+                [required]="required()"
+                [attr.aria-invalid]="showError() ? 'true' : null"
+                [attr.aria-describedby]="showError() ? errorsId : null"
+                type="text"
+                class="input"
+                [id]="identifier"
+            />
+            <ng-content select="[idsSuffix]" ngProjectAs="[idsSuffix]" />
+            <ng-content select="ids-error" ngProjectAs="ids-error" />
+        </ids-form-field>
+    \`,
+    styleUrl: './text-input.css',
+})
+export class IdsTextInput implements FormValueControl<string> {
+    public readonly touch = output();
+
+    public readonly value = model<string>('');
+
+    public readonly label = input<string>('');
+
+    public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly required = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly placeholder = input<string>('');
+
+    public readonly invalid = input<boolean>(false, { transform: booleanAttribute });
+
+    public readonly touched = input<boolean>(false, { transform: booleanAttribute });
+
+    protected readonly showError = computed(() => this.invalid() && this.touched() && !this.disabled());
+
+    protected readonly identifier = injectControlId((id) => \`ids-text-input-\${id}\`);
+
+    protected readonly errorsId = formFieldErrorsId(this.identifier);
+}
+`,styleUrl:`./text-input.css`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+
+    .input {
+        width: 100%;
+        outline: none;
+    }
+}
+`,styleUrl:`./text-input.css`}],stylesData:``,extends:[],implements:[`FormValueControl`],relationships:{incoming:[],outgoing:[{name:`IdsFormField`,type:`component`},{name:`IdentityGenerator`,type:`directive`},{name:`FormValueControl`,type:`interface`}]}},{name:`IdsTooltipPanel`,id:`component-IdsTooltipPanel-184fb834b2ece42fe66444179491b6921a5052a323049294ce6f97070d90e3847668d5f1a91cfa7d711550e548d9c0fba4442d17da60b25de9a76ad503ccded7`,file:`projects/irr-design-system/tooltip/tooltip-panel/tooltip-panel.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[],selector:`ids-tooltip-panel`,styleUrls:[`./tooltip-panel.css`,`../../styles/shared/ids-panel.css`],styles:[],template:`<div class="ids-panel ids-tooltip-panel ids-tooltip-label" role="tooltip" [id]="panelId()">
+    {{ text() }}
+</div>
+`,templateUrl:[],templateVariables:[],viewProviders:[],hostDirectives:[],inputsClass:[{name:`panelId`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:13,rawdescription:`
+`,modifierKind:[125,148],required:!0},{name:`text`,coverageIgnore:!1,deprecated:!1,deprecationMessage:``,type:`string`,indexKey:``,optional:!1,description:``,line:14,rawdescription:`
+`,modifierKind:[125,148],required:!0}],outputsClass:[],propertiesClass:[],methodsClass:[],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[],description:``,rawdescription:`
+`,type:`component`,sourceCode:`import { Component, input } from '@angular/core';
+
+@Component({
+    selector: 'ids-tooltip-panel',
+    template: \`
+        <div class="ids-panel ids-tooltip-panel ids-tooltip-label" role="tooltip" [id]="panelId()">
+            {{ text() }}
+        </div>
+    \`,
+    styleUrls: ['./tooltip-panel.css', '../../styles/shared/ids-panel.css'],
+})
+export class IdsTooltipPanel {
+    public readonly panelId = input.required<string>();
+    public readonly text = input.required<string>();
+}
+`,assetsDirs:[],styleUrlsData:[{data:`:host {
+    display: block;
+    /* Transparent gap: the panel touches its host, so the pointer can move onto it (WCAG 1.4.13). */
+    padding: 0.5rem;
+
+    .ids-tooltip-panel {
+        --ids-panel-padding: 0.375rem 0.5rem;
+        --ids-panel-surface-color: var(--ids-tooltip-surface-color);
+
+        max-width: 15rem;
+        color: var(--ids-text-low-emphasis-color);
+        text-align: center;
+    }
+}
+`,styleUrl:`./tooltip-panel.css`},{data:`.ids-panel {
+    padding: var(--ids-panel-padding, unset);
+    border: 1px solid color-mix(in srgb, var(--ids-panel-border-color) 70%, transparent);
+    border-radius: var(--ids-radius-medium);
+    background-color: color-mix(in srgb, var(--ids-panel-surface-color) 70%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px color-mix(in srgb, black var(--ids-shadow-strength-faint), transparent);
+}
+`,styleUrl:`../../styles/shared/ids-panel.css`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[]}},{name:`MosaicGeneration`,id:`component-MosaicGeneration-a767fee7646306822087c664652640c4084a8836885d94447ab2dfe3107f6339cfe03cd25b7be4d325009390dcdaf900597d8f3307c868a2317a38fbb3c029b8`,file:`projects/irrtirer/src/app/tool/mosaic-generation/mosaic-generation.ts`,changeDetection:`ChangeDetectionStrategy.OnPush`,encapsulation:[],entryComponents:[],inputs:[],outputs:[],providers:[{name:`MosaicGenerationState`}],selector:`app-mosaic-generation`,styleUrls:[`./mosaic-generation.scss`],styles:[],templateUrl:[`./mosaic-generation.html`],templateVariables:[{name:`progress`,defaultValue:`progressState()`}],viewProviders:[],hostDirectives:[],inputsClass:[],outputsClass:[],propertiesClass:[],methodsClass:[{name:`ngOnInit`,coverageIgnore:!1,args:[],optional:!1,returnType:`void`,typeParameters:[],line:95,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125]},{name:`sectionEntered`,coverageIgnore:!1,args:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``}],optional:!1,returnType:`ToolViewInitSetting`,typeParameters:[],line:270,deprecated:!1,deprecationMessage:``,rawdescription:`
 `,description:``,modifierKind:[125],jsdoctags:[{name:`activeCanvas`,type:`IActiveCanvas`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}},{name:`shouldFocusOnObject`,type:`boolean`,optional:!1,dotDotDotToken:!1,deprecated:!1,deprecationMessage:``,tagName:{text:`param`}}]}],coverageIgnore:!1,deprecated:!1,deprecationMessage:``,hostBindings:[],hostListeners:[],standalone:!0,imports:[{name:`MosaicHierarchy`},{name:`ProgressInfo`}],description:``,rawdescription:`
 `,type:`component`,sourceCode:`import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
@@ -7276,7 +8906,7 @@ export class ProjectNameDialog {
         this.dialogRef.close(this.form.name().value());
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatDialogModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`IdsFlatButton`,type:`module`}]},templateData:`<h2 mat-dialog-title>{{ 'tool.config.menu.chooseFileName' | translate }}</h2>
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatDialogModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`IdsFlatButton`,type:`component`}]},templateData:`<h2 mat-dialog-title>{{ 'tool.config.menu.chooseFileName' | translate }}</h2>
 
 <div class="mx-6 my-1.5 flex w-[300px]">
     <mat-form-field class="density-3 w-full" subscriptSizing="dynamic">
@@ -7528,7 +9158,7 @@ export class RandomTiles implements OnInit {
         gap: 18px;
     }
 }
-`,styleUrl:`./random-tiles.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`module`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
+`,styleUrl:`./random-tiles.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`component`},{name:`MatAutocompleteModule`,type:`module`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="actions">
     <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" variant="accent" (clicked)="trySaveTileSet()">
         {{ 'tool.tiles.random.randomTiles' | translate }}
@@ -7628,7 +9258,7 @@ export class Ribbon {
         }
     }
 }
-`,styleUrl:`./ribbon.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`Tool`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`SizeDisplayPipe`,type:`pipe`},{name:`IdsTooltip`,type:`module`}]},templateData:`@for (action of actions(); track action.iconName) {
+`,styleUrl:`./ribbon.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`Tool`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`SizeDisplayPipe`,type:`pipe`},{name:`IdsTooltip`,type:`directive`,description:`Shows a text hint on hover and focus.`}]},templateData:`@for (action of actions(); track action.iconName) {
 <ids-flat-button
     class="action"
     [hidden]="action.visibility() === 'hidden'"
@@ -7712,7 +9342,7 @@ export class ScrollableList<T> {
         --mat-button-filled-container-shape: 4px;
     }
 }
-`,styleUrl:`./scrollable-list.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`SectorListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`}],outgoing:[{name:`NgTemplateOutlet`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@if (hasPreviousPage()) { @let previousPages = previousPageNumbers();
+`,styleUrl:`./scrollable-list.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`SectorListElem`,type:`component`},{name:`TilesSetListElem`,type:`component`}],outgoing:[{name:`NgTemplateOutlet`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`@if (hasPreviousPage()) { @let previousPages = previousPageNumbers();
 <ids-flat-button class="page-button" (clicked)="goToPreviousPage()">
     {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
 </ids-flat-button>
@@ -7970,7 +9600,7 @@ export class SectorContourEdition implements OnInit {
 .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-`,styleUrl:`./sector-contour-edition.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`ColorPicker`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
+`,styleUrl:`./sector-contour-edition.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`component`},{name:`IdsFlatButton`,type:`component`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`ColorPicker`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
     <ids-framed-button class="flex-1" (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" variant="accent" (clicked)="save()"> {{ 'common.confirm' | translate }} </ids-framed-button>
 </div>
@@ -8079,7 +9709,7 @@ export class SectorListElem {
         margin-top: 6px;
     }
 }
-`,styleUrl:`./sector-list-elem.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicHierarchy`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`AsyncPipe`,type:`pipe`},{name:`ExpandablePanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableList`,type:`component`}]},templateData:`<div class="parent-elem list-item-box">
+`,styleUrl:`./sector-list-elem.scss`}],stylesData:``,extends:[],relationships:{incoming:[{name:`MosaicHierarchy`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`AsyncPipe`,type:`pipe`},{name:`ExpandablePanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableList`,type:`component`}]},templateData:`<div class="parent-elem list-item-box">
     <span class="block-label">{{ sector().schema.name }}</span>
     <div class="sector-actions">
         <ids-flat-button
@@ -8316,7 +9946,7 @@ export class SectorPropertyEditor implements OnInit {
         }
     }
 }
-`,styleUrl:`./sector-property-editor.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`module`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`IdsTooltip`,type:`module`},{name:`ExtendedPanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
+`,styleUrl:`./sector-property-editor.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`component`},{name:`MatFormFieldModule`,type:`module`},{name:`MatInputModule`,type:`module`},{name:`IdsTooltip`,type:`directive`,description:`Shows a text hint on hover and focus.`},{name:`ExtendedPanel`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`FormField`,type:`module`},{name:`)`,type:`injectable`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-2.5">
     <ids-framed-button class="flex-1" (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" variant="accent" (clicked)="save()"> {{ 'common.confirm' | translate }} </ids-framed-button>
 </div>
@@ -8806,7 +10436,7 @@ export class SectorsContoursList {
 .cdk-drag-animating {
     transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
-`,styleUrl:`./sectors-contours-list.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`IdsMenuTrigger`,type:`module`},{name:`IdsMenu`,type:`module`},{name:`IdsMenuItem`,type:`module`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsFlatButton`,type:`module`}]},templateData:`<div class="actions">
+`,styleUrl:`./sectors-contours-list.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`component`},{name:`MatIconModule`,type:`module`},{name:`IdsMenuTrigger`,type:`directive`},{name:`IdsMenu`,type:`component`},{name:`IdsMenuItem`,type:`component`},{name:`CdkDropList`,type:`module`},{name:`CdkDrag`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`IdsFlatButton`,type:`component`}]},templateData:`<div class="actions">
     <ids-framed-button variant="accent" (clicked)="navigateToNewSectorPanel()">
         {{ 'tool.sectors.contourList.addSector' | translate }}
     </ids-framed-button>
@@ -8905,7 +10535,7 @@ export class SnapshotOptionsDialog {
         }
     }
 }
-`,styleUrl:`./snapshot-options-dialog.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`MatSliderModule`,type:`module`},{name:`MatCheckboxModule`,type:`module`},{name:`FormField`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="dialog-content">
+`,styleUrl:`./snapshot-options-dialog.scss`}],stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`MatDialogModule`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`MatSliderModule`,type:`module`},{name:`MatCheckboxModule`,type:`module`},{name:`FormField`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="dialog-content">
     <h1 mat-dialog-title>{{ 'tool.snapshotDialog.title' | translate }}</h1>
     <div mat-dialog-content>
         <span>{{ 'tool.snapshotDialog.transparentBackgroundLabel' | translate }}</span>
@@ -8968,7 +10598,7 @@ export class TileDetail implements OnInit {
         this.router.navigate(['/tool/tray']);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`module`},{name:`ColorPicker`,type:`component`},{name:`FormsModule`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-3">
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[],outgoing:[{name:`TranslatePipe`,type:`pipe`},{name:`IdsFramedButton`,type:`component`},{name:`ColorPicker`,type:`component`},{name:`FormsModule`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<div class="flex flex-row gap-3">
     <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
     <ids-framed-button class="flex-1" variant="accent" disabled> {{ 'common.edit' | translate }} </ids-framed-button>
 </div>
@@ -9010,7 +10640,7 @@ export class TileListElem {
         this.router.navigate([\`/tool/tray/tile/\${this.tile().id}\`]);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[{name:`TilesSetListElem`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`module`},{name:`IdsMenu`,type:`module`},{name:`IdsMenuItem`,type:`module`},{name:`IdsMenuTrigger`,type:`module`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<span class="block-label-sm"> {{ tile().id }} </span>
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[{name:`TilesSetListElem`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IdsFlatButton`,type:`component`},{name:`IdsMenu`,type:`component`},{name:`IdsMenuItem`,type:`component`},{name:`IdsMenuTrigger`,type:`directive`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<span class="block-label-sm"> {{ tile().id }} </span>
 <div class="flex -m-1.5">
     <ids-flat-button
         class="ids-flat-button--size-small button-content-contrast-medium"
@@ -9094,7 +10724,7 @@ export class TilesSetListElem {
         this.router.navigate([\`/tool/tray/random/\${this.tilesSet().id}\`]);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[{name:`TrayMenu`,type:`component`}],outgoing:[{name:`ExpandablePanel`,type:`component`},{name:`IdsFlatButton`,type:`module`},{name:`MatIconModule`,type:`module`},{name:`IdsMenu`,type:`module`},{name:`IdsMenuTrigger`,type:`module`},{name:`IdsMenuItem`,type:`module`},{name:`TileListElem`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableList`,type:`component`}]},templateData:`@let tilesSetValue = tilesSet();
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[{name:`TrayMenu`,type:`component`}],outgoing:[{name:`ExpandablePanel`,type:`component`},{name:`IdsFlatButton`,type:`component`},{name:`MatIconModule`,type:`module`},{name:`IdsMenu`,type:`component`},{name:`IdsMenuTrigger`,type:`directive`},{name:`IdsMenuItem`,type:`component`},{name:`TileListElem`,type:`component`},{name:`TranslatePipe`,type:`pipe`},{name:`ScrollableList`,type:`component`}]},templateData:`@let tilesSetValue = tilesSet();
 <div class="list-elem list-item-box">
     <span class="block-label">{{ tilesSetValue.name }}</span>
     <div class="flex -m-1.5">
@@ -9206,7 +10836,7 @@ export class Tool {
         this.activeCanvas().removeObjects();
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`AsyncPipe`,type:`pipe`},{name:`IdsSideNav`,type:`module`},{name:`IdsSideNavItem`,type:`module`},{name:`RouterOutlet`,type:`module`},{name:`RouterModule`,type:`module`},{name:`Ribbon`,type:`component`},{name:`ActiveCanvas`,type:`module`},{name:`CanvasToolkit`,type:`injectable`},{name:`ProjectArchive`,type:`injectable`}]},templateData:`<ids-side-nav>
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`AsyncPipe`,type:`pipe`},{name:`IdsSideNav`,type:`component`},{name:`IdsSideNavItem`,type:`component`},{name:`RouterOutlet`,type:`module`},{name:`RouterModule`,type:`module`},{name:`Ribbon`,type:`component`},{name:`ActiveCanvas`,type:`module`},{name:`CanvasToolkit`,type:`injectable`},{name:`ProjectArchive`,type:`injectable`}]},templateData:`<ids-side-nav>
     <ids-side-nav-item link="config" icon="flowsheet" [label]="translate.instant('tool.nav.projectSettings')" />
     <ids-side-nav-item link="tray" icon="dashboard" [label]="translate.instant('tool.nav.tileTrey')" [disabled]="tilesLinkDisabled$ | async" />
     <ids-side-nav-item link="sectors" icon="view_in_ar" [label]="translate.instant('tool.nav.sectors')" [disabled]="sectorsLinkDisabled$ | async" />
@@ -9331,7 +10961,7 @@ export class Toolbar implements OnInit {
         }
     }
 }
-`,styleUrl:`./toolbar.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`App`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IconSvgModuleModule`,type:`module`},{name:`MatRadioModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`TitleCasePipe`,type:`pipe`},{name:`IdsFlatButton`,type:`module`},{name:`IdsFlatLink`,type:`module`},{name:`IdsMenu`,type:`module`},{name:`IdsMenuTrigger`,type:`module`},{name:`OnInit`,type:`interface`}]},templateData:`<ids-flat-link link="/tool" linkType="internal">
+`,styleUrl:`./toolbar.scss`}],stylesData:``,extends:[],implements:[`OnInit`],relationships:{incoming:[{name:`App`,type:`component`}],outgoing:[{name:`MatIconModule`,type:`module`},{name:`IconSvgModuleModule`,type:`module`},{name:`MatRadioModule`,type:`module`},{name:`TranslatePipe`,type:`pipe`},{name:`TitleCasePipe`,type:`pipe`},{name:`IdsFlatButton`,type:`component`},{name:`IdsFlatLink`,type:`component`},{name:`IdsMenu`,type:`component`},{name:`IdsMenuTrigger`,type:`directive`},{name:`OnInit`,type:`interface`}]},templateData:`<ids-flat-link link="/tool" linkType="internal">
     <span class="text-base">{{ 'title' | translate }}</span>
 </ids-flat-link>
 
@@ -9471,7 +11101,7 @@ export class TrayMenu {
         this.router.navigate(['/tool/tray/random']);
     }
 }
-`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`module`},{name:`TilesSetListElem`,type:`component`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="flex flex-col gap-2.5">
+`,assetsDirs:[],styleUrlsData:``,stylesData:``,extends:[],relationships:{incoming:[],outgoing:[{name:`IdsFramedButton`,type:`component`},{name:`TilesSetListElem`,type:`component`},{name:`TranslatePipe`,type:`pipe`}]},templateData:`<div class="flex flex-col gap-2.5">
     <ids-framed-button disabled> {{ 'tool.tiles.menu.loadFromFile' | translate }} </ids-framed-button>
     <ids-framed-button disabled> {{ 'tool.tiles.menu.createTile' | translate }} </ids-framed-button>
     <ids-framed-button variant="accent" (clicked)="navigateToRandomTiles()"> {{ 'tool.tiles.menu.randomTiles' | translate }} </ids-framed-button>
@@ -9510,4 +11140,4 @@ export class IconSvgModuleModule {
         }
     }
 }
-`,children:[{type:`providers`,elements:[]},{type:`declarations`,elements:[]},{type:`imports`,elements:[]},{type:`exports`,elements:[]},{type:`bootstrap`,elements:[]},{type:`classes`,elements:[]}]}],_Ce=JSON.parse(`{"variables":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"},{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"},{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"},{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"},{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"},{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"},{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"},{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"},{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"},{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"},{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"},{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"},{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"},{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: Tool,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: Project },\\n    { path: 'author', component: Author },\\n]"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"},{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"},{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"},{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: Configuration,\\n        children: [\\n            { path: '', component: ConfigMenu },\\n            { path: 'project', component: ConfigProject },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: Tray,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenu },\\n            { path: 'random', component: RandomTiles },\\n            { path: 'random/:id', component: RandomTiles },\\n            { path: 'tile/:id', component: TileDetail },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: Sectors,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursList },\\n            { path: ':id/property', component: SectorPropertyEditor },\\n            { path: ':id/contour', component: SectorContourEdition },\\n            { path: 'contour', component: SectorContourEdition },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGeneration,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"},{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"},{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"},{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}],"functions":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}],"typealiases":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"enumerations":[],"groupedVariables":{"projects/irrtirer/src/test-data/active-canvas.data.ts":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"}],"projects/irrtirer/src/app/app.config.ts":[{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts":[{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"}],"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts":[{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"}],"projects/irrtirer/src/environment/environment.ts":[{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"}],"projects/irrtirer/src/test-data/sector.data.ts":[{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"}],"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts":[{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"}],"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts":[{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"}],"projects/irrtirer/src/test-data/image-object.data.ts":[{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"}],"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts":[{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts":[{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts":[{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts":[{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"}],"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts":[{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"}],"projects/irrtirer/src/app/app.routes.ts":[{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: Tool,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: Project },\\n    { path: 'author', component: Author },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts":[{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"}],"projects/irrtirer/src/test-data/tiles-set.data.ts":[{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/core/constants/paths.ts":[{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"}],"projects/irrtirer/src/app/tool/tool.routes.ts":[{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: Configuration,\\n        children: [\\n            { path: '', component: ConfigMenu },\\n            { path: 'project', component: ConfigProject },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: Tray,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenu },\\n            { path: 'random', component: RandomTiles },\\n            { path: 'random/:id', component: RandomTiles },\\n            { path: 'tile/:id', component: TileDetail },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: Sectors,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursList },\\n            { path: ':id/property', component: SectorPropertyEditor },\\n            { path: ':id/contour', component: SectorContourEdition },\\n            { path: 'contour', component: SectorContourEdition },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGeneration,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"}],"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts":[{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts":[{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts":[{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}]},"groupedFunctions":{"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/validators/unique-value.validator.ts":[{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/download-helper.ts":[{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}]},"groupedEnumerations":{},"groupedTypeAliases":{"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts":[{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/user-preferences.interface.ts":[{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/mosaic-project.model.ts":[{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}]}}`),vCe={pipes:cCe,interfaces:lCe,injectables:uCe,guards:dCe,interceptors:fCe,classes:pCe,directives:mCe,components:hCe,modules:gCe,miscellaneous:_Ce}})))()}function bCe(e,t){let n={};for(let r of Object.keys(e))r!==t&&(n[r]=e[r]);return n}function M9(e,t){if(e===t)return!0;if(e===null||t===null)return!1;if(e!==e&&t!==t)return!0;if(e instanceof Date||t instanceof Date)return e instanceof Date&&t instanceof Date&&M9(e.getTime(),t.getTime());let n=typeof e,r=typeof t,i;if(n==r&&n==`object`){if(Array.isArray(e)){if(!Array.isArray(t))return!1;if((i=e.length)==t.length){for(let n=0;n<i;n++)if(!M9(e[n],t[n]))return!1;return!0}}else{if(Array.isArray(t))return!1;if(F9(e)&&F9(t)){let n=Object.create(null);for(let r in e){if(!M9(e[r],t[r]))return!1;n[r]=!0}for(let e in t)if(!(e in n)&&t[e]!==void 0)return!1;return!0}}}return!1}function N9(e){return e!=null}function P9(e){return e!==void 0}function F9(e){return I9(e)&&!L9(e)&&e!==null}function I9(e){return typeof e==`object`&&!!e}function L9(e){return Array.isArray(e)}function R9(e){return typeof e==`string`}function xCe(e){return typeof e==`function`}function z9(e){if(L9(e))return e.map(e=>z9(e));if(F9(e)){let t={};return Object.keys(e).forEach(n=>{t[n]=z9(e[n])}),t}return e}function B9(e,t){if(!I9(e))return z9(t);let n=z9(e);return I9(n)&&I9(t)&&Object.keys(t).forEach(r=>{F9(t[r])&&r in e?n[r]=B9(e[r],t[r]):Object.assign(n,{[r]:t[r]})}),n}function SCe(e,t){let n=e,r=t,i=t.split(`.`);t=``;do{t+=i.shift();let n=!i.length;if(N9(e)){if(F9(e)&&P9(e[t])&&(F9(e[t])||L9(e[t])||n)){e=e[t],t=``;continue}if(L9(e)){if(t===`length`&&n){e=e.length,t=``;continue}if(/^\d+$/.test(t)){let r=parseInt(t,10);if(P9(e[r])&&(F9(e[r])||L9(e[r])||n)){e=e[r],t=``;continue}}}}n?e=void 0:t+=`.`}while(i.length);return e===void 0&&F9(n)&&P9(n[r])?n[r]:e}function CCe(e,t,n){return B9(e,wCe(t,n))}function wCe(e,t){return e.split(`.`).reduceRight((e,t)=>({[t]:e}),t)}function TCe(e){return/^class[{\s]/.test(Function.prototype.toString.call(e))}function ECe(e,t){return TCe(t)?{provide:e,useClass:t}:{provide:e,useFactory:t}}function DCe(e={}){return OCe({...e,isRoot:!0})}function V9(e,t,n,r,i){if(t===void 0)return ECe(e,n);if(typeof t==`function`){if(TCe(t)){let e=t.name||`YourClass`;console.warn(`@ngx-translate/core: "${r}" received a bare class (${e}); auto-wrapping with ${i}(). For clarity, prefer ${r}: ${i}(${e}).`)}return ECe(e,t)}return t}function OCe(e){let t=[],n=V9(W9,e.loader,MCe,`loader`,`provideTranslateLoader`),r=V9(U9,e.compiler,jCe,`compiler`,`provideTranslateCompiler`),i=V9(G9,e.parser,NCe,`parser`,`provideTranslateParser`),a=V9(H9,e.missingTranslationHandler,ACe,`missingTranslationHandler`,`provideMissingTranslationHandler`);t.push(n,r,i,a),t.push(K9);let o={fallbackLang:e.fallbackLang??null,...e.fallbackLangs!==void 0&&{fallbackLangs:e.fallbackLangs},lang:e.lang,retry:e.retry,langs:e.langs,isRoot:e.isRoot};return t.push({provide:q9,useValue:o}),t.push({provide:Y9,useClass:Y9}),t}var kCe,H9,ACe,U9,jCe,W9,MCe,G9,NCe,K9,q9,J9,PCe,FCe,Y9,ICe;function X9(){return(X9=n((()=>{ye(),_ee(),eee(),it(),Ge(),yee(),gee(),vt(),Iz(),lt(),uee(),Rz(),ft(),zz(),cee(),lee(),yt(),st(),_t(),xt(),fee(),At(),Fe(),dee(),tee(),See(),kCe=class{state=E({});hasAny=j(()=>Object.keys(this.state()).length>0);isLoading(e){return this.state()[e]!==void 0}get(e){return this.state()[e]}set(e,t){this.state.update(n=>({...n,[e]:t}))}clear(e){this.state.update(t=>bCe(t,e))}clearIfOwner(e,t){this.state.update(n=>n[e]===t?bCe(n,e):n)}},H9=class{},ACe=class e{handle(e){return e.key}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},U9=class{},jCe=class e extends U9{compile(e,t){return e}compileTranslations(e,t){return e}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},W9=class{},MCe=class e extends W9{getTranslation(e){return ht({})}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},G9=class{},NCe=class e extends G9{templateMatcher=/{{\s?([^{}\s]*)\s?}}/g;interpolate(e,t,n){if(R9(e))return this.interpolateString(e,t,n);if(xCe(e))return this.interpolateFunction(e,t,n)}interpolateFunction(e,t,n){return e(t,n)}interpolateString(e,t,n){return t?e.replace(this.templateMatcher,(e,r)=>{let i=this.getInterpolationReplacement(t,r,n);return i===void 0?e:i}):e}getInterpolationReplacement(e,t,n){return this.formatValue(SCe(e,t),n)}formatValue(e,t){if(R9(e))return e;if(typeof e==`number`||typeof e==`boolean`)return e.toString();if(e===null)return`null`;if(L9(e))return e.join(`, `);if(I9(e))return typeof e.toString==`function`&&e.toString!==Object.prototype.toString?e.toString():JSON.stringify(e)}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},K9=class e{_translations=E({});translations=this._translations.asReadonly();_languages=E([]);languages=this._languages.asReadonly();_lastTranslationChange=E(null);lastTranslationChange=this._lastTranslationChange.asReadonly();_translationChange$=new Le;translationChange$=this._translationChange$.asObservable();constructor(){He(A).onDestroy(()=>{this._translationChange$.complete()})}getTranslations(e){return this.translations()[e]}setTranslations(e,t,n){Ee(()=>{this._translations.update(r=>({...r,[e]:n&&this.hasTranslationFor(e)?B9(r[e],t):t})),this.addLanguages([e]);let r={lang:e,translations:this.getTranslations(e)};this._lastTranslationChange.set(r),this._translationChange$.next(r)})}getLanguages(){return this.languages()}addLanguages(e){this._languages.update(t=>Array.from(new Set([...t,...e])))}removeLanguages(e){this._languages.update(t=>t.filter(t=>!e.includes(t)))}hasTranslationFor(e){return this.translations()[e]!==void 0}deleteTranslations(e){Ee(()=>{if(!this.hasTranslationFor(e))return;this._translations.update(t=>{let{[e]:n,...r}=t;return r});let t={lang:e,translations:{}};this._lastTranslationChange.set(t),this._translationChange$.next(t)})}getTranslationValue(e,t){return SCe(this.getTranslations(e),t)}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},q9=new Te(`TRANSLATE_CONFIG`),J9=e=>Tt(e)?e:ht(e),PCe=100,FCe=2**31-1,Y9=class e{loadingTranslations=new kCe;loadCancellation=new Map;languageRequestSequence=0;lastFallbackRequest=0;languageRequestIds=new WeakMap;deletedLanguageRequests=new Map;lastUseLanguage=null;retry;currentLoader=He(W9);compiler=He(U9);parser=He(G9);missingTranslationHandler=He(H9);store=He(K9);destroyRef=He(A);parent;get isRoot(){return this.parent===null}_onLangChange=new Le;_onFallbackLangChange=new Le;_currentLang=E(null);_fallbackLang=E(null);_additionalFallbackLangs=E([]);_fallbackLangs=j(()=>{let e=this._fallbackLang();return e===null?[]:[e,...this._additionalFallbackLangs()]});_onTranslationRefresh=null;_isLoading=j(()=>this.loadingTranslations.hasAny()||(this.parent?.isLoading()??!1));getRoot(){let e=this;for(;e.parent;)e=e.parent;return e}getParent(){return this.parent}getActiveRequestedLang(){return this.getRoot().lastUseLanguage}hasTranslationInChain(e){for(let t=this;t;t=t.parent)if(t.store.hasTranslationFor(e))return!0;return!1}chainTranslationChange$(){let e=[];for(let t=this;t;t=t.parent)e.push(t.store.translationChange$);return e.length===1?e[0]:Lz(...e)}get onTranslationChange(){return this.store.translationChange$}get onLangChange(){return this.isRoot?this._onLangChange.asObservable():this.parent?this.parent.onLangChange:ct}get onFallbackLangChange(){return this.isRoot?this._onFallbackLangChange.asObservable():this.parent?this.parent.onFallbackLangChange:ct}get onTranslationRefresh(){if(!this._onTranslationRefresh){let e=Lz(this.onTranslationChange.pipe(jt(e=>e.lang===this.getCurrentLang()||this.getFallbackLangs().includes(e.lang))),this.onLangChange,this.onFallbackLangChange).pipe(We(()=>void 0));this._onTranslationRefresh=this.isRoot?e:this.parent?Lz(e,this.parent.onTranslationRefresh):e}return this._onTranslationRefresh}constructor(){let t={isRoot:!0,fallbackLang:null,...He(q9,{optional:!0})};if(this.parent=t.isRoot?null:He(e,{optional:!0,skipSelf:!0}),typeof t.retry==`object`){let{count:e,delay:n,shouldRetry:r}=t.retry;this.retry={count:e,delay:typeof n==`function`?n.bind(t.retry):n,shouldRetry:r?.bind(t.retry)}}else this.retry=Math.max(0,t.retry??0);let n=He(A);if(this.isRoot)t.langs?.length&&this.addLangs(t.langs),t.lang&&this.use(t.lang),t.fallbackLangs===void 0?t.fallbackLang&&this.setFallbackLang(t.fallbackLang):this.setFallbackLangs(t.fallbackLangs);else{let e=this.getCurrentLang();e&&this.loadOrExtendLanguage(e)?.pipe(Dt(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e}". Cause:`,t)}});for(let t of this.getFallbackLangs())t&&t!==e&&this.loadOrExtendLanguage(t)?.pipe(Dt(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}this.onLangChange.pipe(Dt(n)).subscribe(e=>{!this.isRoot&&this.shouldLoadLanguage(e)&&this.loadOrExtendLanguage(e.lang)?.pipe(Dt(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),this.onFallbackLangChange.pipe(Dt(n)).subscribe(e=>{if(!this.isRoot)for(let t of e.langs??[e.lang])this.shouldLoadLanguage(e,t)&&this.loadOrExtendLanguage(t)?.pipe(Dt(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}),n.onDestroy(()=>{this._onLangChange.complete(),this._onFallbackLangChange.complete()})}shouldLoadLanguage(e,t=e.lang){let n=this.deletedLanguageRequests.get(t),r=this.getRoot().languageRequestIds.get(e);return n===void 0||r===void 0||r>n}setFallbackLang(e){return this.isRoot?this.setFallbackLangs([e]).pipe(We(e=>e[0])):this.parent.setFallbackLang(e)}setFallbackLangs(e){return this.isRoot?Ee(()=>{let t=[...new Set(e)],n=++this.languageRequestSequence;this.lastFallbackRequest=n,this._fallbackLang()===null&&this.setFallbackLanguageState(t);let r=t.length?dt(t.map(e=>(this.loadOrExtendLanguage(e)??ht(this.store.getTranslations(e))).pipe(ut(1)))):ht([]);return r.pipe(Dt(this.destroyRef)).subscribe({next:e=>{if(this.lastFallbackRequest!==n||t.some(e=>(this.deletedLanguageRequests.get(e)??-1)>=n))return;this.setFallbackLanguageState(t);let r={lang:t[0]??``,translations:e[0]??{},...t.length!==1&&{langs:this.getFallbackLangs()}};this.languageRequestIds.set(r,n),this._onFallbackLangChange.next(r)},error:e=>{console.warn(`@ngx-translate/core: failed to load fallback "${t.join(`, `)}". Cause:`,e)}}),r}):this.parent.setFallbackLangs(e)}setFallbackLanguageState(e){this._additionalFallbackLangs.set(e.slice(1)),this._fallbackLang.set(e[0]??null)}get isLoading(){return this._isLoading}use(e){return this.isRoot?Ee(()=>{let t=++this.languageRequestSequence,n=this._currentLang(),r=this.lastUseLanguage;this.lastUseLanguage=e,this._currentLang()||this._currentLang.set(e);let i=this.loadOrExtendLanguage(e);return Tt(i)?(i.pipe(ut(1)).subscribe({next:()=>{this.changeLang(e,t)},error:t=>{this.lastUseLanguage!==e||typeof this.retry!=`number`&&this.store.hasTranslationFor(e)||(this._currentLang.set(n),this.lastUseLanguage=r),console.warn(`@ngx-translate/core: failed to load "${e}". currentLang was NOT changed; remains "${n??`null`}". Cause:`,t)}}),i):(this.changeLang(e,t),ht(this.store.getTranslations(e)))}):this.parent.use(e)}loadOrExtendLanguage(e){return this.store.hasTranslationFor(e)?ht(this.store.getTranslations(e)):this.loadAndCompileTranslations(e)}getTranslations(e){return this.store.getTranslations(e)}changeLang(e,t){if(e!==this.lastUseLanguage)return;this._currentLang.set(e);let n={lang:e,translations:this.store.getTranslations(e)};t!==void 0&&this.languageRequestIds.set(n,t),this._onLangChange.next(n)}getCurrentLang(){return this.isRoot?this._currentLang():this.parent?.getCurrentLang()??null}loadAndCompileTranslations(e){let t=this.loadingTranslations.get(e);if(t)return t;let n=typeof this.retry==`number`?{count:this.retry}:this.retry,r=this.loadCancellation.get(e);r||(r=new ot(1),this.loadCancellation.set(e,r));let i=Ot(()=>{let t=this.currentLoader.getTranslation(e);return n.count>0?t.pipe(Tde({count:n.count,delay:(e,t)=>{if(n.shouldRetry&&!n.shouldRetry(e))return wt(()=>e);let r=n.delay??PCe,i=typeof r==`function`?r(e,t):r;if(!Number.isFinite(i)||i<0||i>FCe)throw RangeError(`@ngx-translate/core: retry delay must be a finite number between 0 and 2147483647 milliseconds.`);return at(i)}})):t}),a=!1,o=i.pipe(We(t=>this.compiler.compileTranslations(t,e)),jt(()=>this.loadCancellation.get(e)===r),bt({next:t=>{this.store.setTranslations(e,t,!1),this.loadingTranslations.clearIfOwner(e,s)},error:()=>{typeof this.retry!=`number`&&this.loadingTranslations.clearIfOwner(e,s)}}),Ct(t=>this.loadCancellation.get(e)===r?wt(()=>t):ct),bt({complete:()=>{a=this.loadCancellation.get(e)===r}}),bee(r),St(()=>this.loadingTranslations.clearIfOwner(e,s)),aee({connector:()=>new ot(1),resetOnError:typeof this.retry==`number`,resetOnComplete:!1,resetOnRefCountZero:!0})),s=Ot(()=>a||this.loadCancellation.get(e)===r?o:ct);return this.loadingTranslations.set(e,s),s.pipe(Dt(this.destroyRef)).subscribe({error:()=>{}}),s}setTranslation(e,t,n=!1){let r=this.compiler.compileTranslations(t,e);this.store.setTranslations(e,r,n)}setCompiledTranslation(e,t,n=!1){this.store.setTranslations(e,t,n)}getLangs(){return this.store.getLanguages()}addLangs(e){this.store.addLanguages(e)}getParsedResultForKey(e,t,n){let r,i=this.getTextToInterpolate(e,n,e=>{r=e});if(N9(i)){let n=r?.translation===i?r.context:{key:e};return this.runInterpolation(i,t,n)}let a=this.getMissingTranslationHandler().handle({key:e,translateService:this,...t!==void 0&&{interpolateParams:t}});return a===void 0?e:a}getMissingTranslationHandler(){return this.missingTranslationHandler}getFallbackLang(){return this.isRoot?this._fallbackLang():this.parent?.getFallbackLang()??null}getFallbackLangs(){return this.fallbackLangs()}getTextToInterpolate(e,t,n){if(t){let r=this.store.getTranslationValue(t,e);return r===void 0?this.parent?.getTextToInterpolate(e,t,n):(n?.({translation:r,context:{key:e,lang:t}}),r)}let r=this.getCurrentLang(),i,a;r&&(i=this.store.getTranslationValue(r,e),a=r);for(let t of this.getFallbackLangs()){if(N9(i))break;t!==r&&(i=this.store.getTranslationValue(t,e),a=t)}return i===void 0?this.parent?.getTextToInterpolate(e,t,n):(n?.({translation:i,context:a===void 0?{key:e}:{key:e,lang:a}}),i)}runInterpolation(e,t,n){if(N9(e))return L9(e)?this.runInterpolationOnArray(e,t,n):F9(e)?this.runInterpolationOnDict(e,t,n):this.parser.interpolate(e,t,n)}runInterpolationOnArray(e,t,n){return e.map(e=>this.runInterpolation(e,t,n))}runInterpolationOnDict(e,t,n){let r={};for(let i in e){let a=this.runInterpolation(e[i],t,n);a!==void 0&&(r[i]=a)}return r}getParsedResult(e,t,n){return e instanceof Array?this.getParsedResultForArray(e,t,n):this.getParsedResultForKey(e,t,n)}getParsedResultForArray(e,t,n){let r={},i=!1;for(let a of e)r[a]=this.getParsedResultForKey(a,t,n),i||=Tt(r[a]);if(!i)return r;let a=e.map(e=>J9(r[e]));return dt(a).pipe(We(t=>{let n={};return t.forEach((t,r)=>{n[e[r]]=t}),n}))}get(e,t,n){if(!N9(e)||!e.length)return ht(``);let r=n??this.getActiveRequestedLang()??this.getCurrentLang(),i=new Set,a=()=>{let o=new Set([...r?[r]:[],...n?[]:this.getFallbackLangs()]),s=[];for(let e=this;e;e=e.parent)for(let t of o){let n=e.loadingTranslations.get(t);n&&!i.has(n)&&(i.add(n),s.push(n.pipe(ut(1),mee(void 0))))}return s.length?dt(s).pipe(gt(a)):J9(this.getParsedResult(e,t,n))};return a()}getAsync(e,t,n){return wde(this.get(e,t,n))}getStreamOnTranslationChange(e,t,n){if(!N9(e)||!e.length)throw Error(`Parameter "key" is required and cannot be empty`);return kt(Ot(()=>this.get(e,t,n)),this.onTranslationChange.pipe(Et(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}stream(e,t,n){if(!N9(e)||!e.length)throw Error(`Parameter "key" required`);let r=n?Lz(this.onLangChange,this.chainTranslationChange$().pipe(jt(e=>e.lang===n))):this.onLangChange;return kt(Ot(()=>this.get(e,t,n)),r.pipe(Et(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}instant(e,t,n){if(!N9(e)||e.length===0)return``;n&&!this.hasTranslationInChain(n)&&this.warnUnloadedInstantLang(n);let r=this.getParsedResult(e,t,n);return Tt(r)?this.keyToObject(e):r}warnedUnloadedInstantLangs=new Set;warnUnloadedInstantLang(e){let t=this.getRoot();t===this?this.warnedUnloadedInstantLangs.has(e)||Ee(()=>{this.warnedUnloadedInstantLangs.add(e),console.warn(`@ngx-translate/core: instant() called with lang="${e}" but no translations are loaded for that language. Returning the key as fallback. Load with use("${e}") or setTranslation("${e}", ...) first.`)}):t.warnUnloadedInstantLang(e)}hasTranslationKey(e,t){return!N9(e)||e.length===0?!1:N9(this.getTextToInterpolate(e,t))}translate(e,t,n){return j(()=>{let r=typeof e==`function`?e():e,i=typeof t==`function`?t():t,a=typeof n==`function`?n():n;return this.instant(r,i,a)})}keyToObject(e){return Array.isArray(e)?e.reduce((e,t)=>(e[t]=t,e),{}):e}set(e,t,n){Ee(()=>{let r=n??this.getCurrentLang();this.store.setTranslations(r,CCe(this.store.getTranslations(r),e,R9(t)?this.compiler.compile(t,r):this.compiler.compileTranslations(t,r)),!1)})}reloadLang(e){return Ee(()=>(this.resetLang(e),this.loadAndCompileTranslations(e)))}resetLang(e){this.loadingTranslations.clear(e),this.store.deleteTranslations(e)}deleteLanguage(e){Ee(()=>{this.deletedLanguageRequests.set(e,this.getRoot().languageRequestSequence);let t=this.loadCancellation.get(e);this.loadCancellation.delete(e),this.loadingTranslations.clear(e),this.store.removeLanguages([e]),this.store.deleteTranslations(e),t?.next(),t?.complete()})}static getBrowserLang(){if(typeof window>`u`||!window.navigator)return;let e=this.getBrowserCultureLang();return e?e.split(/[-_]/)[0]:void 0}static getBrowserCultureLang(){if(typeof window<`u`&&window.navigator!==void 0)return window.navigator.languages?window.navigator.languages[0]:window.navigator.language||window.navigator.browserLanguage||window.navigator.userLanguage}getBrowserLang(){return e.getBrowserLang()}getBrowserCultureLang(){return e.getBrowserCultureLang()}get currentLang(){return this.isRoot?this._currentLang.asReadonly():this.parent.currentLang}get fallbackLang(){return this.isRoot?this._fallbackLang.asReadonly():this.parent.fallbackLang}get fallbackLangs(){return this.isRoot?this._fallbackLangs:this.parent.fallbackLangs}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},ICe=class e{translateService=He(Y9);cachedSignal=null;lastKey=null;lastParams;transform(e,...t){if(!e||!e.length)return e;let n=this.parseArgs(t);return e===this.lastKey&&M9(n,this.lastParams)||(this.cachedSignal=this.translateService.translate(e,n),this.lastKey=e,this.lastParams=n),this.cachedSignal()}parseArgs(e){if(N9(e[0])&&e.length){if(R9(e[0])&&e[0].length){let t=e[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g,`"$2":`).replace(/:(\s)?(')(.*?)(')/g,`:"$3"`);try{return JSON.parse(t)}catch(t){throw SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${e[0]}`,{cause:t})}}if(F9(e[0]))return e[0]}}static ɵfac=function(t){return new(t||e)};static ɵpipe=x({name:`translate`,type:e,pure:!1});static ɵprov=s({token:e,factory:e.ɵfac})}})))()}function LCe(e){return Object.fromEntries(Object.entries(e).flatMap(([e,t])=>typeof t==`object`&&t&&!Array.isArray(t)&&Object.keys(t).length?Object.entries(LCe(t)).map(([t,n])=>[`${e}.${t}`,n]):[[e,t]]))}function RCe(e={}){if(`resources`in e&&e.resources)return zCe(e);let t=e;return zCe({enforceLoading:t.enforceLoading??!1,useHttpBackend:t.useHttpBackend??!1,failOnError:t.failOnError??!1,flatten:t.flatten??!1,onLoadError:t.onLoadError,resources:[{prefix:t.prefix??`/assets/i18n/`,suffix:t.suffix??`.json`}]})}function zCe(e={}){return[{provide:Z9,useValue:{resources:[`/assets/i18n/`],...e}},{provide:W9,useClass:VCe}]}var BCe,Z9,VCe;function HCe(){return(HCe=n((()=>{A4(),ye(),X9(),_t(),gee(),lt(),Fe(),ft(),yt(),BCe=/^\.{1,2}$/,Z9=new Te(`TRANSLATE_HTTP_LOADER_CONFIG`),VCe=class e{http;config;constructor(){this.config={resources:[],enforceLoading:!1,useHttpBackend:!1,...He(Z9)},this.http=this.config.useHttpBackend?new k4(He(E4)):He(k4)}getTranslation(e){let t=this.config.enforceLoading?`?enforceLoading=${Date.now()}`:``,n=this.config.resources.map(n=>{let r;return Ot(()=>{let i=encodeURIComponent(e);return r=`${typeof n==`string`?`${n}${i}.json`:`${n.prefix}${i}${n.suffix??`.json`}`}${t}`,BCe.test(e)?wt(()=>Error(`"${e}" is a path segment, not a language`)):this.http.get(r)}).pipe(Ct(t=>(this.reportError({lang:e,resource:n,url:r,error:t}),this.config.failOnError?wt(()=>t):ht({}))))});return n.length===0?ht({}):dt(n).pipe(We(e=>e.reduce((e,t)=>this.config.flatten?{...e,...LCe(t??{})}:B9(e,t),{})))}reportError(e){if(this.config.onLoadError)try{this.config.onLoadError(e)}catch(e){console.warn(`@ngx-translate/http-loader: onLoadError callback failed:`,e)}else this.config.failOnError||console.warn(`@ngx-translate/http-loader: error loading translation for ${e.lang}:`,e.error)}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})}})))()}var Q9;function UCe(){return(UCe=n((()=>{g(),ye(),X9(),Q9=class{translate=He(Y9);constructor(){window.addEventListener(`language-changed`,e=>{let t=e.detail.lang;this.translate.use(t)})}static ctorParameters=()=>[]},Q9=rt([tt()],Q9)})))()}var WCe=r({default:()=>GCe}),$9,GCe;function KCe(){return(KCe=n((()=>{VSe(),k9(),JSe(),sCe(),yCe(),X9(),HCe(),A4(),UCe(),ye(),qSe(vCe),$9=`pl`,GCe={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{codePanel:!0},backgrounds:{options:{gray0:{name:`gray-0`,value:`#ffffff`},gray10:{name:`gray-10`,value:`#e6e6e6`},gray20:{name:`gray-20`,value:`#cccccc`},gray30:{name:`gray-30`,value:`#b3b3b3`},gray46:{name:`gray-46`,value:`#898989`},gray60:{name:`gray-60`,value:`#666666`},gray75:{name:`gray-75`,value:`#3f3f3f`},gray80:{name:`gray-80`,value:`#333333`},gray84:{name:`gray-84`,value:`#292929`},gray87:{name:`gray-87`,value:`#212121`},gray92:{name:`gray-92`,value:`#141414`},gray100:{name:`gray-100`,value:`#000000`}}}},globalTypes:{locale:{description:`Język aplikacji`,defaultValue:`pl`,toolbar:{icon:`globe`,items:[{value:`en`,right:`🇬🇧`,title:`English`},{value:`pl`,right:`🇵🇱`,title:`Polski`}]}}},decorators:[iCe({themes:{light:`light-theme`,dark:`dark-theme`},defaultTheme:`dark`}),HSe({providers:[pbe(),DCe({loader:RCe({prefix:`./assets/i18n/`,suffix:`.json`}),fallbackLang:`pl`,lang:`pl`}),Q9,f(()=>{He(Q9);let e=new CustomEvent(`language-changed`,{detail:{lang:$9}});window.dispatchEvent(e)})]}),(e,t)=>{$9=t.globals.locale;let n=new CustomEvent(`language-changed`,{detail:{lang:$9}});return window.dispatchEvent(n),e()}]}})))()}function qCe(e=[]){let t=[e[0]??Ede,e[1]??lxe,e[2]??gxe,e[3]??Wxe,e[4]??Yxe,e[5]??tSe,e[6]??WCe];return JCe(t)}var JCe;function YCe(){return(YCe=n((()=>{Bz(),uxe(),_xe(),Gxe(),Xxe(),nSe(),KCe(),{composeConfigs:JCe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var XCe;function ZCe(){return(ZCe=n((()=>{kz(),Nz(),Fz(),YCe(),Ap(),{PreviewWeb:XCe}=__STORYBOOK_MODULE_PREVIEW_API__,window.__STORYBOOK_PREVIEW__=window.__STORYBOOK_PREVIEW__||new XCe(Cde,qCe),window.__STORYBOOK_STORY_STORE__=window.__STORYBOOK_STORY_STORE__||window.__STORYBOOK_PREVIEW__.storyStore})))()}function QCe(){return(QCe=n((()=>{Bt(),ZCe()})))()}export{y2 as _,k9 as a,Lz as b,GSe as c,P4 as d,k4 as f,L2 as g,rbe as h,X9 as i,M4 as l,I2 as m,ICe as n,HSe as o,A4 as p,Y9 as r,O9 as s,QCe as t,j4 as u,w2 as v,Rz as y};
+`,children:[{type:`providers`,elements:[]},{type:`declarations`,elements:[]},{type:`imports`,elements:[]},{type:`exports`,elements:[]},{type:`bootstrap`,elements:[]},{type:`classes`,elements:[]}]}],_Ce=JSON.parse(`{"variables":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"},{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"},{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"},{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"},{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"},{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"},{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"},{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"},{"name":"IDS_NATIVE_CONTROL_HOST","ctype":"miscellaneous","subtype":"variable","file":"projects/irr-design-system/core/interfaces/native-control-host.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"new InjectionToken<NativeControlHost>('IdsNativeControlHost')"},{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"},{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"},{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"},{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"},{"name":"OVERLAY_SPACING","ctype":"miscellaneous","subtype":"variable","file":"projects/irr-design-system/core/consts/spacing.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"8"},{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"},{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: Tool,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: Project },\\n    { path: 'author', component: Author },\\n]"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"},{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"},{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"},{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: Configuration,\\n        children: [\\n            { path: '', component: ConfigMenu },\\n            { path: 'project', component: ConfigProject },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: Tray,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenu },\\n            { path: 'random', component: RandomTiles },\\n            { path: 'random/:id', component: RandomTiles },\\n            { path: 'tile/:id', component: TileDetail },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: Sectors,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursList },\\n            { path: ':id/property', component: SectorPropertyEditor },\\n            { path: ':id/contour', component: SectorContourEdition },\\n            { path: 'contour', component: SectorContourEdition },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGeneration,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"},{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"},{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"},{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}],"functions":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"formFieldErrorsId","file":"projects/irr-design-system/core/tools/identity-generation/form-field-errors-id.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"formFieldErrorsId","args":[{"name":"controlId","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"string","jsdoctags":[{"name":"controlId","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"injectControlId","file":"projects/irr-design-system/core/tools/identity-generation/identity-generator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"injectControlId","args":[{"name":"fallback","deprecated":false,"deprecationMessage":""}],"returnType":"string","jsdoctags":[{"name":"fallback","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}],"typealiases":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"IdsFlatButtonVariant","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"accent\\" | \\"neutral\\" | \\"danger\\"","file":"projects/irr-design-system/action/flat-button/flat-button.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"IdsFramedButtonVariant","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"accent\\" | \\"neutral\\" | \\"danger\\"","file":"projects/irr-design-system/action/framed-button/framed-button.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"IdsTooltipPosition","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"auto\\" | \\"top\\" | \\"right\\" | \\"bottom\\" | \\"left\\"","file":"projects/irr-design-system/tooltip/tooltip.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193},{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"enumerations":[],"groupedVariables":{"projects/irrtirer/src/test-data/active-canvas.data.ts":[{"name":"activeCanvas","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/active-canvas.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"IActiveCanvas","defaultValue":"{\\n    options: {\\n        update: vi.fn(),\\n    },\\n    viewport: vi.fn(() => ({\\n        cmSize: {\\n            width: 0,\\n            height: 0,\\n        },\\n    })),\\n    clicked: new EventEmitter<IVector>(),\\n    canvasLoaded: new EventEmitter<void>(),\\n\\n    redraw: vi.fn(),\\n    addCanvasObject: vi.fn(),\\n    removeObjects: vi.fn(),\\n    setViewport: vi.fn(),\\n} as unknown as IActiveCanvas"}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"address","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113/api'"},{"name":"BackendAddress","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/api.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'https://localhost:7113'"}],"projects/irrtirer/src/app/app.config.ts":[{"name":"appConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.config.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ApplicationConfig","defaultValue":"{\\n    providers: [\\n        provideRouter(routes),\\n        provideHttpClient(),\\n        provideStore(\\n            {\\n                mosaicProject: mosaicProjectReducer,\\n                userPreferences: userPreferencesReducer,\\n            },\\n            {\\n                metaReducers: [storageMetaReducer],\\n            },\\n        ),\\n        provideTranslateService({\\n            loader: provideTranslateHttpLoader({\\n                prefix: '/irrtirer/assets/i18n/',\\n                suffix: '.json',\\n            }),\\n            fallbackLang: 'pl',\\n            lang: 'pl',\\n        }),\\n        {\\n            provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,\\n            useValue: { appearance: 'outline' },\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts":[{"name":"BASE_LINE_THICKNESS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"},{"name":"BASE_POINT_RADIUS","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/canvas-objects/opened-contour-object.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"10"}],"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts":[{"name":"DEFAULT_PROJECT_NAME","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-menu/config-menu.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irrtirer_project'"}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"deg2Rad","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"Math.PI / 180"}],"projects/irrtirer/src/environment/environment.ts":[{"name":"environment","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/environment/environment.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"object","defaultValue":"{\\n    version: packageInfo.version,\\n}"}],"projects/irrtirer/src/test-data/sector.data.ts":[{"name":"faceSector","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/sector.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"SectorSchema","defaultValue":"{\\n    id: '28de0a80-5b2d-4dba-83cc-052686428fce',\\n    name: 'Twarz',\\n    color: '#f2af3d',\\n    vertices: [\\n        new Vector(-12.575004609623136, -52.52902802526164),\\n        new Vector(-6.445132247241247, -54.592549414578315),\\n        new Vector(-0.9828697461088751, -54.4104739978739),\\n        new Vector(7.028448588885276, -50.76896566378565),\\n        new Vector(8.606435533656843, -44.21425066242681),\\n        new Vector(9.759579839451455, -30.9227452430047),\\n        new Vector(8.424360116952428, -25.157023714031638),\\n        new Vector(4.054550116046528, -21.69759079664781),\\n        new Vector(-4.320919052356437, -18.6023087126728),\\n        new Vector(-7.962427386444688, -22.00104982448849),\\n        new Vector(-12.757080026327543, -26.917086075507633),\\n        new Vector(-14.45645058223539, -34.68563718822922),\\n        new Vector(-14.213683359962843, -41.36173580072435),\\n        new Vector(-14.517142387803531, -44.578401495835635),\\n    ],\\n    properties: {\\n        sectionMaxArea: 3,\\n        sectionMinAngle: 35,\\n        minTileRadius: 0.25,\\n        maxTileRadius: 1,\\n        tilesMargin: 0.1,\\n        evaluationParams: {\\n            singleSectionPopulation: 2,\\n            overlappingAreaOutsideSector: -2,\\n            additionalPopulationOfNeighboringSectors: 4,\\n            overlappingNotPopulatedSections: -1,\\n            tileColorMismatch: -2,\\n        },\\n        populationParams: {\\n            initialPopulationSize: 100,\\n            countOfTriesToInsertTile: 30,\\n            countOfTrianglePositionDraws: 30,\\n            countOfColorMatchingAttempts: 40,\\n            iterationsCount: 100,\\n            populationSize: 10,\\n        },\\n    },\\n}"}],"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts":[{"name":"HexColorRegex","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/shared/color-picker/color-selection-panel/color-selection-panel.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"RegExp","defaultValue":"/^#([0-9a-f]{3}){1,2}$/i"}],"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts":[{"name":"iconDictionary","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/icon-svg-module/icon-svg-module.module.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Record<string, string>","defaultValue":"{\\n    github: 'github-mark.svg',\\n    pl: 'pl.svg',\\n    gb: 'gb.svg',\\n}"}],"projects/irr-design-system/core/interfaces/native-control-host.ts":[{"name":"IDS_NATIVE_CONTROL_HOST","ctype":"miscellaneous","subtype":"variable","file":"projects/irr-design-system/core/interfaces/native-control-host.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"new InjectionToken<NativeControlHost>('IdsNativeControlHost')"}],"projects/irrtirer/src/test-data/image-object.data.ts":[{"name":"imageObjectMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/image-object.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"ImageObject","defaultValue":"{\\n    size: { width: 100, height: 100 },\\n    setVisibility: vi.fn(),\\n} as unknown as ImageObject"}],"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts":[{"name":"MAX_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1000"},{"name":"MIN_WIDTH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/configuration/config-project/config-project.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"1"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts":[{"name":"MosaicProjectActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'Mosaic Project',\\n    events: {\\n        'Project Created': props<{ project: MosaicProjectModel }>(),\\n        'Project Canceled': emptyProps(),\\n        'Mosaic Width Changed': props<{ width: number }>(),\\n\\n        'Sector Modified': props<{ modifiedSector: SectorSchema }>(),\\n        'Sector Removed': props<{ sector: SectorSchema }>(),\\n        'Sector Shifted': props<{ prevIndex: number; newIndex: number }>(),\\n\\n        'Tiles Set Committed': props<{ tilesSet: TilesSet }>(),\\n        'Tiles Set Removed': props<{ removedTilesSet: TilesSet }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts":[{"name":"mosaicProjectKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'mosaic-project'"},{"name":"selectIsProjectCreated","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => !!state)"},{"name":"selectMosaicConfig","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.config)"},{"name":"selectMosaicImage","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.base64Image)"},{"name":"selectMosaicProject","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<MosaicProjectModel>('mosaicProject')"},{"name":"selectMosaicWidth","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.config.mosaicWidth)"},{"name":"selectSectors","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel | undefined) => state?.sectors ?? [])"},{"name":"selectTilesSets","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectMosaicProject, (state: MosaicProjectModel) => state.tilesSets)"}],"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts":[{"name":"mosaicProjectReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/mosaic-project/mosaic-project.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<MosaicProjectModel | null>(\\n    null,\\n    on(MosaicProjectActions.projectCreated, (_state, { project }) => ({\\n        ...project,\\n    })),\\n    on(MosaicProjectActions.projectCanceled, (): null => null),\\n    on(MosaicProjectActions.mosaicWidthChanged, (state, { width }) => ({\\n        ...state!,\\n        config: { ...state!.config, mosaicWidth: width },\\n    })),\\n    on(MosaicProjectActions.sectorModified, (state, { modifiedSector }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.addOrUpdate([...state!.sectors], modifiedSector, (x) => x.id === modifiedSector.id),\\n    })),\\n    on(MosaicProjectActions.sectorRemoved, (state, { sector }) => ({\\n        ...state!,\\n        sectors: [...state!.sectors.filter((x) => x.id !== sector.id)],\\n    })),\\n    on(MosaicProjectActions.sectorShifted, (state, { prevIndex, newIndex }) => ({\\n        ...state!,\\n        sectors: ArrayHelpers.moveElemInArray([...state!.sectors], prevIndex, newIndex),\\n    })),\\n    on(MosaicProjectActions.tilesSetCommitted, (state, { tilesSet }) => ({\\n        ...state!,\\n        tilesSets: [...state!.tilesSets.filter((x) => x.id !== tilesSet.id), tilesSet],\\n    })),\\n    on(MosaicProjectActions.tilesSetRemoved, (state, { removedTilesSet }) => ({\\n        ...state!,\\n        tilesSets: state!.tilesSets.filter((tilesSet) => tilesSet !== removedTilesSet),\\n    })),\\n)"}],"projects/irr-design-system/core/consts/spacing.ts":[{"name":"OVERLAY_SPACING","ctype":"miscellaneous","subtype":"variable","file":"projects/irr-design-system/core/consts/spacing.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"number","defaultValue":"8"}],"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts":[{"name":"PROJECT_FORMAT","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/services/project-archive/project-archive.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'irr'"}],"projects/irrtirer/src/app/app.routes.ts":[{"name":"routes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/app.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'project', pathMatch: 'full' },\\n    {\\n        path: 'tool',\\n        component: Tool,\\n        loadChildren: () => import('./tool/tool.routes').then((x) => x.toolRoutes),\\n    },\\n    { path: 'project', component: Project },\\n    { path: 'author', component: Author },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts":[{"name":"selectThemeMode","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.theme)"},{"name":"selectUserLang","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createSelector(selectUserPreferences, (state: UserPreferences) => state.lang)"},{"name":"selectUserPreferences","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createFeatureSelector<UserPreferences>('userPreferences')"},{"name":"userPreferencesKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.selectors.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'user-preferences'"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"stateLocalStorageKey","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'state'"}],"projects/irrtirer/src/test-data/tiles-set.data.ts":[{"name":"tileMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"TileModel","defaultValue":"{\\n    id: 'f7dbbcf0-6d32-4978-a933-f881c56786e3',\\n    color: '#80626E',\\n    vertices: [new Vector(7.5, 15.33), new Vector(21.16, 5.11), new Vector(4.68, -11.07), new Vector(-20.71, -16.44), new Vector(-6.59, 12.71)],\\n}"},{"name":"tilesSetMock","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/test-data/tiles-set.data.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"GeneratedTilesSet","defaultValue":"{\\n    id: 'a1e5f4d3-1c4b-4e2b-9f4b-3e2f5d6c7b8a',\\n    name: '232',\\n    source: 'generated',\\n    minRadius: 1,\\n    maxRadius: 2,\\n    tiles: [\\n        tileMock,\\n        {\\n            id: '7b5cd244-8f9b-46b6-b7ce-54c7de4b45b8',\\n            color: '#636365',\\n            vertices: [\\n                new Vector(-2.25, 18.71),\\n                new Vector(22.68, 10.79),\\n                new Vector(7.88, -23.65),\\n                new Vector(-16.64, -10.85),\\n                new Vector(-20.76, 11.59),\\n            ],\\n        },\\n    ],\\n}"}],"projects/irrtirer/src/app/core/constants/paths.ts":[{"name":"TOOL_PATH","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/constants/paths.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"string","defaultValue":"'/tool'"}],"projects/irrtirer/src/app/tool/tool.routes.ts":[{"name":"toolRoutes","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/tool/tool.routes.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Routes","defaultValue":"[\\n    { path: '', redirectTo: 'config', pathMatch: 'full' },\\n    {\\n        path: 'config',\\n        component: Configuration,\\n        children: [\\n            { path: '', component: ConfigMenu },\\n            { path: 'project', component: ConfigProject },\\n        ],\\n    },\\n    {\\n        path: 'tray',\\n        component: Tray,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: TrayMenu },\\n            { path: 'random', component: RandomTiles },\\n            { path: 'random/:id', component: RandomTiles },\\n            { path: 'tile/:id', component: TileDetail },\\n        ],\\n    },\\n    {\\n        path: 'sectors',\\n        component: Sectors,\\n        canActivate: [projectExistGuard],\\n        children: [\\n            { path: '', component: SectorsContoursList },\\n            { path: ':id/property', component: SectorPropertyEditor },\\n            { path: ':id/contour', component: SectorContourEdition },\\n            { path: 'contour', component: SectorContourEdition },\\n        ],\\n    },\\n    {\\n        path: 'generating',\\n        component: MosaicGeneration,\\n        canActivate: [projectExistGuard, sectorsSelectedGuard],\\n    },\\n]"}],"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts":[{"name":"units","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/pipes/size-display.pipe.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"Unit[]","defaultValue":"[\\n    {\\n        label: 'km',\\n        denominator: 100000,\\n    },\\n    {\\n        label: 'm',\\n        denominator: 100,\\n    },\\n    {\\n        label: 'cm',\\n        denominator: 1,\\n    },\\n    {\\n        label: 'mm',\\n        denominator: 0.1,\\n    },\\n    {\\n        label: 'µm',\\n        denominator: 0.0001,\\n    },\\n    {\\n        label: 'nm',\\n        denominator: 0.0000001,\\n    },\\n]"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts":[{"name":"UserPreferencesActions","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.actions.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createActionGroup({\\n    source: 'User Preferences',\\n    events: {\\n        'Language Changed': props<{ lang: string }>(),\\n        'Theme Changed': props<{ theme: ThemeMode }>(),\\n    },\\n})"}],"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts":[{"name":"userPreferencesReducer","ctype":"miscellaneous","subtype":"variable","file":"projects/irrtirer/src/app/core/state/user-preferences/user-preferences.reducer.ts","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","type":"unknown","defaultValue":"createReducer<UserPreferences>(\\n    {},\\n    on(UserPreferencesActions.languageChanged, (state, { lang }) => ({ ...state, lang })),\\n    on(UserPreferencesActions.themeChanged, (state, { theme }) => ({ ...state, theme })),\\n)"}]},"groupedFunctions":{"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts":[{"name":"arePolygonEdgesIntersecting","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"arePolygonEdgesIntersecting","args":[{"name":"vertices","deprecated":false,"deprecationMessage":""}],"returnType":"boolean","jsdoctags":[{"name":"vertices","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidationFunc","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidationFunc","args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"polygonValidator","file":"projects/irrtirer/src/app/tool/sectors/sector-contour-edition/polygon.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"polygonValidator","args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irr-design-system/core/tools/identity-generation/form-field-errors-id.ts":[{"name":"formFieldErrorsId","file":"projects/irr-design-system/core/tools/identity-generation/form-field-errors-id.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"formFieldErrorsId","args":[{"name":"controlId","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"string","jsdoctags":[{"name":"controlId","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/constants/api.ts":[{"name":"getMosaicTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getMosaicTriangulationMeshApiAddress","args":[],"returnType":"string"},{"name":"getPolygonTriangulationMeshApiAddress","file":"projects/irrtirer/src/app/core/constants/api.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getPolygonTriangulationMeshApiAddress","args":[],"returnType":"string"}],"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts":[{"name":"getSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"getSavedState","args":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"object | null","jsdoctags":[{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"restoreStateModelObjects","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"restoreStateModelObjects","args":[{"name":"state","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"setSavedState","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"setSavedState<T>","typeParameters":["T"],"args":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":""},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"state","type":"T","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"localStorageKey","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"storageMetaReducer","file":"projects/irrtirer/src/app/core/state/storage-meta-reducer.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"storageMetaReducer<S, A extends Action = Action>","typeParameters":["S","A extends Action = Action"],"args":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":""}],"jsdoctags":[{"name":"reducer","type":"ActionReducer","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irr-design-system/core/tools/identity-generation/identity-generator.ts":[{"name":"injectControlId","file":"projects/irr-design-system/core/tools/identity-generation/identity-generator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"injectControlId","args":[{"name":"fallback","deprecated":false,"deprecationMessage":""}],"returnType":"string","jsdoctags":[{"name":"fallback","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/validators/unique-value.validator.ts":[{"name":"nonUniqueValueValidationFunc","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidationFunc<T>","typeParameters":["T"],"args":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"literal type | null","jsdoctags":[{"name":"value","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"nonUniqueValueValidator","file":"projects/irrtirer/src/app/core/validators/unique-value.validator.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"nonUniqueValueValidator<T>","typeParameters":["T"],"args":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":""},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"field","type":"SchemaPath","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"array","type":"Signal","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/download-helper.ts":[{"name":"openFilePicker","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"openFilePicker","args":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":""},{"name":"fn","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"fileFormat","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fn","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"saveAs","file":"projects/irrtirer/src/app/core/helpers/download-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"saveAs","args":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":""},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":""}],"returnType":"void","jsdoctags":[{"name":"blob","type":"Blob","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"fileName","type":"string","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]}],"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts":[{"name":"rotatePointAroundPoint","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"rotatePointAroundPoint","args":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":""}],"returnType":"Vector","jsdoctags":[{"name":"point","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"center","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}}]},{"name":"transformPolygon","file":"projects/irrtirer/src/app/core/helpers/polygon/trigonometry-helper.ts","ctype":"miscellaneous","subtype":"function","coverageIgnore":false,"deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","displayName":"transformPolygon","args":[{"name":"polygon","deprecated":false,"deprecationMessage":""},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":""},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0"},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1"}],"returnType":"Vector[]","jsdoctags":[{"name":"polygon","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"position","type":"Vector","deprecated":false,"deprecationMessage":"","tagName":{"text":"param"}},{"name":"angle","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"0","tagName":{"text":"param"}},{"name":"scale","type":"number","deprecated":false,"deprecationMessage":"","defaultValue":"1","tagName":{"text":"param"}}]}]},"groupedEnumerations":{},"groupedTypeAliases":{"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts":[{"name":"ActionVisibility","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"on\\" | \\"off\\" | \\"disabled\\" | \\"hidden\\"","file":"projects/irrtirer/src/app/tool/ribbon/ribbon-action.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irr-design-system/action/flat-button/flat-button.ts":[{"name":"IdsFlatButtonVariant","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"accent\\" | \\"neutral\\" | \\"danger\\"","file":"projects/irr-design-system/action/flat-button/flat-button.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irr-design-system/action/framed-button/framed-button.ts":[{"name":"IdsFramedButtonVariant","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"accent\\" | \\"neutral\\" | \\"danger\\"","file":"projects/irr-design-system/action/framed-button/framed-button.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irr-design-system/tooltip/tooltip.ts":[{"name":"IdsTooltipPosition","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"auto\\" | \\"top\\" | \\"right\\" | \\"bottom\\" | \\"left\\"","file":"projects/irr-design-system/tooltip/tooltip.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts":[{"name":"InfoState","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"ProgressInfoState | InitInfoState","file":"projects/irrtirer/src/app/tool/mosaic-generation/progress-info/progress-info.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/user-preferences.interface.ts":[{"name":"ThemeMode","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"light\\" | \\"dark\\"","file":"projects/irrtirer/src/app/core/models/user-preferences.interface.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}],"projects/irrtirer/src/app/core/models/mosaic-project.model.ts":[{"name":"TileSetSource","ctype":"miscellaneous","subtype":"typealias","coverageIgnore":false,"rawtype":"\\"generated\\" | \\"imported\\"","file":"projects/irrtirer/src/app/core/models/mosaic-project.model.ts","deprecated":false,"deprecationMessage":"","rawdescription":"","description":"","kind":193}]}}`),vCe={pipes:cCe,interfaces:lCe,injectables:uCe,guards:dCe,interceptors:fCe,classes:pCe,directives:mCe,components:hCe,modules:gCe,miscellaneous:_Ce}})))()}function bCe(e,t){let n={};for(let r of Object.keys(e))r!==t&&(n[r]=e[r]);return n}function M9(e,t){if(e===t)return!0;if(e===null||t===null)return!1;if(e!==e&&t!==t)return!0;if(e instanceof Date||t instanceof Date)return e instanceof Date&&t instanceof Date&&M9(e.getTime(),t.getTime());let n=typeof e,r=typeof t,i;if(n==r&&n==`object`){if(Array.isArray(e)){if(!Array.isArray(t))return!1;if((i=e.length)==t.length){for(let n=0;n<i;n++)if(!M9(e[n],t[n]))return!1;return!0}}else{if(Array.isArray(t))return!1;if(F9(e)&&F9(t)){let n=Object.create(null);for(let r in e){if(!M9(e[r],t[r]))return!1;n[r]=!0}for(let e in t)if(!(e in n)&&t[e]!==void 0)return!1;return!0}}}return!1}function N9(e){return e!=null}function P9(e){return e!==void 0}function F9(e){return I9(e)&&!L9(e)&&e!==null}function I9(e){return typeof e==`object`&&!!e}function L9(e){return Array.isArray(e)}function R9(e){return typeof e==`string`}function xCe(e){return typeof e==`function`}function z9(e){if(L9(e))return e.map(e=>z9(e));if(F9(e)){let t={};return Object.keys(e).forEach(n=>{t[n]=z9(e[n])}),t}return e}function B9(e,t){if(!I9(e))return z9(t);let n=z9(e);return I9(n)&&I9(t)&&Object.keys(t).forEach(r=>{F9(t[r])&&r in e?n[r]=B9(e[r],t[r]):Object.assign(n,{[r]:t[r]})}),n}function SCe(e,t){let n=e,r=t,i=t.split(`.`);t=``;do{t+=i.shift();let n=!i.length;if(N9(e)){if(F9(e)&&P9(e[t])&&(F9(e[t])||L9(e[t])||n)){e=e[t],t=``;continue}if(L9(e)){if(t===`length`&&n){e=e.length,t=``;continue}if(/^\d+$/.test(t)){let r=parseInt(t,10);if(P9(e[r])&&(F9(e[r])||L9(e[r])||n)){e=e[r],t=``;continue}}}}n?e=void 0:t+=`.`}while(i.length);return e===void 0&&F9(n)&&P9(n[r])?n[r]:e}function CCe(e,t,n){return B9(e,wCe(t,n))}function wCe(e,t){return e.split(`.`).reduceRight((e,t)=>({[t]:e}),t)}function TCe(e){return/^class[{\s]/.test(Function.prototype.toString.call(e))}function ECe(e,t){return TCe(t)?{provide:e,useClass:t}:{provide:e,useFactory:t}}function DCe(e={}){return OCe({...e,isRoot:!0})}function V9(e,t,n,r,i){if(t===void 0)return ECe(e,n);if(typeof t==`function`){if(TCe(t)){let e=t.name||`YourClass`;console.warn(`@ngx-translate/core: "${r}" received a bare class (${e}); auto-wrapping with ${i}(). For clarity, prefer ${r}: ${i}(${e}).`)}return ECe(e,t)}return t}function OCe(e){let t=[],n=V9(W9,e.loader,MCe,`loader`,`provideTranslateLoader`),r=V9(U9,e.compiler,jCe,`compiler`,`provideTranslateCompiler`),i=V9(G9,e.parser,NCe,`parser`,`provideTranslateParser`),a=V9(H9,e.missingTranslationHandler,ACe,`missingTranslationHandler`,`provideMissingTranslationHandler`);t.push(n,r,i,a),t.push(K9);let o={fallbackLang:e.fallbackLang??null,...e.fallbackLangs!==void 0&&{fallbackLangs:e.fallbackLangs},lang:e.lang,retry:e.retry,langs:e.langs,isRoot:e.isRoot};return t.push({provide:q9,useValue:o}),t.push({provide:Y9,useClass:Y9}),t}var kCe,H9,ACe,U9,jCe,W9,MCe,G9,NCe,K9,q9,J9,PCe,FCe,Y9,ICe;function X9(){return(X9=n((()=>{ye(),_ee(),eee(),it(),Ge(),yee(),gee(),vt(),Iz(),lt(),uee(),Rz(),ft(),zz(),cee(),lee(),yt(),st(),_t(),xt(),fee(),At(),Fe(),dee(),tee(),See(),kCe=class{state=E({});hasAny=j(()=>Object.keys(this.state()).length>0);isLoading(e){return this.state()[e]!==void 0}get(e){return this.state()[e]}set(e,t){this.state.update(n=>({...n,[e]:t}))}clear(e){this.state.update(t=>bCe(t,e))}clearIfOwner(e,t){this.state.update(n=>n[e]===t?bCe(n,e):n)}},H9=class{},ACe=class e{handle(e){return e.key}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},U9=class{},jCe=class e extends U9{compile(e,t){return e}compileTranslations(e,t){return e}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},W9=class{},MCe=class e extends W9{getTranslation(e){return ht({})}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},G9=class{},NCe=class e extends G9{templateMatcher=/{{\s?([^{}\s]*)\s?}}/g;interpolate(e,t,n){if(R9(e))return this.interpolateString(e,t,n);if(xCe(e))return this.interpolateFunction(e,t,n)}interpolateFunction(e,t,n){return e(t,n)}interpolateString(e,t,n){return t?e.replace(this.templateMatcher,(e,r)=>{let i=this.getInterpolationReplacement(t,r,n);return i===void 0?e:i}):e}getInterpolationReplacement(e,t,n){return this.formatValue(SCe(e,t),n)}formatValue(e,t){if(R9(e))return e;if(typeof e==`number`||typeof e==`boolean`)return e.toString();if(e===null)return`null`;if(L9(e))return e.join(`, `);if(I9(e))return typeof e.toString==`function`&&e.toString!==Object.prototype.toString?e.toString():JSON.stringify(e)}static ɵfac=(()=>{let t;return function(n){return(t||=Pe(e))(n||e)}})();static ɵprov=s({token:e,factory:e.ɵfac})},K9=class e{_translations=E({});translations=this._translations.asReadonly();_languages=E([]);languages=this._languages.asReadonly();_lastTranslationChange=E(null);lastTranslationChange=this._lastTranslationChange.asReadonly();_translationChange$=new Le;translationChange$=this._translationChange$.asObservable();constructor(){He(A).onDestroy(()=>{this._translationChange$.complete()})}getTranslations(e){return this.translations()[e]}setTranslations(e,t,n){Ee(()=>{this._translations.update(r=>({...r,[e]:n&&this.hasTranslationFor(e)?B9(r[e],t):t})),this.addLanguages([e]);let r={lang:e,translations:this.getTranslations(e)};this._lastTranslationChange.set(r),this._translationChange$.next(r)})}getLanguages(){return this.languages()}addLanguages(e){this._languages.update(t=>Array.from(new Set([...t,...e])))}removeLanguages(e){this._languages.update(t=>t.filter(t=>!e.includes(t)))}hasTranslationFor(e){return this.translations()[e]!==void 0}deleteTranslations(e){Ee(()=>{if(!this.hasTranslationFor(e))return;this._translations.update(t=>{let{[e]:n,...r}=t;return r});let t={lang:e,translations:{}};this._lastTranslationChange.set(t),this._translationChange$.next(t)})}getTranslationValue(e,t){return SCe(this.getTranslations(e),t)}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},q9=new Te(`TRANSLATE_CONFIG`),J9=e=>Tt(e)?e:ht(e),PCe=100,FCe=2**31-1,Y9=class e{loadingTranslations=new kCe;loadCancellation=new Map;languageRequestSequence=0;lastFallbackRequest=0;languageRequestIds=new WeakMap;deletedLanguageRequests=new Map;lastUseLanguage=null;retry;currentLoader=He(W9);compiler=He(U9);parser=He(G9);missingTranslationHandler=He(H9);store=He(K9);destroyRef=He(A);parent;get isRoot(){return this.parent===null}_onLangChange=new Le;_onFallbackLangChange=new Le;_currentLang=E(null);_fallbackLang=E(null);_additionalFallbackLangs=E([]);_fallbackLangs=j(()=>{let e=this._fallbackLang();return e===null?[]:[e,...this._additionalFallbackLangs()]});_onTranslationRefresh=null;_isLoading=j(()=>this.loadingTranslations.hasAny()||(this.parent?.isLoading()??!1));getRoot(){let e=this;for(;e.parent;)e=e.parent;return e}getParent(){return this.parent}getActiveRequestedLang(){return this.getRoot().lastUseLanguage}hasTranslationInChain(e){for(let t=this;t;t=t.parent)if(t.store.hasTranslationFor(e))return!0;return!1}chainTranslationChange$(){let e=[];for(let t=this;t;t=t.parent)e.push(t.store.translationChange$);return e.length===1?e[0]:Lz(...e)}get onTranslationChange(){return this.store.translationChange$}get onLangChange(){return this.isRoot?this._onLangChange.asObservable():this.parent?this.parent.onLangChange:ct}get onFallbackLangChange(){return this.isRoot?this._onFallbackLangChange.asObservable():this.parent?this.parent.onFallbackLangChange:ct}get onTranslationRefresh(){if(!this._onTranslationRefresh){let e=Lz(this.onTranslationChange.pipe(jt(e=>e.lang===this.getCurrentLang()||this.getFallbackLangs().includes(e.lang))),this.onLangChange,this.onFallbackLangChange).pipe(We(()=>void 0));this._onTranslationRefresh=this.isRoot?e:this.parent?Lz(e,this.parent.onTranslationRefresh):e}return this._onTranslationRefresh}constructor(){let t={isRoot:!0,fallbackLang:null,...He(q9,{optional:!0})};if(this.parent=t.isRoot?null:He(e,{optional:!0,skipSelf:!0}),typeof t.retry==`object`){let{count:e,delay:n,shouldRetry:r}=t.retry;this.retry={count:e,delay:typeof n==`function`?n.bind(t.retry):n,shouldRetry:r?.bind(t.retry)}}else this.retry=Math.max(0,t.retry??0);let n=He(A);if(this.isRoot)t.langs?.length&&this.addLangs(t.langs),t.lang&&this.use(t.lang),t.fallbackLangs===void 0?t.fallbackLang&&this.setFallbackLang(t.fallbackLang):this.setFallbackLangs(t.fallbackLangs);else{let e=this.getCurrentLang();e&&this.loadOrExtendLanguage(e)?.pipe(Dt(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e}". Cause:`,t)}});for(let t of this.getFallbackLangs())t&&t!==e&&this.loadOrExtendLanguage(t)?.pipe(Dt(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}this.onLangChange.pipe(Dt(n)).subscribe(e=>{!this.isRoot&&this.shouldLoadLanguage(e)&&this.loadOrExtendLanguage(e.lang)?.pipe(Dt(n)).subscribe({error:t=>{console.warn(`@ngx-translate/core: child failed to load "${e.lang}". Cause:`,t)}})}),this.onFallbackLangChange.pipe(Dt(n)).subscribe(e=>{if(!this.isRoot)for(let t of e.langs??[e.lang])this.shouldLoadLanguage(e,t)&&this.loadOrExtendLanguage(t)?.pipe(Dt(n)).subscribe({error:e=>{console.warn(`@ngx-translate/core: child failed to load "${t}". Cause:`,e)}})}),n.onDestroy(()=>{this._onLangChange.complete(),this._onFallbackLangChange.complete()})}shouldLoadLanguage(e,t=e.lang){let n=this.deletedLanguageRequests.get(t),r=this.getRoot().languageRequestIds.get(e);return n===void 0||r===void 0||r>n}setFallbackLang(e){return this.isRoot?this.setFallbackLangs([e]).pipe(We(e=>e[0])):this.parent.setFallbackLang(e)}setFallbackLangs(e){return this.isRoot?Ee(()=>{let t=[...new Set(e)],n=++this.languageRequestSequence;this.lastFallbackRequest=n,this._fallbackLang()===null&&this.setFallbackLanguageState(t);let r=t.length?dt(t.map(e=>(this.loadOrExtendLanguage(e)??ht(this.store.getTranslations(e))).pipe(ut(1)))):ht([]);return r.pipe(Dt(this.destroyRef)).subscribe({next:e=>{if(this.lastFallbackRequest!==n||t.some(e=>(this.deletedLanguageRequests.get(e)??-1)>=n))return;this.setFallbackLanguageState(t);let r={lang:t[0]??``,translations:e[0]??{},...t.length!==1&&{langs:this.getFallbackLangs()}};this.languageRequestIds.set(r,n),this._onFallbackLangChange.next(r)},error:e=>{console.warn(`@ngx-translate/core: failed to load fallback "${t.join(`, `)}". Cause:`,e)}}),r}):this.parent.setFallbackLangs(e)}setFallbackLanguageState(e){this._additionalFallbackLangs.set(e.slice(1)),this._fallbackLang.set(e[0]??null)}get isLoading(){return this._isLoading}use(e){return this.isRoot?Ee(()=>{let t=++this.languageRequestSequence,n=this._currentLang(),r=this.lastUseLanguage;this.lastUseLanguage=e,this._currentLang()||this._currentLang.set(e);let i=this.loadOrExtendLanguage(e);return Tt(i)?(i.pipe(ut(1)).subscribe({next:()=>{this.changeLang(e,t)},error:t=>{this.lastUseLanguage!==e||typeof this.retry!=`number`&&this.store.hasTranslationFor(e)||(this._currentLang.set(n),this.lastUseLanguage=r),console.warn(`@ngx-translate/core: failed to load "${e}". currentLang was NOT changed; remains "${n??`null`}". Cause:`,t)}}),i):(this.changeLang(e,t),ht(this.store.getTranslations(e)))}):this.parent.use(e)}loadOrExtendLanguage(e){return this.store.hasTranslationFor(e)?ht(this.store.getTranslations(e)):this.loadAndCompileTranslations(e)}getTranslations(e){return this.store.getTranslations(e)}changeLang(e,t){if(e!==this.lastUseLanguage)return;this._currentLang.set(e);let n={lang:e,translations:this.store.getTranslations(e)};t!==void 0&&this.languageRequestIds.set(n,t),this._onLangChange.next(n)}getCurrentLang(){return this.isRoot?this._currentLang():this.parent?.getCurrentLang()??null}loadAndCompileTranslations(e){let t=this.loadingTranslations.get(e);if(t)return t;let n=typeof this.retry==`number`?{count:this.retry}:this.retry,r=this.loadCancellation.get(e);r||(r=new ot(1),this.loadCancellation.set(e,r));let i=Ot(()=>{let t=this.currentLoader.getTranslation(e);return n.count>0?t.pipe(Tde({count:n.count,delay:(e,t)=>{if(n.shouldRetry&&!n.shouldRetry(e))return wt(()=>e);let r=n.delay??PCe,i=typeof r==`function`?r(e,t):r;if(!Number.isFinite(i)||i<0||i>FCe)throw RangeError(`@ngx-translate/core: retry delay must be a finite number between 0 and 2147483647 milliseconds.`);return at(i)}})):t}),a=!1,o=i.pipe(We(t=>this.compiler.compileTranslations(t,e)),jt(()=>this.loadCancellation.get(e)===r),bt({next:t=>{this.store.setTranslations(e,t,!1),this.loadingTranslations.clearIfOwner(e,s)},error:()=>{typeof this.retry!=`number`&&this.loadingTranslations.clearIfOwner(e,s)}}),Ct(t=>this.loadCancellation.get(e)===r?wt(()=>t):ct),bt({complete:()=>{a=this.loadCancellation.get(e)===r}}),bee(r),St(()=>this.loadingTranslations.clearIfOwner(e,s)),aee({connector:()=>new ot(1),resetOnError:typeof this.retry==`number`,resetOnComplete:!1,resetOnRefCountZero:!0})),s=Ot(()=>a||this.loadCancellation.get(e)===r?o:ct);return this.loadingTranslations.set(e,s),s.pipe(Dt(this.destroyRef)).subscribe({error:()=>{}}),s}setTranslation(e,t,n=!1){let r=this.compiler.compileTranslations(t,e);this.store.setTranslations(e,r,n)}setCompiledTranslation(e,t,n=!1){this.store.setTranslations(e,t,n)}getLangs(){return this.store.getLanguages()}addLangs(e){this.store.addLanguages(e)}getParsedResultForKey(e,t,n){let r,i=this.getTextToInterpolate(e,n,e=>{r=e});if(N9(i)){let n=r?.translation===i?r.context:{key:e};return this.runInterpolation(i,t,n)}let a=this.getMissingTranslationHandler().handle({key:e,translateService:this,...t!==void 0&&{interpolateParams:t}});return a===void 0?e:a}getMissingTranslationHandler(){return this.missingTranslationHandler}getFallbackLang(){return this.isRoot?this._fallbackLang():this.parent?.getFallbackLang()??null}getFallbackLangs(){return this.fallbackLangs()}getTextToInterpolate(e,t,n){if(t){let r=this.store.getTranslationValue(t,e);return r===void 0?this.parent?.getTextToInterpolate(e,t,n):(n?.({translation:r,context:{key:e,lang:t}}),r)}let r=this.getCurrentLang(),i,a;r&&(i=this.store.getTranslationValue(r,e),a=r);for(let t of this.getFallbackLangs()){if(N9(i))break;t!==r&&(i=this.store.getTranslationValue(t,e),a=t)}return i===void 0?this.parent?.getTextToInterpolate(e,t,n):(n?.({translation:i,context:a===void 0?{key:e}:{key:e,lang:a}}),i)}runInterpolation(e,t,n){if(N9(e))return L9(e)?this.runInterpolationOnArray(e,t,n):F9(e)?this.runInterpolationOnDict(e,t,n):this.parser.interpolate(e,t,n)}runInterpolationOnArray(e,t,n){return e.map(e=>this.runInterpolation(e,t,n))}runInterpolationOnDict(e,t,n){let r={};for(let i in e){let a=this.runInterpolation(e[i],t,n);a!==void 0&&(r[i]=a)}return r}getParsedResult(e,t,n){return e instanceof Array?this.getParsedResultForArray(e,t,n):this.getParsedResultForKey(e,t,n)}getParsedResultForArray(e,t,n){let r={},i=!1;for(let a of e)r[a]=this.getParsedResultForKey(a,t,n),i||=Tt(r[a]);if(!i)return r;let a=e.map(e=>J9(r[e]));return dt(a).pipe(We(t=>{let n={};return t.forEach((t,r)=>{n[e[r]]=t}),n}))}get(e,t,n){if(!N9(e)||!e.length)return ht(``);let r=n??this.getActiveRequestedLang()??this.getCurrentLang(),i=new Set,a=()=>{let o=new Set([...r?[r]:[],...n?[]:this.getFallbackLangs()]),s=[];for(let e=this;e;e=e.parent)for(let t of o){let n=e.loadingTranslations.get(t);n&&!i.has(n)&&(i.add(n),s.push(n.pipe(ut(1),mee(void 0))))}return s.length?dt(s).pipe(gt(a)):J9(this.getParsedResult(e,t,n))};return a()}getAsync(e,t,n){return wde(this.get(e,t,n))}getStreamOnTranslationChange(e,t,n){if(!N9(e)||!e.length)throw Error(`Parameter "key" is required and cannot be empty`);return kt(Ot(()=>this.get(e,t,n)),this.onTranslationChange.pipe(Et(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}stream(e,t,n){if(!N9(e)||!e.length)throw Error(`Parameter "key" required`);let r=n?Lz(this.onLangChange,this.chainTranslationChange$().pipe(jt(e=>e.lang===n))):this.onLangChange;return kt(Ot(()=>this.get(e,t,n)),r.pipe(Et(()=>{let r=this.getParsedResult(e,t,n);return J9(r)})))}instant(e,t,n){if(!N9(e)||e.length===0)return``;n&&!this.hasTranslationInChain(n)&&this.warnUnloadedInstantLang(n);let r=this.getParsedResult(e,t,n);return Tt(r)?this.keyToObject(e):r}warnedUnloadedInstantLangs=new Set;warnUnloadedInstantLang(e){let t=this.getRoot();t===this?this.warnedUnloadedInstantLangs.has(e)||Ee(()=>{this.warnedUnloadedInstantLangs.add(e),console.warn(`@ngx-translate/core: instant() called with lang="${e}" but no translations are loaded for that language. Returning the key as fallback. Load with use("${e}") or setTranslation("${e}", ...) first.`)}):t.warnUnloadedInstantLang(e)}hasTranslationKey(e,t){return!N9(e)||e.length===0?!1:N9(this.getTextToInterpolate(e,t))}translate(e,t,n){return j(()=>{let r=typeof e==`function`?e():e,i=typeof t==`function`?t():t,a=typeof n==`function`?n():n;return this.instant(r,i,a)})}keyToObject(e){return Array.isArray(e)?e.reduce((e,t)=>(e[t]=t,e),{}):e}set(e,t,n){Ee(()=>{let r=n??this.getCurrentLang();this.store.setTranslations(r,CCe(this.store.getTranslations(r),e,R9(t)?this.compiler.compile(t,r):this.compiler.compileTranslations(t,r)),!1)})}reloadLang(e){return Ee(()=>(this.resetLang(e),this.loadAndCompileTranslations(e)))}resetLang(e){this.loadingTranslations.clear(e),this.store.deleteTranslations(e)}deleteLanguage(e){Ee(()=>{this.deletedLanguageRequests.set(e,this.getRoot().languageRequestSequence);let t=this.loadCancellation.get(e);this.loadCancellation.delete(e),this.loadingTranslations.clear(e),this.store.removeLanguages([e]),this.store.deleteTranslations(e),t?.next(),t?.complete()})}static getBrowserLang(){if(typeof window>`u`||!window.navigator)return;let e=this.getBrowserCultureLang();return e?e.split(/[-_]/)[0]:void 0}static getBrowserCultureLang(){if(typeof window<`u`&&window.navigator!==void 0)return window.navigator.languages?window.navigator.languages[0]:window.navigator.language||window.navigator.browserLanguage||window.navigator.userLanguage}getBrowserLang(){return e.getBrowserLang()}getBrowserCultureLang(){return e.getBrowserCultureLang()}get currentLang(){return this.isRoot?this._currentLang.asReadonly():this.parent.currentLang}get fallbackLang(){return this.isRoot?this._fallbackLang.asReadonly():this.parent.fallbackLang}get fallbackLangs(){return this.isRoot?this._fallbackLangs:this.parent.fallbackLangs}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})},ICe=class e{translateService=He(Y9);cachedSignal=null;lastKey=null;lastParams;transform(e,...t){if(!e||!e.length)return e;let n=this.parseArgs(t);return e===this.lastKey&&M9(n,this.lastParams)||(this.cachedSignal=this.translateService.translate(e,n),this.lastKey=e,this.lastParams=n),this.cachedSignal()}parseArgs(e){if(N9(e[0])&&e.length){if(R9(e[0])&&e[0].length){let t=e[0].replace(/(')?([a-zA-Z0-9_]+)(')?(\s)?:/g,`"$2":`).replace(/:(\s)?(')(.*?)(')/g,`:"$3"`);try{return JSON.parse(t)}catch(t){throw SyntaxError(`Wrong parameter in TranslatePipe. Expected a valid Object, received: ${e[0]}`,{cause:t})}}if(F9(e[0]))return e[0]}}static ɵfac=function(t){return new(t||e)};static ɵpipe=x({name:`translate`,type:e,pure:!1});static ɵprov=s({token:e,factory:e.ɵfac})}})))()}function LCe(e){return Object.fromEntries(Object.entries(e).flatMap(([e,t])=>typeof t==`object`&&t&&!Array.isArray(t)&&Object.keys(t).length?Object.entries(LCe(t)).map(([t,n])=>[`${e}.${t}`,n]):[[e,t]]))}function RCe(e={}){if(`resources`in e&&e.resources)return zCe(e);let t=e;return zCe({enforceLoading:t.enforceLoading??!1,useHttpBackend:t.useHttpBackend??!1,failOnError:t.failOnError??!1,flatten:t.flatten??!1,onLoadError:t.onLoadError,resources:[{prefix:t.prefix??`/assets/i18n/`,suffix:t.suffix??`.json`}]})}function zCe(e={}){return[{provide:Z9,useValue:{resources:[`/assets/i18n/`],...e}},{provide:W9,useClass:VCe}]}var BCe,Z9,VCe;function HCe(){return(HCe=n((()=>{A4(),ye(),X9(),_t(),gee(),lt(),Fe(),ft(),yt(),BCe=/^\.{1,2}$/,Z9=new Te(`TRANSLATE_HTTP_LOADER_CONFIG`),VCe=class e{http;config;constructor(){this.config={resources:[],enforceLoading:!1,useHttpBackend:!1,...He(Z9)},this.http=this.config.useHttpBackend?new k4(He(E4)):He(k4)}getTranslation(e){let t=this.config.enforceLoading?`?enforceLoading=${Date.now()}`:``,n=this.config.resources.map(n=>{let r;return Ot(()=>{let i=encodeURIComponent(e);return r=`${typeof n==`string`?`${n}${i}.json`:`${n.prefix}${i}${n.suffix??`.json`}`}${t}`,BCe.test(e)?wt(()=>Error(`"${e}" is a path segment, not a language`)):this.http.get(r)}).pipe(Ct(t=>(this.reportError({lang:e,resource:n,url:r,error:t}),this.config.failOnError?wt(()=>t):ht({}))))});return n.length===0?ht({}):dt(n).pipe(We(e=>e.reduce((e,t)=>this.config.flatten?{...e,...LCe(t??{})}:B9(e,t),{})))}reportError(e){if(this.config.onLoadError)try{this.config.onLoadError(e)}catch(e){console.warn(`@ngx-translate/http-loader: onLoadError callback failed:`,e)}else this.config.failOnError||console.warn(`@ngx-translate/http-loader: error loading translation for ${e.lang}:`,e.error)}static ɵfac=function(t){return new(t||e)};static ɵprov=s({token:e,factory:e.ɵfac})}})))()}var Q9;function UCe(){return(UCe=n((()=>{g(),ye(),X9(),Q9=class{translate=He(Y9);constructor(){window.addEventListener(`language-changed`,e=>{let t=e.detail.lang;this.translate.use(t)})}static ctorParameters=()=>[]},Q9=rt([tt()],Q9)})))()}var WCe=r({default:()=>GCe}),$9,GCe;function KCe(){return(KCe=n((()=>{VSe(),k9(),JSe(),sCe(),yCe(),X9(),HCe(),A4(),UCe(),ye(),qSe(vCe),$9=`pl`,GCe={parameters:{controls:{matchers:{color:/(background|color)$/i,date:/Date$/i}},docs:{codePanel:!0},backgrounds:{options:{gray0:{name:`gray-0`,value:`#ffffff`},gray10:{name:`gray-10`,value:`#e6e6e6`},gray20:{name:`gray-20`,value:`#cccccc`},gray30:{name:`gray-30`,value:`#b3b3b3`},gray46:{name:`gray-46`,value:`#898989`},gray60:{name:`gray-60`,value:`#666666`},gray75:{name:`gray-75`,value:`#3f3f3f`},gray80:{name:`gray-80`,value:`#333333`},gray84:{name:`gray-84`,value:`#292929`},gray87:{name:`gray-87`,value:`#212121`},gray92:{name:`gray-92`,value:`#141414`},gray100:{name:`gray-100`,value:`#000000`}}}},globalTypes:{locale:{description:`App language`,defaultValue:`pl`,toolbar:{icon:`globe`,items:[{value:`en`,right:`🇬🇧`,title:`English`},{value:`pl`,right:`🇵🇱`,title:`Polski`}]}}},decorators:[iCe({themes:{light:`light-theme`,dark:`dark-theme`},defaultTheme:`dark`}),HSe({providers:[pbe(),DCe({loader:RCe({prefix:`./assets/i18n/`,suffix:`.json`}),fallbackLang:`pl`,lang:`pl`}),Q9,f(()=>{He(Q9);let e=new CustomEvent(`language-changed`,{detail:{lang:$9}});window.dispatchEvent(e)})]}),(e,t)=>{$9=t.globals.locale;let n=new CustomEvent(`language-changed`,{detail:{lang:$9}});return window.dispatchEvent(n),e()}]}})))()}function qCe(e=[]){let t=[e[0]??Ede,e[1]??lxe,e[2]??gxe,e[3]??Wxe,e[4]??Yxe,e[5]??tSe,e[6]??WCe];return JCe(t)}var JCe;function YCe(){return(YCe=n((()=>{Bz(),uxe(),_xe(),Gxe(),Xxe(),nSe(),KCe(),{composeConfigs:JCe}=__STORYBOOK_MODULE_PREVIEW_API__})))()}var XCe;function ZCe(){return(ZCe=n((()=>{kz(),Nz(),Fz(),YCe(),Ap(),{PreviewWeb:XCe}=__STORYBOOK_MODULE_PREVIEW_API__,window.__STORYBOOK_PREVIEW__=window.__STORYBOOK_PREVIEW__||new XCe(Cde,qCe),window.__STORYBOOK_STORY_STORE__=window.__STORYBOOK_STORY_STORE__||window.__STORYBOOK_PREVIEW__.storyStore})))()}function QCe(){return(QCe=n((()=>{Bt(),ZCe()})))()}export{y2 as _,k9 as a,Lz as b,GSe as c,P4 as d,k4 as f,L2 as g,rbe as h,X9 as i,M4 as l,I2 as m,ICe as n,HSe as o,A4 as p,Y9 as r,O9 as s,QCe as t,j4 as u,w2 as v,Rz as y};

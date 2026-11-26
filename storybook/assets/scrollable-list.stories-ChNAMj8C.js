@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{B as t,Gr as n,N as r,Qn as i,_ as a,d as o,g as s,r as c,w as l,zr as u}from"./core-CXH6MCZn.js";import{c as d,n as f}from"./common-BoAak_CD.js";import{a as p,c as m,i as h,n as g}from"./iframe-kWnt1dXg.js";import{n as _,t as v}from"./flat-button-B1UCJ9K5.js";var y;function b(){return(b=e((()=>{y=`@if (hasPreviousPage()) { @let previousPages = previousPageNumbers();
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{B as t,Gr as n,N as r,Qn as i,_ as a,d as o,g as s,r as c,w as l,zr as u}from"./core-CXH6MCZn.js";import{c as d,n as f}from"./common-BoAak_CD.js";import{a as p,c as m,i as h,n as g}from"./iframe-DU-FXvTV.js";import{n as _,t as v}from"./flat-button-B1UCJ9K5.js";var y;function b(){return(b=e((()=>{y=`@if (hasPreviousPage()) { @let previousPages = previousPageNumbers();
 <ids-flat-button class="page-button" (clicked)="goToPreviousPage()">
     {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
 </ids-flat-button>
