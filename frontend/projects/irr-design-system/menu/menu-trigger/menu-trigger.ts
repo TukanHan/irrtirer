@@ -2,10 +2,14 @@ import { afterNextRender, afterRenderEffect, DestroyRef, Directive, ElementRef, 
 import { IdentityCounter, IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
 import { IdsMenu } from '../menu';
 
+/**
+ * Opens and closes an `ids-menu` when its host is clicked. The host must be a library button, e.g. `ids-flat-button`.
+ */
 @Directive({
     selector: '[idsMenuTriggerFor]',
 })
 export class IdsMenuTrigger {
+    /** The menu to open, usually a template reference: `[idsMenuTriggerFor]="menu"` with `<ids-menu #menu>`. */
     public readonly idsMenuTriggerFor = input.required<IdsMenu>();
 
     private readonly host = inject(ElementRef<HTMLElement>);

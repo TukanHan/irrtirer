@@ -6,10 +6,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `toolbar` (app): `mat-radio-group` inside `ids-menu` breaks `role="menu"` (only menu items allowed, arrow keys find nothing) - deferred until the library has its own radio; then `menuitemradio` items in `ids-menu` (preferred) or a separate popover
 
-## accessibility/apg-pattern
-
-- [ ] Class JSDoc does not link the APG pattern: `menu` (Menu Button)
-
 ## states/state-model
 
 - [ ] `flat-link`: `current` is lost under `:focus-visible` (focus overlay 0.1 overrides current 0.15) and `:active` (same 0.15 + bold as current) - see its `States` story
@@ -20,11 +16,11 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## documentation/class-doc
 
-- [ ] No class JSDoc: `flat-button`, `flat-link`, `framed-button`, `error`, `form-field`, `prefix`, `suffix`, `menu`, `menu-item`, `menu-trigger`, `side-nav`, `side-nav-item` (only the public ones need it)
+- [ ] No class JSDoc: `flat-button`, `flat-link`, `framed-button`, `error`, `form-field`, `prefix`, `suffix`, `side-nav`, `side-nav-item` (only the public ones need it)
 
 ## documentation/member-doc
 
-- [ ] Inputs, models and outputs without JSDoc in every component except `text-input`, `number-input`, `tooltip`
+- [ ] Inputs, models and outputs without JSDoc in every component except `text-input`, `number-input`, `tooltip`, `menu`
 
 ## storybook/story-per-family
 
@@ -32,7 +28,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## storybook/state-matrix
 
-- [ ] `States` story missing: `side-nav` (current)
+- [ ] `States` story missing: `side-nav` (current), `menu` (`menu-item`: enabled, disabled)
 
 ## styles/token-layers
 
@@ -76,8 +72,8 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Storybook
 
-- [ ] Stories other than `text-input`, `number-input`, `tooltip` do not follow the updated `storybook-stories` skill: lowercase categories, `argTypes` only for story-only args and overrides, outputs bound with `withOutput`
-- [ ] Compodoc adds members the story does not declare to the args table (e.g. `nativeControl` under "Properties" in `framed-button`) - find a way to show only the curated `argTypes`
+- [ ] Stories other than `text-input`, `number-input`, `tooltip`, `menu` do not follow the updated `storybook-stories` skill: lowercase categories, `argTypes` only for story-only args and overrides, outputs bound with `withOutput`
+- [ ] Public members meant only for other library classes show in the args table (e.g. `nativeControl` in `framed-button`, `flat-button`) - mark them `/** @internal */` (Compodoc runs with `--disableInternal`), as done in `menu`
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)

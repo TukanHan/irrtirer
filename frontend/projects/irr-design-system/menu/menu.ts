@@ -1,9 +1,13 @@
-import { Component, contentChildren, ElementRef, inject, input, OutputRefSubscription, signal } from '@angular/core';
+import { Component, contentChildren, ElementRef, inject, input, OutputRefSubscription, Signal, signal } from '@angular/core';
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
 import { IdentityCounter, OVERLAY_SPACING } from 'irr-design-system/core';
 import { IdsMenuItem } from './menu-item/menu-item';
 
+/**
+ * List of actions in a floating panel, opened by a control with `[idsMenuTriggerFor]`.
+ * Implements the [APG Menu Button pattern](https://www.w3.org/WAI/ARIA/apg/patterns/menu-button/).
+ */
 @Component({
     selector: 'ids-menu',
     imports: [CdkConnectedOverlay],
@@ -34,8 +38,10 @@ import { IdsMenuItem } from './menu-item/menu-item';
     styleUrls: ['./menu.css', '../styles/shared/ids-panel.css'],
 })
 export class IdsMenu {
+    /** Classes for the floating panel, which is rendered outside the `ids-menu` element. */
     public readonly panelClass = input<string>();
 
+    /** @internal */
     public readonly panelId = `ids-menu-${inject(IdentityCounter).getNextIdNumber()}`;
 
     protected readonly viewportMargin = OVERLAY_SPACING;
@@ -46,7 +52,8 @@ export class IdsMenu {
 
     private readonly openState = signal<boolean>(false);
 
-    public readonly isOpen = this.openState.asReadonly();
+    /** Whether the panel is shown. */
+    public readonly isOpen: Signal<boolean> = this.openState.asReadonly();
 
     protected readonly origin = signal<HTMLElement>(this.host.nativeElement);
 
@@ -61,7 +68,10 @@ export class IdsMenu {
     private keyManager: ListKeyManager<HTMLButtonElement> | undefined;
     private itemClicks: OutputRefSubscription[] = [];
 
-    /** Opens the menu below `origin`, or closes it. `triggerControl` names the menu and gets focus back on close. */
+    /**
+     * Opens the menu below `origin`, or closes it. `triggerControl` names the menu and gets focus back on close.
+     * @internal
+     */
     public toggle(origin: HTMLElement, triggerControl: HTMLElement): void {
         this.origin.set(origin);
         this.triggerControl = triggerControl;
@@ -69,6 +79,7 @@ export class IdsMenu {
         this.openState.update((isOpen) => !isOpen);
     }
 
+    /** Closes the menu without moving focus. */
     public close(): void {
         this.openState.set(false);
     }
