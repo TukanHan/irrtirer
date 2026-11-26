@@ -28,7 +28,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## storybook/state-matrix
 
-- [ ] `States` story missing: `side-nav` (current), `menu` (`menu-item`: enabled, disabled)
+- [ ] `States` story missing: `side-nav` (current)
 
 ## styles/token-layers
 

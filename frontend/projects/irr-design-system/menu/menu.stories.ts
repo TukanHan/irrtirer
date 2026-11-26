@@ -1,6 +1,7 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { action } from 'storybook/actions';
 import { IdsFramedButton } from 'irr-design-system/action';
+import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsMenuTrigger } from './menu-trigger/menu-trigger';
 import { IdsMenu } from './menu';
@@ -43,5 +44,32 @@ export const Default: Story = {
                 )
                 .build(),
         ].join('\n'),
+    }),
+};
+
+export const States: Story = {
+    decorators: [moduleMetadata({ imports: [StateMatrix] })],
+    parameters: {
+        controls: { disable: true },
+        pseudo: pseudoStates('button'),
+    },
+    render: () => ({
+        props: {
+            sections: [
+                { name: 'enabled', disabled: false },
+                { name: 'disabled', disabled: true },
+            ],
+            states: ['rest', 'hover', 'focus-visible', 'active'],
+        },
+        // `role="menu"` gives each `menuitem` its required parent; the real panel lives in an overlay the matrix cannot hold.
+        template: `
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <div role="menu" [attr.aria-label]="section.name + ' ' + state">
+                        <ids-menu-item [disabled]="section.disabled">{{ state }}</ids-menu-item>
+                    </div>
+                </ng-template>
+            </sb-state-matrix>
+        `,
     }),
 };
