@@ -3,13 +3,11 @@ import { IdsFlatButton } from 'irr-design-system/action';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsTooltip, type IdsTooltipPosition } from './tooltip';
 
-type TooltipPlaygroundArgs = {
-    idsTooltip: string;
-    idsTooltipPosition: IdsTooltipPosition;
+type TooltipStoryArgs = IdsTooltip & {
     buttonPosition: 'left' | 'center' | 'right';
 };
 
-const meta: Meta<TooltipPlaygroundArgs> = {
+const meta: Meta<TooltipStoryArgs> = {
     title: 'Design System/Tooltip',
     component: IdsTooltip,
     tags: ['autodocs'],
@@ -34,33 +32,26 @@ const meta: Meta<TooltipPlaygroundArgs> = {
         docs: { source: { excludeDecorators: true } },
     },
     argTypes: {
-        idsTooltip: {
-            control: 'text',
-            description: 'Treść wyświetlana w panelu tooltipa.',
-            table: { category: 'Inputs' },
+        buttonPosition: {
+            description: 'Moves the host to a viewport edge to show where `auto` places the tooltip.',
+            control: 'inline-radio',
+            options: ['left', 'center', 'right'],
+            table: { category: 'playground' },
         },
         idsTooltipPosition: {
             control: 'inline-radio',
-            options: ['auto', 'top', 'right', 'bottom', 'left'],
-            description: 'Preferowana pozycja tooltipa. W trybie auto pozycja jest dobrana względem krawędzi viewportu.',
-            table: { category: 'Inputs' },
-        },
-        buttonPosition: {
-            control: 'inline-radio',
-            options: ['left', 'center', 'right'],
-            description: 'Położenie przycisku, które pozwala przetestować zachowanie trybu auto.',
-            table: { category: 'Playground' },
+            options: ['auto', 'top', 'right', 'bottom', 'left'] satisfies IdsTooltipPosition[],
         },
     },
 };
 
 export default meta;
-type Story = StoryObj<TooltipPlaygroundArgs>;
+type Story = StoryObj<TooltipStoryArgs>;
 
 export const Default: Story = {
     args: {
         buttonPosition: 'center',
-        idsTooltip: 'Przykładowy tooltip',
+        idsTooltip: 'Lorem ipsum dolor',
         idsTooltipPosition: 'auto',
     },
     render: (args) => ({

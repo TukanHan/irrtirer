@@ -6,7 +6,10 @@ import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
 
 export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
 
-/** Shows a text hint on hover and focus. */
+/**
+ * Shows a text hint in a floating panel while the host is hovered or focused.
+ * Implements the [APG Tooltip pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/).
+ */
 @Directive({
     selector: '[idsTooltip]',
     host: {
@@ -19,7 +22,10 @@ export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
     },
 })
 export class IdsTooltip {
+    /** Text of the hint. The tooltip does not open while it is blank. */
     public readonly idsTooltip = input.required<string>();
+
+    /** Preferred side of the host. `auto` picks a side away from the nearest viewport edge. Moves to another side when the panel does not fit. */
     public readonly idsTooltipPosition = input<IdsTooltipPosition>('auto');
 
     private readonly host = inject(ElementRef<HTMLElement>);
