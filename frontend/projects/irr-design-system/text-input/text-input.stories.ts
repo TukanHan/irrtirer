@@ -5,6 +5,7 @@ import { disabled, form, FormField, required } from '@angular/forms/signals';
 import { createApplication } from '@angular/platform-browser';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsTextInput } from './text-input';
 
@@ -86,4 +87,35 @@ export const Default: Story = {
                 .build(),
         };
     },
+};
+
+export const States: Story = {
+    decorators: [moduleMetadata({ imports: [StateMatrix] })],
+    parameters: {
+        controls: { disable: true },
+        pseudo: pseudoStates('.input'),
+    },
+    render: () => ({
+        props: {
+            sections: [
+                { name: 'valid', invalid: false, disabled: false },
+                { name: 'invalid', invalid: true, disabled: false },
+                { name: 'disabled', invalid: false, disabled: true },
+            ],
+            states: ['rest', 'hover', 'focus'],
+        },
+        template: `
+            <sb-state-matrix [sections]="sections" [states]="states">
+                <ng-template let-section let-state="state">
+                    <ids-text-input
+                        [label]="state"
+                        value="Lorem ipsum"
+                        [invalid]="section.invalid"
+                        [touched]="section.invalid"
+                        [disabled]="section.disabled"
+                    />
+                </ng-template>
+            </sb-state-matrix>
+        `,
+    }),
 };

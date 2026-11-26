@@ -256,9 +256,9 @@ The story title mirrors the entry point: `Design System/<Entry point>/<Component
 
 ### state-matrix · SHOULD
 
-A component with persistent states (`states/state-model`) has an extra `States` story showing each persistent state under each interaction state.
+A component with persistent states or variants has an extra `States` story showing each of them under each interaction state (`states/state-model`). The layout is up to the component.
 
-**Check:** stories of components with persistent states.
+**Check:** stories of components with persistent states or variants; how to build one: the `storybook-stories` skill.
 
 ## Styles
 

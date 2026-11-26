@@ -4,6 +4,7 @@ import { Component, inject } from '@angular/core';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { type Meta, type StoryObj, applicationConfig, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { filter, map } from 'rxjs';
+import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatLink } from './flat-link';
 
@@ -100,5 +101,33 @@ export const Default: Story = {
                 args.layout !== 'Icon' && args.text,
             )
             .build(),
+    }),
+};
+
+export const States: Story = {
+    decorators: [moduleMetadata({ imports: [StateMatrix] })],
+    parameters: {
+        controls: { disable: true },
+        pseudo: pseudoStates('a'),
+    },
+    render: () => ({
+        props: {
+            // The story runs at `/`, so a link to `/` is the current page.
+            sections: [
+                { name: 'default', link: '/lorem' },
+                { name: 'current', link: '/' },
+            ],
+            states: ['rest', 'hover', 'focus-visible', 'active'],
+        },
+        template: `
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <ids-flat-link [link]="section.link">
+                        <mat-icon class="material-symbols-outlined">home</mat-icon>
+                        {{ state }}
+                    </ids-flat-link>
+                </ng-template>
+            </sb-state-matrix>
+        `,
     }),
 };

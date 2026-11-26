@@ -1,4 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/angular';
+import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsFramedButton } from './framed-button';
 
@@ -75,4 +76,25 @@ export const Default: Story = {
             ],
         };
     },
+};
+
+export const States: Story = {
+    decorators: [moduleMetadata({ imports: [StateMatrix] })],
+    parameters: {
+        controls: { disable: true },
+        pseudo: pseudoStates('button'),
+    },
+    render: () => ({
+        props: {
+            sections: [{ name: 'neutral' }, { name: 'accent' }, { name: 'danger' }],
+            states: ['rest', 'hover', 'focus-visible', 'active', 'disabled'],
+        },
+        template: `
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <ids-framed-button [variant]="section.name" [disabled]="state === 'disabled'">{{ state }}</ids-framed-button>
+                </ng-template>
+            </sb-state-matrix>
+        `,
+    }),
 };

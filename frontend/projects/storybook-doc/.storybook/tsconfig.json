@@ -1,6 +1,7 @@
 {
     "extends": "../../../tsconfig.json",
     "compilerOptions": {
+        "rootDir": "../..",
         "resolveJsonModule": true,
         // preview.ts imports the app's global styles.scss, which has no type declarations.
         "noUncheckedSideEffectImports": false

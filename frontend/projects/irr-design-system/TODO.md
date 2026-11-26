@@ -6,6 +6,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `toolbar` (app): `mat-radio-group` inside `ids-menu` breaks `role="menu"` (only menu items allowed, arrow keys find nothing) - deferred until the library has its own radio; then `menuitemradio` items in `ids-menu` (preferred) or a separate popover
 
+## states/state-model
+
+- [ ] `flat-link`: `current` is lost under `:focus-visible` (focus overlay 0.1 overrides current 0.15) and `:active` (same 0.15 + bold as current) - see its `States` story
+
 ## testing
 
 - [ ] `action/flat-link/flat-link.spec.ts` does not follow the `unit-tests` skill (raw `TestBed`, `detectChanges()`, queries by tag)
@@ -16,7 +20,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## storybook/state-matrix
 
-- [ ] `States` story missing: `text-input`, `number-input` (invalid), `flat-link`, `side-nav` (current)
+- [ ] `States` story missing: `side-nav` (current)
 
 ## styles/token-layers
 
@@ -87,7 +91,3 @@ Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point e
 ## Tooling idea: audit skill
 
 - [ ] Consider `.claude/skills/ids-audit/SKILL.md`: check components against `STANDARD.md` one category at a time, reading only the files that category needs, and report a table (component × rule → ok / violation / n/a) to feed this file
-
-## Tooling idea: Storybook
-
-- [ ] `storybook-addon-pseudo-states` - force `:hover`, `:focus-visible`, `:active` to show the `states/state-model` matrix in one story

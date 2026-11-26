@@ -3,7 +3,7 @@ import { mergeConfig } from 'vite';
 
 const config: StorybookConfig = {
     stories: ['../../irrtirer/src/**/*.mdx', '../../irrtirer/src/**/*.stories.ts', '../../irr-design-system/**/*.stories.ts'],
-    addons: ['@storybook/addon-a11y', '@storybook/addon-docs', '@storybook/addon-themes'],
+    addons: ['@storybook/addon-a11y', '@storybook/addon-docs', '@storybook/addon-themes', 'storybook-addon-pseudo-states'],
     framework: {
         name: '@analogjs/storybook-angular',
         options: {},

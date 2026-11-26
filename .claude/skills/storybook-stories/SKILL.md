@@ -21,7 +21,7 @@ The project is small, so docs stay lightweight:
 
 - No MDX pages. Documentation comes from autodocs (`tags: ['autodocs']`).
 - One story per component: `Default`, a playground with all controls.
-- Add another story only for a state the controls cannot reach.
+- Add another story only for a state the controls cannot reach, or a `States` story (below) where the library's rules ask for one.
 - The code snippet under the story should show real usage for the chosen args. Build the `render` template with `elem()` from `storybook-doc/template-builder`: hard-code values with `withInput` (pass the component default to omit it), bind only what must stay live (`withBinding`), keep `Playground` args out of the bindings.
 - Markup that only sets up the story (layout wrappers, router outlets) goes to `componentWrapperDecorator`, with `parameters.docs.source.excludeDecorators: true`, so the snippet shows the component alone.
 - Use a story-only wrapper component only when unavoidable (e.g. Signal Forms setup), because it hides the usage.
@@ -32,6 +32,15 @@ render: (args) => ({
     template: elem('ids-x').withInput('variant', args.variant, 'neutral').withOutput('clicked').withContent(args.text).build(),
 }),
 ```
+
+## States story
+
+Shows the component in each of its states at once, including pointer and keyboard states that normally need interaction.
+
+- Build it with `StateMatrix` and `pseudoStates()` from `storybook-doc/state-matrix`; `storybook-addon-pseudo-states` forces the pseudo-classes.
+- Show only the states the component really distinguishes - read its styles.
+- Pick the layout that suits the component. Existing `States` stories are examples, not a template.
+- Only CSS pseudo-classes can be forced. States driven by code (e.g. a tooltip opened on `mouseenter`) stay out of the matrix - never add API just for a story.
 
 ## argTypes
 

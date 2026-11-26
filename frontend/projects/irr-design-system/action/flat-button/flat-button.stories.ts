@@ -1,5 +1,6 @@
 import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatButton } from './flat-button';
 
@@ -91,5 +92,29 @@ export const Default: Story = {
                 args.layout !== 'Icon' && args.text,
             )
             .build(),
+    }),
+};
+
+export const States: Story = {
+    decorators: [moduleMetadata({ imports: [StateMatrix] })],
+    parameters: {
+        controls: { disable: true },
+        pseudo: pseudoStates('button'),
+    },
+    render: () => ({
+        props: {
+            sections: [{ name: 'neutral' }, { name: 'accent' }, { name: 'danger' }],
+            states: ['rest', 'hover', 'focus-visible', 'active', 'disabled'],
+        },
+        template: `
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <ids-flat-button [variant]="section.name" [disabled]="state === 'disabled'">
+                        <mat-icon class="material-symbols-outlined">edit</mat-icon>
+                        {{ state }}
+                    </ids-flat-button>
+                </ng-template>
+            </sb-state-matrix>
+        `,
     }),
 };
