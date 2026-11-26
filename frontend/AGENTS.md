@@ -11,6 +11,7 @@ Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; loc
 | `irrtirer`          | app     | `app`           | Main app: mosaic generation, sector management, UI        |
 | `irr-design-system` | library | `ids`           | Own UI kit replacing Angular Material, plus design tokens |
 | `active-canvas`     | library | `ac`            | Interactive canvas, drawing, geometry                     |
+| `storybook-doc`     | tooling | -               | Storybook config hosting stories of the other projects    |
 
 ## Technical standards
 
@@ -35,7 +36,7 @@ Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; loc
 - Test one project (Vitest): `npx ng test <project> --watch=false`
 - Format: `npm run format` / check: `npm run format:check`
 - Build: `npx ng build <project>`
-- Storybook (hosts stories from `irrtirer` and `irr-design-system`): `npm run sb`
+- Storybook (`storybook-doc` project): `npm run sb`
 
 ## Definition of done
 

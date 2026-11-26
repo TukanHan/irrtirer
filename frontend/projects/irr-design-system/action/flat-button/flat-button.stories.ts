@@ -11,7 +11,7 @@ type IdsFlatButtonStoryArgs = IdsFlatButton & {
 };
 
 const meta: Meta<IdsFlatButtonStoryArgs> = {
-    title: 'Design System/Buttons/Flat Button',
+    title: 'Design System/Action/Flat Button',
     component: IdsFlatButton,
     tags: ['autodocs'],
     decorators: [

@@ -4,7 +4,7 @@ import { IdsFramedButton } from './framed-button';
 type IdsFramedButtonArgs = IdsFramedButton & { text: string; hostDisplay: 'flex' | 'block' };
 
 const meta: Meta<IdsFramedButtonArgs> = {
-    title: 'Design System/Buttons/Framed Button',
+    title: 'Design System/Action/Framed Button',
     component: IdsFramedButton,
     tags: ['autodocs'],
     argTypes: {

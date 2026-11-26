@@ -10,8 +10,8 @@
         "test": "ng test",
         "lint": "ng lint",
         "api": "cd ../backend/Irrtirer/Irrtirer && dotnet run --urls=https://localhost:7113",
-        "sb": "ng run irrtirer:storybook",
-        "build-storybook": "ng run irrtirer:build-storybook",
+        "sb": "ng run storybook-doc:storybook",
+        "build-storybook": "ng run storybook-doc:build-storybook",
         "format": "oxfmt .",
         "format:check": "oxfmt --check ."
     },

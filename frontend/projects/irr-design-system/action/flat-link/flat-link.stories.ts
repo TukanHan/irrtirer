@@ -29,7 +29,7 @@ class FlatLinkDestinationStory {
 }
 
 const meta: Meta<IdsFlatLinkStoryArgs> = {
-    title: 'Design System/Links/Flat Link',
+    title: 'Design System/Action/Flat Link',
     component: IdsFlatLink,
     tags: ['autodocs'],
     decorators: [

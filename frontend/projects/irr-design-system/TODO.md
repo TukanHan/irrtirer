@@ -10,11 +10,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `action/flat-link/flat-link.spec.ts` does not follow the `unit-tests` skill (raw `TestBed`, `detectChanges()`, queries by tag)
 
-## storybook/story-title
-
-- [ ] `flat-button`, `framed-button`: `Design System/Buttons/...` → `Design System/Action/...`
-- [ ] `flat-link`: `Design System/Links/Flat Link` → `Design System/Action/Flat Link`
-
 ## storybook/story-per-family
 
 - [ ] `form` has no story - its parts are shown in the input stories; decide whether that is enough
@@ -58,6 +53,11 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## Open: Accessibility
 
 - [ ] Toggle state on buttons: `flat-button` cannot expose `aria-expanded` (disclosure) or `aria-pressed` (toggle), so app toggles (chevrons, tile visibility, theme) swap their `label` instead - consider state inputs with a stable label
+
+## Open: Storybook
+
+- [ ] Inputs without JSDoc (e.g. `text-input`) show empty descriptions in Docs - add JSDoc, or a rule requiring it on public inputs
+- [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)
 

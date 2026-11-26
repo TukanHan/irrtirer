@@ -7,7 +7,7 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideHttpClient } from '@angular/common/http';
 import { StorybookLanguageSync } from './storybook-language-sync';
 import { inject, provideAppInitializer } from '@angular/core';
-import '../src/styles.scss';
+import '../../irrtirer/src/styles.scss';
 
 setCompodocJson(docJson);
 
@@ -43,7 +43,7 @@ const preview: Preview = {
     },
     globalTypes: {
         locale: {
-            description: 'Język aplikacji',
+            description: 'App language',
             defaultValue: 'pl',
             toolbar: {
                 icon: 'globe',

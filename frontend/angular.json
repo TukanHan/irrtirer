@@ -87,23 +87,35 @@
                     "options": {
                         "lintFilePatterns": ["projects/irrtirer/**/*.ts", "projects/irrtirer/**/*.html"]
                     }
-                },
+                }
+            }
+        },
+        "storybook-doc": {
+            "projectType": "application",
+            "root": "projects/storybook-doc",
+            "architect": {
                 "storybook": {
                     "builder": "@analogjs/storybook-angular:start-storybook",
                     "options": {
-                        "configDir": "projects/irrtirer/.storybook",
+                        "configDir": "projects/storybook-doc/.storybook",
                         "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "projects/irrtirer", "--minimal", "--disablePrivate", "--disableProtected"],
+                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected"],
                         "port": 6006
                     }
                 },
                 "build-storybook": {
                     "builder": "@analogjs/storybook-angular:build-storybook",
                     "options": {
-                        "configDir": "projects/irrtirer/.storybook",
+                        "configDir": "projects/storybook-doc/.storybook",
                         "compodoc": true,
-                        "compodocArgs": ["-e", "json", "-d", "projects/irrtirer", "--minimal", "--disablePrivate", "--disableProtected"],
+                        "compodocArgs": ["-e", "json", "-d", "projects/storybook-doc", "--minimal", "--disablePrivate", "--disableProtected"],
                         "outputDir": "dist/irrtirer/browser/storybook"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-eslint/builder:lint",
+                    "options": {
+                        "lintFilePatterns": ["projects/storybook-doc/**/*.ts"]
                     }
                 }
             }

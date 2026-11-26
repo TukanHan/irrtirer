@@ -1,0 +1,6 @@
+// Compodoc reads component docs (inputs, JSDoc) from these sources.
+{
+    "extends": "./tsconfig.json",
+    "include": ["../../irrtirer/src/**/*", "../../irr-design-system/**/*"],
+    "exclude": ["../../**/*.spec.ts", "../../**/*.stories.ts"]
+}

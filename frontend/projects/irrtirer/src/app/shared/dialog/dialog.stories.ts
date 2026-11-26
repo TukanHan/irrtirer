@@ -20,7 +20,7 @@ class DialogHostComponent {
     }
 }
 
-const meta: Meta<Dialog> = {
+const meta: Meta<DialogData> = {
     title: 'Komponenty/Dialog',
     component: Dialog,
     tags: ['autodocs'],
@@ -32,14 +32,14 @@ const meta: Meta<Dialog> = {
 };
 
 export default meta;
-type Story = StoryObj<Dialog>;
+type Story = StoryObj<DialogData>;
 
 export const Default: Story = {
     args: {
         title: 'Przykładowy tytuł dialogu',
         message: 'To jest przykładowa wiadomość wyświetlana w oknie dialogowym.',
     },
-    render: (args: DialogData) => {
+    render: (args) => {
         const dialogData: DialogData = {
             title: args.title,
             message: args.message,

@@ -1,0 +1,9 @@
+{
+    "extends": "../../../tsconfig.json",
+    "compilerOptions": {
+        "resolveJsonModule": true,
+        // preview.ts imports the app's global styles.scss, which has no type declarations.
+        "noUncheckedSideEffectImports": false
+    },
+    "include": ["../../irrtirer/src/**/*.stories.ts", "../../irr-design-system/**/*.stories.ts", "./*.ts"]
+}
