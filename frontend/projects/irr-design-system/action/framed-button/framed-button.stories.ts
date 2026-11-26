@@ -10,25 +10,14 @@ const meta: Meta<IdsFramedButtonArgs> = {
     component: IdsFramedButton,
     tags: ['autodocs'],
     argTypes: {
-        disabled: { control: 'boolean', table: { category: 'Inputs' } },
-        ariaLabel: { control: 'text', table: { category: 'Inputs' } },
-        clicked: { action: 'clicked', table: { category: 'Outputs' } },
-        variant: {
-            control: 'inline-radio',
-            options: ['accent', 'neutral', 'danger'],
-            table: { category: 'Inputs' },
-        },
-        type: {
-            control: 'inline-radio',
-            options: ['button', 'submit', 'reset'],
-            table: { category: 'Inputs' },
-        },
-        text: { control: 'text', table: { category: 'Playground' } },
+        text: { description: 'Projected text.', control: 'text', table: { category: 'playground' } },
         hostDisplay: {
+            description: '`flex` places the button in a horizontally resizable flex container to show how it stretches.',
             control: 'inline-radio',
             options: ['block', 'flex'],
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
+        clicked: { control: false },
     },
 };
 
@@ -37,7 +26,7 @@ type Story = StoryObj<IdsFramedButtonArgs>;
 
 export const Default: Story = {
     args: {
-        text: 'Click me',
+        text: 'Lorem ipsum',
         ariaLabel: '',
         disabled: false,
         variant: 'neutral',

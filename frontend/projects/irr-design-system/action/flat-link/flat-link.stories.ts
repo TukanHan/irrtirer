@@ -16,7 +16,7 @@ type IdsFlatLinkStoryArgs = IdsFlatLink & {
 };
 
 @Component({
-    template: `Current location: {{ currentUrl() }}`,
+    template: `<code>{{ currentUrl() }}</code>`,
 })
 class FlatLinkDestinationStory {
     private readonly router = inject(Router);
@@ -56,26 +56,23 @@ const meta: Meta<IdsFlatLinkStoryArgs> = {
         docs: { source: { excludeDecorators: true } },
     },
     argTypes: {
-        link: { control: 'text', table: { category: 'Inputs' } },
-        linkType: {
-            control: 'inline-radio',
-            options: ['internal', 'external'],
-            table: { category: 'Inputs' },
-        },
         layout: {
+            description: 'What the link content holds: an icon, text, or both.',
             control: 'inline-radio',
             options: ['Icon', 'Text', 'Icon & Text'],
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
         iconName: {
+            description: 'Material Symbols name of the projected `mat-icon`.',
             control: 'text',
             if: { arg: 'layout', neq: 'Text' },
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
         text: {
+            description: 'Projected text.',
             control: 'text',
             if: { arg: 'layout', neq: 'Icon' },
-            table: { category: 'Playground' },
+            table: { category: 'playground' },
         },
     },
 };
@@ -89,7 +86,7 @@ export const Default: Story = {
         linkType: 'external',
         layout: 'Icon & Text',
         iconName: 'open_in_new',
-        text: 'Open link',
+        text: 'Lorem ipsum',
     },
     render: (args) => ({
         props: args,

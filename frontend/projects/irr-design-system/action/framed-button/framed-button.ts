@@ -3,6 +3,7 @@ import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-desig
 
 export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
+/** Button with a visible frame that glows on hover and focus. It fills the width of its host. */
 @Component({
     selector: 'ids-framed-button',
     providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFramedButton }],
@@ -23,12 +24,21 @@ export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
     styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css'],
 })
 export class IdsFramedButton implements Clickable, NativeControlHost {
+    /** Emitted when the button is activated by click, `Enter` or `Space`; never while disabled. */
     public readonly clicked = output<MouseEvent>();
+
+    /** Blocks the button and dims it. */
     public readonly disabled = input<boolean>(false, { transform: booleanAttribute });
+
+    /** Color of the frame and its glow. */
     public readonly variant = input<IdsFramedButtonVariant>('neutral');
+
+    /** Native `type` of the inner button; `submit` and `reset` act on the enclosing form. */
     public readonly type = input<'button' | 'submit' | 'reset'>('button');
+
     /** Accessible name; required when the content is not text (e.g. icon only). */
     public readonly ariaLabel = input<string>('');
 
+    /** @internal */
     public readonly nativeControl = viewChild.required<ElementRef<HTMLButtonElement>>('control');
 }

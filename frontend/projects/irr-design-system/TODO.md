@@ -16,11 +16,11 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## documentation/class-doc
 
-- [ ] No class JSDoc: `flat-link`, `framed-button`, `error`, `form-field`, `prefix`, `suffix`, `side-nav`, `side-nav-item` (only the public ones need it)
+- [ ] No class JSDoc: `error`, `form-field`, `prefix`, `suffix`, `side-nav`, `side-nav-item` (only the public ones need it)
 
 ## documentation/member-doc
 
-- [ ] Inputs, models and outputs without JSDoc in every component except `text-input`, `number-input`, `tooltip`, `menu`, `flat-button`
+- [ ] Inputs without JSDoc: `form-field`, `side-nav-item`
 
 ## storybook/story-per-family
 
@@ -72,8 +72,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Storybook
 
-- [ ] Stories other than `text-input`, `number-input`, `tooltip`, `menu`, `flat-button` do not follow the updated `storybook-stories` skill: lowercase categories, `argTypes` only for story-only args and overrides, outputs bound with `withOutput`
-- [ ] Public members meant only for other library classes show in the args table (e.g. `nativeControl` in `framed-button`) - mark them `/** @internal */` (Compodoc runs with `--disableInternal`), as done in `menu`
+- [ ] `side-nav` story does not follow the updated `storybook-stories` skill: lowercase categories, `argTypes` only for story-only args and overrides, outputs bound with `withOutput`
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)
