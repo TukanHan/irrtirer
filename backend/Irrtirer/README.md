@@ -4,6 +4,6 @@ This is the backend API for the Irrtirer project. It is responsible for the algo
 
 ## Technologies used
 
-- .NET 8
+- .NET 10
 - SignalR
 - TriangleNet (polygon triangulation)
