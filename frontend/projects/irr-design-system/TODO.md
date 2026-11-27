@@ -15,10 +15,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `menu-item.css` - tied to the tolerated `MatIcon`
 
-## styles/override-via-tokens
-
-- [ ] `toolbar.scss` (app) sets the internal `--ids-panel-padding` on `.language-panel` through `::ng-deep` with `!important` - the menu needs a public token (e.g. `--ids-menu-padding`)
-
 ## styles/shared-recipes
 
 - [ ] `styles/shared/ids-flat-action.css` mixes several recipes (layout, state overlay, text shadow) - split into one file per recipe
@@ -40,6 +36,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
     - `surface-kinds`: floating elements (menu, tooltip) are glass, in-flow controls are solid - intentional or accidental?
     - `glow-color`: glow color expressed through one token per variant (outdated wording: `--ids-glow-color` is internal now and must follow `styles/token-naming` - restate when visual style is discussed)
     - `reduced-motion`: animations respect `prefers-reduced-motion` (`framed-button` border animation does not)
+
+## Open: Icon
+
+- [ ] Own `ids-icon` replacing `MatIcon`: the app and the library depend on it and patch it ad hoc (`--irr-icon-*`, direct `mat-icon` selectors such as in `sector-list-elem.scss`) - explore an icon component with public tokens (size, weight)
 
 ## Open: Accessibility
 

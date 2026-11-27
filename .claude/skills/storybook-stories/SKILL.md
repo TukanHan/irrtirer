@@ -61,6 +61,7 @@ Compodoc fills `inputs` and `outputs` from the component: type, default, control
 - Story-only args (`playground`, `class`) get an entry with `table.category` and `description`; declare `playground` entries first.
 - A `class` arg is an `inline-radio` with the full class names as options plus `null` labelled `none`, applied with `withClass`, and `table.type.summary: 'string'` (the `null` option makes it `object`). A `select` would add an empty option of its own.
 - `css properties` args come from `cssPropertyArgTypes` (`storybook-doc/css-properties`), default to `''` (unset) and are applied with `withStyle`. They are the component's list of public tokens.
+- A token read inside an overlay (rendered outside the component element) cannot be applied with `withStyle`: pass `control: false` to `cssPropertyArgTypes` and say in its description where to set it.
 - Component members get an entry only to override Compodoc, e.g. a better-suited control. Describe them in the component's JSDoc, not here.
 - Members the story drives itself (e.g. through `[formField]`) and outputs get `control: false`.
 - A `model()` stays in `inputs`, also when the story only uses it as the initial value of a form.

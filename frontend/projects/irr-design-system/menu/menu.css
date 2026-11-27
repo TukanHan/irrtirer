@@ -3,7 +3,7 @@
 }
 
 .ids-menu-panel {
-    --ids-panel-padding: 0.25rem 0.25rem;
+    --ids-panel-padding: var(--ids-menu-padding, 0.25rem 0.25rem);
 
     display: flex;
     flex-direction: column;

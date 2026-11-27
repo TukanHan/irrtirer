@@ -24,12 +24,6 @@
     }
 }
 
-::ng-deep {
-    .language-panel {
-        --ids-panel-padding: 0.5rem 1rem !important;
-    }
-}
-
 .lang-radio-group {
     display: flex;
     flex-direction: column;

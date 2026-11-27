@@ -39,7 +39,7 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
             <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
         </ids-flat-button>
 
-        <ids-menu #menu panelClass="language-panel">
+        <ids-menu #menu panelClass="[--ids-menu-padding:0.5rem_1rem]">
             <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
                 <mat-radio-button value="pl" class="lang-radio">
                     {{ 'toolbar.languages.polish' | translate }}

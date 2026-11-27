@@ -2,13 +2,18 @@ import { MatIcon } from '@angular/material/icon';
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { action } from 'storybook/actions';
 import { IdsFramedButton } from 'irr-design-system/action';
+import { cssPropertyArgTypes } from 'storybook-doc/css-properties';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsMenu } from './menu';
 import { IdsMenuItem } from './menu-item/menu-item';
 import { IdsMenuTrigger } from './menu-trigger/menu-trigger';
 
-const meta: Meta<IdsMenu> = {
+type IdsMenuStoryArgs = IdsMenu & {
+    '--ids-menu-padding': string;
+};
+
+const meta: Meta<IdsMenuStoryArgs> = {
     title: 'Design System/Menu',
     component: IdsMenu,
     subcomponents: { IdsMenuTrigger, IdsMenuItem },
@@ -21,11 +26,19 @@ const meta: Meta<IdsMenu> = {
     argTypes: {
         isOpen: { control: false, table: { defaultValue: { summary: 'false' } } },
         close: { control: false },
+        ...cssPropertyArgTypes({
+            '--ids-menu-padding': {
+                description: 'Padding of the panel. Set it on the `panelClass` class: the panel is rendered outside `ids-menu`.',
+                syntax: '<length>',
+                defaultValue: '0.25rem 0.25rem',
+                control: false,
+            },
+        }),
     },
 };
 
 export default meta;
-type Story = StoryObj<IdsMenu>;
+type Story = StoryObj<IdsMenuStoryArgs>;
 
 export const Default: Story = {
     render: (args) => ({

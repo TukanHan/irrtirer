@@ -6,6 +6,8 @@ export interface CssPropertyDoc {
     syntax: '<color>' | '<length>';
     /** What applies when the property is not set, e.g. `36px` or `variant color`. */
     defaultValue: string;
+    /** `false` hides the control, e.g. for a token the story cannot apply with `withStyle`. */
+    control?: false;
 }
 
 /**
@@ -13,11 +15,11 @@ export interface CssPropertyDoc {
  * Arg names are the property names; apply them in `render` with `withStyle(name, args[name])`.
  */
 export function cssPropertyArgTypes(properties: Record<string, CssPropertyDoc>): ArgTypes {
-    const entries = Object.entries(properties).map(([name, { description, syntax, defaultValue }]) => [
+    const entries = Object.entries(properties).map(([name, { description, syntax, defaultValue, control }]) => [
         name,
         {
             description,
-            control: syntax === '<color>' ? 'color' : 'text',
+            control: control ?? (syntax === '<color>' ? 'color' : 'text'),
             table: { category: 'css properties', type: { summary: syntax }, defaultValue: { summary: defaultValue } },
         },
     ]);
