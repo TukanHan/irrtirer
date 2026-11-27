@@ -11,7 +11,25 @@ import { ColorPicker } from '../../../shared/color-picker/color-picker';
 @Component({
     selector: 'app-tile-detail',
     imports: [TranslatePipe, IdsFramedButton, ColorPicker, FormsModule],
-    templateUrl: './tile-detail.html',
+    template: `
+        <div class="flex flex-row gap-3">
+            <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
+            <ids-framed-button class="flex-1" variant="accent" disabled> {{ 'common.edit' | translate }} </ids-framed-button>
+        </div>
+
+        <div class="flex flex-1 flex-col gap-2">
+            @if (tile(); as tile) {
+                <div class="p-0.5 text-contrast-medium">
+                    <div class="font-medium">{{ 'tool.tiles.details.tileId' | translate }}:</div>
+                    <div class="text-xs truncate">{{ tile.id }}</div>
+                </div>
+
+                <app-color-picker [disabled]="true" [ngModel]="tile.color" [label]="translate.instant('tool.tiles.details.tileColor')" />
+            } @else {
+                <div class="m-auto text-contrast-medium">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
+            }
+        </div>
+    `,
     host: { class: 'flex flex-col gap-3 h-full' },
 })
 export class TileDetail implements OnInit {

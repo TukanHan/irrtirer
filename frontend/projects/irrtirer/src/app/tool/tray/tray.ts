@@ -13,7 +13,7 @@ import { TileTreemap } from './tile-treemap';
 @Component({
     selector: 'app-tray',
     imports: [RouterOutlet],
-    templateUrl: './tray.html',
+    template: `<router-outlet />`,
     styleUrl: './tray.scss',
 })
 export class Tray implements ToolView, AfterViewInit {

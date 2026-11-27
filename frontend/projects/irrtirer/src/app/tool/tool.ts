@@ -18,7 +18,38 @@ import { ToolView } from './tool-view.interface';
     selector: 'app-tool',
     imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, Ribbon, ActiveCanvas],
     providers: [CanvasToolkit, ProjectArchive],
-    templateUrl: './tool.html',
+    template: `
+        <ids-side-nav>
+            <ids-side-nav-item link="config" icon="flowsheet" [label]="translate.instant('tool.nav.projectSettings')" />
+            <ids-side-nav-item
+                link="tray"
+                icon="dashboard"
+                [label]="translate.instant('tool.nav.tileTrey')"
+                [disabled]="tilesLinkDisabled$ | async"
+            />
+            <ids-side-nav-item
+                link="sectors"
+                icon="view_in_ar"
+                [label]="translate.instant('tool.nav.sectors')"
+                [disabled]="sectorsLinkDisabled$ | async"
+            />
+            <ids-side-nav-item
+                link="generating"
+                icon="rocket_launch"
+                [label]="translate.instant('tool.nav.generation')"
+                [disabled]="mosaicGeneratingLinkDisabled$ | async"
+            />
+        </ids-side-nav>
+        <div class="flex flex-col w-full bg-surface">
+            <app-ribbon [actions]="ribbonActions()" [viewportSize]="viewportSize()" />
+            <div class="flex flex-row w-full flex-1 overflow-hidden">
+                <ac-active-canvas #activeCanvas [options]="canvasOptions()" class="flex flex-1" />
+                <div class="w-[250px] border-l border-contrast-light">
+                    <router-outlet (activate)="onActivate($event)" (deactivate)="onDeactivate()" />
+                </div>
+            </div>
+        </div>
+    `,
     host: { class: 'flex h-full' },
 })
 export class Tool {

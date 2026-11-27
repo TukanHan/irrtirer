@@ -31,7 +31,178 @@ import { ExtendedPanel } from './extended-panel/extended-panel';
         },
     ],
     imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, IdsTooltip, ExtendedPanel, TranslatePipe, FormField],
-    templateUrl: './sector-property-editor.html',
+    template: `
+        <div class="flex flex-row gap-2.5">
+            <ids-framed-button class="flex-1" (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-framed-button>
+            <ids-framed-button class="flex-1" variant="accent" (clicked)="save()"> {{ 'common.confirm' | translate }} </ids-framed-button>
+        </div>
+
+        <div class="sector-property-form">
+            <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.sectorsSize')">
+                <div class="form-group">
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.maxAreaHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.maxArea' | translate }}</mat-label>
+                        <input matInput [formField]="form.sectionMaxArea" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.sectionMaxArea()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.minAngleHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.minAngle' | translate }}</mat-label>
+                        <input matInput [formField]="form.sectionMinAngle" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.sectionMinAngle()) }}</mat-error>
+                    </mat-form-field>
+                </div>
+            </app-extended-panel>
+
+            <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.tilesLimitations')">
+                <div class="form-group">
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.minRadiusHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.minRadius' | translate }}</mat-label>
+                        <input matInput [formField]="form.minTileRadius" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.minTileRadius()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.maxRadiusHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.maxRadius' | translate }}</mat-label>
+                        <input matInput [formField]="form.maxTileRadius" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.maxTileRadius()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.minMarginHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.minMargin' | translate }}</mat-label>
+                        <input matInput [formField]="form.tilesMargin" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.tilesMargin()) }}</mat-error>
+                    </mat-form-field>
+                </div>
+            </app-extended-panel>
+
+            <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.populationParams')" [shouldBeOpen]="false">
+                <div class="form-group">
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.initialPopulationSizeHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.initialPopulationSize' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.initialPopulationSize" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.initialPopulationSize()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.populationSizeHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.populationSize' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.populationSize" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.populationSize()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.iterationsCountHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.iterationsCount' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.iterationsCount" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.iterationsCount()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.countOfTrianglePositionDrawsHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.countOfTrianglePositionDraws' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.countOfTrianglePositionDraws" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfTrianglePositionDraws()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.countOfTriesToInsertTileHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.countOfTriesToInsertTile' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.countOfTriesToInsertTile" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfTriesToInsertTile()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.countOfColorMatchingAttemptsHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.countOfColorMatchingAttempts' | translate }}</mat-label>
+                        <input matInput [formField]="form.populationParams.countOfColorMatchingAttempts" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.populationParams.countOfColorMatchingAttempts()) }}</mat-error>
+                    </mat-form-field>
+                </div>
+            </app-extended-panel>
+
+            <app-extended-panel [label]="translate.instant('tool.sectors.sectorProperty.evaluationParams')" [shouldBeOpen]="false">
+                <div class="form-group">
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.singleSectionPopulationHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.singleSectionPopulation' | translate }}</mat-label>
+                        <input matInput [formField]="form.evaluationParams.singleSectionPopulation" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.evaluationParams.singleSectionPopulation()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.overlappingAreaOutsideSector' | translate }}</mat-label>
+                        <input matInput [formField]="form.evaluationParams.overlappingAreaOutsideSector" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.evaluationParams.overlappingAreaOutsideSector()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingAreaOutsideSectorHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.additionalPopulationOfNeighboringSectors' | translate }}</mat-label>
+                        <input matInput [formField]="form.evaluationParams.additionalPopulationOfNeighboringSectors" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.evaluationParams.additionalPopulationOfNeighboringSectors()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.overlappingNotPopulatedSectionsHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.overlappingNotPopulatedSections' | translate }}</mat-label>
+                        <input matInput [formField]="form.evaluationParams.overlappingNotPopulatedSections" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.evaluationParams.overlappingNotPopulatedSections()) }}</mat-error>
+                    </mat-form-field>
+                    <mat-form-field
+                        class="density-3"
+                        [idsTooltip]="translate.instant('tool.sectors.sectorProperty.tileColorMismatchHint')"
+                        idsTooltipPosition="left"
+                    >
+                        <mat-label>{{ 'tool.sectors.sectorProperty.tileColorMismatch' | translate }}</mat-label>
+                        <input matInput [formField]="form.evaluationParams.tileColorMismatch" type="number" />
+                        <mat-error>{{ getFieldErrorLabel(form.evaluationParams.tileColorMismatch()) }}</mat-error>
+                    </mat-form-field>
+                </div>
+            </app-extended-panel>
+        </div>
+    `,
     styleUrl: './sector-property-editor.scss',
 })
 export class SectorPropertyEditor implements OnInit {

@@ -7,7 +7,16 @@ import { DialogData } from './dialog-data.interface';
 @Component({
     selector: 'app-dialog',
     imports: [MatDialogModule, IdsFlatButton],
-    templateUrl: './dialog.html',
+    template: `
+        <div class="dialog-content">
+            <h1 mat-dialog-title>{{ data.title }}</h1>
+            <div mat-dialog-content>{{ data.message }}</div>
+            <div mat-dialog-actions align="end">
+                <ids-flat-button (clicked)="cancel()">{{ noLabel }}</ids-flat-button>
+                <ids-flat-button (clicked)="confirm()">{{ yesLabel }}</ids-flat-button>
+            </div>
+        </div>
+    `,
     styleUrl: './dialog.scss',
 })
 export class Dialog {

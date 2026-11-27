@@ -29,7 +29,14 @@ import { InfoState } from './progress-info/progress-info.interface';
     selector: 'app-mosaic-generation',
     imports: [MosaicHierarchy, ProgressInfo],
     providers: [MosaicGenerationState],
-    templateUrl: './mosaic-generation.html',
+    template: `
+        <app-mosaic-hierarchy />
+
+        @let progress = progressState();
+        @if (progress) {
+            <app-progress-info class="info" [infoState]="progress" />
+        }
+    `,
     styleUrl: './mosaic-generation.scss',
 })
 export class MosaicGeneration implements OnInit, ToolView {

@@ -29,7 +29,47 @@ interface RandomTileSetModel {
 @Component({
     selector: 'app-random-tiles',
     imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsFramedButton, MatAutocompleteModule, FormField],
-    templateUrl: './random-tiles.html',
+    template: `
+        <div class="actions">
+            <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
+            <ids-framed-button class="flex-1" variant="accent" (clicked)="trySaveTileSet()">
+                {{ 'tool.tiles.random.randomTiles' | translate }}
+            </ids-framed-button>
+        </div>
+
+        <form class="form">
+            <mat-form-field subscriptSizing="dynamic" class="density-3">
+                <mat-label>{{ 'tool.tiles.random.seriesName' | translate }}</mat-label>
+                <input matInput type="text" [formField]="form.name" [matAutocomplete]="auto" />
+                <mat-autocomplete #auto="matAutocomplete">
+                    @for (option of existingSeriesNames(); track option) {
+                        <mat-option [value]="option" [disabled]="immutableSeriesNames().includes(option)"> {{ option }} </mat-option>
+                    }
+                </mat-autocomplete>
+                <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field subscriptSizing="dynamic" class="density-3">
+                <mat-label>{{ 'tool.tiles.random.minRadius' | translate }}</mat-label>
+                <input matInput type="number" [formField]="form.minRadius" />
+                <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+                <mat-error>{{ getFieldErrorLabel(form.minRadius()) }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field subscriptSizing="dynamic" class="density-3">
+                <mat-label>{{ 'tool.tiles.random.maxRadius' | translate }}</mat-label>
+                <input matInput type="number" [formField]="form.maxRadius" />
+                <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+                <mat-error>{{ getFieldErrorLabel(form.maxRadius()) }}</mat-error>
+            </mat-form-field>
+
+            <mat-form-field subscriptSizing="dynamic" class="density-3">
+                <mat-label>{{ 'tool.tiles.random.count' | translate }}</mat-label>
+                <input matInput type="number" [formField]="form.count" />
+                <mat-error>{{ getFieldErrorLabel(form.count()) }}</mat-error>
+            </mat-form-field>
+        </form>
+    `,
     styleUrl: './random-tiles.scss',
 })
 export class RandomTiles implements OnInit {

@@ -9,7 +9,12 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-slider',
-    templateUrl: './color-slider.html',
+    template: `
+        <canvas #canvas width="250" height="8" class="slider"></canvas>
+
+        @let cursor = cursorData();
+        <div class="cursor" [style.left]="cursor.horizontalOffset" [style.background-color]="cursor.color"></div>
+    `,
     styleUrl: './color-slider.scss',
 })
 export class ColorSlider implements AfterViewInit {

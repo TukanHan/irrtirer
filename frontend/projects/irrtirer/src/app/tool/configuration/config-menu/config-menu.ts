@@ -20,7 +20,22 @@ const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 @Component({
     selector: 'app-config-menu',
     imports: [TranslatePipe, IdsFramedButton],
-    templateUrl: './config-menu.html',
+    template: `
+        @let isMosaicSet = !!mosaicConfig();
+        @if (isMosaicSet) {
+            <ids-framed-button (clicked)="navigateToProjectConfiguration()"> {{ 'tool.config.menu.projectSettings' | translate }} </ids-framed-button>
+            <ids-framed-button variant="accent" (clicked)="saveProject()"> {{ 'tool.config.menu.saveProject' | translate }} </ids-framed-button>
+        } @else {
+            <ids-framed-button (clicked)="navigateToProjectConfiguration()"> {{ 'tool.config.menu.newProject' | translate }} </ids-framed-button>
+            <ids-framed-button disabled> {{ 'tool.config.menu.exampleProjects' | translate }} </ids-framed-button>
+        }
+
+        <ids-framed-button (clicked)="loadNewProject()"> {{ 'tool.config.menu.loadProject' | translate }} </ids-framed-button>
+
+        @if (isMosaicSet) {
+            <ids-framed-button variant="danger" (clicked)="rejectProject()"> {{ 'tool.config.menu.rejectProject' | translate }} </ids-framed-button>
+        }
+    `,
     host: { class: 'flex flex-col gap-2.5' },
 })
 export class ConfigMenu {

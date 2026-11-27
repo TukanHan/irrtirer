@@ -7,7 +7,21 @@ import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-
 @Component({
     selector: 'app-extended-panel',
     imports: [MatIconModule, IdsFlatButton, ExpandablePanel, TranslatePipe],
-    templateUrl: './extended-panel.html',
+    template: `
+        <div class="label">
+            <span class="label-content">{{ label() }}</span>
+            <ids-flat-button
+                class="toggle-button ids-flat-button--size-small"
+                [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
+                (clicked)="toggle()"
+            >
+                <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
+            </ids-flat-button>
+        </div>
+        <app-expandable-panel class="panel" [isOpen]="isOpen()">
+            <ng-content />
+        </app-expandable-panel>
+    `,
     styleUrl: './extended-panel.scss',
 })
 export class ExtendedPanel implements OnInit {

@@ -3,7 +3,15 @@ import { InfoState, InitInfoState, ProgressInfoState } from './progress-info.int
 
 @Component({
     selector: 'app-progress-info',
-    templateUrl: './progress-info.html',
+    template: `
+        @let info = infoState();
+        @if (isProgressInfo(info)) {
+            <span class="loading-dots">{{ info.sector }}</span>
+            <span class="ml-auto">{{ info.percent }}%</span>
+        } @else if (isInitInfo(info)) {
+            <span class="loading-dots">{{ info.message }}</span>
+        }
+    `,
     styleUrl: './progress-info.scss',
 })
 export class ProgressInfo {

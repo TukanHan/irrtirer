@@ -2,7 +2,7 @@ import { Component, computed, ElementRef, inject, input } from '@angular/core';
 
 @Component({
     selector: 'app-expandable-panel',
-    templateUrl: './expandable-panel.html',
+    template: `<ng-content />`,
     styleUrl: 'expandable-panel.scss',
     host: {
         '[class.open]': 'isOpen()',

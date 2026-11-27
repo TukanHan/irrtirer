@@ -24,7 +24,39 @@ interface ProjectConfigForm {
 @Component({
     selector: 'app-config-project',
     imports: [TranslatePipe, IdsFramedButton, MatFormFieldModule, MatInputModule, FormField],
-    templateUrl: './config-project.html',
+    template: `
+        <div class="flex flex-row gap-2.5">
+            <ids-framed-button class="flex-1" (clicked)="navigateToConfiguration()"> {{ 'common.return' | translate }} </ids-framed-button>
+            <ids-framed-button
+                class="flex-1"
+                (clicked)="trySave()"
+                [hidden]="isReadOnlyMode()"
+                [variant]="this.form().valid() ? 'accent' : 'neutral'"
+            >
+                {{ 'common.confirm' | translate }}
+            </ids-framed-button>
+        </div>
+
+        <form class="flex flex-col gap-5">
+            <input #imageUploader hidden type="file" (change)="onImageSelected($event)" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|image/*" />
+
+            <ids-framed-button
+                [variant]="form.mosaicImage().valid() ? 'neutral' : 'accent'"
+                (clicked)="imageUploader.click()"
+                [hidden]="isReadOnlyMode()"
+                type="button"
+            >
+                {{ (form.mosaicImage().valid() ? 'tool.config.project.changeImage' : 'tool.config.project.chooseImage') | translate }}
+            </ids-framed-button>
+
+            <mat-form-field class="density-3">
+                <mat-label>{{ 'tool.config.project.mosaicWidth' | translate }}</mat-label>
+                <input matInput type="number" [formField]="form.mosaicWidth" />
+                <span matTextSuffix>{{ 'common.cm' | translate }}</span>
+                <mat-error>{{ getFieldErrorLabel(form.mosaicWidth()) }}</mat-error>
+            </mat-form-field>
+        </form>
+    `,
     host: { class: 'flex flex-col gap-5' },
 })
 export class ConfigProject {

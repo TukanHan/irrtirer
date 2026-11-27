@@ -17,7 +17,20 @@ interface FileNameFormData {
 @Component({
     selector: 'app-project-name-dialog',
     imports: [MatFormFieldModule, MatInputModule, MatDialogModule, TranslatePipe, FormField, IdsFlatButton],
-    templateUrl: './project-name-dialog.html',
+    template: `
+        <h2 mat-dialog-title>{{ 'tool.config.menu.chooseFileName' | translate }}</h2>
+
+        <div class="mx-6 my-1.5 flex w-[300px]">
+            <mat-form-field class="density-3 w-full" subscriptSizing="dynamic">
+                <input matInput [formField]="form.name" />
+                <mat-error>{{ 'tool.config.menu.enterValidName' | translate }}</mat-error>
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions align="end">
+            <ids-flat-button (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-flat-button>
+            <ids-flat-button (clicked)="confirm()" [disabled]="!form().valid()"> {{ 'common.save' | translate }} </ids-flat-button>
+        </div>
+    `,
 })
 export class ProjectNameDialog {
     protected readonly data = inject<{ defaultName: string }>(MAT_DIALOG_DATA);

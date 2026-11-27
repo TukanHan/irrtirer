@@ -10,7 +10,24 @@ import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 @Component({
     selector: 'app-ribbon',
     imports: [MatIconModule, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
-    templateUrl: './ribbon.html',
+    template: `
+        @for (action of actions(); track action.iconName) {
+            <ids-flat-button
+                class="action"
+                [hidden]="action.visibility() === 'hidden'"
+                [disabled]="action.visibility() === 'disabled'"
+                [class.active]="action.visibility() === 'on'"
+                (click)="onClick(action)"
+                [ariaLabel]="translate.instant(action.tooltipKey)"
+                [idsTooltip]="translate.instant(action.tooltipKey)"
+                idsTooltipPosition="bottom"
+            >
+                <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
+            </ids-flat-button>
+        }
+
+        <span class="size-display">{{ viewportSize() | sizeDisplay }}</span>
+    `,
     styleUrl: './ribbon.scss',
 })
 export class Ribbon {

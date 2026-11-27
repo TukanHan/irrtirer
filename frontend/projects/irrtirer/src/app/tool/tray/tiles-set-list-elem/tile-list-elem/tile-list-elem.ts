@@ -9,7 +9,25 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
 @Component({
     selector: 'app-tile-list-elem',
     imports: [MatIconModule, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe],
-    templateUrl: './tile-list-elem.html',
+    template: `
+        <span class="block-label-sm"> {{ tile().id }} </span>
+        <div class="flex -m-1.5">
+            <ids-flat-button
+                class="ids-flat-button--size-small button-content-contrast-medium"
+                [ariaLabel]="'common.moreActions' | translate"
+                [idsMenuTriggerFor]="menu"
+            >
+                <mat-icon> more_vert </mat-icon>
+            </ids-flat-button>
+
+            <ids-menu #menu>
+                <ids-menu-item (clicked)="navigateToTileDetails()">
+                    <mat-icon class="material-symbols-outlined"> page_info </mat-icon>
+                    {{ 'common.details' | translate }}
+                </ids-menu-item>
+            </ids-menu>
+        </div>
+    `,
     host: { class: 'list-item-box gap-3' },
 })
 export class TileListElem {

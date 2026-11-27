@@ -15,7 +15,49 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 @Component({
     selector: 'app-toolbar',
     imports: [MatIconModule, IconSvgModuleModule, MatRadioModule, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
-    templateUrl: './toolbar.html',
+    template: `
+        <ids-flat-link link="/tool" linkType="internal">
+            <span class="text-base">{{ 'title' | translate }}</span>
+        </ids-flat-link>
+
+        <ids-flat-link link="/project" linkType="internal"> {{ 'aboutProject.header' | translate }} </ids-flat-link>
+
+        <ids-flat-link link="/author" linkType="internal"> {{ 'aboutAuthor.header' | translate }} </ids-flat-link>
+
+        <span class="flex-1"></span>
+
+        <ids-flat-button
+            variant="accent"
+            class="toolbar-item mode"
+            [ariaLabel]="(themeMode() === 'dark' ? 'toolbar.theme.toLight' : 'toolbar.theme.toDark') | translate"
+            (clicked)="toggleTheme()"
+        >
+            <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
+        </ids-flat-button>
+
+        <ids-flat-button variant="accent" class="toolbar-item" [idsMenuTriggerFor]="menu">
+            <mat-icon>language</mat-icon>
+            <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
+        </ids-flat-button>
+
+        <ids-menu #menu panelClass="language-panel">
+            <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
+                <mat-radio-button value="pl" class="lang-radio">
+                    {{ 'toolbar.languages.polish' | translate }}
+                    <mat-icon svgIcon="pl" />
+                </mat-radio-button>
+                <mat-radio-button value="en" class="lang-radio">
+                    {{ 'toolbar.languages.english' | translate }}
+                    <mat-icon svgIcon="gb" />
+                </mat-radio-button>
+            </mat-radio-group>
+        </ids-menu>
+
+        <ids-flat-link link="https://github.com/TukanHan/irrtirer" linkType="external">
+            <mat-icon svgIcon="github" />
+            {{ 'toolbar.github' | translate }}
+        </ids-flat-link>
+    `,
     styleUrl: './toolbar.scss',
 })
 export class Toolbar implements OnInit {

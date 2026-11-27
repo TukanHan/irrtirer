@@ -15,7 +15,33 @@ import { ColorSelectionPanel } from './color-selection-panel/color-selection-pan
             multi: true,
         },
     ],
-    templateUrl: './color-picker.html',
+    template: `
+        <div class="flex flex-col">
+            <span class="text-base text-contrast-highest">{{ label() }}</span>
+            <span class="text-sm text-contrast-medium">{{ value() }}</span>
+        </div>
+
+        <div
+            role="presentation"
+            class="color-preview"
+            [class.disabled]="disabled()"
+            [style.background-color]="value()"
+            (click)="toggleColorPanel()"
+            cdkOverlayOrigin
+            #trigger="cdkOverlayOrigin"
+        ></div>
+
+        <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOrigin]="trigger"
+            [cdkConnectedOverlayOpen]="isOpen()"
+            [cdkConnectedOverlayHasBackdrop]="isOpen()"
+            [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop-cs'"
+            (backdropClick)="toggleColorPanel()"
+        >
+            <app-color-selection-panel [color]="value()" (colorChange)="onColorChanged($event)" />
+        </ng-template>
+    `,
     styleUrl: './color-picker.scss',
 })
 export class ColorPicker implements ControlValueAccessor, FormValueControl<string> {

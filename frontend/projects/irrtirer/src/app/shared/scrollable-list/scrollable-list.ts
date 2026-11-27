@@ -6,7 +6,25 @@ import { IdsFlatButton } from 'irr-design-system/action';
 @Component({
     selector: 'app-scrollable-list',
     imports: [NgTemplateOutlet, IdsFlatButton, TranslatePipe],
-    templateUrl: './scrollable-list.html',
+    template: `
+        @if (hasPreviousPage()) {
+            @let previousPages = previousPageNumbers();
+            <ids-flat-button class="page-button" (clicked)="goToPreviousPage()">
+                {{ 'common.previousElements' | translate }} {{ previousPages.from }}-{{ previousPages.to }}
+            </ids-flat-button>
+        }
+
+        @for (item of itemsToShow(); track $index) {
+            <ng-container [ngTemplateOutlet]="template()" [ngTemplateOutletContext]="{ $implicit: item }" />
+        }
+
+        @if (hasNextPage()) {
+            @let nextPages = nextPageNumbers();
+            <ids-flat-button class="page-button" (clicked)="goToNextPage()">
+                {{ 'common.nextElements' | translate }} {{ nextPages.from }}-{{ nextPages.to }}
+            </ids-flat-button>
+        }
+    `,
     styleUrl: './scrollable-list.scss',
 })
 export class ScrollableList<T> {

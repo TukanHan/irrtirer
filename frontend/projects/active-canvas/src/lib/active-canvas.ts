@@ -27,7 +27,7 @@ import { UnitConverter } from './utils/unit-converter';
 
 @Component({
     selector: 'ac-active-canvas',
-    templateUrl: 'active-canvas.html',
+    template: `<canvas #canvas></canvas>`,
     styleUrl: 'active-canvas.scss',
 })
 export class ActiveCanvas implements IActiveCanvas, OnInit, OnDestroy {

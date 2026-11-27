@@ -10,7 +10,12 @@ export interface CursorDataModel {
 
 @Component({
     selector: 'app-color-canvas',
-    templateUrl: './color-canvas.html',
+    template: `
+        <canvas #canvas class="panel" width="250" height="150"> </canvas>
+
+        @let cursor = cursorData();
+        <div class="cursor" [style.left]="cursor.horizontalOffset" [style.top]="cursor.verticalOffset" [style.background-color]="cursor.color"></div>
+    `,
     styleUrl: './color-canvas.scss',
 })
 export class ColorCanvas implements AfterViewInit {

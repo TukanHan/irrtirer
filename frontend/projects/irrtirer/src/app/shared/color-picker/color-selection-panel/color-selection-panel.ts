@@ -10,7 +10,24 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 @Component({
     selector: 'app-color-selection-panel',
     imports: [MatInputModule, FormsModule, ColorSlider, ColorCanvas],
-    templateUrl: './color-selection-panel.html',
+    template: `
+        <div class="sv-preview">
+            <app-color-canvas [hValue]="hValue()" [sValue]="sValue()" [vValue]="vValue()" (colorChange)="onColorCanvasChanged($event)" />
+        </div>
+
+        <div class="slider-container">
+            <app-color-slider [(value)]="hValue" />
+        </div>
+
+        <div class="result-wrapper">
+            <div role="presentation" class="color-preview" [style.background]="hexColor()"></div>
+
+            <mat-form-field class="density-3 code-input" appearance="outline">
+                <mat-label>Hex</mat-label>
+                <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)" />
+            </mat-form-field>
+        </div>
+    `,
     styleUrl: './color-selection-panel.scss',
 })
 export class ColorSelectionPanel implements OnDestroy {

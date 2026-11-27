@@ -17,7 +17,7 @@ import { ConfigurationEventBus } from './configuration-event-bus';
     selector: 'app-configuration',
     imports: [RouterOutlet],
     providers: [ConfigurationEventBus],
-    templateUrl: './configuration.html',
+    template: `<router-outlet (activate)="onRouterChange()" />`,
     styleUrl: './configuration.scss',
 })
 export class Configuration implements ToolView {

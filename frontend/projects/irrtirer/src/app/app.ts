@@ -9,7 +9,12 @@ import { Toolbar } from './toolbar/toolbar';
 @Component({
     selector: 'app-root',
     imports: [RouterOutlet, Toolbar],
-    templateUrl: './app.html',
+    template: `
+        <app-toolbar />
+        <div class="flex-1 overflow-hidden mat-app-background">
+            <router-outlet />
+        </div>
+    `,
     host: { class: 'flex flex-col h-dvh' },
 })
 export class App implements OnInit {

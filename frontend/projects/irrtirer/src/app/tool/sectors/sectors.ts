@@ -22,7 +22,7 @@ import { SectorsEventBus } from './sectors-event-bus';
     selector: 'app-sectors',
     imports: [RouterOutlet],
     providers: [SectorsEventBus],
-    templateUrl: './sectors.html',
+    template: `<router-outlet />`,
     styleUrl: './sectors.scss',
 })
 export class Sectors implements OnInit, AfterViewInit, ToolView {

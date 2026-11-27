@@ -34,7 +34,44 @@ import { polygonValidator } from './polygon.validator';
         TranslatePipe,
         FormField,
     ],
-    templateUrl: './sector-contour-edition.html',
+    template: `
+        <div class="flex flex-row gap-2.5">
+            <ids-framed-button class="flex-1" (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-framed-button>
+            <ids-framed-button class="flex-1" variant="accent" (clicked)="save()"> {{ 'common.confirm' | translate }} </ids-framed-button>
+        </div>
+
+        <div class="info">
+            <mat-form-field class="density-3" subscriptSizing="dynamic">
+                <mat-label>{{ 'tool.sectors.sectorContour.sectorName' | translate }}</mat-label>
+                <input matInput [formField]="form.name" />
+                <mat-error>{{ getFieldErrorLabel(form.name()) }}</mat-error>
+            </mat-form-field>
+
+            <app-color-picker [label]="translate.instant('tool.sectors.sectorContour.sectorColor')" [formField]="form.color" />
+
+            @if (form.vertices().value().length) {
+                <div cdkDropList class="vertices-list" (cdkDropListDropped)="dropVertexBox($event)">
+                    @for (vertex of form.vertices().value(); track vertex) {
+                        <div cdkDrag class="vertex-box" (mousedown)="onBoxSelected(vertex)">
+                            <div class="list-item-box" [class.selected]="vertex === selectedVertex()">
+                                <span class="block-label">{{ getVertexLabel(vertex) }}</span>
+                                <ids-flat-button
+                                    class="vertex-remove ids-flat-button--size-small button-content-contrast-medium"
+                                    [ariaLabel]="'tool.sectors.sectorContour.removeVertex' | translate"
+                                    (clicked)="removeVertex(vertex)"
+                                    (mousedown)="$event.stopPropagation()"
+                                >
+                                    <mat-icon>close</mat-icon>
+                                </ids-flat-button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            } @else {
+                <div class="no-vertices">{{ 'tool.sectors.sectorContour.addSectorVertices' | translate }}</div>
+            }
+        </div>
+    `,
     styleUrl: './sector-contour-edition.scss',
 })
 export class SectorContourEdition implements OnInit {
