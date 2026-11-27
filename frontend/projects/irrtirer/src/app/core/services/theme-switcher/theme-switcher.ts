@@ -1,13 +1,11 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeMode } from '../../models/user-preferences.interface';
 import { UserPreferencesActions } from '../../state/user-preferences/user-preferences.actions';
 import { selectThemeMode } from '../../state/user-preferences/user-preferences.selectors';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Service()
 export class ThemeSwitcher {
     private readonly store = inject(Store);
 

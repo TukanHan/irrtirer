@@ -6,7 +6,7 @@ describe('SectorsEventBus', () => {
     let service: SectorsEventBus;
 
     beforeEach(() => {
-        TestBed.configureTestingModule({});
+        TestBed.configureTestingModule({ providers: [SectorsEventBus] });
         service = TestBed.inject(SectorsEventBus);
     });
 

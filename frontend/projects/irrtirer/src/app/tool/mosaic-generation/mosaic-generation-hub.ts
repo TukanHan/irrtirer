@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Service } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
 import { Observable, Subject } from 'rxjs';
 import { BackendAddress } from '../../core/constants/api';
@@ -9,7 +9,7 @@ import {
     TileRequestModel,
 } from '../../core/models/api/api.models';
 
-@Injectable({ providedIn: 'root' })
+@Service()
 export class MosaicGenerationHub {
     private readonly hubConnection: signalR.HubConnection;
 

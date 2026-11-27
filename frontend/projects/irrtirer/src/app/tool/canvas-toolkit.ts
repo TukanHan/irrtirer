@@ -1,4 +1,4 @@
-import { computed, inject, Injectable } from '@angular/core';
+import { computed, inject, Service } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
 import { IActiveCanvas, Viewport } from 'active-canvas';
@@ -13,7 +13,7 @@ import { ImageObject } from '../shared/canvas-objects/image-object';
 import { SnapshotOptionsDialog } from './snapshot-options-dialog/snapshot-options-dialog';
 import { SnapshotOptions } from './snapshot-options-dialog/snapshot-options.interface';
 
-@Injectable()
+@Service({ autoProvided: false })
 export class CanvasToolkit {
     private readonly matDialog = inject(MatDialog);
 

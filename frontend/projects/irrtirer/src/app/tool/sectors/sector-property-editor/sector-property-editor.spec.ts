@@ -6,6 +6,7 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { faceSector } from '../../../../test-data/sector.data';
+import { SectorsEventBus } from '../sectors-event-bus';
 import { SectorPropertyEditor } from './sector-property-editor';
 
 describe('SectorPropertyEditor', () => {
@@ -28,6 +29,7 @@ describe('SectorPropertyEditor', () => {
         await TestBed.configureTestingModule({
             imports: [SectorPropertyEditor],
             providers: [
+                SectorsEventBus,
                 provideMockStore({ initialState }),
                 provideHttpClient(),
                 provideHttpClientTesting(),

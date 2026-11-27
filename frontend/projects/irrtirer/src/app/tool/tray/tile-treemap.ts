@@ -1,4 +1,3 @@
-import { Injectable } from '@angular/core';
 import { IActiveCanvas, Size } from 'active-canvas';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
 import { Rect } from '../../core/models/math/rect.interface';
@@ -29,7 +28,6 @@ interface NodeLeaf extends Node {
     value: TileModel;
 }
 
-@Injectable()
 export class TileTreemap {
     public static drawTiles(tiles: TileModel[], activeCanvas: IActiveCanvas): void {
         const tilesWithSize: TileWithSize[] = this.sortAndMapTilesBySize(tiles);

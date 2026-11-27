@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { signal, Service } from '@angular/core';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 
 export interface ImageChange {
@@ -6,7 +6,7 @@ export interface ImageChange {
     shouldFocus: boolean;
 }
 
-@Injectable()
+@Service({ autoProvided: false })
 export class ConfigurationEventBus {
     private readonly _imageChange = signal<ImageChange>({ mosaicConfig: null, shouldFocus: false });
 

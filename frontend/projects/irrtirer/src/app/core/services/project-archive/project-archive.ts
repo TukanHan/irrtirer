@@ -1,4 +1,4 @@
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { Store } from '@ngrx/store';
 import JSZip from 'jszip';
 import { environment } from '../../../../environment/environment';
@@ -9,7 +9,7 @@ import { selectMosaicProject } from '../../state/mosaic-project/mosaic-project.s
 
 const PROJECT_FORMAT: string = 'irr';
 
-@Injectable()
+@Service({ autoProvided: false })
 export class ProjectArchive {
     private readonly store = inject(Store);
 

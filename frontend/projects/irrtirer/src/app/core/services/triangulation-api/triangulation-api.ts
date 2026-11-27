@@ -1,12 +1,10 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { getPolygonTriangulationMeshApiAddress } from '../../constants/api';
 import { SectorTriangulationMeshModel, SectorTriangulationRequestModel } from '../../models/api/api.models';
 
-@Injectable({
-    providedIn: 'root',
-})
+@Service()
 export class TriangulationApi {
     private readonly http = inject(HttpClient);
 

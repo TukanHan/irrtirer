@@ -21,6 +21,7 @@ import { SectorsEventBus } from './sectors-event-bus';
 @Component({
     selector: 'app-sectors',
     imports: [RouterOutlet],
+    providers: [SectorsEventBus],
     templateUrl: './sectors.html',
     styleUrl: './sectors.scss',
 })

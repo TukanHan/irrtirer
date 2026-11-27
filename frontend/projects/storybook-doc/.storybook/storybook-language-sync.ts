@@ -1,7 +1,7 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Service } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-@Injectable()
+@Service({ autoProvided: false })
 export class StorybookLanguageSync {
     private readonly translate = inject(TranslateService);
 

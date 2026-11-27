@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Service } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { InitMosaicGenerationRequestModel, SectorTriangulationMeshPartsModel } from '../../core/models/api/api.models';
 import { Size } from '../../core/models/math/size.interface';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { GeneratedSectorModel, GeneratedTileModel } from './mosaic-generation.interface';
 
-@Injectable()
+@Service({ autoProvided: false })
 export class MosaicGenerationState {
     private readonly sectorsInfo = new Map<string, GeneratedSectorModel>();
 

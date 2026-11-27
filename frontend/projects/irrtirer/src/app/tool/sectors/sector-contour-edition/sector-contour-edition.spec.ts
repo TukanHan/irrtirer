@@ -4,6 +4,7 @@ import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { faceSector } from '../../../../test-data/sector.data';
+import { SectorsEventBus } from '../sectors-event-bus';
 import { SectorContourEdition } from './sector-contour-edition';
 
 describe('SectorContourEdition', () => {
@@ -25,7 +26,12 @@ describe('SectorContourEdition', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [SectorContourEdition],
-            providers: [provideMockStore({ initialState }), provideTranslateService({}), { provide: ActivatedRoute, useValue: mockActivatedRoute }],
+            providers: [
+                SectorsEventBus,
+                provideMockStore({ initialState }),
+                provideTranslateService({}),
+                { provide: ActivatedRoute, useValue: mockActivatedRoute },
+            ],
         }).compileComponents();
 
         fixture = TestBed.createComponent(SectorContourEdition);
