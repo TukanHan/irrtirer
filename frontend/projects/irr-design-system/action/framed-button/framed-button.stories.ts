@@ -75,7 +75,7 @@ export const States: Story = {
     },
     render: () => ({
         props: {
-            sections: [{ name: 'neutral' }, { name: 'accent' }, { name: 'danger' }],
+            sections: [{ name: 'neutral' }, { name: 'danger' }, { name: 'accent' }],
             states: ['rest', 'hover', 'focus-visible', 'active', 'disabled'],
         },
         template: `
