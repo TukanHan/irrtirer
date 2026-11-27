@@ -19,10 +19,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `form` has no story - its parts are shown in the input stories; decide whether that is enough
 
-## styles/token-naming
-
-- [ ] App `ribbon.scss` reads the removed `--ids-color-black`, so its shadow does not render - use `--ids-color-shadow`
-
 ## styles/ids-prefix-only
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `menu-item.css` - tied to the tolerated `MatIcon`
