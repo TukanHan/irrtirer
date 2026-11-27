@@ -71,7 +71,7 @@ Provide `provideTranslateService({})` without a loader - texts render as transla
 ## Dependencies
 
 - Real implementations where cheap (pure services, pipes, child components).
-- Router: `provideRouter([...])` + `RouterTestingHarness`, never a mocked Router.
+- Router: the real one via `provideRouter([...])`, never a mock.
 - Stub only at boundaries: HTTP (`provideHttpClientTesting`), NgRx store (`provideMockStore`), dialogs, browser APIs.
 
 ## Naming

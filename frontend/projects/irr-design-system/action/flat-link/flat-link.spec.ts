@@ -1,60 +1,42 @@
-import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter, Router } from '@angular/router';
+import { render, screen } from '@testing-library/angular';
 import { describe, expect, it } from 'vitest';
 import { IdsFlatLink } from './flat-link';
 
-@Component({
-    imports: [IdsFlatLink],
-    template: `
-        <ids-flat-link link="/project">
-            <span>Project</span>
-        </ids-flat-link>
-    `,
-})
-class InternalFlatLinkHost {}
-
-@Component({
-    imports: [IdsFlatLink],
-    template: `
-        <ids-flat-link link="https://example.com" linkType="external">
-            <span>External site</span>
-        </ids-flat-link>
-    `,
-})
-class ExternalFlatLinkHost {}
+async function renderLink(template: string): Promise<void> {
+    await render(template, {
+        imports: [IdsFlatLink],
+        providers: [provideRouter([{ path: 'project', children: [] }])],
+    });
+}
 
 describe('IdsFlatLink', () => {
-    it('renders an internal route and projects its content', async () => {
-        await TestBed.configureTestingModule({
-            imports: [InternalFlatLinkHost],
-            providers: [provideRouter([])],
-        }).compileComponents();
+    it('links to an internal route in the same tab', async () => {
+        await renderLink('<ids-flat-link link="/project">Lorem ipsum</ids-flat-link>');
 
-        const fixture: ComponentFixture<InternalFlatLinkHost> = TestBed.createComponent(InternalFlatLinkHost);
-        fixture.detectChanges();
+        const link = screen.getByRole('link', { name: 'Lorem ipsum' });
 
-        const anchor = fixture.nativeElement.querySelector('a') as HTMLAnchorElement;
-
-        expect(anchor.getAttribute('href')).toBe('/project');
-        expect(anchor.textContent.trim()).toBe('Project');
-        expect(anchor.hasAttribute('target')).toBe(false);
+        expect(link.getAttribute('href')).toBe('/project');
+        expect(link.getAttribute('target')).toBeNull();
     });
 
-    it('renders an external href with safe new-tab attributes and projected content', async () => {
-        await TestBed.configureTestingModule({
-            imports: [ExternalFlatLinkHost],
-        }).compileComponents();
+    it('opens an external link safely in a new tab', async () => {
+        await renderLink('<ids-flat-link link="https://example.com" linkType="external">Lorem ipsum</ids-flat-link>');
 
-        const fixture: ComponentFixture<ExternalFlatLinkHost> = TestBed.createComponent(ExternalFlatLinkHost);
-        fixture.detectChanges();
+        const link = screen.getByRole('link', { name: 'Lorem ipsum' });
 
-        const anchor = fixture.nativeElement.querySelector('a') as HTMLAnchorElement;
+        expect(link.getAttribute('href')).toBe('https://example.com');
+        expect(link.getAttribute('target')).toBe('_blank');
+        expect(link.getAttribute('rel')).toBe('noopener noreferrer');
+    });
 
-        expect(anchor.getAttribute('href')).toBe('https://example.com');
-        expect(anchor.getAttribute('target')).toBe('_blank');
-        expect(anchor.getAttribute('rel')).toBe('noopener noreferrer');
-        expect(anchor.textContent.trim()).toBe('External site');
-        expect(anchor.hasAttribute('routerLink')).toBe(false);
+    it('marks the link to the current page', async () => {
+        await renderLink('<ids-flat-link link="/project">Lorem ipsum</ids-flat-link>');
+
+        await TestBed.inject(Router).navigateByUrl('/project');
+
+        const link = screen.getByRole('link', { name: 'Lorem ipsum' });
+        expect(link.getAttribute('aria-current')).toBe('page');
     });
 });
