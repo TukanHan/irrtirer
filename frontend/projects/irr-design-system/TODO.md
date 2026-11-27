@@ -36,16 +36,43 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `_typography.css` - tied to the tolerated `MatIcon`
 
+## styles/global-tokens-only
+
+- [ ] `_typography.css`: global classes `.ids-button-label`, `.ids-menu-item-label`, `.ids-tooltip-label` - replace with typography tokens or shared recipes
+
+## styles/theme-file
+
+- [ ] `ids-theme.css` imports `_typography.css`, which is not shipped in `dist` (resolved by `styles/global-tokens-only`)
+
+## styles/theme-ownership
+
+- [ ] The library never sets `color-scheme`; the app sets it on `.dark-theme` / `.light-theme`
+
+## styles/override-via-tokens
+
+- [ ] App utility `button-content-*` sets `--ids-overridden-button-content-color`, which the library does not declare as a public token
+
+## styles/shared-recipes
+
+- [ ] `styles/shared/ids-flat-action.css` mixes several recipes (layout, state overlay, text shadow) - split into one file per recipe
+- [ ] Repeated state overlay (`::before` + opacity per interaction state) in `menu-item.css` and `side-nav-item.css` - candidate for a shared recipe
+
+## styles/recipe-knobs
+
+- [ ] `flat-link.css` overrides `--ids-flat-action-overlay-opacity` and the content `font-weight` of the flat-action recipe for `[aria-current]` (cause of the `flat-link` `states/state-model` item)
+- [ ] `flat-button`, `flat-link`, `framed-button`, `menu`, `tooltip-panel`: own stylesheet listed before shared files in `styleUrls`
+
 ## Open: Styles (continue later)
 
-- [ ] Token naming pattern: category first (`--ids-color-text-danger`, DTCG style, recommended) or property last (`--ids-text-danger-color`, current majority)
+- [ ] Once the styles decisions are settled: rewrite all component styles against the `styles/*` rules (most of them do not comply yet, so violations are not listed one by one)
 - [ ] Units: a solid rule for what is in `rem` and what in `px`
+- [ ] Cascade layers: the theme file is unlayered, so it beats any token override the app makes inside a `@layer` (the app uses `base`, `external`) and silently breaks `styles/override-via-tokens` - decide whether the theme goes into a named layer (e.g. `@layer ids`)
+- [ ] `:host` `display`: set inconsistently (some components rely on the default `inline`) - decide whether every component declares it
+- [ ] Bug: `framed-button.css` reads undefined `--ids-shadow-layer-1-transparent-mix` and `--ids-shadow-layer-2-transparent-mix`, so its text shadows most likely do not render
 - [ ] Visual style: only an intro exists. Rule candidates discussed but not accepted:
     - `surface-kinds`: floating elements (menu, tooltip) are glass, in-flow controls are solid - intentional or accidental?
-    - `shared-recipes`: recurring effects (glass panel, glow, state overlay) implemented once in `styles/shared/`
-    - `glow-color`: glow color expressed through one `--ids-glow-color` token per variant
+    - `glow-color`: glow color expressed through one token per variant (outdated wording: `--ids-glow-color` is internal now and must follow `styles/token-naming` - restate when visual style is discussed)
     - `reduced-motion`: animations respect `prefers-reduced-motion` (`framed-button` border animation does not)
-- [ ] `color-scheme`: `light-dark()` needs it, the library never sets it (relies on the app) - set it on the theme classes or document it as the app's duty
 
 ## Open: Accessibility
 
@@ -57,6 +84,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Storybook
 
+- [ ] Show a component's public custom properties in its docs - the source of truth for `styles/public-tokens` (Compodoc does not document them); e.g. a docs table or a control setting the token on the host
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)

@@ -283,21 +283,69 @@ A component with persistent states or variants has an extra `States` story showi
 
 Design tokens (CSS custom properties) and theming.
 
+### plain-css · MUST
+
+Library styles are plain CSS files (`.css`), no preprocessor. Components reference them with `styleUrl`/`styleUrls`; no inline `styles`.
+
+**Check:** no `.scss`/`.sass` files and no `styles:` in component decorators.
+
+### global-tokens-only · MUST
+
+Global library stylesheets (the theme file and what it imports) define only custom properties: no classes, no element selectors. Everything else lives in component styles.
+
+**Check:** the theme file and its imports contain only `:root` and theme class blocks with custom property declarations.
+
+### shared-recipes · MUST
+
+A style shared by several components (a recipe: state overlay, glass panel, glow) lives in `styles/shared/`, one recipe per file, and is included through `styleUrls` with a relative path.
+
+**Check:** each file in `styles/shared/` covers one recipe; no rule block is copied between component stylesheets.
+
+### recipe-knobs · MUST
+
+A recipe exposes what a component may change as custom properties. A component sets those properties and does not override the recipe's selectors or properties. In `styleUrls`, shared files come first and the component's own file last.
+
+**Check:** component stylesheets do not repeat recipe selectors; order of `styleUrls`.
+
 ### token-layers · MUST
 
 Tokens form three layers:
 
-1. **Primitive** - raw values without meaning (a palette color, a radius). Defined only in the theme file.
+1. **Primitive** - raw palette colors without meaning. Defined only in the theme file. Other scales (radius, spacing, typography) have no primitive layer and start as semantic tokens.
 2. **Semantic** - meaning (text, surface, border, accent, danger). Defined only in the theme file, built from primitives.
 3. **Component** - a component's own tokens, built from semantic ones.
 
 **Check:** the theme file has no raw values in semantic tokens; component styles define no primitives.
 
+### token-naming · MUST
+
+Each layer has its own name pattern:
+
+| Layer     | Pattern                                 | Examples                                    |
+| --------- | --------------------------------------- | ------------------------------------------- |
+| Primitive | `--ids-palette-<color>-<step>`          | `--ids-palette-gray-10`                     |
+| Semantic  | `--ids-<category>-<role>[-<variant>]`   | `--ids-color-text-muted`, `--ids-radius-md` |
+| Component | `--ids-<component>[-<part>]-<property>` | `--ids-flat-button-content-color`           |
+
+**Check:** compare token names in the theme file and component styles with the patterns.
+
+### class-naming · MUST
+
+Classes describe template structure only and are named `ids-<component>[-<part>]` (`ids-form-field-label`), without BEM `__`/`--`. Every class has the `ids-` prefix, because the app's global styles reach inside components.
+
+**Check:** grep library templates for classes without the `ids-` prefix or with `__`/`--`.
+
+### variant-attributes · MUST
+
+A variant (a value of an `input()` that changes the look, e.g. `variant`, `size`) is reflected as `data-<input>` on the host (`host: { '[attr.data-variant]': 'variant()' }`) and styled with `:host([data-<input>='<value>'])`. States use ARIA and pseudo-classes (`states/aria-state`).
+
+**Check:** no modifier classes in templates; variant selectors use `:host([data-*])`.
+
 ### layer-access · MUST
 
 Components read only semantic tokens and component tokens, never primitives.
 
-**Check:** grep component styles for primitive token names.
+**Check:** grep component styles for `--ids-palette-`.
 
 ### no-literals · MUST
 
@@ -328,3 +376,33 @@ Color differences between themes are expressed only with `light-dark()` in seman
 Values `light-dark()` cannot express (e.g. shadow strength) are overridden by the theme class (`.light-theme`), only in the theme file.
 
 **Check:** theme class selectors appear only in the theme file.
+
+### theme-file · MUST
+
+The library publishes one self-contained theme file with the tokens of both themes and no `@import`. It is the only stylesheet shipped in `dist`.
+
+**Check:** `ng-package.json` assets; the theme file has no `@import`.
+
+### theme-ownership · MUST
+
+The library sets `color-scheme` (`light dark` on `:root`) and defines the theme classes that force one scheme. The app only toggles a theme class.
+
+**Check:** `color-scheme` and the theme classes are declared in the theme file.
+
+### override-via-tokens · MUST
+
+Consumers change the look only through custom properties: globally by overriding semantic tokens, locally by setting public component tokens on an element or its ancestor. Never through selectors targeting the library's internal classes.
+
+**Check:** grep the app styles for `ids-` class selectors and `::ng-deep` into library components.
+
+### public-tokens · MUST
+
+A component's public custom properties are the ones listed in its Storybook docs. All others are internal and may change without notice. Consumers set only public tokens (`styles/override-via-tokens`).
+
+**Check:** custom properties set by the app appear in the docs of the component they target.
+
+### read-only-public-tokens · MUST
+
+The library only reads a public token, with a default (`var(--ids-flat-button-size, 36px)`), and never declares it. A value set by the consumer on the element or any ancestor then always wins.
+
+**Check:** component styles contain no declarations of their public tokens.
