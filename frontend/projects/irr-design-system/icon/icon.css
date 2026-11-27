@@ -1,3 +1,9 @@
+@property --ids-icon-weight {
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 200;
+}
+
 :host {
     display: inline-block;
     flex-shrink: 0;
@@ -6,7 +12,7 @@
     overflow: visible;
     font-family: 'Material Symbols Outlined';
     font-size: var(--ids-icon-size, 24px);
-    font-weight: var(--ids-icon-weight, 200);
+    font-weight: var(--ids-icon-weight);
     font-style: normal;
     font-feature-settings: 'liga';
     line-height: 1;

@@ -3,7 +3,7 @@
 
     .ids-side-nav-item {
         --ids-side-nav-overlay-opacity: 0;
-        --irr-icon-size: 32px;
+        --ids-icon-size: 32px;
         display: flex;
         padding: 12px;
         border-radius: var(--ids-radius-none);
@@ -13,12 +13,9 @@
         color: var(--ids-color-text-muted);
         cursor: pointer;
         transition:
+            --ids-icon-weight 0.2s ease,
             color 0.2s ease,
             text-shadow 0.2s ease;
-
-        .ids-side-nav-item-icon {
-            transition: font-weight 0.2s ease;
-        }
 
         &::before {
             content: '';
@@ -47,12 +44,12 @@
         }
 
         &:active:not([aria-disabled='true']) {
-            --irr-icon-font-weight: 300;
+            --ids-icon-weight: 300;
             --ids-side-nav-overlay-opacity: 0.15;
         }
 
         &[aria-current='page'] {
-            --irr-icon-font-weight: 300;
+            --ids-icon-weight: 300;
             color: var(--ids-color-text-highlight);
             background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
             text-shadow:

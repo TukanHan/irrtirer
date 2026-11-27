@@ -1,6 +1,6 @@
 import { booleanAttribute, Component, input } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsTooltip } from 'irr-design-system/tooltip';
 
 /**
@@ -9,7 +9,7 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
  */
 @Component({
     selector: 'ids-side-nav-item',
-    imports: [RouterLink, RouterLinkActive, IdsTooltip, MatIcon],
+    imports: [RouterLink, RouterLinkActive, IdsTooltip, IdsIcon],
     template: `
         <a
             class="ids-side-nav-item"
@@ -22,7 +22,7 @@ import { IdsTooltip } from 'irr-design-system/tooltip';
             [idsTooltip]="label()"
             idsTooltipPosition="right"
         >
-            <mat-icon class="ids-side-nav-item-icon material-symbols-outlined">{{ icon() }}</mat-icon>
+            <ids-icon [name]="icon()" />
         </a>
     `,
     styleUrl: './side-nav-item.css',
