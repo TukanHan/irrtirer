@@ -56,6 +56,19 @@ describe('ElemBuilder', () => {
         expect(template).toBe('<x-el class="a b" foo="bar" />');
     });
 
+    it('joins styles into one attribute placed after classes and skips empty values', () => {
+        const template = elem('x-el')
+            .withInput('foo', 'bar')
+            .withStyle('--x-color', 'red')
+            .withStyle('--x-size', '')
+            .withStyle('--x-gap', null)
+            .withStyle('--x-width', '2px')
+            .withClass('a')
+            .build();
+
+        expect(template).toBe('<x-el class="a" style="--x-color: red; --x-width: 2px" foo="bar" />');
+    });
+
     it('keeps a single line of text inline', () => {
         const template = elem('x-el').withContent('Lorem ipsum').build();
 

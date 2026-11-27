@@ -25,14 +25,14 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
             <span class="block-label">{{ tilesSetValue.name }}</span>
             <div class="flex -m-1.5">
                 <ids-flat-button
-                    class="ids-flat-button--size-small button-content-contrast-medium"
+                    class="button-size-8 button-content-contrast-medium"
                     [ariaLabel]="'common.moreActions' | translate"
                     [idsMenuTriggerFor]="menu"
                 >
                     <mat-icon>more_vert</mat-icon>
                 </ids-flat-button>
                 <ids-flat-button
-                    class="ids-flat-button--size-small button-content-contrast-medium"
+                    class="button-size-8 button-content-contrast-medium"
                     [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                     (clicked)="toggleTilesList()"
                 >

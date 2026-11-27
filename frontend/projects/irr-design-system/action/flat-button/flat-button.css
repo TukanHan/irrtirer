@@ -1,6 +1,5 @@
 :host {
     --ids-glow-color: var(--ids-color-highlight);
-    --ids-button-content-color: var(--ids-color-text-highlight);
 
     .ids-flat-action {
         &.ids-flat-button--accent,
@@ -11,17 +10,17 @@
 
         &.ids-flat-button--neutral {
             --ids-glow-color: var(--ids-color-text);
-            --ids-button-content-color: var(--ids-color-text);
+            --ids-flat-action-content-color: var(--ids-flat-button-content-color, var(--ids-color-text));
         }
 
         &.ids-flat-button--accent {
             --ids-glow-color: var(--ids-color-highlight);
-            --ids-button-content-color: var(--ids-color-text-highlight);
+            --ids-flat-action-content-color: var(--ids-flat-button-content-color, var(--ids-color-text-highlight));
         }
 
         &.ids-flat-button--danger {
             --ids-glow-color: var(--ids-color-danger);
-            --ids-button-content-color: var(--ids-color-text-danger);
+            --ids-flat-action-content-color: var(--ids-flat-button-content-color, var(--ids-color-text-danger));
         }
 
         &:disabled {
@@ -29,8 +28,4 @@
             cursor: default;
         }
     }
-}
-
-:host(.ids-flat-button--size-small) {
-    --ids-flat-button-size: 32px;
 }

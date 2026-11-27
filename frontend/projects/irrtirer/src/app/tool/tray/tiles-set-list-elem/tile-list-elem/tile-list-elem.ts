@@ -13,7 +13,7 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
         <span class="block-label-sm"> {{ tile().id }} </span>
         <div class="flex -m-1.5">
             <ids-flat-button
-                class="ids-flat-button--size-small button-content-contrast-medium"
+                class="button-size-8 button-content-contrast-medium"
                 [ariaLabel]="'common.moreActions' | translate"
                 [idsMenuTriggerFor]="menu"
             >

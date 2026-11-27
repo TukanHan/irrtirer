@@ -17,7 +17,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## styles/override-via-tokens
 
-- [ ] App utility `button-content-*` sets `--ids-overridden-button-content-color`, which the library does not declare as a public token
+- [ ] `toolbar.scss` (app) sets the internal `--ids-panel-padding` on `.language-panel` through `::ng-deep` with `!important` - the menu needs a public token (e.g. `--ids-menu-padding`)
 
 ## styles/shared-recipes
 
@@ -51,7 +51,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Storybook
 
-- [ ] Show a component's public custom properties in its docs - the source of truth for `styles/public-tokens` (Compodoc does not document them); e.g. a docs table or a control setting the token on the host
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)

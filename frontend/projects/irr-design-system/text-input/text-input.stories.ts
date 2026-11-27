@@ -80,7 +80,7 @@ export const Default: Story = {
                     args.showSuffix &&
                         elem('ids-flat-button')
                             .withAttribute('idsSuffix')
-                            .withClass('ids-flat-button--size-small')
+                            .withStyle('--ids-flat-button-size', '32px')
                             .withOutput('clicked', "searchForm.query().value.set('')")
                             .withContent(elem('mat-icon').withClass('material-symbols-outlined').withContent('close')),
                     elem('ids-error').withContent('@for (error of searchForm.query().errors(); track error.kind) {\n    {{ error.message }}\n}'),

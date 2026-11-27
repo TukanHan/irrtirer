@@ -17,10 +17,10 @@
 
     .action {
         --ids-flat-button-size: 32px;
-        --ids-overridden-button-content-color: var(--color-contrast-medium);
+        --ids-flat-button-content-color: var(--color-contrast-medium);
 
         &.active {
-            --ids-overridden-button-content-color: var(--color-contrast-highest);
+            --ids-flat-button-content-color: var(--color-contrast-highest);
         }
     }
 }

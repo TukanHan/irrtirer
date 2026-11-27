@@ -16,14 +16,14 @@ import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generatio
             <span class="block-label">{{ sector().schema.name }}</span>
             <div class="sector-actions">
                 <ids-flat-button
-                    class="sector-action visibility-icon ids-flat-button--size-small button-content-contrast-medium"
+                    class="sector-action visibility-icon button-size-8 button-content-contrast-medium"
                     [ariaLabel]="(areTilesVisible() ? 'tool.generation.sectorList.hideTiles' : 'tool.generation.sectorList.showTiles') | translate"
                     (clicked)="toggleTilesVisibility()"
                 >
                     <mat-icon class="material-symbols-outlined"> {{ areTilesVisible() ? 'visibility' : 'visibility_off' }} </mat-icon>
                 </ids-flat-button>
                 <ids-flat-button
-                    class="sector-action ids-flat-button--size-small button-content-contrast-medium"
+                    class="sector-action button-size-8 button-content-contrast-medium"
                     [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                     (clicked)="toggleTilesList()"
                 >

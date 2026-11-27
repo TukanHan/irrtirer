@@ -33,7 +33,7 @@ import { SectorsEventBus } from '../sectors-event-bus';
                             <span class="block-label">{{ sector.name }}</span>
 
                             <ids-flat-button
-                                class="sector-actions ids-flat-button--size-small button-content-contrast-medium"
+                                class="sector-actions button-size-8 button-content-contrast-medium"
                                 [ariaLabel]="'common.moreActions' | translate"
                                 (mousedown)="$event.stopPropagation()"
                                 [idsMenuTriggerFor]="menu"

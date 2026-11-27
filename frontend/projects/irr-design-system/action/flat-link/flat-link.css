@@ -1,6 +1,6 @@
 :host {
     --ids-glow-color: var(--ids-color-highlight);
-    --ids-button-content-color: var(--ids-color-text-highlight);
+    --ids-flat-action-content-color: var(--ids-color-text-highlight);
 
     .ids-flat-action {
         --ids-button-text-shadow-idle: var(--ids-button-text-shadow-layer-1);

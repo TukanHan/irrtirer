@@ -1,0 +1,4 @@
+@utility button-size-* {
+    --ids-flat-button-size: calc(var(--spacing) * --value(integer));
+    --ids-flat-button-size: --value([length]);
+}

@@ -58,7 +58,7 @@ import { polygonValidator } from './polygon.validator';
                             <div class="list-item-box" [class.selected]="vertex === selectedVertex()">
                                 <span class="block-label">{{ getVertexLabel(vertex) }}</span>
                                 <ids-flat-button
-                                    class="vertex-remove ids-flat-button--size-small button-content-contrast-medium"
+                                    class="vertex-remove button-size-8 button-content-contrast-medium"
                                     [ariaLabel]="'tool.sectors.sectorContour.removeVertex' | translate"
                                     (clicked)="removeVertex(vertex)"
                                     (mousedown)="$event.stopPropagation()"

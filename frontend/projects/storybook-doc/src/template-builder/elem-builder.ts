@@ -5,6 +5,7 @@ type ContentPart = string | ElemBuilder | false | null | undefined;
 /** Builds an Angular template string for a story, so the Docs snippet shows only the chosen options. */
 export class ElemBuilder {
     private readonly classes: string[] = [];
+    private readonly styles: string[] = [];
     private readonly attributes: string[] = [];
     private readonly content: (string | ElemBuilder)[] = [];
 
@@ -45,6 +46,14 @@ export class ElemBuilder {
         return this;
     }
 
+    /** Inline style declaration, e.g. a public custom property; an empty value is omitted. */
+    public withStyle(property: string, value: string | null | undefined): this {
+        if (value) {
+            this.styles.push(`${property}: ${value}`);
+        }
+        return this;
+    }
+
     public withClass(...names: (string | null | undefined | false)[]): this {
         this.classes.push(...names.filter((name): name is string => !!name));
         return this;
@@ -62,7 +71,8 @@ export class ElemBuilder {
 
     public build(): string {
         const classAttribute = this.classes.length > 0 ? [`class="${this.classes.join(' ')}"`] : [];
-        const opening = [this.tag, ...classAttribute, ...this.attributes].join(' ');
+        const styleAttribute = this.styles.length > 0 ? [`style="${escapeAttribute(this.styles.join('; '))}"`] : [];
+        const opening = [this.tag, ...classAttribute, ...styleAttribute, ...this.attributes].join(' ');
         // Angular allows self-closing only for custom (dashed), void and foreign elements.
         if (this.content.length === 0 && this.tag.includes('-')) {
             return `<${opening} />`;

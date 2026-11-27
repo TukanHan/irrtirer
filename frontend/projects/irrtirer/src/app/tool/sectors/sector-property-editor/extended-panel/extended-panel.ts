@@ -11,7 +11,7 @@ import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-
         <div class="label">
             <span class="label-content">{{ label() }}</span>
             <ids-flat-button
-                class="toggle-button ids-flat-button--size-small"
+                class="toggle-button button-size-8"
                 [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                 (clicked)="toggle()"
             >

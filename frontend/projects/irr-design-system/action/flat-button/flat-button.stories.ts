@@ -1,5 +1,6 @@
 import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { cssPropertyArgTypes } from 'storybook-doc/css-properties';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatButton } from './flat-button';
@@ -9,7 +10,8 @@ type IdsFlatButtonStoryArgs = IdsFlatButton & {
     layout: FlatButtonLayout;
     iconName: string;
     text: string;
-    size: null | 'ids-flat-button--size-small';
+    '--ids-flat-button-content-color': string;
+    '--ids-flat-button-size': string;
 };
 
 const meta: Meta<IdsFlatButtonStoryArgs> = {
@@ -40,13 +42,19 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
             if: { arg: 'layout', neq: 'Icon' },
             table: { category: 'playground' },
         },
-        size: {
-            description: 'Size modifier class on the host; without it the button is 36px.',
-            control: { type: 'inline-radio', labels: { null: 'none' } },
-            options: [null, 'ids-flat-button--size-small'],
-            table: { category: 'class', type: { summary: 'string' } },
-        },
         clicked: { control: false },
+        ...cssPropertyArgTypes({
+            '--ids-flat-button-content-color': {
+                description: 'Color of the content (text, icon) and its glow; overrides the variant color.',
+                syntax: '<color>',
+                defaultValue: 'variant color',
+            },
+            '--ids-flat-button-size': {
+                description: 'Width and height of an icon-only button.',
+                syntax: '<length>',
+                defaultValue: '36px',
+            },
+        }),
     },
 };
 
@@ -58,16 +66,18 @@ export const Default: Story = {
         layout: 'Icon',
         iconName: 'edit',
         text: 'Lorem',
-        size: null,
         ariaLabel: 'Lorem ipsum',
         disabled: false,
         variant: 'neutral',
         type: 'button',
+        '--ids-flat-button-content-color': '',
+        '--ids-flat-button-size': '',
     },
     render: (args) => ({
         props: args,
         template: elem('ids-flat-button')
-            .withClass(args.size)
+            .withStyle('--ids-flat-button-content-color', args['--ids-flat-button-content-color'])
+            .withStyle('--ids-flat-button-size', args['--ids-flat-button-size'])
             .withInput('ariaLabel', args.ariaLabel, '')
             .withInput('variant', args.variant, 'neutral')
             .withInput('type', args.type, 'button')

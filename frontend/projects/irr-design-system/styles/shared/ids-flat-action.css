@@ -12,8 +12,8 @@
     border-radius: var(--ids-action-radius);
     --ids-flat-action-overlay-opacity: 0;
 
-    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-faint), transparent);
-    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-button-content-color) var(--ids-shadow-strength-subtle), transparent);
+    --ids-button-text-shadow-layer-1: 0 0 4px color-mix(in srgb, var(--ids-flat-action-content-color) var(--ids-shadow-strength-faint), transparent);
+    --ids-button-text-shadow-layer-2: 0 0 8px color-mix(in srgb, var(--ids-flat-action-content-color) var(--ids-shadow-strength-subtle), transparent);
 
     --ids-button-text-shadow-idle: none;
     --ids-button-text-shadow-hover: var(--ids-button-text-shadow-layer-1);
@@ -62,7 +62,7 @@
         padding: 0 6px;
         position: relative;
         z-index: 1;
-        color: var(--ids-overridden-button-content-color, var(--ids-button-content-color));
+        color: var(--ids-flat-action-content-color);
         text-shadow: var(--ids-button-text-shadow);
         transition:
             color 0.2s ease,
