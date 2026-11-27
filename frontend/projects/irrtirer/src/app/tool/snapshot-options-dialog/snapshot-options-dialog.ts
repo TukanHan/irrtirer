@@ -1,15 +1,15 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatSliderModule } from '@angular/material/slider';
+import { MatCheckbox } from '@angular/material/checkbox';
+import { MatDialogActions, MatDialogContent, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
+import { MatSlider, MatSliderThumb } from '@angular/material/slider';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
 import { SnapshotOptions } from './snapshot-options.interface';
 
 @Component({
     selector: 'app-snapshot-options-dialog',
-    imports: [MatDialogModule, IdsFlatButton, MatSliderModule, MatCheckboxModule, FormField, TranslatePipe],
+    imports: [MatDialogTitle, MatDialogContent, MatDialogActions, IdsFlatButton, MatSlider, MatSliderThumb, MatCheckbox, FormField, TranslatePipe],
     template: `
         <div class="dialog-content">
             <h1 mat-dialog-title>{{ 'tool.snapshotDialog.title' | translate }}</h1>

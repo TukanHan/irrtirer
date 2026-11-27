@@ -1,5 +1,5 @@
 import { Component, inject, input } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
@@ -8,7 +8,7 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
 
 @Component({
     selector: 'app-tile-list-elem',
-    imports: [MatIconModule, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe],
+    imports: [MatIcon, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe],
     template: `
         <span class="block-label-sm"> {{ tile().id }} </span>
         <div class="flex -m-1.5">

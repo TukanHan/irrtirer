@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
@@ -21,8 +21,8 @@ describe('Tool', () => {
 
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [Tool, RouterModule.forRoot([])],
-            providers: [provideMockStore({ initialState }), provideTranslateService({})],
+            imports: [Tool],
+            providers: [provideRouter([]), provideMockStore({ initialState }), provideTranslateService({})],
         }).compileComponents();
 
         fixture = TestBed.createComponent(Tool);

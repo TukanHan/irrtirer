@@ -1,5 +1,4 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -10,7 +9,7 @@ import { ColorPicker } from '../../../shared/color-picker/color-picker';
 
 @Component({
     selector: 'app-tile-detail',
-    imports: [TranslatePipe, IdsFramedButton, ColorPicker, FormsModule],
+    imports: [TranslatePipe, IdsFramedButton, ColorPicker],
     template: `
         <div class="flex flex-row gap-3">
             <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>
@@ -24,7 +23,7 @@ import { ColorPicker } from '../../../shared/color-picker/color-picker';
                     <div class="text-xs truncate">{{ tile.id }}</div>
                 </div>
 
-                <app-color-picker [disabled]="true" [ngModel]="tile.color" [label]="translate.instant('tool.tiles.details.tileColor')" />
+                <app-color-picker [disabled]="true" [value]="tile.color" [label]="translate.instant('tool.tiles.details.tileColor')" />
             } @else {
                 <div class="m-auto text-contrast-medium">{{ 'tool.tiles.details.tileNoExist' | translate }}</div>
             }

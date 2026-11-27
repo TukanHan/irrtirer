@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -18,7 +18,7 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanel, IdsFlatButton, MatIconModule, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList],
+    imports: [ExpandablePanel, IdsFlatButton, MatIcon, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList],
     template: `
         @let tilesSetValue = tilesSet();
         <div class="list-elem list-item-box">

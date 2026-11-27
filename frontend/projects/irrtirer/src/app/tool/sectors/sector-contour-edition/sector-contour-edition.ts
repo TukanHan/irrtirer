@@ -2,9 +2,9 @@ import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk
 import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FieldState, form, FormField, required } from '@angular/forms/signals';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
+import { MatFormField, MatLabel, MatError } from '@angular/material/form-field';
+import { MatIcon } from '@angular/material/icon';
+import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -27,9 +27,11 @@ import { polygonValidator } from './polygon.validator';
         IdsFlatButton,
         CdkDropList,
         CdkDrag,
-        MatFormFieldModule,
-        MatInputModule,
-        MatIconModule,
+        MatFormField,
+        MatLabel,
+        MatError,
+        MatInput,
+        MatIcon,
         ColorPicker,
         TranslatePipe,
         FormField,

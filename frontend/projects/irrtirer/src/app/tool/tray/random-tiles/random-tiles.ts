@@ -1,9 +1,9 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { form, max, min, required, validate, FieldState, submit, FormField } from '@angular/forms/signals';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatAutocomplete, MatAutocompleteTrigger, MatOption } from '@angular/material/autocomplete';
 import { MatDialog } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MatFormField, MatLabel, MatError, MatSuffix } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -28,7 +28,19 @@ interface RandomTileSetModel {
 
 @Component({
     selector: 'app-random-tiles',
-    imports: [MatFormFieldModule, MatInputModule, TranslatePipe, IdsFramedButton, MatAutocompleteModule, FormField],
+    imports: [
+        MatFormField,
+        MatLabel,
+        MatError,
+        MatSuffix,
+        MatInput,
+        TranslatePipe,
+        IdsFramedButton,
+        MatAutocomplete,
+        MatAutocompleteTrigger,
+        MatOption,
+        FormField,
+    ],
     template: `
         <div class="actions">
             <ids-framed-button class="flex-1" (clicked)="navigateToMenu()"> {{ 'common.return' | translate }} </ids-framed-button>

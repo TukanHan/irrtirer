@@ -1,20 +1,19 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { MatIconModule } from '@angular/material/icon';
-import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
+import { MatIcon } from '@angular/material/icon';
+import { MatRadioButton, MatRadioChange, MatRadioGroup } from '@angular/material/radio';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
 import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
-import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
 import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
 
 @Component({
     selector: 'app-toolbar',
-    imports: [MatIconModule, IconSvgModuleModule, MatRadioModule, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
+    imports: [MatIcon, MatRadioGroup, MatRadioButton, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
     template: `
         <ids-flat-link link="/tool" linkType="internal">
             <span class="text-base">{{ 'title' | translate }}</span>

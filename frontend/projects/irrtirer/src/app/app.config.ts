@@ -6,6 +6,7 @@ import { provideStore } from '@ngrx/store';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { routes } from './app.routes';
+import { provideSvgIcons } from './core/icons/svg-icons';
 import { mosaicProjectReducer } from './core/state/mosaic-project/mosaic-project.reducer';
 import { storageMetaReducer } from './core/state/storage-meta-reducer';
 import { userPreferencesReducer } from './core/state/user-preferences/user-preferences.reducer';
@@ -14,6 +15,7 @@ export const appConfig: ApplicationConfig = {
     providers: [
         provideRouter(routes),
         provideHttpClient(),
+        provideSvgIcons(),
         provideStore(
             {
                 mosaicProject: mosaicProjectReducer,

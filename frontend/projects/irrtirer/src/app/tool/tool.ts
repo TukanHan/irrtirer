@@ -1,7 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { RouterOutlet, RouterModule } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslateService } from '@ngx-translate/core';
 import { map } from 'rxjs';
@@ -16,7 +16,7 @@ import { ToolView } from './tool-view.interface';
 
 @Component({
     selector: 'app-tool',
-    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, RouterModule, Ribbon, ActiveCanvas],
+    imports: [AsyncPipe, IdsSideNav, IdsSideNavItem, RouterOutlet, Ribbon, ActiveCanvas],
     providers: [CanvasToolkit, ProjectArchive],
     template: `
         <ids-side-nav>

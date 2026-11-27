@@ -1,8 +1,8 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField, pattern, required } from '@angular/forms/signals';
-import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MAT_DIALOG_DATA, MatDialogActions, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
+import { MatError, MatFormField } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
 
@@ -16,7 +16,7 @@ interface FileNameFormData {
 
 @Component({
     selector: 'app-project-name-dialog',
-    imports: [MatFormFieldModule, MatInputModule, MatDialogModule, TranslatePipe, FormField, IdsFlatButton],
+    imports: [MatFormField, MatError, MatInput, MatDialogTitle, MatDialogActions, TranslatePipe, FormField, IdsFlatButton],
     template: `
         <h2 mat-dialog-title>{{ 'tool.config.menu.chooseFileName' | translate }}</h2>
 

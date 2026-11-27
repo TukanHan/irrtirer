@@ -1,12 +1,12 @@
 import { Component, inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogActions, MatDialogContent, MatDialogRef, MatDialogTitle } from '@angular/material/dialog';
 import { TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
 import { DialogData } from './dialog-data.interface';
 
 @Component({
     selector: 'app-dialog',
-    imports: [MatDialogModule, IdsFlatButton],
+    imports: [MatDialogTitle, MatDialogContent, MatDialogActions, IdsFlatButton],
     template: `
         <div class="dialog-content">
             <h1 mat-dialog-title>{{ data.title }}</h1>

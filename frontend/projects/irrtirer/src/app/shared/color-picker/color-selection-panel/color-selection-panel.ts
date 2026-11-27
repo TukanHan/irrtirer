@@ -1,6 +1,6 @@
 import { Component, computed, input, linkedSignal, OnDestroy, output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import Color, { ColorInstance } from 'color';
 import { ColorCanvas } from './color-canvas/color-canvas';
 import { ColorSlider } from './color-slider/color-slider';
@@ -9,7 +9,7 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 
 @Component({
     selector: 'app-color-selection-panel',
-    imports: [MatInputModule, FormsModule, ColorSlider, ColorCanvas],
+    imports: [MatFormField, MatLabel, MatInput, ColorSlider, ColorCanvas],
     template: `
         <div class="sv-preview">
             <app-color-canvas [hValue]="hValue()" [sValue]="sValue()" [vValue]="vValue()" (colorChange)="onColorCanvasChanged($event)" />
@@ -24,7 +24,7 @@ const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 
             <mat-form-field class="density-3 code-input" appearance="outline">
                 <mat-label>Hex</mat-label>
-                <input matInput [ngModel]="hexColor()" (change)="onHexCodeChange($event)" />
+                <input matInput [value]="hexColor()" (change)="onHexCodeChange($event)" />
             </mat-form-field>
         </div>
     `,

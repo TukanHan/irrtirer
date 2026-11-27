@@ -1,7 +1,7 @@
 import { Component, computed, effect, inject, signal } from '@angular/core';
 import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MatFormField, MatLabel, MatError, MatSuffix } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -23,7 +23,7 @@ interface ProjectConfigForm {
 
 @Component({
     selector: 'app-config-project',
-    imports: [TranslatePipe, IdsFramedButton, MatFormFieldModule, MatInputModule, FormField],
+    imports: [TranslatePipe, IdsFramedButton, MatFormField, MatLabel, MatError, MatSuffix, MatInput, FormField],
     template: `
         <div class="flex flex-row gap-2.5">
             <ids-framed-button class="flex-1" (clicked)="navigateToConfiguration()"> {{ 'common.return' | translate }} </ids-framed-button>

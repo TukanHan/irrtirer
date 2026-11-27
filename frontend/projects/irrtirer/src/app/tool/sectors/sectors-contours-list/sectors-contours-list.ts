@@ -2,7 +2,7 @@ import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -17,7 +17,7 @@ import { SectorsEventBus } from '../sectors-event-bus';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [IdsFramedButton, MatIconModule, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton],
+    imports: [IdsFramedButton, MatIcon, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton],
     template: `
         <div class="actions">
             <ids-framed-button variant="accent" (clicked)="navigateToNewSectorPanel()">

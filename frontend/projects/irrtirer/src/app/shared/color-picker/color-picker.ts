@@ -1,4 +1,4 @@
-import { OverlayModule } from '@angular/cdk/overlay';
+import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 import { Component, effect, forwardRef, input, model, signal } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FormValueControl } from '@angular/forms/signals';
@@ -7,7 +7,7 @@ import { ColorSelectionPanel } from './color-selection-panel/color-selection-pan
 
 @Component({
     selector: 'app-color-picker',
-    imports: [OverlayModule, ColorSelectionPanel],
+    imports: [CdkConnectedOverlay, CdkOverlayOrigin, ColorSelectionPanel],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

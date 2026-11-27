@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { MatIconTestingModule } from '@angular/material/icon/testing';
+import { MatIconRegistry } from '@angular/material/icon';
+import { FakeMatIconRegistry } from '@angular/material/icon/testing';
 import { beforeEach, vi } from 'vitest';
 import 'vitest-canvas-mock';
 
@@ -12,6 +13,6 @@ globalThis.ResizeObserver = class ResizeObserver {
 
 beforeEach(() => {
     TestBed.configureTestingModule({
-        imports: [MatIconTestingModule],
+        providers: [{ provide: MatIconRegistry, useClass: FakeMatIconRegistry }],
     });
 });

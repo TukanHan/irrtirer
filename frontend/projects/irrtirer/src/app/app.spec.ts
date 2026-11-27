@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
+import { provideRouter } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
@@ -14,8 +14,8 @@ const initialState = {
 describe('App', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
-            imports: [App, RouterModule.forRoot([])],
-            providers: [provideTranslateService({}), provideMockStore({ initialState })],
+            imports: [App],
+            providers: [provideRouter([]), provideTranslateService({}), provideMockStore({ initialState })],
         }).compileComponents();
     });
 

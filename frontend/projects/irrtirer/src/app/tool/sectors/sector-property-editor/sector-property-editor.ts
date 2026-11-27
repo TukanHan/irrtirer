@@ -1,8 +1,8 @@
 import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatError, MatFormField, MatFormFieldDefaultOptions, MatLabel } from '@angular/material/form-field';
+import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -30,7 +30,7 @@ import { ExtendedPanel } from './extended-panel/extended-panel';
             deps: [[new Optional(), new SkipSelf(), MAT_FORM_FIELD_DEFAULT_OPTIONS]],
         },
     ],
-    imports: [IdsFramedButton, MatFormFieldModule, MatInputModule, IdsTooltip, ExtendedPanel, TranslatePipe, FormField],
+    imports: [IdsFramedButton, MatFormField, MatLabel, MatError, MatInput, IdsTooltip, ExtendedPanel, TranslatePipe, FormField],
     template: `
         <div class="flex flex-row gap-2.5">
             <ids-framed-button class="flex-1" (clicked)="cancel()"> {{ 'common.cancel' | translate }} </ids-framed-button>

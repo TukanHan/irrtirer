@@ -1,5 +1,5 @@
 import { Component, inject, input } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
 import { IdsTooltip } from 'irr-design-system/tooltip';
@@ -9,7 +9,7 @@ import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 
 @Component({
     selector: 'app-ribbon',
-    imports: [MatIconModule, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
+    imports: [MatIcon, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
     template: `
         @for (action of actions(); track action.iconName) {
             <ids-flat-button

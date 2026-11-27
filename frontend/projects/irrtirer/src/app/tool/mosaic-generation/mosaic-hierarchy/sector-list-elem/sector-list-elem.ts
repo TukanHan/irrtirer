@@ -1,6 +1,6 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, computed, inject, input, signal } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { IdsFlatButton } from 'irr-design-system/action';
@@ -10,7 +10,7 @@ import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generatio
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [MatIconModule, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
+    imports: [MatIcon, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
     template: `
         <div class="parent-elem list-item-box">
             <span class="block-label">{{ sector().schema.name }}</span>
