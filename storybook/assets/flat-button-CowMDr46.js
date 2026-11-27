@@ -1,0 +1,14 @@
+import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{B as t,C as n,K as r,Lr as i,N as a,S as o,Ur as s,_ as c,c as l,g as u,u as d}from"./core-CjIc2X4A.js";import{n as f,t as p}from"./ids-flat-action-BHcCmysS.js";import{n as m,t as h}from"./ids-action-BItl3Ris.js";import{n as g,t as _}from"./native-control-host-Ce7-H1JR.js";var v;function init_flat_button(){return(init_flat_button=e((()=>{v=`:host{--ids-glow-color:var(--ids-color-highlight);--ids-button-content-color:var(--ids-text-highlight-color)}:host .ids-flat-action.ids-flat-button--accent,:host .ids-flat-action.ids-flat-button--danger{--ids-button-text-shadow-idle:var(--ids-button-text-shadow-layer-1);--ids-button-text-shadow-hover:var(--ids-button-text-shadow-layer-1), var(--ids-button-text-shadow-layer-2)}:host .ids-flat-action.ids-flat-button--neutral{--ids-glow-color:var(--ids-text-color);--ids-button-content-color:var(--ids-text-color)}:host .ids-flat-action.ids-flat-button--accent{--ids-glow-color:var(--ids-color-highlight);--ids-button-content-color:var(--ids-text-highlight-color)}:host .ids-flat-action.ids-flat-button--danger{--ids-glow-color:var(--ids-color-danger);--ids-button-content-color:var(--ids-text-danger-color)}:host .ids-flat-action:disabled{opacity:.5;cursor:default}:host(.ids-flat-button--size-small){--ids-flat-button-size:32px}`})))()}var y;function init_flat_button$1(){return(init_flat_button$1=e((()=>{s(),init_flat_button(),f(),m(),u(),g(),y=class IdsFlatButton{clicked=o();disabled=c(!1,{transform:d});variant=c(`neutral`);type=c(`button`);ariaLabel=c(``);nativeControl=n.required(`control`);static propDecorators={clicked:[{type:r,args:[`clicked`]}],disabled:[{type:t,args:[{isSignal:!0,alias:`disabled`,required:!1,transform:void 0}]}],variant:[{type:t,args:[{isSignal:!0,alias:`variant`,required:!1,transform:void 0}]}],type:[{type:t,args:[{isSignal:!0,alias:`type`,required:!1,transform:void 0}]}],ariaLabel:[{type:t,args:[{isSignal:!0,alias:`ariaLabel`,required:!1,transform:void 0}]}],nativeControl:[{type:l,args:[`control`,{isSignal:!0}]}]}},y=i([a({selector:`ids-flat-button`,providers:[{provide:_,useExisting:y}],template:`
+        <button
+            #control
+            class="ids-flat-action ids-flat-button--{{ variant() }}"
+            [disabled]="disabled()"
+            [type]="type()"
+            [attr.aria-label]="ariaLabel() || null"
+            (click)="clicked.emit($event)"
+        >
+            <span class="ids-flat-action-content ids-button-label">
+                <ng-content />
+            </span>
+        </button>
+    `,styles:[v,p,h]})],y)})))()}export{init_flat_button$1 as n,y as t};
