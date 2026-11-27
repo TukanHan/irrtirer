@@ -21,12 +21,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## styles/token-naming
 
-- [ ] `ids-theme.css`: most semantic color tokens do not follow `--ids-color-<role>[-<variant>]` (e.g. `--ids-text-color`, `--ids-panel-surface-color`)
 - [ ] App `ribbon.scss` reads the removed `--ids-color-black`, so its shadow does not render - use `--ids-color-shadow`
-
-## styles/component-token-scope
-
-- [ ] `ids-theme.css`: `--ids-tooltip-surface-color`, `--ids-sidenav-surface-color` are used by one component each - move to its `:host`
 
 ## styles/ids-prefix-only
 

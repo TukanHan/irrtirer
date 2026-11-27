@@ -19,31 +19,28 @@
     --ids-palette-orange-60: #d58100;
     --ids-palette-red-40: #ff302b;
 
+    --ids-color-surface-control: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-90));
+    --ids-color-surface-field: light-dark(var(--ids-palette-gray-10), var(--ids-palette-gray-80));
+    --ids-color-surface-panel: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-85));
+    --ids-color-surface-floating: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
+
+    --ids-color-border: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-80));
+    --ids-color-border-field: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
+    --ids-color-border-panel: light-dark(var(--ids-palette-gray-15), var(--ids-palette-gray-80));
+
+    --ids-color-text-strong: light-dark(var(--ids-palette-black), var(--ids-palette-white));
+    --ids-color-text: light-dark(var(--ids-palette-gray-85), var(--ids-palette-gray-10));
+    --ids-color-text-secondary: light-dark(var(--ids-palette-gray-80), var(--ids-palette-gray-20));
+    --ids-color-text-muted: light-dark(var(--ids-palette-gray-65), var(--ids-palette-gray-30));
+    --ids-color-text-highlight: light-dark(var(--ids-palette-gray-85), var(--ids-palette-blue-40));
+    --ids-color-text-danger: var(--ids-palette-red-40);
+
     --ids-color-accent: light-dark(var(--ids-palette-orange-40), var(--ids-palette-orange-60));
     --ids-color-highlight: light-dark(var(--ids-palette-blue-40), var(--ids-palette-blue-60));
     --ids-color-danger: var(--ids-palette-red-40);
+
+    --ids-color-overlay: light-dark(var(--ids-palette-black), var(--ids-palette-white));
     --ids-color-shadow: var(--ids-palette-black);
-
-    --ids-border-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-80));
-    --ids-solid-control-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-90));
-
-    --ids-form-control-border-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
-    --ids-form-control-surface-color: light-dark(var(--ids-palette-gray-10), var(--ids-palette-gray-80));
-
-    --ids-panel-surface-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-85));
-    --ids-panel-border-color: light-dark(var(--ids-palette-gray-15), var(--ids-palette-gray-80));
-    --ids-tooltip-surface-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
-
-    --ids-sidenav-surface-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-80));
-
-    --ids-element-surface-contrast-color: light-dark(var(--ids-palette-black), var(--ids-palette-white));
-
-    --ids-text-muted-hover-color: light-dark(var(--ids-palette-black), var(--ids-palette-white));
-    --ids-text-muted-color: light-dark(var(--ids-palette-gray-65), var(--ids-palette-gray-30));
-    --ids-text-low-emphasis-color: light-dark(var(--ids-palette-gray-80), var(--ids-palette-gray-20));
-    --ids-text-color: light-dark(var(--ids-palette-gray-85), var(--ids-palette-gray-10));
-    --ids-text-highlight-color: light-dark(var(--ids-palette-gray-85), var(--ids-palette-blue-40));
-    --ids-text-danger-color: var(--ids-palette-red-40);
 
     --ids-font-size-xs: 0.75rem;
     --ids-font-size-sm: 0.875rem;

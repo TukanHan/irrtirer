@@ -6,7 +6,7 @@
 
 :host {
     --ids-glow-color: var(--ids-color-highlight);
-    --ids-button-content-color: var(--ids-text-color);
+    --ids-button-content-color: var(--ids-color-text);
 
     .ids-framed-button {
         display: block;
@@ -27,18 +27,18 @@
 
         &.ids-framed-button--neutral {
             --ids-glow-color: var(--ids-color-highlight);
-            --ids-button-border-color: var(--ids-border-color);
+            --ids-button-border-color: var(--ids-color-border);
         }
 
         &.ids-framed-button--accent {
             --ids-glow-color: var(--ids-color-accent);
-            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
+            --ids-button-border-color: color-mix(in srgb, var(--ids-color-border) 30%, var(--ids-glow-color));
         }
 
         &.ids-framed-button--danger {
             --ids-glow-color: var(--ids-color-danger);
-            --ids-button-border-color: color-mix(in srgb, var(--ids-border-color) 30%, var(--ids-glow-color));
-            --ids-button-content-color: var(--ids-text-danger-color);
+            --ids-button-border-color: color-mix(in srgb, var(--ids-color-border) 30%, var(--ids-glow-color));
+            --ids-button-content-color: var(--ids-color-text-danger);
         }
 
         &::before,
@@ -79,7 +79,7 @@
 
         &:active:not(:disabled) {
             .ids-framed-button-content {
-                background-color: color-mix(in srgb, var(--ids-solid-control-color) 95%, var(--ids-glow-color));
+                background-color: color-mix(in srgb, var(--ids-color-surface-control) 95%, var(--ids-glow-color));
             }
         }
 
@@ -112,7 +112,7 @@
             display: block;
             position: relative;
             z-index: 1;
-            background-color: var(--ids-solid-control-color);
+            background-color: var(--ids-color-surface-control);
             border-radius: inherit;
             padding: 0.5rem 1rem;
             color: var(--ids-button-content-color);

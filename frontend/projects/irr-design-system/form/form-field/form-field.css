@@ -19,9 +19,9 @@
 
         height: calc(1.5rem + 2 * 0.5rem);
 
-        border: 1px solid var(--ids-form-control-border-color);
+        border: 1px solid var(--ids-color-border-field);
         box-shadow: var(--ids-form-field-shadow);
-        background-color: var(--ids-form-control-surface-color);
+        background-color: var(--ids-color-surface-field);
         border-radius: var(--ids-radius-medium);
         padding: 0.5rem 1rem;
         transition: box-shadow 0.25s ease;

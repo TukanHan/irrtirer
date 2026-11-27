@@ -10,7 +10,7 @@
         outline: 0;
         position: relative;
         isolation: isolate;
-        color: var(--ids-text-muted-color);
+        color: var(--ids-color-text-muted);
         cursor: pointer;
         transition:
             color 0.2s ease,
@@ -35,7 +35,7 @@
 
         &:hover:not([aria-disabled='true']),
         &:focus-visible:not([aria-disabled='true']) {
-            color: var(--ids-text-muted-hover-color);
+            color: var(--ids-color-text-strong);
         }
 
         &:hover:not([aria-disabled='true']):not(:active) {
@@ -53,7 +53,7 @@
 
         &[aria-current='page'] {
             --irr-icon-font-weight: 300;
-            color: var(--ids-text-highlight-color);
+            color: var(--ids-color-text-highlight);
             background-color: color-mix(in srgb, var(--ids-color-highlight) 10%, transparent);
             text-shadow:
                 0 0 4px color-mix(in srgb, var(--ids-color-highlight) var(--ids-shadow-strength-faint), transparent),

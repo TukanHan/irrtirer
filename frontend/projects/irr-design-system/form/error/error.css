@@ -1,6 +1,6 @@
 :host {
     display: block;
-    color: var(--ids-text-danger-color);
+    color: var(--ids-color-text-danger);
     font-size: 12px;
     font-weight: 500;
 }

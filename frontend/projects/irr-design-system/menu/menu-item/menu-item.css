@@ -14,9 +14,9 @@
         isolation: isolate;
         padding: 0.25rem 0.75rem;
         cursor: pointer;
-        color: var(--ids-text-muted-color);
+        color: var(--ids-color-text-muted);
         white-space: nowrap;
-        text-shadow: 0px 0px 6px color-mix(in srgb, var(--ids-text-muted-color) var(--ids-shadow-strength-faint), transparent);
+        text-shadow: 0px 0px 6px color-mix(in srgb, var(--ids-color-text-muted) var(--ids-shadow-strength-faint), transparent);
         transition: color 0.2s ease;
 
         &::before {
@@ -25,7 +25,7 @@
             inset: 0;
             z-index: -1;
             border-radius: inherit;
-            background-color: var(--ids-element-surface-contrast-color);
+            background-color: var(--ids-color-overlay);
             opacity: var(--ids-menu-action-overlay-opacity);
             pointer-events: none;
             transition: opacity 0.2s ease;
@@ -33,7 +33,7 @@
 
         &:hover:not(:disabled),
         &:focus-visible:not(:disabled) {
-            color: var(--ids-text-muted-hover-color);
+            color: var(--ids-color-text-strong);
         }
 
         &:hover:not(:disabled) {

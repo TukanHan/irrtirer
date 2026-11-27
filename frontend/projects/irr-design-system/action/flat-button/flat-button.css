@@ -1,6 +1,6 @@
 :host {
     --ids-glow-color: var(--ids-color-highlight);
-    --ids-button-content-color: var(--ids-text-highlight-color);
+    --ids-button-content-color: var(--ids-color-text-highlight);
 
     .ids-flat-action {
         &.ids-flat-button--accent,
@@ -10,18 +10,18 @@
         }
 
         &.ids-flat-button--neutral {
-            --ids-glow-color: var(--ids-text-color);
-            --ids-button-content-color: var(--ids-text-color);
+            --ids-glow-color: var(--ids-color-text);
+            --ids-button-content-color: var(--ids-color-text);
         }
 
         &.ids-flat-button--accent {
             --ids-glow-color: var(--ids-color-highlight);
-            --ids-button-content-color: var(--ids-text-highlight-color);
+            --ids-button-content-color: var(--ids-color-text-highlight);
         }
 
         &.ids-flat-button--danger {
             --ids-glow-color: var(--ids-color-danger);
-            --ids-button-content-color: var(--ids-text-danger-color);
+            --ids-button-content-color: var(--ids-color-text-danger);
         }
 
         &:disabled {
