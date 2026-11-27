@@ -11,7 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     imports: [NgTemplateOutlet, RouterLink, RouterLinkActive],
     template: `
         <ng-template #linkContent>
-            <span class="ids-flat-action-content ids-button-label">
+            <span class="ids-flat-action-content ids-type-label-lg">
                 <ng-content />
             </span>
         </ng-template>
@@ -26,7 +26,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </a>
         }
     `,
-    styleUrls: ['./flat-link.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
+    styleUrls: [
+        './flat-link.css',
+        '../../styles/shared/ids-flat-action.css',
+        '../../styles/shared/ids-action.css',
+        '../../styles/shared/typography/ids-type-label-lg.css',
+    ],
 })
 export class IdsFlatLink {
     /** Router path for an `internal` link, full URL for an `external` one. */

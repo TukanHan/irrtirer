@@ -1,0 +1,5 @@
+.ids-type-label-lg {
+    font-size: var(--ids-font-size-base);
+    font-weight: 500;
+    line-height: var(--ids-line-height-base);
+}

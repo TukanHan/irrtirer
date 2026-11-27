@@ -1,0 +1,4 @@
+.ids-type-label-sm {
+    font-size: var(--ids-font-size-xs);
+    line-height: var(--ids-line-height-xs);
+}

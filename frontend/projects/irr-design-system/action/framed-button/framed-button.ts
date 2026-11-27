@@ -19,12 +19,12 @@ export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
             [attr.aria-label]="ariaLabel() || null"
             (click)="clicked.emit($event)"
         >
-            <span class="ids-framed-button-content ids-button-label">
+            <span class="ids-framed-button-content ids-type-label-lg">
                 <ng-content />
             </span>
         </button>
     `,
-    styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css'],
+    styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css', '../../styles/shared/typography/ids-type-label-lg.css'],
 })
 export class IdsFramedButton implements Clickable, NativeControlHost {
     /** Emitted when the button is activated by click, `Enter` or `Space`; never while disabled. */

@@ -34,15 +34,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## styles/ids-prefix-only
 
-- [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `_typography.css` - tied to the tolerated `MatIcon`
-
-## styles/global-tokens-only
-
-- [ ] `_typography.css`: global classes `.ids-button-label`, `.ids-menu-item-label`, `.ids-tooltip-label` - replace with typography tokens or shared recipes
-
-## styles/theme-file
-
-- [ ] `ids-theme.css` imports `_typography.css`, which is not shipped in `dist` (resolved by `styles/global-tokens-only`)
+- [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `menu-item.css` - tied to the tolerated `MatIcon`
 
 ## styles/override-via-tokens
 

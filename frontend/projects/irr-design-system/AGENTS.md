@@ -11,4 +11,4 @@ Every component follows `STANDARD.md`. Before creating or changing a component, 
 ## Facts
 
 - Consumers import entry points: `import { IdsTextInput } from 'irr-design-system/text-input'`.
-- Tokens and shared styles: `styles/` (`ids-theme.css`, `_typography.css`, `shared/`).
+- Tokens and shared styles: `styles/` (`ids-theme.css`, `shared/`).

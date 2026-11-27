@@ -1,5 +1,3 @@
-@import './_typography.css';
-
 :root {
     color-scheme: light dark;
 
@@ -36,6 +34,17 @@
     --ids-text-color: light-dark(#383838, var(--ids-color-gray-10));
     --ids-text-highlight-color: light-dark(#272b2f, #2592ff);
     --ids-text-danger-color: #fc2727;
+
+    --ids-font-size-xs: 0.75rem;
+    --ids-font-size-sm: 0.875rem;
+    --ids-font-size-base: 1rem;
+    --ids-font-size-lg: 1.125rem;
+    --ids-font-size-xl: 1.25rem;
+    --ids-line-height-xs: calc(1 / 0.75);
+    --ids-line-height-sm: calc(1.25 / 0.875);
+    --ids-line-height-base: 1.5;
+    --ids-line-height-lg: calc(1.75 / 1.125);
+    --ids-line-height-xl: calc(1.75 / 1.25);
 
     --ids-radius-medium: 6px;
     --ids-radius-none: 0;

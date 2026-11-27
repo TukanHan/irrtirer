@@ -19,12 +19,17 @@ export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
             [attr.aria-label]="ariaLabel() || null"
             (click)="clicked.emit($event)"
         >
-            <span class="ids-flat-action-content ids-button-label">
+            <span class="ids-flat-action-content ids-type-label-lg">
                 <ng-content />
             </span>
         </button>
     `,
-    styleUrls: ['./flat-button.css', '../../styles/shared/ids-flat-action.css', '../../styles/shared/ids-action.css'],
+    styleUrls: [
+        './flat-button.css',
+        '../../styles/shared/ids-flat-action.css',
+        '../../styles/shared/ids-action.css',
+        '../../styles/shared/typography/ids-type-label-lg.css',
+    ],
 })
 export class IdsFlatButton implements Clickable, NativeControlHost {
     /** Emitted when the button is activated by click, `Enter` or `Space`; never while disabled. */

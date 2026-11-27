@@ -333,6 +333,8 @@ Each layer has its own name pattern:
 
 Classes describe template structure only and are named `ids-<component>[-<part>]` (`ids-form-field-label`), without BEM `__`/`--`. Every class has the `ids-` prefix, because the app's global styles reach inside components.
 
+Exception: typography recipes in `styles/shared/typography/` describe a text role, named `ids-type-<role>-<size>` (`ids-type-label-md`).
+
 **Check:** grep library templates for classes without the `ids-` prefix or with `__`/`--`.
 
 ### variant-attributes · MUST

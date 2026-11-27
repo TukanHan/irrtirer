@@ -9,7 +9,7 @@ import { Clickable, NativeControlHost } from 'irr-design-system/internal';
             #control
             role="menuitem"
             tabindex="-1"
-            class="ids-menu-item ids-menu-item-label"
+            class="ids-menu-item ids-type-label-md"
             type="button"
             [disabled]="disabled()"
             (click)="clicked.emit($event)"
@@ -17,7 +17,7 @@ import { Clickable, NativeControlHost } from 'irr-design-system/internal';
             <ng-content />
         </button>
     `,
-    styleUrl: './menu-item.css',
+    styleUrls: ['./menu-item.css', '../../styles/shared/typography/ids-type-label-md.css'],
 })
 export class IdsMenuItem implements Clickable, NativeControlHost {
     /** Emitted when the item is activated by click, `Enter` or `Space`. */
