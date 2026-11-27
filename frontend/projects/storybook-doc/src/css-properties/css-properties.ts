@@ -3,7 +3,7 @@ import type { ArgTypes } from '@storybook/angular';
 export interface CssPropertyDoc {
     description: string;
     /** CSS value type, shown in the docs table; `<color>` gets a color picker. */
-    syntax: '<color>' | '<length>';
+    syntax: '<color>' | '<length>' | '<number>';
     /** What applies when the property is not set, e.g. `36px` or `variant color`. */
     defaultValue: string;
     /** `false` hides the control, e.g. for a token the story cannot apply with `withStyle`. */

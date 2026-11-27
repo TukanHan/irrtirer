@@ -210,6 +210,7 @@ The class JSDoc says where the component's roles and keyboard support come from:
 
 - **Native element** (`button`, `a`, `nav`, `input`): from the browser. `Renders a native <button>.`
 - **Overlay or several cooperating parts** (menu, tooltip, tabs, dialog...): from its APG pattern, implemented in full (roles, keyboard, focus management). `Implements the [APG <Name> pattern](<url>).`
+- **Decorative** (no role, hidden with `aria-hidden`): says so. `Hidden from assistive technology.`
 
 **Check:** the class JSDoc has one of these lines; for a pattern, the spec covers its roles and keyboard interactions.
 
@@ -410,3 +411,14 @@ A component's public custom properties are the ones listed in its Storybook docs
 The library only reads a public token, with a default (`var(--ids-flat-button-size, 36px)`), and never declares it. A value set by the consumer on the element or any ancestor then always wins.
 
 **Check:** component styles contain no declarations of their public tokens.
+
+## Performance
+
+Not checked on every change. On an audit, look for fragile points:
+
+- work repeated in every instance that could be done once and shared,
+- work repeated on every change detection, event or signal change that could run less often,
+- listeners, timers or observers active while nothing happens,
+- behavior when rendered many times (lists).
+
+Compare with the Material counterpart only when one of these looks suspicious.

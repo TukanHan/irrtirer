@@ -15,6 +15,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `menu-item.css` - tied to the tolerated `MatIcon`
 
+## styles/override-via-tokens
+
+- [ ] `tooltip`: the panel is rendered in an overlay, so consumers cannot reach it with tokens - add a `panelClass` input like `ids-menu` (with a public token, e.g. `--ids-tooltip-padding`, once one is needed)
+
 ## styles/shared-recipes
 
 - [ ] `styles/shared/ids-flat-action.css` mixes several recipes (layout, state overlay, text shadow) - split into one file per recipe
@@ -29,7 +33,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] Once the styles decisions are settled: rewrite all component styles against the `styles/*` rules (most of them do not comply yet, so violations are not listed one by one)
 - [ ] Units: a solid rule for what is in `rem` and what in `px`
-- [ ] Cascade layers: the theme file is unlayered, so it beats any token override the app makes inside a `@layer` (the app uses `base`, `external`) and silently breaks `styles/override-via-tokens` - decide whether the theme goes into a named layer (e.g. `@layer ids`)
 - [ ] `:host` `display`: set inconsistently (some components rely on the default `inline`) - decide whether every component declares it
 - [ ] Bug: `framed-button.css` reads undefined `--ids-shadow-layer-1-transparent-mix` and `--ids-shadow-layer-2-transparent-mix`, so its text shadows most likely do not render
 - [ ] Visual style: only an intro exists. Rule candidates discussed but not accepted:
@@ -39,7 +42,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Icon
 
-- [ ] Own `ids-icon` replacing `MatIcon`: the app and the library depend on it and patch it ad hoc (`--irr-icon-*`, direct `mat-icon` selectors such as in `sector-list-elem.scss`) - explore an icon component with public tokens (size, weight)
+`ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); `MatIcon` still to be replaced.
+
+- [ ] Library: replace `mat-icon` with `ids-icon` in components and stories, `--irr-icon-*` with `--ids-icon-*` (negative margins move to `ids-flat-action.css`) - **this removes the last Angular Material dependency from `ids`**: then drop `MatIcon` from `Tolerated` in `STANDARD.md` and the `styles/ids-prefix-only` item above
+- [ ] App: replace `mat-icon` with `ids-icon`, register the SVGs in `svg-icons.ts` with `IdsIconRegistry`, then remove the `Material Icons` font from `styles.scss`, `_icon-theme.scss`, direct `mat-icon` selectors (e.g. `sector-list-elem.scss`) and `FakeMatIconRegistry` from `test-setup.ts`
 
 ## Open: Accessibility
 

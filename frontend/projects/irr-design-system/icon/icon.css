@@ -1,0 +1,19 @@
+:host {
+    display: inline-block;
+    flex-shrink: 0;
+    width: var(--ids-icon-size, 24px);
+    height: var(--ids-icon-size, 24px);
+    overflow: visible;
+    font-family: 'Material Symbols Outlined';
+    font-size: var(--ids-icon-size, 24px);
+    font-weight: var(--ids-icon-weight, 200);
+    font-style: normal;
+    font-feature-settings: 'liga';
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    direction: ltr;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
