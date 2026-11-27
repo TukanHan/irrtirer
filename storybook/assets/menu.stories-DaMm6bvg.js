@@ -1,0 +1,82 @@
+import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{B as t,C as n,Er as r,I as i,J as a,Jn as o,K as ee,Kn as s,L as c,Lr as l,N as u,S as d,Tr as f,Ur as p,Vn as te,X as ne,Zn as m,_ as h,ar as g,c as _,cr as re,dt as ie,f as ae,g as v,i as oe,l as se,lr as ce,nr as le,or as y,sr as ue,tr as de,u as fe,ur as pe,wn as b}from"./core-CjIc2X4A.js";import{i as x,r as S}from"./timer-B6Orrris.js";import{n as C,t as w}from"./tap-6zKMxfSh.js";import{n as T,t as E}from"./filter-EU0XwhQy.js";import{b as D,t as O,u as k,x as A}from"./_overlay-module-chunk-H_xHnecq.js";import{n as j,o as M}from"./iframe-lGIe1z2d.js";import{n as N,t as P}from"./icon-BgEspuO0.js";import{a as F,n as I,t as L}from"./public-api-BiLccHIJ.js";import{n as R,t as z}from"./elem-builder-B342_OgR.js";import{n as B,t as me}from"./native-control-host-Ce7-H1JR.js";import{n as V,t as H}from"./identity-counter-DaYfLgwy.js";import{n as he,t as ge}from"./framed-button-C65uvBYm.js";import{n as _e,t as ve}from"./ids-panel-AYW87ZzA.js";function debounceTime(e,t){return t===void 0&&(t=S),pe(function(n,r){var i=null,a=null,o=null,emit=function(){if(i){i.unsubscribe(),i=null;var e=a;a=null,r.next(e)}};function emitWhenIdle(){var n=o+e,a=t.now();a<n?(i=this.schedule(void 0,n-a),r.add(i)):emit()}n.subscribe(ue(r,function(n){a=n,o=t.now(),i||(i=t.schedule(emitWhenIdle,e),r.add(i))},function(){emit(),r.complete()},void 0,function(){a=i=null}))})}function init_debounceTime(){return(init_debounceTime=e((()=>{x(),ce(),re()})))()}var U;function init_menu(){return(init_menu=e((()=>{U=`:host{display:none}.ids-menu-panel{--ids-panel-padding:.25rem .25rem;flex-direction:column;min-width:200px;display:flex}`})))()}var W,Typeahead;function init__typeahead_chunk(){return(init__typeahead_chunk=e((()=>{y(),w(),init_debounceTime(),T(),de(),W=200,Typeahead=class{_letterKeyStream=new g;_items=[];_selectedItemIndex=-1;_pressedLetters=[];_skipPredicateFn;_selectedItem=new g;selectedItem=this._selectedItem;constructor(e,t){let n=typeof t?.debounceInterval==`number`?t.debounceInterval:W;t?.skipPredicate&&(this._skipPredicateFn=t.skipPredicate),this.setItems(e),this._setupKeyHandler(n)}destroy(){this._pressedLetters=[],this._letterKeyStream.complete(),this._selectedItem.complete()}setCurrentSelectedItemIndex(e){this._selectedItemIndex=e}setItems(e){this._items=e}handleKey(e){let t=e.keyCode;e.key&&e.key.length===1?this._letterKeyStream.next(e.key.toLocaleUpperCase()):(t>=65&&t<=90||t>=48&&t<=57)&&this._letterKeyStream.next(String.fromCharCode(t))}isTyping(){return this._pressedLetters.length>0}reset(){this._pressedLetters=[]}_setupKeyHandler(e){this._letterKeyStream.pipe(C(e=>this._pressedLetters.push(e)),debounceTime(e),E(()=>this._pressedLetters.length>0),le(()=>this._pressedLetters.join(``).toLocaleUpperCase())).subscribe(e=>{for(let t=1;t<this._items.length+1;t++){let n=(this._selectedItemIndex+t)%this._items.length,r=this._items[n];if(!this._skipPredicateFn?.(r)&&r.getLabel?.().toLocaleUpperCase().trim().indexOf(e)===0){this._selectedItem.next(r);break}}this._pressedLetters=[]})}}})))()}var ListKeyManager;function init__list_key_manager_chunk(){return(init__list_key_manager_chunk=e((()=>{v(),r(),y(),init__typeahead_chunk(),A(),ListKeyManager=class{_items;_activeItemIndex=m(-1);_activeItem=m(null);_wrap=!1;_typeaheadSubscription=f.EMPTY;_itemChangesSubscription;_vertical=!0;_horizontal=null;_allowedModifierKeys=[];_homeAndEnd=!1;_pageUpAndDown={enabled:!1,delta:10};_effectRef;_typeahead;_skipPredicateFn=e=>e.disabled;constructor(e,t){this._items=e,e instanceof a?this._itemChangesSubscription=e.changes.subscribe(e=>this._itemsChanged(e.toArray())):o(e)&&(this._effectRef=te(()=>this._itemsChanged(e()),{injector:t}))}tabOut=new g;change=new g;skipPredicate(e){return this._skipPredicateFn=e,this}withWrap(e=!0){return this._wrap=e,this}withVerticalOrientation(e=!0){return this._vertical=e,this}withHorizontalOrientation(e){return this._horizontal=e,this}withAllowedModifierKeys(e){return this._allowedModifierKeys=e,this}withTypeAhead(e=200){this._typeaheadSubscription.unsubscribe();let t=this._getItemsArray();return this._typeahead=new Typeahead(t,{debounceInterval:typeof e==`number`?e:void 0,skipPredicate:e=>this._skipPredicateFn(e)}),this._typeaheadSubscription=this._typeahead.selectedItem.subscribe(e=>{this.setActiveItem(e)}),this}cancelTypeahead(){return this._typeahead?.reset(),this}withHomeAndEnd(e=!0){return this._homeAndEnd=e,this}withPageUpDown(e=!0,t=10){return this._pageUpAndDown={enabled:e,delta:t},this}setActiveItem(e){let t=this._activeItem();this.updateActiveItem(e),this._activeItem()!==t&&this.change.next(this._activeItemIndex())}onKeydown(e){let t=e.keyCode,n=[`altKey`,`ctrlKey`,`metaKey`,`shiftKey`].every(t=>!e[t]||this._allowedModifierKeys.indexOf(t)>-1);switch(t){case 9:this.tabOut.next();return;case 40:if(this._vertical&&n){this.setNextItemActive();break}return;case 38:if(this._vertical&&n){this.setPreviousItemActive();break}return;case 39:if(this._horizontal&&n){this._horizontal===`rtl`?this.setPreviousItemActive():this.setNextItemActive();break}return;case 37:if(this._horizontal&&n){this._horizontal===`rtl`?this.setNextItemActive():this.setPreviousItemActive();break}return;case 36:if(this._homeAndEnd&&n){this.setFirstItemActive();break}return;case 35:if(this._homeAndEnd&&n){this.setLastItemActive();break}return;case 33:if(this._pageUpAndDown.enabled&&n){let e=this._activeItemIndex()-this._pageUpAndDown.delta;this._setActiveItemByIndex(e>0?e:0,1);break}return;case 34:if(this._pageUpAndDown.enabled&&n){let e=this._activeItemIndex()+this._pageUpAndDown.delta,t=this._getItemsArray().length;this._setActiveItemByIndex(e<t?e:t-1,-1);break}return;default:(n||D(e,`shiftKey`))&&this._typeahead?.handleKey(e);return}this._typeahead?.reset(),e.preventDefault()}get activeItemIndex(){return this._activeItemIndex()}get activeItem(){return this._activeItem()}isTyping(){return!!this._typeahead&&this._typeahead.isTyping()}setFirstItemActive(){this._setActiveItemByIndex(0,1)}setLastItemActive(){this._setActiveItemByIndex(this._getItemsArray().length-1,-1)}setNextItemActive(){this._activeItemIndex()<0?this.setFirstItemActive():this._setActiveItemByDelta(1)}setPreviousItemActive(){this._activeItemIndex()<0&&this._wrap?this.setLastItemActive():this._setActiveItemByDelta(-1)}updateActiveItem(e){let t=this._getItemsArray(),n=typeof e==`number`?e:t.indexOf(e),r=t[n];this._activeItem.set(r??null),this._activeItemIndex.set(n),this._typeahead?.setCurrentSelectedItemIndex(n)}destroy(){this._typeaheadSubscription.unsubscribe(),this._itemChangesSubscription?.unsubscribe(),this._effectRef?.destroy(),this._typeahead?.destroy(),this.tabOut.complete(),this.change.complete()}_setActiveItemByDelta(e){this._wrap?this._setActiveInWrapMode(e):this._setActiveInDefaultMode(e)}_setActiveInWrapMode(e){let t=this._getItemsArray();for(let n=1;n<=t.length;n++){let r=(this._activeItemIndex()+e*n+t.length)%t.length,i=t[r];if(!this._skipPredicateFn(i)){this.setActiveItem(r);return}}}_setActiveInDefaultMode(e){this._setActiveItemByIndex(this._activeItemIndex()+e,e)}_setActiveItemByIndex(e,t){let n=this._getItemsArray();if(n[e]){for(;this._skipPredicateFn(n[e]);)if(e+=t,!n[e])return;this.setActiveItem(e)}}_getItemsArray(){return o(this._items)?this._items():this._items instanceof a?this._items.toArray():this._items}_itemsChanged(e){this._typeahead?.setItems(e);let t=this._activeItem();if(t){let n=e.indexOf(t);n>-1&&n!==this._activeItemIndex()&&(this._activeItemIndex.set(n),this._typeahead?.setCurrentSelectedItemIndex(n))}}}})))()}var G;function init_menu_item(){return(init_menu_item=e((()=>{G=`:host{display:block}:host .ids-menu-item{--ids-menu-action-overlay-opacity:0;border-radius:var(--ids-radius-medium);isolation:isolate;cursor:pointer;width:100%;color:var(--ids-text-muted-color);white-space:nowrap;text-shadow:0px 0px 6px color-mix(in srgb, var(--ids-text-muted-color) var(--ids-shadow-strength-faint), transparent);outline:0;align-items:center;gap:.5rem;padding:.25rem .75rem;transition:color .2s;display:flex;position:relative}:host .ids-menu-item:before{content:"";z-index:-1;border-radius:inherit;background-color:var(--ids-element-surface-contrast-color);opacity:var(--ids-menu-action-overlay-opacity);pointer-events:none;transition:opacity .2s;position:absolute;inset:0}:host .ids-menu-item:hover:not(:disabled),:host .ids-menu-item:focus-visible:not(:disabled){color:var(--ids-text-muted-hover-color)}:host .ids-menu-item:hover:not(:disabled){--ids-menu-action-overlay-opacity:.05}:host .ids-menu-item:focus-visible:not(:disabled){--ids-menu-action-overlay-opacity:.1}:host .ids-menu-item:active:not(:disabled){--ids-menu-action-overlay-opacity:.15}:host .ids-menu-item:disabled{cursor:default;opacity:.5}`})))()}var K;function init_menu_item$1(){return(init_menu_item$1=e((()=>{p(),init_menu_item(),v(),K=class IdsMenuItem{clicked=d();disabled=h(!1,{transform:fe});nativeControl=n.required(`control`);static propDecorators={clicked:[{type:ee,args:[`clicked`]}],disabled:[{type:t,args:[{isSignal:!0,alias:`disabled`,required:!1,transform:void 0}]}],nativeControl:[{type:_,args:[`control`,{isSignal:!0}]}]}},K=l([u({selector:`ids-menu-item`,template:`
+        <button
+            #control
+            role="menuitem"
+            tabindex="-1"
+            class="ids-menu-item ids-menu-item-label"
+            type="button"
+            [disabled]="disabled()"
+            (click)="clicked.emit($event)"
+        >
+            <ng-content />
+        </button>
+    `,styles:[G]})],K)})))()}var q;function init_menu$1(){return(init_menu$1=e((()=>{p(),init_menu(),_e(),init__list_key_manager_chunk(),k(),v(),V(),init_menu_item$1(),q=class IdsMenu{panelClass=h();panelId=`ids-menu-${s(H).getNextIdNumber()}`;viewportMargin=8;host=s(c);items=ae(K,{descendants:!0});openState=m(!1);isOpen=this.openState.asReadonly();origin=m(this.host.nativeElement);labelledBy=m(null);positions=[{originX:`start`,originY:`bottom`,overlayX:`start`,overlayY:`top`},{originX:`start`,originY:`top`,overlayX:`start`,overlayY:`bottom`}];triggerControl;keyManager;itemClicks=[];toggle(e,t){this.origin.set(e),this.triggerControl=t,this.labelledBy.set(t.id),this.openState.update(e=>!e)}close(){this.openState.set(!1)}onOpened(){let e=this.items().map(e=>e.nativeControl().nativeElement);this.keyManager=new ListKeyManager(e).withWrap().withHomeAndEnd(),this.keyManager.setFirstItemActive(),this.keyManager.activeItem?.focus(),this.itemClicks=this.items().map(e=>e.clicked.subscribe(()=>this.closeAndReturnFocus()))}onClosed(){this.keyManager?.destroy(),this.keyManager=void 0,this.itemClicks.forEach(e=>e.unsubscribe()),this.itemClicks=[]}onKeydown(e){e.key===`Escape`||e.key===`Tab`?this.closeAndReturnFocus():(this.keyManager?.onKeydown(e),this.keyManager?.activeItem?.focus())}closeAndReturnFocus(){this.close(),this.triggerControl?.focus()}static propDecorators={panelClass:[{type:t,args:[{isSignal:!0,alias:`panelClass`,required:!1,transform:void 0}]}],items:[{type:oe,args:[K,{descendants:!0,isSignal:!0}]}]}},q=l([u({selector:`ids-menu`,imports:[O],template:`
+        <ng-template
+            cdkConnectedOverlay
+            [cdkConnectedOverlayOrigin]="origin()"
+            [cdkConnectedOverlayOpen]="isOpen()"
+            [cdkConnectedOverlayPositions]="positions"
+            [cdkConnectedOverlayPush]="true"
+            [cdkConnectedOverlayViewportMargin]="viewportMargin"
+            (overlayOutsideClick)="close()"
+            (attach)="onOpened()"
+            (detach)="onClosed()"
+        >
+            <div
+                role="menu"
+                tabindex="-1"
+                class="ids-panel ids-menu-panel"
+                [class]="panelClass()"
+                [id]="panelId"
+                [attr.aria-labelledby]="labelledBy()"
+                (keydown)="onKeydown($event)"
+            >
+                <ng-content />
+            </div>
+        </ng-template>
+    `,styles:[U,ve]})],q)})))()}var J;function init_menu_trigger(){return(init_menu_trigger=e((()=>{p(),v(),V(),B(),J=class IdsMenuTrigger{idsMenuTriggerFor=h.required();host=s(c);renderer=s(ne);destroyRef=s(b);nativeControl=s(me,{self:!0}).nativeControl;fallbackControlId=`ids-menu-trigger-${s(H).getNextIdNumber()}`;constructor(){ie(()=>this.connectToControl()),se(()=>this.reflectMenuState())}connectToControl(){let e=this.nativeControl().nativeElement;e.id||=this.fallbackControlId;let t=this.renderer.listen(e,`click`,()=>this.idsMenuTriggerFor().toggle(this.host.nativeElement,e));this.destroyRef.onDestroy(t)}reflectMenuState(){let e=this.nativeControl().nativeElement,t=this.idsMenuTriggerFor();e.setAttribute(`aria-haspopup`,`menu`),e.setAttribute(`aria-expanded`,String(t.isOpen())),t.isOpen()?e.setAttribute(`aria-controls`,t.panelId):e.removeAttribute(`aria-controls`)}static ctorParameters=()=>[];static propDecorators={idsMenuTriggerFor:[{type:t,args:[{isSignal:!0,alias:`idsMenuTriggerFor`,required:!0,transform:void 0}]}]}},J=l([i({selector:`[idsMenuTriggerFor]`})],J)})))()}var Y,X,Z,Q,$;function init_menu_stories(){return(init_menu_stories=e((()=>{N(),j(),he(),L(),R(),init_menu$1(),init_menu_item$1(),init_menu_trigger(),{action:Y}=__STORYBOOK_MODULE_ACTIONS__,X={title:`Design System/Menu`,component:q,subcomponents:{IdsMenuTrigger:J,IdsMenuItem:K},tags:[`autodocs`],decorators:[M({imports:[ge,J,K,P]})],argTypes:{isOpen:{control:!1,table:{defaultValue:{summary:`false`}}},close:{control:!1}}},Z={render:e=>({props:{...e,clicked:Y(`clicked`)},template:[z(`ids-framed-button`).withBinding(`idsMenuTriggerFor`,`menu`).withContent(`Aldoria`).build(),z(`ids-menu`).withAttribute(`#menu`).withInput(`panelClass`,e.panelClass,``).withContent(z(`ids-menu-item`).withOutput(`clicked`).withContent(`Velmora`),z(`ids-menu-item`).withOutput(`clicked`).withContent(z(`mat-icon`).withClass(`material-symbols-outlined`).withContent(`castle`),`Kharzun`),z(`ids-menu-item`).withInput(`disabled`,!0,!1).withOutput(`clicked`).withContent(`Ostravel`)).build()].join(`
+`)})},Q={decorators:[M({imports:[I]})],parameters:{controls:{disable:!0},pseudo:F(`button`)},render:()=>({props:{sections:[{name:`default`}],states:[`rest`,`hover`,`focus-visible`,`active`,`disabled`]},template:`
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <div role="menu" [attr.aria-label]="state">
+                        <ids-menu-item [disabled]="state === 'disabled'">{{ state }}</ids-menu-item>
+                    </div>
+                </ng-template>
+            </sb-state-matrix>
+        `})},$=[`Default`,`States`],Z.parameters={...Z.parameters,docs:{...Z.parameters?.docs,source:{originalSource:`{
+  render: args => ({
+    props: {
+      ...args,
+      clicked: action('clicked')
+    },
+    template: [elem('ids-framed-button').withBinding('idsMenuTriggerFor', 'menu').withContent('Aldoria').build(), elem('ids-menu').withAttribute('#menu').withInput('panelClass', args.panelClass, '').withContent(elem('ids-menu-item').withOutput('clicked').withContent('Velmora'), elem('ids-menu-item').withOutput('clicked').withContent(elem('mat-icon').withClass('material-symbols-outlined').withContent('castle'), 'Kharzun'), elem('ids-menu-item').withInput('disabled', true, false).withOutput('clicked').withContent('Ostravel')).build()].join('\\n')
+  })
+}`,...Z.parameters?.docs?.source}}},Q.parameters={...Q.parameters,docs:{...Q.parameters?.docs,source:{originalSource:`{
+  decorators: [moduleMetadata({
+    imports: [StateMatrix]
+  })],
+  parameters: {
+    controls: {
+      disable: true
+    },
+    pseudo: pseudoStates('button')
+  },
+  render: () => ({
+    props: {
+      sections: [{
+        name: 'default'
+      }],
+      states: ['rest', 'hover', 'focus-visible', 'active', 'disabled']
+    },
+    // \`role="menu"\` gives each \`menuitem\` its required parent; the real panel lives in an overlay the matrix cannot hold.
+    template: \`
+            <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
+                <ng-template let-section let-state="state">
+                    <div role="menu" [attr.aria-label]="state">
+                        <ids-menu-item [disabled]="state === 'disabled'">{{ state }}</ids-menu-item>
+                    </div>
+                </ng-template>
+            </sb-state-matrix>
+        \`
+  })
+}`,...Q.parameters?.docs?.source}}}})))()}init_menu_stories();export{Z as Default,Q as States,$ as __namedExportsOrder,X as default};
