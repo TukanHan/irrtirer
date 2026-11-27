@@ -4,12 +4,4 @@
 @layer base {
     @include inputs-overrides.render();
     @include scrollbar.render();
-
-    .dark-theme {
-        color-scheme: dark;
-    }
-
-    .light-theme {
-        color-scheme: light;
-    }
 }

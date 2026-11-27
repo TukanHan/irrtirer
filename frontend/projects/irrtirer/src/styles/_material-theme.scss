@@ -32,11 +32,11 @@
 }
 
 @layer base {
-    .dark-theme {
+    [data-theme='dark'] {
         @include material-dark-theme();
     }
 
-    .light-theme {
+    [data-theme='light'] {
         @include material-light-theme();
     }
 }

@@ -291,9 +291,9 @@ Library styles are plain CSS files (`.css`), no preprocessor. Components referen
 
 ### global-tokens-only · MUST
 
-Global library stylesheets (the theme file and what it imports) define only custom properties: no classes, no element selectors. Everything else lives in component styles.
+Global library stylesheets (the theme file and what it imports) define only custom properties and `color-scheme`: no classes, no element selectors. Everything else lives in component styles.
 
-**Check:** the theme file and its imports contain only `:root` and theme class blocks with custom property declarations.
+**Check:** the theme file and its imports contain only `:root` and `[data-theme]` blocks with custom property and `color-scheme` declarations.
 
 ### shared-recipes · MUST
 
@@ -369,13 +369,13 @@ The library defines and reads only `--ids-*` custom properties.
 
 Color differences between themes are expressed only with `light-dark()` in semantic tokens. Component styles contain no theme-specific code.
 
-**Check:** grep component styles for theme classes and `prefers-color-scheme`.
+**Check:** grep component styles for `data-theme` and `prefers-color-scheme`.
 
-### theme-class-overrides · MUST
+### theme-attribute-overrides · MUST
 
-Values `light-dark()` cannot express (e.g. shadow strength) are overridden by the theme class (`.light-theme`), only in the theme file.
+Values `light-dark()` cannot express (e.g. shadow strength) are overridden by the theme attribute (`[data-theme='light']`), only in the theme file.
 
-**Check:** theme class selectors appear only in the theme file.
+**Check:** `data-theme` selectors appear only in the theme file.
 
 ### theme-file · MUST
 
@@ -385,9 +385,9 @@ The library publishes one self-contained theme file with the tokens of both them
 
 ### theme-ownership · MUST
 
-The library sets `color-scheme` (`light dark` on `:root`) and defines the theme classes that force one scheme. The app only toggles a theme class.
+The library sets `color-scheme` (`light dark` on `:root`) and defines `[data-theme='light' | 'dark']`, which forces one scheme. The app only sets `data-theme` on `<html>`; without it, the system preference applies.
 
-**Check:** `color-scheme` and the theme classes are declared in the theme file.
+**Check:** `color-scheme` and the `data-theme` selectors are declared in the theme file; the app's styles set no `color-scheme`.
 
 ### override-via-tokens · MUST
 

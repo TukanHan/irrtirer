@@ -3,7 +3,7 @@ import { inject, provideAppInitializer } from '@angular/core';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 import { setCompodocJson } from '@storybook/addon-docs/angular';
-import { withThemeByClassName } from '@storybook/addon-themes';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import { applicationConfig, Preview } from '@storybook/angular';
 import docJson from '../documentation.json';
 import { StorybookLanguageSync } from './storybook-language-sync';
@@ -56,12 +56,13 @@ const preview: Preview = {
         },
     },
     decorators: [
-        withThemeByClassName({
+        withThemeByDataAttribute({
             themes: {
-                light: 'light-theme',
-                dark: 'dark-theme',
+                light: 'light',
+                dark: 'dark',
             },
             defaultTheme: 'dark',
+            attributeName: 'data-theme',
         }),
         applicationConfig({
             providers: [

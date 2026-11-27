@@ -29,9 +29,7 @@ export class ThemeSwitcher {
     }
 
     private setTheme(theme: ThemeMode): void {
-        const html = document.documentElement;
-        html.classList.toggle('dark-theme', theme === 'dark');
-        html.classList.toggle('light-theme', theme === 'light');
+        document.documentElement.dataset['theme'] = theme;
 
         this.theme.next(theme);
     }

@@ -1,6 +1,8 @@
 @import './_typography.css';
 
 :root {
+    color-scheme: light dark;
+
     --ids-color-accent: light-dark(#ffa825, #d58100);
     --ids-color-highlight: light-dark(#2592ff, #026ad1);
     --ids-color-danger: light-dark(#ff302b, #ff302b);
@@ -43,7 +45,13 @@
     --ids-shadow-strength-strong: 60%;
 }
 
-.light-theme {
+[data-theme='dark'] {
+    color-scheme: dark;
+}
+
+[data-theme='light'] {
+    color-scheme: light;
+
     --ids-shadow-strength-faint: 10%;
     --ids-shadow-strength-subtle: 20%;
     --ids-shadow-strength-strong: 30%;

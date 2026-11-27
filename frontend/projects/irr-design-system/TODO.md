@@ -44,10 +44,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `ids-theme.css` imports `_typography.css`, which is not shipped in `dist` (resolved by `styles/global-tokens-only`)
 
-## styles/theme-ownership
-
-- [ ] The library never sets `color-scheme`; the app sets it on `.dark-theme` / `.light-theme`
-
 ## styles/override-via-tokens
 
 - [ ] App utility `button-content-*` sets `--ids-overridden-button-content-color`, which the library does not declare as a public token
