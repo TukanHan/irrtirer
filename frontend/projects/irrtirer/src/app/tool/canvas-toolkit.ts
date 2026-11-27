@@ -1,8 +1,7 @@
 import { computed, inject, Injectable } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { Viewport } from '../../../../active-canvas/src/public-api';
+import { IActiveCanvas, Viewport } from 'active-canvas';
 import { saveAs } from '../core/helpers/download-helper';
 import { ImageHelper } from '../core/helpers/image-helper';
 import { Size } from '../core/models/math/size.interface';

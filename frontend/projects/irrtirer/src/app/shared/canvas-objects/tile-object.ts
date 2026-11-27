@@ -1,4 +1,4 @@
-import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from 'active-canvas';
 
 export class TileObject extends BaseCanvasObject implements CanvasObject {
     constructor(

@@ -3,7 +3,7 @@ import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { skip } from 'rxjs';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { IActiveCanvas } from 'active-canvas';
 import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';

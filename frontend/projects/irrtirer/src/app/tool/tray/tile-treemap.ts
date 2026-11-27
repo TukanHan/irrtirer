@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { Size } from '../../../../../active-canvas/src/public-api';
+import { IActiveCanvas, Size } from 'active-canvas';
 import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
 import { Rect } from '../../core/models/math/rect.interface';
 import { Vector } from '../../core/models/math/vector.model';

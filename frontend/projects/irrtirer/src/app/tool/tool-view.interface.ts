@@ -1,4 +1,4 @@
-import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { IActiveCanvas } from 'active-canvas';
 import { RibbonAction } from './ribbon/ribbon-action.interface';
 
 export interface ToolViewInitSetting {

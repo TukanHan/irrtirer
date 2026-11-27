@@ -92,6 +92,10 @@ export default defineConfig([
                 {
                     patterns: [
                         {
+                            group: ['**/active-canvas/src/**'],
+                            message: "Import from the 'active-canvas' alias.",
+                        },
+                        {
                             group: ['storybook-doc', 'storybook-doc/*'],
                             message: 'storybook-doc helpers are for *.stories.ts only.',
                         },

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Size } from '../../../../../active-canvas/src/public-api';
+import { Size } from 'active-canvas';
 
 interface Unit {
     denominator: number;

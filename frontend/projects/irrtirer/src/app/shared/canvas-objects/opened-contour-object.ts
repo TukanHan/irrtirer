@@ -1,4 +1,4 @@
-import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from 'active-canvas';
 
 const BASE_LINE_THICKNESS: number = 10;
 const BASE_POINT_RADIUS: number = 10;

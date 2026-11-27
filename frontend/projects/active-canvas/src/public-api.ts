@@ -5,6 +5,8 @@
 export * from './lib/active-canvas';
 
 //Models
+export * from './lib/models/canvas/active-canvas.interface';
+export * from './lib/models/canvas/canvas-options.interface';
 export * from './lib/models/canvas/viewport.model';
 export * from './lib/models/math/vector.interface';
 export * from './lib/models/math/size.interface';

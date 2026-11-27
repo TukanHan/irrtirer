@@ -1,4 +1,4 @@
-import { BaseCanvasObject, CanvasObject, IVector, Viewport } from '../../../../../active-canvas/src/public-api';
+import { BaseCanvasObject, CanvasObject, IVector, Viewport } from 'active-canvas';
 import { Line } from '../../core/models/math/line.model';
 import { Triangle } from '../../core/models/math/triangle.model';
 import { Vector } from '../../core/models/math/vector.model';

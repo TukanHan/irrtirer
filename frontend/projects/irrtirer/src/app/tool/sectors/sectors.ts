@@ -3,8 +3,7 @@ import { outputToObservable, takeUntilDestroyed, toSignal } from '@angular/core/
 import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { first } from 'rxjs';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { IActiveCanvas, CanvasObject } from 'active-canvas';
 import { ArrayHelpers } from '../../core/helpers/array-helpers';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorSchema } from '../../core/models/mosaic-project.model';

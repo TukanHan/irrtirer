@@ -1,4 +1,4 @@
-import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from '../../../../../active-canvas/src/public-api';
+import { BaseCanvasObject, CanvasObject, IVector, Size, UnitConverter, Viewport } from 'active-canvas';
 import { Vector } from '../../core/models/math/vector.model';
 
 export class ImageObject extends BaseCanvasObject implements CanvasObject {

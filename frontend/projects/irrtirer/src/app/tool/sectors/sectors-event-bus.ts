@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import Color from 'color';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { IVector } from '../../../../../active-canvas/src/public-api';
+import { IVector } from 'active-canvas';
 import { RandomHelper } from '../../core/helpers/random-helper';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
 import { EditedSectorContour, EditedSectorWithTriangulationMesh, SectorListChangeEvent } from './sectors-contours.interfaces';
