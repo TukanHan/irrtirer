@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, ElementRef, input, output, viewChild } from '@angular/core';
-import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-design-system/core';
+import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-design-system/internal';
 
 export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
 

@@ -2,7 +2,7 @@ import { afterNextRender, Directive, inject } from '@angular/core';
 import { render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it, vi } from 'vitest';
-import { IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
+import { IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/internal';
 import { IdsFramedButton } from './framed-button';
 
 @Directive({ selector: '[idsFocusNativeControl]' })

@@ -1,5 +1,5 @@
 import { Component, computed, input } from '@angular/core';
-import { formFieldErrorsId } from 'irr-design-system/core';
+import { formFieldErrorsId } from 'irr-design-system/internal';
 
 @Component({
     selector: 'ids-form-field',

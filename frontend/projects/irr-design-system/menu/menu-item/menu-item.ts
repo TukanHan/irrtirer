@@ -1,5 +1,5 @@
 import { booleanAttribute, Component, ElementRef, input, output, viewChild } from '@angular/core';
-import { Clickable, NativeControlHost } from 'irr-design-system/core';
+import { Clickable, NativeControlHost } from 'irr-design-system/internal';
 
 /** Action in an `ids-menu`. Activating it closes the menu and returns focus to the trigger. */
 @Component({

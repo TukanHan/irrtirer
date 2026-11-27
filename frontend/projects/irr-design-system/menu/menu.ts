@@ -1,7 +1,7 @@
 import { ListKeyManager } from '@angular/cdk/a11y';
 import { CdkConnectedOverlay, ConnectedPosition } from '@angular/cdk/overlay';
 import { Component, contentChildren, ElementRef, inject, input, OutputRefSubscription, Signal, signal } from '@angular/core';
-import { IdentityCounter, OVERLAY_SPACING } from 'irr-design-system/core';
+import { IdentityCounter, OVERLAY_SPACING } from 'irr-design-system/internal';
 import { IdsMenuItem } from './menu-item/menu-item';
 
 /**

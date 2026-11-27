@@ -44,10 +44,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `--irr-icon-*` set in `side-nav-item.css`, `ids-flat-action.css`, `_typography.css` - tied to the tolerated `MatIcon`
 
-## Open: Structure
-
-- [ ] Rename the `core` entry point to `internal`: in Angular `core` reads as public (`@angular/material/core`), `internal` matches `structure/internal-entry-point`
-
 ## Open: Styles (continue later)
 
 - [ ] Token naming pattern: category first (`--ids-color-text-danger`, DTCG style, recommended) or property last (`--ids-text-danger-color`, current majority)

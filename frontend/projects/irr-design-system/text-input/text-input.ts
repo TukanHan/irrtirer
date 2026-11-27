@@ -1,7 +1,7 @@
 import { booleanAttribute, Component, computed, input, model, output } from '@angular/core';
 import { FormValueControl } from '@angular/forms/signals';
-import { formFieldErrorsId, IdentityGenerator, injectControlId } from 'irr-design-system/core';
 import { IdsFormField } from 'irr-design-system/form';
+import { formFieldErrorsId, IdentityGenerator, injectControlId } from 'irr-design-system/internal';
 
 /**
  * Single-line text field with a label, optional prefix/suffix and error messages.

@@ -56,7 +56,7 @@ export default defineConfig([
     // Later blocks replace the rule options instead of merging them, so they repeat namedExports.
     {
         files: ['**/public-api.ts'],
-        ignores: ['core/**', 'src/**'],
+        ignores: ['internal/**', 'src/**'],
         rules: {
             'no-restricted-syntax': ['error', namedExports, publicSymbolPrefix],
         },

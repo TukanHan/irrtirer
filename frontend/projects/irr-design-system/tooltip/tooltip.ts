@@ -1,7 +1,7 @@
 import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
-import { IdentityCounter } from 'irr-design-system/core';
+import { IdentityCounter } from 'irr-design-system/internal';
 import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
 
 export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';

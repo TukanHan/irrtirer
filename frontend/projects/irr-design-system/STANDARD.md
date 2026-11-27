@@ -44,13 +44,13 @@ Each component family (a component with its variants and parts) lives in its own
 
 ### cross-entry-imports-by-package · MUST
 
-Code in one entry point imports another by package path (`irr-design-system/core`), never by a relative path.
+Code in one entry point imports another by package path (`irr-design-system/internal`), never by a relative path.
 
 **Check:** `ng build irr-design-system` (fails with TS6059).
 
 ### internal-entry-point · MUST
 
-Shared library internals live in an internal entry point (currently `core`). Only the library imports it; the app does not.
+Shared library internals live in the `internal` entry point. Only the library imports it; the app does not.
 
 **Check:** grep the app for imports of the internal entry point.
 
