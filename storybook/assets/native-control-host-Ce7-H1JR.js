@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{An as t,g as n}from"./core-CjIc2X4A.js";var r;function init_native_control_host(){return(init_native_control_host=e((()=>{n(),r=new t(`IdsNativeControlHost`)})))()}export{init_native_control_host as n,r as t};
