@@ -1,6 +1,7 @@
 import { Component, computed, input } from '@angular/core';
 import { formFieldErrorsId } from 'irr-design-system/internal';
 
+/** Layout shared by form inputs: label, frame with affixes and placeholder around the projected control, and errors. */
 @Component({
     selector: 'ids-form-field',
     template: `
@@ -28,16 +29,22 @@ import { formFieldErrorsId } from 'irr-design-system/internal';
     styleUrl: './form-field.css',
 })
 export class IdsFormField {
+    /** Text above the frame; not rendered when empty. */
     public readonly label = input.required<string>();
 
+    /** Marks the label with an asterisk. */
     public readonly required = input.required<boolean>();
 
+    /** Hint shown while `isEmpty` is true. */
     public readonly placeholder = input.required<string>();
 
+    /** `id` of the projected control; links the label and the error container to it. */
     public readonly id = input.required<string>();
 
+    /** Whether the control has no value, which shows the placeholder. */
     public readonly isEmpty = input.required<boolean>();
 
+    /** Renders the projected `ids-error` elements below the frame. */
     public readonly showError = input.required<boolean>();
 
     protected readonly errorsId = computed(() => formFieldErrorsId(this.id()));

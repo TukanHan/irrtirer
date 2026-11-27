@@ -15,14 +15,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `action/flat-link/flat-link.spec.ts` does not follow the `unit-tests` skill (raw `TestBed`, `detectChanges()`, queries by tag)
 
-## documentation/class-doc
-
-- [ ] No class JSDoc: `error`, `form-field`, `prefix`, `suffix` (only the public ones need it)
-
-## documentation/member-doc
-
-- [ ] Inputs without JSDoc: `form-field`
-
 ## storybook/story-per-family
 
 - [ ] `form` has no story - its parts are shown in the input stories; decide whether that is enough
