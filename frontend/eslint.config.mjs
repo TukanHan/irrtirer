@@ -12,6 +12,7 @@ export default defineConfig([
             },
         },
         extends: [...tseslint.configs.recommended, ...angular.configs.tsRecommended],
+        processor: angular.processInlineTemplates,
         rules: {
             '@typescript-eslint/explicit-member-accessibility': [
                 'warn',

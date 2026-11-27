@@ -25,6 +25,7 @@ import { IdsMenuItem } from './menu-item/menu-item';
         >
             <div
                 role="menu"
+                tabindex="-1"
                 class="ids-panel ids-menu-panel"
                 [class]="panelClass()"
                 [id]="panelId"

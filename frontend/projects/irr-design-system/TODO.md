@@ -73,12 +73,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] Disabled look (currently `opacity: 0.5`)
 - [ ] Visibility of the flat-button focus indicator (only a 0.1 overlay, `outline: none`) - check against WCAG
 
-## Tooling idea: enforce the standard with ESLint
-
-Move mechanical checks from `STANDARD.md` into `eslint.config.mjs`, then point each rule's `Check:` to the ESLint rule.
-
-- [ ] `accessibility/*`: `templateAccessibility` runs only on `*.html`; library templates are inline - enable angular-eslint inline template processing
-
 ## Tooling idea: automated a11y checks (axe)
 
 `@storybook/addon-a11y` (axe) is installed but only shows a panel - easy to miss. Evaluate a failing check instead:
