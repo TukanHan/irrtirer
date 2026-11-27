@@ -2,7 +2,10 @@ import { NgTemplateOutlet } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-/** Link that looks like `ids-flat-button`: borderless, its surface shows only on hover, focus and press. */
+/**
+ * Link that looks like `ids-flat-button`: borderless, its surface shows only on hover, focus and press.
+ * Renders a native `<a>`.
+ */
 @Component({
     selector: 'ids-flat-link',
     imports: [NgTemplateOutlet, RouterLink, RouterLinkActive],

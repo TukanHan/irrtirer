@@ -6,6 +6,7 @@ import { IdsFormField } from 'irr-design-system/form';
 /**
  * Single-line text field with a label, optional prefix/suffix and error messages.
  * Bind it to Signal Forms with `[formField]`.
+ * Renders a native `<input>`.
  */
 @Component({
     selector: 'ids-text-input',

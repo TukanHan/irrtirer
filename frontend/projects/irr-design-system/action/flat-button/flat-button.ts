@@ -3,7 +3,10 @@ import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-desig
 
 export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
 
-/** Borderless button whose surface shows only on hover, focus and press. Fits icon-only actions and actions inside other controls. */
+/**
+ * Borderless button whose surface shows only on hover, focus and press. Fits icon-only actions and actions inside other controls.
+ * Renders a native `<button>`.
+ */
 @Component({
     selector: 'ids-flat-button',
     providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFlatButton }],

@@ -40,6 +40,7 @@ Shows the component in each of its states at once, including pointer and keyboar
 
 - Build it with `StateMatrix` and `pseudoStates()` from `storybook-doc/state-matrix`; `storybook-addon-pseudo-states` forces the pseudo-classes.
 - Show only the states the component really distinguishes - read its styles.
+- `disabled` hides persistent states but keeps variants: with persistent states as sections (`invalid`, `current`) it is a section of its own, otherwise the last state in every section.
 - Pick the layout that suits the component. Existing `States` stories are examples, not a template.
 - Only CSS pseudo-classes can be forced. States driven by code (e.g. a tooltip opened on `mouseenter`) stay out of the matrix - never add API just for a story.
 

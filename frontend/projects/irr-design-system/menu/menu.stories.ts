@@ -55,18 +55,15 @@ export const States: Story = {
     },
     render: () => ({
         props: {
-            sections: [
-                { name: 'enabled', disabled: false },
-                { name: 'disabled', disabled: true },
-            ],
-            states: ['rest', 'hover', 'focus-visible', 'active'],
+            sections: [{ name: 'default' }],
+            states: ['rest', 'hover', 'focus-visible', 'active', 'disabled'],
         },
         // `role="menu"` gives each `menuitem` its required parent; the real panel lives in an overlay the matrix cannot hold.
         template: `
             <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
                 <ng-template let-section let-state="state">
-                    <div role="menu" [attr.aria-label]="section.name + ' ' + state">
-                        <ids-menu-item [disabled]="section.disabled">{{ state }}</ids-menu-item>
+                    <div role="menu" [attr.aria-label]="state">
+                        <ids-menu-item [disabled]="state === 'disabled'">{{ state }}</ids-menu-item>
                     </div>
                 </ng-template>
             </sb-state-matrix>

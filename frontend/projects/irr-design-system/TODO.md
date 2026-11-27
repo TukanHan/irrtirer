@@ -9,6 +9,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## states/state-model
 
 - [ ] `flat-link`: `current` is lost under `:focus-visible` (focus overlay 0.1 overrides current 0.15) and `:active` (same 0.15 + bold as current) - see its `States` story
+- [ ] `side-nav-item`: `current` loses its highlight icon color under `:hover` and `:focus-visible` (the muted hover color overrides it) - see the `side-nav` `States` story
 
 ## testing
 
@@ -16,19 +17,15 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## documentation/class-doc
 
-- [ ] No class JSDoc: `error`, `form-field`, `prefix`, `suffix`, `side-nav`, `side-nav-item` (only the public ones need it)
+- [ ] No class JSDoc: `error`, `form-field`, `prefix`, `suffix` (only the public ones need it)
 
 ## documentation/member-doc
 
-- [ ] Inputs without JSDoc: `form-field`, `side-nav-item`
+- [ ] Inputs without JSDoc: `form-field`
 
 ## storybook/story-per-family
 
 - [ ] `form` has no story - its parts are shown in the input stories; decide whether that is enough
-
-## storybook/state-matrix
-
-- [ ] `States` story missing: `side-nav` (current)
 
 ## styles/token-layers
 
@@ -72,7 +69,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Storybook
 
-- [ ] `side-nav` story does not follow the updated `storybook-stories` skill: lowercase categories, `argTypes` only for story-only args and overrides, outputs bound with `withOutput`
 - [ ] Stories render with the app's global styles (`storybook-doc` imports `irrtirer` `styles.scss`), so a component that works only thanks to app styles goes unnoticed - consider rendering `ids` stories with library styles only
 
 ## Design decisions to make (UX sessions)

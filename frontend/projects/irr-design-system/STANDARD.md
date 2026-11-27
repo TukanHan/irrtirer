@@ -206,9 +206,12 @@ Use the native element when one exists (`<button>`, `<a>`, `<input>`, `<label>`)
 
 ### apg-pattern · MUST
 
-A component with an overlay or several cooperating parts (menu, tooltip, tabs, dialog...) implements its APG pattern: roles, keyboard support and focus management. Its class JSDoc links the pattern: `Implements the [APG <Name> pattern](<url>).` A component without an APG pattern has no such line.
+The class JSDoc says where the component's roles and keyboard support come from:
 
-**Check:** the spec covers the roles and keyboard interactions of the pattern; the class JSDoc links it.
+- **Native element** (`button`, `a`, `nav`, `input`): from the browser. `Renders a native <button>.`
+- **Overlay or several cooperating parts** (menu, tooltip, tabs, dialog...): from its APG pattern, implemented in full (roles, keyboard, focus management). `Implements the [APG <Name> pattern](<url>).`
+
+**Check:** the class JSDoc has one of these lines; for a pattern, the spec covers its roles and keyboard interactions.
 
 ### accessible-name · MUST
 

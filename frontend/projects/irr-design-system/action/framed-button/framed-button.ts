@@ -3,7 +3,10 @@ import { Clickable, IDS_NATIVE_CONTROL_HOST, NativeControlHost } from 'irr-desig
 
 export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
 
-/** Button with a visible frame that glows on hover and focus. It fills the width of its host. */
+/**
+ * Button with a visible frame that glows on hover and focus. It fills the width of its host.
+ * Renders a native `<button>`.
+ */
 @Component({
     selector: 'ids-framed-button',
     providers: [{ provide: IDS_NATIVE_CONTROL_HOST, useExisting: IdsFramedButton }],
