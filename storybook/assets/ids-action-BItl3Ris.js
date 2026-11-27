@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";var t;function init_ids_action(){return(init_ids_action=e((()=>{t=`:host{--ids-action-radius:9999px;display:inline-block}`})))()}export{init_ids_action as n,t};
