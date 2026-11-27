@@ -327,6 +327,8 @@ Each layer has its own name pattern:
 | Semantic  | `--ids-<category>-<role>[-<variant>]`   | `--ids-color-text-muted`, `--ids-radius-md` |
 | Component | `--ids-<component>[-<part>]-<property>` | `--ids-flat-button-content-color`           |
 
+A higher primitive `<step>` is darker. `--ids-palette-white` and `--ids-palette-black` stand outside the color scales and have no step.
+
 **Check:** compare token names in the theme file and component styles with the patterns.
 
 ### class-naming · MUST

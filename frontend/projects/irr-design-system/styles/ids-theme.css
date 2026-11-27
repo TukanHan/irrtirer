@@ -1,39 +1,49 @@
 :root {
     color-scheme: light dark;
 
-    --ids-color-accent: light-dark(#ffa825, #d58100);
-    --ids-color-highlight: light-dark(#2592ff, #026ad1);
-    --ids-color-danger: light-dark(#ff302b, #ff302b);
-    --ids-color-white: #ffffff;
-    --ids-color-gray-10: #e6e6e6;
-    --ids-color-gray-20: #cccccc;
-    --ids-color-gray-30: #b3b3b3;
-    --ids-color-gray-75: #3f3f3f;
-    --ids-color-gray-80: #333333;
-    --ids-color-gray-83: #2b2b2b;
-    --ids-color-gray-87: #212121;
-    --ids-color-black: #000000;
+    --ids-palette-white: #ffffff;
+    --ids-palette-black: #000000;
+    --ids-palette-gray-5: #f2f2f2;
+    --ids-palette-gray-10: #e6e6e6;
+    --ids-palette-gray-15: #d9d9d9;
+    --ids-palette-gray-20: #cccccc;
+    --ids-palette-gray-30: #b3b3b3;
+    --ids-palette-gray-65: #595959;
+    --ids-palette-gray-75: #404040;
+    --ids-palette-gray-80: #333333;
+    --ids-palette-gray-85: #262626;
+    --ids-palette-gray-90: #1a1a1a;
+    --ids-palette-blue-40: #2592ff;
+    --ids-palette-blue-60: #026ad1;
+    --ids-palette-orange-40: #ffa825;
+    --ids-palette-orange-60: #d58100;
+    --ids-palette-red-40: #ff302b;
 
-    --ids-border-color: light-dark(#c9c9c9, var(--ids-color-gray-80));
-    --ids-solid-control-color: light-dark(#eeeeee, #18181b);
+    --ids-color-accent: light-dark(var(--ids-palette-orange-40), var(--ids-palette-orange-60));
+    --ids-color-highlight: light-dark(var(--ids-palette-blue-40), var(--ids-palette-blue-60));
+    --ids-color-danger: var(--ids-palette-red-40);
+    --ids-color-shadow: var(--ids-palette-black);
 
-    --ids-form-control-border-color: light-dark(var(--ids-color-gray-20), var(--ids-color-gray-75));
-    --ids-form-control-surface-color: light-dark(var(--ids-color-gray-10), var(--ids-color-gray-80));
+    --ids-border-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-80));
+    --ids-solid-control-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-90));
 
-    --ids-panel-surface-color: light-dark(#eeeeee, var(--ids-color-gray-87));
-    --ids-panel-border-color: light-dark(#dbdbdb, var(--ids-color-gray-83));
-    --ids-tooltip-surface-color: light-dark(var(--ids-color-gray-20), var(--ids-color-gray-75));
+    --ids-form-control-border-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
+    --ids-form-control-surface-color: light-dark(var(--ids-palette-gray-10), var(--ids-palette-gray-80));
 
-    --ids-sidenav-surface-color: light-dark(#eeeeee, var(--ids-color-gray-80));
+    --ids-panel-surface-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-85));
+    --ids-panel-border-color: light-dark(var(--ids-palette-gray-15), var(--ids-palette-gray-80));
+    --ids-tooltip-surface-color: light-dark(var(--ids-palette-gray-20), var(--ids-palette-gray-75));
 
-    --ids-element-surface-contrast-color: light-dark(var(--ids-color-black), var(--ids-color-white));
+    --ids-sidenav-surface-color: light-dark(var(--ids-palette-gray-5), var(--ids-palette-gray-80));
 
-    --ids-text-muted-hover-color: light-dark(var(--ids-color-black), var(--ids-color-white));
-    --ids-text-muted-color: light-dark(#5d5d5d, var(--ids-color-gray-30));
-    --ids-text-low-emphasis-color: light-dark(#292929, var(--ids-color-gray-20));
-    --ids-text-color: light-dark(#383838, var(--ids-color-gray-10));
-    --ids-text-highlight-color: light-dark(#272b2f, #2592ff);
-    --ids-text-danger-color: #fc2727;
+    --ids-element-surface-contrast-color: light-dark(var(--ids-palette-black), var(--ids-palette-white));
+
+    --ids-text-muted-hover-color: light-dark(var(--ids-palette-black), var(--ids-palette-white));
+    --ids-text-muted-color: light-dark(var(--ids-palette-gray-65), var(--ids-palette-gray-30));
+    --ids-text-low-emphasis-color: light-dark(var(--ids-palette-gray-80), var(--ids-palette-gray-20));
+    --ids-text-color: light-dark(var(--ids-palette-gray-85), var(--ids-palette-gray-10));
+    --ids-text-highlight-color: light-dark(var(--ids-palette-gray-85), var(--ids-palette-blue-40));
+    --ids-text-danger-color: var(--ids-palette-red-40);
 
     --ids-font-size-xs: 0.75rem;
     --ids-font-size-sm: 0.875rem;

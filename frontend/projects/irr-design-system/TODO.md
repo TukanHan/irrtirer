@@ -19,14 +19,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 - [ ] `form` has no story - its parts are shown in the input stories; decide whether that is enough
 
-## styles/token-layers
+## styles/token-naming
 
-- [ ] `ids-theme.css`: raw hex values inside semantic tokens (`#c9c9c9`, `#eeeeee`, `#18181b`, `#dbdbdb`, `#5d5d5d`, `#292929`, `#383838`, `#272b2f`, `#2592ff`, `#fc2727`) - move to primitives
-- [ ] `ids-theme.css`: `--ids-color-accent`, `-highlight`, `-danger` are named like primitives but are semantic (`light-dark`)
-
-## styles/no-literals
-
-- [ ] `styles/shared/ids-panel.css`: `black` in `box-shadow`
+- [ ] `ids-theme.css`: most semantic color tokens do not follow `--ids-color-<role>[-<variant>]` (e.g. `--ids-text-color`, `--ids-panel-surface-color`)
+- [ ] App `ribbon.scss` reads the removed `--ids-color-black`, so its shadow does not render - use `--ids-color-shadow`
 
 ## styles/component-token-scope
 
