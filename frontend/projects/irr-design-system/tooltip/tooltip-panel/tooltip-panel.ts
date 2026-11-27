@@ -11,5 +11,6 @@ import { Component, input } from '@angular/core';
 })
 export class IdsTooltipPanel {
     public readonly panelId = input.required<string>();
+
     public readonly text = input.required<string>();
 }

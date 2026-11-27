@@ -2,8 +2,6 @@
 
 Workspace-wide decisions not made yet and known fixes. Remove an item once done.
 
-## Code style
+## Components
 
-Prefer enforcing these with oxfmt or ESLint over a written rule.
-
-- [ ] Blank lines between class members (inputs, outputs, fields): always, never, or only around documented members - decide and enforce it
+- [ ] Merge component templates into their `.ts` files (inline `template`) instead of separate `.html` files

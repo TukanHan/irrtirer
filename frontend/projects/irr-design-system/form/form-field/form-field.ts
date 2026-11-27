@@ -29,10 +29,15 @@ import { formFieldErrorsId } from 'irr-design-system/core';
 })
 export class IdsFormField {
     public readonly label = input.required<string>();
+
     public readonly required = input.required<boolean>();
+
     public readonly placeholder = input.required<string>();
+
     public readonly id = input.required<string>();
+
     public readonly isEmpty = input.required<boolean>();
+
     public readonly showError = input.required<boolean>();
 
     protected readonly errorsId = computed(() => formFieldErrorsId(this.id()));
