@@ -1,9 +1,9 @@
 import { Component, computed, input, linkedSignal, OnDestroy, output } from '@angular/core';
-import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
-import { ColorSlider } from './color-slider/color-slider';
-import { ColorCanvas } from './color-canvas/color-canvas';
+import { MatInputModule } from '@angular/material/input';
 import Color, { ColorInstance } from 'color';
+import { ColorCanvas } from './color-canvas/color-canvas';
+import { ColorSlider } from './color-slider/color-slider';
 
 const HexColorRegex: RegExp = /^#([0-9a-f]{3}){1,2}$/i;
 

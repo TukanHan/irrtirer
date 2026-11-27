@@ -1,7 +1,7 @@
 import { EventEmitter } from '@angular/core';
+import { vi } from 'vitest';
 import { IActiveCanvas } from '../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { IVector } from '../../../active-canvas/src/public-api';
-import { vi } from 'vitest';
 
 export const activeCanvas: IActiveCanvas = {
     options: {

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ActiveCanvas } from './active-canvas';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { ActiveCanvas } from './active-canvas';
 
 describe('ActiveCanvas', () => {
     let component: ActiveCanvas;

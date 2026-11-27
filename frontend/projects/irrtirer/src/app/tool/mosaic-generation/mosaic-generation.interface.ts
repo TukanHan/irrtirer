@@ -1,7 +1,7 @@
 import { BehaviorSubject, Observable } from 'rxjs';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
 import { TileTransformResult } from '../../core/models/api/api.models';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { CanvasObject } from '../../../../../active-canvas/src/public-api';
 import { TileObject } from '../../shared/canvas-objects/tile-object';
 
 export class GeneratedSectorModel {

@@ -1,9 +1,9 @@
+import { inputBinding } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TileListElem } from './tile-list-elem';
-import { tileMock } from '../../../../../test-data/tiles-set.data';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { inputBinding } from '@angular/core';
+import { tileMock } from '../../../../../test-data/tiles-set.data';
+import { TileListElem } from './tile-list-elem';
 
 describe('TileListElem', () => {
     let component: TileListElem;

@@ -1,6 +1,6 @@
+import { FieldState } from '@angular/forms/signals';
 import { describe, expect, it } from 'vitest';
 import { FormHelper } from './form-helper';
-import { FieldState } from '@angular/forms/signals';
 
 describe('FormHelper', () => {
     const errorLabels = {

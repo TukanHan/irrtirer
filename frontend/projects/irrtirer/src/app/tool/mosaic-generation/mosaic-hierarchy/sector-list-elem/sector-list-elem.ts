@@ -1,12 +1,12 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
-import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
-import { MatIconModule } from '@angular/material/icon';
 import { AsyncPipe } from '@angular/common';
-import { Observable } from 'rxjs';
-import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
+import { Component, computed, inject, input, signal } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { ScrollableList } from '../../../../shared/scrollable-list/scrollable-list';
+import { Observable } from 'rxjs';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
+import { ScrollableList } from '../../../../shared/scrollable-list/scrollable-list';
+import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 
 @Component({
     selector: 'app-sector-list-elem',

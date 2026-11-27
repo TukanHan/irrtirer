@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ColorSlider } from './color-slider';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { inputBinding } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { ColorSlider } from './color-slider';
 
 describe('ColorSlider', () => {
     let component: ColorSlider;

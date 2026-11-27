@@ -1,10 +1,10 @@
+import { inputBinding } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TilesSetListElem } from './tiles-set-list-elem';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { tilesSetMock } from '../../../../test-data/tiles-set.data';
-import { inputBinding } from '@angular/core';
+import { TilesSetListElem } from './tiles-set-list-elem';
 
 describe('TilesSetListElem', () => {
     let component: TilesSetListElem;

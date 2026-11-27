@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExpandablePanel } from './expandable-panel';
 import { inputBinding } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { ExpandablePanel } from './expandable-panel';
 
 describe('ExpandablePanel', () => {
     let component: ExpandablePanel;

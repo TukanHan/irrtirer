@@ -1,23 +1,23 @@
 import { AfterViewInit, Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
+import { outputToObservable, takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
+import { first } from 'rxjs';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { ArrayHelpers } from '../../core/helpers/array-helpers';
 import { Vector } from '../../core/models/math/vector.model';
 import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { first } from 'rxjs';
-import { SectorsEventBus } from './sectors-event-bus';
-import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
-import { ArrayHelpers } from '../../core/helpers/array-helpers';
-import { outputToObservable, takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { selectMosaicConfig, selectSectors } from '../../core/state/mosaic-project/mosaic-project.selectors';
+import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
+import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { OpenedContourObject } from '../../shared/canvas-objects/opened-contour-object';
 import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
-import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { CanvasToolkit } from '../canvas-toolkit';
-import { ImageObject } from '../../shared/canvas-objects/image-object';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
-import { RouterOutlet } from '@angular/router';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { EditedSectorContour, EditedSectorWithTriangulationMesh } from './sectors-contours.interfaces';
+import { SectorsEventBus } from './sectors-event-bus';
 
 @Component({
     selector: 'app-sectors',

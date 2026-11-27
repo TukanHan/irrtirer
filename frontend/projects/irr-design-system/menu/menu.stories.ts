@@ -1,12 +1,12 @@
+import { MatIcon } from '@angular/material/icon';
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { action } from 'storybook/actions';
 import { IdsFramedButton } from 'irr-design-system/action';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
-import { IdsMenuTrigger } from './menu-trigger/menu-trigger';
 import { IdsMenu } from './menu';
 import { IdsMenuItem } from './menu-item/menu-item';
-import { MatIcon } from '@angular/material/icon';
+import { IdsMenuTrigger } from './menu-trigger/menu-trigger';
 
 const meta: Meta<IdsMenu> = {
     title: 'Design System/Menu',

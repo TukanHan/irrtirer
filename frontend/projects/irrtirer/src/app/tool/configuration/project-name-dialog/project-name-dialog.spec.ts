@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProjectNameDialog } from './project-name-dialog';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { provideTranslateService } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { ProjectNameDialog } from './project-name-dialog';
 
 describe('ProjectNameDialog', () => {
     let component: ProjectNameDialog;

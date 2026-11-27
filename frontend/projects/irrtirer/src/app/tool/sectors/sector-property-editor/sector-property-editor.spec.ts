@@ -1,12 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorPropertyEditor } from './sector-property-editor';
 import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
-import { provideMockStore } from '@ngrx/store/testing';
-import { faceSector } from '../../../../test-data/sector.data';
-import { provideTranslateService } from '@ngx-translate/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
+import { provideMockStore } from '@ngrx/store/testing';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { faceSector } from '../../../../test-data/sector.data';
+import { SectorPropertyEditor } from './sector-property-editor';
 
 describe('SectorPropertyEditor', () => {
     let component: SectorPropertyEditor;

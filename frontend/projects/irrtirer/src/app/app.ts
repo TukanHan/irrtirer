@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Toolbar } from './toolbar/toolbar';
-import { TranslateService } from '@ngx-translate/core';
 import { Store } from '@ngrx/store';
-import { selectUserLang } from './core/state/user-preferences/user-preferences.selectors';
+import { TranslateService } from '@ngx-translate/core';
 import { ThemeSwitcher } from './core/services/theme-switcher/theme-switcher';
+import { selectUserLang } from './core/state/user-preferences/user-preferences.selectors';
+import { Toolbar } from './toolbar/toolbar';
 
 @Component({
     selector: 'app-root',

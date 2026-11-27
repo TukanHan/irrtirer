@@ -1,8 +1,8 @@
 import { Component, input, OnInit, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
 
 @Component({
     selector: 'app-extended-panel',

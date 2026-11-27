@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { ConfigurationEventBus } from './configuration-event-bus';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { ConfigurationEventBus } from './configuration-event-bus';
 
 describe('ConfigurationEventBus', () => {
     let service: ConfigurationEventBus;

@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Tool } from './tool';
-import { provideMockStore } from '@ngrx/store/testing';
 import { RouterModule } from '@angular/router';
+import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { Tool } from './tool';
 
 describe('Tool', () => {
     let component: Tool;

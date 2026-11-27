@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { TileTreemap } from './tile-treemap';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { TileTreemap } from './tile-treemap';
 
 describe('TileTreemap', () => {
     let service: TileTreemap;

@@ -1,20 +1,20 @@
 import { Component, DestroyRef, inject, input, signal } from '@angular/core';
-import { TilesSet } from '../../../core/models/mosaic-project.model';
-import { ExpandablePanel } from '../../../shared/expandable-panel/expandable-panel';
-import { MatIconModule } from '@angular/material/icon';
-import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { Observable } from 'rxjs';
-import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { Dialog } from '../../../shared/dialog/dialog';
-import { Store } from '@ngrx/store';
-import { MatDialog } from '@angular/material/dialog';
-import { TileListElem } from './tile-list-elem/tile-list-elem';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatDialog } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
-import { ScrollableList } from '../../../shared/scrollable-list/scrollable-list';
-import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { TilesSet } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { Dialog } from '../../../shared/dialog/dialog';
+import { DialogData } from '../../../shared/dialog/dialog-data.interface';
+import { ExpandablePanel } from '../../../shared/expandable-panel/expandable-panel';
+import { ScrollableList } from '../../../shared/scrollable-list/scrollable-list';
+import { TileListElem } from './tile-list-elem/tile-list-elem';
 
 @Component({
     selector: 'app-tiles-set-list-elem',

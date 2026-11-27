@@ -1,6 +1,6 @@
+import { Component } from '@angular/core';
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { ScrollableList } from './scrollable-list';
-import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-dummy-item',

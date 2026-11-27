@@ -1,24 +1,24 @@
-import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
-import { Vector } from '../../../core/models/math/vector.model';
 import { CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray } from '@angular/cdk/drag-drop';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { Store } from '@ngrx/store';
-import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { MatIconModule } from '@angular/material/icon';
-import { ColorPicker } from '../../../shared/color-picker/color-picker';
-import { SectorsEventBus } from '../sectors-event-bus';
-import { SectorSchema } from '../../../core/models/mosaic-project.model';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { nonUniqueValueValidator } from '../../../core/validators/unique-value.validator';
-import { polygonValidator } from './polygon.validator';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FieldState, form, FormField, required } from '@angular/forms/signals';
-import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { Vector } from '../../../core/models/math/vector.model';
+import { SectorSchema } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { nonUniqueValueValidator } from '../../../core/validators/unique-value.validator';
+import { ColorPicker } from '../../../shared/color-picker/color-picker';
+import { SectorsEventBus } from '../sectors-event-bus';
+import { polygonValidator } from './polygon.validator';
 
 @Component({
     selector: 'app-sector-contour-edition',

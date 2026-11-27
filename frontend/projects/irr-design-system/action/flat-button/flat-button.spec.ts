@@ -1,8 +1,8 @@
 import { afterNextRender, Directive, inject } from '@angular/core';
 import { render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
-import { IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
 import { describe, expect, it, vi } from 'vitest';
+import { IDS_NATIVE_CONTROL_HOST } from 'irr-design-system/core';
 import { IdsFlatButton } from './flat-button';
 
 @Directive({ selector: '[idsFocusNativeControl]' })

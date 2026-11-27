@@ -1,6 +1,6 @@
-import { MatIcon } from '@angular/material/icon';
-import { toSignal } from '@angular/core/rxjs-interop';
 import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { MatIcon } from '@angular/material/icon';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { type Meta, type StoryObj, applicationConfig, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { filter, map } from 'rxjs';

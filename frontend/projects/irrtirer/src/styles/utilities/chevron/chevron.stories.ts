@@ -1,7 +1,7 @@
-import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { signal } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 
 const meta: Meta = {
     title: 'Style/Animacje/Chevron',

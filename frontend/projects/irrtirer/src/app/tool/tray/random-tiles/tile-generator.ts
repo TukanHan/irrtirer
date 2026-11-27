@@ -1,9 +1,9 @@
+import Color, { ColorInstance } from 'color';
 import { PolygonHelper } from '../../../core/helpers/polygon/polygon-helper';
 import { RandomHelper } from '../../../core/helpers/random-helper';
-import { TileModel } from '../../../core/models/mosaic-project.model';
 import { Range } from '../../../core/models/math/range.interface';
 import { Vector } from '../../../core/models/math/vector.model';
-import Color, { ColorInstance } from 'color';
+import { TileModel } from '../../../core/models/mosaic-project.model';
 
 export class TileGenerator {
     constructor(private readonly imagePixelArray: Uint8ClampedArray) {}

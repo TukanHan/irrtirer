@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SnapshotOptionsDialog } from './snapshot-options-dialog';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { provideTranslateService } from '@ngx-translate/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import { provideTranslateService } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { SnapshotOptionsDialog } from './snapshot-options-dialog';
 
 describe('SnapshotOptionsDialog', () => {
     let component: SnapshotOptionsDialog;

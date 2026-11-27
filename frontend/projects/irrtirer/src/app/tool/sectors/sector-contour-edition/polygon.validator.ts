@@ -1,8 +1,8 @@
-import { Vector } from '../../../core/models/math/vector.model';
-import { Line } from '../../../core/models/math/line.model';
-import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
-import { SchemaPath, validate } from '@angular/forms/signals';
 import { Signal } from '@angular/core';
+import { SchemaPath, validate } from '@angular/forms/signals';
+import { PresenceInPoligonHelper } from '../../../core/helpers/polygon/presence-in-polygon-helper';
+import { Line } from '../../../core/models/math/line.model';
+import { Vector } from '../../../core/models/math/vector.model';
 
 export function polygonValidator(field: SchemaPath<Vector[]>): void {
     validate(field, ({ value }) => polygonValidationFunc(value));

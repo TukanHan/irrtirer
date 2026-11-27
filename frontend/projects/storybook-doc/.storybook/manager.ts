@@ -1,6 +1,6 @@
-import { addons } from 'storybook/manager-api';
 import { GLOBALS_UPDATED, SET_GLOBALS } from 'storybook/internal/core-events';
 import type { Globals } from 'storybook/internal/types';
+import { addons } from 'storybook/manager-api';
 
 // Must match the colors in theme-backgrounds.css.
 const BACKGROUND_BY_THEME: Record<string, string> = { dark: 'gray87', light: 'gray0' };

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { CanActivateFn } from '@angular/router';
-import { projectExistGuard } from './project-exist.guard';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { projectExistGuard } from './project-exist.guard';
 
 describe('projectExistGuard', () => {
     const executeGuard: CanActivateFn = (...guardParameters) => TestBed.runInInjectionContext(() => projectExistGuard(...guardParameters));

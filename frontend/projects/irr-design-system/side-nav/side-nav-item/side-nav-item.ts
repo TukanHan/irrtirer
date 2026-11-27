@@ -1,7 +1,7 @@
 import { booleanAttribute, Component, input } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { IdsTooltip } from 'irr-design-system/tooltip';
-import { MatIcon } from '@angular/material/icon';
 
 /**
  * Icon-only router link in an `ids-side-nav`. It is highlighted and marked with `aria-current` while its route is active.

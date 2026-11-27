@@ -1,16 +1,16 @@
-import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
-import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { Store } from '@ngrx/store';
-import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
-import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
-import { ThemeMode } from '../core/models/user-preferences.interface';
 import { TitleCasePipe } from '@angular/common';
-import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
+import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
+import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioChange, MatRadioModule } from '@angular/material/radio';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
+import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
+import { IconSvgModuleModule } from '../core/icon-svg-module/icon-svg-module.module';
+import { ThemeMode } from '../core/models/user-preferences.interface';
+import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
+import { UserPreferencesActions } from '../core/state/user-preferences/user-preferences.actions';
 
 @Component({
     selector: 'app-toolbar',

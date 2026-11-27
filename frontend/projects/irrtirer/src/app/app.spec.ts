@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
-import { App } from './app';
 import { RouterModule } from '@angular/router';
-import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { App } from './app';
 
 const initialState = {
     userPreferences: {

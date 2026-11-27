@@ -1,30 +1,30 @@
 import { Component, computed, DestroyRef, inject, OnInit, signal } from '@angular/core';
-import { SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
-import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
+import { TranslateService } from '@ngx-translate/core';
+import { BehaviorSubject } from 'rxjs';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { CanvasObject } from '../../../../../active-canvas/src/public-api';
+import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
+import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
 import { Size } from '../../core/models/math/size.interface';
 import { Vector } from '../../core/models/math/vector.model';
-import { SectorTriangulationMeshModel, SectorTriangulationMeshPartsModel, TileRequestModel } from '../../core/models/api/api.models';
-import { BehaviorSubject } from 'rxjs';
+import { SectorSchema, TileModel } from '../../core/models/mosaic-project.model';
+import { selectMosaicConfig, selectSectors, selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
+import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
+import { ImageObject } from '../../shared/canvas-objects/image-object';
+import { TileObject } from '../../shared/canvas-objects/tile-object';
+import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
+import { CanvasToolkit } from '../canvas-toolkit';
+import { RibbonAction } from '../ribbon/ribbon-action.interface';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
 import { MosaicGenerationHub } from './mosaic-generation-hub';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { MosaicGenerationState } from './mosaic-generation-state';
+import { GeneratedTileModel } from './mosaic-generation.interface';
 import { MosaicHierarchy } from './mosaic-hierarchy/mosaic-hierarchy';
 import { ProgressInfo } from './progress-info/progress-info';
 import { InfoState } from './progress-info/progress-info.interface';
-import { GeneratedTileModel } from './mosaic-generation.interface';
-import { transformPolygon } from '../../core/helpers/polygon/trigonometry-helper';
-import { CanvasObject } from '../../../../../active-canvas/src/public-api';
-import { ImageObject } from '../../shared/canvas-objects/image-object';
-import { TileObject } from '../../shared/canvas-objects/tile-object';
-import { ClosedContourObject } from '../../shared/canvas-objects/closed-contour-object';
-import { TriangulatedContourObject } from '../../shared/canvas-objects/triangulated-contour-object';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { TranslateService } from '@ngx-translate/core';
-import { RibbonAction } from '../ribbon/ribbon-action.interface';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { CanvasToolkit } from '../canvas-toolkit';
 
 @Component({
     selector: 'app-mosaic-generation',

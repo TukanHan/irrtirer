@@ -1,7 +1,7 @@
-import { polygonValidationFunc } from './polygon.validator';
-import { Vector } from '../../../core/models/math/vector.model';
-import { describe, expect, it } from 'vitest';
 import { signal } from '@angular/core';
+import { describe, expect, it } from 'vitest';
+import { Vector } from '../../../core/models/math/vector.model';
+import { polygonValidationFunc } from './polygon.validator';
 
 describe('PolygonValidator', () => {
     it('should be too few vertices', () => {

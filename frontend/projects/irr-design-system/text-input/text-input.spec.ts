@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/angular';
-import { IdsError } from 'irr-design-system/form';
 import { describe, expect, it } from 'vitest';
+import { IdsError } from 'irr-design-system/form';
 import { IdsTextInput } from './text-input';
 
 describe('IdsTextInput', () => {

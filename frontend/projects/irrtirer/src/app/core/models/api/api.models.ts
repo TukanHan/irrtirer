@@ -1,7 +1,7 @@
+import { Triangle } from '../math/triangle.model';
+import { Vector } from '../math/vector.model';
 import { EvaluationParams } from './evaluation-params.interface';
 import { PopulationParams } from './population-params.interface';
-import { Vector } from '../math/vector.model';
-import { Triangle } from '../math/triangle.model';
 
 export class SectorTriangulationMeshPartsModel {
     public readonly sectorId!: string;

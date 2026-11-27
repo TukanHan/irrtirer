@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Sectors } from './sectors';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { faceSector } from '../../../test-data/sector.data';
-import { CanvasToolkit } from '../canvas-toolkit';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { imageObjectMock } from '../../../test-data/image-object.data';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { faceSector } from '../../../test-data/sector.data';
+import { CanvasToolkit } from '../canvas-toolkit';
+import { Sectors } from './sectors';
 
 const initialState = {
     mosaicProject: { sectors: [faceSector] },

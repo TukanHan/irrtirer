@@ -1,7 +1,7 @@
-import { applicationConfig, componentWrapperDecorator, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { Component, inject } from '@angular/core';
-import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
+import { applicationConfig, componentWrapperDecorator, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { filter, map } from 'rxjs';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';

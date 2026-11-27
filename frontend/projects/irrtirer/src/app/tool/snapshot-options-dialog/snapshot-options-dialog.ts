@@ -1,11 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { form, FormField } from '@angular/forms/signals';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatSliderModule } from '@angular/material/slider';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { SnapshotOptions } from './snapshot-options.interface';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { SnapshotOptions } from './snapshot-options.interface';
 
 @Component({
     selector: 'app-snapshot-options-dialog',

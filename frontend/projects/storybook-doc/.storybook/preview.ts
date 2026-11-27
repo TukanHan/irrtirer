@@ -1,12 +1,12 @@
-import { applicationConfig, Preview } from '@storybook/angular';
-import { setCompodocJson } from '@storybook/addon-docs/angular';
-import { withThemeByClassName } from '@storybook/addon-themes';
-import docJson from '../documentation.json';
+import { provideHttpClient } from '@angular/common/http';
+import { inject, provideAppInitializer } from '@angular/core';
 import { provideTranslateService } from '@ngx-translate/core';
 import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
-import { provideHttpClient } from '@angular/common/http';
+import { setCompodocJson } from '@storybook/addon-docs/angular';
+import { withThemeByClassName } from '@storybook/addon-themes';
+import { applicationConfig, Preview } from '@storybook/angular';
+import docJson from '../documentation.json';
 import { StorybookLanguageSync } from './storybook-language-sync';
-import { inject, provideAppInitializer } from '@angular/core';
 import '../../irrtirer/src/styles.scss';
 import './theme-backgrounds.css';
 

@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Configuration } from './configuration';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { activeCanvas } from '../../../test-data/active-canvas.data';
 import { CanvasToolkit } from '../canvas-toolkit';
+import { Configuration } from './configuration';
 
 describe('Configuration', () => {
     let component: Configuration;

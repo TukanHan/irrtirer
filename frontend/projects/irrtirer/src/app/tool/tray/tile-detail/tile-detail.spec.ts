@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TileDetail } from './tile-detail';
 import { RouterModule } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { TileDetail } from './tile-detail';
 
 describe('TileDetail', () => {
     let component: TileDetail;

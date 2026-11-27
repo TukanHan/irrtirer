@@ -1,8 +1,8 @@
 import { signal } from '@angular/core';
 import { render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
-import { IdsError } from 'irr-design-system/form';
 import { describe, expect, it } from 'vitest';
+import { IdsError } from 'irr-design-system/form';
 import { IdsNumberInput } from './number-input';
 
 describe('IdsNumberInput', () => {

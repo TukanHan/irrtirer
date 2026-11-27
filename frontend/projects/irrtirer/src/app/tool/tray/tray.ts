@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, DestroyRef, inject, signal } from '@angular/core';
-import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterOutlet } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { Observable } from 'rxjs';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { TileModel, TilesSet } from '../../core/models/mosaic-project.model';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { TileTreemap } from './tile-treemap';
+import { selectTilesSets } from '../../core/state/mosaic-project/mosaic-project.selectors';
 import { CanvasToolkit } from '../canvas-toolkit';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { TileTreemap } from './tile-treemap';
 
 @Component({
     selector: 'app-tray',

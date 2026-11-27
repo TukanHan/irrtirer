@@ -1,8 +1,8 @@
 import { provideRouter } from '@angular/router';
 import { render, screen } from '@testing-library/angular';
 import { describe, expect, it } from 'vitest';
-import { IdsSideNavItem } from './side-nav-item/side-nav-item';
 import { IdsSideNav } from './side-nav';
+import { IdsSideNavItem } from './side-nav-item/side-nav-item';
 
 describe('IdsSideNav', () => {
     it('renders a navigation landmark named by ariaLabel', async () => {

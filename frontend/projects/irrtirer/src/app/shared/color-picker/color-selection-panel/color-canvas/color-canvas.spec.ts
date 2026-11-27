@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ColorCanvas } from './color-canvas';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { inputBinding } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { ColorCanvas } from './color-canvas';
 
 describe('ColorCanvas', () => {
     let component: ColorCanvas;

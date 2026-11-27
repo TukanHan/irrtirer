@@ -1,19 +1,19 @@
+import { AsyncPipe } from '@angular/common';
 import { Component, computed, DestroyRef, inject, signal, viewChild } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
-import { map } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { Ribbon } from './ribbon/ribbon';
-import { CanvasToolkit } from './canvas-toolkit';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ActiveCanvas } from '../../../../active-canvas/src/public-api';
-import { ToolView } from './tool-view.interface';
-import { RibbonAction } from './ribbon/ribbon-action.interface';
-import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
-import { AsyncPipe } from '@angular/common';
-import { ProjectArchive } from '../core/services/project-archive/project-archive';
+import { map } from 'rxjs';
 import { IdsSideNav, IdsSideNavItem } from 'irr-design-system/side-nav';
+import { CanvasOptions } from '../../../../active-canvas/src/lib/models/canvas/canvas-options.interface';
+import { ActiveCanvas } from '../../../../active-canvas/src/public-api';
+import { ProjectArchive } from '../core/services/project-archive/project-archive';
+import { selectMosaicProject, selectSectors } from '../core/state/mosaic-project/mosaic-project.selectors';
+import { CanvasToolkit } from './canvas-toolkit';
+import { Ribbon } from './ribbon/ribbon';
+import { RibbonAction } from './ribbon/ribbon-action.interface';
+import { ToolView } from './tool-view.interface';
 
 @Component({
     selector: 'app-tool',

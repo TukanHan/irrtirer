@@ -1,19 +1,19 @@
 import { Component, DestroyRef, inject } from '@angular/core';
-import { Router } from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { Store } from '@ngrx/store';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { Dialog } from '../../../shared/dialog/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { IdsFramedButton } from 'irr-design-system/action';
+import { openFilePicker } from '../../../core/helpers/download-helper';
+import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { Dialog } from '../../../shared/dialog/dialog';
+import { DialogData } from '../../../shared/dialog/dialog-data.interface';
 import { ConfigurationEventBus } from '../configuration-event-bus';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ProjectArchive } from '../../../core/services/project-archive/project-archive';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectNameDialog, ProjectNameDialogData } from '../project-name-dialog/project-name-dialog';
-import { openFilePicker } from '../../../core/helpers/download-helper';
-import { IdsFramedButton } from 'irr-design-system/action';
 
 const DEFAULT_PROJECT_NAME: string = 'irrtirer_project';
 

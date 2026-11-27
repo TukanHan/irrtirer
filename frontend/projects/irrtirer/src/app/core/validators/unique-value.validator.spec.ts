@@ -1,6 +1,6 @@
+import { signal } from '@angular/core';
 import { describe, expect, it } from 'vitest';
 import { nonUniqueValueValidationFunc } from './unique-value.validator';
-import { signal } from '@angular/core';
 
 describe('nonUniqueValueValidationFunc', () => {
     it('should be valid', () => {

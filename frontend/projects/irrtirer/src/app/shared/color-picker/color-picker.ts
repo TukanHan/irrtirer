@@ -1,9 +1,9 @@
-import { Component, effect, forwardRef, input, model, signal } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
-import { ColorSelectionPanel } from './color-selection-panel/color-selection-panel';
-import { ColorInstance } from 'color';
+import { Component, effect, forwardRef, input, model, signal } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { FormValueControl } from '@angular/forms/signals';
+import { ColorInstance } from 'color';
+import { ColorSelectionPanel } from './color-selection-panel/color-selection-panel';
 
 @Component({
     selector: 'app-color-picker',

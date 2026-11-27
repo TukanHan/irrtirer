@@ -1,22 +1,22 @@
 import { Component, DestroyRef, effect, inject, OnInit, Optional, signal, SkipSelf } from '@angular/core';
-import { SectorsEventBus } from '../sectors-event-bus';
-import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosaic-project.model';
-import { Store } from '@ngrx/store';
-import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { ExtendedPanel } from './extended-panel/extended-panel';
-import { TriangulationApi } from '../../../core/services/triangulation-api/triangulation-api';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { ActivatedRoute, Router } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { form, required, min, max, submit, FieldState, FormField } from '@angular/forms/signals';
-import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldDefaultOptions, MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFramedButton } from 'irr-design-system/action';
 import { IdsTooltip } from 'irr-design-system/tooltip';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { SectorTriangulationRequestModel } from '../../../core/models/api/api.models';
+import { SectorSchema, SectorSchemaProperties } from '../../../core/models/mosaic-project.model';
+import { TriangulationApi } from '../../../core/services/triangulation-api/triangulation-api';
+import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { SectorsEventBus } from '../sectors-event-bus';
+import { ExtendedPanel } from './extended-panel/extended-panel';
 
 @Component({
     selector: 'app-sector-property-editor',

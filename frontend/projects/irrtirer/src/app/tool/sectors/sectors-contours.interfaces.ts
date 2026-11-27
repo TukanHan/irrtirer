@@ -1,6 +1,6 @@
-import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { Vector } from '../../core/models/math/vector.model';
 import { Triangle } from '../../core/models/math/triangle.model';
+import { Vector } from '../../core/models/math/vector.model';
+import { SectorSchema } from '../../core/models/mosaic-project.model';
 
 export interface EditedSectorContour {
     sector: SectorSchema;

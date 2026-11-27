@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/angular';
 import userEvent, { UserEvent } from '@testing-library/user-event';
-import { IdsFramedButton } from 'irr-design-system/action';
 import { describe, expect, it } from 'vitest';
+import { IdsFramedButton } from 'irr-design-system/action';
 import { IdsMenu } from './menu';
 import { IdsMenuItem } from './menu-item/menu-item';
 import { IdsMenuTrigger } from './menu-trigger/menu-trigger';

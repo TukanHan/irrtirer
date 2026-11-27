@@ -1,6 +1,6 @@
-import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
 import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
+import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
 import { IdentityCounter } from 'irr-design-system/core';
 import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
 

@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
-import { MosaicProjectActions } from './mosaic-project.actions';
-import { MosaicProjectModel } from '../../models/mosaic-project.model';
 import { ArrayHelpers } from '../../helpers/array-helpers';
+import { MosaicProjectModel } from '../../models/mosaic-project.model';
+import { MosaicProjectActions } from './mosaic-project.actions';
 
 export const mosaicProjectReducer = createReducer<MosaicProjectModel | null>(
     null,

@@ -1,9 +1,9 @@
+import { Component, inject, input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
+import { IdsFramedButton } from 'irr-design-system/action';
 import { Dialog } from './dialog';
 import { DialogData } from './dialog-data.interface';
-import { MatDialog } from '@angular/material/dialog';
-import { Component, inject, input } from '@angular/core';
-import { IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-dialog-host',

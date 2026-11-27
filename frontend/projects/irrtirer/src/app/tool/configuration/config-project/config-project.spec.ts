@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ConfigProject } from './config-project';
-import { provideTranslateService } from '@ngx-translate/core';
 import { provideMockStore } from '@ngrx/store/testing';
-import { ConfigurationEventBus } from '../configuration-event-bus';
+import { provideTranslateService } from '@ngx-translate/core';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { ConfigurationEventBus } from '../configuration-event-bus';
+import { ConfigProject } from './config-project';
 
 const initialState = {
     mosaicProject: {

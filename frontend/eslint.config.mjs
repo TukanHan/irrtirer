@@ -1,7 +1,7 @@
-import { defineConfig } from 'eslint/config';
-import tseslint from 'typescript-eslint';
 import angular from 'angular-eslint';
 import storybook from 'eslint-plugin-storybook';
+import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
 export default defineConfig([
     {

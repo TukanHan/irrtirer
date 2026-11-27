@@ -1,6 +1,6 @@
-import { Viewport } from '../models/canvas/viewport.model';
 import { IActiveCanvas } from '../models/canvas/active-canvas.interface';
 import { CanvasRenderingContext } from '../models/canvas/canvas-rendering-context';
+import { Viewport } from '../models/canvas/viewport.model';
 
 export interface CanvasObject {
     /**

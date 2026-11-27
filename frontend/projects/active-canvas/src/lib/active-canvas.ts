@@ -13,17 +13,17 @@ import {
     viewChild,
 } from '@angular/core';
 import { CanvasObject } from './canvas-objects/canvas-object.interface';
-import { Viewport } from './models/canvas/viewport.model';
-import { Size } from './models/math/size.interface';
-import { UnitConverter } from './utils/unit-converter';
-import { Vector } from './models/math/vector.model';
-import { IVector } from './models/math/vector.interface';
-import { CanvasOptions } from './models/canvas/canvas-options.interface';
-import { IActiveCanvas } from './models/canvas/active-canvas.interface';
 import { GridObject } from './canvas-objects/grid-object.model';
 import { DEFAULT_CANVAS_OPTIONS } from './constants/canvas-options.const';
+import { IActiveCanvas } from './models/canvas/active-canvas.interface';
+import { CanvasOptions } from './models/canvas/canvas-options.interface';
 import { CanvasRenderingContext } from './models/canvas/canvas-rendering-context';
 import { CanvasToImageOptions } from './models/canvas/canvas-to-image-options';
+import { Viewport } from './models/canvas/viewport.model';
+import { Size } from './models/math/size.interface';
+import { IVector } from './models/math/vector.interface';
+import { Vector } from './models/math/vector.model';
+import { UnitConverter } from './utils/unit-converter';
 
 @Component({
     selector: 'ac-active-canvas',

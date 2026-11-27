@@ -1,7 +1,7 @@
+import { UnitConverter } from '../../utils/unit-converter';
 import { Size } from '../math/size.interface';
 import { IVector } from '../math/vector.interface';
 import { Vector } from '../math/vector.model';
-import { UnitConverter } from '../../utils/unit-converter';
 
 export class Viewport {
     /** Size of canvas in unit */

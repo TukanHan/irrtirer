@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorContourEdition } from './sector-contour-edition';
+import { ActivatedRoute } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { faceSector } from '../../../../test-data/sector.data';
-import { ActivatedRoute } from '@angular/router';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { faceSector } from '../../../../test-data/sector.data';
+import { SectorContourEdition } from './sector-contour-edition';
 
 describe('SectorContourEdition', () => {
     let component: SectorContourEdition;

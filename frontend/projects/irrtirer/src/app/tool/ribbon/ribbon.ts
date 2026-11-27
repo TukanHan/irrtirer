@@ -1,11 +1,11 @@
 import { Component, inject, input } from '@angular/core';
-import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 import { MatIconModule } from '@angular/material/icon';
-import { SizeDisplayPipe } from '../../core/pipes/size-display.pipe';
-import { Size } from '../../core/models/math/size.interface';
 import { TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
 import { IdsTooltip } from 'irr-design-system/tooltip';
+import { Size } from '../../core/models/math/size.interface';
+import { SizeDisplayPipe } from '../../core/pipes/size-display.pipe';
+import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 
 @Component({
     selector: 'app-ribbon',

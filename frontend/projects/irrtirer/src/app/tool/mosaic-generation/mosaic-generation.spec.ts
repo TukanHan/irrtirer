@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MosaicGeneration } from './mosaic-generation';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { CanvasToolkit } from '../canvas-toolkit';
-import { imageObjectMock } from '../../../test-data/image-object.data';
-import { activeCanvas } from '../../../test-data/active-canvas.data';
-import { faceSector } from '../../../test-data/sector.data';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { activeCanvas } from '../../../test-data/active-canvas.data';
+import { imageObjectMock } from '../../../test-data/image-object.data';
+import { faceSector } from '../../../test-data/sector.data';
+import { CanvasToolkit } from '../canvas-toolkit';
+import { MosaicGeneration } from './mosaic-generation';
 
 const initialState = {
     mosaicProject: {

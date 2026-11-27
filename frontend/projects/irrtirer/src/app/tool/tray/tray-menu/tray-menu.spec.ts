@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TrayMenu } from './tray-menu';
 import { provideMockStore } from '@ngrx/store/testing';
-import { tilesSetMock } from '../../../../test-data/tiles-set.data';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { provideTranslateService } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { tilesSetMock } from '../../../../test-data/tiles-set.data';
+import { TrayMenu } from './tray-menu';
 
 const initialState = {
     mosaicProject: {

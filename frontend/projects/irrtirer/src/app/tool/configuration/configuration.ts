@@ -1,17 +1,17 @@
 import { Component, computed, DestroyRef, inject, signal } from '@angular/core';
+import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { RouterOutlet } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { skip } from 'rxjs';
+import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { Vector } from '../../core/models/math/vector.model';
 import { MosaicConfig } from '../../core/models/mosaic-project.model';
 import { selectMosaicConfig } from '../../core/state/mosaic-project/mosaic-project.selectors';
-import { Store } from '@ngrx/store';
-import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
-import { CanvasToolkit } from '../canvas-toolkit';
-import { IActiveCanvas } from '../../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
 import { ImageObject } from '../../shared/canvas-objects/image-object';
-import { Vector } from '../../core/models/math/vector.model';
-import { RouterOutlet } from '@angular/router';
-import { ConfigurationEventBus } from './configuration-event-bus';
+import { CanvasToolkit } from '../canvas-toolkit';
 import { RibbonAction } from '../ribbon/ribbon-action.interface';
-import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
-import { skip } from 'rxjs';
+import { ToolView, ToolViewInitSetting } from '../tool-view.interface';
+import { ConfigurationEventBus } from './configuration-event-bus';
 
 @Component({
     selector: 'app-configuration',

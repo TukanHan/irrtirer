@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const iconDictionary: Record<string, string> = {
     github: 'github-mark.svg',

@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ScrollableList } from './scrollable-list';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { Component } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideTranslateService } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { ScrollableList } from './scrollable-list';
 
 const ITEMS_COUNT = 10;
 

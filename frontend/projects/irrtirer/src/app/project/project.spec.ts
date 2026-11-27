@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Project } from './project';
 import { provideTranslateService } from '@ngx-translate/core';
 import { describe, beforeEach, it, expect } from 'vitest';
+import { Project } from './project';
 
 describe('Project', () => {
     let component: Project;

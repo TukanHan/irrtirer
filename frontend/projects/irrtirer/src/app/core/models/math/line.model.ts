@@ -1,5 +1,5 @@
-import { Vector } from './vector.model';
 import { hash } from 'hash-it';
+import { Vector } from './vector.model';
 
 export class Line {
     public start: Vector;

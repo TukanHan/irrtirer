@@ -1,7 +1,7 @@
+import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MosaicGenerationState } from '../mosaic-generation-state';
 import { SectorListElem } from './sector-list-elem/sector-list-elem';
-import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-mosaic-hierarchy',

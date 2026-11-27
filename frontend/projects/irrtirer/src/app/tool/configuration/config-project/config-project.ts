@@ -1,17 +1,17 @@
 import { Component, computed, effect, inject, signal } from '@angular/core';
+import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { IdsFramedButton } from 'irr-design-system/action';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { MosaicProjectModel } from '../../../core/models/mosaic-project.model';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { selectMosaicConfig } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { Router } from '@angular/router';
 import { ConfigurationEventBus } from '../configuration-event-bus';
-import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { disabled, FieldState, form, FormField, max, min, required } from '@angular/forms/signals';
-import { IdsFramedButton } from 'irr-design-system/action';
 
 const MIN_WIDTH: number = 1;
 const MAX_WIDTH: number = 1000;

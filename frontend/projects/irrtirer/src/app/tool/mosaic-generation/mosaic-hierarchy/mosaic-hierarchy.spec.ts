@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MosaicHierarchy } from './mosaic-hierarchy';
-import { MosaicGenerationState } from '../mosaic-generation-state';
 import { describe, beforeEach, it, expect } from 'vitest';
+import { MosaicGenerationState } from '../mosaic-generation-state';
+import { MosaicHierarchy } from './mosaic-hierarchy';
 
 describe('MosaicHierarchy', () => {
     let component: MosaicHierarchy;

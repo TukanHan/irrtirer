@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
-import { BackendAddress } from '../../core/constants/api';
 import { Observable, Subject } from 'rxjs';
+import { BackendAddress } from '../../core/constants/api';
 import {
     InitMosaicGenerationRequestModel,
     SectionGenerationResult,

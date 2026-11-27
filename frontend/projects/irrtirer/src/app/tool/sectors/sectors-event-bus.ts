@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
-import { EditedSectorContour, EditedSectorWithTriangulationMesh, SectorListChangeEvent } from './sectors-contours.interfaces';
-import { SectorSchema } from '../../core/models/mosaic-project.model';
-import { RandomHelper } from '../../core/helpers/random-helper';
 import Color from 'color';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { IVector } from '../../../../../active-canvas/src/public-api';
+import { RandomHelper } from '../../core/helpers/random-helper';
+import { SectorSchema } from '../../core/models/mosaic-project.model';
+import { EditedSectorContour, EditedSectorWithTriangulationMesh, SectorListChangeEvent } from './sectors-contours.interfaces';
 
 @Injectable({
     providedIn: 'root',

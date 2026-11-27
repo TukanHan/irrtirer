@@ -19,5 +19,14 @@
 
     "embeddedLanguageFormatting": "auto",
 
-    "sortPackageJson": false
+    "sortPackageJson": false,
+
+    "sortImports": {
+        "customGroups": [
+            { "groupName": "angular", "elementNamePattern": ["@angular/**"] },
+            { "groupName": "workspace", "elementNamePattern": ["active-canvas", "irr-design-system/**", "storybook-doc/**"] }
+        ],
+        "groups": ["builtin", "angular", "external", "workspace", ["parent", "sibling", "index"], "style", "unknown"],
+        "newlinesBetween": false
+    }
 }

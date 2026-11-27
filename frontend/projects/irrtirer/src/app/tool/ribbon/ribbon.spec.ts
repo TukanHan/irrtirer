@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Ribbon } from './ribbon';
-import { beforeEach, describe, expect, it } from 'vitest';
-import { provideTranslateService } from '@ngx-translate/core';
 import { inputBinding } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideTranslateService } from '@ngx-translate/core';
+import { beforeEach, describe, expect, it } from 'vitest';
+import { Ribbon } from './ribbon';
 
 describe('Ribbon', () => {
     let component: Ribbon;

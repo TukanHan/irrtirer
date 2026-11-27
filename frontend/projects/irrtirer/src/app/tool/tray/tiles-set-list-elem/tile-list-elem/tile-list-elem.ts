@@ -1,10 +1,10 @@
 import { Component, inject, input } from '@angular/core';
-import { TileModel } from '../../../../core/models/mosaic-project.model';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { TileModel } from '../../../../core/models/mosaic-project.model';
 
 @Component({
     selector: 'app-tile-list-elem',

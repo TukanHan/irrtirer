@@ -1,19 +1,19 @@
+import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { Component, DestroyRef, inject } from '@angular/core';
-import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
+import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
+import { SectorSchema } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
 import { Dialog } from '../../../shared/dialog/dialog';
 import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { SectorSchema } from '../../../core/models/mosaic-project.model';
-import { Store } from '@ngrx/store';
-import { selectSectors } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
-import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { SectorsEventBus } from '../sectors-event-bus';
-import { MatIconModule } from '@angular/material/icon';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Router } from '@angular/router';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
 
 @Component({
     selector: 'app-sectors-contours-list',

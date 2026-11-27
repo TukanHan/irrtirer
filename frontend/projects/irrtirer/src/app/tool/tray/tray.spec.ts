@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Tray } from './tray';
 import { provideMockStore } from '@ngrx/store/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { tilesSetMock } from '../../../test-data/tiles-set.data';
 import { activeCanvas } from '../../../test-data/active-canvas.data';
+import { tilesSetMock } from '../../../test-data/tiles-set.data';
 import { CanvasToolkit } from '../canvas-toolkit';
+import { Tray } from './tray';
 
 const initialState = {
     mosaicProject: {

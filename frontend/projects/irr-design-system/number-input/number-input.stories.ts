@@ -1,8 +1,8 @@
-import { MatIcon } from '@angular/material/icon';
-import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { type Injector, signal } from '@angular/core';
 import { disabled, form, FormField, required } from '@angular/forms/signals';
+import { MatIcon } from '@angular/material/icon';
 import { createApplication } from '@angular/platform-browser';
+import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';

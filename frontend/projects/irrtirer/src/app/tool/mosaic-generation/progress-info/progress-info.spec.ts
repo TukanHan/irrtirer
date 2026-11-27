@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProgressInfo } from './progress-info';
 import { inputBinding } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { describe, beforeEach, it, expect } from 'vitest';
+import { ProgressInfo } from './progress-info';
 
 describe('ProgressInfo', () => {
     let component: ProgressInfo;

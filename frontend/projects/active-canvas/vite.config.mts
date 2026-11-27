@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vitest/config';
 import { resolve } from 'path';
+import { defineConfig } from 'vitest/config';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {

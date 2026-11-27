@@ -1,18 +1,18 @@
 import { computed, inject, Injectable } from '@angular/core';
-import { ImageObject } from '../shared/canvas-objects/image-object';
-import { Vector } from '../core/models/math/vector.model';
-import { Size } from '../core/models/math/size.interface';
-import { ImageHelper } from '../core/helpers/image-helper';
-import { Viewport } from '../../../../active-canvas/src/public-api';
-import { MosaicConfig } from '../core/models/mosaic-project.model';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { MatDialog } from '@angular/material/dialog';
+import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
+import { Viewport } from '../../../../active-canvas/src/public-api';
+import { saveAs } from '../core/helpers/download-helper';
+import { ImageHelper } from '../core/helpers/image-helper';
+import { Size } from '../core/models/math/size.interface';
+import { Vector } from '../core/models/math/vector.model';
+import { MosaicConfig } from '../core/models/mosaic-project.model';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
-import { MatDialog } from '@angular/material/dialog';
+import { ImageObject } from '../shared/canvas-objects/image-object';
 import { SnapshotOptionsDialog } from './snapshot-options-dialog/snapshot-options-dialog';
 import { SnapshotOptions } from './snapshot-options-dialog/snapshot-options.interface';
-import { IActiveCanvas } from '../../../../active-canvas/src/lib/models/canvas/active-canvas.interface';
-import { saveAs } from '../core/helpers/download-helper';
 
 @Injectable()
 export class CanvasToolkit {

@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { RandomTiles } from './random-tiles';
+import { ActivatedRoute } from '@angular/router';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { tilesSetMock } from '../../../../test-data/tiles-set.data';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { ActivatedRoute } from '@angular/router';
+import { tilesSetMock } from '../../../../test-data/tiles-set.data';
+import { RandomTiles } from './random-tiles';
 
 const initialState = {
     mosaicProject: {

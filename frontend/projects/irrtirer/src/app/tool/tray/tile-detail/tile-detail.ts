@@ -1,12 +1,12 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { TileModel } from '../../../core/models/mosaic-project.model';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { ColorPicker } from '../../../shared/color-picker/color-picker';
-import { FormsModule } from '@angular/forms';
 import { IdsFramedButton } from 'irr-design-system/action';
+import { TileModel } from '../../../core/models/mosaic-project.model';
+import { selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { ColorPicker } from '../../../shared/color-picker/color-picker';
 
 @Component({
     selector: 'app-tile-detail',

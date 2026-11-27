@@ -1,23 +1,23 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatInputModule } from '@angular/material/input';
-import { ActivatedRoute, Router } from '@angular/router';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { Store } from '@ngrx/store';
-import { selectMosaicImage, selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
-import { TileGenerator } from './tile-generator';
-import { ImageHelper } from '../../../core/helpers/image-helper';
-import { GeneratedTilesSet, TilesSet } from '../../../core/models/mosaic-project.model';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
 import { form, max, min, required, validate, FieldState, submit, FormField } from '@angular/forms/signals';
-import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
-import { DialogData } from '../../../shared/dialog/dialog-data.interface';
-import { Dialog } from '../../../shared/dialog/dialog';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDialog } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { IdsFramedButton } from 'irr-design-system/action';
+import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
+import { ImageHelper } from '../../../core/helpers/image-helper';
+import { GeneratedTilesSet, TilesSet } from '../../../core/models/mosaic-project.model';
+import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
+import { selectMosaicImage, selectTilesSets } from '../../../core/state/mosaic-project/mosaic-project.selectors';
+import { Dialog } from '../../../shared/dialog/dialog';
+import { DialogData } from '../../../shared/dialog/dialog-data.interface';
+import { TileGenerator } from './tile-generator';
 
 interface RandomTileSetModel {
     name: string;

@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { SectorsContoursList } from './sectors-contours-list';
 import { provideMockStore } from '@ngrx/store/testing';
 import { provideTranslateService } from '@ngx-translate/core';
-import { faceSector } from '../../../../test-data/sector.data';
 import { beforeEach, describe, expect, it } from 'vitest';
+import { faceSector } from '../../../../test-data/sector.data';
+import { SectorsContoursList } from './sectors-contours-list';
 
 const initialState = {
     mosaicProject: { sectors: [faceSector] },
