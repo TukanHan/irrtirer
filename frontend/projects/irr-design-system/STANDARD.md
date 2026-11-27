@@ -263,9 +263,9 @@ How to write stories: the `storybook-stories` skill.
 
 ### story-per-family · MUST
 
-Every public component family has a story. Its parts (e.g. menu items, form field, affixes) are shown inside the family's story, not in stories of their own.
+Every component a consumer can use on its own has a story. Parts that only work inside another component (e.g. menu items, affixes) are shown in that component's story, not in stories of their own.
 
-**Check:** every consumer-facing entry point has a `*.stories.ts`.
+**Check:** every entry point with such a component has a `*.stories.ts`.
 
 ### story-title · MUST
 
