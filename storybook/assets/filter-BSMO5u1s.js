@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{$n as t,Qn as n,er as r,tr as i}from"./core-BbWc11SJ.js";function filter(e,t){return i(function(r,i){var a=0;r.subscribe(n(i,function(n){return e.call(t,n,a++)&&i.next(n)}))})}function init_filter(){return(init_filter=e((()=>{r(),t()})))()}export{init_filter as n,filter as t};

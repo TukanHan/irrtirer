@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{Br as t,Kr as n,g as r,nt as i}from"./core-GKNYu18h.js";var a;function init_identity_counter(){return(init_identity_counter=e((()=>{n(),r(),a=class IdentityCounter{counter=0;getNextIdNumber(){return this.counter+=1,this.counter}},a=t([i()],a)})))()}export{init_identity_counter as n,a as t};

@@ -1,1 +1,0 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";var t;function init_dateTimestampProvider(){return(init_dateTimestampProvider=e((()=>{t={now:function(){return(t.delegate||Date).now()},delegate:void 0}})))()}export{init_dateTimestampProvider as n,t};
