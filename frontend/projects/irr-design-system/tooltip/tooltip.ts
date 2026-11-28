@@ -7,6 +7,18 @@ import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
 
 export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
 
+type Side = Exclude<IdsTooltipPosition, 'auto'>;
+
+/** In the order they are tried when the preferred side does not fit. */
+const sides: Side[] = ['bottom', 'top', 'right', 'left'];
+
+const connectedPositions: Record<Side, ConnectedPosition> = {
+    top: { originX: 'center', originY: 'top', overlayX: 'center', overlayY: 'bottom' },
+    right: { originX: 'end', originY: 'center', overlayX: 'start', overlayY: 'center' },
+    bottom: { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' },
+    left: { originX: 'start', originY: 'center', overlayX: 'end', overlayY: 'center' },
+};
+
 /**
  * Shows a text hint in a floating panel while the host is hovered or focused.
  * Implements the [APG Tooltip pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/).
@@ -24,7 +36,7 @@ export class IdsTooltip {
     /** Text of the hint. The tooltip does not open while it is blank. */
     public readonly idsTooltip = input.required<string>();
 
-    /** Preferred side of the host. `auto` picks a side away from the nearest viewport edge. Moves to another side when the panel does not fit. */
+    /** Preferred side of the host. `auto` means below, or the inner side for a host at the left or right viewport edge but not at the top. Moves to another side when the panel does not fit. */
     public readonly idsTooltipPosition = input<IdsTooltipPosition>('auto');
 
     /** Classes for the floating panel, which is rendered outside the host element. */
@@ -157,39 +169,8 @@ export class IdsTooltip {
         return this.getPositionsFor('bottom');
     }
 
-    private getPositionsFor(position: Exclude<IdsTooltipPosition, 'auto'>): ConnectedPosition[] {
-        const preferred = this.getPosition(position);
-        const fallbacks: ConnectedPosition[] = [
-            this.getPosition('bottom'),
-            this.getPosition('top'),
-            this.getPosition('right'),
-            this.getPosition('left'),
-        ];
-
-        return [
-            preferred,
-            ...fallbacks.filter(
-                (fallback) =>
-                    fallback.originX !== preferred.originX ||
-                    fallback.originY !== preferred.originY ||
-                    fallback.overlayX !== preferred.overlayX ||
-                    fallback.overlayY !== preferred.overlayY,
-            ),
-        ];
-    }
-
-    private getPosition(position: Exclude<IdsTooltipPosition, 'auto'>): ConnectedPosition {
-        switch (position) {
-            case 'top':
-                return { originX: 'center', originY: 'top', overlayX: 'center', overlayY: 'bottom' };
-            case 'right':
-                return { originX: 'end', originY: 'center', overlayX: 'start', overlayY: 'center' };
-            case 'left':
-                return { originX: 'start', originY: 'center', overlayX: 'end', overlayY: 'center' };
-            case 'bottom':
-                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
-            default:
-                return { originX: 'center', originY: 'bottom', overlayX: 'center', overlayY: 'top' };
-        }
+    private getPositionsFor(preferred: Side): ConnectedPosition[] {
+        const fallbacks = sides.filter((side) => side !== preferred);
+        return [preferred, ...fallbacks].map((side) => connectedPositions[side]);
     }
 }
