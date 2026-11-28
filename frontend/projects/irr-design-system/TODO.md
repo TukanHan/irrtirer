@@ -36,12 +36,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
     - `glow-color`: glow color expressed through one token per variant (outdated wording: `--ids-glow-color` is internal now and must follow `styles/token-naming` - restate when visual style is discussed)
     - `reduced-motion`: animations respect `prefers-reduced-motion` (`framed-button` border animation does not)
 
-## Open: Icon
-
-`ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); the app templates use it too.
-
-- [ ] Library: `icon-registry.ts` imports `rxjs`, which is missing from `peerDependencies` in the library `package.json`
-
 ## Open: Accessibility
 
 - [ ] Toggle state on buttons: `flat-button` cannot expose `aria-expanded` (disclosure) or `aria-pressed` (toggle), so app toggles (chevrons, tile visibility, theme) swap their `label` instead - consider state inputs with a stable label
