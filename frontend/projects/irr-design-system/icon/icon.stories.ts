@@ -5,7 +5,9 @@ import { elem } from 'storybook-doc/template-builder';
 import { IdsIcon } from './icon';
 import { IdsIconRegistry } from './registry/icon-registry';
 
-type IdsIconStoryArgs = IdsIcon & {
+type IdsIconStoryArgs = Omit<IdsIcon, 'svg'> & {
+    // `null` is the "none" radio option; with `undefined` no option is checked.
+    svg: string | null;
     color: string;
     '--ids-icon-size': string;
     '--ids-icon-weight': string;
@@ -13,16 +15,17 @@ type IdsIconStoryArgs = IdsIcon & {
 };
 
 const svgIcons: Record<string, string> = {
-    cross: toDataUrl(
+    cross: toBlobUrl(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
     ),
-    'flag-pl': toDataUrl(
+    'flag-pl': toBlobUrl(
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#fff" d="M2 5h20v7H2z"/><path fill="#dc143c" d="M2 12h20v7H2z"/></svg>',
     ),
 };
 
-function toDataUrl(svg: string): string {
-    return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+// The registry accepts only same-origin URLs: a `blob:` URL has the page's origin, a `data:` URL has none.
+function toBlobUrl(svg: string): string {
+    return URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }));
 }
 
 const meta: Meta<IdsIconStoryArgs> = {
@@ -79,7 +82,7 @@ export const Default: Story = {
     args: {
         color: '',
         name: 'home',
-        svg: undefined,
+        svg: null,
         '--ids-icon-size': '',
         '--ids-icon-weight': '',
         '--ids-icon-margin-inline': '',
