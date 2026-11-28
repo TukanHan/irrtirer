@@ -1,13 +1,13 @@
 import { signal } from '@angular/core';
-import { MatIconButton } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
+import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 
 const meta: Meta = {
     title: 'Style/Animacje/Chevron',
     decorators: [
         moduleMetadata({
-            imports: [MatIcon, MatIconButton],
+            imports: [IdsIcon, IdsFlatButton],
         }),
     ],
     parameters: { backgrounds: { disable: true } },
@@ -21,11 +21,9 @@ export const Example: StoryObj = {
         props: { isOpen: signal(true) },
         template: `
             <div class="flex flex-row items-center gap-4">
-                <button mat-icon-button (click)="isOpen.update(v => !v)">
-                    <mat-icon class="chevron" [class.closed]="!isOpen()">
-                        keyboard_arrow_up
-                    </mat-icon>
-                </button>
+                <ids-flat-button ariaLabel="Lorem ipsum" (clicked)="isOpen.update(v => !v)">
+                    <ids-icon class="chevron" name="keyboard_arrow_up" [class.closed]="!isOpen()" />
+                </ids-flat-button>
                 {{ isOpen() ? 'Otwarty' : 'Zamknięty' }}
             </div>
         `,

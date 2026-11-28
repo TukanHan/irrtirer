@@ -1,7 +1,6 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { takeUntilDestroyed, toSignal } from '@angular/core/rxjs-interop';
-import { MatIcon } from '@angular/material/icon';
 import { MatRadioButton, MatRadioChange, MatRadioGroup } from '@angular/material/radio';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -14,7 +13,7 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 
 @Component({
     selector: 'app-toolbar',
-    imports: [MatIcon, IdsIcon, MatRadioGroup, MatRadioButton, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
+    imports: [IdsIcon, MatRadioGroup, MatRadioButton, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
     template: `
         <ids-flat-link link="/tool" linkType="internal">
             <span class="text-base">{{ 'title' | translate }}</span>
@@ -44,17 +43,17 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
             <mat-radio-group class="lang-radio-group" (change)="languageChanged($event)" [value]="selectedLanguage()">
                 <mat-radio-button value="pl" class="lang-radio">
                     {{ 'toolbar.languages.polish' | translate }}
-                    <mat-icon svgIcon="pl" />
+                    <ids-icon svg="pl" />
                 </mat-radio-button>
                 <mat-radio-button value="en" class="lang-radio">
                     {{ 'toolbar.languages.english' | translate }}
-                    <mat-icon svgIcon="gb" />
+                    <ids-icon svg="gb" />
                 </mat-radio-button>
             </mat-radio-group>
         </ids-menu>
 
         <ids-flat-link link="https://github.com/TukanHan/irrtirer" linkType="external">
-            <mat-icon svgIcon="github" />
+            <ids-icon svg="github" />
             {{ 'toolbar.github' | translate }}
         </ids-flat-link>
     `,

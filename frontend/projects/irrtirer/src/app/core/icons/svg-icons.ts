@@ -1,6 +1,5 @@
 import { EnvironmentProviders, inject, provideAppInitializer } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { IdsIconRegistry } from 'irr-design-system/icon';
 
 const iconDictionary: Record<string, string> = {
     github: 'github-mark.svg',
@@ -10,10 +9,9 @@ const iconDictionary: Record<string, string> = {
 
 export function provideSvgIcons(): EnvironmentProviders {
     return provideAppInitializer(() => {
-        const iconRegistry = inject(MatIconRegistry);
-        const sanitizer = inject(DomSanitizer);
+        const iconRegistry = inject(IdsIconRegistry);
         for (const [name, file] of Object.entries(iconDictionary)) {
-            iconRegistry.addSvgIcon(name, sanitizer.bypassSecurityTrustResourceUrl(`../irrtirer/assets/icons/${file}`));
+            iconRegistry.register(name, `../irrtirer/assets/icons/${file}`);
         }
     });
 }

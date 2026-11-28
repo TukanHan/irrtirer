@@ -38,10 +38,11 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Open: Icon
 
-`ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); the app still uses `MatIcon`.
+`ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); the app templates use it too.
 
 - [ ] Library: `icon-registry.ts` imports `rxjs`, which is missing from `peerDependencies` in the library `package.json`
-- [ ] App: replace `mat-icon` with `ids-icon`, register the SVGs in `svg-icons.ts` with `IdsIconRegistry`, then remove the `Material Icons` font from `styles.scss`, `_icon-theme.scss`, direct `mat-icon` selectors (e.g. `sector-list-elem.scss`) and `FakeMatIconRegistry` from `test-setup.ts`
+- [ ] Security: `IdsIconRegistry` inlines the downloaded SVG into the page without sanitizing it and `register` accepts any URL - check for bypasses (scripts, event handlers, external references, untrusted URLs) and cover the result with tests
+- [ ] Testing: analyse whether `ids-icon` needs a fake registry for consumers' tests, like `FakeMatIconRegistry` for `mat-icon`
 
 ## Open: Accessibility
 
@@ -72,3 +73,5 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## Tooling idea: audit skill
 
 - [ ] Consider `.claude/skills/ids-audit/SKILL.md`: check components against `STANDARD.md` one category at a time, reading only the files that category needs, and report a table (component × rule → ok / violation / n/a) to feed this file
+- [ ] Audit skill: also pay attention to security of the controls
+- [ ] Audit skill: move the `Performance` category from `STANDARD.md` into the skill

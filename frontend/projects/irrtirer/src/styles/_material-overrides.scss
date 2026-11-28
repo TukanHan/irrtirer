@@ -1,9 +1,7 @@
 @use './components/input-theme' as input;
-@use './components/icon-theme' as icon;
 @use './components/dialog-theme' as dialog;
 @use './components/autocomplete-theme' as autocomplete;
 
 @include input.theme();
-@include icon.theme();
 @include dialog.theme();
 @include autocomplete.theme();
