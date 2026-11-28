@@ -18,6 +18,7 @@ Extends `../AGENTS.md`. Each project in `projects/` has its own `AGENTS.md`; loc
 - **Zoneless** (no Zone.js). `OnPush` is the default change detection - do not set `changeDetection` explicitly and never use `ChangeDetectionStrategy.Eager`.
 - State and data flow via **Signals** (`signal`, `computed`, `effect`, `linkedSignal`); signal-based `input()`, `model()`, `output()`. No `@Input`/`@Output` decorators.
 - Component templates inline (`template`), no separate `.html` files.
+- Keep constructors readable: when effects or other setup make one hard to read (several of them, or large ones), extract them into well-named methods.
 - Libraries' public API (exported members, component `input()`/`model()`/`output()`): a short JSDoc is welcome - it documents usage for consumers and Storybook.
 
 ## Naming

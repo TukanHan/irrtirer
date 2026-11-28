@@ -176,6 +176,55 @@ describe('IdsTooltip', () => {
         expect([...tooltip.classList]).toEqual(expect.arrayContaining(['dolor', 'amet', 'ids-tooltip-panel']));
     });
 
+    it('updates the text and classes while open', async () => {
+        const user = userEvent.setup();
+        const { fixture, rerender } = await render('<input aria-label="Name" [idsTooltip]="text" [idsTooltipPanelClass]="panelClass" />', {
+            imports: [IdsTooltip],
+            componentProperties: { text: 'Lorem ipsum', panelClass: 'dolor' },
+        });
+        await user.tab();
+        const tooltip = await screen.findByRole('tooltip');
+
+        await rerender({ componentProperties: { text: 'Sit amet', panelClass: 'consectetur' } });
+        await fixture.whenStable();
+
+        expect(tooltip.textContent.trim()).toBe('Sit amet');
+        // Purely visual input: the classes are its only observable effect.
+        expect([...tooltip.classList]).toContain('consectetur');
+        expect([...tooltip.classList]).not.toContain('dolor');
+    });
+
+    it('closes and removes the description when the text becomes blank', async () => {
+        const user = userEvent.setup();
+        const { fixture, rerender } = await render('<input aria-label="Name" [idsTooltip]="text" />', {
+            imports: [IdsTooltip],
+            componentProperties: { text: 'Lorem ipsum' },
+        });
+        await user.tab();
+        await screen.findByRole('tooltip');
+
+        await rerender({ componentProperties: { text: ' ' } });
+        await fixture.whenStable();
+
+        expect(screen.queryByRole('tooltip')).toBeNull();
+        expect(screen.getByRole('textbox').hasAttribute('aria-describedby')).toBe(false);
+    });
+
+    it('describes the host once the text starts to differ from its name', async () => {
+        const user = userEvent.setup();
+        const { fixture, rerender } = await render('<button aria-label="Lorem ipsum" [idsTooltip]="text">x</button>', {
+            imports: [IdsTooltip],
+            componentProperties: { text: 'Lorem ipsum' },
+        });
+        await user.tab();
+        await screen.findByRole('tooltip');
+
+        await rerender({ componentProperties: { text: 'Sit amet' } });
+        await fixture.whenStable();
+
+        expect(screen.getByRole('button', { description: 'Sit amet' })).not.toBeNull();
+    });
+
     it('shows nothing when the text is blank', async () => {
         const user = userEvent.setup();
         const { fixture } = await render('<input aria-label="Name" idsTooltip=" " />', { imports: [IdsTooltip] });

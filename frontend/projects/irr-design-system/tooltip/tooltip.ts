@@ -1,7 +1,7 @@
 import { hasModifierKey } from '@angular/cdk/keycodes';
-import { ConnectedPosition, Overlay, OverlayRef } from '@angular/cdk/overlay';
+import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
-import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
+import { afterRenderEffect, ComponentRef, DestroyRef, Directive, ElementRef, inject, input, untracked } from '@angular/core';
 import { IdentityCounter } from 'irr-design-system/internal';
 import { IdsTooltipPanel } from './tooltip-panel/tooltip-panel';
 
@@ -48,10 +48,14 @@ export class IdsTooltip {
     private readonly panelId = `ids-tooltip-${inject(IdentityCounter).getNextIdNumber()}`;
 
     private overlayRef: OverlayRef | undefined;
+    private positionStrategy: FlexibleConnectedPositionStrategy | undefined;
+    private panel: ComponentRef<IdsTooltipPanel> | undefined;
+    private focusedElement: Element | undefined;
     private describedElement: Element | undefined;
 
     constructor() {
         this.destroyRef.onDestroy(() => this.closePanel());
+        this.refreshPanelOnInputChanges();
     }
 
     protected onMouseEnter(): void {
@@ -64,11 +68,22 @@ export class IdsTooltip {
 
     protected onFocusIn(event: FocusEvent): void {
         this.openPanel();
-        this.describe(event.target as Element);
+        this.focusedElement = event.target as Element;
+        this.describe(this.focusedElement);
     }
 
     protected onFocusOut(): void {
+        this.focusedElement = undefined;
         this.closePanel();
+    }
+
+    private refreshPanelOnInputChanges(): void {
+        afterRenderEffect(() => {
+            this.idsTooltip();
+            this.idsTooltipPosition();
+            this.idsTooltipPanelClass();
+            untracked(() => this.refreshPanel());
+        });
     }
 
     private openPanel(): void {
@@ -76,23 +91,47 @@ export class IdsTooltip {
             return;
         }
 
-        const positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
+        this.positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
 
         this.overlayRef = this.overlay.create({
-            positionStrategy,
+            positionStrategy: this.positionStrategy,
             scrollStrategy: this.overlay.scrollStrategies.reposition(),
             hasBackdrop: false,
         });
 
         const portal = new ComponentPortal(IdsTooltipPanel);
-        const panel = this.overlayRef.attach(portal);
-        panel.setInput('panelId', this.panelId);
-        panel.setInput('text', this.idsTooltip());
-        panel.setInput('panelClass', this.idsTooltipPanelClass());
-        panel.changeDetectorRef.detectChanges();
+        this.panel = this.overlayRef.attach(portal);
+        this.renderPanel();
 
         this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
         this.overlayRef.keydownEvents().subscribe((event) => this.closeOnEscape(event));
+    }
+
+    private renderPanel(): void {
+        this.panel?.setInput('panelId', this.panelId);
+        this.panel?.setInput('text', this.idsTooltip());
+        this.panel?.setInput('panelClass', this.idsTooltipPanelClass());
+        this.panel?.changeDetectorRef.detectChanges();
+    }
+
+    private refreshPanel(): void {
+        if (!this.overlayRef) {
+            return;
+        }
+
+        if (!this.idsTooltip().trim()) {
+            this.closePanel();
+            return;
+        }
+
+        this.renderPanel();
+        this.positionStrategy?.withPositions(this.getPositions());
+        this.overlayRef.updatePosition();
+
+        if (this.focusedElement) {
+            this.removeDescription();
+            this.describe(this.focusedElement);
+        }
     }
 
     private closeOnEscape(event: KeyboardEvent): void {
@@ -114,6 +153,8 @@ export class IdsTooltip {
         this.removeDescription();
         this.overlayRef?.dispose();
         this.overlayRef = undefined;
+        this.positionStrategy = undefined;
+        this.panel = undefined;
     }
 
     private describe(element: Element): void {
