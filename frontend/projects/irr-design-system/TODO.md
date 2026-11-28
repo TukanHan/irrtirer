@@ -19,7 +19,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## styles/recipe-knobs
 
 - [ ] `flat-link.css` overrides `--ids-flat-action-overlay-opacity` and the content `font-weight` of the flat-action recipe for `[aria-current]` (cause of the `flat-link` `states/state-model` item)
-- [ ] `flat-button`, `flat-link`, `framed-button`, `menu`, `tooltip-panel`: own stylesheet listed before shared files in `styleUrls`
 
 ## Open: Standard
 
@@ -62,9 +61,3 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `vitest-axe` in specs (jsdom - no contrast check)
 - [ ] Storybook stories run as Vitest tests (`@storybook/addon-vitest`) with a11y violations failing the run (real browser - includes contrast)
 - [ ] Think about a `storybook/a11y-clean` rule (no a11y panel violations in any theme) - the panel currently reports many errors
-
-## Audit: tooltip
-
-- [ ] Improvement: hover open delay (passing over a toolbar flashes tooltips)
-- [ ] Story: `idsTooltipPanelClass` has no value in `Default` args
-- [ ] Spec: no coverage of `idsTooltipPosition` (jsdom has no layout)

@@ -7,7 +7,7 @@ import { Component, input } from '@angular/core';
             {{ text() }}
         </div>
     `,
-    styleUrls: ['./tooltip-panel.css', '../../styles/shared/ids-panel.css', '../../styles/shared/typography/ids-type-label-sm.css'],
+    styleUrls: ['../../styles/shared/ids-panel.css', '../../styles/shared/typography/ids-type-label-sm.css', './tooltip-panel.css'],
 })
 export class IdsTooltipPanel {
     public readonly panelId = input.required<string>();

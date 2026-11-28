@@ -17,7 +17,7 @@ import { Clickable, NativeControlHost } from 'irr-design-system/internal';
             <ng-content />
         </button>
     `,
-    styleUrls: ['./menu-item.css', '../../styles/shared/typography/ids-type-label-md.css'],
+    styleUrls: ['../../styles/shared/typography/ids-type-label-md.css', './menu-item.css'],
 })
 export class IdsMenuItem implements Clickable, NativeControlHost {
     /** Emitted when the item is activated by click, `Enter` or `Space`. */

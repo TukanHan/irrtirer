@@ -36,7 +36,7 @@ import { IdsMenuItem } from './menu-item/menu-item';
             </div>
         </ng-template>
     `,
-    styleUrls: ['./menu.css', '../styles/shared/ids-panel.css'],
+    styleUrls: ['../styles/shared/ids-panel.css', './menu.css'],
 })
 export class IdsMenu {
     /** Classes for the floating panel, which is rendered outside the `ids-menu` element. */

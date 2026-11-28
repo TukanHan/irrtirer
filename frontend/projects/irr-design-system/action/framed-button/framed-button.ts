@@ -24,7 +24,7 @@ export type IdsFramedButtonVariant = 'accent' | 'neutral' | 'danger';
             </span>
         </button>
     `,
-    styleUrls: ['./framed-button.css', '../../styles/shared/ids-action.css', '../../styles/shared/typography/ids-type-label-lg.css'],
+    styleUrls: ['../../styles/shared/ids-action.css', '../../styles/shared/typography/ids-type-label-lg.css', './framed-button.css'],
 })
 export class IdsFramedButton implements Clickable, NativeControlHost {
     /** Emitted when the button is activated by click, `Enter` or `Space`; never while disabled. */

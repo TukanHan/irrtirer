@@ -25,10 +25,10 @@ export type IdsFlatButtonVariant = 'accent' | 'neutral' | 'danger';
         </button>
     `,
     styleUrls: [
-        './flat-button.css',
         '../../styles/shared/ids-flat-action.css',
         '../../styles/shared/ids-action.css',
         '../../styles/shared/typography/ids-type-label-lg.css',
+        './flat-button.css',
     ],
 })
 export class IdsFlatButton implements Clickable, NativeControlHost {

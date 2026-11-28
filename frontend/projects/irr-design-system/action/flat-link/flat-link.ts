@@ -27,10 +27,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         }
     `,
     styleUrls: [
-        './flat-link.css',
         '../../styles/shared/ids-flat-action.css',
         '../../styles/shared/ids-action.css',
         '../../styles/shared/typography/ids-type-label-lg.css',
+        './flat-link.css',
     ],
 })
 export class IdsFlatLink {
