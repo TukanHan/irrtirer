@@ -1,4 +1,5 @@
-import { ConnectedPosition, FlexibleConnectedPositionStrategy, Overlay, OverlayRef } from '@angular/cdk/overlay';
+import { hasModifierKey } from '@angular/cdk/keycodes';
+import { ConnectedPosition, Overlay, OverlayRef } from '@angular/cdk/overlay';
 import { ComponentPortal } from '@angular/cdk/portal';
 import { DestroyRef, Directive, ElementRef, inject, input } from '@angular/core';
 import { IdentityCounter } from 'irr-design-system/internal';
@@ -17,8 +18,6 @@ export type IdsTooltipPosition = 'auto' | 'top' | 'right' | 'bottom' | 'left';
         '(mouseleave)': 'onMouseLeave($event)',
         '(focusin)': 'onFocusIn($event)',
         '(focusout)': 'onFocusOut()',
-        '(document:keydown.escape)': 'onEscape()',
-        '(window:resize)': 'onViewportResize()',
     },
 })
 export class IdsTooltip {
@@ -37,7 +36,6 @@ export class IdsTooltip {
     private readonly panelId = `ids-tooltip-${inject(IdentityCounter).getNextIdNumber()}`;
 
     private overlayRef: OverlayRef | undefined;
-    private positionStrategy: FlexibleConnectedPositionStrategy | undefined;
     private describedElement: Element | undefined;
 
     constructor() {
@@ -61,23 +59,15 @@ export class IdsTooltip {
         this.closePanel();
     }
 
-    protected onEscape(): void {
-        this.closePanel();
-    }
-
-    protected onViewportResize(): void {
-        this.updatePositions();
-    }
-
     private openPanel(): void {
         if (this.overlayRef || !this.idsTooltip().trim()) {
             return;
         }
 
-        this.positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
+        const positionStrategy = this.overlay.position().flexibleConnectedTo(this.host).withPositions(this.getPositions()).withPush(true);
 
         this.overlayRef = this.overlay.create({
-            positionStrategy: this.positionStrategy,
+            positionStrategy,
             scrollStrategy: this.overlay.scrollStrategies.reposition(),
             hasBackdrop: false,
         });
@@ -90,6 +80,14 @@ export class IdsTooltip {
         panel.changeDetectorRef.detectChanges();
 
         this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
+        this.overlayRef.keydownEvents().subscribe((event) => this.closeOnEscape(event));
+    }
+
+    private closeOnEscape(event: KeyboardEvent): void {
+        if (event.key === 'Escape' && !hasModifierKey(event)) {
+            event.preventDefault();
+            this.closePanel();
+        }
     }
 
     private closeUnlessPointerStays(pointerTarget: EventTarget | null): void {
@@ -104,7 +102,6 @@ export class IdsTooltip {
         this.removeDescription();
         this.overlayRef?.dispose();
         this.overlayRef = undefined;
-        this.positionStrategy = undefined;
     }
 
     private describe(element: Element): void {
@@ -134,15 +131,6 @@ export class IdsTooltip {
     private getForeignDescribedByIds(element: Element): string[] {
         const ids = element.getAttribute('aria-describedby')?.split(' ') ?? [];
         return ids.filter((id) => id && id !== this.panelId);
-    }
-
-    private updatePositions(): void {
-        if (!this.overlayRef || !this.positionStrategy) {
-            return;
-        }
-
-        this.positionStrategy.withPositions(this.getPositions());
-        this.overlayRef.updatePosition();
     }
 
     private getPositions(): ConnectedPosition[] {

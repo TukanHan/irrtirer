@@ -1,7 +1,14 @@
+import { Overlay } from '@angular/cdk/overlay';
+import { ComponentPortal } from '@angular/cdk/portal';
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { fireEvent, render, screen } from '@testing-library/angular';
 import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import { IdsTooltip } from './tooltip';
+
+@Component({ template: '' })
+class Underlying {}
 
 describe('IdsTooltip', () => {
     it('shows the text and describes the host when the host is focused', async () => {
@@ -123,6 +130,26 @@ describe('IdsTooltip', () => {
         expect(screen.queryByRole('tooltip')).toBeNull();
         expect(input.hasAttribute('aria-describedby')).toBe(false);
         expect(document.activeElement).toBe(input);
+    });
+
+    it('keeps Escape from the overlay underneath while open', async () => {
+        const user = userEvent.setup();
+        await render('<input aria-label="Name" idsTooltip="Lorem ipsum" />', { imports: [IdsTooltip] });
+        // Stands for a dialog the host sits in: CDK dialogs listen for keys the same way.
+        const underlying = TestBed.inject(Overlay).create();
+        underlying.attach(new ComponentPortal(Underlying));
+        const underlyingKeys: string[] = [];
+        underlying.keydownEvents().subscribe((event) => underlyingKeys.push(event.key));
+        await user.tab();
+        await screen.findByRole('tooltip');
+        underlyingKeys.length = 0;
+
+        await user.keyboard('{Escape}');
+        const keysWhileOpen = [...underlyingKeys];
+        await user.keyboard('{Escape}');
+
+        expect(keysWhileOpen).toEqual([]);
+        expect(underlyingKeys).toEqual(['Escape']);
     });
 
     it('closes on Escape while hovered', async () => {
