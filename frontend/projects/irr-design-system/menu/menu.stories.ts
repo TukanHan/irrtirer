@@ -1,7 +1,7 @@
-import { MatIcon } from '@angular/material/icon';
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { action } from 'storybook/actions';
 import { IdsFramedButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { cssPropertyArgTypes } from 'storybook-doc/css-properties';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
@@ -20,7 +20,7 @@ const meta: Meta<IdsMenuStoryArgs> = {
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
-            imports: [IdsFramedButton, IdsMenuTrigger, IdsMenuItem, MatIcon],
+            imports: [IdsFramedButton, IdsMenuTrigger, IdsMenuItem, IdsIcon],
         }),
     ],
     argTypes: {
@@ -52,7 +52,7 @@ export const Default: Story = {
                     elem('ids-menu-item').withOutput('clicked').withContent('Velmora'),
                     elem('ids-menu-item')
                         .withOutput('clicked')
-                        .withContent(elem('mat-icon').withClass('material-symbols-outlined').withContent('castle'), 'Kharzun'),
+                        .withContent(elem('ids-icon').withInput('name', 'castle', ''), 'Kharzun'),
                     elem('ids-menu-item').withInput('disabled', true, false).withOutput('clicked').withContent('Ostravel'),
                 )
                 .build(),

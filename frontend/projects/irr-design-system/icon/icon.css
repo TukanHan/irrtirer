@@ -7,11 +7,11 @@
 :host {
     display: inline-block;
     flex-shrink: 0;
-    width: var(--ids-icon-size, 24px);
-    height: var(--ids-icon-size, 24px);
+    width: 1em;
+    height: 1em;
     overflow: visible;
     font-family: 'Material Symbols Outlined';
-    font-size: var(--ids-icon-size, 24px);
+    font-size: var(--ids-icon-size, 1lh);
     font-weight: var(--ids-icon-weight);
     font-style: normal;
     font-feature-settings: 'liga';

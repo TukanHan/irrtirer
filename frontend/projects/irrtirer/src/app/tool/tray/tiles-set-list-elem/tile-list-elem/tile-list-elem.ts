@@ -3,12 +3,13 @@ import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { TileModel } from '../../../../core/models/mosaic-project.model';
 
 @Component({
     selector: 'app-tile-list-elem',
-    imports: [MatIcon, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe],
+    imports: [MatIcon, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe, IdsIcon],
     template: `
         <span class="block-label-sm"> {{ tile().id }} </span>
         <div class="flex -m-1.5">
@@ -22,7 +23,7 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
 
             <ids-menu #menu>
                 <ids-menu-item (clicked)="navigateToTileDetails()">
-                    <mat-icon class="material-symbols-outlined"> page_info </mat-icon>
+                    <ids-icon name="page_info" />
                     {{ 'common.details' | translate }}
                 </ids-menu-item>
             </ids-menu>

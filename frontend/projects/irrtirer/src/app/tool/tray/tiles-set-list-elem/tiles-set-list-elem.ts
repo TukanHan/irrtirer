@@ -7,6 +7,7 @@ import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { TilesSet } from '../../../core/models/mosaic-project.model';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -18,7 +19,7 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanel, IdsFlatButton, MatIcon, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList],
+    imports: [ExpandablePanel, IdsFlatButton, MatIcon, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList, IdsIcon],
     template: `
         @let tilesSetValue = tilesSet();
         <div class="list-elem list-item-box">
@@ -42,12 +43,12 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
                 <ids-menu #menu>
                     @if (tilesSetValue.source === 'generated') {
                         <ids-menu-item (clicked)="navigateToRandomSetAgain()">
-                            <mat-icon class="material-symbols-outlined"> shuffle </mat-icon>
+                            <ids-icon name="shuffle" />
                             {{ 'tool.tiles.menu.generateAgain' | translate }}
                         </ids-menu-item>
                     }
                     <ids-menu-item (clicked)="removeTilesSet()">
-                        <mat-icon class="material-symbols-outlined"> delete </mat-icon>
+                        <ids-icon name="delete" />
                         {{ 'tool.tiles.menu.removeTilesSet' | translate }}
                     </ids-menu-item>
                 </ids-menu>

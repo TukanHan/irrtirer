@@ -53,9 +53,9 @@ const meta: Meta<IdsIconStoryArgs> = {
         },
         ...cssPropertyArgTypes({
             '--ids-icon-size': {
-                description: 'Width, height and font size of the icon.',
+                description: 'Width, height and font size of the icon. By default, the line height of the surrounding text.',
                 syntax: '<length>',
-                defaultValue: '24px',
+                defaultValue: '1lh',
             },
             '--ids-icon-weight': {
                 description: 'Stroke weight of a font icon, from 100 to 700.',

@@ -3,7 +3,6 @@
 
     .ids-menu-item {
         --ids-menu-action-overlay-opacity: 0;
-        --irr-icon-size: 1.15rem;
         display: flex;
         align-items: center;
         gap: 0.5rem;

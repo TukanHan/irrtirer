@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsMenu, IdsMenuItem, IdsMenuTrigger } from 'irr-design-system/menu';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
 import { MosaicProjectActions } from '../../../core/state/mosaic-project/mosaic-project.actions';
@@ -17,7 +18,7 @@ import { SectorsEventBus } from '../sectors-event-bus';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [IdsFramedButton, MatIcon, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton],
+    imports: [IdsFramedButton, MatIcon, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton, IdsIcon],
     template: `
         <div class="actions">
             <ids-framed-button variant="accent" (clicked)="navigateToNewSectorPanel()">
@@ -43,15 +44,15 @@ import { SectorsEventBus } from '../sectors-event-bus';
 
                             <ids-menu #menu>
                                 <ids-menu-item (clicked)="navigateToContourPanel(sector)">
-                                    <mat-icon class="material-symbols-outlined">draw</mat-icon>
+                                    <ids-icon name="draw" />
                                     {{ 'tool.sectors.contourList.editContour' | translate }}
                                 </ids-menu-item>
                                 <ids-menu-item (clicked)="navigateToPropertyPanel(sector)">
-                                    <mat-icon class="material-symbols-outlined">settings_input_composite</mat-icon>
+                                    <ids-icon name="settings_input_composite" />
                                     {{ 'tool.sectors.contourList.editProperties' | translate }}
                                 </ids-menu-item>
                                 <ids-menu-item (clicked)="openRemoveSectorDialog(sector)">
-                                    <mat-icon class="material-symbols-outlined">delete</mat-icon>
+                                    <ids-icon name="delete" />
                                     {{ 'tool.sectors.contourList.removeSector' | translate }}
                                 </ids-menu-item>
                             </ids-menu>
