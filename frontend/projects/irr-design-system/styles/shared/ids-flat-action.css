@@ -69,6 +69,6 @@
             font-weight 0.2s ease,
             text-shadow 0.2s ease;
 
-        --ids-icon-margin-inline: -6px;
+        --ids-icon-container-margin-inline: -6px;
     }
 }

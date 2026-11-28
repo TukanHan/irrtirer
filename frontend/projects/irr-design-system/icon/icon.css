@@ -9,7 +9,7 @@
     flex-shrink: 0;
     width: 1em;
     height: 1em;
-    margin-inline: var(--ids-icon-margin-inline, 0);
+    margin-inline: var(--ids-icon-margin-inline, var(--ids-icon-container-margin-inline, 0));
     overflow: visible;
     font-family: 'Material Symbols Outlined';
     font-size: var(--ids-icon-size, 1lh);

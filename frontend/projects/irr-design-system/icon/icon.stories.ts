@@ -9,6 +9,7 @@ type IdsIconStoryArgs = IdsIcon & {
     color: string;
     '--ids-icon-size': string;
     '--ids-icon-weight': string;
+    '--ids-icon-margin-inline': string;
 };
 
 const svgIcons: Record<string, string> = {
@@ -62,6 +63,11 @@ const meta: Meta<IdsIconStoryArgs> = {
                 syntax: '<number>',
                 defaultValue: '200',
             },
+            '--ids-icon-margin-inline': {
+                description: 'Inline margin of the icon. By default, `0`; buttons and links use a negative one to pull the icon towards their edge.',
+                syntax: '<length>',
+                defaultValue: '0',
+            },
         }),
     },
 };
@@ -76,12 +82,14 @@ export const Default: Story = {
         svg: undefined,
         '--ids-icon-size': '',
         '--ids-icon-weight': '',
+        '--ids-icon-margin-inline': '',
     },
     render: (args) => ({
         props: args,
         template: elem('ids-icon')
             .withStyle('--ids-icon-size', args['--ids-icon-size'])
             .withStyle('--ids-icon-weight', args['--ids-icon-weight'])
+            .withStyle('--ids-icon-margin-inline', args['--ids-icon-margin-inline'])
             .withStyle('color', args.color)
             .withInput('name', args.svg ? undefined : args.name)
             .withInput('svg', args.svg)

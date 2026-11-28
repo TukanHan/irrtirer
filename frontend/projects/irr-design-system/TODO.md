@@ -11,10 +11,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `flat-link`: `current` is lost under `:focus-visible` (focus overlay 0.1 overrides current 0.15) and `:active` (same 0.15 + bold as current) - see its `States` story
 - [ ] `side-nav-item`: `current` loses its highlight icon color under `:hover` and `:focus-visible` (the muted hover color overrides it) - see the `side-nav` `States` story
 
-## styles/public-tokens
-
-- [ ] `ids-flat-action.css` sets `--ids-icon-margin-inline`, an undocumented token read by `ids-icon` - decide whether it becomes public
-
 ## styles/override-via-tokens
 
 - [ ] `tooltip`: the panel is rendered in an overlay, so consumers cannot reach it with tokens - add a `panelClass` input like `ids-menu` (with a public token, e.g. `--ids-tooltip-padding`, once one is needed)
@@ -44,6 +40,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 `ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); the app still uses `MatIcon`.
 
+- [ ] Library: `icon-registry.ts` imports `rxjs`, which is missing from `peerDependencies` in the library `package.json`
 - [ ] App: replace `mat-icon` with `ids-icon`, register the SVGs in `svg-icons.ts` with `IdsIconRegistry`, then remove the `Material Icons` font from `styles.scss`, `_icon-theme.scss`, direct `mat-icon` selectors (e.g. `sector-list-elem.scss`) and `FakeMatIconRegistry` from `test-setup.ts`
 
 ## Open: Accessibility
