@@ -13,8 +13,8 @@ const emptyRootApi = {
 };
 
 const publicSymbolPrefix = {
-    selector: 'ExportSpecifier[exported.name!=/^(Ids|IDS_)/]',
-    message: 'structure/public-symbol-prefix: symbols exported to consumers start with Ids (constants: IDS_).',
+    selector: 'ExportSpecifier[exported.name!=/^(Ids|IDS_|provideIds)/]',
+    message: 'structure/public-symbol-prefix: symbols exported to consumers start with Ids (constants: IDS_, provider functions: provideIds).',
 };
 
 export default defineConfig([

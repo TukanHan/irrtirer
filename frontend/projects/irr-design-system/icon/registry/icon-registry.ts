@@ -1,20 +1,29 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { DOCUMENT, inject, Injectable } from '@angular/core';
 import { map, Observable, shareReplay, throwError } from 'rxjs';
 
 /**
  * Names SVG files for the `svg` input of `ids-icon`. Each file is downloaded once and inlined, so it can use `currentColor`.
- * Register only trusted URLs: the SVG becomes part of the page.
+ * The SVG becomes part of the page unsanitized: register only trusted files. Only same-origin URLs are accepted.
  */
 @Injectable({ providedIn: 'root' })
 export class IdsIconRegistry {
     private readonly http = inject(HttpClient);
+    private readonly document = inject(DOCUMENT);
     private readonly urls = new Map<string, string>();
     private readonly sources = new Map<string, Observable<SVGElement>>();
 
     public register(name: string, url: string): void {
+        this.assertSameOrigin(url);
         this.urls.set(name, url);
         this.sources.delete(name);
+    }
+
+    private assertSameOrigin(url: string): void {
+        const { origin } = new URL(url, this.document.baseURI);
+        if (origin !== this.document.location.origin) {
+            throw new Error(`IdsIconRegistry: "${url}" is not same-origin; only same-origin SVG files can be registered.`);
+        }
     }
 
     /** Emits a copy of the parsed `<svg>` on every subscription, so each icon gets its own element. */

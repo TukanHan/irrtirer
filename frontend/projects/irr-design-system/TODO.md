@@ -41,8 +41,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 `ids-icon` exists (font ligatures, SVGs via `IdsIconRegistry`); the app templates use it too.
 
 - [ ] Library: `icon-registry.ts` imports `rxjs`, which is missing from `peerDependencies` in the library `package.json`
-- [ ] Security: `IdsIconRegistry` inlines the downloaded SVG into the page without sanitizing it and `register` accepts any URL - check for bypasses (scripts, event handlers, external references, untrusted URLs) and cover the result with tests
-- [ ] Testing: analyse whether `ids-icon` needs a fake registry for consumers' tests, like `FakeMatIconRegistry` for `mat-icon`
 
 ## Open: Accessibility
 

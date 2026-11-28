@@ -37,6 +37,13 @@ describe('IdsIconRegistry', () => {
         expect(second).not.toBe(await first);
     });
 
+    it.each(['https://example.com/lorem.svg', '//example.com/lorem.svg', 'data:image/svg+xml,<svg/>'])(
+        'refuses to register a URL that is not same-origin: %s',
+        (url) => {
+            expect(() => registry.register('lorem', url)).toThrow('not same-origin');
+        },
+    );
+
     it('fails for an icon that is not registered', async () => {
         const svg = firstValueFrom(registry.getSvg('lorem'));
 

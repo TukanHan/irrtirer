@@ -4,6 +4,7 @@ import { ErrorHandler, inject, provideAppInitializer } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { render, screen } from '@testing-library/angular';
 import { describe, expect, it, vi } from 'vitest';
+import { provideIdsFakeIconRegistry } from 'irr-design-system/icon/testing';
 import { IdsIcon } from './icon';
 import { IdsIconRegistry } from './registry/icon-registry';
 
@@ -56,5 +57,17 @@ describe('IdsIcon', () => {
         await renderWithRegistry('<ids-icon svg="ipsum" />', handleError);
 
         await vi.waitFor(() => expect(handleError).toHaveBeenCalledWith(expect.objectContaining({ message: expect.stringContaining('"ipsum"') })));
+    });
+
+    it('renders any SVG name with the fake registry, without requests or errors', async () => {
+        const handleError = vi.fn();
+        const { container } = await render('<ids-icon name="home" svg="ipsum" />', {
+            imports: [IdsIcon],
+            providers: [provideIdsFakeIconRegistry(), { provide: ErrorHandler, useValue: { handleError } }],
+        });
+
+        await vi.waitFor(() => expect(container.querySelector('ids-icon svg')).toBeTruthy());
+        expect(screen.queryByText('home')).toBeNull();
+        expect(handleError).not.toHaveBeenCalled();
     });
 });

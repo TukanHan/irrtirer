@@ -79,7 +79,8 @@
                 "test": {
                     "builder": "@angular/build:unit-test",
                     "options": {
-                        "runnerConfig": "projects/irrtirer/vite.config.mts"
+                        "runnerConfig": "projects/irrtirer/vite.config.mts",
+                        "setupFiles": ["projects/irrtirer/src/test-setup.ts"]
                     }
                 },
                 "lint": {

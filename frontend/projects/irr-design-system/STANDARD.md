@@ -62,7 +62,7 @@ Parts used only inside the library (e.g. an overlay panel, a counter) are not ex
 
 ### public-symbol-prefix · MUST
 
-Every symbol exported from a consumer-facing entry point starts with `Ids` (constants: `IDS_`), including types used by component inputs.
+Every symbol exported from a consumer-facing entry point starts with `Ids` (constants: `IDS_`, provider functions: `provideIds`), including types used by component inputs.
 
 **Check:** ESLint (`no-restricted-syntax`); review input types.
 
