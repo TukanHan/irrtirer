@@ -87,6 +87,7 @@ export class IdsTooltip {
         panel.setInput('panelId', this.panelId);
         panel.setInput('text', this.idsTooltip());
         panel.setInput('panelClass', this.idsTooltipPanelClass());
+        panel.changeDetectorRef.detectChanges();
 
         this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
     }

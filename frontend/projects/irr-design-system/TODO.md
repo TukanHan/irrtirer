@@ -65,7 +65,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 
 ## Audit: tooltip
 
-- [ ] On `focusin` the host gets `aria-describedby` before the panel with that `id` is rendered (zoneless, next change detection) - a screen reader may announce without the description; spec does not catch it (`findByRole` waits); not verified with a real screen reader
 - [ ] Changing `idsTooltip`, `idsTooltipPanelClass` or `idsTooltipPosition` while open is ignored (set only on open) - e.g. "Copy" → "Copied!"
 - [ ] Every instance keeps `document:keydown.escape` and `window:resize` listeners while closed - listen only while open
 - [ ] `Escape` does not stop propagation - inside a menu/dialog it closes both
