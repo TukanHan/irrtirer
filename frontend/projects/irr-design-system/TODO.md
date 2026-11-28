@@ -21,6 +21,10 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `flat-link.css` overrides `--ids-flat-action-overlay-opacity` and the content `font-weight` of the flat-action recipe for `[aria-current]` (cause of the `flat-link` `states/state-model` item)
 - [ ] `flat-button`, `flat-link`, `framed-button`, `menu`, `tooltip-panel`: own stylesheet listed before shared files in `styleUrls`
 
+## Open: Standard
+
+- [ ] On the standard refactor: make every `Check:` say whether ESLint/build covers it or it needs review, so `ids-audit` does not verify tooling-enforced rules by hand
+
 ## Open: Styles (continue later)
 
 - [ ] Once the styles decisions are settled: rewrite all component styles against the `styles/*` rules (most of them do not comply yet, so violations are not listed one by one)
@@ -35,6 +39,7 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## Open: Accessibility
 
 - [ ] Toggle state on buttons: `flat-button` cannot expose `aria-expanded` (disclosure) or `aria-pressed` (toggle), so app toggles (chevrons, tile visibility, theme) swap their `label` instead - consider state inputs with a stable label
+- [ ] Consider a keyboard support table per control (key → behavior), e.g. in the class JSDoc or docs page, so it can be checked against the spec and in Storybook
 
 ## Open: Translations
 
@@ -58,8 +63,15 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] Storybook stories run as Vitest tests (`@storybook/addon-vitest`) with a11y violations failing the run (real browser - includes contrast)
 - [ ] Think about a `storybook/a11y-clean` rule (no a11y panel violations in any theme) - the panel currently reports many errors
 
-## Tooling idea: audit skill
+## Audit: tooltip
 
-- [ ] Consider `.claude/skills/ids-audit/SKILL.md`: check components against `STANDARD.md` one category at a time, reading only the files that category needs, and report a table (component × rule → ok / violation / n/a) to feed this file
-- [ ] Audit skill: also pay attention to security of the controls
-- [ ] Audit skill: move the `Performance` category from `STANDARD.md` into the skill
+- [ ] On `focusin` the host gets `aria-describedby` before the panel with that `id` is rendered (zoneless, next change detection) - a screen reader may announce without the description; spec does not catch it (`findByRole` waits); not verified with a real screen reader
+- [ ] Changing `idsTooltip`, `idsTooltipPanelClass` or `idsTooltipPosition` while open is ignored (set only on open) - e.g. "Copy" → "Copied!"
+- [ ] Every instance keeps `document:keydown.escape` and `window:resize` listeners while closed - listen only while open
+- [ ] `Escape` does not stop propagation - inside a menu/dialog it closes both
+- [ ] JSDoc of `auto` says "away from the nearest viewport edge", but the code never picks `top` (relies on fallbacks)
+- [ ] `tooltip-panel.css` overrides semantic `--ids-color-surface-panel` as a knob of `ids-panel` - the recipe could expose its own `--ids-panel-*` background knob, like padding
+- [ ] Improvement: hover open delay (passing over a toolbar flashes tooltips)
+- [ ] Cleanup: dead `default` branch in `getPosition`, fallback filter compares fields instead of side names
+- [ ] Story: `idsTooltipPanelClass` has no value in `Default` args
+- [ ] Spec: no coverage of `idsTooltipPosition` and of text change while open
