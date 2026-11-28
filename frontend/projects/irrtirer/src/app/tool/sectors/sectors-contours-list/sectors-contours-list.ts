@@ -2,7 +2,6 @@ import { CdkDragDrop, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import { Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -18,7 +17,7 @@ import { SectorsEventBus } from '../sectors-event-bus';
 
 @Component({
     selector: 'app-sectors-contours-list',
-    imports: [IdsFramedButton, MatIcon, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton, IdsIcon],
+    imports: [IdsFramedButton, IdsMenuTrigger, IdsMenu, IdsMenuItem, CdkDropList, CdkDrag, TranslatePipe, IdsFlatButton, IdsIcon],
     template: `
         <div class="actions">
             <ids-framed-button variant="accent" (clicked)="navigateToNewSectorPanel()">
@@ -39,7 +38,7 @@ import { SectorsEventBus } from '../sectors-event-bus';
                                 (mousedown)="$event.stopPropagation()"
                                 [idsMenuTriggerFor]="menu"
                             >
-                                <mat-icon>more_vert</mat-icon>
+                                <ids-icon class="icon-weight-400" name="more_vert" />
                             </ids-flat-button>
 
                             <ids-menu #menu>

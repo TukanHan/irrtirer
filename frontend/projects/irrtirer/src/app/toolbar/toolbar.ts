@@ -6,6 +6,7 @@ import { MatRadioButton, MatRadioChange, MatRadioGroup } from '@angular/material
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFlatLink } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsMenu, IdsMenuTrigger } from 'irr-design-system/menu';
 import { ThemeMode } from '../core/models/user-preferences.interface';
 import { ThemeSwitcher } from '../core/services/theme-switcher/theme-switcher';
@@ -13,7 +14,7 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 
 @Component({
     selector: 'app-toolbar',
-    imports: [MatIcon, MatRadioGroup, MatRadioButton, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
+    imports: [MatIcon, IdsIcon, MatRadioGroup, MatRadioButton, TranslatePipe, TitleCasePipe, IdsFlatButton, IdsFlatLink, IdsMenu, IdsMenuTrigger],
     template: `
         <ids-flat-link link="/tool" linkType="internal">
             <span class="text-base">{{ 'title' | translate }}</span>
@@ -27,15 +28,15 @@ import { UserPreferencesActions } from '../core/state/user-preferences/user-pref
 
         <ids-flat-button
             variant="accent"
-            class="toolbar-item mode"
+            class="toolbar-item"
             [ariaLabel]="(themeMode() === 'dark' ? 'toolbar.theme.toLight' : 'toolbar.theme.toDark') | translate"
             (clicked)="toggleTheme()"
         >
-            <mat-icon class="material-symbols-outlined">{{ themeMode() === 'dark' ? 'dark_mode' : 'light_mode' }}</mat-icon>
+            <ids-icon class="icon-weight-300" [name]="themeMode() === 'dark' ? 'dark_mode' : 'light_mode'" />
         </ids-flat-button>
 
         <ids-flat-button variant="accent" class="toolbar-item" [idsMenuTriggerFor]="menu">
-            <mat-icon>language</mat-icon>
+            <ids-icon class="icon-weight-400" name="language" />
             <span class="block min-w-5">{{ selectedLanguage() | titlecase }}</span>
         </ids-flat-button>
 

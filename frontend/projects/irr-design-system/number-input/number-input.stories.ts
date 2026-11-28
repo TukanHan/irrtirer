@@ -1,9 +1,9 @@
 import { type Injector, signal } from '@angular/core';
 import { disabled, form, FormField, required } from '@angular/forms/signals';
-import { MatIcon } from '@angular/material/icon';
 import { createApplication } from '@angular/platform-browser';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
+import { IdsIcon } from 'irr-design-system/icon';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsNumberInput } from './number-input';
@@ -23,7 +23,7 @@ const meta: Meta<NumberInputStoryArgs> = {
     loaders: [async () => ({ injector: (await formsApp).injector })],
     decorators: [
         moduleMetadata({
-            imports: [MatIcon, FormField, IdsError, IdsPrefix, IdsSuffix],
+            imports: [FormField, IdsError, IdsPrefix, IdsSuffix, IdsIcon],
         }),
     ],
     argTypes: {
@@ -70,12 +70,7 @@ export const Default: Story = {
                 .withInput('label', args.label, '')
                 .withInput('placeholder', args.placeholder, '')
                 .withContent(
-                    args.showPrefix &&
-                        elem('mat-icon')
-                            .withAttribute('idsPrefix')
-                            .withClass('material-symbols-outlined')
-                            .withAttribute('aria-hidden', 'true')
-                            .withContent('thermostat'),
+                    args.showPrefix && elem('ids-icon').withAttribute('idsPrefix').withAttribute('name', 'thermostat'),
                     args.showSuffix && elem('span').withAttribute('idsSuffix').withContent('℃'),
                     elem('ids-error').withContent(
                         '@for (error of temperatureForm.temperature().errors(); track error.kind) {\n    {{ error.message }}\n}',

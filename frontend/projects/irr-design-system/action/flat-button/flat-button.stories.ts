@@ -1,5 +1,5 @@
-import { MatIcon } from '@angular/material/icon';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
+import { IdsIcon } from 'irr-design-system/icon';
 import { cssPropertyArgTypes } from 'storybook-doc/css-properties';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
@@ -20,7 +20,7 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
-            imports: [MatIcon],
+            imports: [IdsIcon],
         }),
     ],
     argTypes: {
@@ -31,7 +31,7 @@ const meta: Meta<IdsFlatButtonStoryArgs> = {
             table: { category: 'playground' },
         },
         iconName: {
-            description: 'Material Symbols name of the projected `mat-icon`.',
+            description: 'Material Symbols name of the projected `ids-icon`.',
             control: 'text',
             if: { arg: 'layout', neq: 'Text' },
             table: { category: 'playground' },
@@ -83,10 +83,7 @@ export const Default: Story = {
             .withInput('type', args.type, 'button')
             .withInput('disabled', args.disabled)
             .withOutput('clicked')
-            .withContent(
-                args.layout !== 'Text' && elem('mat-icon').withClass('material-symbols-outlined').withContent(args.iconName),
-                args.layout !== 'Icon' && args.text,
-            )
+            .withContent(args.layout !== 'Text' && elem('ids-icon').withAttribute('name', args.iconName), args.layout !== 'Icon' && args.text)
             .build(),
     }),
 };
@@ -106,7 +103,7 @@ export const States: Story = {
             <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
                 <ng-template let-section let-state="state">
                     <ids-flat-button [variant]="section.name" [disabled]="state === 'disabled'">
-                        <mat-icon class="material-symbols-outlined">edit</mat-icon>
+                        <ids-icon name="edit" />
                         {{ state }}
                     </ids-flat-button>
                 </ng-template>

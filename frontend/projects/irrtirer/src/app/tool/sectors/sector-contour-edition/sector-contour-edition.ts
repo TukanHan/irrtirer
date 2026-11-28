@@ -3,13 +3,13 @@ import { Component, computed, DestroyRef, effect, inject, OnInit, signal } from 
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { FieldState, form, FormField, required } from '@angular/forms/signals';
 import { MatFormField, MatLabel, MatError } from '@angular/material/form-field';
-import { MatIcon } from '@angular/material/icon';
 import { MatInput } from '@angular/material/input';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton, IdsFramedButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { FormHelper } from '../../../core/helpers/form-helper/form-helper';
 import { Vector } from '../../../core/models/math/vector.model';
 import { SectorSchema } from '../../../core/models/mosaic-project.model';
@@ -31,7 +31,7 @@ import { polygonValidator } from './polygon.validator';
         MatLabel,
         MatError,
         MatInput,
-        MatIcon,
+        IdsIcon,
         ColorPicker,
         TranslatePipe,
         FormField,
@@ -63,7 +63,7 @@ import { polygonValidator } from './polygon.validator';
                                     (clicked)="removeVertex(vertex)"
                                     (mousedown)="$event.stopPropagation()"
                                 >
-                                    <mat-icon>close</mat-icon>
+                                    <ids-icon class="icon-weight-400" name="close" />
                                 </ids-flat-button>
                             </div>
                         </div>

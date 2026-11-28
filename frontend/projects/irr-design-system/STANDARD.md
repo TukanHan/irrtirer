@@ -22,12 +22,6 @@ Components are built from scratch. Heavy dependencies from other libraries are n
 - Angular packages: `@angular/core`, `@angular/common`, `@angular/forms`, `@angular/router`
 - `@angular/cdk`
 
-### Tolerated
-
-Allowed for now, until a decision replaces them. Do not extend their use.
-
-- `MatIcon` from `@angular/material/icon`
-
 ## Structure
 
 ### entry-point-per-family · MUST

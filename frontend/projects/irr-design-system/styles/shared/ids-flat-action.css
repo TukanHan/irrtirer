@@ -5,7 +5,7 @@
     justify-content: center;
     box-sizing: border-box;
     cursor: pointer;
-    padding: max(0px, calc((var(--ids-flat-button-size, 36px) - var(--ids-flat-button-icon-size, 24px)) / 2));
+    padding: max(0px, calc((var(--ids-flat-button-size, 36px) - var(--ids-font-size-base) * var(--ids-line-height-base)) / 2));
     border: 0;
     outline: none;
     position: relative;
@@ -69,7 +69,6 @@
             font-weight 0.2s ease,
             text-shadow 0.2s ease;
 
-        --irr-icon-margin-left: -6px;
-        --irr-icon-margin-right: -6px;
+        --ids-icon-margin-inline: -6px;
     }
 }

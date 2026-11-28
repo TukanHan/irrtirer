@@ -1,7 +1,7 @@
 import { Component, inject, input } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { TranslateService } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { IdsTooltip } from 'irr-design-system/tooltip';
 import { Size } from '../../core/models/math/size.interface';
 import { SizeDisplayPipe } from '../../core/pipes/size-display.pipe';
@@ -9,7 +9,7 @@ import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
 
 @Component({
     selector: 'app-ribbon',
-    imports: [MatIcon, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
+    imports: [IdsIcon, IdsFlatButton, SizeDisplayPipe, IdsTooltip],
     template: `
         @for (action of actions(); track action.iconName) {
             <ids-flat-button
@@ -22,7 +22,7 @@ import { ActionVisibility, RibbonAction } from './ribbon-action.interface';
                 [idsTooltip]="translate.instant(action.tooltipKey)"
                 idsTooltipPosition="bottom"
             >
-                <mat-icon class="material-symbols-outlined">{{ action.iconName }}</mat-icon>
+                <ids-icon [name]="action.iconName" />
             </ids-flat-button>
         }
 

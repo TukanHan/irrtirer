@@ -1,5 +1,4 @@
 import { Component, inject, input } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
@@ -9,7 +8,7 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
 
 @Component({
     selector: 'app-tile-list-elem',
-    imports: [MatIcon, IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe, IdsIcon],
+    imports: [IdsFlatButton, IdsMenu, IdsMenuItem, IdsMenuTrigger, TranslatePipe, IdsIcon],
     template: `
         <span class="block-label-sm"> {{ tile().id }} </span>
         <div class="flex -m-1.5">
@@ -18,7 +17,7 @@ import { TileModel } from '../../../../core/models/mosaic-project.model';
                 [ariaLabel]="'common.moreActions' | translate"
                 [idsMenuTriggerFor]="menu"
             >
-                <mat-icon> more_vert </mat-icon>
+                <ids-icon class="icon-weight-400" name="more_vert" />
             </ids-flat-button>
 
             <ids-menu #menu>

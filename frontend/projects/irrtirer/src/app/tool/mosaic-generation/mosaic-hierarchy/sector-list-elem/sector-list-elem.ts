@@ -1,16 +1,16 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, computed, inject, input, signal } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
 import { ScrollableList } from '../../../../shared/scrollable-list/scrollable-list';
 import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generation.interface';
 
 @Component({
     selector: 'app-sector-list-elem',
-    imports: [MatIcon, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
+    imports: [IdsIcon, IdsFlatButton, AsyncPipe, ExpandablePanel, TranslatePipe, ScrollableList],
     template: `
         <div class="parent-elem list-item-box">
             <span class="block-label">{{ sector().schema.name }}</span>
@@ -20,14 +20,14 @@ import { GeneratedSectorModel, GeneratedTileModel } from '../../mosaic-generatio
                     [ariaLabel]="(areTilesVisible() ? 'tool.generation.sectorList.hideTiles' : 'tool.generation.sectorList.showTiles') | translate"
                     (clicked)="toggleTilesVisibility()"
                 >
-                    <mat-icon class="material-symbols-outlined"> {{ areTilesVisible() ? 'visibility' : 'visibility_off' }} </mat-icon>
+                    <ids-icon [name]="areTilesVisible() ? 'visibility' : 'visibility_off'" />
                 </ids-flat-button>
                 <ids-flat-button
                     class="sector-action button-size-8 button-content-contrast-medium"
                     [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                     (clicked)="toggleTilesList()"
                 >
-                    <mat-icon class="chevron" [class.closed]="!isOpen()">keyboard_arrow_up</mat-icon>
+                    <ids-icon class="chevron icon-weight-400" name="keyboard_arrow_up" [class.closed]="!isOpen()" />
                 </ids-flat-button>
             </div>
         </div>

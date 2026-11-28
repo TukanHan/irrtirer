@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { MatIcon } from '@angular/material/icon';
 import { NavigationEnd, provideRouter, Router, RouterOutlet, withHashLocation } from '@angular/router';
 import { type Meta, type StoryObj, applicationConfig, componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { filter, map } from 'rxjs';
+import { IdsIcon } from 'irr-design-system/icon';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsFlatLink } from './flat-link';
@@ -39,7 +39,7 @@ const meta: Meta<IdsFlatLinkStoryArgs> = {
             providers: [provideRouter([{ path: '**', component: FlatLinkDestinationStory }], withHashLocation())],
         }),
         moduleMetadata({
-            imports: [MatIcon, FlatLinkDestinationStory, RouterOutlet],
+            imports: [IdsIcon, FlatLinkDestinationStory, RouterOutlet],
         }),
         // The router outlet only shows where an internal link navigates, so it stays out of the code snippet.
         componentWrapperDecorator(
@@ -63,7 +63,7 @@ const meta: Meta<IdsFlatLinkStoryArgs> = {
             table: { category: 'playground' },
         },
         iconName: {
-            description: 'Material Symbols name of the projected `mat-icon`.',
+            description: 'Material Symbols name of the projected `ids-icon`.',
             control: 'text',
             if: { arg: 'layout', neq: 'Text' },
             table: { category: 'playground' },
@@ -93,10 +93,7 @@ export const Default: Story = {
         template: elem('ids-flat-link')
             .withInput('link', args.link)
             .withInput('linkType', args.linkType, 'internal')
-            .withContent(
-                args.layout !== 'Text' && elem('mat-icon').withClass('material-symbols-outlined').withContent(args.iconName),
-                args.layout !== 'Icon' && args.text,
-            )
+            .withContent(args.layout !== 'Text' && elem('ids-icon').withAttribute('name', args.iconName), args.layout !== 'Icon' && args.text)
             .build(),
     }),
 };
@@ -120,7 +117,7 @@ export const States: Story = {
             <sb-state-matrix [sections]="sections" [states]="states" layout="flow">
                 <ng-template let-section let-state="state">
                     <ids-flat-link [link]="section.link">
-                        <mat-icon class="material-symbols-outlined">home</mat-icon>
+                        <ids-icon name="home" />
                         {{ state }}
                     </ids-flat-link>
                 </ng-template>

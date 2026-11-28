@@ -6,9 +6,7 @@
             gap: 12px;
 
             .visibility-icon {
-                mat-icon {
-                    font-weight: 300;
-                }
+                --ids-icon-weight: 300;
             }
 
             .sector-action {

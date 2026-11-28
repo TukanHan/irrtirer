@@ -1,12 +1,12 @@
 import { Component, input, OnInit, signal } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IdsFlatButton } from 'irr-design-system/action';
+import { IdsIcon } from 'irr-design-system/icon';
 import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-panel';
 
 @Component({
     selector: 'app-extended-panel',
-    imports: [MatIcon, IdsFlatButton, ExpandablePanel, TranslatePipe],
+    imports: [IdsIcon, IdsFlatButton, ExpandablePanel, TranslatePipe],
     template: `
         <div class="label">
             <span class="label-content">{{ label() }}</span>
@@ -15,7 +15,7 @@ import { ExpandablePanel } from '../../../../shared/expandable-panel/expandable-
                 [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                 (clicked)="toggle()"
             >
-                <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
+                <ids-icon class="chevron icon-weight-400" name="keyboard_arrow_up" [class.closed]="!isOpen()" />
             </ids-flat-button>
         </div>
         <app-expandable-panel class="panel" [isOpen]="isOpen()">

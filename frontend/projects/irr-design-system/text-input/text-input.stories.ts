@@ -1,10 +1,10 @@
 import { type Injector, signal } from '@angular/core';
 import { disabled, form, FormField, required } from '@angular/forms/signals';
-import { MatIcon } from '@angular/material/icon';
 import { createApplication } from '@angular/platform-browser';
 import { type Meta, type StoryObj, moduleMetadata } from '@storybook/angular';
 import { IdsFlatButton } from 'irr-design-system/action';
 import { IdsError, IdsPrefix, IdsSuffix } from 'irr-design-system/form';
+import { IdsIcon } from 'irr-design-system/icon';
 import { pseudoStates, StateMatrix } from 'storybook-doc/state-matrix';
 import { elem } from 'storybook-doc/template-builder';
 import { IdsTextInput } from './text-input';
@@ -24,7 +24,7 @@ const meta: Meta<TextInputStoryArgs> = {
     loaders: [async () => ({ injector: (await formsApp).injector })],
     decorators: [
         moduleMetadata({
-            imports: [MatIcon, FormField, IdsError, IdsPrefix, IdsSuffix, IdsFlatButton],
+            imports: [FormField, IdsError, IdsPrefix, IdsSuffix, IdsFlatButton, IdsIcon],
         }),
     ],
     argTypes: {
@@ -71,18 +71,13 @@ export const Default: Story = {
                 .withInput('label', args.label, '')
                 .withInput('placeholder', args.placeholder, '')
                 .withContent(
-                    args.showPrefix &&
-                        elem('mat-icon')
-                            .withAttribute('idsPrefix')
-                            .withClass('material-symbols-outlined')
-                            .withAttribute('aria-hidden', 'true')
-                            .withContent('search'),
+                    args.showPrefix && elem('ids-icon').withAttribute('idsPrefix').withAttribute('name', 'search'),
                     args.showSuffix &&
                         elem('ids-flat-button')
                             .withAttribute('idsSuffix')
                             .withStyle('--ids-flat-button-size', '32px')
                             .withOutput('clicked', "searchForm.query().value.set('')")
-                            .withContent(elem('mat-icon').withClass('material-symbols-outlined').withContent('close')),
+                            .withContent(elem('ids-icon').withAttribute('name', 'close')),
                     elem('ids-error').withContent('@for (error of searchForm.query().errors(); track error.kind) {\n    {{ error.message }}\n}'),
                 )
                 .build(),

@@ -1,0 +1,3 @@
+@utility icon-weight-* {
+    --ids-icon-weight: --value(integer);
+}

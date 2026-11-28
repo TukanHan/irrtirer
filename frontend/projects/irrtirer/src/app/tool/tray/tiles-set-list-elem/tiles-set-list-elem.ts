@@ -1,7 +1,6 @@
 import { Component, DestroyRef, inject, input, signal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { MatDialog } from '@angular/material/dialog';
-import { MatIcon } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
@@ -19,7 +18,7 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
 
 @Component({
     selector: 'app-tiles-set-list-elem',
-    imports: [ExpandablePanel, IdsFlatButton, MatIcon, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList, IdsIcon],
+    imports: [ExpandablePanel, IdsFlatButton, IdsMenu, IdsMenuTrigger, IdsMenuItem, TileListElem, TranslatePipe, ScrollableList, IdsIcon],
     template: `
         @let tilesSetValue = tilesSet();
         <div class="list-elem list-item-box">
@@ -30,14 +29,14 @@ import { TileListElem } from './tile-list-elem/tile-list-elem';
                     [ariaLabel]="'common.moreActions' | translate"
                     [idsMenuTriggerFor]="menu"
                 >
-                    <mat-icon>more_vert</mat-icon>
+                    <ids-icon class="icon-weight-400" name="more_vert" />
                 </ids-flat-button>
                 <ids-flat-button
                     class="button-size-8 button-content-contrast-medium"
                     [ariaLabel]="(isOpen() ? 'common.collapse' : 'common.expand') | translate"
                     (clicked)="toggleTilesList()"
                 >
-                    <mat-icon class="chevron" [class.closed]="!isOpen()"> keyboard_arrow_up </mat-icon>
+                    <ids-icon class="chevron icon-weight-400" name="keyboard_arrow_up" [class.closed]="!isOpen()" />
                 </ids-flat-button>
 
                 <ids-menu #menu>
