@@ -2,7 +2,7 @@
     padding: var(--ids-panel-padding, unset);
     border: 1px solid color-mix(in srgb, var(--ids-color-border-panel) 70%, transparent);
     border-radius: var(--ids-radius-medium);
-    background-color: color-mix(in srgb, var(--ids-color-surface-panel) 70%, transparent);
+    background-color: color-mix(in srgb, var(--ids-panel-background-color, var(--ids-color-surface-panel)) 70%, transparent);
     backdrop-filter: blur(8px);
     box-shadow: 0 10px 30px color-mix(in srgb, var(--ids-color-shadow) var(--ids-shadow-strength-faint), transparent);
 }

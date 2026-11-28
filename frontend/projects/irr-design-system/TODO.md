@@ -66,7 +66,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 ## Audit: tooltip
 
 - [ ] Changing `idsTooltip`, `idsTooltipPanelClass` or `idsTooltipPosition` while open is ignored (set only on open) - e.g. "Copy" → "Copied!"
-- [ ] `tooltip-panel.css` overrides semantic `--ids-color-surface-panel` as a knob of `ids-panel` - the recipe could expose its own `--ids-panel-*` background knob, like padding
 - [ ] Improvement: hover open delay (passing over a toolbar flashes tooltips)
 - [ ] Story: `idsTooltipPanelClass` has no value in `Default` args
 - [ ] Spec: no coverage of `idsTooltipPosition` and of text change while open

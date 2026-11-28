@@ -5,7 +5,7 @@
 
     .ids-tooltip-panel {
         --ids-panel-padding: 0.375rem 0.5rem;
-        --ids-color-surface-panel: var(--ids-color-surface-floating);
+        --ids-panel-background-color: var(--ids-color-surface-floating);
 
         max-width: 15rem;
         color: var(--ids-color-text-secondary);
