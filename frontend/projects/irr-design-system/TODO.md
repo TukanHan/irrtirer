@@ -11,10 +11,6 @@ Known deviations from `STANDARD.md`, grouped by rule. Remove an item once fixed.
 - [ ] `flat-link`: `current` is lost under `:focus-visible` (focus overlay 0.1 overrides current 0.15) and `:active` (same 0.15 + bold as current) - see its `States` story
 - [ ] `side-nav-item`: `current` loses its highlight icon color under `:hover` and `:focus-visible` (the muted hover color overrides it) - see the `side-nav` `States` story
 
-## styles/override-via-tokens
-
-- [ ] `tooltip`: the panel is rendered in an overlay, so consumers cannot reach it with tokens - add a `panelClass` input like `ids-menu` (with a public token, e.g. `--ids-tooltip-padding`, once one is needed)
-
 ## styles/shared-recipes
 
 - [ ] `styles/shared/ids-flat-action.css` mixes several recipes (layout, state overlay, text shadow) - split into one file per recipe

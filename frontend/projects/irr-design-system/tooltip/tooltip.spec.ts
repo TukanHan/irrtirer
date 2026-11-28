@@ -136,6 +136,19 @@ describe('IdsTooltip', () => {
         expect(screen.queryByRole('tooltip')).toBeNull();
     });
 
+    it('adds the given classes to the panel', async () => {
+        const user = userEvent.setup();
+        await render('<input aria-label="Name" idsTooltip="Lorem ipsum" idsTooltipPanelClass="dolor amet" />', {
+            imports: [IdsTooltip],
+        });
+
+        await user.tab();
+        const tooltip = await screen.findByRole('tooltip');
+
+        // Purely visual input: the classes are its only observable effect.
+        expect([...tooltip.classList]).toEqual(expect.arrayContaining(['dolor', 'amet', 'ids-tooltip-panel']));
+    });
+
     it('shows nothing when the text is blank', async () => {
         const user = userEvent.setup();
         const { fixture } = await render('<input aria-label="Name" idsTooltip=" " />', { imports: [IdsTooltip] });

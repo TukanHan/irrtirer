@@ -3,7 +3,7 @@ import { Component, input } from '@angular/core';
 @Component({
     selector: 'ids-tooltip-panel',
     template: `
-        <div class="ids-panel ids-tooltip-panel ids-type-label-sm" role="tooltip" [id]="panelId()">
+        <div class="ids-panel ids-tooltip-panel ids-type-label-sm" role="tooltip" [class]="panelClass()" [id]="panelId()">
             {{ text() }}
         </div>
     `,
@@ -13,4 +13,6 @@ export class IdsTooltipPanel {
     public readonly panelId = input.required<string>();
 
     public readonly text = input.required<string>();
+
+    public readonly panelClass = input<string>();
 }

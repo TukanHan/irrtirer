@@ -28,6 +28,9 @@ export class IdsTooltip {
     /** Preferred side of the host. `auto` picks a side away from the nearest viewport edge. Moves to another side when the panel does not fit. */
     public readonly idsTooltipPosition = input<IdsTooltipPosition>('auto');
 
+    /** Classes for the floating panel, which is rendered outside the host element. */
+    public readonly idsTooltipPanelClass = input<string>();
+
     private readonly host = inject(ElementRef<HTMLElement>);
     private readonly overlay = inject(Overlay);
     private readonly destroyRef = inject(DestroyRef);
@@ -83,6 +86,7 @@ export class IdsTooltip {
         const panel = this.overlayRef.attach(portal);
         panel.setInput('panelId', this.panelId);
         panel.setInput('text', this.idsTooltip());
+        panel.setInput('panelClass', this.idsTooltipPanelClass());
 
         this.overlayRef.overlayElement.addEventListener('mouseout', (event) => this.closeUnlessPointerStays(event.relatedTarget));
     }
