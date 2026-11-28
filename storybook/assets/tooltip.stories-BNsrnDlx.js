@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{i as t,n,o as r}from"./iframe-C94aL8VK.js";import{n as i,t as a}from"./elem-builder-Cho_rnz6.js";import{n as o,t as s}from"./flat-button-CSRarimf.js";import{n as c,t as l}from"./tooltip-D3XwOOH4.js";var u,d,f;function init_tooltip_stories(){return(init_tooltip_stories=e((()=>{n(),o(),i(),c(),u={title:`Design System/Tooltip`,component:l,tags:[`autodocs`],decorators:[r({imports:[s,l]}),t(e=>`
+import{n as e}from"./rolldown-runtime-vtgMY1y5.js";import{i as t,n,o as r}from"./iframe-iT_I9Drs.js";import{n as i,t as a}from"./elem-builder-Cho_rnz6.js";import{n as o,t as s}from"./flat-button-CSRarimf.js";import{n as c,t as l}from"./tooltip-DwIV2C1x.js";var u,d,f;function init_tooltip_stories(){return(init_tooltip_stories=e((()=>{n(),o(),i(),c(),u={title:`Design System/Tooltip`,component:l,tags:[`autodocs`],decorators:[r({imports:[s,l]}),t(e=>`
                 <div
                     class="tooltip-playground"
                     [class.tooltip-playground--left]="buttonPosition === 'left'"
